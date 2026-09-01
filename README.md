@@ -18,9 +18,11 @@ data/
   papers.json       … 文献データ本体(ここに追記していく)
   README.md         … データ追加手順とフィールド仕様
 .github/workflows/
-  deploy.yml        … main への push で JSON 検証 → GitHub Pages デプロイ
+  deploy.yml        … main への push で JSON 検証 → gh-pages ブランチへ公開(GitHub Pages)
   validate.yml      … main 以外のブランチ/PR で JSON 文法・重複ID・必須項目を検証
 ```
+
+`gh-pages` ブランチはデプロイ用の自動生成ブランチです。直接編集しないでください(main への push で毎回上書きされます)。
 
 ## データフロー
 
@@ -34,13 +36,11 @@ data/
 
 反映に必要な作業は **JSON への追記と push だけ**です。詳細なフィールド仕様は [`data/README.md`](data/README.md) を参照。
 
-## 公開手順(初回のみ)
+## 公開のしくみ
 
-1. このブランチを `main` にマージする
-2. GitHub リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に設定する
-3. 以後 `main` への push で自動公開(URL: `https://<ユーザー名>.github.io/gct-literature-website/`)
+`main` への push で deploy.yml が動き、サイト一式を `gh-pages` ブランチに書き出します。GitHub Pages は `gh-pages` ブランチを配信します(URL: `https://<ユーザー名>.github.io/gct-literature-website/`)。リポジトリは Public である必要があります。
 
-独自ドメインを使う場合は Pages 設定でカスタムドメインを追加してください。
+独自ドメインを使う場合は Settings → Pages でカスタムドメインを追加してください。
 
 ## ローカルでの確認
 
