@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sample-001",
+    "title": "(サンプル) ここに論文タイトルが入ります",
+    "title_ja": "(サンプル) 日本語タイトルまたは日本語訳(任意)",
+    "authors": ["Yamada T", "Suzuki H"],
+    "journal": "Journal of Example Medicine",
+    "year": 2024,
+    "pmid": "",
+    "doi": "",
+    "url": "",
+    "tags": ["サンプル", "総説"],
+    "summary": "これはデータ構造を示すためのサンプルエントリです。実際の文献データを追加したら削除してください。summary には日本語の要約・コメントを自由に記載できます。",
+    "added_at": "2026-09-01"
+  },
+  {
+    "id": "sample-002",
+    "title": "(サンプル) Second example entry",
+    "title_ja": "",
+    "authors": ["Tanaka K"],
+    "journal": "Example Reports",
+    "year": 2023,
+    "pmid": "",
+    "doi": "",
+    "url": "",
+    "tags": ["サンプル", "症例報告"],
+    "summary": "最低限必要なのは id / title / year のみで、他の項目は空でも動作します。タグは検索・絞り込みに使われます。",
+    "added_at": "2026-09-01"
+  }
+]
