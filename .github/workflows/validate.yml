@@ -1,0 +1,31 @@
+name: Validate data
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON data
+        run: |
+          python3 -m json.tool data/papers.json > /dev/null
+          python3 -m json.tool data/site.json > /dev/null
+          echo "JSON OK"
+      - name: Check for duplicate IDs
+        run: |
+          python3 - <<'EOF'
+          import json, collections, sys
+          papers = json.load(open("data/papers.json"))
+          ids = [p.get("id") for p in papers]
+          dup = [i for i, c in collections.Counter(ids).items() if c > 1]
+          missing = [p for p in papers if not (p.get("id") and p.get("title") and p.get("year"))]
+          if dup:
+              sys.exit(f"重複ID: {dup}")
+          if missing:
+              sys.exit(f"必須フィールド(id/title/year)欠落: {len(missing)}件")
+          print(f"{len(papers)} entries OK")
+          EOF

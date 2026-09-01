@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCT文献データベース</title>
+  <meta name="description" content="GCT関連文献のデータベース(部分公開・拡充中)">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 id="site-title">GCT文献データベース</h1>
+      <p id="site-description" class="site-description"></p>
+      <p id="site-notice" class="site-notice" hidden></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="検索・絞り込み">
+      <input type="search" id="search-box" placeholder="タイトル・著者・要約・タグで検索…" aria-label="検索">
+      <div class="controls-row">
+        <div id="tag-filters" class="tag-filters" aria-label="タグで絞り込み"></div>
+        <select id="sort-select" aria-label="並び順">
+          <option value="year-desc">発行年: 新しい順</option>
+          <option value="year-asc">発行年: 古い順</option>
+          <option value="added-desc">掲載日: 新しい順</option>
+        </select>
+      </div>
+      <p id="result-count" class="result-count" role="status"></p>
+    </section>
+
+    <section id="paper-list" class="paper-list" aria-label="文献一覧"></section>
+
+    <p id="empty-message" class="empty-message" hidden>該当する文献が見つかりませんでした。</p>
+    <p id="error-message" class="empty-message" hidden>データの読み込みに失敗しました。時間をおいて再度お試しください。</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span id="footer-title">GCT文献データベース</span> — 最終更新: <span id="last-updated">–</span></p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
