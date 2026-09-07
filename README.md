@@ -16,7 +16,10 @@ assets/
 data/
   site.json         … サイトタイトル・説明・お知らせ
   papers.json       … 文献データ本体(ここに追記していく)
+  raw/              … PubMedからエクスポートした生データ(.nbib)の保管場所
   README.md         … データ追加手順とフィールド仕様
+scripts/
+  import_medline.py … PubMedの .nbib ファイルを papers.json に自動取り込み
 .github/workflows/
   deploy.yml        … main への push で JSON 検証 → gh-pages ブランチへ公開(GitHub Pages)
   validate.yml      … main 以外のブランチ/PR で JSON 文法・重複ID・必須項目を検証

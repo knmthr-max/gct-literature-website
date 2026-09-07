@@ -1,30 +1,61 @@
 [
   {
-    "id": "sample-001",
-    "title": "(サンプル) ここに論文タイトルが入ります",
-    "title_ja": "(サンプル) 日本語タイトルまたは日本語訳(任意)",
-    "authors": ["Yamada T", "Suzuki H"],
-    "journal": "Journal of Example Medicine",
-    "year": 2024,
-    "pmid": "",
-    "doi": "",
+    "id": "pmid-42699898",
+    "title": "A rare case report of an endobronchial teratoma of the right upper lobe invading the mediastinum.",
+    "title_ja": "",
+    "authors": [
+      "Babalola O",
+      "Siewert N",
+      "Frenkel M",
+      "Guenther T",
+      "DeCamp MM"
+    ],
+    "journal": "Int J Surg Case Rep",
+    "year": 2026,
+    "pmid": "42699898",
+    "doi": "10.1097/RC9.0000000000000851",
     "url": "",
-    "tags": ["サンプル", "総説"],
-    "summary": "これはデータ構造を示すためのサンプルエントリです。実際の文献データを追加したら削除してください。summary には日本語の要約・コメントを自由に記載できます。",
-    "added_at": "2026-09-01"
+    "tags": [
+      "症例報告",
+      "case report",
+      "endobronchial teratoma (EBT)",
+      "intrapulmonary teratoma (IPT)",
+      "mature teratoma"
+    ],
+    "summary": "",
+    "abstract": "INTRODUCTION: Endobronchial teratomas are extremely rare tumors that develop within the airway of the lung. Patients often present with nonspecific symptoms that depend on the size and anatomic features, making the differential broad and the diagnosis challenging. PRESENTATION OF CASE: A 28-year-old man presented with a 6-month history of a dry cough, vague chest discomfort, and occasional dyspnea. A chest X-ray and CT were performed, revealing a heterogeneous mass involving the mediastinum and the medial aspect of the right lung. Serum tumor markers were normal, and a testicular ultrasound excluded a metastatic germ cell tumor. Definitive treatment required an en bloc resection of the thymus and right upper lobe, with pathologic review showing an endobronchial origin of a mature teratoma. DISCUSSION: This case illustrates the diagnostic challenges of endobronchial teratomas, provides imaging and histologic characteristics of this rare tumor type, and contributes to the number of published cases with favorable outcomes. CONCLUSION: Given the rarity of endobronchial teratomas, a high index of suspicion among pulmonologists, surgeons, and pathologists is necessary to correctly diagnose and treat these patients.",
+    "added_at": "2026-09-07"
   },
   {
-    "id": "sample-002",
-    "title": "(サンプル) Second example entry",
+    "id": "pmid-42699474",
+    "title": "Anti-N-methyl-D-Aspartate Receptor Autoimmune Encephalitis Due to Ovarian Teratoma in a 17-Year-Old Young Woman: Case Report and Review of the Literature.",
     "title_ja": "",
-    "authors": ["Tanaka K"],
-    "journal": "Example Reports",
-    "year": 2023,
-    "pmid": "",
+    "authors": [
+      "Polilli E",
+      "D'Andreagiovanni A",
+      "Tocco P",
+      "Rosati M",
+      "Della Rocca Y",
+      "Di Iorio G",
+      "De Angelis MV",
+      "Parruti G",
+      "Frattari A"
+    ],
+    "journal": "EJIFCC",
+    "year": 2026,
+    "pmid": "42699474",
     "doi": "",
     "url": "",
-    "tags": ["サンプル", "症例報告"],
-    "summary": "最低限必要なのは id / title / year のみで、他の項目は空でも動作します。タグは検索・絞り込みに使われます。",
-    "added_at": "2026-09-01"
+    "tags": [
+      "症例報告",
+      "Anti-NMDA receptor encephalitis",
+      "Anti-NMDAR antibodies",
+      "Anti-NMDAR autoimmune disease",
+      "Autoimmune encephalitis",
+      "Ovarian teratoma"
+    ],
+    "summary": "",
+    "abstract": "Many cases of encephalitis are caused by an autoimmune response, and some are associated with underlying malignancies. Here we present the case of a 17-year-old female patient who was admitted to the pediatric ward with acute gastroenteritis, seizures, and behavioral changes. A brain computed tomography (CT) scan ruled out acute infarction, haemorrhage, mass lesions, and other intracranial injuries, while the initial EEG showed no epileptic discharges. In the absence of a definitive diagnosis, midazolam was administered to treat tonic-clonic seizures, while ceftriaxone and acyclovir were started for suspected infection. However, her condition deteriorated further and she was transferred to the ICU, where she was intubated. A Cell-Based Assay (CBA) revealed the presence of anti-NMDAR antibodies and a contrast-enhanced brain MRI showed leptomeningeal enhancement without limbic involvement. She was subsequently treated with intravenous immunoglobulins and high-dose corticosteroids. A subsequent transabdominal ultrasound scan revealed an oval, fluid-filled ovarian cyst. Based on these findings, her right ovary was removed, resulting in a gradual improvement in her condition. This case highlights that paraneoplastic autoimmune encephalitis may be misclassified due to persistent psychiatric symptoms with negative EEG and CSF findings. When clinical suspicion remains high despite negative initial instrumental and laboratory findings, it is essential to repeat these investigations. In such cases, neuroantibody testing may play a crucial role in establishing the diagnosis.",
+    "added_at": "2026-09-07"
   }
 ]
