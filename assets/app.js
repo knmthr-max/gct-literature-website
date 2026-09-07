@@ -73,7 +73,7 @@
     if (!state.query) return true;
     const q = state.query.toLowerCase();
     const haystack = [
-      paper.title, paper.title_ja, paper.journal, paper.summary,
+      paper.title, paper.title_ja, paper.journal, paper.summary, paper.abstract,
       ...(paper.authors || []), ...(paper.tags || []),
       String(paper.year || ""), paper.pmid, paper.doi,
     ].filter(Boolean).join(" ").toLowerCase();
@@ -115,6 +115,7 @@
         ${subTitle}
         ${metaParts.length ? `<p class="paper-meta">${escapeHtml(metaParts.join(" · "))}</p>` : ""}
         ${p.summary ? `<p class="paper-summary">${escapeHtml(p.summary)}</p>` : ""}
+        ${p.abstract ? `<details class="paper-abstract"><summary>抄録(英語)</summary><p>${escapeHtml(p.abstract)}</p></details>` : ""}
         ${tags ? `<div class="paper-tags">${tags}</div>` : ""}
         ${links.length ? `<div class="paper-links">${links.join("")}</div>` : ""}
       </article>`;

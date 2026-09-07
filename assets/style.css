@@ -150,6 +150,21 @@ body {
   font-size: 0.92rem;
 }
 
+.paper-abstract {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+}
+
+.paper-abstract summary {
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+.paper-abstract p {
+  margin: 8px 0 0;
+  color: var(--color-text-muted);
+}
+
 .paper-tags {
   display: flex;
   flex-wrap: wrap;
