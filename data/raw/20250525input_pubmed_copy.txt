@@ -1,0 +1,273 @@
+PMID- 40409851
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20250523
+IS  - 2666-0849 (Electronic)
+IS  - 2666-0849 (Linking)
+VI  - 30
+IP  - 11
+DP  - 2025 May 21
+TI  - Intravascular Germ Cell Tumor With Cardiac and Bilateral Pulmonary Artery 
+      Involvement.
+PG  - 103319
+LID - S2666-0849(25)00091-9 [pii]
+LID - 10.1016/j.jaccas.2025.103319 [doi]
+AB  - BACKGROUND: Germ cell tumors (GCTs) are neoplasms usually originating in the 
+      gonads, most often affecting young patients. Intravascular GCTs are exceptionally 
+      rare and potentially fatal due to cardiac and embolic complications. CASE 
+      SUMMARY: A 17-year-old patient presented with weight loss, abdominal pain, and 
+      dyspnea. Imaging revealed an intravascular mass extending from the inferior vena 
+      cava (IVC) into the right heart chambers and pulmonary arteries. The tumor was 
+      successfully removed via surgery under cardiopulmonary bypass. Histopathologic 
+      diagnosis was a mixed non-seminomatous GCT. Recovery was uneventful, and 
+      follow-up imaging showed no intravascular lesions. Cisplatin-based chemotherapy 
+      was started with curative intent. DISCUSSION: Intravascular GCT is a rare 
+      phenomenon, presenting mostly with retroperitoneal disease affecting the IVC. 
+      Cardiologists assess complications and interpret cardiovascular imaging. A 
+      multidisciplinary approach is crucial for improving outcomes.
+CI  - Copyright © 2025 The Authors. Published by Elsevier Inc. All rights reserved.
+FAU - Calderon-Miranda, Camilo Andres
+AU  - Calderon-Miranda CA
+AD  - Departamento de Cardiología, Fundación Valle del Lili, Cali, Colombia; Facultad 
+      de Ciencias de la Salud, Universidad Icesi, Cali, Colombia. Electronic address: 
+      camilo.calderon@fvl.org.co.
+FAU - Reyes-Cardona, Maria Juliana
+AU  - Reyes-Cardona MJ
+AD  - Centro de Investigaciones Clínicas, Fundación Valle del Lili, Cali, Colombia.
+FAU - Lopez-Mora, Gabriel Roberto
+AU  - Lopez-Mora GR
+AD  - Facultad de Ciencias de la Salud, Universidad Icesi, Cali, Colombia; Departamento 
+      de Medicina Interna, Fundación Valle del Lili, Cali, Colombia.
+FAU - Cadavid-Alvear, Eduardo Alberto
+AU  - Cadavid-Alvear EA
+AD  - Facultad de Ciencias de la Salud, Universidad Icesi, Cali, Colombia; Departamento 
+      de Cirugía Cardiovascular, Fundación Valle del Lili, Cali, Colombia.
+FAU - Vesga-Reyes, Carlos Enrique
+AU  - Vesga-Reyes CE
+AD  - Departamento de Cardiología, Fundación Valle del Lili, Cali, Colombia; Facultad 
+      de Ciencias de la Salud, Universidad Icesi, Cali, Colombia.
+FAU - Sanchez-Blanco, Jairo
+AU  - Sanchez-Blanco J
+AD  - Departamento de Cardiología, Fundación Valle del Lili, Cali, Colombia; Facultad 
+      de Ciencias de la Salud, Universidad Icesi, Cali, Colombia.
+FAU - Olaya, Pastor
+AU  - Olaya P
+AD  - Departamento de Cardiología, Fundación Valle del Lili, Cali, Colombia; Facultad 
+      de Ciencias de la Salud, Universidad Icesi, Cali, Colombia.
+FAU - Zambrano-Franco, Jorge Alexander
+AU  - Zambrano-Franco JA
+AD  - Departamento de Cardiología, Fundación Valle del Lili, Cali, Colombia; Facultad 
+      de Ciencias de la Salud, Universidad Icesi, Cali, Colombia.
+LA  - eng
+PT  - Case Reports
+PT  - Journal Article
+DEP - 20250409
+PL  - Netherlands
+TA  - JACC Case Rep
+JT  - JACC. Case reports
+JID - 101757292
+OTO - NOTNLM
+OT  - cancer
+OT  - computed tomography
+OT  - echocardiography
+OT  - pediatric surgery
+COIS- Funding Support and Author Disclosures The authors have reported that they have 
+      no relationships relevant to the contents of this paper to disclose.
+EDAT- 2025/05/24 00:45
+MHDA- 2025/05/24 00:46
+CRDT- 2025/05/23 20:54
+PHST- 2024/11/14 00:00 [received]
+PHST- 2024/12/05 00:00 [revised]
+PHST- 2024/12/18 00:00 [accepted]
+PHST- 2025/05/24 00:46 [medline]
+PHST- 2025/05/24 00:45 [pubmed]
+PHST- 2025/05/23 20:54 [entrez]
+AID - S2666-0849(25)00091-9 [pii]
+AID - 10.1016/j.jaccas.2025.103319 [doi]
+PST - ppublish
+SO  - JACC Case Rep. 2025 May 21;30(11):103319. doi: 10.1016/j.jaccas.2025.103319. Epub 
+      2025 Apr 9.
+PMID- 40408609
+OWN - NLM
+STAT- Publisher
+LR  - 20250523
+IS  - 2688-1535 (Electronic)
+IS  - 2688-1527 (Linking)
+DP  - 2025 May 23
+TI  - Management of Testicular Cancer.
+PG  - OP2500211
+LID - 10.1200/OP-25-00211 [doi]
+AB  - Testicular cancer is the most common malignancy in males age 15-40 years and one 
+      of the most curable cancers, with a cumulative 10-year survival rate exceeding 
+      90%. Management strategies depend on the histologic subtype, stage at diagnosis, 
+      sites of disease, tumor markers, and risk classification. Germ cell tumors, 
+      including seminomas and nonseminomas, constitute the majority of testicular 
+      cancers and require distinct therapeutic approaches. For localized disease, 
+      radical orchidectomy remains the cornerstone of treatment, followed by active 
+      surveillance, chemotherapy, or primary retroperitoneal lymph node dissection, 
+      depending on the histology and the risk of relapse. Seminomas are highly curable, 
+      with low-stage patients often managed through surveillance or postoperative 
+      single-agent carboplatin. By contrast, nonseminomas typically require adjuvant 
+      multiagent chemotherapy, such as bleomycin, etoposide, and cisplatin, 
+      particularly in higher-risk patients. For metastatic disease, chemotherapy 
+      remains the standard of care, achieving excellent cure rates even in patients 
+      with bulky tumors. Surgical resection of residual masses is especially critical 
+      in nonseminomatous germ cell tumors to remove viable cancer or teratoma 
+      components. The treatment of refractory or relapsed disease frequently involves 
+      second-line standard-dose or high-dose chemotherapy with autologous stem-cell 
+      transplantation, ideally performed in specialized high-volume centers. Before, 
+      during, and after treatment, multidisciplinary care is essential to addressing 
+      psychosocial challenges, optimizing fertility preservation, and enhancing quality 
+      of life. After curative treatments, long-term management involves regular 
+      follow-up to monitor for recurrence, late toxicities, and secondary malignancies, 
+      with survivorship programs playing a crucial role in meeting patients' ongoing 
+      needs. Advances in molecular diagnostics for early relapse detection and the 
+      introduction of targeted therapies continue to improve outcomes, particularly in 
+      resistant patients.
+FAU - Raggi, Daniele
+AU  - Raggi D
+AUID- ORCID: 0000-0002-4185-2475
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Chakrabarti, Deep
+AU  - Chakrabarti D
+AUID- ORCID: 0000-0002-9511-6844
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Cazzaniga, Walter
+AU  - Cazzaniga W
+AUID- ORCID: 0000-0002-0372-5694
+AD  - Department of Urology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Aslam, Razia
+AU  - Aslam R
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Miletic, Marija
+AU  - Miletic M
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Gilson, Clare
+AU  - Gilson C
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Holwell, Robert
+AU  - Holwell R
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Champion, Penny
+AU  - Champion P
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - King, Alison
+AU  - King A
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Mayer, Erik
+AU  - Mayer E
+AUID- ORCID: 0000-0002-5509-4580
+AD  - Department of Urology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Nicol, David
+AU  - Nicol D
+AD  - Department of Urology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+AD  - The Institute of Cancer Research, London, United Kingdom.
+FAU - Reid, Alison
+AU  - Reid A
+AUID- ORCID: 0000-0001-8567-4941
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+FAU - Huddart, Robert A
+AU  - Huddart RA
+AUID- ORCID: 0000-0003-3604-1990
+AD  - Genitourinary Oncology, The Royal Marsden NHS Foundation Trust, London, United 
+      Kingdom.
+AD  - The Institute of Cancer Research, London, United Kingdom.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20250523
+PL  - United States
+TA  - JCO Oncol Pract
+JT  - JCO oncology practice
+JID - 101758685
+SB  - IM
+EDAT- 2025/05/23 18:39
+MHDA- 2025/05/23 18:39
+CRDT- 2025/05/23 16:03
+PHST- 2025/05/23 18:39 [medline]
+PHST- 2025/05/23 18:39 [pubmed]
+PHST- 2025/05/23 16:03 [entrez]
+AID - 10.1200/OP-25-00211 [doi]
+PST - aheadofprint
+SO  - JCO Oncol Pract. 2025 May 23:OP2500211. doi: 10.1200/OP-25-00211.
+PMID- 40406278
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20250523
+IS  - 2641-5895 (Electronic)
+IS  - 2096-6954 (Print)
+IS  - 2641-5895 (Linking)
+VI  - 6
+IP  - 3
+DP  - 2024 Jul
+TI  - Fetal Urinary Obstruction and Intervention for Sacrococcygeal Teratoma: A Case 
+      Report From Kenya.
+PG  - 196-200
+LID - 10.1097/FM9.0000000000000233 [doi]
+AB  - Fetal lower urinary tract obstruction is a rare condition commonly associated 
+      with significant perinatal morbidity and mortality, particularly when detected in 
+      the second trimester. The concurrent presentation of a recto-urethral fistula 
+      with membranous urethral atresia and sacrococcygeal teratoma has not been 
+      reported. We describe a case of extrinsic fetal lower urinary tract obstruction 
+      related to a recto-urethral fistula, diagnosed at 33 weeks gestation and managed 
+      by serial vesicocentesis until 38 weeks. This case, notable for its absence of 
+      hypoplasia despite late diagnosis, resulted in a term delivery of a male infant. 
+      After delivery, pediatric surgeons performed an abdominal perineal resection of 
+      the tumor. Fetal vesicocentesis remains a viable management option for patients 
+      without access to intrauterine surgical interventions.
+CI  - Copyright © 2024 The Chinese Medical Association, published by Wolters Kluwer 
+      Health, Inc.
+FAU - Mwangi, Maryanne Muthoni
+AU  - Mwangi MM
+AD  - Department of Obstetrics and Gynaecology, Aga Khan University, Nairobi 
+      30270-00100, Kenya.
+FAU - Wanyonyi, Sikolia
+AU  - Wanyonyi S
+AD  - Department of Obstetrics and Gynaecology, Aga Khan University, Nairobi 
+      30270-00100, Kenya.
+FAU - Mugambi, Stanley
+AU  - Mugambi S
+AD  - Department of pediatric Surgery, Aga Khan University, Nairobi 30270-00100, Kenya.
+LA  - eng
+PT  - Case Reports
+PT  - Journal Article
+DEP - 20240702
+PL  - United States
+TA  - Matern Fetal Med
+JT  - Maternal-fetal medicine (Wolters Kluwer Health, Inc.)
+JID - 101769241
+PMC - PMC12087881
+OTO - NOTNLM
+OT  - Fetal lower urinary tract obstruction
+OT  - Lower urinary tract symptom
+OT  - Recto-urinary fistula
+OT  - Sacrococcygeal teratoma
+OT  - Vesicocentesis
+COIS- None.
+EDAT- 2025/05/23 06:26
+MHDA- 2025/05/23 06:27
+PMCR- 2024/07/02
+CRDT- 2025/05/23 04:39
+PHST- 2023/10/30 00:00 [received]
+PHST- 2024/05/04 00:00 [accepted]
+PHST- 2025/05/23 06:27 [medline]
+PHST- 2025/05/23 06:26 [pubmed]
+PHST- 2025/05/23 04:39 [entrez]
+PHST- 2024/07/02 00:00 [pmc-release]
+AID - MFM_240092 [pii]
+AID - 10.1097/FM9.0000000000000233 [doi]
+PST - epublish
+SO  - Matern Fetal Med. 2024 Jul 2;6(3):196-200. doi: 10.1097/FM9.0000000000000233. 
+      eCollection 2024 Jul.

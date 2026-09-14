@@ -57,5 +57,92 @@
     "summary": "",
     "abstract": "Many cases of encephalitis are caused by an autoimmune response, and some are associated with underlying malignancies. Here we present the case of a 17-year-old female patient who was admitted to the pediatric ward with acute gastroenteritis, seizures, and behavioral changes. A brain computed tomography (CT) scan ruled out acute infarction, haemorrhage, mass lesions, and other intracranial injuries, while the initial EEG showed no epileptic discharges. In the absence of a definitive diagnosis, midazolam was administered to treat tonic-clonic seizures, while ceftriaxone and acyclovir were started for suspected infection. However, her condition deteriorated further and she was transferred to the ICU, where she was intubated. A Cell-Based Assay (CBA) revealed the presence of anti-NMDAR antibodies and a contrast-enhanced brain MRI showed leptomeningeal enhancement without limbic involvement. She was subsequently treated with intravenous immunoglobulins and high-dose corticosteroids. A subsequent transabdominal ultrasound scan revealed an oval, fluid-filled ovarian cyst. Based on these findings, her right ovary was removed, resulting in a gradual improvement in her condition. This case highlights that paraneoplastic autoimmune encephalitis may be misclassified due to persistent psychiatric symptoms with negative EEG and CSF findings. When clinical suspicion remains high despite negative initial instrumental and laboratory findings, it is essential to repeat these investigations. In such cases, neuroantibody testing may play a crucial role in establishing the diagnosis.",
     "added_at": "2026-09-07"
+  },
+  {
+    "id": "pmid-40409851",
+    "title": "Intravascular Germ Cell Tumor With Cardiac and Bilateral Pulmonary Artery Involvement.",
+    "title_ja": "",
+    "authors": [
+      "Calderon-Miranda CA",
+      "Reyes-Cardona MJ",
+      "Lopez-Mora GR",
+      "Cadavid-Alvear EA",
+      "Vesga-Reyes CE",
+      "Sanchez-Blanco J",
+      "Olaya P",
+      "Zambrano-Franco JA"
+    ],
+    "journal": "JACC Case Rep",
+    "year": 2025,
+    "pmid": "40409851",
+    "doi": "10.1016/j.jaccas.2025.103319",
+    "url": "",
+    "tags": [
+      "症例報告",
+      "cancer",
+      "computed tomography",
+      "echocardiography",
+      "pediatric surgery"
+    ],
+    "summary": "",
+    "abstract": "BACKGROUND: Germ cell tumors (GCTs) are neoplasms usually originating in the gonads, most often affecting young patients. Intravascular GCTs are exceptionally rare and potentially fatal due to cardiac and embolic complications. CASE SUMMARY: A 17-year-old patient presented with weight loss, abdominal pain, and dyspnea. Imaging revealed an intravascular mass extending from the inferior vena cava (IVC) into the right heart chambers and pulmonary arteries. The tumor was successfully removed via surgery under cardiopulmonary bypass. Histopathologic diagnosis was a mixed non-seminomatous GCT. Recovery was uneventful, and follow-up imaging showed no intravascular lesions. Cisplatin-based chemotherapy was started with curative intent. DISCUSSION: Intravascular GCT is a rare phenomenon, presenting mostly with retroperitoneal disease affecting the IVC. Cardiologists assess complications and interpret cardiovascular imaging. A multidisciplinary approach is crucial for improving outcomes.",
+    "added_at": "2026-09-14"
+  },
+  {
+    "id": "pmid-40408609",
+    "title": "Management of Testicular Cancer.",
+    "title_ja": "",
+    "authors": [
+      "Raggi D",
+      "Chakrabarti D",
+      "Cazzaniga W",
+      "Aslam R",
+      "Miletic M",
+      "Gilson C",
+      "Holwell R",
+      "Champion P",
+      "King A",
+      "Mayer E",
+      "Nicol D",
+      "Reid A",
+      "Huddart RA"
+    ],
+    "journal": "JCO Oncol Pract",
+    "year": 2025,
+    "pmid": "40408609",
+    "doi": "10.1200/OP-25-00211",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary": "",
+    "abstract": "Testicular cancer is the most common malignancy in males age 15-40 years and one of the most curable cancers, with a cumulative 10-year survival rate exceeding 90%. Management strategies depend on the histologic subtype, stage at diagnosis, sites of disease, tumor markers, and risk classification. Germ cell tumors, including seminomas and nonseminomas, constitute the majority of testicular cancers and require distinct therapeutic approaches. For localized disease, radical orchidectomy remains the cornerstone of treatment, followed by active surveillance, chemotherapy, or primary retroperitoneal lymph node dissection, depending on the histology and the risk of relapse. Seminomas are highly curable, with low-stage patients often managed through surveillance or postoperative single-agent carboplatin. By contrast, nonseminomas typically require adjuvant multiagent chemotherapy, such as bleomycin, etoposide, and cisplatin, particularly in higher-risk patients. For metastatic disease, chemotherapy remains the standard of care, achieving excellent cure rates even in patients with bulky tumors. Surgical resection of residual masses is especially critical in nonseminomatous germ cell tumors to remove viable cancer or teratoma components. The treatment of refractory or relapsed disease frequently involves second-line standard-dose or high-dose chemotherapy with autologous stem-cell transplantation, ideally performed in specialized high-volume centers. Before, during, and after treatment, multidisciplinary care is essential to addressing psychosocial challenges, optimizing fertility preservation, and enhancing quality of life. After curative treatments, long-term management involves regular follow-up to monitor for recurrence, late toxicities, and secondary malignancies, with survivorship programs playing a crucial role in meeting patients' ongoing needs. Advances in molecular diagnostics for early relapse detection and the introduction of targeted therapies continue to improve outcomes, particularly in resistant patients.",
+    "added_at": "2026-09-14"
+  },
+  {
+    "id": "pmid-40406278",
+    "title": "Fetal Urinary Obstruction and Intervention for Sacrococcygeal Teratoma: A Case Report From Kenya.",
+    "title_ja": "",
+    "authors": [
+      "Mwangi MM",
+      "Wanyonyi S",
+      "Mugambi S"
+    ],
+    "journal": "Matern Fetal Med",
+    "year": 2024,
+    "pmid": "40406278",
+    "doi": "10.1097/FM9.0000000000000233",
+    "url": "",
+    "tags": [
+      "症例報告",
+      "Fetal lower urinary tract obstruction",
+      "Lower urinary tract symptom",
+      "Recto-urinary fistula",
+      "Sacrococcygeal teratoma",
+      "Vesicocentesis"
+    ],
+    "summary": "",
+    "abstract": "Fetal lower urinary tract obstruction is a rare condition commonly associated with significant perinatal morbidity and mortality, particularly when detected in the second trimester. The concurrent presentation of a recto-urethral fistula with membranous urethral atresia and sacrococcygeal teratoma has not been reported. We describe a case of extrinsic fetal lower urinary tract obstruction related to a recto-urethral fistula, diagnosed at 33 weeks gestation and managed by serial vesicocentesis until 38 weeks. This case, notable for its absence of hypoplasia despite late diagnosis, resulted in a term delivery of a male infant. After delivery, pediatric surgeons performed an abdominal perineal resection of the tumor. Fetal vesicocentesis remains a viable management option for patients without access to intrauterine surgical interventions.",
+    "added_at": "2026-09-14"
   }
 ]
