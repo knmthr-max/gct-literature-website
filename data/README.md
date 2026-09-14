@@ -4,12 +4,14 @@
 
 ## 文献を追加する(推奨: PubMedデータから自動取り込み)
 
-1. PubMed で文献を選び、**Save → Format: PubMed** でエクスポートする(MEDLINE形式、.nbib)
+1. PubMed で文献を選び、**Save → Format: PubMed** でエクスポートする(MEDLINE形式)。ファイルの拡張子は `.nbib` でも `.txt` でも構いません(PubMed形式の表示をコピーして .txt に貼り付けたものでもOK)。スクリプトは拡張子ではなく中身で判断します
 2. そのファイルを `data/raw/` に置く(例: `data/raw/2026-09-07-import.nbib`)
 3. 取り込みスクリプトを実行する:
 
 ```sh
 python3 scripts/import_medline.py data/raw/2026-09-07-import.nbib
+# 複数ファイルをまとめて取り込むこともできます
+python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 ```
 
 タイトル・著者・掲載誌・年・PMID・DOI・抄録・タグ(文献種別の日本語タグ + PubMedキーワード)が自動で `papers.json` に追記されます。PMIDで重複判定するので、同じファイルを二度実行しても二重登録にはなりません。取り込み後、`title_ja`(日本語タイトル)や `summary`(日本語要約)を手で書き足すと、サイトでは日本語が優先表示されます。
