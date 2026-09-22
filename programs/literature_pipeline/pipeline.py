@@ -942,9 +942,11 @@ def jif_tier(value: str) -> str:
         return "unknown"
     if number < 1:
         return "low"
+    if number < 3:
+        return "moderate"
     if number < 5:
-        return "middle"
-    return "high"
+        return "high"
+    return "very-high"
 
 
 def step2(args: argparse.Namespace) -> None:
