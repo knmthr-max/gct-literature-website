@@ -108,9 +108,11 @@ class LiteraturePipelineTests(unittest.TestCase):
 
     def test_jif_tiers_have_explicit_boundaries(self):
         self.assertEqual(self.pipeline.jif_tier("0.9"), "low")
-        self.assertEqual(self.pipeline.jif_tier("1"), "middle")
-        self.assertEqual(self.pipeline.jif_tier("4.99"), "middle")
-        self.assertEqual(self.pipeline.jif_tier("5"), "high")
+        self.assertEqual(self.pipeline.jif_tier("1"), "moderate")
+        self.assertEqual(self.pipeline.jif_tier("2.99"), "moderate")
+        self.assertEqual(self.pipeline.jif_tier("3"), "high")
+        self.assertEqual(self.pipeline.jif_tier("4.99"), "high")
+        self.assertEqual(self.pipeline.jif_tier("5"), "very-high")
         self.assertEqual(self.pipeline.jif_tier(""), "unknown")
 
     def test_ai_validation_blocks_short_summaries_and_other_subtype(self):
