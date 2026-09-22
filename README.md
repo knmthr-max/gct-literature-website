@@ -27,6 +27,25 @@ scripts/
 
 `gh-pages` ブランチはデプロイ用の自動生成ブランチです。直接編集しないでください(main への push で毎回上書きされます)。
 
+## `programs/` — 本来のデータ処理パイプライン(移植済み)
+
+`scripts/import_medline.py` はこのサイト単体で使える簡易版インポータですが、`programs/` 配下にはより本格的な、人によるレビューを挟む処理パイプラインが移植されています(元は別ワークスペースで運用されていたもの):
+
+```
+programs/
+  README.md, VERSIONS.md    … プログラム一覧と版情報
+  pubmed_cleaner/            … PubMed MEDLINE textをMH/OT保持TSVへ変換
+  literature_pipeline/       … PubMed取り込み→JIF照合→Claude分類→人によるレビュー→マスター昇格
+  literature_site/           … 承認済みマスターTSVから公開用TSV・検索indexを生成
+  tests/                     … 上記プログラムの回帰テスト(`python3 -m unittest discover -s programs/tests`)
+```
+
+`literature_pipeline/pipeline.py` は `--claude` オプション付きでローカルの `claude` CLI を呼び出し、文献の分類・要約下書きを行い、`approve` ステップで人が承認したものだけを `data/master/literature/` に昇格させる設計です(現時点ではこのリポジトリの `data/papers.json` とは連携していません — 将来の統合候補)。
+
+**非公開データとの接続に注意:** `jif_reference_cleaner.py` はJournal Impact Factor(JCR)のライセンスデータを扱うプログラムですが、そのデータ自体(`data/reference/jif/`)は著作権上**このリポジトリには含めていません**。ローカルで運用する場合は、ライセンスされた別データを別途用意してください。
+
+設計の詳細・データ定義は [`docs/`](docs/) を参照。
+
 ## データフロー
 
 ```

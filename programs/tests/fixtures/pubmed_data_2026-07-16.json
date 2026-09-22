@@ -1,0 +1,22 @@
+[
+  {
+    "pmid": "11111111",
+    "title": "Clinical <trial>",
+    "category": "Clinical",
+    "subtype": "Clinical Study",
+    "first_author": "Alpha A",
+    "journal": "Test Journal",
+    "if": 5.0,
+    "summary": "Summary & review"
+  },
+  {
+    "pmid": "22222222",
+    "title": "Review article",
+    "type": "Review",
+    "subtype": "Systematic Review",
+    "first_author": "Beta B",
+    "journal": "Other Journal",
+    "if": 2.0,
+    "summary": "Second summary"
+  }
+]

@@ -1,0 +1,27 @@
+PMID- 11111111
+DP  - 2026 Jan
+DEP - 2025 Dec 20
+TI  - First title
+      with continuation
+AB  - First abstract.
+AU  - Alpha A
+PT  - Journal Article
+PT  - Clinical Trial
+TA  - Test Journal
+JT  - Test Journal Full Title
+IS  - 1234-5678 (Print)
+IS  - 8765-4321 (Electronic)
+AID - 10.1000/example.1 [doi]
+MH  - Germ Cell Tumor
+MH  - Humans
+OT  - biomarker
+OT  - microRNA
+PMID- 22222222
+DP  - 2026 Feb
+TI  - Second title
+AU  - Beta B
+PT  - Review
+PT  - Meta-Analysis
+TA  - Other Journal
+IS  - 2222-3333 (Linking)
+MH  - Neoplasms
