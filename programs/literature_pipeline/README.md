@@ -5,21 +5,39 @@ Version: `1.1.0`
 ## Annual JIF reference preparation
 
 Keep each unmodified JCR CSV export in `data/reference/jif/raw/`. Convert one
-or more CSV exports into one non-public, versioned TSV per JIF data year:
+or more CSV exports into one non-public, versioned TSV per JIF data year
+(version `1.2.1`):
 
 ```bash
 python3 programs/literature_pipeline/jif_reference_cleaner.py \
-  --raw-dir data/reference/jif/raw \
+  data/reference/jif/raw
+```
+
+`--reference-version`, `--jcr-release-year`, `--license-note`, and
+`--output-dir` are all optional as of `1.2.1`: the reference version defaults
+to today's date, the JCR release year is inferred from the Clarivate
+copyright text embedded in the CSV, and output goes to a `jif-output`
+subfolder next to the input by default. Pass any of these flags explicitly to
+override the inferred value, e.g.:
+
+```bash
+python3 programs/literature_pipeline/jif_reference_cleaner.py \
+  data/reference/jif/raw \
   --reference-version 2026.07.0 \
   --jcr-release-year 2026 \
+  --output-dir data/reference/jif \
   --license-note "JCR institutional use only; do not upload or redistribute"
 ```
 
-The program detects the JIF year from a column such as `2024 JIF`. It removes
+Two CSV layouts are supported: the standard JCR journal-list export (columns
+such as `Journal name` and `2024 JIF`) and a single-journal `All Years`
+history export. The program detects the JIF year automatically and removes
 identical category-level journal duplicates. A journal identity with
 conflicting JIF values is excluded from the reference and recorded in a
-separate conflict TSV for review. Existing output files are never overwritten.
-The generated reference retains only the fields defined in
+separate conflict TSV for review. A CSV in an unsupported layout is skipped
+and reported rather than aborting the whole run when a folder is given (an
+explicit `--input` file still raises an error). Existing output files are
+never overwritten. The generated reference retains only the fields defined in
 `docs/data_dictionary/jif_reference_v1.md`; the raw CSV remains the source
 record and is not modified.
 
