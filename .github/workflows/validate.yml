@@ -29,3 +29,5 @@ jobs:
               sys.exit(f"必須フィールド(id/title/year)欠落: {len(missing)}件")
           print(f"{len(papers)} entries OK")
           EOF
+      - name: Run programs/ regression tests
+        run: python3 -m unittest discover -s programs/tests -v
