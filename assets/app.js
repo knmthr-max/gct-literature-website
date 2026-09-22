@@ -100,10 +100,12 @@
 
     const mainTitle = p.title_ja || p.title || "(無題)";
     const subTitle = p.title_ja && p.title ? `<p class="paper-title-sub">${escapeHtml(p.title)}</p>` : "";
+    const jifLabels = { low: "IF: low(<1)", moderate: "IF: moderate(1-3)", high: "IF: high(3-5)", "very-high": "IF: very-high(5+)" };
     const metaParts = [
       (p.authors || []).join(", "),
       p.journal,
       p.year ? `${p.year}年` : "",
+      jifLabels[p.jif_tier] || "",
     ].filter(Boolean);
     const tags = (p.tags || [])
       .map((t) => `<span class="paper-tag">${escapeHtml(t)}</span>`)

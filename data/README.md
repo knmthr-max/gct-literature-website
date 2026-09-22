@@ -51,9 +51,12 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `doi` | – | DOI。あれば doi.org へのリンクを自動生成 |
 | `url` | – | その他のリンク(PMID/DOI がない場合用) |
 | `tags` | – | 絞り込み用タグの配列。表記ゆれに注意(「治療」と「治療法」は別タグ扱い) |
-| `summary` | – | 日本語の要約・コメント |
+| `summary` | – | 要約・コメント(日本語 or 英語) |
 | `abstract` | – | 英語抄録。サイトでは折りたたみ表示される |
+| `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
+
+`jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`gct-literature-data/programs/literature_pipeline/pipeline.py` の `jif_tier()` と同じ定義。
 
 ## サイト情報を変える
 
