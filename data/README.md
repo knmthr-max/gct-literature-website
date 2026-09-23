@@ -14,7 +14,7 @@ python3 scripts/import_medline.py data/raw/2026-09-07-import.nbib
 python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 ```
 
-タイトル・著者・掲載誌・年・PMID・DOI・抄録・タグ(文献種別の日本語タグ + PubMedキーワード)が自動で `papers.json` に追記されます。PMIDで重複判定するので、同じファイルを二度実行しても二重登録にはなりません。取り込み後、`title_ja`(日本語タイトル)や `summary`(日本語要約)を手で書き足すと、サイトでは日本語が優先表示されます。
+タイトル・著者・掲載誌・年・PMID・DOI・抄録・タグ(下記の固定7分類のいずれか)が自動で `papers.json` に追記されます。PMIDで重複判定するので、同じファイルを二度実行しても二重登録にはなりません。取り込み後、`title_ja`(日本語タイトル)や `summary`(日本語要約)を手で書き足すと、サイトでは日本語が優先表示されます。
 
 ## 文献を手動で追加する
 
@@ -31,7 +31,7 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
   "pmid": "12345678",
   "doi": "10.1000/example",
   "url": "",
-  "tags": ["総説", "治療"],
+  "tags": ["総説"],
   "summary": "日本語の要約・コメント(任意)",
   "added_at": "2026-09-01"
 }
@@ -50,7 +50,7 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `pmid` | – | PubMed ID。あれば PubMed へのリンクを自動生成 |
 | `doi` | – | DOI。あれば doi.org へのリンクを自動生成 |
 | `url` | – | その他のリンク(PMID/DOI がない場合用) |
-| `tags` | – | 絞り込み用タグの配列。表記ゆれに注意(「治療」と「治療法」は別タグ扱い) |
+| `tags` | – | 絞り込み用タグ。**必ず次の7分類のうち1つのみ**を入れる: `症例報告` / `臨床研究` / `基礎研究` / `総説` / `ガイドライン` / `論説` / `レター`。PubMedの著者キーワードや細かい文献種別はここに入れない(タグクラウドが機能しなくなるため)。該当なしなら空配列 `[]` |
 | `summary` | – | 要約・コメント(日本語 or 英語) |
 | `abstract` | – | 英語抄録。サイトでは折りたたみ表示される |
 | `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない |
