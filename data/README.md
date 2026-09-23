@@ -56,7 +56,7 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `summary_en` | – | 英語の短い要約・コメント |
 | `summary_ja` | – | 日本語の短い要約・コメント |
 | `abstract` | – | 英語の全文抄録。サイトでは折りたたみ表示される |
-| `abstract_ja` | – | 日本語訳の全文抄録。日本語ページではこちらがあれば優先表示され、なければ英語版が表示される(トグルのラベルも自動で切り替わる) |
+| `abstract_ja` | – | 日本語訳の全文抄録。収載文献は基本的に英語が原文であるため、日本語ページでは訳文(「抄録」)と英語原文(「抄録原文(英語)」)を**両方**、別々の折りたたみで常に参照できる。訳が無い場合は「抄録(英語)」に原文のみ表示する |
 | `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
 

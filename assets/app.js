@@ -145,14 +145,22 @@
       ? `<p class="paper-summary">${escapeHtml(summary)}</p>`
       : `<p class="paper-summary paper-summary-pending">${escapeHtml(summaryPending)}</p>`;
 
-    // 抄録: 日本語ページは日本語訳(abstract_ja)があればそれを、無ければ英語原文を表示する
-    // (英語ページは常に英語原文)。トグルのラベルは実際に表示している言語に合わせる
-    const abstractText = LANG === "en" ? p.abstract : (p.abstract_ja || p.abstract);
-    const abstractIsJa = LANG === "ja" && !!p.abstract_ja;
-    const abstractLabel = LANG === "en" ? "Abstract" : (abstractIsJa ? "抄録" : "抄録(英語)");
-    const abstractHtml = abstractText
-      ? `<details class="paper-abstract"><summary>${abstractLabel}</summary><p>${escapeHtml(abstractText)}</p></details>`
-      : "";
+    // 抄録: 収載文献は基本的に英語が原文のため、日本語ページでも英語原文を常に参照できるようにする。
+    // 日本語訳(abstract_ja)がある場合は「抄録」に訳文を表示しつつ、「抄録原文(英語)」で原文も別途提示する。
+    // 訳がまだ無い場合は、これまでどおり「抄録(英語)」に原文だけを表示する
+    let abstractHtml = "";
+    if (LANG === "en") {
+      if (p.abstract) {
+        abstractHtml = `<details class="paper-abstract"><summary>Abstract</summary><p>${escapeHtml(p.abstract)}</p></details>`;
+      }
+    } else if (p.abstract_ja) {
+      abstractHtml = `<details class="paper-abstract"><summary>抄録</summary><p>${escapeHtml(p.abstract_ja)}</p></details>`;
+      if (p.abstract) {
+        abstractHtml += `<details class="paper-abstract"><summary>抄録原文(英語)</summary><p>${escapeHtml(p.abstract)}</p></details>`;
+      }
+    } else if (p.abstract) {
+      abstractHtml = `<details class="paper-abstract"><summary>抄録(英語)</summary><p>${escapeHtml(p.abstract)}</p></details>`;
+    }
 
     return `
       <article class="paper-card">
