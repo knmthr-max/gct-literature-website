@@ -18,8 +18,10 @@
     "tags": [
       "症例報告"
     ],
-    "summary": "",
+    "summary_en": "",
+    "summary_ja": "",
     "abstract": "INTRODUCTION: Endobronchial teratomas are extremely rare tumors that develop within the airway of the lung. Patients often present with nonspecific symptoms that depend on the size and anatomic features, making the differential broad and the diagnosis challenging. PRESENTATION OF CASE: A 28-year-old man presented with a 6-month history of a dry cough, vague chest discomfort, and occasional dyspnea. A chest X-ray and CT were performed, revealing a heterogeneous mass involving the mediastinum and the medial aspect of the right lung. Serum tumor markers were normal, and a testicular ultrasound excluded a metastatic germ cell tumor. Definitive treatment required an en bloc resection of the thymus and right upper lobe, with pathologic review showing an endobronchial origin of a mature teratoma. DISCUSSION: This case illustrates the diagnostic challenges of endobronchial teratomas, provides imaging and histologic characteristics of this rare tumor type, and contributes to the number of published cases with favorable outcomes. CONCLUSION: Given the rarity of endobronchial teratomas, a high index of suspicion among pulmonologists, surgeons, and pathologists is necessary to correctly diagnose and treat these patients.",
+    "abstract_ja": "",
     "added_at": "2026-09-07"
   },
   {
@@ -45,8 +47,10 @@
     "tags": [
       "症例報告"
     ],
-    "summary": "",
+    "summary_en": "",
+    "summary_ja": "",
     "abstract": "Many cases of encephalitis are caused by an autoimmune response, and some are associated with underlying malignancies. Here we present the case of a 17-year-old female patient who was admitted to the pediatric ward with acute gastroenteritis, seizures, and behavioral changes. A brain computed tomography (CT) scan ruled out acute infarction, haemorrhage, mass lesions, and other intracranial injuries, while the initial EEG showed no epileptic discharges. In the absence of a definitive diagnosis, midazolam was administered to treat tonic-clonic seizures, while ceftriaxone and acyclovir were started for suspected infection. However, her condition deteriorated further and she was transferred to the ICU, where she was intubated. A Cell-Based Assay (CBA) revealed the presence of anti-NMDAR antibodies and a contrast-enhanced brain MRI showed leptomeningeal enhancement without limbic involvement. She was subsequently treated with intravenous immunoglobulins and high-dose corticosteroids. A subsequent transabdominal ultrasound scan revealed an oval, fluid-filled ovarian cyst. Based on these findings, her right ovary was removed, resulting in a gradual improvement in her condition. This case highlights that paraneoplastic autoimmune encephalitis may be misclassified due to persistent psychiatric symptoms with negative EEG and CSF findings. When clinical suspicion remains high despite negative initial instrumental and laboratory findings, it is essential to repeat these investigations. In such cases, neuroantibody testing may play a crucial role in establishing the diagnosis.",
+    "abstract_ja": "",
     "added_at": "2026-09-07"
   },
   {
@@ -71,8 +75,10 @@
     "tags": [
       "症例報告"
     ],
-    "summary": "",
+    "summary_en": "",
+    "summary_ja": "",
     "abstract": "BACKGROUND: Germ cell tumors (GCTs) are neoplasms usually originating in the gonads, most often affecting young patients. Intravascular GCTs are exceptionally rare and potentially fatal due to cardiac and embolic complications. CASE SUMMARY: A 17-year-old patient presented with weight loss, abdominal pain, and dyspnea. Imaging revealed an intravascular mass extending from the inferior vena cava (IVC) into the right heart chambers and pulmonary arteries. The tumor was successfully removed via surgery under cardiopulmonary bypass. Histopathologic diagnosis was a mixed non-seminomatous GCT. Recovery was uneventful, and follow-up imaging showed no intravascular lesions. Cisplatin-based chemotherapy was started with curative intent. DISCUSSION: Intravascular GCT is a rare phenomenon, presenting mostly with retroperitoneal disease affecting the IVC. Cardiologists assess complications and interpret cardiovascular imaging. A multidisciplinary approach is crucial for improving outcomes.",
+    "abstract_ja": "",
     "added_at": "2026-09-14"
   },
   {
@@ -102,8 +108,10 @@
     "tags": [
       "総説"
     ],
-    "summary": "",
+    "summary_en": "",
+    "summary_ja": "",
     "abstract": "Testicular cancer is the most common malignancy in males age 15-40 years and one of the most curable cancers, with a cumulative 10-year survival rate exceeding 90%. Management strategies depend on the histologic subtype, stage at diagnosis, sites of disease, tumor markers, and risk classification. Germ cell tumors, including seminomas and nonseminomas, constitute the majority of testicular cancers and require distinct therapeutic approaches. For localized disease, radical orchidectomy remains the cornerstone of treatment, followed by active surveillance, chemotherapy, or primary retroperitoneal lymph node dissection, depending on the histology and the risk of relapse. Seminomas are highly curable, with low-stage patients often managed through surveillance or postoperative single-agent carboplatin. By contrast, nonseminomas typically require adjuvant multiagent chemotherapy, such as bleomycin, etoposide, and cisplatin, particularly in higher-risk patients. For metastatic disease, chemotherapy remains the standard of care, achieving excellent cure rates even in patients with bulky tumors. Surgical resection of residual masses is especially critical in nonseminomatous germ cell tumors to remove viable cancer or teratoma components. The treatment of refractory or relapsed disease frequently involves second-line standard-dose or high-dose chemotherapy with autologous stem-cell transplantation, ideally performed in specialized high-volume centers. Before, during, and after treatment, multidisciplinary care is essential to addressing psychosocial challenges, optimizing fertility preservation, and enhancing quality of life. After curative treatments, long-term management involves regular follow-up to monitor for recurrence, late toxicities, and secondary malignancies, with survivorship programs playing a crucial role in meeting patients' ongoing needs. Advances in molecular diagnostics for early relapse detection and the introduction of targeted therapies continue to improve outcomes, particularly in resistant patients.",
+    "abstract_ja": "",
     "added_at": "2026-09-14"
   },
   {
@@ -123,8 +131,10 @@
     "tags": [
       "症例報告"
     ],
-    "summary": "",
+    "summary_en": "",
+    "summary_ja": "",
     "abstract": "Fetal lower urinary tract obstruction is a rare condition commonly associated with significant perinatal morbidity and mortality, particularly when detected in the second trimester. The concurrent presentation of a recto-urethral fistula with membranous urethral atresia and sacrococcygeal teratoma has not been reported. We describe a case of extrinsic fetal lower urinary tract obstruction related to a recto-urethral fistula, diagnosed at 33 weeks gestation and managed by serial vesicocentesis until 38 weeks. This case, notable for its absence of hypoplasia despite late diagnosis, resulted in a term delivery of a male infant. After delivery, pediatric surgeons performed an abdominal perineal resection of the tumor. Fetal vesicocentesis remains a viable management option for patients without access to intrauterine surgical interventions.",
+    "abstract_ja": "",
     "added_at": "2026-09-14"
   },
   {
@@ -146,9 +156,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of a mature teratoma of the cerebellum with an extracranial extension.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Case report of a mature teratoma of the cerebellum with an extracranial extension.",
     "abstract": "Intracranial teratomas are very rare in adults, representing only 0.3-0.5% of all primary brain tumors. They originate from all three germ layers, and are classified as mature, immature, or malignant. Mature teratomas constitute the most prevalent type in the adult population, commonly originating from midline structures such as the pineal and suprasellar regions. However, the localization of these tumors within the cerebellum is exceedingly rare, with only a limited number of cases reported globally. In this manuscript, we describe, to the best of our knowledge, the first documented case of a young adult patient presenting with a mature teratoma situated between the cerebellar hemispheres. Notably, this tumor was accompanied by occipital bone loss, through which a tumor pedicle extended, forming an extracranial component.: After analyzing the clinical picture and additional examinations, the patient was classified for surgery. The intracranial part of the tumor contained numerous cysts with yellow fluid, a tooth, and fat tissue. The tumor was removed radically, with its extracranial part.: On the fourth day after surgery, the patient was discharged from the clinic in a good general condition, walking, with marked cerebellar symptoms. In a follow-up at 6 months postoperatively, the neurological examination was normal, with no headaches. MRI at the 6 months follow-up did not show any residual or recurrent tumor.Histopathological examination confirmed the diagnosis of mature teratoma.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -175,9 +187,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report and literature review on DNA variants in primary mediastinal nonseminomatous germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report and literature review on DNA variants in primary mediastinal nonseminomatous germ cell tumors.",
     "abstract": "Primary germ cell tumors (GCTs) are highly malignant and often affect young adult men. They commonly occur in the reproductive organs but can also affect structures along the body's midline, including the mediastinum, retroperitoneum, and pineal gland.\n\nWe present the genetic analyses of a 21-year-old African American man diagnosed with primary GCT of the anterior mediastinum.\n\nDNA variants of NRAS and TP53 were identified in the teratomatous and embryonic components of his tumor. These variants were not identified in benign tissue, indicating their somatic origin. Several copy number variants were detected in both tumor components, including gains of chromosome 1, 3p, 12p with loss of homozygosity, and 21; segmental loss of 9q; and 13q copy neutral loss of homozygosity. Divergent copy number variants were identified in either teratomatous or embryonic components, including gains of chromosomes 7, 9, and 17 in the teratomatous component and gains of chromosomes 2, 4, 6, 8, and 11 in the embryonic component.\n\nThese DNA alterations may be genetic drivers of tumor initiation or progression in our patient. They may have diagnostic and prognostic value for mediastinal GCTs.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -201,9 +215,11 @@
     "tags": [
       "総説"
     ],
+    "summary_en": "Review of recent advancements and techniques in pediatric CNS radiation oncology.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Review of recent advancements and techniques in pediatric CNS radiation oncology.",
     "abstract": "Radiation therapy (RT) is a cornerstone in the management of pediatric central nervous system (CNS) tumors. Recent advancements in RT delivery and techniques aim to enhance therapeutic effectiveness while minimizing both acute and long-term complications associated with pediatric brain RT. This paper highlights innovative developments in the field, including the clinical indications, benefits, and challenges of proton therapy and stereotactic radiotherapy. The ongoing refinement of risk-adapted RT volumes is highlighted, with examples of newly proposed germinoma RT volumes and hippocampal-sparing RT. Additionally, emerging experimental approaches, including FLASH therapy and theranostics, are also discussed as promising future directions. Further prospective, multi-institutional collaborative studies are essential to validate and expand upon the benefits outlined in this review.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -230,9 +246,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study on the role of chromosomal passenger complex in maintaining pluripotency in human embryonic carcinoma cells.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Study on the role of chromosomal passenger complex in maintaining pluripotency in human embryonic carcinoma cells.",
     "abstract": "Human embryonic carcinoma (hEC) cells are derived from teratocarcinomas, exhibit robust proliferation, have a high differentiation potential, are the malignant counterparts of human embryonic stem cells (hESCs), and are considered hESC-like. The chromosomal passenger complex (CPC), made up of the microtuble binding protein Borealin, the kinase Aurora-B, the CPC-stabilizing inner centromere protein (INCENP), and the inhibitor of apoptosis family member Survivin, regulates cell division and is active exclusively during mitosis in somatic cells. The anaphase-promoting complex/cyclosome and its cofactor Cdh1 (APC/C) is a ubiquitylating complex that catalyzes the degradation of Aurora-B and Borealin in somatic cells but has low activity during interphase in hESCs. Here, we found that Borealin and Aurora-B exhibited sustained stability throughout the cell cycle of hEC cells due to low APC/Cactivity. In contrast with somatic cells, CPC activity persisted across the cell cycle of hEC cells because of diminished APC/Cactivity. Disrupting the CPC complex by depleting its constituents triggered spontaneous differentiation in hEC cells. As hEC cells differentiated, APC/Cactivation curtailed CPC activity. Inactivating the CPC by pharmacologically inhibiting Aurora-B induced hEC cell differentiation by activating the epithelial-to-mesenchymal transition (EMT) program. Hence, APC/C-mediated termination of CPC activity triggered hEC cell differentiation. Collectively, these findings demonstrate a role for the CPC in governing hESC cell fate.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -263,9 +281,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Identification of autoantigens in autoimmune limbic encephalitis using phage immunoprecipitation sequencing.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Identification of autoantigens in autoimmune limbic encephalitis using phage immunoprecipitation sequencing.",
     "abstract": "To describe the use of high-throughput whole-human proteome phage immunoprecipitation sequencing (PhIP-Seq) in identifying potential antigens for antibody-negative autoimmune limbic encephalitis (ALE).\n\nWe used PhIP-Seq to analyze cerebrospinal fluid (CSF) from patients with antibody-negative ALE evaluated in our lab with detailed clinical records available (2008-2023). Identified autoantigens were validated using recombinant protein-based assay.\n\nOf the 18 CSF samples from patients with ALE, 1 sample showed neuronal PAS domain protein 4 (NPAS4) as the putative autoantigen with the highest enrichment score. Patient presented with cognitive decline, gait dysfunction and unique MRI brain findings revealing asymmetric involvement of the medial temporal lobes with extension to the insular cortex and anterior temporal lobes. No malignancy was detected, and although the patient was initiated on immunotherapy, follow-up evaluation was limited. Another sample with very similar clinical and MRI brain findings, who developed ALE following COVID-19 infection, was referred for evaluation for neural-specific autoantibodies, and PhIP-Seq identified NPAS4 as the putative autoantigen. In both these samples, NPAS4-IgG was confirmed by cell-based assay (CBA) and enzyme-linked immunosorbent assay (ELISA). To assess the specificity of the NPAS4 autoantigen, a large cohort of disease (CSF, n = 49, serum, n = 220) and healthy controls (serum, n = 90) were tested by ELISA which were also negative. In addition, three samples had a high enrichment score for adenylate kinase 5 (AK5), an autoantigen associated with ALE. These patients also displayed a unique immunosignature that included AK5-IgG, which is distinct from NPAS4-IgG ALE or antibody-negative ALE. All three AK5-IgG seropositive cases presented with subacute memory loss, with MRI/PET brain florid showing medial temporal lobe involvement. No malignancy was detected in any of the three patients and immunotherapy led to improvement in one.\n\nOur study demonstrates the utility of high-throughput PhIP-Seq in identifying potential autoantigens in antibody-negative ALE. The identification of NPAS4 as a putative antigen and identification of additional AK5-IgG-positive cases, underscores the potential of PhIP-Seq as a powerful tool in autoimmune disease research.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -288,9 +308,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of a novel SMARCA4 variant identified in an infant with atypical teratoid rhabdoid tumor.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Case report of a novel SMARCA4 variant identified in an infant with atypical teratoid rhabdoid tumor.",
     "abstract": "Atypical teratoid/rhabdoid tumors (AT/RT) are malignant central nervous system (CNS) tumors. Typically, AT/RT is classified as SMARCB1 (INI-1) deficient or as SMARCA4 (BRG1) deficient. In this case, we describe a unique case of AT/RT with a novel SMARCA4 missense variant identified on next-generation sequencing but retained expression of INI-1 and BRG-1 on immunohistochemistry. Diagnosis of the tumor and discovery of the novel SMARCA4 variant was only possible after comprehensive tumor molecular testing tailored for pediatric malignancies. This case highlights the importance of molecular genetic testing as part of a workup in neoplasms concerning for possible AT/RT.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -312,9 +334,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Long-term follow-up study of hepatic steatosis development in testicular germ cell tumor survivors.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Long-term follow-up study of hepatic steatosis development in testicular germ cell tumor survivors.",
     "abstract": "Hepatic steatosis (HS) development and its risk factors in testicular germ cell tumor (TGCT) survivors have not been investigated.\n\nThe study was designed as a retrospective observational study. Patients with existing HS at diagnosis were excluded. Serial imaging was utilized to detect HS.\n\nA total of 106 TGCT survivors were included. HS developed in 57% ( = 61) during a median follow-up of 51.8 months (8.5-241.5); 77% ( = 47) of those had persistent HS. Patients who developed HS had a higher baseline body mass index (BMI) (median 26.5 vs. 23.6 kg/m, = 0.000). Higher baseline BMI [adjusted odds ratio (aOR): 1.35, (95% CI: 1.10-1.65) = 0.004] and S0 stage [aOR: 3.87, (95% CI: 1.18-12.67), = 0.025] were associated with a higher risk of HS development. The median time from the diagnosis of TGCT to the detection of HS was 44.7 months (29.5-59.8). Higher baseline BMI was associated with earlier development of HS both in all patients [hazard ratio (HR): 1.16, (95% CI: 1.04-1.30), = 0.007] and patients treated with the BEP regimen [HR: 1.21, (95% CI: 1.01-1.47), = 0.038].\n\nHS may be considered a long-term complication in TGCT patients. The risk is associated with baseline BMI. Diagnosis and management of HS should be implemented in the survivorship care plan of TGCT survivors.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -338,9 +362,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of yolk sac tumor of the liver as a differential diagnosis for liver mass with elevated AFP in pediatric patients.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report of yolk sac tumor of the liver as a differential diagnosis for liver mass with elevated AFP in pediatric patients.",
     "abstract": "Yolk sac tumor (YST) is a malignant germ cell tumor with 10-15% arising in extragonadal sites.A search through our institution's database from January 01, 1990, to December 31, 2020, for \"yolk sac tumor\" or \"endodermal sinus tumor\" and \"liver\".Our search yielded three cases. A 20-month-old girl with a liver mass and serum alpha-fetoprotein (AFP) level of 46558.0 ng/mL. The neoplasm was papillary with Schiller-Duval bodies. A 2-year-old boy with hepatic masses and adrenal mass with a serum AFP of 106,604.5 ng/mL. Numerous Schiller-Duval bodies were present. A 7-month-old girl with a liver mass, lung nodules, and retroperitoneal masses. Serum AFP was in the 800s ng/mL. Hepatoid and microcystic YST were mixed with hepatoblastoma (HBL). All three cases were positive for CAM5.2, SALL4, Glypican-3, beta-catenin, and AFP.Hepatic yolk sac tumor should be considered in the differential of a liver mass in pediatric patients with elevated AFP.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -371,9 +397,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Longitudinal study assessing cognitive function in survivors of testicular germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Longitudinal study assessing cognitive function in survivors of testicular germ cell tumors.",
     "abstract": "Survivors of testicular germ cell tumor (TGCT) may experience long-term cognitive changes. The aim of our prospective study was to longitudinally assess cognitive function among TGCT survivors to identify potential lasting cognitive changes over a period of 5 yr.\n\nTGCT survivors (n = 151) completed Functional Assessment of Cancer Therapy-Cognitive Function (FACT-Cog) questionnaires annually, with median time to first follow-up visit (FUV) of 8 (range 4-24) yr since completion of treatment. Treatment after orchiectomy included: active surveillance (AS) alone (n = 21); chemotherapy (CTx; n = 109); radiotherapy (RT) to the retroperitoneum (n = 11); and combined CTx + RT (n = 10). Scores for four FACT-Cog domains and overall cognitive scores were evaluated annually for 5 yr. In a subgroup analysis we compared results for survivors who received cisplatin at a dose of <400 mg/m(n = 48) versus ≥400 mg/m(n = 70).\n\nThe CTx + RT group had persistently lower scores for the perceived cognitive abilities (CogPCA) domain annually between the first and fifth FUVs in comparison to the AS group (all p < 0.05), with lower overall cognitive scores from the second to the fifth FUV (all p < 0.03). The group that received ≥400 mg/mcisplatin had lower CogPCA scores at the first and second FUVs, and lower overall cognitive scores at the second FUV in comparison to the AS group. However, no significant change in cognitive scores across all domains was observed over 5 yr for all survivors.\n\nCognitive impairment in TGCT survivors persisted over long-term follow-up. Survivors who received both CTx and RT consistently had the worst cognitive performance at all FUVs over a 5-yr period. In addition, survivors who received a higher cisplatin dose showed worse cognitive function at all FUVs.\n\nOur study results show that survivors of testicular cancer experienced long-term cognitive dysfunction that persisted over time. Survivors who underwent both chemotherapy and radiotherapy and those who received a higher dose of chemotherapy had the worst cognitive problems.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -396,9 +424,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report and literature review on paraneoplastic systemic lupus erythematosus associated with dysgerminoma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report and literature review on paraneoplastic systemic lupus erythematosus associated with dysgerminoma.",
     "abstract": "Rheumatic paraneoplastic syndromes are rare and generally occur no longer than two years before diagnosis of the associated malignancy. Therefore, it can be an essential clue to occult malignancy. A healthy 18-year-old female with no underlying diseases was referred to the rheumatology clinic due to morning stiffness in her hands and a new rash on her fingers. Her labs showed a positive ANA, anti-double strand DNA antibody, anti-RNP, and anti-ribosomal P. Nine months after the diagnosis with SLE, the patient presented with elevated levels of lactate dehydrogenase. A total-body computed tomography scan revealed a solid mass in the pelvis. The pathological findings corresponded to a dysgerminoma tumor. Following surgical tumor removal and chemotherapy, the patient went into remission with both SLE and her oncology conditions, with no relapse of her lupus symptoms in a one-year follow-up. This case underscores the importance of considering malignancy in unexplained lupus symptoms, a crucial point for all physicians to be aware of. We identified 13 cases of paraneoplastic SLE in a literature review. In most cases, SLE is resolved after the tumor has been treated.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -419,9 +449,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Comparison of treatment outcomes between chemo-RT and RT alone for intracranial germ cell tumors in AYA patients.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Comparison of treatment outcomes between chemo-RT and RT alone for intracranial germ cell tumors in AYA patients.",
     "abstract": "The incidence of intracranial germ cell tumors (iGCTs) in adolescents and young adults (AYA) is lower than that in pediatric patients. However, the recurrence rate of iGCT in AYA patients (7.6%) is higher than in children (2%). The use of iGCTs in the AYA population lacks randomized trials to standardize treatment. Therefore, this study aimed to determine the patterns of practice and outcomes of iGCT in AYA.\n\nThis single-center retrospective cohort study iGCT patients aged 15 to 39 who were treated at Siriraj Hospital, Thailand, from 2007 to 2019. The patients' charts were reviewed, and the results were compared between those who received chemotherapy combined with radiotherapy (Chemo-RT) and those who received RT alone.\n\nThe median follow-up time was 7.6 years. Eighty-four patients were included in this study: 60 with germinomas and 24 with nongerminomatous germ cell tumors (NGGCT). In the case of NGGCT, the 10-year event-free survival (EFS) and overall survival (OS) were 100% and 100%, respectively, with RT alone. For Chemo-RT, the 10-year EFS was 54.05%, and the 10-year OS was 68.44% (P = 0.640 for EFS and 0.454 for OS). For germinomas, the 10-year EFS was 76.87% with RT alone, and the 10-year OS was 86.40%. For Chemo-RT, the 10-year EFS was 69.63%, and the 10-year OS was 69.63% (P = 0.335 for EFS and 0.022 for OS). Compared with those in the groups treated with Chemo-RT and RT alone adjusted for age > 18 years, primary site, metastasis, type of surgery, field of radiotherapy, sex, serum beta-HCG, and serum AFP, the hazard ratio (HR) of EFS was 2.49 (0.85-7.29) (P = 0.095) and the OS was 2.55 (P = 0.237).\n\nTo the best of our knowledge, we present findings on the outcomes of iGCT patients in the AYA age group. After adjusting the hazard ratio, we found no significant difference between patients who received chemotherapy and those who underwent radiotherapy alone in terms of event-free survival and overall survival. Standardized long-term term survival follow-up and supportive treatment in AYA group is needed to improve the outcome and minimize toxicity in this group. There is a need for further randomized control trials that specifically address the population of patients with AYA to improve our understanding of their potential treatment approaches.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -443,9 +475,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of chemical peritonitis caused by spontaneous rupture of mature ovarian teratoma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report of chemical peritonitis caused by spontaneous rupture of mature ovarian teratoma.",
     "abstract": "Spontaneous ruptures of ovarian teratomas are rare. We report a case of chemical peritonitis due to spontaneous rupture of a right ovarian teratoma in a 37-year-old female patient with no gynecological history, who presented an acute nonspecific abdominal pain. The CT scan showed a right ovarian teratoma associated with peritoneal effusion and infiltration of the great omentum suggesting a rupture of the dermoid cyst confirmed by laparoscopic exploration.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -465,9 +499,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A rare case of recurrent extrarenal teratoid Wilms tumor in the sacrococcygeal region after initial surgery.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A rare case of recurrent extrarenal teratoid Wilms tumor in the sacrococcygeal region after initial surgery.",
     "abstract": "Teratoid Wilms tumor is a very rare tumor, about 70 cases have been reported worldwide. Extrarenal teratoid Wilms tumor is even less common. We reported a child with sacrococcygeal teratoid Wilms tumor who was diagnosed with teratoma at the time of the initial operation and relapsed shortly after the operation; we followed up for nearly two years after the second operation with no tumor recurrence or metastasis. This case tells clinicians that the diagnosis of extrarenal teratoid Wilms tumor needs to be careful, and although the prognosis of the disease is good, the premise is complete surgical resection.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -496,9 +532,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report on metastatic gestational trophoblastic neoplasia resulting in acute respiratory failure and death.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report on metastatic gestational trophoblastic neoplasia resulting in acute respiratory failure and death.",
     "abstract": "Gestational trophoblastic disease (GTD) includes rare tumors from abnormal fertilization, ranging from benign hydatidiform moles to malignant choriocarcinomas (CCs) and rare placental-site trophoblastic tumors. Management of GTD depends on FIGO scoring, with low-risk cases treated conservatively and high-risk or ultra-high-risk cases requiring multi-agent chemotherapy, often EMA-CO, with induction therapy recommended for patients at very high risk of early death.\n\nWe present the case of a 37-year-old female patient who developed an acute respiratory failure, requiring mechanical ventilation, 2 months after term delivery by cesarean section. The diagnosis of gestational trophoblastic neoplasia (GTN) was suspected due to high level of HCG in postpartum period and thoracic imaging suggesting multiple pulmonary metastases. No biopsy was available. She subsequently developed ventilator-associated pneumonia with severe acute respiratory distress syndrome (ARDS), requiring veno-venous extracorporeal membrane oxygenation support alongside concurrent polychemotherapy. After spending 61 days in the intensive care unit, and achieving biological complete remission based on HCG monitoring, the patient was transferred to the oncology ward. Due to prolonged hypoperfusion and hypoxemia, the patient developed ischemic cholangiopathy, severely constraining further therapeutic options. After 4 months of biological remission, the patient experienced a recurrence based on HCG rising and reappearing of pulmonary lesions on thoracic imaging in the lungs. In second line, the patient was treated with carboplatin, with no significant response. In third line, pembrolizumab was used, and the patient experienced a significant decrease in HCG. However, due to hematologic toxicity, we discontinued the treatment. Subsequently, the HCG level raised and the patient rapidly developed hemorrhagic cerebral metastasis and succumbed shortly thereafter.\n\nThis case underscores the importance of prompt recognition and timely intervention in the management of patients with ARDS during the early postpartum period. GTN with lung involvement should be considered after excluding the other more frequent causes of ARDS. It also highlights how ECMO support enables the continuation of chemotherapy and the achievement of remission in CC. Furthermore, due to the inability to initiate the desired chemotherapy, immunotherapy was introduced as a possible treatment modality. Therefore, this case underscores the importance of adaptability in treatment plans based on patient-specific clinical conditions and collaborative decision-making with specialized centers. Finally, it emphasizes the efficacy of pembrolizumab, even as a monotherapy, in pretreated CC cases.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -518,9 +556,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of multiple intracranial hemorrhages in a postmenopausal female.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Case report of multiple intracranial hemorrhages in a postmenopausal female.",
     "abstract": "[Abstract not available]",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -544,9 +584,11 @@
     "tags": [
       "総説"
     ],
+    "summary_en": "Review of very small embryonic-like stem cells and their potential applications in regenerative medicine.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Review of very small embryonic-like stem cells and their potential applications in regenerative medicine.",
     "abstract": "Evidence has accumulated that adult tissues contain a population of early development stem cells capable of differentiating across germ layers into various types of cells. Our group purified these rare cells, naming them very small embryonic-like stem cells (VSELs). With their broad differentiation potential, VSELs have emerged as a new candidate population for clinical applications. This advancement is now possible due to our recent development of a model forexpansion of these rare cells. Importantly, no evidence suggests that VSELs, isolated from adult tissues, can form teratomas. In this review paper, we update current research on these cells reported in our laboratory as well as in those of several independent investigators.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -570,9 +612,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of gestational choriocarcinoma presenting with spontaneous uterine perforation.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Case report of gestational choriocarcinoma presenting with spontaneous uterine perforation.",
     "abstract": "[Abstract not available]",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -598,9 +642,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study on the immunohistochemical expression of testin protein in testicular tumors in dogs.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Study on the immunohistochemical expression of testin protein in testicular tumors in dogs.",
     "abstract": "Testin (TES), a protein localised in the cytoplasm and belonging to the LIM family of proteins, is part of the cytoskeleton localised along stress fibres and recruited to focal adhesions. It is considered a tumour suppressor protein in humans and decreased TES expression has been shown to increase cell motility and decrease cell-cell contact. In veterinary medicine, TES has only been studied in rat testes and, more recently, also in canine testes. The expression of this protein in testicular tumours is unknown. As the dog has been proposed as an animal model for the study of human testicular tumours, studies on canine TES may provide useful information for both species. Therefore, the purpose of the present study was to demonstrate the expression of TES in the most common types of canine testicular tumours. For this study, paraffin blocks of 166 canine testicular tumours (53 Sertoli cell tumours, 50 Leydig cell tumours, and 63 seminomas) were retrieved from the archive of the Department of Pathology of Wroclaw University of Environmental and Life Sciences. Sections were obtained for complete description of the tumours, confirmation of the histological diagnosis, and immunohistochemical TES antigen location. Sections from 10 normal canine testes were examined as controls. The presence of TES was also demonstrated in fresh tissue from three types of canine testicular tumour. The diagnosis was confirmed in the 166 tumours, and TES was immunohistochemically demonstrated in 98 % of them and in all 10 normal testes. All tumour types had reduced expression of TES, even if not related to the tumour growth pattern or mitotic index, demonstrating that TES expression is reduced in canine as well in human testicular tumours. However, the reduction of TES expression appeared to be moderate, and these features were consistent with the evidence that testicular tumours in dogs are often well-differentiated. A complete understanding of the function of TES in cancer processes requires further investigation, but the relative parallelism between normal and neoplastic cells in well-differentiated, mostly benign testicular tumours provides a good basis for studying TES expression in more aggressive tumours, such as prostatic or urinary tract neoplasms.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -639,9 +685,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Investigation of bioenergetics in spermatozoa from patients with testicular germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Investigation of bioenergetics in spermatozoa from patients with testicular germ cell tumors.",
     "abstract": "In patients with testicular germ cell tumours (TGCT), sperm cryopreservation prior to anti-cancer treatment represents the main fertility preservation approach. However, it is associated with a low sperm recovery rate after thawing. Since sperm is a high-energy demanding cell, which is supplied by glycolysis and oxidative phosphorylation (OXPHOS), mitochondrial dysfunctionality can directly result in sperm anomalies. In this study, we investigated the bioenergetic pattern of cryopreserved sperm of TGCT patients in comparison with normozoospermic samples using two state-of-the-art methods: the Extracellular Flux Analyzer (XF Analyzer) and two-photon fluorescence lifetime imaging microscopy (2P-FLIM), in order to assess the contributions of OXPHOS and glycolysis to energy provision. A novel protocol for the combined measurement of OXPHOS (oxygen consumption rate: OCR) and glycolysis (extracellular acidification rate: ECAR) using the XF Analyzer was developed together with a unique customized AI-based approach for semiautomated processing of 2P-FLIM images. Our study delivers optimized low-HEPES modified human tubal fluid media (mHTF) for sperm handling during pre-analytical and analytical phases, to maintain sperm physiological parameters and optimal OCR, equivalent to OXPHOS. The negative effect of cryopreservation was signified by the deterioration of both bioenergetic pathways represented by modified OCR and ECAR curves and the derived parameters. This was true for normozoospermic as well as samples from TGCT patients, which showed even stronger damage within the respiratory chain compared to the level of glycolytic activity impairment. The impact of cryopreservation and pathology are supported by 2P-FLIM analysis, showing a significant decrease in bound NADH in contrast to unbound NAD(P)H, which reflects decreased metabolic activity in samples from TGCT patients. Our study provides novel insights into the impact of TGCT on sperm bioenergetics and delivers a verified protocol to be used for the assessment of human sperm metabolic activity, which can be a valuable tool for further research and clinical andrology.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -671,9 +719,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Analysis of treatment approaches for metastatic intracranial germinoma across multiple institutions.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Analysis of treatment approaches for metastatic intracranial germinoma across multiple institutions.",
     "abstract": "Germinoma is the most common intracranial germ cell tumor (IGCT) in children and young adults. Treatment with 24 Gy craniospinal irradiation (CSI) with boost to 40 Gy alone results in excellent survival, irrespective of disease stage. For localized germinoma, recent studies have demonstrated the efficacy of pre-irradiation induction chemotherapy in decreasing the field and dose of radiation therapy (RT) needed for cure. For metastatic germinoma, however, the optimal RT approach when combined with chemotherapy is unclear. Herein, we present our experience treating patients with metastatic germinoma.\n\nWe performed a retrospective, IRB-approved study of patients with metastatic intracranial germinoma diagnosed between 1998 and 2023 at BCH, DFCI, BWH, and MGH. Clinical features, treatment details, and outcomes were collected and analyzed using the Kaplan-Meier method and Fisher's exact test.\n\nTwenty-seven patients with metastatic germinoma were identified. Median age at diagnosis was 15.5 years (range: 6.2-25.9). Six patients received CSI only. Twenty-one patients received induction chemotherapy followed by CSI, with a median CSI dose of 21 Gy (range: 18-36 Gy) and a median involved field (IF) boost to 36 Gy (range: 30-51.6 Gy). Median duration of follow-up was 11.3 years (range: 0.24-24.3). There were no recurrences or deaths within the cohort. Analysis of long-term outcome data revealed a high frequency of endocrinopathies and radiographic CNS vasculopathy.\n\nOur data show that pre-irradiation induction chemotherapy followed by CSI is associated with excellent overall survival in patients with metastatic germinoma. Importantly, our experience suggests that in combination with induction chemotherapy, 21 Gy CSI may be sufficient as a curative dose in this patient population.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -699,9 +749,11 @@
     "tags": [
       "総説"
     ],
+    "summary_en": "Systematic review and meta-analysis on the diagnostic value of serum microRNAs in retroperitoneal lymph node dissection for testicular germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Systematic review and meta-analysis on the diagnostic value of serum microRNAs in retroperitoneal lymph node dissection for testicular germ cell tumors.",
     "abstract": "To evaluate the diagnostic efficacy of serum microRNAs in predicting pathologic findings of retroperitoneal lymph node dissection (RPLND) in patients with testicular germ cell tumors (TGCT).\n\nPUBMED, SCOPUS, and Cochrane Library were searched in August 2024 to identify eligible studies according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 2020) guidelines.\n\nNine studies comprising 603 patients were selected in this review. The pooled sensitivity, specificity, and diagnostic odds ratio (DOR) of microRNA-371a-3p for predicting viable tumor other than pure teratoma in RPLND specimen were 0.76 (95% CI 0.49-0.90), 0.97 (95% CI 0.81-0.99) and 31.75 (95% CI 9.24-109.10), respectively. The pooled sensitivity for primary and post-chemotherapy RPLND (PC-RPLND), were 0.77 (95% CI 0.47-0.93) and 0.73 (95% CI 0.28-0.95), respectively. The pooled specificity for primary and PC-RPLND were 0.92 (95% CI 0.72-0.98) and 0.99 (95% CI 0.62-1.00), respectively. The pooled DOR for primary and PC-RPLND were 13.86 (95% CI 2.97-64.79) and 64.11 (95% CI 13.09-313.98), respectively. The major limitation is the lack of standardization of miR371 testing.\n\nmiR-371a-3p is a relatively sensitive and highly specific marker for predicting viable tumors in RPLND pathologic findings. The DOR was particularly significant for patients who underwent PC-RPLND. While serum microRNAs may be useful in distinguishing viable germ cell tumors from necrosis, fibrosis, and teratomas, their ability to differentiate teratomas from necrosis is limited. Well-designed prospective studies are essential to enhance our understanding of the predictive performance of microRNAs.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -725,9 +777,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A case report of pulmonary carcinosarcoma presenting as teratocarcinosarcoma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A case report of pulmonary carcinosarcoma presenting as teratocarcinosarcoma.",
     "abstract": "Pulmonary carcinosarcoma is a rare tumor composed of non-small-cell carcinomas and sarcomatous elements, which is poorly differentiated in most cases. We present a case of carcinosarcoma with a well-differentiated carcinomatous component that required a differential diagnosis from tumors derived from teratomas, such as teratocarcinosarcoma. We present a case of a 68-year-old man who visited our hospital for an examination of a 22-mm lung tumor. The patient underwent left S1+2 segmentectomy, and his postoperative course was uneventful. No recurrence was observed in the 21-month postoperative follow-up period. The segmentectomy specimen revealed a yellow-white, well-circumscribed mass. The tumor consisted of well-differentiated squamous and glandular epithelia, and sarcomatous components of immature spindle cells, chondrosarcoma, and rhabdomyosarcoma. The patient was diagnosed with carcinosarcoma. This case included well-differentiated carcinomatous components, and it was necessary to differentiate it from teratocarcinosarcomas. There was no neural component, and without SMARCA4 loss, which is observed in teratocarcinosarcoma, and ruled out teratocarcinosarcoma. Carcinosarcomas are characterized by a biphasic histopathological pattern, making it difficult to accurately diagnose them on biopsy, which only captures a portion of the tumor. The possibility of carcinosarcoma should be considered even when the tumors derived from teratomas are suspected on preoperative biopsy.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -749,9 +803,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of a pulmonary teratoma initially misdiagnosed as aspergilloma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report of a pulmonary teratoma initially misdiagnosed as aspergilloma.",
     "abstract": "Pulmonary teratomas are extremely rare extragonadal neoplasms. As the clinical features are non-specific, the diagnosis rests on the radiological findings. The characteristic computed tomography (CT) findings of a teratoma in the lung include heterogenous lobulated mass containing soft tissue, fat, fluid, and/or calcification. However, at times these distinctive findings may be absent and the diagnosis is revealed only after surgery. We report a case of intrapulmonary mature teratoma in a patient where the preoperative diagnosis of aspergilloma was considered based on the imaging findings. We discuss some imaging findings that may help differentiate intra-pulmonary teratoma with aspergilloma. We also present a review of all published cases where teratoma mimicked as some other pulmonary lesions.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -772,9 +828,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A case report on successful pregnancy after fertility-sparing surgery for multiple primary malignancies.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A case report on successful pregnancy after fertility-sparing surgery for multiple primary malignancies.",
     "abstract": "The occurrence of metachronous multiple primary malignancies remains relatively rare; however, its incidence is notably rising. We present the case of a 25-year-old woman who underwent fertility-sparing surgery, followed by chemotherapy for ovarian yolk sac tumor. Three years later, the patient was diagnosed with a large B-cell lymphoma in the cecum. She underwent bowel surgery and received chemotherapy postoperatively. Despite her condition, she was able to conceive spontaneously and had a successful pregnancy after treatment. This report highlights the importance of considering fertility-preserving treatment strategies in young patients and the possibility of spontaneous conception and successful pregnancy even in patients diagnosed with metachronous multiple primary malignancies who underwent extensive surgical procedures and heavily treated with chemotherapy.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -796,9 +854,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A case series highlighting rare germ cell tumor presentations and their clinical management.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A case series highlighting rare germ cell tumor presentations and their clinical management.",
     "abstract": "Germ cell tumors (GCTs) are heterogeneous group of neoplasms that arise from primordial germ cells and can occur in various locations, most commonly in the ovaries and testes but can also be found in extra-gonadal sites like retroperitoneum due to developmental errors. These tumors are relatively rare but clinically significant due to their potential for malignancy and association with developmental anomalies.\n\nThis case series presents four rare and unusual cases of germ cell tumors encountered in both paediatric and adult patients, each with distinctive clinical, radiological, and histopathological features. These cases are unique in their clinical presentation and histomorphological findings, reflecting the diverse spectrum of GCTs across different age groups.\n\nThese cases underscore the complexity of diagnosis, the role of radiological and histopathological examinations, and the varied management strategies for rare conditions like gonadoblastoma, dysgerminoma, struma ovarii, and fetus-in-fetu.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -842,9 +902,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Study on the impact of FcγR3A polymorphism on NK cell activation and response to avelumab in gestational trophoblastic neoplasia.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Study on the impact of FcγR3A polymorphism on NK cell activation and response to avelumab in gestational trophoblastic neoplasia.",
     "abstract": "Low-risk gestational trophoblastic neoplasia are currently receiving monochemotherapy as first-line therapy. In the case of a resistance, a second-line monochemotherapy or polychemotherapy is proposed. As an alternative to these toxic and historic chemotherapy agents, the efficacy of the anti-PD-L1 monoclonal antibody (avelumab) was assessed in the TROPHIMMUN phase II trial Cohort A. Avelumab yielded a 53% cure rate with an acceptable tolerance profile, including normal further pregnancy and delivery. Beyond the blockade of PD-1/PD-L1 interactions, avelumab effect could rely on the induction of antibody-dependent cell-mediated cytotoxicity mediated by FcγR3A-expressing natural killer cells.\n\nThis translational study aimed at testing whether antibody-dependent cell-mediated cytotoxicity is involved in avelumab efficacy on gestational trophoblastic neoplasia and if FcγR3A affinity polymorphism could help predicting the response to avelumab in gestational trophoblastic neoplasia.\n\nThe expression of PD-L1 by the tumor and the phenotype of natural killer cells infiltrating gestational trophoblastic neoplasia were verified by performing transcriptomic and proteomic analyses. Then, JEG-3 choriocarcinoma cells were cocultured with human natural killer cells in the presence and absence of avelumab. The impact of FcγR3A functional polymorphism was assessed on the activation status of natural killer cells and the viability of JEG-3 choriocarcinoma cells. Finally, the data from TROPHIMMUN trial were re-analyzed to determine the impact of the FcγR3A polymorphism of patients on their response to avelumab.\n\nWe confirmed that FcγR3A+ natural killer cells infiltrated PD-L1-expressing gestational trophoblastic neoplasia. In vitro, avelumab-coated JEG-3 choriocarcinoma cells induced natural killer cell activation, which promoted the destruction of JEG-3 cells. Natural killer cell activation was abolished when the Fc portion of avelumab was removed, demonstrating the importance of Fcγ receptor in this process. Using this model of antibody-dependent cell-mediated cytotoxicity, we demonstrated that high-affinity FcγR3A polymorphism on natural killer cells was associated with better in vitro response to avelumab. In line with this result, patients from the TROPHIMMUN trial homozygous for the high-affinity FcγR3A polymorphism had better clinical response to avelumab.\n\nOur work demonstrates that antibody-dependent cell-mediated cytotoxicity contributes to the therapeutic effect of avelumab in gestational trophoblastic neoplasia and that the individual patient response is impacted by the FcγR3A polymorphism. The FcγR3A polymorphism could be used as a biomarker to identify patients diagnosed with monochemoresistant gestational trophoblastic neoplasia who are most likely to respond to avelumab.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -865,9 +927,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Institutional study on primary extragonadal choriocarcinoma in male pediatric patients.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Institutional study on primary extragonadal choriocarcinoma in male pediatric patients.",
     "abstract": "Primary extragonadal choriocarcinoma (PEGCC) in male is rare. It is highly malignant, typically presents with distant metastasis at the time of diagnosis, and responds poorly to treatment. Because of its associated high levels of PD-L1, the PD-1/PD-L1 pathway is a likely therapeutic target. Herein, we report our experience of treating pediatric PEGCC in six boys at a tertiary hospital.\n\nWe analyzed the data of six boys with pathologically confirmed PEGCC between 2009 and 2021. Their clinicodemographic and histopathological characteristics as well as treatments and clinical outcomes were retrieved from their medical charts.\n\nThe patients' median age was 15 (range: 12-17) years. The most common primary tumor site was the mediastinum (67%, 4/6), with one case each in the retroperitoneum (16.7%) and brain (16.7%). Except for the patient with brain PEGCC, all presented with metastasis at the time of diagnosis. The following metastatic sites were observed: the lungs (100%, 5/5), brain (3/5, 60%), liver (3/5, 60%), kidneys (2/5, 40%), and spleen (1/5, 20%). Most patients had dry cough, dyspnea, and hemoptysis at initial presentation, likely due to lung metastasis. Serum human chorionic gonadotropin (HCG) levels were highly elevated in all patients. All patients received platinum-based cytotoxic chemotherapy. The patient with brain choriocarcinoma underwent surgical tumor resection; all others underwent only surgical biopsy. Strong positive PD-L1 immunohistochemical staining was noted for two patients. One patient received the PD-L1 inhibitor pembrolizumab and achieved a good response. Our cohort's 1-year survival rate was 33.3%, with a median survival of 4.34 months. Serum HCG levels remained normal in the two survivors during follow-up visits.\n\nThe poor response to current platinum-based chemotherapy remains a major challenge in the management of pediatric PEGCC. Adding pembrolizumab to a conventional chemotherapy regimen may improve the outcomes in boys with PEGCC.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -885,9 +949,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report on the ultrasound evaluation of rare ovarian choriocarcinoma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report on the ultrasound evaluation of rare ovarian choriocarcinoma.",
     "abstract": "Choriocarcinoma of the ovary is a rare, highly malignant tumor showing malignant trophoblastic cells and produces human chorionic gonadotropins. It can be classified as gestational and non-gestational choriocarcinoma. Non-gestational choriocarcinoma is extremely rare. Treatment is Methotrexate-based chemotherapy for the gestational type. This case study is a rare case of ovarian choriocarcinoma managed by surgical resection, followed by methotrexate-based chemotherapy, and aimed to evaluate the ultrasound characteristics of ovarian choriocarcinoma and how to arrive at the diagnosis. In cases with an elevated serum beta-human chorionic gonadotropin (beta hCG), the finding of a highly vascularized adnexal mass on ultrasound evaluation should be underlined as a clue for suspecting choriocarcinoma, particularly if the female was young with no marriage history or history of sexual intercourse and also to be highly considered in married females with history of repeated abortions, molar pregnancy or uterine choriocarcinoma.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -908,9 +974,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Investigation of Atra effects on MMP-9 activity and integrin expression in choriocarcinoma cell line Bewo.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Investigation of Atra effects on MMP-9 activity and integrin expression in choriocarcinoma cell line Bewo.",
     "abstract": "Choriocarcinoma is characterized by aggressive growth and metastasis, and integrins and matrix metalloproteinase-9 (MMP-9) play crucial roles in its progression. ATRA (All-trans retinoic acid) has been shown to have anti-tumor effects in various cancers, poses a 15-20% malignancy risk.  This study investigates the effects ATRA on MMP-9 activity and integrin expression in the choriocarcinoma cell line BeWo, and to explore the potential mechanisms underlying these effects.\n\nThis is an experimental study using choriocarcinoma cell line BeWo. Six treatment groups were established to varying concentrations of ATR and one group served as a control without ATRA exposure. The groups were labelled with fluorescence and performed with flowcytometry to determine MMP-9 and integrin expression. Data was presented as mean ± SD and analyzed using one-way ANOVA with post-hoc tests in which p-value <0.05.\n\nATRA at the doses of 100, 200, 400, and 800 μg/ml significantly decreased the MMP-9 activity compared to those in the control group. Furter, ATRA at the doses of 100, 200, 400, and 800 μg/ml significantly increased the integrin expression compared to those in the control group.\n\nATRA might decrease the MMP-9 activity as an invasive factor and increase integrin expression as an adhesive factor in the BeWo choriocarcinoma cell line that might play a role in the metastasis mechanism.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -945,9 +1013,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study linking microRNA-371-373 cluster and methylation patterns to the origin of somatic-type malignancies in germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Study linking microRNA-371-373 cluster and methylation patterns to the origin of somatic-type malignancies in germ cell tumors.",
     "abstract": "Somatic-type malignancies (SMs) arising in germ cell tumors (GCTs) are aggressive neoplasms resistant to systemic treatment. Most are diagnosed in metastatic sites after chemotherapy; however, they have also been well-documented in primary testicular GCTs. Historically, SMs were thought to originate in components of teratoma that acquire molecular alterations equivalent to those that characterize their true somatic counterparts. However, recent studies have shown that SMs typically lack the hallmark molecular alterations seen in similar somatic tumors. Additionally, clinicopathologic and molecular data suggest that a subset may derive from yolk sac tumor (YST) rather than teratoma. In this study, we evaluated the relationship between conventional histological types of GCTs and SMs by comparing expression of microRNA (miR)-371-373 and genomic methylation profiles. A total of 96 samples (including multiple paired conventional GCT-SM samples from individual tumors) were assessed for miR-371-373 expression by RT-qPCR and genomic DNA methylation using a clinically validated assay. Expression of miR-371-373 was higher in conventional GCTs than in SMs (considered as a single category encompassing all histological subtypes). However, miR-371-373 expression was heterogeneous among SMs, with significantly higher levels in sarcomatoid YST (SYST) and glandular neoplasms than in other SMs. Genomic DNA methylation analysis showed that SMs (considered as a single category) did not form a distinct cluster. Instead, they grouped into multiple clusters that did not show perfect correspondence with histology and often included conventional GCTs. Genome-wide methylation assessment showed a higher abundance of hypermethylated regions in SMs than in conventional GCTs. Analysis of paired conventional GCT and 'somatic-type' components that did not meet size criteria for SMs dissected from individual tumors demonstrated separation according to histology, suggesting that epigenetic processes play a role in the transition from conventional GCT to 'somatic-type' phenotypes. Gene-level and pathway-level analyses identified MAPK/RAS signaling, mitosis/proliferation, differentiation towards neural tissue/neuroectoderm, epithelial-to-mesenchymal transition, and DNA repair as key differentially regulated processes in components with somatic-type histology, suggesting mechanisms of progression from conventional to 'somatic' phenotypes in GCT. These results support the hypothesis that a subset of SMs derive from YST and suggest that some subtypes (such as SYST) may represent 'intermediate' phenotypes. Additionally, analysis of differentially methylated promoter regions in SM identified genes and biologic processess that may underlie 'somatic tranformation' in GCTs. © 2025 The Author(s). The Journal of Pathology published by John Wiley & Sons Ltd on behalf of The Pathological Society of Great Britain and Ireland.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -969,9 +1039,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report and differential diagnosis of placental site tumor.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report and differential diagnosis of placental site tumor.",
     "abstract": "Placental site trophoblastic tumor (PSTT) is a rare neoplasm originating from intermediate trophoblastic cells at the site of placental implantation. Its diagnosis poses significant challenges, particularly in distinguishing it from other gestational trophoblastic tumors, such as epithelioid trophoblastic tumors, choriocarcinoma, and placental site nodules, as well as the benign exaggerated placental site. We present a case of a 29-year-old woman with persistent gestational trophoblastic disease following a complete hydatidiform mole. A detailed review of the differential diagnoses is provided in tables to aid in the diagnostic process, allowing for a clearer comparison and better understanding of these conditions. This report highlights the importance of accurately identifying PSTT by eliminating potential differential diagnoses through careful pathological and clinical evaluation. We aim to assist pathologists and clinicians in recognizing this rare condition to ensure timely and appropriate management.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -993,9 +1065,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study on how MYO1A downregulation affects trophoblast proliferation and migration via SMURF2/Hedgehog signaling.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Study on how MYO1A downregulation affects trophoblast proliferation and migration via SMURF2/Hedgehog signaling.",
     "abstract": "Fetal growth restriction (FGR) is most commonly related to insufficient placental perfusion caused by insufficient trophoblast proliferation and migration. Myosin Ia, encoded by the gene MYO1A, plays an important role in cytoskeleton recombination and cell movement. In this study, we found that downregulation of MYO1A inhibits Hedgehog (Hh) signaling by interacting with SMURF2 in choriocarcinoma cells, leading to FGR.\n\nA total of 59 placenta samples (26 FGR placentas and 33 normal placentas) were collected. The expression of MYO1A in placental tissues of the two groups was detected by qRT-PCR and Western blotting. The proliferation ability of choriocarcinoma cell lines HTR-8/SVneo and JEG3 was tested by CCK8 and colony formation experiments, and the migration ability was tested by transwell and wound healing experiments. Co-immunoprecipitation assay is used to verify the interaction between myosin Ia and SMURF2.\n\nWe found that MYO1A expression was significantly lower in the placentas of pregnant women with FGR than in normal pregnant women. Moreover, the knockdown of MYO1A has been observed to inhibit choriocarcinoma cells proliferation and migration. Downregulation of MYO1A inhibits Hh signaling by reducing SMURF2 expression.\n\nOur findings suggest that FGR is associated with a down-regulation of MYO1A, which may affect the Hh pathway through its interaction with SMURF2. This provides clues for a deeper understanding of the specific mechanisms underlying FGR.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1017,9 +1091,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "CRISPR/Cas9-mediated TP53 knockout in induced pluripotent stem cells and its implications for cancer research.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "CRISPR/Cas9-mediated TP53 knockout in induced pluripotent stem cells and its implications for cancer research.",
     "abstract": "The TP53 gene is an important tumor suppressor gene. Through CRISPR/Cas9 technology, we have established a TP53 gene knockout cell line in iPSCs (SIIBRi001-A). This cell line maintains normal stem cell-like morphology, karyotype, expresses markers of pluripotency, and is capable of generating teratomas in immunodeficient mice. Quantitative analysis of pluripotency gene expression remains normal. This cell line can be utilized for studying the mechanisms underlying tumorigenesis.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1044,9 +1120,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Evaluation of 3D modeling for prenatal diagnosis and surgical planning of large fetal neck masses.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Evaluation of 3D modeling for prenatal diagnosis and surgical planning of large fetal neck masses.",
     "abstract": "Prenatally diagnosed large fetal neck mass requires multidisciplinary consultation and evaluation of perinatal treatment options. The decision to perform ex utero intrapartum treatment (EXIT) is based on risk-benefit assessment for both the infant and mother. Though fetal ultrasound and MRI assist with operative planning, a three-dimensional anatomic model offers improved anatomic visualization and prenatal patient counseling.\n\nMultiple surveillance ultrasound exams between gestational weeks 16 and 32 plus fetal MRI at 29/3 weeks were performed for fetal evaluation. A 3-dimensional model was printed (Form 3 and 3L, clear resin, Formlabs) incorporating fetal MRI (Ax SSFSE TE 100 DL and Cor SSFSE Brain DL) and using Mimics Medical and 3-matic Medical software (Materialise). A left fetal multicystic neck mass measuring 2.1 × 1.8 × 1.5 cm was diagnosed at 16/6 weeks gestation in a G8P2416. Fetal MRI performed at 29/3 weeks showed a large exophytic mixed solid-cystic cervicofacial mass, 10.3 × 9.4 × 10.6 cm arising from the left mandible, concerning for a teratoma. Prior to delivery, the model was used to educate and counsel the family regarding the complex clinical situation and the reasoning for delivery via EXIT followed by mass resection. Additionally, the model demonstrated tracheal narrowing and oropharyngeal compression, supporting airway intervention planning. The fetus was delivered at 32/3 weeks via EXIT to intubation using rigid bronchoscopy. Duration of time on placental support was 12 min. On day of life 5, the patient underwent resection of the cervical mass. Pathology revealed an immature teratoma, histologic grade 3 without yolk sac elements, and negative regional lymph nodes.\n\nThree-dimensional fetal modeling facilitates perinatal airway needs assessment, patient counseling, delivery, and postnatal management.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1070,9 +1148,11 @@
     "tags": [
       "総説"
     ],
+    "summary_en": "Review of current surgical approaches in the management of extracranial malignant germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Review of current surgical approaches in the management of extracranial malignant germ cell tumors.",
     "abstract": "Germ cell tumors (GCT) are a complex, heterogeneous collection of tumors that may present in either gonadal or extragonadal sites. They consist of a variety of benign and malignant histologies that can occur at several locations throughout the body. An important component of treatment is surgical resection, and while the key components of resection are site specific, the universal goals of GCT resection include the complete resection of tumor without violating the tumor capsule, while preserving function of surrounding organs, minimizing morbidity, and assessing for regional spread.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1093,9 +1173,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of a congenital mature cystic teratoma with severe cerebellar and brainstem compromise.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report of a congenital mature cystic teratoma with severe cerebellar and brainstem compromise.",
     "abstract": "[Abstract not available]",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1114,9 +1196,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A rare case report of mediastinal germ cell tumor presenting as respiratory distress in an infant.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A rare case report of mediastinal germ cell tumor presenting as respiratory distress in an infant.",
     "abstract": "Mediastinal teratomas, though rare in infants, can present with respiratory distress. Imaging plays a crucial role in diagnosis, with CT and PET aiding in characterisation. Surgical resection is the treatment of choice, with chemotherapy reserved for immature components. Early diagnosis is essential to prevent complications and optimise outcomes.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1139,9 +1223,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Prognostic analysis of sacrococcygeal teratoma based on patient size at diagnosis.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Prognostic analysis of sacrococcygeal teratoma based on patient size at diagnosis.",
     "abstract": "Advancements in prenatal care have underscored the importance of understanding postnatal outcomes and prognosis in sacrococcygeal teratoma (SCT). However, giant SCTs continue to pose surgical challenges and are associated with increased morbidity and mortality. A clear, objective threshold for defining a \"large\" tumor relative to the patient's size remains undefined. This study aimed to establish objective tumor size indicators for predicting surgical outcomes and prognosis.\n\nData from 97 patients diagnosed with and surgically treated for SCT at Asan Medical Center from 2000 to 2021 was retrospectively reviewed. The tumor volume/birthweight ratio (VWR) and tumor length/height at birth ratio (LHR) were measured. Surgical outcomes and prognosis were evaluated based on these measures, including surgical complications, concomitant surgeries, long-term complications, and recurrence.\n\nAfter surgery, 38 patients experienced short-term complications, 18 required additional operations, 16 developed long-term complications, and 14 experienced tumor recurrence. Both VWR and LHR correlated with short and long-term complications, additional surgeries, and recurrence.\n\nThe small patient population limited the determination of precise cut-off values; however, a significant difference was observed between groups stratified by the most predictive cut-off values. Both objective tumor size indicators were significantly associated with prognosis and surgical outcomes. Notably, both indicators exhibited comparable predictive capabilities without discrepancies.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1163,9 +1249,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report of transient retinal vessel whitening observed after whole-ventricle radiotherapy.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report of transient retinal vessel whitening observed after whole-ventricle radiotherapy.",
     "abstract": "We report a case of transient peripheral retinal vessel whitening following whole-ventricle radiotherapy in a pediatric patient, which resolved spontaneously without signs of ischemia. An 11-year-old girl with a pituitary germinoma underwent chemotherapy and whole-ventricle radiotherapy (23.4 Gy in 13 fractions). At two months post-treatment, ultra-widefield scanning laser ophthalmoscopy revealed bilateral peripheral retinal vessel whitening, raising suspicion of nonperfusion areas. However, optical coherence tomography angiography (OCTA) confirmed preserved retinal blood flow without ischemia. Visual field testing did not reveal any abnormalities. No intervention was performed, and the whitening resolved spontaneously within two months. Unlike typical radiation retinopathy, this represents a reversible, non-ischemic process, which could be attributed to the limited radiation exposure received during whole-ventricle radiotherapy and vascular plasticity in young patients. Given that radiation retinopathy is generally considered uncommon below 45 Gy, this case presents a characteristic retinal vascular change occurring at lower radiation doses and underscores the importance of retinal evaluation even in low-dose irradiation settings. Non-invasive imaging techniques, such as OCTA and ultra-widefield scanning laser ophthalmoscopy, can be valuable for monitoring subtle radiation-induced retinal changes. Further research is needed to refine screening and management strategies for radiation-induced retinal effects.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1187,9 +1275,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case series of laparoscopic-assisted abdominal and sacral approach for Altman II/III sacrococcygeal teratoma excision.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case series of laparoscopic-assisted abdominal and sacral approach for Altman II/III sacrococcygeal teratoma excision.",
     "abstract": "This study aims to optimize patient outcomes and surgical efficacy by integrating laparoscopic and sacral approaches for the excision of presacral teratomas, focusing on Altman type II-III classifications.\n\nA case series was conducted with seven patients diagnosed with sacrococcygeal teratoma (SCT) Altman type II-III. Short- and intermediate-term surgical outcomes were assessed following a combined laparoscopic and sacral approach. The diagnosis was based on clinical examination, elevated serum alpha-fetoprotein levels, and preoperative pelvic magnetic resonance imaging classification. The study evaluates the safety and efficacy of this surgical method, emphasizing feasibility and potential benefits for treating presacral teratomas of varying complexity.\n\nThe age of patients ranged from 8 days to 1.5 years, with a mean age of 115.93 ± 192.3 days. The average duration of surgery was 2.7 h (range: 2-3.15 h), with no intraoperative bleeding. Postoperative recovery was smooth; 71.43% of patients resumed a full diet within 3 days, while the remaining patients did so within 4 days. One patient experienced mild skin erythema, managed conservatively, and two patients had perineal wound separation, resolved with topical treatment. The median hospital stay was 7 days (range: 5-78 days). No postoperative urinary or stool incontinence was observed.\n\nThe combined laparoscopic and posterior sacral approach is a safe and reliable method for the excision of SCTs, potentially improving patient outcomes and reducing postoperative complications.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1210,9 +1300,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "A retrospective study characterizing PNETs in the female genital tract using clinicopathologic and molecular data.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "A retrospective study characterizing PNETs in the female genital tract using clinicopathologic and molecular data.",
     "abstract": "This study aimed to investigate the molecular alterations in primitive neuroectodermal tumors (PNET) of the female genital tract.\n\nWe retrospectively analyzed the clinicopathologic and immunohistochemical features of 8 gynecologic PNET cases (3 cervical, 1 vaginal, and 4 ovarian). Fluorescence in situ hybridization and targeted next-generation sequencing (NGS) were performed to identify molecular alterations in these tumors.\n\nThe cohort included 5 FIGO stage I, 1 stage III, and 2 stage IV tumors. Two patients with stage IV disease died at 8 and 12 months. The cervical/vaginal tumors consisted of small round blue cells arranged in sheets, with EWSR1 rearrangements and concurrent diffuse expression of membranous CD99 and nuclear FLI1. The ovarian tumors displayed diverse morphologic features resembling central nervous system (CNS) tumors, including embryonal tumor with multilayered rosettes (case 5), medulloblastoma (case 6), glioblastoma (case 7), and ependymoma (case 8). Three ovarian tumors were associated with teratomas. None of the ovarian tumors exhibited EWSR1 rearrangements or i(12p)/12p overrepresentation. NGS identified an EWSR1::exon11∼FLI1::exon6 fusion in one cervical PNET, with no additional molecular alterations. In contrast, three ovarian tumors lacked common genetic changes seen in CNS tumors but harbored several significant variants, including NTRK2 exon11 c.1019C > T (p.T340 M) (case 6), INPP4B exon23 c.2221G > A (p.V741 M) (case 7), and FANCG exon7 c.882_883insA (p.D295Rfs∗14) with MET 7q31 polysomy (case 8).\n\nOur findings confirm that cervical/vaginal and ovarian PNET represent two distinct tumor types. Ovarian PNET have different pathogenetic pathways from their CNS and testicular counterparts most likely.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1240,9 +1332,11 @@
     "tags": [
       "総説"
     ],
+    "summary_en": "Review of the cellular origins and molecular characteristics of mucinous ovarian carcinoma.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Review of the cellular origins and molecular characteristics of mucinous ovarian carcinoma.",
     "abstract": "Mucinous ovarian carcinoma (MOC) is a rare histotype of epithelial ovarian cancer. Its origins are obscure: while many mucinous tumours in the ovary are metastases from the gastrointestinal tract, MOC can occur as an ovarian primary; however, the cell of origin is not well established. In this review we summarise the pathological, epidemiological, and molecular evidence for the cellular origins of MOC. We propose a model for the origins of the various tumours of the ovary with mucinous differentiation. We distinguish Müllerian from gastrointestinal-type mucinous differentiation. A small proportion of the latter arise from teratoma and a distinct terminology has been proposed. Other gastrointestinal mucinous tumours are associated with Brenner tumours and arise from their associated benign lesions, Walthard nests. The remaining mucinous tumours develop either through mucinous metaplasia in established Müllerian tumours or with even greater plasticity through gastrointestinal metaplasia of epithelial or mesothelial ovarian inclusions. This model remains to be validated and mechanistically understood and we discuss future research directions. © 2025 The Author(s). The Journal of Pathology published by John Wiley & Sons Ltd on behalf of The Pathological Society of Great Britain and Ireland.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1262,9 +1356,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A case report of unilateral malignant transformation to adenocarcinoma in bilateral ovarian mature cystic teratoma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A case report of unilateral malignant transformation to adenocarcinoma in bilateral ovarian mature cystic teratoma.",
     "abstract": "Mature cystic teratoma (MCT) is the most common germ cell tumor of the ovary, comprising 20% of all ovarian neoplasms. Malignant transformation (MT) is an uncommon complication and occurs in approximately 1-3% of all MCTs. The most common histological type of MT is squamous cell carcinoma. Other rare transformations include - carcinoid tumors, melanoma, adenocarcinoma, and sarcoma. We present one such rare case of bilateral MCT with unilateral MT into mucinous adenocarcinoma of intestinal type.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1296,9 +1392,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study on the potential of seminal plasma microRNAs to identify infertile men at risk of testicular cancer.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Study on the potential of seminal plasma microRNAs to identify infertile men at risk of testicular cancer.",
     "abstract": "Male infertility is a risk factor for the development of testicular germ cell tumors. In this study, we investigated microRNA profiles in seminal plasma to identify potential noninvasive biomarkers able to discriminate the men at highest risk of developing cancer among the infertile population. We compared the microRNA profiles of individuals affected by testicular germ cell tumors and healthy individuals with normal or impaired spermiograms using high-throughput technology and confirmed the results by single-assay digital PCR. We found that miR-221-3p and miR-222-3p were downregulated and miR-126-3p was upregulated in cancer patients compared to both infertile and fertile men. ROC curve analysis confirmed that miR-126 upregulation is able to identify cancer patients among the infertile male population. In addition, in-depth bioinformatics analysis based on weighted gene co-expression networks showed that the identified miRNAs regulate cellular pathways involved in cancer.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1328,9 +1426,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Research on the effect of miR-100-5p and miR-125b-5p replenishment in malignant germ cell tumors.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Research on the effect of miR-100-5p and miR-125b-5p replenishment in malignant germ cell tumors.",
     "abstract": "MicroRNAs (miRNAs) are short, nonprotein-coding RNAs, and their expression is dysregulated in malignant germ cell tumors (GCTs). Here, we investigated the causes and consequences of downregulated miR-99a-5p/miR-100-5p (functionally identical) and miR-125b-5p levels in malignant GCTs regardless of age, site, or subtype. Quantitative RT-PCR was used to assess miR-99a-5p/miR-100-5p, miR-125b-5p, and associated gene expression in malignant GCT tissues/cell lines [seminoma (Sem), yolk sac tumor (YST), embryonal carcinoma (EC)]. Cells were treated with demethylating 5-azacytidine and pyrosequencing was performed. Combination miR-100-5p/miR-125b-5p mimic replenishment was used to treat malignant GCT cells. Global messenger RNA (mRNA) targets of the replenished miRNAs were identified and Metascape used to study pathway effects. We found that expression levels of miR-99a-5p/miR-100-5p and miR-125b-5p, their respective pri-miRNAs, and associated genes from chromosomes 11 and 21 (chr11/chr21) were downregulated and highly correlated in malignant GCT cells. Treatment with 5-azacytidine caused upregulation of these miRNAs, with pyrosequencing revealing hypermethylation of their chr11/chr21 loci, likely contributing to miR-100-5p/miR-125b-5p downregulation. Combination miR-100-5p/miR-125b-5p mimic replenishment resulted in growth inhibition in Sem/YST cells, with miR-100-5p/miR-125b-5p mRNA targets enriched in downregulated genes, which were involved in cell cycle (confirmed by flow cytometry) and signaling pathways. Knockdown of the miR-100-5p/miR-125b-5p target tripartite motif containing 71 (TRIM71kd) recapitulated miR-100-5p/miR-125b-5p replenishment, with growth inhibition and cell cycle disruption of Sem/YST/EC cells. Further, replenishment led to reduced lin-28 homolog A (LIN28A) levels and concomitant increases in let-7 (MIRLET7B) tumor suppressor miRNAs, creating a sustained reversion of cell phenotype. In summary, combination miR-100-5p/miR-125b-5p mimic replenishment or TRIM71kd caused growth inhibition in malignant GCT cells via cell cycle disruption. Further studies are now warranted, including mimic treatment alongside conventional platinum-based chemotherapy.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1351,9 +1451,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A rare case report of tall cell variant papillary thyroid carcinoma arising in struma ovarii.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A rare case report of tall cell variant papillary thyroid carcinoma arising in struma ovarii.",
     "abstract": "Malignant struma ovarii (SO) is very rare, and the tall cell variant (TCV) of papillary thyroid carcinoma (PTC) arising in SO is even rarer and an exceptionally unique morphological observation. A 39-year-old woman presented with lower abdominal pain and abdominal swelling. Contrast-enhanced computed tomography (CECT) of the whole abdomen revealed a multiloculated cystic mass with peripheral amorphous calcification, which was arising from the right ovary. The patient underwent a total abdominal hysterectomy and bilateral salpingo-oophorectomy. In histology, the ovary was completely replaced by thyroid parenchyma (SO) with areas of papillary thyroid carcinomatous transformation morphologically consistent with tall cell features. On immunohistochemistry (IHC), tumor cells showed expression for TTF-1 and thyroglobulin and were negative for CK19. The patient underwent total thyroidectomy, postoperative radioactive iodine ablation, and levothyroxine suppressive therapy. A three-month follow-up is uneventful. The current case not only provides insight into the diagnosis and morphological aspect of this interestingly rare occurrence but also emphasizes the need for a careful and extensive sampling of ovarian specimens.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1373,9 +1475,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study demonstrating the anticancer effects of gallic acid in human embryonic carcinoma cells.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Study demonstrating the anticancer effects of gallic acid in human embryonic carcinoma cells.",
     "abstract": "Embryonic cancer stem cells (CSCs), referred to as self‑renewable cells, are commonly found in liquid and solid cancers and can also be attributed to tumor onset, resistance, expansion, recurrence and metastasis following treatment. Cancer therapy targeting CSCs using natural bioactive products is an optimal option for inhibiting cancer recurrence, thereby improving prognosis. Several natural compounds and extracts have been used to identify direct or indirect therapy effects that reduce the pathological activities of CSCs. Natural gallic acid (GA) is noted to have anticancer properties for oncogene expression, cycle arrest, apoptosis, angiogenesis, migration and metastasis in various cancers. The present study demonstrated that GA has various anticancer activities in NTERA‑2 and NCCIT human embryonic carcinoma cells. In two types of embryonic CSCs, GA effectively induced cell death via late apoptosis. Furthermore, GA showed the G0/G1 cell cycle arrest activity in embryonic CSCs by inducing the increase of p21, p27 and p53 expression and the decrease of CDK4, cyclin E and cyclin D1 expression. The present study showed that GA inhibited the expression levels of mRNA and protein for stem cell markers, such as SOX2, NANOG and OCT4, in NTERA‑2 and NCCIT cells. The induction of cellular and mitochondrial reactive oxygen species by GA also activated the cellular DNA damage response pathway by raising the phosphorylated‑BRCA1, ATM, Chk1, Chk2 and histone. Finally, GA inhibited CSCs invasion and migration by inhibiting the expression of matrix metalloproteinase by the downregulation of EGFR/JAK2/STAT5 signaling pathway. Thus, it is hypothesized that GA could be a potential inhibitor of cancer emergence by suppressing CSC properties.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1406,9 +1510,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report on the use of KIT inhibitors in pediatric systemic mastocytosis and germ cell tumor.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Case report on the use of KIT inhibitors in pediatric systemic mastocytosis and germ cell tumor.",
     "abstract": "[Abstract not available]",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1430,9 +1536,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "Case report on radiosurgery for basal ganglia germinoma presenting with diabetes insipidus.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Case report on radiosurgery for basal ganglia germinoma presenting with diabetes insipidus.",
     "abstract": "Intracranial germinoma (GEM) originates from primordial germ cells, more frequently in the pineal and suprasellar regions. Basal ganglia (BG) presentations are rare, especially associated with diabetes insipidus (DI) and without a neurohypophysis lesion or an \"occult germinoma.\" The management of GEM is controversial, although conventional wide-field irradiation with or without chemotherapy is the usual treatment. The potential role of radiosurgery in the management of these lesions remains unclear.\n\nA 15-year-old boy was admitted to the hospital, presenting with DI and right-hand dystonia. Magnetic resonance imaging (MRI) showed a paraventricular BG tumor near the left caudate nucleus. A stereotactic biopsy was performed, confirming the GEM diagnosis. The patient was treated by stereotactic radiosurgery (13 Gy), with remission of all symptoms. Eleven years after the onset of symptoms, the patient remained stable on a regular desmopressin regimen, maintaining normal water intake and urinary volume with improvement in the hand's dystonia. The brain MRI performed annually during the past 10 years after radiosurgery revealed no tumor recurrence or other abnormalities at the neurohypophysis and pituitary stalk.\n\nBG GEM is rare and it may manifest with DI, a possible consequence of peritumoral edema surrounding the hypothalamus. Radiosurgery alone may be an effective treatment option. The occult GEM of the neurohypophysis could also cause DI preceding the radiological onset of GEM. Hence, it is mandatory to follow-up on patients with BG GEM presenting with central DI closely for a long time with periodic clinical and neuroimaging evaluations.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1484,9 +1592,11 @@
     "tags": [
       "ガイドライン"
     ],
+    "summary_en": "Updated NCCN guidelines for testicular cancer, including new therapeutic approaches and management strategies.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Updated NCCN guidelines for testicular cancer, including new therapeutic approaches and management strategies.",
     "abstract": "The NCCN Guidelines for Testicular Cancer provide recommendations for the multidisciplinary approach to the diagnostic workup, treatment, and follow-up for testicular germ cell tumors, including both seminoma and nonseminoma. These NCCN Guidelines Insights discuss the current treatment recommendations and supporting clinical data for seminomas as presented in Version 2.2025 of the NCCN Guidelines for Testicular Cancer.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1509,9 +1619,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "A novel technique using balloon trocars for decompression of large cystic ovarian tumors in adolescents.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A novel technique using balloon trocars for decompression of large cystic ovarian tumors in adolescents.",
     "abstract": "Large ovarian tumors with a predominantly cystic pattern are uncommon in adolescents. This study evaluates the effectiveness of a decompression technique utilizing a balloon trocar to facilitate ovarian-sparing surgery, while preserving oncologic principles, in adolescent patients presenting with such lesions.\n\nA retrospective review of four consecutive cases managed by a single surgeon over a 7-year period ending December 2024. We describe the surgical technique of this innovative approach, and provide patient-specific clinical data including histopathologic findings and follow-up outcomes.\n\nThe median patient age was 13 years (range, 10-17), and the median maximum tumor diameter was 17 cm (range, 10-28). The balloon trocar technique enabled a tight seal and closed suction drainage of the tumor cyst fluid, facilitating safe decompression and exteriorization of the mass. All surgeries were completed with negligible morbidity. Histological examination revealed three mature cystic teratomas and one serous cystadenoma. At clinical and ultrasonographic follow-up ranging 8 months to 7 years (median, 6,5 years), all patients remained free of recurrence, maintained regular menstrual cycles with normal-sized preserved ovaries, and expressed high satisfaction with their cosmetic outcomes.\n\nLarge predominantly cystic ovarian tumors are generally associated with a favorable prognosis. Preemptive in situ decompression using a balloon trocar represents a simple, effective, and rapid technique to minimize the risk of tumor spillage. This approach facilitates safe ovary-sparing surgery for these large tumors, while also providing excellent cosmetic outcomes.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1536,9 +1648,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Investigation into the relationship between ovarian Leydig cells and neural crest cells.",
+    "summary_ja": "",
     "jif_tier": "high",
-    "summary": "Investigation into the relationship between ovarian Leydig cells and neural crest cells.",
     "abstract": "In our search for markers to identify and study ovarian Leydig cells, we utilized immunohistochemical techniques and visualized the results using conventional and confocal microscopy. We successfully employed steroidogenic factor- 1 (SF1), androgen receptor (AR), and class III β-tubulin as markers. SF1 and AR specifically highlighted the intraneural cell precursors of Leydig cells, which were previously identified in a published case of mature cystic teratoma of the ovary, and the adult ovarian Leydig cells. Furthermore, the transient expression of class III β-tubulin could be associated with the intraneural displacement of these precursors, cooperating in their migration to colonize the ovaries of adult women.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1561,9 +1675,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A comparative study of immunohistochemical characteristics of teratomas in domestic and muscovy ducks.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A comparative study of immunohistochemical characteristics of teratomas in domestic and muscovy ducks.",
     "abstract": "Neoplasms consisting of two or more germinal layers are classified as teratomas if benign or as teratocarcinomas if malignant. Teratomas are rare tumours occurring in a wide range of species including mammals, birds and reptiles and only a few cases have been reported in ducks with infrequent documentation of immunohistochemical characterisation. Teratocarcinomas occur rarely and, to the authors' knowledge, have not been described or immunohistochemically characterised in ducks, yet. Therefore, the clinical and pathological presentation of a teratoma in a mulard duck and a teratocarcinoma in a muscovy duck are described. In addition to a histologic examination, both tumours were characterised by applying a panel of immunohistochemical markers previously tested on duck tissue.\n\nA mulard duck (Anas platyrhynchos x Cairina moschata) showed a mass in the cranial coelomic cavity histologically diagnosed as tridermic teratoma. A caudal coelomic mass in a Muscovy duck (Cairina moschata) was histologically diagnosed as a teratocarcinoma with metastases to the liver, mesentery and intestinal wall. An extensive immunohistochemical examination for a detailed characterisation and comparison with duck control tissue was performed in both cases, highlighting various components of the neoplastic tissues including lymphocytes, nervous and endodermal components.\n\nTo the authors' knowledge, this is the first report of a teratocarcinoma in a duck with intense immunohistochemical characterisation and comparison with a teratoma in another duck. Immunohistochemistry enables a more profound examination of the histogenetic composition of such neoplasms compared to histology alone. Both neoplasms should be considered as differentials for masses in body cavities of ducks. During these examinations, a large spectrum of antibodies specific for different tissues and cells were tested on duck control tissue which can be of help for immunohistochemical examinations on avian tissues in the future.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1586,9 +1702,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A case report of recurrent chemical peritonitis managed with pharmacological and surgical treatments.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "A case report of recurrent chemical peritonitis managed with pharmacological and surgical treatments.",
     "abstract": "Mature cystic teratomas, a common type of benign ovarian tumors, are associated with complications such as twisting and tumor rupture; Rupture can cause severe chemical peritonitis, and no management policy has been established for the intraoperative and postoperative periods. Although peritoneal lavage and reoperation have been reported, the optimal treatment approach remains undetermined.\n\nA 30-year-old woman (gravida 0, para 0, and no sexual history) presented with abdominal pain and fever. Blood examination revealed high levels of WBC 9200/µL and CRP 23.7 mg/dL, although hemoglobin was normal. Serum tumor marker levels were also elevated (CA125 58.5 U/mL, CA19-9 36117 U/mL). Abdominal computed tomography revealed bilateral ovarian tumors (92 and 68 mm in the right and left ovaries, respectively). Each tumor cavity had calcification with increased fatty tissue density. We performed laparoscopic surgery for suspected diagnosis of torsion or rupture of a mature cystic teratoma. Intraoperative findings showed spontaneous rupture followed by chemical peritonitis. Therefore, we performed removal of the bilateral adnexal tumors and peritoneal lavage with 3000 mL warm saline to remove fatty components from the abdominal cavity. We also inserted an intra-abdominal drain to remove the residual fatty components. Amoxicillin was also administered for 10 days after surgery. The inflammatory response decreased, and the fever diminished 1 day postoperatively. The patient was discharged on the 10th postoperative day. However, on the 20th postoperative day, the fever and abdominal pain recurred. WBC 16,700/µL, CRP 26.46 mg/dL and tumor marker (CA125 172.3 U/mL, CA19-9 225.2 U/mL) levels were high. Intravenous administration of Prophylactic antibiotics was initiated. As no bacteria were detected in the blood cultures, we started oral prednisolone (5 mg/day) to treat the recurrent chemical peritonitis-induced inflammation. The blood test results and symptoms gradually improved. The patient was discharged on the 37th postoperative day.\n\nTo date, no systematic review has focused on determining the treatment strategy for bilateral rupture of mature cystic teratomas and severe refractory chemical peritonitis. Treating the patient with laparoscopic surgery at the first occurrence and oral steroids for peritonitis recurrence can help avoid highly invasive treatments, such as reoperation or laparotomy.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1609,9 +1727,11 @@
     "tags": [
       "基礎研究"
     ],
+    "summary_en": "Study on the role of Bourbon, Mycbp, and Otu in regulating Sxl protein expression in Drosophila.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Study on the role of Bourbon, Mycbp, and Otu in regulating Sxl protein expression in Drosophila.",
     "abstract": "Inovaries, germ cells differentiate through several stages of cyst development before entering meiosis. This early differentiation program depends on both the stepwise deployment of specific regulatory mechanisms and on maintenance of germline sexual identity. The study of female sterile mutations that result in formation of germ cell tumors has been invaluable in identifying the mechanisms that control these developmental events. Here, we characterize the germ cell-enriched genenull mutants of which cause the formation of a mixture of agametic ovarioles and cystic germ cell tumors. We performed proteomic analysis and found Bbn forms a complex with Ovarian tumor (Otu), a protein previously linked with regulation of the sex determination factor(), and theortholog of c-Myc binding protein (Mycbp). Loss ofalso results in the formation of cystic germ cell tumors. Bbn promotes the stability of Otu and fosters interactions between Otu and Mycbp. Germ cells fromandmutants display a loss of Sxl expression specifically in the germline. Transgenic rescue experiments show thesterile phenotype is independent fromsplicing defects. Further evidence suggests Otu physically interacts with and promotes Sxl protein stability. This function does not depend on Otu's deubiquitinase activity. Last, we find the human orthologs of Otu and Mycbp, OTUD4, and MYCBP, also physically interact, suggesting conservation of function. Together these data provide insights into how a conserved complex promotes the germline expression of Sxl protein and the differentiation ofgerm cells.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1648,9 +1768,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Long-term follow-up study assessing osteoporosis risk in testicular cancer survivors.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Long-term follow-up study assessing osteoporosis risk in testicular cancer survivors.",
     "abstract": "Testicular cancer (TC) is the most common malignancy among young males and is associated with cure rates over 95%. However, the long-term health implications of treatments, such as the risk of osteoporosis, remain inadequately understood. This study aims to explore the incidence of osteoporosis in TC survivors and associated risk factors.\n\nThis retrospective study utilized data from the Veterans Affairs (VA) national electronic health record system, identifying 1686 TC patients and 7412 matched noncancer controls. The incidence of osteoporosis was determined through diagnosis codes and osteoporosis medication prescriptions. Statistical analyses, including chi-squared tests, t-tests, and Cox proportional hazards models, were employed to evaluate risk factors.\n\nTC survivors exhibited a significantly elevated hazard of developing osteoporosis (HR =2.18; 95% CI, 1.52-3.14; P < .001), which persisted after adjusting for covariates (HR = 1.58; 95% CI, 0.99-2.51; P = .013). There was no significant TC treatment-specific effect: neither radiation nor chemotherapy were associated with an increased hazard of osteoporosis in multivariable analysis.\n\nTC survivors face a higher hazard of osteoporosis, with age at diagnosis being a significant factor. These findings highlight the need for regular bone health monitoring in TC survivors. Future prospective studies are necessary to validate these results and better understand the mechanisms linking TC, hypogonadism, and osteoporosis risk.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1689,9 +1811,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Evaluation of 18F-FDG PET for early metastatic seminoma diagnosis based on SEMS trial data.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Evaluation of 18F-FDG PET for early metastatic seminoma diagnosis based on SEMS trial data.",
     "abstract": "Recent clinical trials on primary retroperitoneal lymph node dissection (RPLND) for testicular seminoma highlight inaccuracies in conventional imaging for lymph node staging. Limited data exist on the accuracy of positron emission tomography (PET) in patients with chemotherapy-naïve testicular seminoma. We evaluated the accuracy of 18F-fluorodeoxyglucose (FDG) PET for the detection of metastatic disease within the SEMS (Surgery in Early Metastatic Seminoma) trial.\n\nThe SEMS trial is a phase 2 prospective study evaluating efficacy of primary RPLND in patients with testicular seminoma with limited retroperitoneal lymphadenopathy. 18F-FDG PET scanning was performed as a radiographic correlate in addition to standard axial imaging before surgery. PET findings were based on local interpretation, and the results were compared with surgical pathology.\n\nOf the 55 patients enrolled in the trial, 26 (47%) underwent PET. Twenty (77%) scans were reported as positive with lymph nodes in the retroperitoneum, pelvis, or inguinal region. Of the positive PET scans, 18 had pathologically positive lymph nodes (positive predictive value 90%) at the time of RPLND. Six PET scans were negative with 5 of these patients having surgically confirmed pN0 disease (negative predictive value 83%). Sensitivity of PET for detecting lymph node metastatic seminoma was 95% and specificity was 71%. The average standardized uptake values of the PET-positive lymph nodes and pathologically positive lymph nodes were 7.0 (range 2.6-18.8) and 6.8 (range 1.53-18.8), respectively. No PET-positive lesions outside of the retroperitoneum or pelvis were found to represent metastatic seminoma on clinical follow-up.\n\nIn patients with testicular seminoma, 18F-FDG PET findings correlated with both pathologically positive and negative retroperitoneal lymph nodes in most cases. Further research is needed to determine if PET can improve on the already good predictive performance of conventional imaging and clinical expertise.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1721,9 +1845,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Clinicopathologic and molecular analysis of yolk sac tumors in older women.",
+    "summary_ja": "",
     "jif_tier": "very-high",
-    "summary": "Clinicopathologic and molecular analysis of yolk sac tumors in older women.",
     "abstract": "Gynecologic yolk sac tumors (YSTs) are more commonly encountered in children and young women as pure or mixed germ cell tumors and are rarely observed in older women. YSTs in older women are sometimes accompanied by a Müllerian-type carcinoma component, indicating a likely somatic rather than germ-cell origin. Studies of YSTs of germ cell and somatic types in this age group are limited. Analysis of additional pure and mixed tumors with YST differentiation could elucidate differences between these tumor subtypes and the relationship between components in mixed tumors. Clinicopathologic features of 32 malignant neoplasms with YST differentiation in women aged 40+ were analyzed. There were 11 pure YSTs, 7 mixed germ cell tumors, and 14 YSTs with a malignant non-germ cell tumor component (somatically derived yolk sac tumor [SDYST]). Targeted next-generation sequencing (NGS) was performed in 4/11 pure YSTs, 0/7 mixed germ cell tumors, and 4/14 SDYSTs. For the pure YSTs, alterations in DICER1 (1/4), PIK3R1 and PTPRT (1/4), PMS1 (1/4) , and TP53 (2/4) were identified. One other pure YST had alterations in PTEN , ARID1A , ARID1B , FGFR2 , and CTNNB1 (alterations common in endometrioid carcinoma). SDYSTs demonstrated shared alterations between both components including TP53 , KRAS , FBXW7, and KMT2C , suggesting a common origin. The findings in the pure YSTs in older women suggest that for some, the origin could be germ cell as they harbor similar alterations as those described in pure YSTs in young women, whereas in other \"pure\" YSTs, the molecular profile aligns with previously described SDYSTs, which suggests a SDYST with an unsampled Müllerian carcinoma component rather than a germ cell origin. In SDYSTs, shared alterations are consistent with prior studies and suggest a somatic rather than germ-cell origin.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1744,9 +1870,11 @@
     "tags": [
       "臨床研究"
     ],
+    "summary_en": "Application of statistical learning to identify factors associated with extended hospital stays after testicular cancer surgery.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "Application of statistical learning to identify factors associated with extended hospital stays after testicular cancer surgery.",
     "abstract": "Testicular cancer (TC) is a relatively rare but highly treatable malignancy that originates in the germ cells of the testicles. It primarily affects young men, particularly those between the ages of 15 and 35, though it can occur at any age. The most common histological subtypes are seminoma and non-seminomatous germ cell tumors (NSGCTs), the latter including embryonal carcinoma, yolk sac tumor, choriocarcinoma, and teratoma. The length of hospital stay (LOS) following surgery is a crucial indicator of clinical outcomes and resource utilization. This study examines the length of stay (LOS) after testicles cancer surgery at the Antonio Cardarelli Hospital in Naples, Italy, using a statistical learning technique. It builds on previous studies on the causes of extended hospital stays in surgical oncology. The main findings provide a chance to enhance patient care and quality by illustrating how the clinical and organizational aspects of the surgical technique impact hospital stays.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   },
   {
@@ -1767,9 +1895,11 @@
     "tags": [
       "症例報告"
     ],
+    "summary_en": "A case report of bilateral malignant struma ovarii with concurrent thyroid carcinoma.",
+    "summary_ja": "",
     "jif_tier": "moderate",
-    "summary": "A case report of bilateral malignant struma ovarii with concurrent thyroid carcinoma.",
     "abstract": "Malignant struma ovarii (MSO) is a rare ovarian tumour. The co-occurrence of MSO and thyroid carcinoma is even rarer. There is no established treatment for these patients. We report a postmenopausal woman in her 60s who presented with left hip pain, increased urinary frequency and fatigue. Imaging showed a left adnexal cystic lesion 8.8 cm in diameter and an incidental 12×8 mm right ovarian cyst. She underwent total laparoscopic hysterectomy and bilateral salpingo-oophorectomy, and findings were significant for bilateral stage IA MSO. The metastatic workup showed concurrent papillary thyroid carcinoma. She underwent total thyroidectomy with neck dissection and radioactive iodine (RAI) adjuvant therapy. While thyroid carcinoma management is more standardised, a literature review yielded a wide range of MSO treatments. Recent literature favours conservative management with unilateral salpingo-oophorectomy. RAI therapy in these cases is controversial. We will discuss the literature findings on the optimal treatment of MSO with concurrent thyroid cancer.",
+    "abstract_ja": "",
     "added_at": "2026-09-22"
   }
 ]

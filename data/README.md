@@ -14,7 +14,7 @@ python3 scripts/import_medline.py data/raw/2026-09-07-import.nbib
 python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 ```
 
-タイトル・著者・掲載誌・年・PMID・DOI・抄録・タグ(下記の固定7分類のいずれか)が自動で `papers.json` に追記されます。PMIDで重複判定するので、同じファイルを二度実行しても二重登録にはなりません。取り込み後、`title_ja`(日本語タイトル)や `summary`(日本語要約)を手で書き足すと、サイトでは日本語が優先表示されます。
+タイトル・著者・掲載誌・年・PMID・DOI・抄録・タグ(下記の固定7分類のいずれか)が自動で `papers.json` に追記されます。PMIDで重複判定するので、同じファイルを二度実行しても二重登録にはなりません。取り込み後、`title_ja`(日本語タイトル)や `summary_ja`(日本語要約)、`abstract_ja`(日本語抄録)を手で書き足すと、サイトでは日本語が優先表示されます。
 
 ## 文献を手動で追加する
 
@@ -32,7 +32,9 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
   "doi": "10.1000/example",
   "url": "",
   "tags": ["総説"],
-  "summary": "日本語の要約・コメント(任意)",
+  "summary_en": "English summary (optional)",
+  "summary_ja": "日本語の要約(任意)",
+  "abstract_ja": "日本語訳の抄録(任意)",
   "added_at": "2026-09-01"
 }
 ```
@@ -51,10 +53,14 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `doi` | – | DOI。あれば doi.org へのリンクを自動生成 |
 | `url` | – | その他のリンク(PMID/DOI がない場合用) |
 | `tags` | – | 絞り込み用タグ。**必ず次の7分類のうち1つのみ**を入れる: `症例報告` / `臨床研究` / `基礎研究` / `総説` / `ガイドライン` / `論説` / `レター`。PubMedの著者キーワードや細かい文献種別はここに入れない(タグクラウドが機能しなくなるため)。該当なしなら空配列 `[]` |
-| `summary` | – | 要約・コメント(日本語 or 英語) |
-| `abstract` | – | 英語抄録。サイトでは折りたたみ表示される |
+| `summary_en` | – | 英語の短い要約・コメント |
+| `summary_ja` | – | 日本語の短い要約・コメント |
+| `abstract` | – | 英語の全文抄録。サイトでは折りたたみ表示される |
+| `abstract_ja` | – | 日本語訳の全文抄録。日本語ページではこちらがあれば優先表示され、なければ英語版が表示される(トグルのラベルも自動で切り替わる) |
 | `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
+
+`summary_en`/`summary_ja` がどちらも空の場合、サイトには「要約: 準備中」(英語ページでは "Summary: not yet available")と表示され、要約が存在しないのではなく未整備であることが分かるようになっています。
 
 `jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`gct-literature-data/programs/literature_pipeline/pipeline.py` の `jif_tier()` と同じ定義。
 
