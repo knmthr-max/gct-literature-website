@@ -97,8 +97,10 @@ def to_entry(rec, today):
         "doi": extract_doi(rec),
         "url": "",
         "tags": tags,
-        "summary": "",
+        "summary_en": "",
+        "summary_ja": "",
         "abstract": first(rec, "AB"),
+        "abstract_ja": "",
         "added_at": today,
     }
 

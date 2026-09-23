@@ -99,7 +99,8 @@
     if (!state.query) return true;
     const q = state.query.toLowerCase();
     const haystack = [
-      paper.title, paper.title_ja, paper.journal, paper.summary, paper.abstract,
+      paper.title, paper.title_ja, paper.journal,
+      paper.summary_en, paper.summary_ja, paper.abstract, paper.abstract_ja,
       ...(paper.authors || []), ...(paper.tags || []),
       String(paper.year || ""), paper.pmid, paper.doi,
     ].filter(Boolean).join(" ").toLowerCase();
@@ -135,15 +136,31 @@
     const tags = (p.tags || [])
       .map((t) => `<span class="paper-tag">${escapeHtml(tagLabel(t))}</span>`)
       .join("");
-    const abstractLabel = LANG === "en" ? "Abstract" : "抄録(英語)";
+
+    // 要約: 表示言語側を優先し、無ければ他言語、どちらも無ければ「準備中」を明示する
+    // (要約が存在するのに表示していないと誤解されないようにするため、単純に非表示にはしない)
+    const summary = LANG === "en" ? (p.summary_en || p.summary_ja) : (p.summary_ja || p.summary_en);
+    const summaryPending = LANG === "en" ? "Summary: not yet available" : "要約: 準備中";
+    const summaryHtml = summary
+      ? `<p class="paper-summary">${escapeHtml(summary)}</p>`
+      : `<p class="paper-summary paper-summary-pending">${escapeHtml(summaryPending)}</p>`;
+
+    // 抄録: 日本語ページは日本語訳(abstract_ja)があればそれを、無ければ英語原文を表示する
+    // (英語ページは常に英語原文)。トグルのラベルは実際に表示している言語に合わせる
+    const abstractText = LANG === "en" ? p.abstract : (p.abstract_ja || p.abstract);
+    const abstractIsJa = LANG === "ja" && !!p.abstract_ja;
+    const abstractLabel = LANG === "en" ? "Abstract" : (abstractIsJa ? "抄録" : "抄録(英語)");
+    const abstractHtml = abstractText
+      ? `<details class="paper-abstract"><summary>${abstractLabel}</summary><p>${escapeHtml(abstractText)}</p></details>`
+      : "";
 
     return `
       <article class="paper-card">
         <h2>${escapeHtml(mainTitle)}</h2>
         ${subTitle}
         ${metaParts.length ? `<p class="paper-meta">${escapeHtml(metaParts.join(" · "))}</p>` : ""}
-        ${p.summary ? `<p class="paper-summary">${escapeHtml(p.summary)}</p>` : ""}
-        ${p.abstract ? `<details class="paper-abstract"><summary>${abstractLabel}</summary><p>${escapeHtml(p.abstract)}</p></details>` : ""}
+        ${summaryHtml}
+        ${abstractHtml}
         ${tags ? `<div class="paper-tags">${tags}</div>` : ""}
         ${links.length ? `<div class="paper-links">${links.join("")}</div>` : ""}
       </article>`;

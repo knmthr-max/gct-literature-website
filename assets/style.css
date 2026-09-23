@@ -166,6 +166,11 @@ body {
   font-size: 0.92rem;
 }
 
+.paper-summary-pending {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 .paper-abstract {
   margin: 0 0 10px;
   font-size: 0.88rem;
