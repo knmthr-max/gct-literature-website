@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCT Literature Database</title>
+  <meta name="description" content="A database of germ cell tumor (GCT) literature (partial release, expanding).">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-lang="en" data-root="../">
+  <header class="site-header">
+    <div class="container">
+      <nav class="lang-switch"><a href="../">日本語</a></nav>
+      <h1 id="site-title">GCT Literature Database</h1>
+      <p id="site-description" class="site-description"></p>
+      <p id="site-notice" class="site-notice" hidden></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Search and filters">
+      <input type="search" id="search-box" placeholder="Search by title, author, summary, or tag…" aria-label="Search">
+      <div class="controls-row">
+        <div id="tag-filters" class="tag-filters" aria-label="Filter by category"></div>
+        <select id="sort-select" aria-label="Sort order">
+          <option value="year-desc">Year: newest first</option>
+          <option value="year-asc">Year: oldest first</option>
+          <option value="added-desc">Added: newest first</option>
+        </select>
+      </div>
+      <p id="result-count" class="result-count" role="status"></p>
+    </section>
+
+    <section id="paper-list" class="paper-list" aria-label="Literature list"></section>
+
+    <p id="empty-message" class="empty-message" hidden>No matching papers found.</p>
+    <p id="error-message" class="empty-message" hidden>Failed to load data. Please try again later.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span id="footer-title">GCT Literature Database</span> — Last updated: <span id="last-updated">–</span></p>
+    </div>
+  </footer>
+
+  <script src="../assets/app.js"></script>
+</body>
+</html>

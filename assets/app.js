@@ -1,6 +1,26 @@
 (() => {
   "use strict";
 
+  const LANG = document.body.dataset.lang === "en" ? "en" : "ja";
+  const DATA_ROOT = document.body.dataset.root || "";
+
+  // 公開タグ(症例報告/臨床研究/基礎研究/総説/ガイドライン/論説/レター)の英語表示ラベル。
+  // フィルタ処理は常にこの日本語の原値(paper.tags)に対して行い、表示だけを差し替える。
+  const TAG_LABELS_EN = {
+    "症例報告": "Case Report",
+    "臨床研究": "Clinical Study",
+    "基礎研究": "Basic Research",
+    "総説": "Review",
+    "ガイドライン": "Guideline",
+    "論説": "Editorial",
+    "レター": "Letter",
+  };
+
+  const JIF_LABELS = {
+    ja: { low: "IF: 低(<1)", moderate: "IF: 中(1-3)", high: "IF: 高(3-5)", "very-high": "IF: 非常に高(5+)" },
+    en: { low: "IF: low (<1)", moderate: "IF: moderate (1-3)", high: "IF: high (3-5)", "very-high": "IF: very-high (5+)" },
+  };
+
   const state = {
     papers: [],
     query: "",
@@ -16,21 +36,23 @@
     }[c]));
 
   async function loadJson(path) {
-    const res = await fetch(path, { cache: "no-cache" });
+    const res = await fetch(DATA_ROOT + path, { cache: "no-cache" });
     if (!res.ok) throw new Error(`${path}: ${res.status}`);
     return res.json();
   }
 
   function applySiteInfo(site) {
-    if (site.title_ja || site.title) {
-      const t = site.title_ja || site.title;
-      document.title = t;
-      $("site-title").textContent = t;
-      $("footer-title").textContent = t;
+    const title = LANG === "en" ? (site.title || site.title_ja) : (site.title_ja || site.title);
+    const description = LANG === "en" ? (site.description || site.description_ja) : (site.description_ja || site.description);
+    const notice = LANG === "en" ? (site.notice || site.notice_ja) : (site.notice_ja || site.notice);
+    if (title) {
+      document.title = title;
+      $("site-title").textContent = title;
+      $("footer-title").textContent = title;
     }
-    if (site.description) $("site-description").textContent = site.description;
-    if (site.notice) {
-      $("site-notice").textContent = site.notice;
+    if (description) $("site-description").textContent = description;
+    if (notice) {
+      $("site-notice").textContent = notice;
       $("site-notice").hidden = false;
     }
     if (site.last_updated) $("last-updated").textContent = site.last_updated;
@@ -46,6 +68,10 @@
     return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
   }
 
+  function tagLabel(tag) {
+    return LANG === "en" ? (TAG_LABELS_EN[tag] || tag) : tag;
+  }
+
   function renderTagFilters() {
     const box = $("tag-filters");
     box.innerHTML = "";
@@ -53,7 +79,7 @@
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "tag-filter" + (state.activeTags.has(tag) ? " active" : "");
-      btn.textContent = tag;
+      btn.textContent = tagLabel(tag);
       btn.addEventListener("click", () => {
         state.activeTags.has(tag) ? state.activeTags.delete(tag) : state.activeTags.add(tag);
         renderTagFilters();
@@ -96,20 +122,20 @@
     const links = [];
     if (p.pmid) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${encodeURIComponent(p.pmid)}/" target="_blank" rel="noopener">PubMed</a>`);
     if (p.doi) links.push(`<a href="https://doi.org/${encodeURIComponent(p.doi)}" target="_blank" rel="noopener">DOI</a>`);
-    if (p.url) links.push(`<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">リンク</a>`);
+    if (p.url) links.push(`<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${LANG === "en" ? "Link" : "リンク"}</a>`);
 
-    const mainTitle = p.title_ja || p.title || "(無題)";
-    const subTitle = p.title_ja && p.title ? `<p class="paper-title-sub">${escapeHtml(p.title)}</p>` : "";
-    const jifLabels = { low: "IF: low(<1)", moderate: "IF: moderate(1-3)", high: "IF: high(3-5)", "very-high": "IF: very-high(5+)" };
+    const mainTitle = LANG === "en" ? (p.title || p.title_ja || "(untitled)") : (p.title_ja || p.title || "(無題)");
+    const subTitle = LANG === "ja" && p.title_ja && p.title ? `<p class="paper-title-sub">${escapeHtml(p.title)}</p>` : "";
     const metaParts = [
       (p.authors || []).join(", "),
       p.journal,
-      p.year ? `${p.year}年` : "",
-      jifLabels[p.jif_tier] || "",
+      p.year ? (LANG === "en" ? `${p.year}` : `${p.year}年`) : "",
+      (JIF_LABELS[LANG] || {})[p.jif_tier] || "",
     ].filter(Boolean);
     const tags = (p.tags || [])
-      .map((t) => `<span class="paper-tag">${escapeHtml(t)}</span>`)
+      .map((t) => `<span class="paper-tag">${escapeHtml(tagLabel(t))}</span>`)
       .join("");
+    const abstractLabel = LANG === "en" ? "Abstract" : "抄録(英語)";
 
     return `
       <article class="paper-card">
@@ -117,7 +143,7 @@
         ${subTitle}
         ${metaParts.length ? `<p class="paper-meta">${escapeHtml(metaParts.join(" · "))}</p>` : ""}
         ${p.summary ? `<p class="paper-summary">${escapeHtml(p.summary)}</p>` : ""}
-        ${p.abstract ? `<details class="paper-abstract"><summary>抄録(英語)</summary><p>${escapeHtml(p.abstract)}</p></details>` : ""}
+        ${p.abstract ? `<details class="paper-abstract"><summary>${abstractLabel}</summary><p>${escapeHtml(p.abstract)}</p></details>` : ""}
         ${tags ? `<div class="paper-tags">${tags}</div>` : ""}
         ${links.length ? `<div class="paper-links">${links.join("")}</div>` : ""}
       </article>`;
@@ -127,7 +153,9 @@
     const filtered = sortPapers(state.papers.filter(matches));
     $("paper-list").innerHTML = filtered.map(paperCard).join("");
     $("empty-message").hidden = filtered.length > 0;
-    $("result-count").textContent = `${filtered.length}件 / 全${state.papers.length}件`;
+    $("result-count").textContent = LANG === "en"
+      ? `${filtered.length} of ${state.papers.length} results`
+      : `${filtered.length}件 / 全${state.papers.length}件`;
   }
 
   async function init() {

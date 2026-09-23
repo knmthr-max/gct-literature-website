@@ -9,10 +9,11 @@ GCT関連文献を収集・整理して公開するWebサイト。**部分公開
 - **ホスティングは GitHub Pages**: `main` への push で GitHub Actions が自動デプロイ
 
 ```
-index.html          … 一覧ページ(検索・タグ絞り込み・並び替え)
+index.html          … 日本語ページ(メイン、検索・タグ絞り込み・並び替え)
+en/index.html         … 英語専用ページ(同じ data/ を参照。日本語訳やタグの和名は表示しない)
 assets/
-  app.js            … JSON を読み込んで描画するロジック
-  style.css         … スタイル
+  app.js            … JSON を読み込んで描画するロジック。<body data-lang> で日英を切り替える
+  style.css         … スタイル(日英共通)
 data/
   site.json         … サイトタイトル・説明・お知らせ
   papers.json       … 文献データ本体(ここに追記していく)
@@ -26,6 +27,15 @@ scripts/
 ```
 
 `gh-pages` ブランチはデプロイ用の自動生成ブランチです。直接編集しないでください(main への push で毎回上書きされます)。
+
+## 日英2ページ構成
+
+日本語ユーザーをメインに想定しつつ、英語のみで読めるページ(`en/`)を別途用意しています。データは**共有**しており、`data/papers.json` / `data/site.json` を1箇所編集するだけで両ページに反映されます(翻訳データを2重管理する必要はありません)。
+
+- `index.html`(`/`): `title_ja` を優先表示、原題を小さく併記。タグは日本語のまま(`症例報告`等)
+- `en/index.html`(`/en/`): `title` (英語) のみ表示、`title_ja` は出さない。タグは `assets/app.js` 内の `TAG_LABELS_EN` で英語ラベルに変換して表示(データ自体は書き換えない)
+- 言語判定は `<body data-lang="en">` 属性で行う。`en/index.html` は `data-root="../"` も併せて指定し、1階層上の `assets/`・`data/` を参照する
+- `site.json` は `title`/`description`/`notice`(英語)と `title_ja`/`description_ja`/`notice_ja`(日本語)を両方持つ。機械翻訳ではなく、GCT領域の文脈を踏まえて人(Claude)が直接執筆する方針
 
 ## `programs/` — 本来のデータ処理パイプライン(移植済み)
 
