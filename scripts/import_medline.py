@@ -17,22 +17,29 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAPERS_PATH = ROOT / "data" / "papers.json"
 
-# PubMedの文献種別(PT)→ 日本語タグ。ここにない種別(Journal Article等)はタグにしない
-PT_TAGS = {
-    "Case Reports": "症例報告",
-    "Review": "総説",
-    "Systematic Review": "システマティックレビュー",
-    "Meta-Analysis": "メタ解析",
-    "Clinical Trial": "臨床試験",
-    "Randomized Controlled Trial": "ランダム化比較試験",
-    "Observational Study": "観察研究",
-    "Multicenter Study": "多施設研究",
-    "Comparative Study": "比較研究",
-    "Guideline": "ガイドライン",
-    "Practice Guideline": "ガイドライン",
-    "Editorial": "論説",
-    "Letter": "レター",
-}
+# 公開サイトのタグは、この固定7分類だけに限定する(PubMedの著者キーワードや
+# 細かい文献種別をそのままタグにすると、1件にしか付かないタグが大量発生し
+# タグクラウドが機能しなくなるため)。優先度は上から順に判定する。
+CATEGORY_RULES = [
+    ("症例報告", {"Case Reports"}),
+    ("総説", {"Review", "Systematic Review", "Meta-Analysis"}),
+    ("ガイドライン", {"Guideline", "Practice Guideline"}),
+    ("論説", {"Editorial"}),
+    ("レター", {"Letter"}),
+    ("臨床研究", {
+        "Clinical Trial", "Randomized Controlled Trial", "Observational Study",
+        "Multicenter Study", "Comparative Study",
+    }),
+]
+
+
+def classify(publication_types):
+    """PubMedの文献種別(PT)から固定7分類のうち1つを判定する。該当なしはNone。"""
+    types = set(publication_types)
+    for category, matching_pt in CATEGORY_RULES:
+        if types & matching_pt:
+            return category
+    return None
 
 TAG_LINE = re.compile(r"^([A-Z]{1,4})\s*-\s(.*)$")
 
@@ -76,14 +83,8 @@ def to_entry(rec, today):
     pmid = first(rec, "PMID")
     year_match = re.search(r"\d{4}", first(rec, "DP"))
 
-    tags = []
-    for pt in rec.get("PT", []):
-        tag = PT_TAGS.get(pt)
-        if tag and tag not in tags:
-            tags.append(tag)
-    for ot in rec.get("OT", []):
-        if ot and ot not in tags:
-            tags.append(ot)
+    category = classify(rec.get("PT", []))
+    tags = [category] if category else []
 
     return {
         "id": f"pmid-{pmid}",
