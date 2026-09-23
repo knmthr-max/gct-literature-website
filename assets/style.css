@@ -31,6 +31,22 @@ body {
   padding: 28px 0 24px;
 }
 
+.lang-switch {
+  text-align: right;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.lang-switch a {
+  color: #fff;
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.lang-switch a:hover {
+  opacity: 1;
+}
+
 .site-header h1 {
   margin: 0 0 4px;
   font-size: 1.5rem;

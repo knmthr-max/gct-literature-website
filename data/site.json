@@ -1,8 +1,10 @@
 {
   "title": "Germ Cell Tumor Literature Database",
   "title_ja": "胚細胞腫瘍文献データベース",
-  "description": "胚細胞腫瘍(Germ Cell Tumor)に関する文献を収集・整理して公開するデータベースサイトです。",
-  "notice": "本サイトは現在部分公開(ベータ版)です。掲載文献は順次追加していきます。",
+  "description": "A database of literature on germ cell tumors (GCT), collected and curated for reference.",
+  "description_ja": "胚細胞腫瘍(Germ Cell Tumor)に関する文献を収集・整理して公開するデータベースサイトです。",
+  "notice": "This site is currently a partial release (beta). Literature entries are being added progressively.",
+  "notice_ja": "本サイトは現在部分公開(ベータ版)です。掲載文献は順次追加していきます。",
   "contact": "",
-  "last_updated": "2026-09-14"
+  "last_updated": "2026-09-23"
 }

@@ -60,7 +60,7 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 
 ## サイト情報を変える
 
-`site.json` でサイトタイトル・説明文・お知らせ文言を変更できます。
+`site.json` でサイトタイトル・説明文・お知らせ文言を変更できます。`title`/`description`/`notice` が英語版(`/en/`)、`title_ja`/`description_ja`/`notice_ja` が日本語版(`/`)です。片方しか埋まっていない場合はもう片方の言語のページでも代わりに表示されます(フォールバック)。
 
 ## 注意
 
