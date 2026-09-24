@@ -23,7 +23,10 @@
     "abstract": "INTRODUCTION: Endobronchial teratomas are extremely rare tumors that develop within the airway of the lung. Patients often present with nonspecific symptoms that depend on the size and anatomic features, making the differential broad and the diagnosis challenging. PRESENTATION OF CASE: A 28-year-old man presented with a 6-month history of a dry cough, vague chest discomfort, and occasional dyspnea. A chest X-ray and CT were performed, revealing a heterogeneous mass involving the mediastinum and the medial aspect of the right lung. Serum tumor markers were normal, and a testicular ultrasound excluded a metastatic germ cell tumor. Definitive treatment required an en bloc resection of the thymus and right upper lobe, with pathologic review showing an endobronchial origin of a mature teratoma. DISCUSSION: This case illustrates the diagnostic challenges of endobronchial teratomas, provides imaging and histologic characteristics of this rare tumor type, and contributes to the number of published cases with favorable outcomes. CONCLUSION: Given the rarity of endobronchial teratomas, a high index of suspicion among pulmonologists, surgeons, and pathologists is necessary to correctly diagnose and treat these patients.",
     "abstract_ja": "緒言: 気管支内奇形腫は肺の気道内に発生する極めて稀な腫瘍である。症状は非特異的で腫瘤の大きさや解剖学的特徴に依存するため、鑑別診断が広範囲に及び、診断は困難である。症例提示: 28歳男性が6か月間続く乾性咳嗽、胸部不快感、時に呼吸困難を主訴に来院した。胸部X線およびCTにより、縦隔と右肺内側に及ぶ不均一な腫瘤が確認された。血清腫瘍マーカーは正常で、精巣超音波検査により転移性胚細胞腫瘍は除外された。確定的治療として胸腺および右上葉の一塊切除が必要であり、病理学的検討により成熟奇形腫の気管支内起源であることが示された。考察: 本症例は気管支内奇形腫の診断上の難しさを示すとともに、この稀な腫瘍型の画像所見・組織学的特徴を提示し、良好な転帰を示した既報告例の蓄積に寄与するものである。結論: 気管支内奇形腫の稀少性を踏まえると、呼吸器内科医・外科医・病理医が高い疑いを持つことが、これらの患者を正しく診断・治療するために必要である。",
     "added_at": "2026-09-07",
-    "jif_tier": "unknown"
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "稀な気管支内成熟奇形腫の症例で、転移性胚細胞腫瘍の除外を含めGCT/奇形腫が主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-42699474",
@@ -53,7 +56,10 @@
     "abstract": "Many cases of encephalitis are caused by an autoimmune response, and some are associated with underlying malignancies. Here we present the case of a 17-year-old female patient who was admitted to the pediatric ward with acute gastroenteritis, seizures, and behavioral changes. A brain computed tomography (CT) scan ruled out acute infarction, haemorrhage, mass lesions, and other intracranial injuries, while the initial EEG showed no epileptic discharges. In the absence of a definitive diagnosis, midazolam was administered to treat tonic-clonic seizures, while ceftriaxone and acyclovir were started for suspected infection. However, her condition deteriorated further and she was transferred to the ICU, where she was intubated. A Cell-Based Assay (CBA) revealed the presence of anti-NMDAR antibodies and a contrast-enhanced brain MRI showed leptomeningeal enhancement without limbic involvement. She was subsequently treated with intravenous immunoglobulins and high-dose corticosteroids. A subsequent transabdominal ultrasound scan revealed an oval, fluid-filled ovarian cyst. Based on these findings, her right ovary was removed, resulting in a gradual improvement in her condition. This case highlights that paraneoplastic autoimmune encephalitis may be misclassified due to persistent psychiatric symptoms with negative EEG and CSF findings. When clinical suspicion remains high despite negative initial instrumental and laboratory findings, it is essential to repeat these investigations. In such cases, neuroantibody testing may play a crucial role in establishing the diagnosis.",
     "abstract_ja": "脳炎の多くは自己免疫反応によって引き起こされ、一部は悪性腫瘍を基礎疾患として伴う。本論文では、急性胃腸炎、痙攣発作、行動変化を主訴に小児病棟へ入院した17歳女性患者の症例を報告する。頭部CTでは急性梗塞、出血、占拠性病変、その他の頭蓋内損傷は認めず、初回脳波検査でもてんかん性放電は認めなかった。確定診断に至らないまま、強直間代発作に対しミダゾラムを投与し、感染症を疑いセフトリアキソンとアシクロビルを開始した。しかし病状はさらに悪化し、ICUへ転棟の上、気管挿管を要した。細胞ベースアッセイ(CBA)により抗NMDAR抗体の存在が判明し、造影頭部MRIでは辺縁系の関与を伴わない軟髄膜増強効果が認められた。その後、静注免疫グロブリンおよび高用量副腎皮質ステロイドによる治療が行われた。経腹壁超音波検査により、卵形で内容液を伴う卵巣嚢胞が発見された。これらの所見に基づき右卵巣が摘出され、病状は徐々に改善した。本症例は、脳波・髄液所見が陰性であっても持続する精神症状のために傍腫瘍性自己免疫性脳炎が誤分類されうることを示している。初回の機器検査・臨床検査が陰性であっても臨床的疑いが強く残る場合は、これらの検査を再度行うことが不可欠である。このような症例では、神経抗体検査が診断確定に重要な役割を果たしうる。",
     "added_at": "2026-09-07",
-    "jif_tier": "unknown"
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣奇形腫が原因の抗NMDA受容体脳炎を扱っており、卵巣胚細胞腫瘍が症例の中心である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40409851",
@@ -82,7 +88,10 @@
     "abstract": "BACKGROUND: Germ cell tumors (GCTs) are neoplasms usually originating in the gonads, most often affecting young patients. Intravascular GCTs are exceptionally rare and potentially fatal due to cardiac and embolic complications. CASE SUMMARY: A 17-year-old patient presented with weight loss, abdominal pain, and dyspnea. Imaging revealed an intravascular mass extending from the inferior vena cava (IVC) into the right heart chambers and pulmonary arteries. The tumor was successfully removed via surgery under cardiopulmonary bypass. Histopathologic diagnosis was a mixed non-seminomatous GCT. Recovery was uneventful, and follow-up imaging showed no intravascular lesions. Cisplatin-based chemotherapy was started with curative intent. DISCUSSION: Intravascular GCT is a rare phenomenon, presenting mostly with retroperitoneal disease affecting the IVC. Cardiologists assess complications and interpret cardiovascular imaging. A multidisciplinary approach is crucial for improving outcomes.",
     "abstract_ja": "背景: 胚細胞腫瘍(GCT)は通常性腺に発生する腫瘍であり、若年患者に多くみられる。血管内GCTは極めて稀であり、心臓および塞栓性合併症により致死的となりうる。症例要約: 17歳の患者が体重減少、腹痛、呼吸困難を主訴に受診した。画像検査により、下大静脈(IVC)から右心系および肺動脈へ及ぶ血管内腫瘤が確認された。腫瘍は人工心肺下での手術により摘出に成功した。病理組織学的診断は混合型非セミノーマ性GCTであった。術後経過は良好で、経過観察の画像検査では血管内病変は認められなかった。根治を目的としたシスプラチン併用化学療法が開始された。考察: 血管内GCTは稀な病態であり、多くはIVCに及ぶ後腹膜病変として発症する。循環器内科医は合併症を評価し、心血管画像を解釈する役割を担う。転帰改善のためには集学的アプローチが不可欠である。",
     "added_at": "2026-09-14",
-    "jif_tier": "unknown"
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "心臓・肺動脈に浸潤した血管内混合性非セミノーマ性胚細胞腫瘍の症例であり明確にGCTが主題。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40408609",
@@ -116,7 +125,10 @@
     "abstract": "Testicular cancer is the most common malignancy in males age 15-40 years and one of the most curable cancers, with a cumulative 10-year survival rate exceeding 90%. Management strategies depend on the histologic subtype, stage at diagnosis, sites of disease, tumor markers, and risk classification. Germ cell tumors, including seminomas and nonseminomas, constitute the majority of testicular cancers and require distinct therapeutic approaches. For localized disease, radical orchidectomy remains the cornerstone of treatment, followed by active surveillance, chemotherapy, or primary retroperitoneal lymph node dissection, depending on the histology and the risk of relapse. Seminomas are highly curable, with low-stage patients often managed through surveillance or postoperative single-agent carboplatin. By contrast, nonseminomas typically require adjuvant multiagent chemotherapy, such as bleomycin, etoposide, and cisplatin, particularly in higher-risk patients. For metastatic disease, chemotherapy remains the standard of care, achieving excellent cure rates even in patients with bulky tumors. Surgical resection of residual masses is especially critical in nonseminomatous germ cell tumors to remove viable cancer or teratoma components. The treatment of refractory or relapsed disease frequently involves second-line standard-dose or high-dose chemotherapy with autologous stem-cell transplantation, ideally performed in specialized high-volume centers. Before, during, and after treatment, multidisciplinary care is essential to addressing psychosocial challenges, optimizing fertility preservation, and enhancing quality of life. After curative treatments, long-term management involves regular follow-up to monitor for recurrence, late toxicities, and secondary malignancies, with survivorship programs playing a crucial role in meeting patients' ongoing needs. Advances in molecular diagnostics for early relapse detection and the introduction of targeted therapies continue to improve outcomes, particularly in resistant patients.",
     "abstract_ja": "精巣癌は15〜40歳男性における最も頻度の高い悪性腫瘍であり、10年累積生存率が90%を超える、最も治癒可能な癌の一つである。治療戦略は組織亜型、診断時病期、病変部位、腫瘍マーカー、リスク分類によって異なる。セミノーマおよび非セミノーマを含む胚細胞腫瘍が精巣癌の大部分を占め、それぞれ異なる治療アプローチを要する。限局性疾患に対しては根治的精巣摘除術が治療の基本であり、組織型と再発リスクに応じて、その後の経過観察・化学療法・原発性後腹膜リンパ節郭清のいずれかが選択される。セミノーマは治癒率が高く、低病期患者は経過観察または術後の単剤カルボプラチンで管理されることが多い。一方、非セミノーマは、特に高リスク患者において、ブレオマイシン・エトポシド・シスプラチンなどによる多剤併用の補助化学療法を要することが多い。転移性疾患に対しては化学療法が標準治療であり、大きな腫瘍を有する患者でも良好な治癒率が得られる。残存腫瘤の外科的切除は、特に非セミノーマ性胚細胞腫瘍において、遺残する癌成分や奇形腫成分を除去するために特に重要である。難治性・再発性疾患の治療では、専門性の高い高症例数施設での実施が望ましい、自家造血幹細胞移植を伴う標準量または大量の二次化学療法がしばしば行われる。治療の前・中・後を通じて、心理社会的課題への対応、妊孕性温存の最適化、生活の質の向上のために集学的ケアが不可欠である。根治的治療後は、再発・晩期毒性・二次悪性腫瘍を監視するための定期的な経過観察を含む長期管理が行われ、サバイバーシッププログラムが患者の継続的なニーズに応える上で重要な役割を果たす。早期再発検出のための分子診断の進歩や分子標的治療の導入により、特に治療抵抗性患者において転帰の改善が続いている。",
     "added_at": "2026-09-14",
-    "jif_tier": "very-high"
+    "jif_tier": "very-high",
+    "relevance_status": "kept",
+    "relevance_note": "精巣癌(セミノーマ・非セミノーマ)の管理に関する総説であり、GCTがテーマそのもの。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40406278",
@@ -140,7 +152,10 @@
     "abstract": "Fetal lower urinary tract obstruction is a rare condition commonly associated with significant perinatal morbidity and mortality, particularly when detected in the second trimester. The concurrent presentation of a recto-urethral fistula with membranous urethral atresia and sacrococcygeal teratoma has not been reported. We describe a case of extrinsic fetal lower urinary tract obstruction related to a recto-urethral fistula, diagnosed at 33 weeks gestation and managed by serial vesicocentesis until 38 weeks. This case, notable for its absence of hypoplasia despite late diagnosis, resulted in a term delivery of a male infant. After delivery, pediatric surgeons performed an abdominal perineal resection of the tumor. Fetal vesicocentesis remains a viable management option for patients without access to intrauterine surgical interventions.",
     "abstract_ja": "胎児下部尿路閉塞は稀な病態であり、特に妊娠第2三半期に発見された場合、重大な周産期罹病・死亡と関連することが多い。直腸尿道瘻と膜様部尿道閉鎖、仙尾部奇形腫が同時に発生した例はこれまで報告されていない。本論文では、直腸尿道瘻に関連する外因性の胎児下部尿路閉塞の一例を報告する。妊娠33週で診断され、38週まで連続膀胱穿刺により管理した。本症例は、診断が遅れたにもかかわらず低形成を認めなかった点が特徴的であり、正期産で男児が娩出された。分娩後、小児外科医により腫瘍の腹会陰式切除術が施行された。子宮内手術が利用できない患者において、胎児膀胱穿刺は依然として有効な管理選択肢である。",
     "added_at": "2026-09-14",
-    "jif_tier": "unknown"
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "仙尾部奇形腫(性腺外胚細胞腫瘍)が原因の胎児尿路閉塞に関する症例報告で、腫瘍が病態の中心である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40142802",
@@ -166,7 +181,10 @@
     "jif_tier": "unknown",
     "abstract": "Intracranial teratomas are very rare in adults, representing only 0.3-0.5% of all primary brain tumors. They originate from all three germ layers, and are classified as mature, immature, or malignant. Mature teratomas constitute the most prevalent type in the adult population, commonly originating from midline structures such as the pineal and suprasellar regions. However, the localization of these tumors within the cerebellum is exceedingly rare, with only a limited number of cases reported globally. In this manuscript, we describe, to the best of our knowledge, the first documented case of a young adult patient presenting with a mature teratoma situated between the cerebellar hemispheres. Notably, this tumor was accompanied by occipital bone loss, through which a tumor pedicle extended, forming an extracranial component.: After analyzing the clinical picture and additional examinations, the patient was classified for surgery. The intracranial part of the tumor contained numerous cysts with yellow fluid, a tooth, and fat tissue. The tumor was removed radically, with its extracranial part.: On the fourth day after surgery, the patient was discharged from the clinic in a good general condition, walking, with marked cerebellar symptoms. In a follow-up at 6 months postoperatively, the neurological examination was normal, with no headaches. MRI at the 6 months follow-up did not show any residual or recurrent tumor.Histopathological examination confirmed the diagnosis of mature teratoma.",
     "abstract_ja": "頭蓋内奇形腫は成人では極めて稀であり、原発性脳腫瘍全体の0.3〜0.5%を占めるに過ぎない。三胚葉すべてに由来し、成熟型・未熟型・悪性型に分類される。成熟奇形腫は成人において最も頻度の高い型であり、松果体部や鞍上部などの正中構造に発生することが多い。しかし、小脳内への発生は極めて稀であり、世界的にも報告例は限られている。本論文では、著者らの知る限り初めてとなる、小脳半球間に成熟奇形腫を有する若年成人患者の症例を報告する。特筆すべきこととして、本腫瘍は後頭骨欠損を伴っており、そこを通じて腫瘍茎が延び、頭蓋外成分を形成していた。臨床像と追加検査の分析後、患者は手術適応と判断された。頭蓋内部分の腫瘍には黄色液を含む多数の嚢胞、歯牙、脂肪組織が含まれていた。腫瘍は頭蓋外部分とともに根治的に摘出された。術後4日目、患者は明らかな小脳症状を伴いながらも歩行可能な良好な全身状態で退院した。術後6か月の経過観察では、神経学的所見は正常で頭痛もなかった。術後6か月時点のMRIでは残存腫瘍・再発腫瘍は認められなかった。病理組織学的検査により成熟奇形腫の診断が確定した。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "小脳原発の成熟奇形腫の症例報告であり、対象範囲に含まれる奇形腫を扱っている。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40139237",
@@ -197,7 +215,10 @@
     "jif_tier": "unknown",
     "abstract": "Primary germ cell tumors (GCTs) are highly malignant and often affect young adult men. They commonly occur in the reproductive organs but can also affect structures along the body's midline, including the mediastinum, retroperitoneum, and pineal gland.\n\nWe present the genetic analyses of a 21-year-old African American man diagnosed with primary GCT of the anterior mediastinum.\n\nDNA variants of NRAS and TP53 were identified in the teratomatous and embryonic components of his tumor. These variants were not identified in benign tissue, indicating their somatic origin. Several copy number variants were detected in both tumor components, including gains of chromosome 1, 3p, 12p with loss of homozygosity, and 21; segmental loss of 9q; and 13q copy neutral loss of homozygosity. Divergent copy number variants were identified in either teratomatous or embryonic components, including gains of chromosomes 7, 9, and 17 in the teratomatous component and gains of chromosomes 2, 4, 6, 8, and 11 in the embryonic component.\n\nThese DNA alterations may be genetic drivers of tumor initiation or progression in our patient. They may have diagnostic and prognostic value for mediastinal GCTs.",
     "abstract_ja": "原発性胚細胞腫瘍(GCT)は悪性度の高い腫瘍であり、若年成人男性に多くみられる。主に生殖器に発生するが、縦隔・後腹膜・松果体など体幹正中構造にも発生しうる。本論文では、前縦隔原発性GCTと診断されたアフリカ系アメリカ人21歳男性の遺伝学的解析を報告する。腫瘍の奇形腫成分および胎児性癌成分において、NRASおよびTP53のDNA変異が同定された。これらの変異は良性組織には認められず、体細胞性起源であることが示唆された。両腫瘍成分において、染色体1・3p・12p(ヘテロ接合性消失を伴う)・21の増幅、9qの部分欠失、13qのコピー数中立ヘテロ接合性消失を含む複数のコピー数変異が検出された。奇形腫成分と胎児性癌成分でそれぞれ異なるコピー数変異が認められ、奇形腫成分では染色体7・9・17の増幅、胎児性癌成分では染色体2・4・6・8・11の増幅が確認された。これらのDNA変化は、本症例における腫瘍の発生あるいは進行の遺伝学的な駆動因子である可能性があり、縦隔GCTにおける診断的・予後的価値を有する可能性がある。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "縦隔非セミノーマ性胚細胞腫瘍(奇形腫・胎児性癌成分)の遺伝子解析を扱う症例報告であり明確にGCT関連。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40136384",
@@ -225,7 +246,10 @@
     "jif_tier": "high",
     "abstract": "Radiation therapy (RT) is a cornerstone in the management of pediatric central nervous system (CNS) tumors. Recent advancements in RT delivery and techniques aim to enhance therapeutic effectiveness while minimizing both acute and long-term complications associated with pediatric brain RT. This paper highlights innovative developments in the field, including the clinical indications, benefits, and challenges of proton therapy and stereotactic radiotherapy. The ongoing refinement of risk-adapted RT volumes is highlighted, with examples of newly proposed germinoma RT volumes and hippocampal-sparing RT. Additionally, emerging experimental approaches, including FLASH therapy and theranostics, are also discussed as promising future directions. Further prospective, multi-institutional collaborative studies are essential to validate and expand upon the benefits outlined in this review.",
     "abstract_ja": "放射線療法(RT)は小児中枢神経系(CNS)腫瘍の管理における中心的治療法である。RTの照射方法・技術における近年の進歩は、小児脳RTに伴う急性期・長期的合併症を最小限に抑えつつ、治療効果を高めることを目指している。本論文では、陽子線治療および定位放射線治療の臨床的適応・利点・課題を含め、この分野における革新的な発展を概説する。リスク適応型RT照射野の継続的な改良についても取り上げ、新たに提案された胚腫のRT照射野や海馬温存RTの例を示す。さらに、FLASH療法やセラノスティクスといった新たな実験的アプローチについても、将来有望な方向性として論じる。本総説で示された利点を検証・拡張するためには、今後さらなる前向き多施設共同研究が不可欠である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: 胚腫(GCT)患者が対象のため、主題が治療合併症でも掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40136047",
@@ -256,7 +280,10 @@
     "jif_tier": "unknown",
     "abstract": "Human embryonic carcinoma (hEC) cells are derived from teratocarcinomas, exhibit robust proliferation, have a high differentiation potential, are the malignant counterparts of human embryonic stem cells (hESCs), and are considered hESC-like. The chromosomal passenger complex (CPC), made up of the microtuble binding protein Borealin, the kinase Aurora-B, the CPC-stabilizing inner centromere protein (INCENP), and the inhibitor of apoptosis family member Survivin, regulates cell division and is active exclusively during mitosis in somatic cells. The anaphase-promoting complex/cyclosome and its cofactor Cdh1 (APC/C) is a ubiquitylating complex that catalyzes the degradation of Aurora-B and Borealin in somatic cells but has low activity during interphase in hESCs. Here, we found that Borealin and Aurora-B exhibited sustained stability throughout the cell cycle of hEC cells due to low APC/Cactivity. In contrast with somatic cells, CPC activity persisted across the cell cycle of hEC cells because of diminished APC/Cactivity. Disrupting the CPC complex by depleting its constituents triggered spontaneous differentiation in hEC cells. As hEC cells differentiated, APC/Cactivation curtailed CPC activity. Inactivating the CPC by pharmacologically inhibiting Aurora-B induced hEC cell differentiation by activating the epithelial-to-mesenchymal transition (EMT) program. Hence, APC/C-mediated termination of CPC activity triggered hEC cell differentiation. Collectively, these findings demonstrate a role for the CPC in governing hESC cell fate.",
     "abstract_ja": "ヒト胎児性癌(hEC)細胞は奇形癌腫に由来し、旺盛な増殖能と高い分化能を有し、ヒト胚性幹細胞(hESC)の悪性対応物であり、hESC様細胞とみなされている。染色体パッセンジャー複合体(CPC)は、微小管結合蛋白であるBorealin、キナーゼAurora-B、CPCを安定化させる内部セントロメア蛋白(INCENP)、アポトーシス阻害蛋白ファミリーの一員であるSurvivinから構成され、細胞分裂を制御し、体細胞では分裂期にのみ活性化する。後期促進複合体/サイクロソームとその補因子Cdh1(APC/C)はユビキチン化複合体であり、体細胞ではAurora-BとBorealinの分解を触媒するが、hESCでは間期における活性が低い。本研究では、hEC細胞においてBorealinとAurora-BがAPC/C活性の低さのため細胞周期を通じて安定に維持されることを見出した。体細胞とは対照的に、APC/C活性の低下によりhEC細胞の細胞周期を通じてCPC活性が持続した。CPC複合体の構成因子を減少させて複合体を破壊すると、hEC細胞に自発的な分化が誘導された。hEC細胞が分化するにつれ、APC/Cの活性化がCPC活性を抑制した。Aurora-Bを薬理学的に阻害してCPCを不活化すると、上皮間葉転換(EMT)プログラムの活性化を介してhEC細胞の分化が誘導された。したがって、APC/CによるCPC活性の終結がhEC細胞の分化を引き起こすことが示された。これらの知見は、CPCがhESC細胞の運命決定に果たす役割を示すものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "胎児性癌(embryonal carcinoma)由来のヒト胎児性癌細胞の多能性維持機構を扱う基礎研究であり対象腫瘍種に該当する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40133514",
@@ -291,7 +318,10 @@
     "jif_tier": "unknown",
     "abstract": "To describe the use of high-throughput whole-human proteome phage immunoprecipitation sequencing (PhIP-Seq) in identifying potential antigens for antibody-negative autoimmune limbic encephalitis (ALE).\n\nWe used PhIP-Seq to analyze cerebrospinal fluid (CSF) from patients with antibody-negative ALE evaluated in our lab with detailed clinical records available (2008-2023). Identified autoantigens were validated using recombinant protein-based assay.\n\nOf the 18 CSF samples from patients with ALE, 1 sample showed neuronal PAS domain protein 4 (NPAS4) as the putative autoantigen with the highest enrichment score. Patient presented with cognitive decline, gait dysfunction and unique MRI brain findings revealing asymmetric involvement of the medial temporal lobes with extension to the insular cortex and anterior temporal lobes. No malignancy was detected, and although the patient was initiated on immunotherapy, follow-up evaluation was limited. Another sample with very similar clinical and MRI brain findings, who developed ALE following COVID-19 infection, was referred for evaluation for neural-specific autoantibodies, and PhIP-Seq identified NPAS4 as the putative autoantigen. In both these samples, NPAS4-IgG was confirmed by cell-based assay (CBA) and enzyme-linked immunosorbent assay (ELISA). To assess the specificity of the NPAS4 autoantigen, a large cohort of disease (CSF, n = 49, serum, n = 220) and healthy controls (serum, n = 90) were tested by ELISA which were also negative. In addition, three samples had a high enrichment score for adenylate kinase 5 (AK5), an autoantigen associated with ALE. These patients also displayed a unique immunosignature that included AK5-IgG, which is distinct from NPAS4-IgG ALE or antibody-negative ALE. All three AK5-IgG seropositive cases presented with subacute memory loss, with MRI/PET brain florid showing medial temporal lobe involvement. No malignancy was detected in any of the three patients and immunotherapy led to improvement in one.\n\nOur study demonstrates the utility of high-throughput PhIP-Seq in identifying potential autoantigens in antibody-negative ALE. The identification of NPAS4 as a putative antigen and identification of additional AK5-IgG-positive cases, underscores the potential of PhIP-Seq as a powerful tool in autoimmune disease research.",
     "abstract_ja": "抗体陰性自己免疫性辺縁系脳炎(ALE)における候補抗原の同定において、高スループットのヒト全プロテオームファージ免疫沈降シークエンシング(PhIP-Seq)の使用について述べる。詳細な臨床記録を有する抗体陰性ALE患者(2008〜2023年に当施設で評価)の髄液(CSF)をPhIP-Seqにより解析した。同定された自己抗原は組換え蛋白ベースのアッセイにより検証した。ALE患者18例のCSF検体のうち1例で、最も高い濃縮スコアを示す推定自己抗原としてニューロナルPASドメイン蛋白4(NPAS4)が同定された。この患者は認知機能低下、歩行障害を呈し、頭部MRIでは内側側頭葉から島皮質・前側頭葉に及ぶ非対称性の病変を認めた。悪性腫瘍は検出されず、免疫療法が開始されたが、経過観察は限定的であった。臨床像・頭部MRI所見が非常に類似したもう1例では、COVID-19感染後にALEを発症し、神経特異的自己抗体の評価目的で紹介された。PhIP-Seqにより同様にNPAS4が推定自己抗原として同定された。両検体においてNPAS4-IgGは細胞ベースアッセイ(CBA)および酵素免疫測定法(ELISA)により確認された。NPAS4自己抗原の特異性を評価するため、疾患対照群(CSF 49例、血清220例)および健常対照群(血清90例)の大規模コホートをELISAで検査したが、いずれも陰性であった。さらに3検体で、ALEに関連する自己抗原であるアデニル酸キナーゼ5(AK5)の濃縮スコアが高値を示した。これらの患者は、NPAS4-IgG陽性ALEまたは抗体陰性ALEとは異なる、AK5-IgGを含む特有の免疫シグネチャーを示した。AK5-IgG陽性の3例はいずれも亜急性の記憶障害を呈し、MRI/PET脳画像では内側側頭葉の関与を認めた。3例とも悪性腫瘍は検出されず、1例で免疫療法により改善がみられた。本研究は、抗体陰性ALEにおける候補自己抗原の同定において高スループットPhIP-Seqが有用であることを示している。NPAS4を推定抗原として同定し、追加のAK5-IgG陽性例を同定したことは、自己免疫疾患研究におけるPhIP-Seqの有用性を裏付けるものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "自己免疫性辺縁系脳炎における自己抗原探索の研究であり、胚細胞腫瘍とは無関係。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40036664",
@@ -318,7 +348,10 @@
     "jif_tier": "unknown",
     "abstract": "Atypical teratoid/rhabdoid tumors (AT/RT) are malignant central nervous system (CNS) tumors. Typically, AT/RT is classified as SMARCB1 (INI-1) deficient or as SMARCA4 (BRG1) deficient. In this case, we describe a unique case of AT/RT with a novel SMARCA4 missense variant identified on next-generation sequencing but retained expression of INI-1 and BRG-1 on immunohistochemistry. Diagnosis of the tumor and discovery of the novel SMARCA4 variant was only possible after comprehensive tumor molecular testing tailored for pediatric malignancies. This case highlights the importance of molecular genetic testing as part of a workup in neoplasms concerning for possible AT/RT.",
     "abstract_ja": "非定型奇形腫様ラブドイド腫瘍(AT/RT)は悪性の中枢神経系(CNS)腫瘍である。AT/RTは一般に、SMARCB1(INI-1)欠失型またはSMARCA4(BRG1)欠失型に分類される。本症例では、次世代シークエンシングにより新規のSMARCA4ミスセンス変異が同定された一方、免疫組織化学検査ではINI-1およびBRG-1の発現が保持されているという特異なAT/RT症例を報告する。本腫瘍の診断および新規SMARCA4変異の発見は、小児悪性腫瘍に特化した包括的な腫瘍分子検査を行って初めて可能となった。本症例は、AT/RTが疑われる腫瘍性病変の精査において、分子遺伝学的検査を組み込むことの重要性を示している。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "非定型奇形腫様ラブドイド腫瘍(AT/RT)はSMARCB1/SMARCA4欠損に関連する中枢神経系腫瘍であり、胚細胞腫瘍とは異なる疾患である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39995254",
@@ -344,7 +377,10 @@
     "jif_tier": "high",
     "abstract": "Hepatic steatosis (HS) development and its risk factors in testicular germ cell tumor (TGCT) survivors have not been investigated.\n\nThe study was designed as a retrospective observational study. Patients with existing HS at diagnosis were excluded. Serial imaging was utilized to detect HS.\n\nA total of 106 TGCT survivors were included. HS developed in 57% ( = 61) during a median follow-up of 51.8 months (8.5-241.5); 77% ( = 47) of those had persistent HS. Patients who developed HS had a higher baseline body mass index (BMI) (median 26.5 vs. 23.6 kg/m, = 0.000). Higher baseline BMI [adjusted odds ratio (aOR): 1.35, (95% CI: 1.10-1.65) = 0.004] and S0 stage [aOR: 3.87, (95% CI: 1.18-12.67), = 0.025] were associated with a higher risk of HS development. The median time from the diagnosis of TGCT to the detection of HS was 44.7 months (29.5-59.8). Higher baseline BMI was associated with earlier development of HS both in all patients [hazard ratio (HR): 1.16, (95% CI: 1.04-1.30), = 0.007] and patients treated with the BEP regimen [HR: 1.21, (95% CI: 1.01-1.47), = 0.038].\n\nHS may be considered a long-term complication in TGCT patients. The risk is associated with baseline BMI. Diagnosis and management of HS should be implemented in the survivorship care plan of TGCT survivors.",
     "abstract_ja": "精巣胚細胞腫瘍(TGCT)生存者における脂肪肝(HS)の発生とその危険因子についてはこれまで検討されていなかった。本研究は後方視的観察研究として計画された。診断時に既存のHSを有する患者は除外した。HSの検出には経時的な画像検査を用いた。合計106例のTGCT生存者が対象となった。中央値51.8か月(8.5〜241.5か月)の経過観察期間中に57%(n=61)でHSが発症し、そのうち77%(n=47)は持続性であった。HSを発症した患者はベースラインの体格指数(BMI)が高い傾向にあった(中央値26.5 vs 23.6 kg/m²、p=0.000)。より高いベースラインBMI(調整オッズ比[aOR]1.35、95%CI 1.10〜1.65、p=0.004)およびS0病期(aOR 3.87、95%CI 1.18〜12.67、p=0.025)がHS発症リスクの上昇と関連していた。TGCT診断からHS検出までの期間中央値は44.7か月(29.5〜59.8か月)であった。ベースラインBMIが高いほど、全患者(ハザード比[HR]1.16、95%CI 1.04〜1.30、p=0.007)およびBEPレジメン施行患者(HR 1.21、95%CI 1.01〜1.47、p=0.038)のいずれにおいても、HSの発症時期が早まる傾向がみられた。HSはTGCT患者における長期合併症の一つと考えられる。そのリスクはベースラインBMIと関連する。HSの診断・管理は、TGCT生存者のサバイバーシップケアプランに組み込まれるべきである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣胚細胞腫瘍(TGCT)生存者における長期合併症としての脂肪肝発症を扱っており、GCTの主題として明確に関連する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39907271",
@@ -372,7 +408,10 @@
     "jif_tier": "unknown",
     "abstract": "Yolk sac tumor (YST) is a malignant germ cell tumor with 10-15% arising in extragonadal sites.A search through our institution's database from January 01, 1990, to December 31, 2020, for \"yolk sac tumor\" or \"endodermal sinus tumor\" and \"liver\".Our search yielded three cases. A 20-month-old girl with a liver mass and serum alpha-fetoprotein (AFP) level of 46558.0 ng/mL. The neoplasm was papillary with Schiller-Duval bodies. A 2-year-old boy with hepatic masses and adrenal mass with a serum AFP of 106,604.5 ng/mL. Numerous Schiller-Duval bodies were present. A 7-month-old girl with a liver mass, lung nodules, and retroperitoneal masses. Serum AFP was in the 800s ng/mL. Hepatoid and microcystic YST were mixed with hepatoblastoma (HBL). All three cases were positive for CAM5.2, SALL4, Glypican-3, beta-catenin, and AFP.Hepatic yolk sac tumor should be considered in the differential of a liver mass in pediatric patients with elevated AFP.",
     "abstract_ja": "卵黄嚢腫瘍(YST)は悪性胚細胞腫瘍であり、10〜15%は性腺外部位に発生する。当施設のデータベースを1990年1月1日から2020年12月31日までの期間について「卵黄嚢腫瘍」または「内胚葉洞腫瘍」と「肝臓」をキーワードに検索した。検索の結果、3例が抽出された。1例目は生後20か月の女児で、肝腫瘤を有し、血清αフェトプロテイン(AFP)値は46,558.0 ng/mLであった。腫瘍は乳頭状構造を呈し、Schiller-Duval小体を認めた。2例目は2歳男児で、肝腫瘤と副腎腫瘤を有し、血清AFPは106,604.5 ng/mLであった。多数のSchiller-Duval小体が認められた。3例目は生後7か月の女児で、肝腫瘤、肺結節、後腹膜腫瘤を有し、血清AFPは800台ng/mLであった。肝様型・微小嚢胞型のYSTが肝芽腫(HBL)と混在していた。3例すべてでCAM5.2、SALL4、グリピカン-3、βカテニン、AFPが陽性であった。血清AFP高値を伴う小児肝腫瘤の鑑別診断においては、肝原発卵黄嚢腫瘍を考慮すべきである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "小児における肝原発卵黄嚢腫瘍(悪性胚細胞腫瘍)とAFP高値を主題とする症例シリーズであり、明確にGCTに該当する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39701870",
@@ -407,7 +446,10 @@
     "jif_tier": "unknown",
     "abstract": "Survivors of testicular germ cell tumor (TGCT) may experience long-term cognitive changes. The aim of our prospective study was to longitudinally assess cognitive function among TGCT survivors to identify potential lasting cognitive changes over a period of 5 yr.\n\nTGCT survivors (n = 151) completed Functional Assessment of Cancer Therapy-Cognitive Function (FACT-Cog) questionnaires annually, with median time to first follow-up visit (FUV) of 8 (range 4-24) yr since completion of treatment. Treatment after orchiectomy included: active surveillance (AS) alone (n = 21); chemotherapy (CTx; n = 109); radiotherapy (RT) to the retroperitoneum (n = 11); and combined CTx + RT (n = 10). Scores for four FACT-Cog domains and overall cognitive scores were evaluated annually for 5 yr. In a subgroup analysis we compared results for survivors who received cisplatin at a dose of <400 mg/m(n = 48) versus ≥400 mg/m(n = 70).\n\nThe CTx + RT group had persistently lower scores for the perceived cognitive abilities (CogPCA) domain annually between the first and fifth FUVs in comparison to the AS group (all p < 0.05), with lower overall cognitive scores from the second to the fifth FUV (all p < 0.03). The group that received ≥400 mg/mcisplatin had lower CogPCA scores at the first and second FUVs, and lower overall cognitive scores at the second FUV in comparison to the AS group. However, no significant change in cognitive scores across all domains was observed over 5 yr for all survivors.\n\nCognitive impairment in TGCT survivors persisted over long-term follow-up. Survivors who received both CTx and RT consistently had the worst cognitive performance at all FUVs over a 5-yr period. In addition, survivors who received a higher cisplatin dose showed worse cognitive function at all FUVs.\n\nOur study results show that survivors of testicular cancer experienced long-term cognitive dysfunction that persisted over time. Survivors who underwent both chemotherapy and radiotherapy and those who received a higher dose of chemotherapy had the worst cognitive problems.",
     "abstract_ja": "精巣胚細胞腫瘍(TGCT)生存者は長期的な認知機能の変化を経験することがある。本前向き研究の目的は、TGCT生存者における認知機能を5年間にわたり縦断的に評価し、持続しうる認知機能変化を明らかにすることであった。TGCT生存者151例が毎年Functional Assessment of Cancer Therapy-Cognitive Function(FACT-Cog)質問票に回答し、治療終了から初回経過観察時までの期間中央値は8年(範囲4〜24年)であった。精巣摘除後の治療内容は、経過観察単独(AS、n=21)、化学療法(CTx、n=109)、後腹膜への放射線療法(RT、n=11)、CTx+RT併用(n=10)であった。FACT-Cogの4領域のスコアおよび総合認知スコアを5年間にわたり毎年評価した。サブグループ解析では、シスプラチン投与量が400 mg/m²未満(n=48)の群と400 mg/m²以上(n=70)の群を比較した。CTx+RT群は、初回から5回目の経過観察時まで一貫して、AS群と比較して自覚的認知能力(CogPCA)領域のスコアが低かった(すべてp<0.05)。総合認知スコアも2回目から5回目の経過観察時まで低かった(すべてp<0.03)。シスプラチン400 mg/m²以上を投与された群は、AS群と比較して初回・2回目の経過観察時にCogPCAスコアが低く、2回目の経過観察時には総合認知スコアも低かった。しかし、全生存者において5年間を通じた全領域の認知スコアに有意な変化は認められなかった。TGCT生存者における認知機能障害は長期経過観察を通じて持続していた。CTxとRTの両方を受けた生存者は、5年間のすべての経過観察時点で一貫して最も不良な認知機能を示した。また、より高用量のシスプラチンを投与された生存者は、すべての経過観察時点でより不良な認知機能を示した。本研究の結果は、精巣癌生存者が長期にわたり持続する認知機能障害を経験することを示している。化学療法と放射線療法の両方を受けた生存者、およびより高用量の化学療法を受けた生存者が、最も重度の認知機能の問題を有していた。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣胚細胞腫瘍生存者の認知機能を縦断的に評価した研究であり、TGCTのマネジメント・晩期合併症に関する内容で関連する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39377884",
@@ -434,7 +476,10 @@
     "jif_tier": "unknown",
     "abstract": "Rheumatic paraneoplastic syndromes are rare and generally occur no longer than two years before diagnosis of the associated malignancy. Therefore, it can be an essential clue to occult malignancy. A healthy 18-year-old female with no underlying diseases was referred to the rheumatology clinic due to morning stiffness in her hands and a new rash on her fingers. Her labs showed a positive ANA, anti-double strand DNA antibody, anti-RNP, and anti-ribosomal P. Nine months after the diagnosis with SLE, the patient presented with elevated levels of lactate dehydrogenase. A total-body computed tomography scan revealed a solid mass in the pelvis. The pathological findings corresponded to a dysgerminoma tumor. Following surgical tumor removal and chemotherapy, the patient went into remission with both SLE and her oncology conditions, with no relapse of her lupus symptoms in a one-year follow-up. This case underscores the importance of considering malignancy in unexplained lupus symptoms, a crucial point for all physicians to be aware of. We identified 13 cases of paraneoplastic SLE in a literature review. In most cases, SLE is resolved after the tumor has been treated.",
     "abstract_ja": "リウマチ性傍腫瘍症候群は稀であり、通常、関連する悪性腫瘍の診断より2年以内に発症する。そのため、潜在する悪性腫瘍を発見する重要な手がかりとなりうる。基礎疾患のない健康な18歳女性が、手指のこわばりと新たに出現した指の発疹を主訴にリウマチ科を紹介受診した。検査では抗核抗体(ANA)、抗二本鎖DNA抗体、抗RNP抗体、抗リボゾームP抗体が陽性であった。全身性エリテマトーデス(SLE)の診断から9か月後、患者は乳酸脱水素酵素値の上昇を呈した。全身CTにより骨盤内に充実性腫瘤を認めた。病理所見は未分化胚細胞腫に合致した。腫瘍の外科的摘出と化学療法の後、患者はSLE・腫瘍学的病態ともに寛解に至り、1年間の経過観察でループス症状の再燃は認めなかった。本症例は、原因不明のループス症状において悪性腫瘍を考慮することの重要性を示しており、すべての医師が認識すべき重要な点である。文献レビューにより、傍腫瘍性SLEの症例を13例同定した。多くの症例で、腫瘍治療後にSLEは軽快している。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "未分化胚細胞腫(dysgerminoma)に伴う傍腫瘍性SLEの症例報告であり、GCTの一種である未分化胚細胞腫が主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40131616",
@@ -459,7 +504,10 @@
     "jif_tier": "moderate",
     "abstract": "The incidence of intracranial germ cell tumors (iGCTs) in adolescents and young adults (AYA) is lower than that in pediatric patients. However, the recurrence rate of iGCT in AYA patients (7.6%) is higher than in children (2%). The use of iGCTs in the AYA population lacks randomized trials to standardize treatment. Therefore, this study aimed to determine the patterns of practice and outcomes of iGCT in AYA.\n\nThis single-center retrospective cohort study iGCT patients aged 15 to 39 who were treated at Siriraj Hospital, Thailand, from 2007 to 2019. The patients' charts were reviewed, and the results were compared between those who received chemotherapy combined with radiotherapy (Chemo-RT) and those who received RT alone.\n\nThe median follow-up time was 7.6 years. Eighty-four patients were included in this study: 60 with germinomas and 24 with nongerminomatous germ cell tumors (NGGCT). In the case of NGGCT, the 10-year event-free survival (EFS) and overall survival (OS) were 100% and 100%, respectively, with RT alone. For Chemo-RT, the 10-year EFS was 54.05%, and the 10-year OS was 68.44% (P = 0.640 for EFS and 0.454 for OS). For germinomas, the 10-year EFS was 76.87% with RT alone, and the 10-year OS was 86.40%. For Chemo-RT, the 10-year EFS was 69.63%, and the 10-year OS was 69.63% (P = 0.335 for EFS and 0.022 for OS). Compared with those in the groups treated with Chemo-RT and RT alone adjusted for age > 18 years, primary site, metastasis, type of surgery, field of radiotherapy, sex, serum beta-HCG, and serum AFP, the hazard ratio (HR) of EFS was 2.49 (0.85-7.29) (P = 0.095) and the OS was 2.55 (P = 0.237).\n\nTo the best of our knowledge, we present findings on the outcomes of iGCT patients in the AYA age group. After adjusting the hazard ratio, we found no significant difference between patients who received chemotherapy and those who underwent radiotherapy alone in terms of event-free survival and overall survival. Standardized long-term term survival follow-up and supportive treatment in AYA group is needed to improve the outcome and minimize toxicity in this group. There is a need for further randomized control trials that specifically address the population of patients with AYA to improve our understanding of their potential treatment approaches.",
     "abstract_ja": "思春期・若年成人(AYA)における頭蓋内胚細胞腫瘍(iGCT)の発生率は小児患者よりも低い。しかしAYA患者におけるiGCTの再発率(7.6%)は小児(2%)よりも高い。AYA集団におけるiGCTの治療は、標準化のためのランダム化比較試験が不足している。そこで本研究は、AYAにおけるiGCTの診療パターンと転帰を明らかにすることを目的とした。本単施設後方視的コホート研究は、2007年から2019年にタイのシリラート病院で治療を受けた15〜39歳のiGCT患者を対象とした。患者カルテをレビューし、化学放射線療法(Chemo-RT)を受けた群とRT単独を受けた群で結果を比較した。追跡期間中央値は7.6年であった。84例が本研究に組み入れられ、胚腫60例、非胚腫性胚細胞腫瘍(NGGCT)24例であった。NGGCTでは、RT単独における10年無イベント生存率(EFS)・全生存率(OS)はいずれも100%であった。Chemo-RTでは10年EFSが54.05%、10年OSが68.44%であった(EFSでp=0.640、OSでp=0.454)。胚腫では、RT単独における10年EFSは76.87%、10年OSは86.40%であった。Chemo-RTでは10年EFSが69.63%、10年OSが69.63%であった(EFSでp=0.335、OSでp=0.022)。年齢18歳超、原発部位、転移、手術の種類、放射線照射野、性別、血清βHCG、血清AFPで調整した場合、Chemo-RT群とRT単独群の間で、EFSのハザード比(HR)は2.49(0.85〜7.29、p=0.095)、OSのHRは2.55(p=0.237)であった。著者らの知る限り、本研究はAYA年齢群におけるiGCT患者の転帰に関する知見を示すものである。ハザード比を調整した後、化学療法を受けた患者と放射線療法単独を受けた患者との間で、無イベント生存率・全生存率に有意差は認められなかった。AYA群における転帰の改善と毒性の最小化のためには、標準化された長期生存経過観察と支持療法が必要である。AYA患者集団を対象とした、治療アプローチの理解を深めるためのさらなるランダム化比較試験が求められる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "思春期・若年成人の頭蓋内胚細胞腫瘍(胚腫・非胚腫性胚細胞腫瘍)の治療成績を比較した研究でありGCTが主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40129838",
@@ -485,7 +533,10 @@
     "jif_tier": "unknown",
     "abstract": "Spontaneous ruptures of ovarian teratomas are rare. We report a case of chemical peritonitis due to spontaneous rupture of a right ovarian teratoma in a 37-year-old female patient with no gynecological history, who presented an acute nonspecific abdominal pain. The CT scan showed a right ovarian teratoma associated with peritoneal effusion and infiltration of the great omentum suggesting a rupture of the dermoid cyst confirmed by laparoscopic exploration.",
     "abstract_ja": "卵巣奇形腫の自然破裂は稀である。婦人科既往のない37歳女性において、右卵巣奇形腫の自然破裂による化学性腹膜炎の症例を報告する。急性の非特異的腹痛を主訴に受診した。CT検査では、腹膜液貯留と大網への浸潤を伴う右卵巣奇形腫が認められ、類皮嚢腫の破裂が疑われ、腹腔鏡下探査により確認された。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣成熟奇形腫の自然破裂による化学性腹膜炎の症例報告であり奇形腫がテーマである。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40129537",
@@ -509,7 +560,10 @@
     "jif_tier": "unknown",
     "abstract": "Teratoid Wilms tumor is a very rare tumor, about 70 cases have been reported worldwide. Extrarenal teratoid Wilms tumor is even less common. We reported a child with sacrococcygeal teratoid Wilms tumor who was diagnosed with teratoma at the time of the initial operation and relapsed shortly after the operation; we followed up for nearly two years after the second operation with no tumor recurrence or metastasis. This case tells clinicians that the diagnosis of extrarenal teratoid Wilms tumor needs to be careful, and although the prognosis of the disease is good, the premise is complete surgical resection.",
     "abstract_ja": "奇形腫様Wilms腫瘍は極めて稀な腫瘍であり、世界で約70例が報告されているのみである。腎外性の奇形腫様Wilms腫瘍はさらに稀である。本論文では、初回手術時に奇形腫と診断され、術後まもなく再発した仙尾部奇形腫様Wilms腫瘍の小児例を報告する。2回目の手術後約2年間の経過観察で、腫瘍の再発・転移は認められなかった。本症例は、腎外性奇形腫様Wilms腫瘍の診断には注意深さが必要であること、また本疾患の予後は良好であるものの、その前提として完全な外科的切除が必要であることを臨床医に示すものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "腎外奇形腫様Wilms腫瘍はWilms腫瘍の亜型であり、生殖細胞腫瘍(奇形腫)とは異なる腫瘍である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40129452",
@@ -542,7 +596,10 @@
     "jif_tier": "low",
     "abstract": "Gestational trophoblastic disease (GTD) includes rare tumors from abnormal fertilization, ranging from benign hydatidiform moles to malignant choriocarcinomas (CCs) and rare placental-site trophoblastic tumors. Management of GTD depends on FIGO scoring, with low-risk cases treated conservatively and high-risk or ultra-high-risk cases requiring multi-agent chemotherapy, often EMA-CO, with induction therapy recommended for patients at very high risk of early death.\n\nWe present the case of a 37-year-old female patient who developed an acute respiratory failure, requiring mechanical ventilation, 2 months after term delivery by cesarean section. The diagnosis of gestational trophoblastic neoplasia (GTN) was suspected due to high level of HCG in postpartum period and thoracic imaging suggesting multiple pulmonary metastases. No biopsy was available. She subsequently developed ventilator-associated pneumonia with severe acute respiratory distress syndrome (ARDS), requiring veno-venous extracorporeal membrane oxygenation support alongside concurrent polychemotherapy. After spending 61 days in the intensive care unit, and achieving biological complete remission based on HCG monitoring, the patient was transferred to the oncology ward. Due to prolonged hypoperfusion and hypoxemia, the patient developed ischemic cholangiopathy, severely constraining further therapeutic options. After 4 months of biological remission, the patient experienced a recurrence based on HCG rising and reappearing of pulmonary lesions on thoracic imaging in the lungs. In second line, the patient was treated with carboplatin, with no significant response. In third line, pembrolizumab was used, and the patient experienced a significant decrease in HCG. However, due to hematologic toxicity, we discontinued the treatment. Subsequently, the HCG level raised and the patient rapidly developed hemorrhagic cerebral metastasis and succumbed shortly thereafter.\n\nThis case underscores the importance of prompt recognition and timely intervention in the management of patients with ARDS during the early postpartum period. GTN with lung involvement should be considered after excluding the other more frequent causes of ARDS. It also highlights how ECMO support enables the continuation of chemotherapy and the achievement of remission in CC. Furthermore, due to the inability to initiate the desired chemotherapy, immunotherapy was introduced as a possible treatment modality. Therefore, this case underscores the importance of adaptability in treatment plans based on patient-specific clinical conditions and collaborative decision-making with specialized centers. Finally, it emphasizes the efficacy of pembrolizumab, even as a monotherapy, in pretreated CC cases.",
     "abstract_ja": "妊娠性絨毛性疾患(GTD)は、受精異常に由来する稀な腫瘍群を含み、良性の胞状奇胎から悪性の絨毛癌(CC)、稀な胎盤部トロホブラスト腫瘍まで多岐にわたる。GTDの管理はFIGOスコアリングに基づき、低リスク例は保存的に治療され、高リスクまたは超高リスク例では多剤併用化学療法(しばしばEMA-CO)を要し、早期死亡の超高リスク患者には導入療法が推奨される。本論文では、帝王切開による正期産の2か月後に急性呼吸不全を発症し、人工呼吸管理を要した37歳女性患者の症例を報告する。産褥期のHCG高値と、複数の肺転移を示唆する胸部画像所見から、妊娠性絨毛性腫瘍(GTN)が疑われた。生検は施行できなかった。その後、重症急性呼吸窮迫症候群(ARDS)を伴う人工呼吸器関連肺炎を発症し、多剤併用化学療法と並行して静脈-静脈体外式膜型人工肺(ECMO)による支持療法を要した。集中治療室で61日間の管理を経て、HCGモニタリングに基づく生物学的完全寛解を達成し、患者は腫瘍内科病棟へ転棟した。長期の低灌流・低酸素状態により虚血性胆管症を発症し、その後の治療選択肢は著しく制限された。生物学的寛解から4か月後、HCG上昇と胸部画像上の肺病変再出現に基づき再発を認めた。二次治療としてカルボプラチンを投与したが、有意な効果は得られなかった。三次治療としてペムブロリズマブを使用したところ、HCGの著明な低下がみられた。しかし血液毒性のため治療を中止した。その後HCG値が上昇し、患者は急速に出血性脳転移を発症し、まもなく死亡した。本症例は、産褥早期のARDS患者の管理において、迅速な認識と適時の介入の重要性を示している。肺病変を伴うGTNは、ARDSのより頻度の高い他の原因を除外した後に考慮すべきである。また、ECMOによる支持療法がCCにおける化学療法の継続と寛解達成を可能にしうることを示している。さらに、希望する化学療法を開始できなかったことから、免疫療法が治療選択肢の一つとして導入された。したがって本症例は、患者個別の臨床状態に基づく治療計画の柔軟性、および専門施設との協働的な意思決定の重要性を示すものである。最後に、前治療歴のあるCC症例においても、ペムブロリズマブが単剤療法としてなお有効であることを強調するものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: GTN/絨毛癌はGCTとしての絨毛癌との鑑別・関連疾患として掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40127887",
@@ -566,7 +623,10 @@
     "jif_tier": "unknown",
     "abstract": "[Abstract not available]",
     "abstract_ja": "抄録は公開されていません。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "needs_review",
+    "relevance_note": "ユーザー確認: 抄録非公開のためGCT関連性を判断できず、いったん保留(表示は継続)",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40124247",
@@ -594,7 +654,10 @@
     "jif_tier": "unknown",
     "abstract": "Evidence has accumulated that adult tissues contain a population of early development stem cells capable of differentiating across germ layers into various types of cells. Our group purified these rare cells, naming them very small embryonic-like stem cells (VSELs). With their broad differentiation potential, VSELs have emerged as a new candidate population for clinical applications. This advancement is now possible due to our recent development of a model forexpansion of these rare cells. Importantly, no evidence suggests that VSELs, isolated from adult tissues, can form teratomas. In this review paper, we update current research on these cells reported in our laboratory as well as in those of several independent investigators.",
     "abstract_ja": "成体組織中に、複数の胚葉にまたがって多様な細胞型へ分化しうる初期発生幹細胞の集団が存在するというエビデンスが蓄積されてきた。著者らのグループはこれらの稀な細胞を精製し、超小型胚性幹様細胞(VSEL)と命名した。広範な分化能を有することから、VSELは臨床応用に向けた新たな候補細胞集団として注目されている。これらの稀少細胞を増幅するモデルを著者らが最近開発したことにより、この進展が可能となった。重要な点として、成体組織から単離されたVSELが奇形腫を形成するというエビデンスは示されていない。本総説では、著者らの研究室および複数の独立した研究者によって報告された、これらの細胞に関する現在の研究について概説する。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "VSEL幹細胞の再生医療応用に関する総説で、テラトーマは形成しないことに触れるのみでGCT自体を扱っていない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40122440",
@@ -622,7 +685,10 @@
     "jif_tier": "unknown",
     "abstract": "[Abstract not available]",
     "abstract_ja": "抄録は公開されていません。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "子宮穿孔を呈した妊娠性絨毛癌の症例報告であり、GCTの一種である絨毛癌が主題。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40090235",
@@ -652,7 +718,10 @@
     "jif_tier": "unknown",
     "abstract": "Testin (TES), a protein localised in the cytoplasm and belonging to the LIM family of proteins, is part of the cytoskeleton localised along stress fibres and recruited to focal adhesions. It is considered a tumour suppressor protein in humans and decreased TES expression has been shown to increase cell motility and decrease cell-cell contact. In veterinary medicine, TES has only been studied in rat testes and, more recently, also in canine testes. The expression of this protein in testicular tumours is unknown. As the dog has been proposed as an animal model for the study of human testicular tumours, studies on canine TES may provide useful information for both species. Therefore, the purpose of the present study was to demonstrate the expression of TES in the most common types of canine testicular tumours. For this study, paraffin blocks of 166 canine testicular tumours (53 Sertoli cell tumours, 50 Leydig cell tumours, and 63 seminomas) were retrieved from the archive of the Department of Pathology of Wroclaw University of Environmental and Life Sciences. Sections were obtained for complete description of the tumours, confirmation of the histological diagnosis, and immunohistochemical TES antigen location. Sections from 10 normal canine testes were examined as controls. The presence of TES was also demonstrated in fresh tissue from three types of canine testicular tumour. The diagnosis was confirmed in the 166 tumours, and TES was immunohistochemically demonstrated in 98 % of them and in all 10 normal testes. All tumour types had reduced expression of TES, even if not related to the tumour growth pattern or mitotic index, demonstrating that TES expression is reduced in canine as well in human testicular tumours. However, the reduction of TES expression appeared to be moderate, and these features were consistent with the evidence that testicular tumours in dogs are often well-differentiated. A complete understanding of the function of TES in cancer processes requires further investigation, but the relative parallelism between normal and neoplastic cells in well-differentiated, mostly benign testicular tumours provides a good basis for studying TES expression in more aggressive tumours, such as prostatic or urinary tract neoplasms.",
     "abstract_ja": "テスチン(TES)は細胞質に局在するLIMファミリー蛋白であり、細胞骨格のストレス線維に沿って局在し、接着斑にリクルートされる。ヒトにおいては腫瘍抑制蛋白と考えられており、TES発現の低下は細胞運動性の亢進および細胞間接着の低下をもたらすことが示されている。獣医学領域では、TESはラット精巣、および近年ではイヌ精巣においてのみ研究されている。精巣腫瘍におけるこの蛋白の発現は未解明である。イヌはヒト精巣腫瘍研究の動物モデルとして提案されていることから、イヌTESに関する研究は両種にとって有用な知見をもたらす可能性がある。そこで本研究は、イヌ精巣腫瘍の代表的な種類においてTESの発現を明らかにすることを目的とした。本研究では、ヴロツワフ環境生命科学大学病理学教室のアーカイブから、イヌ精巣腫瘍166例(セルトリ細胞腫53例、ライディッヒ細胞腫50例、セミノーマ63例)のパラフィンブロックを収集した。腫瘍の詳細な記載、組織学的診断の確認、TES抗原の免疫組織化学的局在確認のために切片を作製した。対照として正常イヌ精巣10例の切片も検討した。TESの存在は、イヌ精巣腫瘍3種類の新鮮組織においても確認された。166例すべてで診断が確認され、そのうち98%でTESが免疫組織化学的に検出され、対照の正常精巣10例すべてでも検出された。全腫瘍型でTES発現は低下していたが、腫瘍の増殖パターンや分裂指数との関連は認められず、イヌにおいてもヒトと同様に精巣腫瘍でTES発現が低下することが示された。しかしTES発現低下の程度は中等度にとどまり、この所見はイヌの精巣腫瘍が高分化型であることが多いという既知の事実と一致していた。癌化過程におけるTESの機能の完全な理解にはさらなる研究が必要であるが、高分化型で多くが良性である精巣腫瘍において正常細胞と腫瘍細胞の間に相対的な類似性がみられることは、前立腺腫瘍や尿路腫瘍のようなより悪性度の高い腫瘍におけるTES発現を研究するための良い基盤となる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "イヌの精巣腫瘍(セミノーマ含む)におけるテスチン蛋白発現を調べた獣医学研究であり、ヒトのGCT臨床研究ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40053689",
@@ -695,7 +764,10 @@
     "jif_tier": "unknown",
     "abstract": "In patients with testicular germ cell tumours (TGCT), sperm cryopreservation prior to anti-cancer treatment represents the main fertility preservation approach. However, it is associated with a low sperm recovery rate after thawing. Since sperm is a high-energy demanding cell, which is supplied by glycolysis and oxidative phosphorylation (OXPHOS), mitochondrial dysfunctionality can directly result in sperm anomalies. In this study, we investigated the bioenergetic pattern of cryopreserved sperm of TGCT patients in comparison with normozoospermic samples using two state-of-the-art methods: the Extracellular Flux Analyzer (XF Analyzer) and two-photon fluorescence lifetime imaging microscopy (2P-FLIM), in order to assess the contributions of OXPHOS and glycolysis to energy provision. A novel protocol for the combined measurement of OXPHOS (oxygen consumption rate: OCR) and glycolysis (extracellular acidification rate: ECAR) using the XF Analyzer was developed together with a unique customized AI-based approach for semiautomated processing of 2P-FLIM images. Our study delivers optimized low-HEPES modified human tubal fluid media (mHTF) for sperm handling during pre-analytical and analytical phases, to maintain sperm physiological parameters and optimal OCR, equivalent to OXPHOS. The negative effect of cryopreservation was signified by the deterioration of both bioenergetic pathways represented by modified OCR and ECAR curves and the derived parameters. This was true for normozoospermic as well as samples from TGCT patients, which showed even stronger damage within the respiratory chain compared to the level of glycolytic activity impairment. The impact of cryopreservation and pathology are supported by 2P-FLIM analysis, showing a significant decrease in bound NADH in contrast to unbound NAD(P)H, which reflects decreased metabolic activity in samples from TGCT patients. Our study provides novel insights into the impact of TGCT on sperm bioenergetics and delivers a verified protocol to be used for the assessment of human sperm metabolic activity, which can be a valuable tool for further research and clinical andrology.",
     "abstract_ja": "精巣胚細胞腫瘍(TGCT)患者において、抗癌治療前の精子凍結保存は妊孕性温存の主要な手段である。しかし融解後の精子回収率が低いという課題がある。精子は解糖系と酸化的リン酸化(OXPHOS)によって供給される高エネルギー需要細胞であるため、ミトコンドリア機能不全は直接的に精子異常をもたらしうる。本研究では、最新の2つの手法である細胞外フラックス解析装置(XFアナライザー)と二光子蛍光寿命イメージング顕微鏡(2P-FLIM)を用いて、TGCT患者の凍結保存精子と正常精液所見検体との間でバイオエナジェティクス(生体エネルギー)パターンを比較し、エネルギー供給におけるOXPHOSと解糖のそれぞれの寄与を評価した。XFアナライザーを用いたOXPHOS(酸素消費速度:OCR)と解糖(細胞外酸性化速度:ECAR)の同時測定のための新規プロトコルを開発するとともに、2P-FLIM画像の半自動処理のための独自のAIベース手法を構築した。本研究では、精子の生理学的パラメータおよび至適OCR(OXPHOSに相当)を維持するため、精子取り扱いの前分析・分析段階に用いる低HEPES改変ヒト卵管液培地(mHTF)を最適化して提供した。凍結保存の悪影響は、OCR・ECAR曲線およびそれに由来するパラメータの変化として現れる両バイオエナジェティクス経路の低下として示された。これは正常精液所見検体・TGCT患者検体のいずれでも認められたが、TGCT患者検体では解糖活性の障害程度と比較して、呼吸鎖におけるより強い障害を示した。凍結保存および病態の影響は2P-FLIM解析によっても裏付けられ、結合型NADHの有意な減少(非結合型NAD(P)Hとは対照的)が示され、これはTGCT患者検体における代謝活性の低下を反映していた。本研究は、TGCTがヒト精子のバイオエナジェティクスに及ぼす影響について新たな知見を提供するとともに、ヒト精子の代謝活性評価に用いることのできる検証済みプロトコルを提供するものであり、今後の研究および臨床アンドロロジーにとって有用なツールとなりうる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣胚細胞腫瘍(TGCT)患者の精子バイオエナジェティクスと妊孕性温存を扱っており、GCT患者の管理に関連する研究。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40038880",
@@ -729,7 +801,10 @@
     "jif_tier": "moderate",
     "abstract": "Germinoma is the most common intracranial germ cell tumor (IGCT) in children and young adults. Treatment with 24 Gy craniospinal irradiation (CSI) with boost to 40 Gy alone results in excellent survival, irrespective of disease stage. For localized germinoma, recent studies have demonstrated the efficacy of pre-irradiation induction chemotherapy in decreasing the field and dose of radiation therapy (RT) needed for cure. For metastatic germinoma, however, the optimal RT approach when combined with chemotherapy is unclear. Herein, we present our experience treating patients with metastatic germinoma.\n\nWe performed a retrospective, IRB-approved study of patients with metastatic intracranial germinoma diagnosed between 1998 and 2023 at BCH, DFCI, BWH, and MGH. Clinical features, treatment details, and outcomes were collected and analyzed using the Kaplan-Meier method and Fisher's exact test.\n\nTwenty-seven patients with metastatic germinoma were identified. Median age at diagnosis was 15.5 years (range: 6.2-25.9). Six patients received CSI only. Twenty-one patients received induction chemotherapy followed by CSI, with a median CSI dose of 21 Gy (range: 18-36 Gy) and a median involved field (IF) boost to 36 Gy (range: 30-51.6 Gy). Median duration of follow-up was 11.3 years (range: 0.24-24.3). There were no recurrences or deaths within the cohort. Analysis of long-term outcome data revealed a high frequency of endocrinopathies and radiographic CNS vasculopathy.\n\nOur data show that pre-irradiation induction chemotherapy followed by CSI is associated with excellent overall survival in patients with metastatic germinoma. Importantly, our experience suggests that in combination with induction chemotherapy, 21 Gy CSI may be sufficient as a curative dose in this patient population.",
     "abstract_ja": "胚腫は小児・若年成人における最も頻度の高い頭蓋内胚細胞腫瘍(IGCT)である。24Gyの全脳全脊髄照射(CSI)に加え局所ブースト40Gyまでの単独放射線治療により、病期にかかわらず良好な生存が得られる。限局性胚腫については、放射線照射前の導入化学療法が治癒に必要な放射線療法(RT)の照射野・線量を低減させる上で有効であることが近年の研究で示されている。しかし転移性胚腫については、化学療法と併用する場合の最適なRTアプローチは明らかでない。本論文では、転移性胚腫患者の治療経験を報告する。1998年から2023年の間にBCH、DFCI、BWH、MGHの4施設で診断された転移性頭蓋内胚腫患者を対象に、IRB承認済みの後方視的研究を実施した。臨床的特徴、治療内容、転帰をKaplan-Meier法およびFisherの正確検定を用いて収集・解析した。転移性胚腫患者27例が同定された。診断時年齢の中央値は15.5歳(範囲6.2〜25.9歳)であった。6例はCSI単独を受け、21例は導入化学療法後にCSIを受けた(CSI線量中央値21Gy[範囲18〜36Gy]、病変部ブースト線量中央値36Gy[範囲30〜51.6Gy])。経過観察期間中央値は11.3年(範囲0.24〜24.3年)であった。コホート内で再発・死亡は認められなかった。長期転帰データの解析では、内分泌障害および画像上の中枢神経系血管障害の頻度が高いことが明らかとなった。本研究のデータは、放射線照射前の導入化学療法に続くCSIが、転移性胚腫患者において優れた全生存と関連することを示している。重要な点として、著者らの経験は、導入化学療法との併用であれば21GyのCSIがこの患者集団における根治線量として十分である可能性を示唆している。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "転移性頭蓋内胚腫(germinoma)という頭蓋内胚細胞腫瘍の治療法を検討した多施設研究。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40146282",
@@ -759,7 +834,10 @@
     "jif_tier": "unknown",
     "abstract": "To evaluate the diagnostic efficacy of serum microRNAs in predicting pathologic findings of retroperitoneal lymph node dissection (RPLND) in patients with testicular germ cell tumors (TGCT).\n\nPUBMED, SCOPUS, and Cochrane Library were searched in August 2024 to identify eligible studies according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 2020) guidelines.\n\nNine studies comprising 603 patients were selected in this review. The pooled sensitivity, specificity, and diagnostic odds ratio (DOR) of microRNA-371a-3p for predicting viable tumor other than pure teratoma in RPLND specimen were 0.76 (95% CI 0.49-0.90), 0.97 (95% CI 0.81-0.99) and 31.75 (95% CI 9.24-109.10), respectively. The pooled sensitivity for primary and post-chemotherapy RPLND (PC-RPLND), were 0.77 (95% CI 0.47-0.93) and 0.73 (95% CI 0.28-0.95), respectively. The pooled specificity for primary and PC-RPLND were 0.92 (95% CI 0.72-0.98) and 0.99 (95% CI 0.62-1.00), respectively. The pooled DOR for primary and PC-RPLND were 13.86 (95% CI 2.97-64.79) and 64.11 (95% CI 13.09-313.98), respectively. The major limitation is the lack of standardization of miR371 testing.\n\nmiR-371a-3p is a relatively sensitive and highly specific marker for predicting viable tumors in RPLND pathologic findings. The DOR was particularly significant for patients who underwent PC-RPLND. While serum microRNAs may be useful in distinguishing viable germ cell tumors from necrosis, fibrosis, and teratomas, their ability to differentiate teratomas from necrosis is limited. Well-designed prospective studies are essential to enhance our understanding of the predictive performance of microRNAs.",
     "abstract_ja": "精巣胚細胞腫瘍(TGCT)患者における後腹膜リンパ節郭清(RPLND)の病理所見を予測する上での血清マイクロRNAの診断能を評価することを目的とした。2024年8月にPubMed、Scopus、Cochrane Libraryを検索し、システマティックレビューおよびメタ解析のための優先報告項目(PRISMA 2020)ガイドラインに従って該当する研究を同定した。603例を含む9研究が本レビューに選定された。RPLND検体において純粋な奇形腫以外の生存腫瘍を予測するmicroRNA-371a-3pの統合感度・特異度・診断オッズ比(DOR)は、それぞれ0.76(95%CI 0.49〜0.90)、0.97(95%CI 0.81〜0.99)、31.75(95%CI 9.24〜109.10)であった。初回RPLNDおよび化学療法後RPLND(PC-RPLND)の統合感度はそれぞれ0.77(95%CI 0.47〜0.93)、0.73(95%CI 0.28〜0.95)であった。初回RPLNDおよびPC-RPLNDの統合特異度はそれぞれ0.92(95%CI 0.72〜0.98)、0.99(95%CI 0.62〜1.00)であった。初回RPLNDおよびPC-RPLNDの統合DORはそれぞれ13.86(95%CI 2.97〜64.79)、64.11(95%CI 13.09〜313.98)であった。主な限界はmiR371検査の標準化の欠如である。miR-371a-3pは、RPLND病理所見における生存腫瘍を予測する上で比較的感度が高く、特異度も高いマーカーである。DORは特にPC-RPLNDを施行した患者において顕著であった。血清マイクロRNAは生存胚細胞腫瘍を壊死・線維化・奇形腫から鑑別する上で有用と考えられるが、奇形腫と壊死を鑑別する能力は限定的である。マイクロRNAの予測性能に関する理解を深めるためには、十分に計画された前向き研究が不可欠である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣胚細胞腫瘍患者のRPLND病理予測における血清マイクロRNA(miR-371a-3p)の診断能を評価したメタ解析であり、GCTが主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40145449",
@@ -787,7 +865,10 @@
     "jif_tier": "unknown",
     "abstract": "Pulmonary carcinosarcoma is a rare tumor composed of non-small-cell carcinomas and sarcomatous elements, which is poorly differentiated in most cases. We present a case of carcinosarcoma with a well-differentiated carcinomatous component that required a differential diagnosis from tumors derived from teratomas, such as teratocarcinosarcoma. We present a case of a 68-year-old man who visited our hospital for an examination of a 22-mm lung tumor. The patient underwent left S1+2 segmentectomy, and his postoperative course was uneventful. No recurrence was observed in the 21-month postoperative follow-up period. The segmentectomy specimen revealed a yellow-white, well-circumscribed mass. The tumor consisted of well-differentiated squamous and glandular epithelia, and sarcomatous components of immature spindle cells, chondrosarcoma, and rhabdomyosarcoma. The patient was diagnosed with carcinosarcoma. This case included well-differentiated carcinomatous components, and it was necessary to differentiate it from teratocarcinosarcomas. There was no neural component, and without SMARCA4 loss, which is observed in teratocarcinosarcoma, and ruled out teratocarcinosarcoma. Carcinosarcomas are characterized by a biphasic histopathological pattern, making it difficult to accurately diagnose them on biopsy, which only captures a portion of the tumor. The possibility of carcinosarcoma should be considered even when the tumors derived from teratomas are suspected on preoperative biopsy.",
     "abstract_ja": "肺癌肉腫は非小細胞癌成分と肉腫成分から構成される稀な腫瘍であり、多くの症例で低分化である。本論文では、奇形腫由来腫瘍(奇形癌肉腫など)との鑑別を要する、高分化な癌腫成分を伴う癌肉腫の症例を報告する。22mm大の肺腫瘍精査のため当院を受診した68歳男性の症例である。左S1+2区域切除術が施行され、術後経過は問題なかった。術後21か月の経過観察期間中、再発は認められなかった。区域切除検体は黄白色の境界明瞭な腫瘤を呈していた。腫瘍は高分化な扁平上皮・腺上皮成分と、未熟紡錘形細胞・軟骨肉腫・横紋筋肉腫からなる肉腫成分から構成されていた。患者は癌肉腫と診断された。本症例は高分化な癌腫成分を含んでおり、奇形癌肉腫との鑑別が必要であった。神経系成分を認めず、奇形癌肉腫でみられるSMARCA4欠失も認めなかったため、奇形癌肉腫は否定された。癌肉腫は二相性の組織学的パターンを特徴とし、腫瘍の一部のみを採取する生検では正確な診断が困難である。術前生検で奇形腫由来腫瘍が疑われる場合であっても、癌肉腫の可能性を考慮すべきである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "肺癌肉腫と奇形癌肉腫(テラトカルシノサルコーマ)との鑑別を扱った症例報告で、いずれも真の胚細胞腫瘍ではなく鑑別診断上の言及にとどまる。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40144601",
@@ -813,7 +894,10 @@
     "jif_tier": "unknown",
     "abstract": "Pulmonary teratomas are extremely rare extragonadal neoplasms. As the clinical features are non-specific, the diagnosis rests on the radiological findings. The characteristic computed tomography (CT) findings of a teratoma in the lung include heterogenous lobulated mass containing soft tissue, fat, fluid, and/or calcification. However, at times these distinctive findings may be absent and the diagnosis is revealed only after surgery. We report a case of intrapulmonary mature teratoma in a patient where the preoperative diagnosis of aspergilloma was considered based on the imaging findings. We discuss some imaging findings that may help differentiate intra-pulmonary teratoma with aspergilloma. We also present a review of all published cases where teratoma mimicked as some other pulmonary lesions.",
     "abstract_ja": "肺奇形腫は極めて稀な性腺外腫瘍である。臨床所見が非特異的であるため、診断は画像所見に依存する。肺奇形腫の特徴的なCT所見には、軟部組織・脂肪・液体・石灰化のいずれかを含む不均一な分葉状腫瘤がある。しかし、これらの特徴的所見を欠くこともあり、手術後に初めて診断が判明する場合もある。本論文では、画像所見に基づき術前にアスペルギローマと診断されていた、肺内成熟奇形腫の一例を報告する。肺内奇形腫とアスペルギローマの鑑別に有用な画像所見についても考察する。また、奇形腫が他の肺病変を模倣した既報告例のレビューも提示する。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "アスペルギローマに類似した肺奇形腫(成熟奇形腫)の症例報告であり、性腺外GCTとしてサイトの対象範囲に含まれる。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40143987",
@@ -838,7 +922,10 @@
     "jif_tier": "unknown",
     "abstract": "The occurrence of metachronous multiple primary malignancies remains relatively rare; however, its incidence is notably rising. We present the case of a 25-year-old woman who underwent fertility-sparing surgery, followed by chemotherapy for ovarian yolk sac tumor. Three years later, the patient was diagnosed with a large B-cell lymphoma in the cecum. She underwent bowel surgery and received chemotherapy postoperatively. Despite her condition, she was able to conceive spontaneously and had a successful pregnancy after treatment. This report highlights the importance of considering fertility-preserving treatment strategies in young patients and the possibility of spontaneous conception and successful pregnancy even in patients diagnosed with metachronous multiple primary malignancies who underwent extensive surgical procedures and heavily treated with chemotherapy.",
     "abstract_ja": "異時性多発原発悪性腫瘍の発生は比較的稀であるが、その頻度は顕著に増加している。本論文では、卵巣卵黄嚢腫瘍に対し妊孕性温存手術とそれに続く化学療法を受けた25歳女性の症例を報告する。3年後、患者は盲腸のびまん性大細胞型B細胞リンパ腫と診断された。腸管手術を受け、術後化学療法が施行された。このような経過にもかかわらず、患者は自然妊娠に至り、治療後に妊娠を成功させた。本症例は、若年患者における妊孕性温存治療戦略を検討することの重要性、および広範な外科的処置と強力な化学療法を受けた異時性多発原発悪性腫瘍患者においても、自然妊娠および妊娠成功の可能性があることを示すものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣卵黄嚢腫瘍に対する妊孕性温存手術・化学療法とその後の妊娠成功を報告しており、GCTの管理が主要な内容の一つである。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40143878",
@@ -864,7 +951,10 @@
     "jif_tier": "unknown",
     "abstract": "Germ cell tumors (GCTs) are heterogeneous group of neoplasms that arise from primordial germ cells and can occur in various locations, most commonly in the ovaries and testes but can also be found in extra-gonadal sites like retroperitoneum due to developmental errors. These tumors are relatively rare but clinically significant due to their potential for malignancy and association with developmental anomalies.\n\nThis case series presents four rare and unusual cases of germ cell tumors encountered in both paediatric and adult patients, each with distinctive clinical, radiological, and histopathological features. These cases are unique in their clinical presentation and histomorphological findings, reflecting the diverse spectrum of GCTs across different age groups.\n\nThese cases underscore the complexity of diagnosis, the role of radiological and histopathological examinations, and the varied management strategies for rare conditions like gonadoblastoma, dysgerminoma, struma ovarii, and fetus-in-fetu.",
     "abstract_ja": "胚細胞腫瘍(GCT)は原始生殖細胞に由来する多様な腫瘍群であり、卵巣・精巣に発生することが最も多いが、発生学的異常により後腹膜などの性腺外部位にも発生しうる。これらの腫瘍は比較的稀であるが、悪性化の可能性や発生学的異常との関連から臨床的に重要である。本症例集積では、小児・成人患者において認められた、臨床的・画像的・病理組織学的に特徴的な、稀で異例な胚細胞腫瘍4例を提示する。これらの症例は臨床像・組織形態学的所見において独特であり、年齢層を超えたGCTの多様なスペクトラムを反映している。これらの症例は、性腺芽腫・未分化胚細胞腫・卵巣甲状腺腫・胎児内胎児などの稀な病態における診断の複雑さ、画像・病理組織学的検査の役割、そして多様な治療戦略の必要性を浮き彫りにしている。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "性腺芽腫、未分化胚細胞腫、卵巣甲状腺腫など稀な胚細胞腫瘍の症例集積であり、GCTそのものが主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39370035",
@@ -912,7 +1002,10 @@
     "jif_tier": "unknown",
     "abstract": "Low-risk gestational trophoblastic neoplasia are currently receiving monochemotherapy as first-line therapy. In the case of a resistance, a second-line monochemotherapy or polychemotherapy is proposed. As an alternative to these toxic and historic chemotherapy agents, the efficacy of the anti-PD-L1 monoclonal antibody (avelumab) was assessed in the TROPHIMMUN phase II trial Cohort A. Avelumab yielded a 53% cure rate with an acceptable tolerance profile, including normal further pregnancy and delivery. Beyond the blockade of PD-1/PD-L1 interactions, avelumab effect could rely on the induction of antibody-dependent cell-mediated cytotoxicity mediated by FcγR3A-expressing natural killer cells.\n\nThis translational study aimed at testing whether antibody-dependent cell-mediated cytotoxicity is involved in avelumab efficacy on gestational trophoblastic neoplasia and if FcγR3A affinity polymorphism could help predicting the response to avelumab in gestational trophoblastic neoplasia.\n\nThe expression of PD-L1 by the tumor and the phenotype of natural killer cells infiltrating gestational trophoblastic neoplasia were verified by performing transcriptomic and proteomic analyses. Then, JEG-3 choriocarcinoma cells were cocultured with human natural killer cells in the presence and absence of avelumab. The impact of FcγR3A functional polymorphism was assessed on the activation status of natural killer cells and the viability of JEG-3 choriocarcinoma cells. Finally, the data from TROPHIMMUN trial were re-analyzed to determine the impact of the FcγR3A polymorphism of patients on their response to avelumab.\n\nWe confirmed that FcγR3A+ natural killer cells infiltrated PD-L1-expressing gestational trophoblastic neoplasia. In vitro, avelumab-coated JEG-3 choriocarcinoma cells induced natural killer cell activation, which promoted the destruction of JEG-3 cells. Natural killer cell activation was abolished when the Fc portion of avelumab was removed, demonstrating the importance of Fcγ receptor in this process. Using this model of antibody-dependent cell-mediated cytotoxicity, we demonstrated that high-affinity FcγR3A polymorphism on natural killer cells was associated with better in vitro response to avelumab. In line with this result, patients from the TROPHIMMUN trial homozygous for the high-affinity FcγR3A polymorphism had better clinical response to avelumab.\n\nOur work demonstrates that antibody-dependent cell-mediated cytotoxicity contributes to the therapeutic effect of avelumab in gestational trophoblastic neoplasia and that the individual patient response is impacted by the FcγR3A polymorphism. The FcγR3A polymorphism could be used as a biomarker to identify patients diagnosed with monochemoresistant gestational trophoblastic neoplasia who are most likely to respond to avelumab.",
     "abstract_ja": "低リスクの妊娠性絨毛性腫瘍は現在、一次治療として単剤化学療法を受けている。耐性を示す場合は、二次治療として単剤または多剤併用化学療法が提案される。これらの毒性の強い従来の化学療法薬に代わる選択肢として、抗PD-L1モノクローナル抗体(アベルマブ)の有効性がTROPHIMMUN第II相試験コホートAで評価された。アベルマブは53%の治癒率を達成し、その後の正常な妊娠・分娩を含め、許容できる忍容性プロファイルを示した。PD-1/PD-L1相互作用の遮断に加え、アベルマブの効果はFcγR3Aを発現するナチュラルキラー細胞が媒介する抗体依存性細胞介在性細胞傷害の誘導に依存している可能性がある。本トランスレーショナル研究は、抗体依存性細胞介在性細胞傷害が妊娠性絨毛性腫瘍に対するアベルマブの有効性に関与しているか、またFcγR3A親和性多型が妊娠性絨毛性腫瘍におけるアベルマブへの反応性を予測する上で有用かを検証することを目的とした。腫瘍によるPD-L1発現、および妊娠性絨毛性腫瘍に浸潤するナチュラルキラー細胞の表現型を、トランスクリプトーム解析・プロテオーム解析により確認した。次に、JEG-3絨毛癌細胞とヒトナチュラルキラー細胞を、アベルマブの存在下・非存在下で共培養した。FcγR3A機能的多型の影響を、ナチュラルキラー細胞の活性化状態およびJEG-3絨毛癌細胞の生存率に基づき評価した。最後に、TROPHIMMUN試験のデータを再解析し、患者のFcγR3A多型がアベルマブへの反応性に及ぼす影響を検討した。FcγR3A陽性ナチュラルキラー細胞がPD-L1を発現する妊娠性絨毛性腫瘍に浸潤していることを確認した。in vitroでは、アベルマブで被覆されたJEG-3絨毛癌細胞はナチュラルキラー細胞の活性化を誘導し、JEG-3細胞の破壊を促進した。アベルマブのFc部分を除去するとナチュラルキラー細胞の活性化は消失し、この過程におけるFcγ受容体の重要性が示された。この抗体依存性細胞介在性細胞傷害モデルを用いて、ナチュラルキラー細胞における高親和性FcγR3A多型がアベルマブへの良好なin vitro反応性と関連することを示した。この結果と一致して、TROPHIMMUN試験の患者のうち高親和性FcγR3A多型についてホモ接合体であった患者は、アベルマブに対してより良好な臨床反応を示した。本研究は、抗体依存性細胞介在性細胞傷害が妊娠性絨毛性腫瘍に対するアベルマブの治療効果に寄与すること、および個々の患者の反応性がFcγR3A多型の影響を受けることを示している。FcγR3A多型は、単剤化学療法抵抗性の妊娠性絨毛性腫瘍と診断された患者のうち、アベルマブに反応する可能性が最も高い患者を同定するためのバイオマーカーとして用いることができると考えられる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: GTN/絨毛癌はGCTとしての絨毛癌との鑑別・関連疾患として掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39054236",
@@ -937,7 +1030,10 @@
     "jif_tier": "unknown",
     "abstract": "Primary extragonadal choriocarcinoma (PEGCC) in male is rare. It is highly malignant, typically presents with distant metastasis at the time of diagnosis, and responds poorly to treatment. Because of its associated high levels of PD-L1, the PD-1/PD-L1 pathway is a likely therapeutic target. Herein, we report our experience of treating pediatric PEGCC in six boys at a tertiary hospital.\n\nWe analyzed the data of six boys with pathologically confirmed PEGCC between 2009 and 2021. Their clinicodemographic and histopathological characteristics as well as treatments and clinical outcomes were retrieved from their medical charts.\n\nThe patients' median age was 15 (range: 12-17) years. The most common primary tumor site was the mediastinum (67%, 4/6), with one case each in the retroperitoneum (16.7%) and brain (16.7%). Except for the patient with brain PEGCC, all presented with metastasis at the time of diagnosis. The following metastatic sites were observed: the lungs (100%, 5/5), brain (3/5, 60%), liver (3/5, 60%), kidneys (2/5, 40%), and spleen (1/5, 20%). Most patients had dry cough, dyspnea, and hemoptysis at initial presentation, likely due to lung metastasis. Serum human chorionic gonadotropin (HCG) levels were highly elevated in all patients. All patients received platinum-based cytotoxic chemotherapy. The patient with brain choriocarcinoma underwent surgical tumor resection; all others underwent only surgical biopsy. Strong positive PD-L1 immunohistochemical staining was noted for two patients. One patient received the PD-L1 inhibitor pembrolizumab and achieved a good response. Our cohort's 1-year survival rate was 33.3%, with a median survival of 4.34 months. Serum HCG levels remained normal in the two survivors during follow-up visits.\n\nThe poor response to current platinum-based chemotherapy remains a major challenge in the management of pediatric PEGCC. Adding pembrolizumab to a conventional chemotherapy regimen may improve the outcomes in boys with PEGCC.",
     "abstract_ja": "男性における原発性性腺外絨毛癌(PEGCC)は稀である。高悪性度であり、診断時に遠隔転移を有することが多く、治療反応性は不良である。PD-L1の発現が高いことから、PD-1/PD-L1経路が有望な治療標的と考えられる。本論文では、三次医療機関において小児PEGCC男児6例を治療した経験を報告する。2009年から2021年の間に病理学的に確認されたPEGCCを有する男児6例のデータを解析した。臨床・人口統計学的特徴、組織病理学的特徴、治療内容、臨床転帰を診療録から収集した。患者の年齢中央値は15歳(範囲12〜17歳)であった。最も頻度の高い原発部位は縦隔(67%、4/6例)で、後腹膜・脳がそれぞれ1例(16.7%)であった。脳PEGCCの1例を除き、全例が診断時に転移を有していた。転移部位は肺(100%、5/5例)、脳(3/5例、60%)、肝臓(3/5例、60%)、腎臓(2/5例、40%)、脾臓(1/5例、20%)であった。多くの患者は初診時に肺転移によると考えられる乾性咳嗽・呼吸困難・血痰を呈していた。血清ヒト絨毛性ゴナドトロピン(HCG)値は全患者で著明に上昇していた。全患者が白金製剤による細胞傷害性化学療法を受けた。脳絨毛癌の患者は外科的腫瘍切除を受け、他の全例は外科的生検のみを受けた。2例で強い陽性のPD-L1免疫組織化学染色が認められた。1例にPD-L1阻害薬ペムブロリズマブが投与され、良好な反応が得られた。本コホートの1年生存率は33.3%、生存期間中央値は4.34か月であった。生存2例では、経過観察中の血清HCG値は正常に維持された。現行の白金製剤による化学療法への反応不良は、小児PEGCCの管理における主要な課題として残っている。従来の化学療法レジメンへのペムブロリズマブの追加は、PEGCCを有する男児の転帰改善に寄与する可能性がある。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "小児男児の原発性性腺外絨毛癌(胚細胞腫瘍)の症例集積研究であり、対象に明確に合致する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-38409507",
@@ -959,7 +1055,10 @@
     "jif_tier": "unknown",
     "abstract": "Choriocarcinoma of the ovary is a rare, highly malignant tumor showing malignant trophoblastic cells and produces human chorionic gonadotropins. It can be classified as gestational and non-gestational choriocarcinoma. Non-gestational choriocarcinoma is extremely rare. Treatment is Methotrexate-based chemotherapy for the gestational type. This case study is a rare case of ovarian choriocarcinoma managed by surgical resection, followed by methotrexate-based chemotherapy, and aimed to evaluate the ultrasound characteristics of ovarian choriocarcinoma and how to arrive at the diagnosis. In cases with an elevated serum beta-human chorionic gonadotropin (beta hCG), the finding of a highly vascularized adnexal mass on ultrasound evaluation should be underlined as a clue for suspecting choriocarcinoma, particularly if the female was young with no marriage history or history of sexual intercourse and also to be highly considered in married females with history of repeated abortions, molar pregnancy or uterine choriocarcinoma.",
     "abstract_ja": "卵巣絨毛癌は、悪性の絨毛性細胞を示し、ヒト絨毛性ゴナドトロピンを産生する、稀で高悪性度の腫瘍である。妊娠性・非妊娠性絨毛癌に分類される。非妊娠性絨毛癌は極めて稀である。妊娠性の場合の治療はメトトレキサートを基本とする化学療法である。本症例研究は、外科的切除に続きメトトレキサートを基本とした化学療法で管理された稀な卵巣絨毛癌の一例であり、卵巣絨毛癌の超音波所見の特徴とその診断に至る方法を評価することを目的とした。血清βヒト絨毛性ゴナドトロピン(βhCG)高値を伴う症例では、超音波検査で血流の豊富な付属器腫瘤を認めた場合、特に婚姻歴・性交渉歴のない若年女性においては絨毛癌を疑う手がかりとして重視すべきであり、また反復流産・胞状奇胎・子宮絨毛癌の既往がある既婚女性においても強く考慮すべきである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣絨毛癌という胚細胞腫瘍の稀な症例の超音波所見を扱っており、対象に合致する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40156421",
@@ -984,7 +1083,10 @@
     "jif_tier": "unknown",
     "abstract": "Choriocarcinoma is characterized by aggressive growth and metastasis, and integrins and matrix metalloproteinase-9 (MMP-9) play crucial roles in its progression. ATRA (All-trans retinoic acid) has been shown to have anti-tumor effects in various cancers, poses a 15-20% malignancy risk.  This study investigates the effects ATRA on MMP-9 activity and integrin expression in the choriocarcinoma cell line BeWo, and to explore the potential mechanisms underlying these effects.\n\nThis is an experimental study using choriocarcinoma cell line BeWo. Six treatment groups were established to varying concentrations of ATR and one group served as a control without ATRA exposure. The groups were labelled with fluorescence and performed with flowcytometry to determine MMP-9 and integrin expression. Data was presented as mean ± SD and analyzed using one-way ANOVA with post-hoc tests in which p-value <0.05.\n\nATRA at the doses of 100, 200, 400, and 800 μg/ml significantly decreased the MMP-9 activity compared to those in the control group. Furter, ATRA at the doses of 100, 200, 400, and 800 μg/ml significantly increased the integrin expression compared to those in the control group.\n\nATRA might decrease the MMP-9 activity as an invasive factor and increase integrin expression as an adhesive factor in the BeWo choriocarcinoma cell line that might play a role in the metastasis mechanism.",
     "abstract_ja": "絨毛癌は浸潤性の増殖と転移を特徴とし、インテグリンおよびマトリックスメタロプロテアーゼ-9(MMP-9)がその進行に重要な役割を果たす。ATRA(全トランス型レチノイン酸)は、様々な癌において抗腫瘍効果を示すことが知られており、悪性化リスクは15〜20%とされる。本研究は、絨毛癌細胞株BeWoにおけるMMP-9活性およびインテグリン発現に対するATRAの効果を検討し、その背景にある機序を探索することを目的とした。本研究は絨毛癌細胞株BeWoを用いた実験研究である。異なる濃度のATRAを用いた6つの処理群と、ATRA曝露のない対照群1群を設定した。各群を蛍光標識し、フローサイトメトリーによりMMP-9・インテグリン発現を測定した。データは平均値±標準偏差として示し、一元配置分散分析(post hoc検定を含む、p値<0.05)により解析した。100・200・400・800μg/mLのATRAは、対照群と比較してMMP-9活性を有意に低下させた。さらに、100・200・400・800μg/mLのATRAは、対照群と比較してインテグリン発現を有意に増加させた。ATRAは、BeWo絨毛癌細胞株において浸潤因子であるMMP-9活性を低下させる一方、接着因子であるインテグリン発現を増加させる可能性があり、これらは転移機序に関与しうる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: GTN/絨毛癌はGCTとしての絨毛癌との鑑別・関連疾患として掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40152072",
@@ -1023,7 +1125,10 @@
     "jif_tier": "very-high",
     "abstract": "Somatic-type malignancies (SMs) arising in germ cell tumors (GCTs) are aggressive neoplasms resistant to systemic treatment. Most are diagnosed in metastatic sites after chemotherapy; however, they have also been well-documented in primary testicular GCTs. Historically, SMs were thought to originate in components of teratoma that acquire molecular alterations equivalent to those that characterize their true somatic counterparts. However, recent studies have shown that SMs typically lack the hallmark molecular alterations seen in similar somatic tumors. Additionally, clinicopathologic and molecular data suggest that a subset may derive from yolk sac tumor (YST) rather than teratoma. In this study, we evaluated the relationship between conventional histological types of GCTs and SMs by comparing expression of microRNA (miR)-371-373 and genomic methylation profiles. A total of 96 samples (including multiple paired conventional GCT-SM samples from individual tumors) were assessed for miR-371-373 expression by RT-qPCR and genomic DNA methylation using a clinically validated assay. Expression of miR-371-373 was higher in conventional GCTs than in SMs (considered as a single category encompassing all histological subtypes). However, miR-371-373 expression was heterogeneous among SMs, with significantly higher levels in sarcomatoid YST (SYST) and glandular neoplasms than in other SMs. Genomic DNA methylation analysis showed that SMs (considered as a single category) did not form a distinct cluster. Instead, they grouped into multiple clusters that did not show perfect correspondence with histology and often included conventional GCTs. Genome-wide methylation assessment showed a higher abundance of hypermethylated regions in SMs than in conventional GCTs. Analysis of paired conventional GCT and 'somatic-type' components that did not meet size criteria for SMs dissected from individual tumors demonstrated separation according to histology, suggesting that epigenetic processes play a role in the transition from conventional GCT to 'somatic-type' phenotypes. Gene-level and pathway-level analyses identified MAPK/RAS signaling, mitosis/proliferation, differentiation towards neural tissue/neuroectoderm, epithelial-to-mesenchymal transition, and DNA repair as key differentially regulated processes in components with somatic-type histology, suggesting mechanisms of progression from conventional to 'somatic' phenotypes in GCT. These results support the hypothesis that a subset of SMs derive from YST and suggest that some subtypes (such as SYST) may represent 'intermediate' phenotypes. Additionally, analysis of differentially methylated promoter regions in SM identified genes and biologic processess that may underlie 'somatic tranformation' in GCTs. © 2025 The Author(s). The Journal of Pathology published by John Wiley & Sons Ltd on behalf of The Pathological Society of Great Britain and Ireland.",
     "abstract_ja": "胚細胞腫瘍(GCT)に発生する体細胞型悪性腫瘍(SM)は、全身治療に抵抗性を示す侵襲性の高い腫瘍である。多くは化学療法後の転移部位で診断されるが、原発性精巣GCTにおいても十分に報告されている。従来、SMは、真の体細胞性対応腫瘍を特徴づける分子変化と同等の変化を獲得した奇形腫成分に由来すると考えられてきた。しかし近年の研究では、SMは類似の体細胞腫瘍にみられる特徴的な分子変化を典型的には欠くことが示されている。さらに、臨床病理学的・分子的データから、SMの一部は奇形腫ではなく卵黄嚢腫瘍(YST)に由来する可能性が示唆されている。本研究では、GCTの従来型組織学的分類とSMとの関係を、マイクロRNA(miR)-371-373の発現とゲノムメチル化プロファイルを比較することにより評価した。個々の腫瘍から得られた複数の対応する従来型GCT-SM検体を含む合計96検体について、RT-qPCRによるmiR-371-373発現、および臨床的に検証されたアッセイによるゲノムDNAメチル化を評価した。miR-371-373の発現は、SM(全組織学的亜型を含む単一カテゴリーとして扱う)よりも従来型GCTにおいて高かった。しかしSM間でもmiR-371-373発現には不均一性がみられ、肉腫様YST(SYST)および腺性腫瘍では他のSMよりも有意に高値であった。ゲノムDNAメチル化解析では、SM(単一カテゴリーとして扱う)は明確なクラスターを形成しなかった。むしろ、組織型とは必ずしも完全には対応しない複数のクラスターに分かれ、しばしば従来型GCTを含んでいた。ゲノムワイドのメチル化評価では、従来型GCTと比較してSMにおいて高メチル化領域がより多く認められた。個々の腫瘍から解剖された、SMのサイズ基準を満たさない従来型GCTと「体細胞型」成分の対を解析したところ、組織型に応じた分離が認められ、従来型GCTから「体細胞型」表現型への移行にエピジェネティックな過程が関与していることが示唆された。遺伝子レベルおよび経路レベルの解析では、体細胞型組織を有する成分において、MAPK/RASシグナル伝達、有糸分裂/増殖、神経組織・神経外胚葉への分化、上皮間葉転換、DNA修復が重要な差次的制御プロセスとして同定され、GCTにおける従来型から「体細胞型」表現型への進行機序が示唆された。これらの結果は、SMの一部がYSTに由来するという仮説を支持するとともに、一部の亜型(SYSTなど)が「中間」表現型を示す可能性を示唆している。さらに、SMにおける差次的メチル化プロモーター領域の解析により、GCTにおける「体細胞転換」の基盤となりうる遺伝子・生物学的プロセスが同定された。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "胚細胞腫瘍(卵黄嚢腫瘍、奇形腫を含む)由来の体細胞型悪性腫瘍の起源を分子解析で検討しており、対象に明確に合致する。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40151687",
@@ -1049,7 +1154,10 @@
     "jif_tier": "unknown",
     "abstract": "Placental site trophoblastic tumor (PSTT) is a rare neoplasm originating from intermediate trophoblastic cells at the site of placental implantation. Its diagnosis poses significant challenges, particularly in distinguishing it from other gestational trophoblastic tumors, such as epithelioid trophoblastic tumors, choriocarcinoma, and placental site nodules, as well as the benign exaggerated placental site. We present a case of a 29-year-old woman with persistent gestational trophoblastic disease following a complete hydatidiform mole. A detailed review of the differential diagnoses is provided in tables to aid in the diagnostic process, allowing for a clearer comparison and better understanding of these conditions. This report highlights the importance of accurately identifying PSTT by eliminating potential differential diagnoses through careful pathological and clinical evaluation. We aim to assist pathologists and clinicians in recognizing this rare condition to ensure timely and appropriate management.",
     "abstract_ja": "胎盤部トロホブラスト腫瘍(PSTT)は、胎盤着床部の中間型トロホブラスト細胞に由来する稀な腫瘍である。その診断は大きな課題を伴い、特に類上皮性トロホブラスト腫瘍、絨毛癌、胎盤部結節、さらには良性の誇張性胎盤着床部など、他の妊娠性絨毛性腫瘍との鑑別が難しい。本論文では、全胞状奇胎後に持続する妊娠性絨毛性疾患を呈した29歳女性の症例を報告する。鑑別診断の詳細なレビューを表形式で示し、診断過程における理解を助けるとともに、これらの病態のより明確な比較を可能にする。本報告は、慎重な病理学的・臨床的評価を通じて潜在的な鑑別診断を除外することにより、PSTTを正確に同定することの重要性を強調するものである。病理医・臨床医がこの稀な病態を認識し、適時かつ適切な管理を行う一助となることを目指す。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "胎盤部トロホブラスト腫瘍(PSTT)とその鑑別診断が主題であり、絨毛癌は鑑別診断の一つとして言及されるのみでGCT自体が主題ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40147359",
@@ -1075,7 +1183,10 @@
     "jif_tier": "unknown",
     "abstract": "Fetal growth restriction (FGR) is most commonly related to insufficient placental perfusion caused by insufficient trophoblast proliferation and migration. Myosin Ia, encoded by the gene MYO1A, plays an important role in cytoskeleton recombination and cell movement. In this study, we found that downregulation of MYO1A inhibits Hedgehog (Hh) signaling by interacting with SMURF2 in choriocarcinoma cells, leading to FGR.\n\nA total of 59 placenta samples (26 FGR placentas and 33 normal placentas) were collected. The expression of MYO1A in placental tissues of the two groups was detected by qRT-PCR and Western blotting. The proliferation ability of choriocarcinoma cell lines HTR-8/SVneo and JEG3 was tested by CCK8 and colony formation experiments, and the migration ability was tested by transwell and wound healing experiments. Co-immunoprecipitation assay is used to verify the interaction between myosin Ia and SMURF2.\n\nWe found that MYO1A expression was significantly lower in the placentas of pregnant women with FGR than in normal pregnant women. Moreover, the knockdown of MYO1A has been observed to inhibit choriocarcinoma cells proliferation and migration. Downregulation of MYO1A inhibits Hh signaling by reducing SMURF2 expression.\n\nOur findings suggest that FGR is associated with a down-regulation of MYO1A, which may affect the Hh pathway through its interaction with SMURF2. This provides clues for a deeper understanding of the specific mechanisms underlying FGR.",
     "abstract_ja": "胎児発育不全(FGR)は、トロホブラスト細胞の増殖・遊走不全に起因する胎盤灌流不全に最も一般的に関連している。MYO1A遺伝子にコードされるミオシンIaは、細胞骨格の再構成と細胞運動において重要な役割を果たす。本研究では、MYO1Aのダウンレギュレーションが絨毛癌細胞においてSMURF2との相互作用を介してHedgehog(Hh)シグナル伝達を阻害し、FGRを引き起こすことを見出した。胎盤検体計59例(FGR胎盤26例、正常胎盤33例)を収集した。両群の胎盤組織におけるMYO1A発現をqRT-PCRおよびウエスタンブロッティングにより検出した。絨毛癌細胞株HTR-8/SVneoおよびJEG3の増殖能はCCK8法およびコロニー形成試験により、遊走能はトランスウェル試験および創傷治癒試験により評価した。ミオシンIaとSMURF2の相互作用の検証には共免疫沈降法を用いた。MYO1A発現は、FGR妊婦の胎盤において正常妊婦と比較して有意に低下していた。さらに、MYO1Aのノックダウンにより絨毛癌細胞の増殖・遊走が抑制されることが観察された。MYO1Aのダウンレギュレーションは、SMURF2発現を低下させることによりHhシグナル伝達を阻害した。本研究の知見は、FGRがMYO1Aのダウンレギュレーションと関連しており、SMURF2との相互作用を介してHh経路に影響を及ぼしうることを示唆している。これは、FGRの根底にある特異的機序のより深い理解に向けた手がかりを提供するものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "絨毛癌細胞株(HTR-8/SVneo, JEG3)を実験ツールとして用いて胎児発育不全のメカニズムを検討した論文であり、胚細胞腫瘍そのものが主題ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40147061",
@@ -1101,7 +1212,10 @@
     "jif_tier": "unknown",
     "abstract": "The TP53 gene is an important tumor suppressor gene. Through CRISPR/Cas9 technology, we have established a TP53 gene knockout cell line in iPSCs (SIIBRi001-A). This cell line maintains normal stem cell-like morphology, karyotype, expresses markers of pluripotency, and is capable of generating teratomas in immunodeficient mice. Quantitative analysis of pluripotency gene expression remains normal. This cell line can be utilized for studying the mechanisms underlying tumorigenesis.",
     "abstract_ja": "TP53遺伝子は重要な腫瘍抑制遺伝子である。CRISPR/Cas9技術を用いて、iPSCにおけるTP53遺伝子ノックアウト細胞株(SIIBRi001-A)を樹立した。この細胞株は正常な幹細胞様形態・核型を維持し、多能性マーカーを発現し、免疫不全マウスにおいて奇形腫を形成する能力を有する。多能性関連遺伝子発現の定量解析も正常範囲を維持している。この細胞株は、腫瘍形成の基盤となる機序の研究に活用できる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "TP53ノックアウトiPSC株の樹立報告で、奇形腫形成はマウスでの多能性評価アッセイとして言及されているに過ぎずGCTが主題ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39389038",
@@ -1130,7 +1244,10 @@
     "jif_tier": "unknown",
     "abstract": "Prenatally diagnosed large fetal neck mass requires multidisciplinary consultation and evaluation of perinatal treatment options. The decision to perform ex utero intrapartum treatment (EXIT) is based on risk-benefit assessment for both the infant and mother. Though fetal ultrasound and MRI assist with operative planning, a three-dimensional anatomic model offers improved anatomic visualization and prenatal patient counseling.\n\nMultiple surveillance ultrasound exams between gestational weeks 16 and 32 plus fetal MRI at 29/3 weeks were performed for fetal evaluation. A 3-dimensional model was printed (Form 3 and 3L, clear resin, Formlabs) incorporating fetal MRI (Ax SSFSE TE 100 DL and Cor SSFSE Brain DL) and using Mimics Medical and 3-matic Medical software (Materialise). A left fetal multicystic neck mass measuring 2.1 × 1.8 × 1.5 cm was diagnosed at 16/6 weeks gestation in a G8P2416. Fetal MRI performed at 29/3 weeks showed a large exophytic mixed solid-cystic cervicofacial mass, 10.3 × 9.4 × 10.6 cm arising from the left mandible, concerning for a teratoma. Prior to delivery, the model was used to educate and counsel the family regarding the complex clinical situation and the reasoning for delivery via EXIT followed by mass resection. Additionally, the model demonstrated tracheal narrowing and oropharyngeal compression, supporting airway intervention planning. The fetus was delivered at 32/3 weeks via EXIT to intubation using rigid bronchoscopy. Duration of time on placental support was 12 min. On day of life 5, the patient underwent resection of the cervical mass. Pathology revealed an immature teratoma, histologic grade 3 without yolk sac elements, and negative regional lymph nodes.\n\nThree-dimensional fetal modeling facilitates perinatal airway needs assessment, patient counseling, delivery, and postnatal management.",
     "abstract_ja": "出生前に診断された巨大な胎児頸部腫瘤は、多職種による相談と周産期治療選択肢の評価を要する。子宮外分娩時治療(EXIT)の実施可否は、児と母体双方に対するリスク・ベネフィット評価に基づいて決定される。胎児超音波検査・MRIは手術計画に有用であるが、三次元解剖モデルはより優れた解剖学的可視化と出生前の患者カウンセリングを提供する。妊娠16週から32週の間に複数回の経過観察超音波検査、および妊娠29週3日時点で胎児MRIを施行した。胎児MRI(軸位SSFSE TE100 DL、冠状断SSFSE脳DL)を取り込み、Mimics MedicalおよびFormlabs社3-matic Medicalソフトウェアを用いて三次元モデルを作成した(Form 3および3L、クリアレジン)。妊娠16週6日時点で、G8P2416の妊婦において、左胎児多嚢胞性頸部腫瘤(2.1×1.8×1.5cm)が診断された。妊娠29週3日に施行した胎児MRIでは、左下顎骨から発生する10.3×9.4×10.6cmの大きな外方発育性の充実嚢胞性混合腫瘤を認め、奇形腫が疑われた。分娩前、このモデルを用いて家族に複雑な臨床状況とEXITによる分娩・腫瘤切除の理由を説明・カウンセリングした。さらに、このモデルは気管狭窄と中咽頭圧迫を示しており、気道確保計画の立案に有用であった。児は妊娠32週3日にEXITにより硬性気管支鏡下挿管を行いながら娩出された。胎盤循環支持下での時間は12分であった。生後5日目、患児は頸部腫瘤の切除術を受けた。病理所見は組織学的グレード3の未熟奇形腫で、卵黄嚢成分は認めず、所属リンパ節も陰性であった。三次元胎児モデリングは、周産期の気道管理評価、患者カウンセリング、分娩、出生後管理を支援するものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "胎児頸部腫瘤の3次元モデリングに関する症例で、病理学的に未熟奇形腫と診断されており奇形腫が主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39039777",
@@ -1158,7 +1275,10 @@
     "jif_tier": "unknown",
     "abstract": "Germ cell tumors (GCT) are a complex, heterogeneous collection of tumors that may present in either gonadal or extragonadal sites. They consist of a variety of benign and malignant histologies that can occur at several locations throughout the body. An important component of treatment is surgical resection, and while the key components of resection are site specific, the universal goals of GCT resection include the complete resection of tumor without violating the tumor capsule, while preserving function of surrounding organs, minimizing morbidity, and assessing for regional spread.",
     "abstract_ja": "胚細胞腫瘍(GCT)は、性腺または性腺外部位に発生しうる、複雑で多様な腫瘍群である。良性・悪性を含む様々な組織型からなり、体内の複数の部位に発生しうる。治療の重要な要素は外科的切除であり、切除の要点は部位特異的であるものの、GCT切除に共通する目標は、周囲臓器の機能を温存し、罹病率を最小限に抑え、局所進展の評価を行いながら、腫瘍被膜を破らずに完全切除することである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "頭蓋外悪性胚細胞腫瘍に対する外科的切除アプローチを扱う総説でGCTそのものが主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40199595",
@@ -1183,7 +1303,10 @@
     "jif_tier": "unknown",
     "abstract": "[Abstract not available]",
     "abstract_ja": "抄録は公開されていません。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "先天性後頭蓋窩の成熟嚢胞性奇形腫という頭蓋内胚細胞腫瘍(奇形腫)の症例報告である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40196408",
@@ -1206,7 +1329,10 @@
     "jif_tier": "unknown",
     "abstract": "Mediastinal teratomas, though rare in infants, can present with respiratory distress. Imaging plays a crucial role in diagnosis, with CT and PET aiding in characterisation. Surgical resection is the treatment of choice, with chemotherapy reserved for immature components. Early diagnosis is essential to prevent complications and optimise outcomes.",
     "abstract_ja": "縦隔奇形腫は乳児では稀であるが、呼吸窮迫を呈することがある。診断において画像検査が重要な役割を果たし、CTおよびPETが性状評価の一助となる。外科的切除が第一選択の治療であり、化学療法は未熟成分に対して行われる。合併症を予防し転帰を最適化するためには早期診断が不可欠である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "乳児の縦隔胚細胞腫瘍(奇形腫)の症例報告であり、診断・治療について述べている。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40196163",
@@ -1233,7 +1359,10 @@
     "jif_tier": "unknown",
     "abstract": "Advancements in prenatal care have underscored the importance of understanding postnatal outcomes and prognosis in sacrococcygeal teratoma (SCT). However, giant SCTs continue to pose surgical challenges and are associated with increased morbidity and mortality. A clear, objective threshold for defining a \"large\" tumor relative to the patient's size remains undefined. This study aimed to establish objective tumor size indicators for predicting surgical outcomes and prognosis.\n\nData from 97 patients diagnosed with and surgically treated for SCT at Asan Medical Center from 2000 to 2021 was retrospectively reviewed. The tumor volume/birthweight ratio (VWR) and tumor length/height at birth ratio (LHR) were measured. Surgical outcomes and prognosis were evaluated based on these measures, including surgical complications, concomitant surgeries, long-term complications, and recurrence.\n\nAfter surgery, 38 patients experienced short-term complications, 18 required additional operations, 16 developed long-term complications, and 14 experienced tumor recurrence. Both VWR and LHR correlated with short and long-term complications, additional surgeries, and recurrence.\n\nThe small patient population limited the determination of precise cut-off values; however, a significant difference was observed between groups stratified by the most predictive cut-off values. Both objective tumor size indicators were significantly associated with prognosis and surgical outcomes. Notably, both indicators exhibited comparable predictive capabilities without discrepancies.",
     "abstract_ja": "出生前ケアの進歩により、仙尾部奇形腫(SCT)における出生後の転帰・予後を理解することの重要性が強調されている。しかし巨大SCTは依然として外科的に困難な課題であり、罹病率・死亡率の増加と関連する。患者体格に対する「大きな」腫瘍を定義する明確で客観的な閾値はいまだ確立されていない。本研究は、手術転帰・予後を予測するための客観的な腫瘍サイズ指標を確立することを目的とした。2000年から2021年にAsan Medical CenterでSCTと診断され外科的治療を受けた97例のデータを後方視的にレビューした。腫瘍容積/出生体重比(VWR)および腫瘍長/出生時身長比(LHR)を測定した。これらの指標に基づき、手術合併症、併施手術、長期合併症、再発を含む手術転帰・予後を評価した。術後、38例が短期合併症を経験し、18例が追加手術を要し、16例が長期合併症を発症し、14例が腫瘍再発を経験した。VWR・LHRいずれも、短期・長期合併症、追加手術、再発と相関していた。対象患者数が少ないことから精確なカットオフ値の決定には限界があったが、最も予測性能の高いカットオフ値で層別化した群間には有意差が認められた。両方の客観的腫瘍サイズ指標は、予後・手術転帰と有意に関連していた。特筆すべきこととして、両指標は予測能において矛盾のない、同等の性能を示した。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "仙尾部奇形腫の手術予後を検討した研究であり、GCTの一種である奇形腫が主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40196058",
@@ -1259,7 +1388,10 @@
     "jif_tier": "unknown",
     "abstract": "We report a case of transient peripheral retinal vessel whitening following whole-ventricle radiotherapy in a pediatric patient, which resolved spontaneously without signs of ischemia. An 11-year-old girl with a pituitary germinoma underwent chemotherapy and whole-ventricle radiotherapy (23.4 Gy in 13 fractions). At two months post-treatment, ultra-widefield scanning laser ophthalmoscopy revealed bilateral peripheral retinal vessel whitening, raising suspicion of nonperfusion areas. However, optical coherence tomography angiography (OCTA) confirmed preserved retinal blood flow without ischemia. Visual field testing did not reveal any abnormalities. No intervention was performed, and the whitening resolved spontaneously within two months. Unlike typical radiation retinopathy, this represents a reversible, non-ischemic process, which could be attributed to the limited radiation exposure received during whole-ventricle radiotherapy and vascular plasticity in young patients. Given that radiation retinopathy is generally considered uncommon below 45 Gy, this case presents a characteristic retinal vascular change occurring at lower radiation doses and underscores the importance of retinal evaluation even in low-dose irradiation settings. Non-invasive imaging techniques, such as OCTA and ultra-widefield scanning laser ophthalmoscopy, can be valuable for monitoring subtle radiation-induced retinal changes. Further research is needed to refine screening and management strategies for radiation-induced retinal effects.",
     "abstract_ja": "全脳室放射線療法後に生じた一過性の末梢網膜血管白色化の小児例を報告する。本病態は虚血の徴候を伴わず自然消退した。下垂体胚腫を有する11歳女児が、化学療法および全脳室放射線療法(23.4Gy、13分割)を受けた。治療終了2か月後、超広角走査型レーザー検眼鏡検査により両側末梢網膜血管の白色化が認められ、無灌流領域の懸念が生じた。しかし光干渉断層血管撮影(OCTA)により、網膜血流は虚血を伴わず保たれていることが確認された。視野検査に異常は認めなかった。介入は行わず、白色化は2か月以内に自然消退した。典型的な放射線網膜症とは異なり、本病態は可逆的で非虚血性の過程であり、全脳室放射線療法における照射範囲の限定性、および若年患者における血管の可塑性に起因する可能性がある。放射線網膜症は一般に45Gy未満では稀とされることから、本症例はより低線量の放射線照射でも特徴的な網膜血管変化が生じうることを示しており、低線量照射環境においても網膜評価を行うことの重要性を浮き彫りにしている。OCTAや超広角走査型レーザー検眼鏡検査などの非侵襲的画像診断技術は、放射線誘発性の微細な網膜変化をモニタリングする上で有用である。放射線誘発性網膜変化のスクリーニング・管理戦略を洗練させるためには、さらなる研究が必要である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: 胚腫(GCT)患者が対象のため、主題が治療合併症でも掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40191490",
@@ -1285,7 +1417,10 @@
     "jif_tier": "unknown",
     "abstract": "This study aims to optimize patient outcomes and surgical efficacy by integrating laparoscopic and sacral approaches for the excision of presacral teratomas, focusing on Altman type II-III classifications.\n\nA case series was conducted with seven patients diagnosed with sacrococcygeal teratoma (SCT) Altman type II-III. Short- and intermediate-term surgical outcomes were assessed following a combined laparoscopic and sacral approach. The diagnosis was based on clinical examination, elevated serum alpha-fetoprotein levels, and preoperative pelvic magnetic resonance imaging classification. The study evaluates the safety and efficacy of this surgical method, emphasizing feasibility and potential benefits for treating presacral teratomas of varying complexity.\n\nThe age of patients ranged from 8 days to 1.5 years, with a mean age of 115.93 ± 192.3 days. The average duration of surgery was 2.7 h (range: 2-3.15 h), with no intraoperative bleeding. Postoperative recovery was smooth; 71.43% of patients resumed a full diet within 3 days, while the remaining patients did so within 4 days. One patient experienced mild skin erythema, managed conservatively, and two patients had perineal wound separation, resolved with topical treatment. The median hospital stay was 7 days (range: 5-78 days). No postoperative urinary or stool incontinence was observed.\n\nThe combined laparoscopic and posterior sacral approach is a safe and reliable method for the excision of SCTs, potentially improving patient outcomes and reducing postoperative complications.",
     "abstract_ja": "本研究は、仙前奇形腫の切除において腹腔鏡的アプローチと仙骨アプローチを統合することにより、患者転帰と手術効率を最適化することを目的とし、Altman II〜III型分類に焦点を当てた。Altman II〜III型の仙尾部奇形腫(SCT)と診断された7例を対象に症例集積を行った。腹腔鏡と仙骨アプローチを併用した手術後の短期・中期の手術転帰を評価した。診断は臨床所見、血清αフェトプロテイン高値、術前骨盤MRI分類に基づいた。本研究は、様々な複雑度の仙前奇形腫治療における本手術法の安全性・有効性を評価し、実現可能性と潜在的な利点を強調するものである。患者の年齢は生後8日から1.5歳の範囲で、平均年齢は115.93±192.3日であった。平均手術時間は2.7時間(範囲2〜3.15時間)で、術中出血は認めなかった。術後経過は順調で、71.43%の患者が3日以内に完全経口摂取を再開し、残りの患者も4日以内に再開した。1例で軽度の皮膚発赤を認めたが保存的に管理し、2例で会陰創離開を認めたが局所処置で軽快した。入院期間中央値は7日(範囲5〜78日)であった。術後の尿失禁・便失禁は認めなかった。腹腔鏡と後方仙骨アプローチを併用する方法は、SCTの切除において安全かつ信頼性の高い方法であり、患者転帰の改善と術後合併症の低減に寄与しうる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "仙尾部奇形腫(Altman II/III型)切除の腹腔鏡併用術式に関する症例集積研究である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40189027",
@@ -1310,7 +1445,10 @@
     "jif_tier": "unknown",
     "abstract": "This study aimed to investigate the molecular alterations in primitive neuroectodermal tumors (PNET) of the female genital tract.\n\nWe retrospectively analyzed the clinicopathologic and immunohistochemical features of 8 gynecologic PNET cases (3 cervical, 1 vaginal, and 4 ovarian). Fluorescence in situ hybridization and targeted next-generation sequencing (NGS) were performed to identify molecular alterations in these tumors.\n\nThe cohort included 5 FIGO stage I, 1 stage III, and 2 stage IV tumors. Two patients with stage IV disease died at 8 and 12 months. The cervical/vaginal tumors consisted of small round blue cells arranged in sheets, with EWSR1 rearrangements and concurrent diffuse expression of membranous CD99 and nuclear FLI1. The ovarian tumors displayed diverse morphologic features resembling central nervous system (CNS) tumors, including embryonal tumor with multilayered rosettes (case 5), medulloblastoma (case 6), glioblastoma (case 7), and ependymoma (case 8). Three ovarian tumors were associated with teratomas. None of the ovarian tumors exhibited EWSR1 rearrangements or i(12p)/12p overrepresentation. NGS identified an EWSR1::exon11∼FLI1::exon6 fusion in one cervical PNET, with no additional molecular alterations. In contrast, three ovarian tumors lacked common genetic changes seen in CNS tumors but harbored several significant variants, including NTRK2 exon11 c.1019C > T (p.T340 M) (case 6), INPP4B exon23 c.2221G > A (p.V741 M) (case 7), and FANCG exon7 c.882_883insA (p.D295Rfs∗14) with MET 7q31 polysomy (case 8).\n\nOur findings confirm that cervical/vaginal and ovarian PNET represent two distinct tumor types. Ovarian PNET have different pathogenetic pathways from their CNS and testicular counterparts most likely.",
     "abstract_ja": "本研究は、女性生殖器領域の原始神経外胚葉性腫瘍(PNET)における分子変化を明らかにすることを目的とした。婦人科PNET8例(頸部3例、腟1例、卵巣4例)の臨床病理学的・免疫組織化学的特徴を後方視的に解析した。これらの腫瘍における分子変化を同定するため、蛍光in situハイブリダイゼーションおよび標的次世代シークエンシング(NGS)を実施した。対象コホートには、FIGO病期I期5例、III期1例、IV期2例が含まれた。IV期の2例は8か月・12か月時に死亡した。頸部・腟部腫瘍は、EWSR1再構成と、膜性CD99・核性FLI1の同時びまん性発現を伴う、シート状に配列した小型円形青色細胞から構成されていた。卵巣腫瘍は、多層ロゼットを伴う胚芽性腫瘍(症例5)、髄芽腫(症例6)、膠芽腫(症例7)、上衣腫(症例8)など、中枢神経系(CNS)腫瘍に類似する多様な形態学的特徴を示した。卵巣腫瘍のうち3例は奇形腫を伴っていた。卵巣腫瘍にはいずれもEWSR1再構成やi(12p)/12p過剰は認めなかった。NGSにより、頸部PNET1例においてEWSR1エクソン11〜FLI1エクソン6の融合遺伝子が同定されたが、他に分子変化は認めなかった。一方、卵巣腫瘍3例はCNS腫瘍に共通してみられる遺伝子変化を欠いていたが、NTRK2エクソン11 c.1019C>T(p.T340M)(症例6)、INPP4Bエクソン23 c.2221G>A(p.V741M)(症例7)、FANCGエクソン7 c.882_883insA(p.D295Rfs*14)とMET 7q31多染色体性(症例8)を含む、いくつかの重要なバリアントを有していた。本研究の結果は、頸部・腟部PNETと卵巣PNETが2つの異なる腫瘍型であることを示している。卵巣PNETは、その大半において、CNS・精巣PNETとは異なる病因経路を有すると考えられる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: 奇形腫由来の単胚葉性腫瘍として関連文献の掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40028669",
@@ -1342,7 +1480,10 @@
     "jif_tier": "very-high",
     "abstract": "Mucinous ovarian carcinoma (MOC) is a rare histotype of epithelial ovarian cancer. Its origins are obscure: while many mucinous tumours in the ovary are metastases from the gastrointestinal tract, MOC can occur as an ovarian primary; however, the cell of origin is not well established. In this review we summarise the pathological, epidemiological, and molecular evidence for the cellular origins of MOC. We propose a model for the origins of the various tumours of the ovary with mucinous differentiation. We distinguish Müllerian from gastrointestinal-type mucinous differentiation. A small proportion of the latter arise from teratoma and a distinct terminology has been proposed. Other gastrointestinal mucinous tumours are associated with Brenner tumours and arise from their associated benign lesions, Walthard nests. The remaining mucinous tumours develop either through mucinous metaplasia in established Müllerian tumours or with even greater plasticity through gastrointestinal metaplasia of epithelial or mesothelial ovarian inclusions. This model remains to be validated and mechanistically understood and we discuss future research directions. © 2025 The Author(s). The Journal of Pathology published by John Wiley & Sons Ltd on behalf of The Pathological Society of Great Britain and Ireland.",
     "abstract_ja": "卵巣粘液性癌(MOC)は上皮性卵巣癌の稀な組織型である。その起源は不明瞭であり、卵巣の粘液性腫瘍の多くは消化管由来の転移であるが、MOCは卵巣原発として発生することもあり、その起源細胞は十分に確立されていない。本総説では、MOCの細胞起源に関する病理学的・疫学的・分子的エビデンスを概説する。粘液性分化を示す卵巣の様々な腫瘍の起源についてモデルを提案する。ミュラー管型と消化管型の粘液性分化を区別する。後者の一部は奇形腫に由来し、これについては独自の用語が提案されている。その他の消化管型粘液性腫瘍はBrenner腫瘍と関連し、その関連良性病変であるWalthard nestに由来する。残りの粘液性腫瘍は、既存のミュラー管型腫瘍における粘液性化生を通じて、あるいはさらに大きな可塑性を伴う卵巣上皮性・中皮性封入体の消化管型化生を通じて発生する。このモデルは今後検証と機序解明が必要であり、今後の研究の方向性についても論じる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "卵巣粘液性癌の細胞起源に関するレビューで、奇形腫由来は一部言及されるのみでGCTが主題ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39708365",
@@ -1366,7 +1507,10 @@
     "jif_tier": "unknown",
     "abstract": "Mature cystic teratoma (MCT) is the most common germ cell tumor of the ovary, comprising 20% of all ovarian neoplasms. Malignant transformation (MT) is an uncommon complication and occurs in approximately 1-3% of all MCTs. The most common histological type of MT is squamous cell carcinoma. Other rare transformations include - carcinoid tumors, melanoma, adenocarcinoma, and sarcoma. We present one such rare case of bilateral MCT with unilateral MT into mucinous adenocarcinoma of intestinal type.",
     "abstract_ja": "成熟嚢胞性奇形腫(MCT)は卵巣の胚細胞腫瘍の中で最も頻度が高く、卵巣腫瘍全体の20%を占める。悪性転化(MT)は稀な合併症であり、全MCTの約1〜3%に発生する。MTの最も一般的な組織型は扁平上皮癌である。その他の稀な転化としてカルチノイド腫瘍、悪性黒色腫、腺癌、肉腫が挙げられる。本論文では、このような稀な症例の一つとして、腸型粘液性腺癌への片側性悪性転化を伴う両側MCTの症例を報告する。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣成熟嚢胞性奇形腫(胚細胞腫瘍)の悪性転化例についての症例報告である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39680568",
@@ -1402,7 +1546,10 @@
     "jif_tier": "unknown",
     "abstract": "Male infertility is a risk factor for the development of testicular germ cell tumors. In this study, we investigated microRNA profiles in seminal plasma to identify potential noninvasive biomarkers able to discriminate the men at highest risk of developing cancer among the infertile population. We compared the microRNA profiles of individuals affected by testicular germ cell tumors and healthy individuals with normal or impaired spermiograms using high-throughput technology and confirmed the results by single-assay digital PCR. We found that miR-221-3p and miR-222-3p were downregulated and miR-126-3p was upregulated in cancer patients compared to both infertile and fertile men. ROC curve analysis confirmed that miR-126 upregulation is able to identify cancer patients among the infertile male population. In addition, in-depth bioinformatics analysis based on weighted gene co-expression networks showed that the identified miRNAs regulate cellular pathways involved in cancer.",
     "abstract_ja": "男性不妊症は精巣胚細胞腫瘍発生の危険因子である。本研究では、不妊男性集団の中で癌発症リスクが最も高い男性を識別しうる非侵襲的バイオマーカー候補を同定するため、精漿中のマイクロRNAプロファイルを検討した。精巣胚細胞腫瘍を有する個体と、正常または障害のある精液所見を有する健常個体のマイクロRNAプロファイルを、ハイスループット技術を用いて比較し、単一アッセイのデジタルPCRにより結果を確認した。癌患者では、不妊・妊孕性のある男性いずれと比較しても、miR-221-3pおよびmiR-222-3pが低下し、miR-126-3pが上昇していることが判明した。ROC曲線解析により、miR-126の上昇が不妊男性集団の中で癌患者を識別できることが確認された。さらに、重み付け遺伝子共発現ネットワークに基づく詳細なバイオインフォマティクス解析により、同定されたマイクロRNAが癌に関連する細胞経路を制御していることが示された。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣胚細胞腫瘍発症リスクを精漿マイクロRNAで識別する研究である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-39522951",
@@ -1436,7 +1583,10 @@
     "jif_tier": "unknown",
     "abstract": "MicroRNAs (miRNAs) are short, nonprotein-coding RNAs, and their expression is dysregulated in malignant germ cell tumors (GCTs). Here, we investigated the causes and consequences of downregulated miR-99a-5p/miR-100-5p (functionally identical) and miR-125b-5p levels in malignant GCTs regardless of age, site, or subtype. Quantitative RT-PCR was used to assess miR-99a-5p/miR-100-5p, miR-125b-5p, and associated gene expression in malignant GCT tissues/cell lines [seminoma (Sem), yolk sac tumor (YST), embryonal carcinoma (EC)]. Cells were treated with demethylating 5-azacytidine and pyrosequencing was performed. Combination miR-100-5p/miR-125b-5p mimic replenishment was used to treat malignant GCT cells. Global messenger RNA (mRNA) targets of the replenished miRNAs were identified and Metascape used to study pathway effects. We found that expression levels of miR-99a-5p/miR-100-5p and miR-125b-5p, their respective pri-miRNAs, and associated genes from chromosomes 11 and 21 (chr11/chr21) were downregulated and highly correlated in malignant GCT cells. Treatment with 5-azacytidine caused upregulation of these miRNAs, with pyrosequencing revealing hypermethylation of their chr11/chr21 loci, likely contributing to miR-100-5p/miR-125b-5p downregulation. Combination miR-100-5p/miR-125b-5p mimic replenishment resulted in growth inhibition in Sem/YST cells, with miR-100-5p/miR-125b-5p mRNA targets enriched in downregulated genes, which were involved in cell cycle (confirmed by flow cytometry) and signaling pathways. Knockdown of the miR-100-5p/miR-125b-5p target tripartite motif containing 71 (TRIM71kd) recapitulated miR-100-5p/miR-125b-5p replenishment, with growth inhibition and cell cycle disruption of Sem/YST/EC cells. Further, replenishment led to reduced lin-28 homolog A (LIN28A) levels and concomitant increases in let-7 (MIRLET7B) tumor suppressor miRNAs, creating a sustained reversion of cell phenotype. In summary, combination miR-100-5p/miR-125b-5p mimic replenishment or TRIM71kd caused growth inhibition in malignant GCT cells via cell cycle disruption. Further studies are now warranted, including mimic treatment alongside conventional platinum-based chemotherapy.",
     "abstract_ja": "マイクロRNA(miRNA)は短鎖の非蛋白質コードRNAであり、悪性胚細胞腫瘍(GCT)においてその発現が異常をきたしている。本研究では、年齢・部位・組織亜型にかかわらず悪性GCTにおいて発現が低下しているmiR-99a-5p/miR-100-5p(機能的に同一)およびmiR-125b-5pの発現低下の原因と結果について検討した。悪性GCT組織・細胞株[セミノーマ(Sem)、卵黄嚢腫瘍(YST)、胎児性癌(EC)]において、定量的RT-PCRを用いてmiR-99a-5p/miR-100-5p、miR-125b-5p、および関連遺伝子の発現を評価した。細胞を脱メチル化剤5-アザシチジンで処理し、パイロシーケンシングを実施した。miR-100-5p/miR-125b-5pミミックの併用補充を悪性GCT細胞の処理に用いた。補充されたmiRNAの網羅的メッセンジャーRNA(mRNA)標的を同定し、Metascapeを用いて経路への影響を検討した。悪性GCT細胞において、miR-99a-5p/miR-100-5pおよびmiR-125b-5p、それぞれの一次miRNA、ならびに染色体11・21(chr11/chr21)由来の関連遺伝子の発現が低下しており、これらは高い相関を示すことが判明した。5-アザシチジン処理によりこれらのmiRNAの発現が上昇し、パイロシーケンシングによりchr11/chr21座位の高メチル化が明らかとなり、これがmiR-100-5p/miR-125b-5p発現低下に寄与している可能性が示された。miR-100-5p/miR-125b-5pミミックの併用補充は、Sem/YST細胞において増殖抑制をもたらし、miR-100-5p/miR-125b-5pのmRNA標的は、細胞周期(フローサイトメトリーにより確認)およびシグナル伝達経路に関与する下方制御遺伝子群に富んでいた。miR-100-5p/miR-125b-5pの標的であるtripartite motif containing 71(TRIM71)のノックダウン(TRIM71kd)は、miR-100-5p/miR-125b-5p補充と同様の効果を再現し、Sem/YST/EC細胞において増殖抑制と細胞周期破綻をもたらした。さらに、補充によりlin-28 homolog A(LIN28A)レベルが低下するとともに、let-7(MIRLET7B)腫瘍抑制miRNAの増加が伴い、細胞表現型の持続的な逆転が生じた。要約すると、miR-100-5p/miR-125b-5pミミックの併用補充またはTRIM71kdは、細胞周期破綻を介して悪性GCT細胞の増殖抑制を引き起こした。従来の白金製剤併用化学療法と組み合わせたミミック治療を含む、さらなる研究が今後必要である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精上皮腫・卵黄嚢腫瘍・胎児性癌など悪性胚細胞腫瘍におけるmiRNA機能解析の研究である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40214375",
@@ -1461,7 +1611,10 @@
     "jif_tier": "moderate",
     "abstract": "Malignant struma ovarii (SO) is very rare, and the tall cell variant (TCV) of papillary thyroid carcinoma (PTC) arising in SO is even rarer and an exceptionally unique morphological observation. A 39-year-old woman presented with lower abdominal pain and abdominal swelling. Contrast-enhanced computed tomography (CECT) of the whole abdomen revealed a multiloculated cystic mass with peripheral amorphous calcification, which was arising from the right ovary. The patient underwent a total abdominal hysterectomy and bilateral salpingo-oophorectomy. In histology, the ovary was completely replaced by thyroid parenchyma (SO) with areas of papillary thyroid carcinomatous transformation morphologically consistent with tall cell features. On immunohistochemistry (IHC), tumor cells showed expression for TTF-1 and thyroglobulin and were negative for CK19. The patient underwent total thyroidectomy, postoperative radioactive iodine ablation, and levothyroxine suppressive therapy. A three-month follow-up is uneventful. The current case not only provides insight into the diagnosis and morphological aspect of this interestingly rare occurrence but also emphasizes the need for a careful and extensive sampling of ovarian specimens.",
     "abstract_ja": "悪性卵巣甲状腺腫(SO)は極めて稀であり、SOに生じる乳頭癌tall cell型(TCV)はさらに稀で、例外的に特異な形態学的所見である。39歳女性が下腹部痛と腹部膨満を主訴に受診した。全腹部造影CTにより、右卵巣に由来する、辺縁に無定形石灰化を伴う多房性嚢胞性腫瘤が認められた。患者は腹式子宮全摘出術および両側卵管卵巣摘出術を受けた。組織学的に、卵巣は甲状腺実質(SO)により完全に置換されており、tall cell所見に形態学的に合致する乳頭癌様転化の領域を認めた。免疫組織化学検査では、腫瘍細胞はTTF-1およびサイログロブリンの発現を示し、CK19は陰性であった。患者は甲状腺全摘出術、術後放射性ヨード内用療法、レボチロキシン抑制療法を受けた。3か月の経過観察は問題なく経過している。本症例は、この興味深い稀な病態の診断・形態学的側面についての知見を提供するだけでなく、卵巣検体の慎重かつ十分な検索の必要性を強調するものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: 奇形腫由来の単胚葉性腫瘍として関連文献の掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40211726",
@@ -1485,7 +1638,10 @@
     "jif_tier": "very-high",
     "abstract": "Embryonic cancer stem cells (CSCs), referred to as self‑renewable cells, are commonly found in liquid and solid cancers and can also be attributed to tumor onset, resistance, expansion, recurrence and metastasis following treatment. Cancer therapy targeting CSCs using natural bioactive products is an optimal option for inhibiting cancer recurrence, thereby improving prognosis. Several natural compounds and extracts have been used to identify direct or indirect therapy effects that reduce the pathological activities of CSCs. Natural gallic acid (GA) is noted to have anticancer properties for oncogene expression, cycle arrest, apoptosis, angiogenesis, migration and metastasis in various cancers. The present study demonstrated that GA has various anticancer activities in NTERA‑2 and NCCIT human embryonic carcinoma cells. In two types of embryonic CSCs, GA effectively induced cell death via late apoptosis. Furthermore, GA showed the G0/G1 cell cycle arrest activity in embryonic CSCs by inducing the increase of p21, p27 and p53 expression and the decrease of CDK4, cyclin E and cyclin D1 expression. The present study showed that GA inhibited the expression levels of mRNA and protein for stem cell markers, such as SOX2, NANOG and OCT4, in NTERA‑2 and NCCIT cells. The induction of cellular and mitochondrial reactive oxygen species by GA also activated the cellular DNA damage response pathway by raising the phosphorylated‑BRCA1, ATM, Chk1, Chk2 and histone. Finally, GA inhibited CSCs invasion and migration by inhibiting the expression of matrix metalloproteinase by the downregulation of EGFR/JAK2/STAT5 signaling pathway. Thus, it is hypothesized that GA could be a potential inhibitor of cancer emergence by suppressing CSC properties.",
     "abstract_ja": "胚性癌幹細胞(CSC)は自己複製能を有する細胞であり、液性腫瘍・固形腫瘍いずれにも広く認められ、治療後の腫瘍発生・治療抵抗性・進展・再発・転移の一因ともなる。天然生理活性物質を用いてCSCを標的とする癌治療は、癌の再発を抑制し予後を改善するための望ましい選択肢の一つである。CSCの病的活動を軽減する直接的・間接的な治療効果を明らかにするため、複数の天然化合物・抽出物が用いられてきた。天然の没食子酸(GA)は、様々な癌においてがん遺伝子発現、細胞周期停止、アポトーシス、血管新生、遊走、転移に対する抗癌特性を有することが知られている。本研究は、ヒト胎児性癌細胞株NTERA-2およびNCCITにおいて、GAが多様な抗癌活性を示すことを明らかにした。2種類の胚性CSCにおいて、GAは後期アポトーシスを介して効果的に細胞死を誘導した。さらに、GAはp21・p27・p53発現の増加とCDK4・サイクリンE・サイクリンD1発現の低下を誘導することにより、胚性CSCにおいてG0/G1期の細胞周期停止活性を示した。本研究では、GAがNTERA-2・NCCIT細胞において、SOX2・NANOG・OCT4といった幹細胞マーカーのmRNAおよび蛋白発現レベルを抑制することも示された。GAによる細胞内・ミトコンドリア内の活性酸素種誘導は、リン酸化BRCA1・ATM・Chk1・Chk2・ヒストンの上昇を介して細胞内DNA損傷応答経路も活性化した。最後に、GAはEGFR/JAK2/STAT5シグナル伝達経路のダウンレギュレーションを介してマトリックスメタロプロテアーゼの発現を抑制することにより、CSCの浸潤・遊走を抑制した。以上より、GAはCSCの特性を抑制することにより、癌の発生を抑制する潜在的な阻害薬となりうると考えられる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ヒト胎児性癌(embryonal carcinoma)細胞株NTERA-2・NCCITを用いた抗癌作用の研究であり、精巣胚細胞腫瘍サブタイプが対象。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40211607",
@@ -1520,7 +1676,10 @@
     "jif_tier": "moderate",
     "abstract": "[Abstract not available]",
     "abstract_ja": "抄録は公開されていません。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "タイトルに胚細胞腫瘍(germ cell tumor)が明記され、KIT阻害薬治療の症例報告である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40206751",
@@ -1546,7 +1705,10 @@
     "jif_tier": "unknown",
     "abstract": "Intracranial germinoma (GEM) originates from primordial germ cells, more frequently in the pineal and suprasellar regions. Basal ganglia (BG) presentations are rare, especially associated with diabetes insipidus (DI) and without a neurohypophysis lesion or an \"occult germinoma.\" The management of GEM is controversial, although conventional wide-field irradiation with or without chemotherapy is the usual treatment. The potential role of radiosurgery in the management of these lesions remains unclear.\n\nA 15-year-old boy was admitted to the hospital, presenting with DI and right-hand dystonia. Magnetic resonance imaging (MRI) showed a paraventricular BG tumor near the left caudate nucleus. A stereotactic biopsy was performed, confirming the GEM diagnosis. The patient was treated by stereotactic radiosurgery (13 Gy), with remission of all symptoms. Eleven years after the onset of symptoms, the patient remained stable on a regular desmopressin regimen, maintaining normal water intake and urinary volume with improvement in the hand's dystonia. The brain MRI performed annually during the past 10 years after radiosurgery revealed no tumor recurrence or other abnormalities at the neurohypophysis and pituitary stalk.\n\nBG GEM is rare and it may manifest with DI, a possible consequence of peritumoral edema surrounding the hypothalamus. Radiosurgery alone may be an effective treatment option. The occult GEM of the neurohypophysis could also cause DI preceding the radiological onset of GEM. Hence, it is mandatory to follow-up on patients with BG GEM presenting with central DI closely for a long time with periodic clinical and neuroimaging evaluations.",
     "abstract_ja": "頭蓋内胚腫(GEM)は原始生殖細胞に由来し、松果体部・鞍上部により頻繁に発生する。大脳基底核(BG)における発症は稀であり、特に尿崩症(DI)を伴い、下垂体後葉病変や「潜在性胚腫」を伴わない場合はさらに稀である。GEMの管理には議論があるが、化学療法の有無にかかわらず広範照射野の放射線療法が一般的な治療である。これらの病変の管理における定位放射線治療の役割は依然として不明確である。15歳男児が、尿崩症と右手ジストニアを主訴に入院した。MRIでは左尾状核近傍の傍脳室性BG腫瘍が認められた。定位生検が施行され、GEMの診断が確定した。患者は定位放射線治療(13Gy)により治療され、全症状が寛解した。症状発症から11年後、患者はデスモプレシンによる定期的レジメンの下で安定しており、正常な水分摂取・尿量を維持し、手のジストニアも改善していた。放射線治療後の過去10年間毎年施行された脳MRIでは、腫瘍再発や下垂体後葉・下垂体茎における他の異常は認められなかった。BG GEMは稀であり、視床下部周囲の浮腫の結果としてDIを呈することがある。定位放射線治療単独は有効な治療選択肢となりうる。下垂体後葉の潜在性GEMもまた、GEMの放射線学的発症に先行してDIを引き起こす可能性がある。したがって、DIを呈するBG GEM患者に対しては、定期的な臨床・神経画像評価による長期にわたる厳密な経過観察が必須である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "胚腫(germinoma)は頭蓋内胚細胞腫瘍の一種であり、その放射線治療経過を報告した症例報告。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40203876",
@@ -1602,7 +1764,10 @@
     "jif_tier": "unknown",
     "abstract": "The NCCN Guidelines for Testicular Cancer provide recommendations for the multidisciplinary approach to the diagnostic workup, treatment, and follow-up for testicular germ cell tumors, including both seminoma and nonseminoma. These NCCN Guidelines Insights discuss the current treatment recommendations and supporting clinical data for seminomas as presented in Version 2.2025 of the NCCN Guidelines for Testicular Cancer.",
     "abstract_ja": "NCCN精巣癌ガイドラインは、セミノーマ・非セミノーマを含む精巣胚細胞腫瘍の診断精査・治療・経過観察に対する集学的アプローチについて推奨を示すものである。本NCCNガイドラインインサイトは、NCCN精巣癌ガイドラインVersion 2.2025に示された、セミノーマに関する現行の治療推奨とそれを裏付ける臨床データについて論じる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣胚細胞腫瘍(セミノーマ・非セミノーマ)の診療ガイドラインに関するNCCN発表。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40221634",
@@ -1629,7 +1794,10 @@
     "jif_tier": "unknown",
     "abstract": "Large ovarian tumors with a predominantly cystic pattern are uncommon in adolescents. This study evaluates the effectiveness of a decompression technique utilizing a balloon trocar to facilitate ovarian-sparing surgery, while preserving oncologic principles, in adolescent patients presenting with such lesions.\n\nA retrospective review of four consecutive cases managed by a single surgeon over a 7-year period ending December 2024. We describe the surgical technique of this innovative approach, and provide patient-specific clinical data including histopathologic findings and follow-up outcomes.\n\nThe median patient age was 13 years (range, 10-17), and the median maximum tumor diameter was 17 cm (range, 10-28). The balloon trocar technique enabled a tight seal and closed suction drainage of the tumor cyst fluid, facilitating safe decompression and exteriorization of the mass. All surgeries were completed with negligible morbidity. Histological examination revealed three mature cystic teratomas and one serous cystadenoma. At clinical and ultrasonographic follow-up ranging 8 months to 7 years (median, 6,5 years), all patients remained free of recurrence, maintained regular menstrual cycles with normal-sized preserved ovaries, and expressed high satisfaction with their cosmetic outcomes.\n\nLarge predominantly cystic ovarian tumors are generally associated with a favorable prognosis. Preemptive in situ decompression using a balloon trocar represents a simple, effective, and rapid technique to minimize the risk of tumor spillage. This approach facilitates safe ovary-sparing surgery for these large tumors, while also providing excellent cosmetic outcomes.",
     "abstract_ja": "主に嚢胞性の性状を示す巨大卵巣腫瘍は思春期患者では稀である。本研究は、腫瘍学的原則を維持しつつ卵巣温存手術を可能にする、バルーントロッカーを用いた減圧手技の有効性を、このような病変を呈する思春期患者において評価するものである。2024年12月までの7年間に単一術者が管理した連続4症例の後方視的検討を行った。本革新的アプローチの手術手技を記述するとともに、組織病理学的所見や経過観察転帰を含む患者ごとの臨床データを示す。患者年齢の中央値は13歳(範囲10〜17歳)、腫瘍最大径の中央値は17cm(範囲10〜28cm)であった。バルーントロッカー技術により、腫瘍嚢胞液の密閉と閉鎖吸引ドレナージが可能となり、腫瘤の安全な減圧・体外化が促進された。全手術は無視できる程度の合併症で完遂された。組織学的検討では、成熟嚢胞性奇形腫3例と漿液性嚢胞腺腫1例が認められた。8か月から7年間(中央値6.5年)の臨床・超音波経過観察において、全患者が再発なく経過し、正常サイズの卵巣を温存した上で規則的な月経周期を維持し、美容的転帰にも高い満足度を示した。主に嚢胞性の巨大卵巣腫瘍は一般に良好な予後と関連する。バルーントロッカーを用いた予防的なin situ減圧は、腫瘍こぼれのリスクを最小限に抑えるための、簡便かつ効果的で迅速な手技である。本アプローチは、優れた美容的転帰を提供しながら、これらの巨大腫瘍に対する安全な卵巣温存手術を可能にする。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "思春期の巨大嚢胞性卵巣腫瘍(成熟嚢胞性奇形腫を含む)に対する卵巣温存手術手技を扱っており、GCTである奇形腫が主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40220034",
@@ -1658,7 +1826,10 @@
     "jif_tier": "unknown",
     "abstract": "In our search for markers to identify and study ovarian Leydig cells, we utilized immunohistochemical techniques and visualized the results using conventional and confocal microscopy. We successfully employed steroidogenic factor- 1 (SF1), androgen receptor (AR), and class III β-tubulin as markers. SF1 and AR specifically highlighted the intraneural cell precursors of Leydig cells, which were previously identified in a published case of mature cystic teratoma of the ovary, and the adult ovarian Leydig cells. Furthermore, the transient expression of class III β-tubulin could be associated with the intraneural displacement of these precursors, cooperating in their migration to colonize the ovaries of adult women.",
     "abstract_ja": "卵巣ライディッヒ細胞を同定・研究するためのマーカーの探索において、免疫組織化学的手法を用い、通常顕微鏡および共焦点顕微鏡を用いて結果を可視化した。ステロイド産生因子-1(SF1)、アンドロゲン受容体(AR)、クラスIIIβチューブリンをマーカーとして用いることに成功した。SF1とARは、既報告の卵巣成熟嚢胞性奇形腫症例において以前同定されたライディッヒ細胞の神経内前駆細胞と、成人卵巣のライディッヒ細胞を特異的に描出した。さらに、クラスIIIβチューブリンの一過性発現は、これらの前駆細胞の神経内変位と関連しうると考えられ、成人女性の卵巣へ移動し定着する過程に関与している可能性がある。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "卵巣ライディッヒ細胞と神経堤由来前駆細胞のマーカー同定が主題で、成熟嚢胞性奇形腫は既報症例として言及されるのみでGCT自体が研究対象ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40217475",
@@ -1685,7 +1856,10 @@
     "jif_tier": "unknown",
     "abstract": "Neoplasms consisting of two or more germinal layers are classified as teratomas if benign or as teratocarcinomas if malignant. Teratomas are rare tumours occurring in a wide range of species including mammals, birds and reptiles and only a few cases have been reported in ducks with infrequent documentation of immunohistochemical characterisation. Teratocarcinomas occur rarely and, to the authors' knowledge, have not been described or immunohistochemically characterised in ducks, yet. Therefore, the clinical and pathological presentation of a teratoma in a mulard duck and a teratocarcinoma in a muscovy duck are described. In addition to a histologic examination, both tumours were characterised by applying a panel of immunohistochemical markers previously tested on duck tissue.\n\nA mulard duck (Anas platyrhynchos x Cairina moschata) showed a mass in the cranial coelomic cavity histologically diagnosed as tridermic teratoma. A caudal coelomic mass in a Muscovy duck (Cairina moschata) was histologically diagnosed as a teratocarcinoma with metastases to the liver, mesentery and intestinal wall. An extensive immunohistochemical examination for a detailed characterisation and comparison with duck control tissue was performed in both cases, highlighting various components of the neoplastic tissues including lymphocytes, nervous and endodermal components.\n\nTo the authors' knowledge, this is the first report of a teratocarcinoma in a duck with intense immunohistochemical characterisation and comparison with a teratoma in another duck. Immunohistochemistry enables a more profound examination of the histogenetic composition of such neoplasms compared to histology alone. Both neoplasms should be considered as differentials for masses in body cavities of ducks. During these examinations, a large spectrum of antibodies specific for different tissues and cells were tested on duck control tissue which can be of help for immunohistochemical examinations on avian tissues in the future.",
     "abstract_ja": "2つ以上の胚葉から構成される腫瘍は、良性であれば奇形腫、悪性であれば奇形癌と分類される。奇形腫は哺乳類・鳥類・爬虫類を含む幅広い種にみられる稀な腫瘍であるが、アヒルにおける報告は少なく、免疫組織化学的特徴づけの記載も限られている。奇形癌の発生は稀であり、著者らの知る限り、アヒルにおいてこれまで記載・免疫組織化学的特徴づけがなされたことはない。そこで本論文では、雑種アヒルの奇形腫と、ノバリケンの奇形癌の臨床・病理学的所見を記載する。組織学的検査に加え、既にアヒル組織で検証済みの免疫組織化学的マーカーのパネルを用いて両腫瘍を特徴づけた。雑種アヒル(Anas platyrhynchos × Cairina moschata)において、頭側体腔内腫瘤を認め、組織学的に三胚葉性奇形腫と診断された。ノバリケン(Cairina moschata)の尾側体腔内腫瘤は、組織学的に肝臓・腸間膜・腸壁への転移を伴う奇形癌と診断された。両症例において、詳細な特徴づけとアヒル対照組織との比較のため、リンパ球・神経系・内胚葉系成分を含む新生物組織の様々な構成要素を明らかにする広範な免疫組織化学的検査を実施した。著者らの知る限り、本報告はアヒルにおける奇形癌の初めての報告であり、同種の別個体の奇形腫との比較を伴う詳細な免疫組織化学的特徴づけを行ったものである。免疫組織化学は、組織学単独と比較して、このような新生物の組織発生学的構成をより深く検討することを可能にする。両腫瘍は、アヒルの体腔内腫瘤の鑑別診断として考慮すべきである。これらの検討過程で、異なる組織・細胞に特異的な多数の抗体をアヒル対照組織で検証しており、今後の鳥類組織における免疫組織化学的検査に有用となりうる。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "アヒルの奇形腫・奇形癌の免疫組織化学的比較というヒト以外の獣医学的症例報告であり、本サイトが対象とするヒトGCTの臨床文献ではない。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40217218",
@@ -1712,7 +1886,10 @@
     "jif_tier": "unknown",
     "abstract": "Mature cystic teratomas, a common type of benign ovarian tumors, are associated with complications such as twisting and tumor rupture; Rupture can cause severe chemical peritonitis, and no management policy has been established for the intraoperative and postoperative periods. Although peritoneal lavage and reoperation have been reported, the optimal treatment approach remains undetermined.\n\nA 30-year-old woman (gravida 0, para 0, and no sexual history) presented with abdominal pain and fever. Blood examination revealed high levels of WBC 9200/µL and CRP 23.7 mg/dL, although hemoglobin was normal. Serum tumor marker levels were also elevated (CA125 58.5 U/mL, CA19-9 36117 U/mL). Abdominal computed tomography revealed bilateral ovarian tumors (92 and 68 mm in the right and left ovaries, respectively). Each tumor cavity had calcification with increased fatty tissue density. We performed laparoscopic surgery for suspected diagnosis of torsion or rupture of a mature cystic teratoma. Intraoperative findings showed spontaneous rupture followed by chemical peritonitis. Therefore, we performed removal of the bilateral adnexal tumors and peritoneal lavage with 3000 mL warm saline to remove fatty components from the abdominal cavity. We also inserted an intra-abdominal drain to remove the residual fatty components. Amoxicillin was also administered for 10 days after surgery. The inflammatory response decreased, and the fever diminished 1 day postoperatively. The patient was discharged on the 10th postoperative day. However, on the 20th postoperative day, the fever and abdominal pain recurred. WBC 16,700/µL, CRP 26.46 mg/dL and tumor marker (CA125 172.3 U/mL, CA19-9 225.2 U/mL) levels were high. Intravenous administration of Prophylactic antibiotics was initiated. As no bacteria were detected in the blood cultures, we started oral prednisolone (5 mg/day) to treat the recurrent chemical peritonitis-induced inflammation. The blood test results and symptoms gradually improved. The patient was discharged on the 37th postoperative day.\n\nTo date, no systematic review has focused on determining the treatment strategy for bilateral rupture of mature cystic teratomas and severe refractory chemical peritonitis. Treating the patient with laparoscopic surgery at the first occurrence and oral steroids for peritonitis recurrence can help avoid highly invasive treatments, such as reoperation or laparotomy.",
     "abstract_ja": "成熟嚢胞性奇形腫は良性卵巣腫瘍の一般的な型であり、茎捻転や腫瘍破裂といった合併症と関連する。破裂は重症の化学性腹膜炎を引き起こすことがあり、術中・術後の管理方針は確立されていない。腹腔洗浄と再手術の報告はあるものの、最適な治療アプローチは依然として定まっていない。30歳女性(妊娠0回、分娩0回、性交渉歴なし)が腹痛と発熱を主訴に受診した。血液検査ではWBC 9200/µL、CRP 23.7mg/dLと高値であったが、ヘモグロビンは正常であった。血清腫瘍マーカー値も上昇していた(CA125 58.5U/mL、CA19-9 36,117U/mL)。腹部CTにより両側卵巣腫瘍(右92mm、左68mm)を認めた。各腫瘍腔には石灰化と脂肪組織密度の上昇を認めた。成熟嚢胞性奇形腫の茎捻転または破裂を疑い、腹腔鏡下手術を施行した。術中所見では自然破裂に続く化学性腹膜炎を認めた。そこで両側付属器腫瘍の摘出と、腹腔内の脂肪成分を除去するため温生理食塩水3000mLによる腹腔洗浄を実施した。残存脂肪成分を除去するため腹腔内ドレーンも留置した。術後10日間アモキシシリンを投与した。炎症反応は低下し、発熱は術後1日で軽快した。患者は術後10日目に退院した。しかし術後20日目に発熱と腹痛が再燃した。WBC 16,700/µL、CRP 26.46mg/dL、腫瘍マーカー(CA125 172.3U/mL、CA19-9 225.2U/mL)が高値であった。予防的抗菌薬の静脈内投与を開始した。血液培養で細菌は検出されなかったため、再発した化学性腹膜炎による炎症の治療として経口プレドニゾロン(5mg/日)を開始した。血液検査結果・症状は徐々に改善した。患者は術後37日目に退院した。現時点で、両側成熟嚢胞性奇形腫破裂とそれに伴う重症難治性化学性腹膜炎に対する治療方針の確立を目的としたシステマティックレビューは存在しない。初回発症時には腹腔鏡下手術、再発性腹膜炎に対しては経口ステロイドで治療することにより、再手術や開腹手術といった高侵襲な治療を回避できる可能性がある。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "両側成熟嚢胞性奇形腫破裂による化学性腹膜炎の治療戦略を報告する症例報告で、GCT(奇形腫)の管理が主題である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40215271",
@@ -1737,7 +1914,10 @@
     "jif_tier": "unknown",
     "abstract": "Inovaries, germ cells differentiate through several stages of cyst development before entering meiosis. This early differentiation program depends on both the stepwise deployment of specific regulatory mechanisms and on maintenance of germline sexual identity. The study of female sterile mutations that result in formation of germ cell tumors has been invaluable in identifying the mechanisms that control these developmental events. Here, we characterize the germ cell-enriched genenull mutants of which cause the formation of a mixture of agametic ovarioles and cystic germ cell tumors. We performed proteomic analysis and found Bbn forms a complex with Ovarian tumor (Otu), a protein previously linked with regulation of the sex determination factor(), and theortholog of c-Myc binding protein (Mycbp). Loss ofalso results in the formation of cystic germ cell tumors. Bbn promotes the stability of Otu and fosters interactions between Otu and Mycbp. Germ cells fromandmutants display a loss of Sxl expression specifically in the germline. Transgenic rescue experiments show thesterile phenotype is independent fromsplicing defects. Further evidence suggests Otu physically interacts with and promotes Sxl protein stability. This function does not depend on Otu's deubiquitinase activity. Last, we find the human orthologs of Otu and Mycbp, OTUD4, and MYCBP, also physically interact, suggesting conservation of function. Together these data provide insights into how a conserved complex promotes the germline expression of Sxl protein and the differentiation ofgerm cells.",
     "abstract_ja": "卵巣において、生殖細胞は減数分裂に入る前に、複数の段階のシスト発生を経て分化する。この初期分化プログラムは、特定の制御機構の段階的な発現と、生殖系列の性的アイデンティティの維持の両方に依存している。生殖細胞腫瘍の形成をもたらす雌性不稔変異の研究は、これらの発生過程を制御する機構を同定する上で極めて有用であった。本研究では、無配偶子性卵巣小管と嚢胞性生殖細胞腫瘍の混在した形成を引き起こす、生殖細胞に富む遺伝子のヌル変異体を特徴づけた。プロテオーム解析を行い、Bbnが、性決定因子の制御に関連することが以前示されているタンパク質であるOvarian tumor(Otu)と複合体を形成することを見出した。またc-Myc結合蛋白(Mycbp)のオルソログとも複合体を形成する。同遺伝子の欠失もまた、嚢胞性生殖細胞腫瘍の形成をもたらす。BbnはOtuの安定性を促進し、OtuとMycbpの相互作用を助長する。当該変異体の生殖細胞は、生殖系列に特異的なSxl発現の消失を示す。トランスジェニックによるレスキュー実験は、不稔表現型がスプライシング異常とは独立していることを示している。さらなるエビデンスから、OtuはSxlと物理的に相互作用し、Sxl蛋白の安定性を促進することが示唆される。この機能はOtuの脱ユビキチン化酵素活性には依存しない。最後に、OtuおよびMycbpのヒトオルソログであるOTUD4とMYCBPも物理的に相互作用することを見出し、機能の保存が示唆された。これらの知見は、保存された複合体がSxl蛋白の生殖系列における発現、および生殖細胞の分化を促進する機構について新たな知見を提供するものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "excluded",
+    "relevance_note": "ショウジョウバエ卵巣における遺伝子変異と生殖細胞分化(Sxlタンパク質発現)を扱う分子遺伝学研究で、ヒトの臨床的な胚細胞腫瘍とは無関係である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40203524",
@@ -1778,7 +1958,10 @@
     "jif_tier": "unknown",
     "abstract": "Testicular cancer (TC) is the most common malignancy among young males and is associated with cure rates over 95%. However, the long-term health implications of treatments, such as the risk of osteoporosis, remain inadequately understood. This study aims to explore the incidence of osteoporosis in TC survivors and associated risk factors.\n\nThis retrospective study utilized data from the Veterans Affairs (VA) national electronic health record system, identifying 1686 TC patients and 7412 matched noncancer controls. The incidence of osteoporosis was determined through diagnosis codes and osteoporosis medication prescriptions. Statistical analyses, including chi-squared tests, t-tests, and Cox proportional hazards models, were employed to evaluate risk factors.\n\nTC survivors exhibited a significantly elevated hazard of developing osteoporosis (HR =2.18; 95% CI, 1.52-3.14; P < .001), which persisted after adjusting for covariates (HR = 1.58; 95% CI, 0.99-2.51; P = .013). There was no significant TC treatment-specific effect: neither radiation nor chemotherapy were associated with an increased hazard of osteoporosis in multivariable analysis.\n\nTC survivors face a higher hazard of osteoporosis, with age at diagnosis being a significant factor. These findings highlight the need for regular bone health monitoring in TC survivors. Future prospective studies are necessary to validate these results and better understand the mechanisms linking TC, hypogonadism, and osteoporosis risk.",
     "abstract_ja": "精巣癌(TC)は若年男性における最も頻度の高い悪性腫瘍であり、95%を超える治癒率と関連する。しかし、骨粗鬆症リスクなど治療の長期的健康影響については十分に理解されていない。本研究は、TC生存者における骨粗鬆症の発生率とその関連危険因子を明らかにすることを目的とした。本後方視的研究は、退役軍人保健局(VA)の全国電子健康記録システムのデータを用い、TC患者1686例と、非癌対照7412例(マッチング済み)を同定した。骨粗鬆症の発生は診断コードおよび骨粗鬆症治療薬の処方に基づき判定した。カイ二乗検定、t検定、Cox比例ハザードモデルを含む統計解析により危険因子を評価した。TC生存者は骨粗鬆症発症のハザードが有意に高かった(HR=2.18、95%CI 1.52〜3.14、p<0.001)。この関連は共変量調整後も持続した(HR=1.58、95%CI 0.99〜2.51、p=0.013)。TC治療内容に特異的な有意な効果は認められず、多変量解析において放射線療法・化学療法いずれも骨粗鬆症ハザードの上昇とは関連しなかった。TC生存者は骨粗鬆症のハザードが高く、診断時年齢が重要な因子であった。これらの知見は、TC生存者における定期的な骨密度モニタリングの必要性を強調するものである。TC・性腺機能低下症・骨粗鬆症リスクを結びつける機序をより深く理解し、これらの結果を検証するためには、今後の前向き研究が必要である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣癌(胚細胞腫瘍)生存者における骨粗鬆症リスクを長期追跡した研究であり、GCTの治療後管理に関するテーマである。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40203124",
@@ -1821,7 +2004,10 @@
     "jif_tier": "unknown",
     "abstract": "Recent clinical trials on primary retroperitoneal lymph node dissection (RPLND) for testicular seminoma highlight inaccuracies in conventional imaging for lymph node staging. Limited data exist on the accuracy of positron emission tomography (PET) in patients with chemotherapy-naïve testicular seminoma. We evaluated the accuracy of 18F-fluorodeoxyglucose (FDG) PET for the detection of metastatic disease within the SEMS (Surgery in Early Metastatic Seminoma) trial.\n\nThe SEMS trial is a phase 2 prospective study evaluating efficacy of primary RPLND in patients with testicular seminoma with limited retroperitoneal lymphadenopathy. 18F-FDG PET scanning was performed as a radiographic correlate in addition to standard axial imaging before surgery. PET findings were based on local interpretation, and the results were compared with surgical pathology.\n\nOf the 55 patients enrolled in the trial, 26 (47%) underwent PET. Twenty (77%) scans were reported as positive with lymph nodes in the retroperitoneum, pelvis, or inguinal region. Of the positive PET scans, 18 had pathologically positive lymph nodes (positive predictive value 90%) at the time of RPLND. Six PET scans were negative with 5 of these patients having surgically confirmed pN0 disease (negative predictive value 83%). Sensitivity of PET for detecting lymph node metastatic seminoma was 95% and specificity was 71%. The average standardized uptake values of the PET-positive lymph nodes and pathologically positive lymph nodes were 7.0 (range 2.6-18.8) and 6.8 (range 1.53-18.8), respectively. No PET-positive lesions outside of the retroperitoneum or pelvis were found to represent metastatic seminoma on clinical follow-up.\n\nIn patients with testicular seminoma, 18F-FDG PET findings correlated with both pathologically positive and negative retroperitoneal lymph nodes in most cases. Further research is needed to determine if PET can improve on the already good predictive performance of conventional imaging and clinical expertise.",
     "abstract_ja": "精巣セミノーマに対する原発性後腹膜リンパ節郭清(RPLND)に関する近年の臨床試験は、リンパ節病期診断における従来の画像検査の不正確さを浮き彫りにしている。化学療法未施行の精巣セミノーマ患者における陽電子放射断層撮影(PET)の精度に関するデータは限られている。本研究では、SEMS(Surgery in Early Metastatic Seminoma)試験内で、転移性病変検出における18F-フルオロデオキシグルコース(FDG)PETの精度を評価した。SEMS試験は、限局した後腹膜リンパ節腫大を有する精巣セミノーマ患者における原発性RPLNDの有効性を評価する第2相前向き試験である。18F-FDG PETスキャンは、術前の標準的な軸位画像検査に加え、放射線学的対照として施行された。PET所見は施設内判定に基づき、外科的病理所見と比較した。試験に登録された55例のうち、26例(47%)がPETを施行された。20例(77%)のスキャンで、後腹膜・骨盤・鼠径部にリンパ節陽性所見が報告された。PET陽性所見のうち18例は、RPLND時点で病理学的にもリンパ節陽性であった(陽性的中率90%)。PET陰性の6例のうち5例は外科的にpN0であることが確認された(陰性的中率83%)。セミノーマのリンパ節転移検出におけるPETの感度は95%、特異度は71%であった。PET陽性リンパ節および病理学的陽性リンパ節の標準化取り込み値の平均は、それぞれ7.0(範囲2.6〜18.8)、6.8(範囲1.53〜18.8)であった。後腹膜・骨盤以外に、臨床経過観察で転移性セミノーマを示すPET陽性病変は認められなかった。精巣セミノーマ患者において、18F-FDG PET所見はほとんどの症例で病理学的な後腹膜リンパ節の陽性・陰性所見と相関していた。PETが従来の画像検査・臨床的判断が既に有するすぐれた予測性能をさらに向上させうるかを明らかにするためには、さらなる研究が必要である。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣セミノーマ患者を対象としたFDG PETの診断精度を検討したGCT関連の臨床試験報告である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40202333",
@@ -1855,7 +2041,10 @@
     "jif_tier": "unknown",
     "abstract": "Gynecologic yolk sac tumors (YSTs) are more commonly encountered in children and young women as pure or mixed germ cell tumors and are rarely observed in older women. YSTs in older women are sometimes accompanied by a Müllerian-type carcinoma component, indicating a likely somatic rather than germ-cell origin. Studies of YSTs of germ cell and somatic types in this age group are limited. Analysis of additional pure and mixed tumors with YST differentiation could elucidate differences between these tumor subtypes and the relationship between components in mixed tumors. Clinicopathologic features of 32 malignant neoplasms with YST differentiation in women aged 40+ were analyzed. There were 11 pure YSTs, 7 mixed germ cell tumors, and 14 YSTs with a malignant non-germ cell tumor component (somatically derived yolk sac tumor [SDYST]). Targeted next-generation sequencing (NGS) was performed in 4/11 pure YSTs, 0/7 mixed germ cell tumors, and 4/14 SDYSTs. For the pure YSTs, alterations in DICER1 (1/4), PIK3R1 and PTPRT (1/4), PMS1 (1/4) , and TP53 (2/4) were identified. One other pure YST had alterations in PTEN , ARID1A , ARID1B , FGFR2 , and CTNNB1 (alterations common in endometrioid carcinoma). SDYSTs demonstrated shared alterations between both components including TP53 , KRAS , FBXW7, and KMT2C , suggesting a common origin. The findings in the pure YSTs in older women suggest that for some, the origin could be germ cell as they harbor similar alterations as those described in pure YSTs in young women, whereas in other \"pure\" YSTs, the molecular profile aligns with previously described SDYSTs, which suggests a SDYST with an unsampled Müllerian carcinoma component rather than a germ cell origin. In SDYSTs, shared alterations are consistent with prior studies and suggest a somatic rather than germ-cell origin.",
     "abstract_ja": "婦人科卵黄嚢腫瘍(YST)は、純型または混合型の胚細胞腫瘍として小児・若年女性においてより一般的に認められ、高齢女性では稀である。高齢女性のYSTは、しばしばミュラー管型の癌成分を伴い、生殖細胞由来というよりも体細胞由来である可能性が示唆される。この年齢層における生殖細胞型・体細胞型YSTの研究は限られている。YST分化を伴う純型・混合型腫瘍のさらなる解析は、これらの腫瘍亜型間の違いや、混合腫瘍における成分間の関係を明らかにしうる。40歳以上の女性におけるYST分化を伴う悪性腫瘍32例の臨床病理学的特徴を解析した。純型YST11例、混合型胚細胞腫瘍7例、悪性非生殖細胞腫瘍成分を伴うYST14例(体細胞由来卵黄嚢腫瘍[SDYST])が含まれた。純型YST11例中4例、混合型胚細胞腫瘍7例中0例、SDYST14例中4例で標的次世代シークエンシング(NGS)を実施した。純型YSTでは、DICER1(4例中1例)、PIK3R1・PTPRT(4例中1例)、PMS1(4例中1例)、TP53(4例中2例)の変異が同定された。他の1例の純型YSTでは、PTEN、ARID1A、ARID1B、FGFR2、CTNNB1(類内膜癌に一般的な変異)の変異を認めた。SDYSTでは、両成分間で共通するTP53、KRAS、FBXW7、KMT2Cの変異が認められ、共通の起源が示唆された。高齢女性の純型YSTにおける所見から、一部については若年女性の純型YSTで記載されているものと類似の変異を有することから生殖細胞起源である可能性が示唆される一方、他の「純型」YSTでは分子プロファイルが既報告のSDYSTと一致しており、生殖細胞起源というよりも未サンプリングのミュラー管型癌成分を伴うSDYSTである可能性が示唆される。SDYSTにおける共通変異は既報告の研究と一致しており、生殖細胞起源ではなく体細胞起源を示唆している。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "卵黄嚢腫瘍(胚細胞腫瘍の一種)の分化を示す悪性腫瘍の臨床病理学的・分子的特徴を解析した論文である。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40200493",
@@ -1880,7 +2069,10 @@
     "jif_tier": "unknown",
     "abstract": "Testicular cancer (TC) is a relatively rare but highly treatable malignancy that originates in the germ cells of the testicles. It primarily affects young men, particularly those between the ages of 15 and 35, though it can occur at any age. The most common histological subtypes are seminoma and non-seminomatous germ cell tumors (NSGCTs), the latter including embryonal carcinoma, yolk sac tumor, choriocarcinoma, and teratoma. The length of hospital stay (LOS) following surgery is a crucial indicator of clinical outcomes and resource utilization. This study examines the length of stay (LOS) after testicles cancer surgery at the Antonio Cardarelli Hospital in Naples, Italy, using a statistical learning technique. It builds on previous studies on the causes of extended hospital stays in surgical oncology. The main findings provide a chance to enhance patient care and quality by illustrating how the clinical and organizational aspects of the surgical technique impact hospital stays.",
     "abstract_ja": "精巣癌(TC)は比較的稀であるが高い治癒可能性を有する悪性腫瘍であり、精巣の生殖細胞に由来する。主に若年男性、特に15〜35歳に多くみられるが、どの年齢でも発生しうる。最も頻度の高い組織亜型はセミノーマおよび非セミノーマ性胚細胞腫瘍(NSGCT)であり、後者には胎児性癌、卵黄嚢腫瘍、絨毛癌、奇形腫が含まれる。手術後の入院期間(LOS)は、臨床転帰と資源利用を示す重要な指標である。本研究は、統計学的機械学習手法を用いて、イタリア・ナポリのAntonio Cardarelli病院における精巣癌手術後の入院期間を検討するものである。外科腫瘍学における入院期間延長の原因に関する先行研究を踏まえたものである。主な知見は、手術手技の臨床的・組織的側面が入院期間にどのように影響するかを示すことにより、患者ケアと医療の質を向上させる機会を提供するものである。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "精巣癌(セミノーマ・非セミノーマ性胚細胞腫瘍を含む)手術後の入院期間に関する統計学的解析であり、GCTを主題としている。",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   },
   {
     "id": "pmid-40199596",
@@ -1905,6 +2097,9 @@
     "jif_tier": "unknown",
     "abstract": "Malignant struma ovarii (MSO) is a rare ovarian tumour. The co-occurrence of MSO and thyroid carcinoma is even rarer. There is no established treatment for these patients. We report a postmenopausal woman in her 60s who presented with left hip pain, increased urinary frequency and fatigue. Imaging showed a left adnexal cystic lesion 8.8 cm in diameter and an incidental 12×8 mm right ovarian cyst. She underwent total laparoscopic hysterectomy and bilateral salpingo-oophorectomy, and findings were significant for bilateral stage IA MSO. The metastatic workup showed concurrent papillary thyroid carcinoma. She underwent total thyroidectomy with neck dissection and radioactive iodine (RAI) adjuvant therapy. While thyroid carcinoma management is more standardised, a literature review yielded a wide range of MSO treatments. Recent literature favours conservative management with unilateral salpingo-oophorectomy. RAI therapy in these cases is controversial. We will discuss the literature findings on the optimal treatment of MSO with concurrent thyroid cancer.",
     "abstract_ja": "悪性卵巣甲状腺腫(MSO)は稀な卵巣腫瘍である。MSOと甲状腺癌の合併はさらに稀である。これらの患者に対する確立された治療法は存在しない。左股関節痛、頻尿、倦怠感を主訴に受診した60歳代の閉経後女性の症例を報告する。画像検査では、直径8.8cmの左付属器嚢胞性病変と、偶発的に発見された右卵巣嚢胞(12×8mm)を認めた。患者は腹腔鏡下子宮全摘出術および両側卵管卵巣摘出術を受け、両側stage IAのMSOであることが判明した。転移精査により、併存する乳頭癌が判明した。患者は頸部郭清を伴う甲状腺全摘出術、および放射性ヨード(RAI)補助療法を受けた。甲状腺癌の管理はより標準化されているが、文献レビューではMSOの治療は多岐にわたっていた。近年の文献では、片側卵管卵巣摘出術による保存的管理が支持される傾向にある。これらの症例におけるRAI療法については議論がある。本論文では、甲状腺癌を合併したMSOの最適な治療に関する文献所見について考察する。",
-    "added_at": "2026-09-22"
+    "added_at": "2026-09-22",
+    "relevance_status": "kept",
+    "relevance_note": "ユーザー方針: 奇形腫由来の単胚葉性腫瘍として関連文献の掲載を継続",
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
   }
 ]
