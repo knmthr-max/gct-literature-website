@@ -17,8 +17,8 @@
   };
 
   const JIF_LABELS = {
-    ja: { low: "IF: 低(<1)", moderate: "IF: 中(1-3)", high: "IF: 高(3-5)", "very-high": "IF: 非常に高(5+)" },
-    en: { low: "IF: low (<1)", moderate: "IF: moderate (1-3)", high: "IF: high (3-5)", "very-high": "IF: very-high (5+)" },
+    ja: { low: "IF: 低(<1)", moderate: "IF: 中(1-3)", high: "IF: 高(3-5)", "very-high": "IF: 非常に高(5+)", unknown: "IF: 未確認" },
+    en: { low: "IF: low (<1)", moderate: "IF: moderate (1-3)", high: "IF: high (3-5)", "very-high": "IF: very-high (5+)", unknown: "IF: not yet verified" },
   };
 
   const state = {
