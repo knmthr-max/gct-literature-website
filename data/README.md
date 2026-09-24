@@ -58,11 +58,30 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `abstract` | – | 英語の全文抄録。サイトでは折りたたみ表示される |
 | `abstract_ja` | – | 日本語訳の全文抄録。収載文献は基本的に英語が原文であるため、日本語ページでは訳文(「抄録」)と英語原文(「抄録原文(英語)」)を**両方**、別々の折りたたみで常に参照できる。訳が無い場合は「抄録(英語)」に原文のみ表示する |
 | `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`/`unknown`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない。`unknown` は「JCR参照データに該当誌・該当年のデータが無く判定できない」ことを明示する値で、フィールド自体を省略する(未整備で表示されないのか、判定不能なのか区別できない)よりも意図的にこちらを使う。`programs/literature_pipeline/README.md` の `scripts/match_jif.py` で自動生成する |
+| `relevance_status` | – | GCT(胚細胞腫瘍)関連性レビューの結果。`kept`(掲載継続)/`excluded`(除外)/`needs_review`(要確認)のいずれか。**フィールド未設定は`kept`と同じ扱い**(サイトは`excluded`のときだけ非表示にする)。`scripts/review_relevance.py` で生成・反映する。採否は後からdecisions TSVを作り直してAI判定・人間の確認を経ればいつでも修正できる |
+| `relevance_note` | – | `relevance_status` の判断理由(AIの判定理由、または人間が上書きした場合はそのメモ) |
+| `relevance_reviewed_at` | – | 関連性レビューを反映した日時(ISO 8601) |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
 
 `summary_en`/`summary_ja` がどちらも空の場合、サイトには「要約: 準備中」(英語ページでは "Summary: not yet available")と表示され、要約が存在しないのではなく未整備であることが分かるようになっています。
 
 `jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`gct-literature-data/programs/literature_pipeline/pipeline.py` の `jif_tier()` と同じ定義。
+
+## GCT関連性レビュー(掲載文献の採否を後から修正する)
+
+文献は今後も継続的に追加していく方針のため、掲載後に「実はGCTとあまり関連が無い」と分かった文献を
+後から除外(またはいったん除外したものを復活)できるよう、`scripts/review_relevance.py` に二段階の
+AIレビューフローを用意しています(詳細な使い方はスクリプト冒頭のdocstring参照):
+
+1. `propose --claude` — `relevance_status` 未設定(＝未レビュー)の文献をClaude Code CLIでバッチ判定し、
+   非公開リポジトリ側に一覧レビューHTMLと `decisions_<run_id>.tsv` を出力する(AIは提案のみ)
+2. 人間が `decisions_<run_id>.tsv` の `decision` 列(`keep`/`exclude`/`needs_review`)を確認・修正する
+3. `apply` — 承認済みdecisionsを `papers.json` の `relevance_status`/`relevance_note` に反映する
+
+`relevance_status` が `excluded` の文献だけがサイトの一覧から除外されます。それ以外(未設定/`kept`/
+`needs_review`)はすべて表示されるため、レビューが済むまで文献が勝手に消えることはありません。採否は
+`decision` 列を書き換えて `apply` を再実行すればいつでも修正できます。新規追加分だけを対象にしたい
+場合は `propose` をそのまま実行すれば(`--all` を付けない限り)未レビューの文献だけが対象になります。
 
 ## サイト情報を変える
 
