@@ -99,6 +99,12 @@ body {
   flex: 1;
 }
 
+.filters-label {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
 .tag-filter {
   border: 1px solid var(--color-border);
   background: var(--color-surface);

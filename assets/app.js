@@ -21,14 +21,16 @@
     en: { low: "IF: low (<1)", moderate: "IF: moderate (1-3)", high: "IF: high (3-5)", "very-high": "IF: very-high (5+)", unknown: "IF: not yet verified" },
   };
 
-  // ソート用の階層順位。tier未設定(旧データ)もunknownと同じ扱いにする
+  // ソート・絞り込み用の階層順位。tier未設定(旧データ)もunknownと同じ扱いにする
   const JIF_RANK = { "very-high": 4, high: 3, moderate: 2, low: 1, unknown: 0 };
-  const jifRank = (p) => JIF_RANK[p.jif_tier] ?? 0;
+  const jifTierOf = (p) => p.jif_tier || "unknown";
+  const jifRank = (p) => JIF_RANK[jifTierOf(p)] ?? 0;
 
   const state = {
     papers: [],
     query: "",
     activeTags: new Set(),
+    activeJifTiers: new Set(),
     sort: "year-desc",
   };
 
@@ -93,12 +95,40 @@
     }
   }
 
+  function collectJifTiers(papers) {
+    const present = new Set(papers.map(jifTierOf));
+    return Object.keys(JIF_RANK)
+      .sort((a, b) => JIF_RANK[b] - JIF_RANK[a])
+      .filter((tier) => present.has(tier));
+  }
+
+  function renderJifFilters() {
+    const box = $("jif-filters");
+    if (!box) return;
+    box.innerHTML = "";
+    for (const tier of collectJifTiers(state.papers)) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "tag-filter" + (state.activeJifTiers.has(tier) ? " active" : "");
+      btn.textContent = (JIF_LABELS[LANG] || {})[tier] || tier;
+      btn.addEventListener("click", () => {
+        state.activeJifTiers.has(tier) ? state.activeJifTiers.delete(tier) : state.activeJifTiers.add(tier);
+        renderJifFilters();
+        renderList();
+      });
+      box.appendChild(btn);
+    }
+  }
+
   function matches(paper) {
     if (state.activeTags.size > 0) {
       const tags = paper.tags || [];
       for (const t of state.activeTags) {
         if (!tags.includes(t)) return false;
       }
+    }
+    if (state.activeJifTiers.size > 0 && !state.activeJifTiers.has(jifTierOf(paper))) {
+      return false;
     }
     if (!state.query) return true;
     const q = state.query.toLowerCase();
@@ -209,6 +239,7 @@
       applySiteInfo(site);
       state.papers = Array.isArray(papers) ? papers : [];
       renderTagFilters();
+      renderJifFilters();
       renderList();
     } catch (err) {
       console.error(err);
