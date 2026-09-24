@@ -237,7 +237,10 @@
         loadJson("data/papers.json"),
       ]);
       applySiteInfo(site);
-      state.papers = Array.isArray(papers) ? papers : [];
+      // relevance_status: "excluded" の文献のみ一覧から除外する。未設定/"kept"/"needs_review"は
+      // すべて表示する(人間が明示的に除外と判断するまでは隠さない方針)
+      const all = Array.isArray(papers) ? papers : [];
+      state.papers = all.filter((p) => p.relevance_status !== "excluded");
       renderTagFilters();
       renderJifFilters();
       renderList();
