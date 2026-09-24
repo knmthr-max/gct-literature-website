@@ -41,6 +41,30 @@ never overwritten. The generated reference retains only the fields defined in
 `docs/data_dictionary/jif_reference_v1.md`; the raw CSV remains the source
 record and is not modified.
 
+## papers.json への反映(`scripts/match_jif.py`)
+
+現在公開中のサイトは `step1`/`step2` のTSVマスター方式ではなく、`data/papers.json`
+を直接編集する軽量な方式で運用している。JIFの反映もそれに合わせ、`JIFMatcher`と
+`jif_tier()` だけを再利用する `scripts/match_jif.py` を使う:
+
+```bash
+python3 scripts/match_jif.py \
+  --reference ../gct-literature-data/data/reference/jif/jcr_jif_reference_2025_v2026.09.24.tsv \
+  --audit-output ../gct-literature-data/data/processed/jif_match_audit/2026-09-24.csv
+```
+
+複数の年次参照TSVがある場合は `--reference` を繰り返し指定する。`papers.json` の
+各エントリを `journal`(PubMed略称)+`year` で参照TSVに照合し(ISSNは
+`papers.json` に保持していないため誌名フォールバックのみで照合される)、完全一致
+(`jif_match_status == exact`)の場合のみ実測JIFから `jif_tier` を計算して書き戻す。
+一致しない場合(誌名が参照に無い/対象年のデータが無い等)は `jif_tier` を
+`"unknown"` にし、値を一切推測しない。実測JIFと不一致理由の詳細は非公開リポジトリ
+側の監査用CSVにのみ出力され、公開リポジトリには一切含まれない。
+
+JCRのカバー範囲(カテゴリ・年)を追加で取得した場合は、`jif_reference_cleaner.py`
+で参照TSVを追加生成したうえで、この `match_jif.py` を再実行すれば
+`"unknown"` だったエントリも含めて全件が再照合される。
+
 The pipeline implements the two human-gated update stages.
 
 ## Step 1

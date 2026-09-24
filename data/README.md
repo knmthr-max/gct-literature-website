@@ -57,7 +57,7 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `summary_ja` | – | 日本語の短い要約・コメント |
 | `abstract` | – | 英語の全文抄録。サイトでは折りたたみ表示される |
 | `abstract_ja` | – | 日本語訳の全文抄録。収載文献は基本的に英語が原文であるため、日本語ページでは訳文(「抄録」)と英語原文(「抄録原文(英語)」)を**両方**、別々の折りたたみで常に参照できる。訳が無い場合は「抄録(英語)」に原文のみ表示する |
-| `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない |
+| `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`/`unknown`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない。`unknown` は「JCR参照データに該当誌・該当年のデータが無く判定できない」ことを明示する値で、フィールド自体を省略する(未整備で表示されないのか、判定不能なのか区別できない)よりも意図的にこちらを使う。`programs/literature_pipeline/README.md` の `scripts/match_jif.py` で自動生成する |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
 
 `summary_en`/`summary_ja` がどちらも空の場合、サイトには「要約: 準備中」(英語ページでは "Summary: not yet available")と表示され、要約が存在しないのではなく未整備であることが分かるようになっています。
