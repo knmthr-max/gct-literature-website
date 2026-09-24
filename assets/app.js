@@ -21,6 +21,10 @@
     en: { low: "IF: low (<1)", moderate: "IF: moderate (1-3)", high: "IF: high (3-5)", "very-high": "IF: very-high (5+)", unknown: "IF: not yet verified" },
   };
 
+  // ソート用の階層順位。tier未設定(旧データ)もunknownと同じ扱いにする
+  const JIF_RANK = { "very-high": 4, high: 3, moderate: 2, low: 1, unknown: 0 };
+  const jifRank = (p) => JIF_RANK[p.jif_tier] ?? 0;
+
   const state = {
     papers: [],
     query: "",
@@ -113,6 +117,10 @@
       s.sort((a, b) => (a.year || 0) - (b.year || 0));
     } else if (state.sort === "added-desc") {
       s.sort((a, b) => String(b.added_at || "").localeCompare(String(a.added_at || "")));
+    } else if (state.sort === "jif-desc") {
+      s.sort((a, b) => jifRank(b) - jifRank(a));
+    } else if (state.sort === "jif-asc") {
+      s.sort((a, b) => jifRank(a) - jifRank(b));
     } else {
       s.sort((a, b) => (b.year || 0) - (a.year || 0));
     }
