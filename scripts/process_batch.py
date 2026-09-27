@@ -57,11 +57,18 @@ DOMAIN_NOTE = (
     "testicular, ovarian, and extragonadal germ cell tumors, teratoma (mature/immature), "
     "seminoma/dysgerminoma, yolk sac tumor, choriocarcinoma, embryonal carcinoma, mixed "
     "germ cell tumor, gonadoblastoma, and closely related tumor markers (AFP, hCG, LDH) "
-    "and their management, in pediatric or adult patients. A paper about an unrelated "
-    "tumor type, an animal/plant/veterinary study using 'teratoma' in a non-oncologic "
-    "sense, gestational trophoblastic disease not framed as a germ cell tumor, or one "
-    "that only mentions GCT in passing (e.g. in a differential diagnosis list) without "
-    "GCT being a subject of the paper, is not relevant."
+    "and their management, in pediatric or adult patients. Gestational trophoblastic "
+    "disease (hydatidiform mole, invasive mole, gestational choriocarcinoma, placental "
+    "site trophoblastic tumor, placental site nodule, and related placental-site lesions) "
+    "is ALSO treated as relevant/related content on this site -- even though it is "
+    "genetically placental in origin, not a true germ-cell-derived tumor -- as long as "
+    "that disease is the actual subject of the paper (this is an established editorial "
+    "policy for this site, not a judgment call to re-derive). Judge it not_relevant only "
+    "when it is a mere incidental mention. A paper about an unrelated tumor type, an "
+    "animal/plant/veterinary study using 'teratoma' in a non-oncologic sense, or one that "
+    "only mentions GCT (or the gestational trophoblastic disease spectrum above) in "
+    "passing (e.g. in a differential diagnosis list, or as an unrelated tool/cell-line "
+    "control) without it being a subject of the paper, is not relevant."
 )
 
 
