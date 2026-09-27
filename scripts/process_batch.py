@@ -159,7 +159,7 @@ def call_claude(rows, model=""):
     result = {}
     for item in structured.get("papers", []):
         result[item["pmid"]] = item
-    return result
+    return result, response.get("total_cost_usd", 0.0)
 
 
 def main():
@@ -174,6 +174,12 @@ def main():
              "except one genuinely borderline case where even sonnet disagreed with itself "
              "across runs, at roughly half the average cost. Pass --model sonnet to escalate a "
              "specific batch if a digest ever looks off.",
+    )
+    parser.add_argument(
+        "--cost-log", type=pathlib.Path,
+        help="Append {batch_id, papers, model, cost_usd} as a JSON line here after each run, "
+             "and print the cumulative total across every line in the file. Lets a caller (or a "
+             "human) track spend across many invocations without re-deriving it each time.",
     )
     args = parser.parse_args()
 
@@ -203,8 +209,9 @@ def main():
 
     batch_id = now_utc()
     ai_results = {}
+    cost_usd = 0.0
     if args.claude:
-        ai_results = call_claude(rows, args.model)
+        ai_results, cost_usd = call_claude(rows, args.model)
 
     counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "claude_not_run": 0}
     digest = []
@@ -248,8 +255,18 @@ def main():
     )
     print(json.dumps({
         "batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
-        "still_pending": still_pending,
+        "still_pending": still_pending, "cost_usd": cost_usd,
     }, ensure_ascii=False, indent=2))
+
+    if args.cost_log and args.claude:
+        with args.cost_log.open("a", encoding="utf-8") as f:
+            f.write(json.dumps({
+                "batch_id": batch_id, "papers": len(rows), "model": args.model, "cost_usd": cost_usd,
+            }, ensure_ascii=False) + "\n")
+        cumulative = sum(
+            json.loads(line)["cost_usd"] for line in args.cost_log.read_text(encoding="utf-8").splitlines() if line.strip()
+        )
+        print(f"cumulative_cost_usd (from {args.cost_log.name}): {cumulative:.4f}")
 
     if digest:
         print("\n--- uncertain / not_relevant this batch (skim and correct if needed) ---")
