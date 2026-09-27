@@ -140,26 +140,47 @@ def parse_claude_payload(response):
     return parsed
 
 
-def call_claude(rows, model=""):
+def call_claude(rows, model="", max_retries=2):
     if shutil.which("claude") is None:
         raise RuntimeError("Claude Code executable was not found. Install/login before using --claude.")
     command = [
         "claude", "-p", "Complete the JSON relevance-and-summary task supplied on standard input.",
-        "--output-format", "json", "--max-turns", "3",
+        "--output-format", "json", "--max-turns", "5",
     ]
     if model:
         command.extend(["--model", model])
-    completed = subprocess.run(
-        command, input=claude_prompt(rows), capture_output=True, text=True, check=False
-    )
-    if completed.returncode:
-        raise RuntimeError(f"Claude Code failed ({completed.returncode}): {completed.stderr.strip()}")
-    response = json.loads(completed.stdout)
-    structured = parse_claude_payload(response)
-    result = {}
-    for item in structured.get("papers", []):
-        result[item["pmid"]] = item
-    return result, response.get("total_cost_usd", 0.0)
+    prompt = claude_prompt(rows)
+
+    last_error = None
+    for attempt in range(1, max_retries + 2):
+        completed = subprocess.run(command, input=prompt, capture_output=True, text=True, check=False)
+        if completed.returncode:
+            last_error = RuntimeError(f"Claude Code failed ({completed.returncode}): {completed.stderr.strip()}")
+            print(f"warning: call_claude attempt {attempt} failed to run: {last_error}", file=sys.stderr)
+            continue
+        try:
+            response = json.loads(completed.stdout)
+            structured = parse_claude_payload(response)
+        except (json.JSONDecodeError, ValueError) as error:
+            # Occasionally the model exhausts --max-turns mid tool-use without ever emitting a
+            # final text response (subtype often "error_max_turns"); retrying is usually enough.
+            subtype = None
+            try:
+                subtype = json.loads(completed.stdout).get("subtype")
+            except Exception:
+                pass
+            last_error = error
+            print(
+                f"warning: call_claude attempt {attempt} could not parse a response "
+                f"(subtype={subtype}): {error}", file=sys.stderr,
+            )
+            continue
+        result = {}
+        for item in structured.get("papers", []):
+            result[item["pmid"]] = item
+        return result, response.get("total_cost_usd", 0.0)
+
+    raise RuntimeError(f"call_claude failed after {max_retries + 1} attempts: {last_error}")
 
 
 def main():
