@@ -87,14 +87,18 @@ AIレビューフローを用意しています(詳細な使い方はスクリ�
 
 Google Driveに保存されている1929〜2026年の一括検索結果(年別MEDLINEテキスト、数千件規模)を、
 少しずつ・トークン消費を自分で制御しながら取り込むための別経路です。件数が多いため
-`papers.json` を直接編集する方式ではなく、非公開リポジトリ側のSQLite(`data/master/gct_literature.db`)
-を作業用の正本として使います。詳細な使い方は各スクリプトの冒頭docstring参照。
+`papers.json` を直接編集する方式ではなく、非公開リポジトリ側のSQLite
+(`data/master/gct_literature_<年代>.db`、1年代=10年ごとに分割)を作業用の正本として使います。
+1ファイルに一本化しないのは、Git LFSがこのサンドボックス環境ではネットワークポリシーにより
+使えず(`lfs.github.com`への通信がブロックされる)、GitHubの1ファイルあたり100MB上限に
+将来引っかからないようにするためです。詳細な使い方は各スクリプトの冒頭docstring参照。
 
 1. `scripts/ingest_historical.py` — MEDLINEテキストをパースし、PMIDで重複排除(ファイル間・
-   既存`papers.json`との両方)して`gct_literature.db`に`relevance_status`未設定(pending)で登録する。
-   AI呼び出しは一切行わない、何度再実行しても安全な機械的処理
+   既存`papers.json`との両方、かつ全年代シャードを横断)して、発行年に応じた年代別DBファイルに
+   `relevance_status`未設定(pending)で登録する。AI呼び出しは一切行わない、何度再実行しても
+   安全な機械的処理
 2. `scripts/process_batch.py --claude` — 実行するたびに、pending中の文献を**発行年が新しい順に
-   `--batch-size`件(既定25件)だけ**取り出し、関連性判定(relevant/uncertain/not_relevant)と
+   (年代シャードをまたいで)`--batch-size`件(既定25件)だけ**取り出し、関連性判定(relevant/uncertain/not_relevant)と
    和英要約をまとめて1回のAI呼び出しで生成する。タグは既存の`import_medline.py`の`classify()`を
    再利用し決定的に付与する(AI呼び出し不要)。実行するたびに次のバッチへ進むだけで、
    それ以上は何もしない、つまりこのコマンドを実行すること自体が「Go」の合図になる
