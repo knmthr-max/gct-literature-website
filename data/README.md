@@ -83,6 +83,29 @@ AIレビューフローを用意しています(詳細な使い方はスクリ�
 `decision` 列を書き換えて `apply` を再実行すればいつでも修正できます。新規追加分だけを対象にしたい
 場合は `propose` をそのまま実行すれば(`--all` を付けない限り)未レビューの文献だけが対象になります。
 
+## 過去文献バックログの取り込み(SQLite、大規模インポート用)
+
+Google Driveに保存されている1929〜2026年の一括検索結果(年別MEDLINEテキスト、数千件規模)を、
+少しずつ・トークン消費を自分で制御しながら取り込むための別経路です。件数が多いため
+`papers.json` を直接編集する方式ではなく、非公開リポジトリ側のSQLite(`data/master/gct_literature.db`)
+を作業用の正本として使います。詳細な使い方は各スクリプトの冒頭docstring参照。
+
+1. `scripts/ingest_historical.py` — MEDLINEテキストをパースし、PMIDで重複排除(ファイル間・
+   既存`papers.json`との両方)して`gct_literature.db`に`relevance_status`未設定(pending)で登録する。
+   AI呼び出しは一切行わない、何度再実行しても安全な機械的処理
+2. `scripts/process_batch.py --claude` — 実行するたびに、pending中の文献を**発行年が新しい順に
+   `--batch-size`件(既定25件)だけ**取り出し、関連性判定(relevant/uncertain/not_relevant)と
+   和英要約をまとめて1回のAI呼び出しで生成する。タグは既存の`import_medline.py`の`classify()`を
+   再利用し決定的に付与する(AI呼び出し不要)。実行するたびに次のバッチへ進むだけで、
+   それ以上は何もしない、つまりこのコマンドを実行すること自体が「Go」の合図になる
+3. AIの判定はそのまま`relevance_status`(`kept`/`needs_review`/`excluded`)へ反映される
+   (65件のときのような別途decisions TSV承認は、この規模では非現実的なため省略)。
+   バッチ実行後に`uncertain`/`not_relevant`だった項目の一覧が表示されるので、それだけ目を通し、
+   誤りがあれば`sqlite3`で該当`pmid`の`relevance_status`/`relevance_note`を直接書き換えれば
+   いつでも修正できる(65件の運用と同じ「除外は常に後から復元可能」という方針を踏襲)
+4. このDBから`papers.json`への公開用エクスポート(採用分のみ・実データの絞り込み)は別途実装予定。
+   現時点では取り込み・AI判定までがこの経路の範囲
+
 ## サイト情報を変える
 
 `site.json` でサイトタイトル・説明文・お知らせ文言を変更できます。`title`/`description`/`notice` が英語版(`/en/`)、`title_ja`/`description_ja`/`notice_ja` が日本語版(`/`)です。片方しか埋まっていない場合はもう片方の言語のページでも代わりに表示されます(フォールバック)。
