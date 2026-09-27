@@ -24,8 +24,13 @@ not_relevant/uncertain calls is printed after each run so it can be skimmed.
 
 Usage:
     python3 scripts/process_batch.py --claude \
-      --db /path/to/gct-literature-data/data/master/gct_literature.db \
+      --db-dir /path/to/gct-literature-data/data/master \
       --batch-size 25
+
+The backlog is sharded into one SQLite file per era (see gct_db.py's
+SHARDS); this walks shards newest-first and pulls pending rows from each in
+turn until --batch-size is reached, so "newest first" holds across shard
+boundaries too.
 """
 import argparse
 import json
@@ -42,7 +47,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from import_medline import classify  # noqa: E402
-from gct_db import connect, json_load  # noqa: E402
+from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
 
 RELEVANCE_VALUES = ("relevant", "uncertain", "not_relevant")
 DEFAULT_STATUS = {"relevant": "kept", "uncertain": "needs_review", "not_relevant": "excluded"}
@@ -152,21 +157,34 @@ def call_claude(rows, model=""):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--db", type=pathlib.Path, required=True)
+    parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--batch-size", type=int, default=25)
     parser.add_argument("--claude", action="store_true", help="Actually call Claude; omit for a structural dry run")
     parser.add_argument("--model", default="")
     args = parser.parse_args()
 
-    conn = connect(args.db)
-    rows = conn.execute(
-        """SELECT * FROM papers WHERE relevance_status IS NULL
-           ORDER BY publication_year DESC, pmid DESC LIMIT ?""",
-        (args.batch_size,),
-    ).fetchall()
+    shard_paths = existing_shard_paths(args.db_dir)
+    if not shard_paths:
+        print("No shard database files found under --db-dir. Nothing to do.")
+        return
+    shard_conns = {path: connect(path) for path in shard_paths}  # newest era first
+
+    rows = []
+    row_conn = {}  # pmid -> connection, for writing results back to the right shard
+    for conn in shard_conns.values():
+        if len(rows) >= args.batch_size:
+            break
+        remaining = args.batch_size - len(rows)
+        for row in conn.execute(
+            """SELECT * FROM papers WHERE relevance_status IS NULL
+               ORDER BY publication_year DESC, pmid DESC LIMIT ?""",
+            (remaining,),
+        ).fetchall():
+            rows.append(row)
+            row_conn[row["pmid"]] = conn
 
     if not rows:
-        print("No pending papers (relevance_status IS NULL). Nothing to do.")
+        print("No pending papers (relevance_status IS NULL) in any shard. Nothing to do.")
         return
 
     batch_id = now_utc()
@@ -193,7 +211,7 @@ def main():
             counts[relevance] = counts.get(relevance, 0) + 1
 
         status = DEFAULT_STATUS.get(relevance)  # None (still pending) if claude wasn't run
-        conn.execute(
+        row_conn[pmid].execute(
             """UPDATE papers SET
                  ai_relevance = ?, ai_relevance_reason = ?, ai_tags = ?,
                  ai_summary_en = ?, ai_summary_ja = ?, ai_processed_at = ?, batch_id = ?,
@@ -207,12 +225,16 @@ def main():
         if relevance in ("uncertain", "not_relevant"):
             digest.append((pmid, row["publication_year"], row["title"], relevance, reason))
 
-    conn.commit()
+    for conn in shard_conns.values():
+        conn.commit()
+
+    still_pending = sum(
+        conn.execute("SELECT COUNT(*) FROM papers WHERE relevance_status IS NULL").fetchone()[0]
+        for conn in shard_conns.values()
+    )
     print(json.dumps({
         "batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
-        "still_pending": conn.execute(
-            "SELECT COUNT(*) FROM papers WHERE relevance_status IS NULL"
-        ).fetchone()[0],
+        "still_pending": still_pending,
     }, ensure_ascii=False, indent=2))
 
     if digest:

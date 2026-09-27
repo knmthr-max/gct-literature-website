@@ -10,9 +10,14 @@ Nothing here calls Claude or costs API tokens.
 Usage:
     python3 scripts/ingest_historical.py \
       --raw-dir /path/to/gct-literature-data/data/raw/historical_bulk \
-      --db /path/to/gct-literature-data/data/master/gct_literature.db
+      --db-dir /path/to/gct-literature-data/data/master
 
-Safe to re-run: PMIDs already in the database, or already published to the
+The database is sharded into one SQLite file per era (see gct_db.py's
+SHARDS) rather than one giant file, so no single file approaches GitHub's
+100MB blob limit as the corpus grows. Each record is written to the shard
+matching its publication_year; shard files are created on demand.
+
+Safe to re-run: PMIDs already in any shard, or already published to the
 public site, are skipped rather than duplicated.
 """
 import argparse
@@ -27,7 +32,7 @@ if str(PUBMED_CLEANER_DIR) not in sys.path:
     sys.path.insert(0, str(PUBMED_CLEANER_DIR))
 
 from pubmed_cleaner import pubmed_cleaner as cleaner  # noqa: E402
-from gct_db import connect, json_dump  # noqa: E402
+from gct_db import connect, json_dump, shard_for_year, shard_path, existing_shard_paths  # noqa: E402
 
 PAPERS_PATH = ROOT / "data" / "papers.json"
 
@@ -68,7 +73,7 @@ def load_published_pmids(papers_path: pathlib.Path) -> set[str]:
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--raw-dir", type=pathlib.Path, required=True)
-    parser.add_argument("--db", type=pathlib.Path, required=True)
+    parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--papers", type=pathlib.Path, default=PAPERS_PATH)
     args = parser.parse_args()
 
@@ -77,8 +82,16 @@ def main():
         raise FileNotFoundError(f"No .txt files found under {args.raw_dir}")
 
     published_pmids = load_published_pmids(args.papers)
-    conn = connect(args.db)
-    existing_pmids = {row["pmid"] for row in conn.execute("SELECT pmid FROM papers")}
+    shard_conns = {path: connect(path) for path in existing_shard_paths(args.db_dir)}
+    existing_pmids: set[str] = set()
+    for conn in shard_conns.values():
+        existing_pmids.update(row["pmid"] for row in conn.execute("SELECT pmid FROM papers"))
+
+    def conn_for_year(year):
+        path = shard_path(args.db_dir, shard_for_year(year))
+        if path not in shard_conns:
+            shard_conns[path] = connect(path)
+        return shard_conns[path]
 
     seen_this_run: set[str] = set()
     total_records = 0
@@ -109,7 +122,7 @@ def main():
                 skipped_duplicate_in_run += 1
                 continue
             seen_this_run.add(pmid)
-            conn.execute(
+            conn_for_year(row["publication_year"]).execute(
                 """INSERT INTO papers (
                     pmid, publication_year, title, abstract, authors, first_author,
                     journal_abbrev, journal_title, issn, eissn, doi,
@@ -125,7 +138,13 @@ def main():
             )
             inserted += 1
 
-    conn.commit()
+    for conn in shard_conns.values():
+        conn.commit()
+
+    total_pending = sum(
+        conn.execute("SELECT COUNT(*) FROM papers WHERE relevance_status IS NULL").fetchone()[0]
+        for conn in shard_conns.values()
+    )
     stats = {
         "raw_files": len(raw_files),
         "records_seen": total_records,
@@ -134,9 +153,7 @@ def main():
         "skipped_already_published_in_papers_json": skipped_already_published,
         "skipped_duplicate_within_this_run": skipped_duplicate_in_run,
         "skipped_no_pmid": skipped_no_pmid,
-        "total_pending_in_db": conn.execute(
-            "SELECT COUNT(*) FROM papers WHERE relevance_status IS NULL"
-        ).fetchone()[0],
+        "total_pending_across_shards": total_pending,
     }
     print(json.dumps(stats, ensure_ascii=False, indent=2))
 

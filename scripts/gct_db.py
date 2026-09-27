@@ -21,6 +21,49 @@ import json
 import sqlite3
 from pathlib import Path
 
+# The backlog is sharded into one SQLite file per era instead of one giant
+# file, so no single file approaches GitHub's 100MB per-blob hard limit as
+# the corpus grows (Git LFS is not usable from this environment: its API
+# host is blocked by the sandbox's egress policy). Ordered newest-first,
+# since that is the order batches are processed in.
+SHARDS = [
+    ("2020s", 2020, 9999),
+    ("2010s", 2010, 2019),
+    ("2000s", 2000, 2009),
+    ("1990s", 1990, 1999),
+    ("1980s", 1980, 1989),
+    ("pre1980", 0, 1979),
+]
+
+
+def shard_filename(label: str) -> str:
+    return f"gct_literature_{label}.db"
+
+
+def shard_for_year(year) -> str:
+    """Return the shard label a given publication_year belongs to."""
+    if year is None:
+        return SHARDS[-1][0]  # unknown year -> oldest/catch-all shard
+    for label, lo, hi in SHARDS:
+        if lo <= year <= hi:
+            return label
+    return SHARDS[-1][0]
+
+
+def shard_path(db_dir: Path, label: str) -> Path:
+    return db_dir / shard_filename(label)
+
+
+def existing_shard_paths(db_dir: Path) -> list[Path]:
+    """All shard files that already exist under db_dir, newest era first."""
+    paths = []
+    for label, _lo, _hi in SHARDS:
+        path = shard_path(db_dir, label)
+        if path.is_file():
+            paths.append(path)
+    return paths
+
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS papers (
   pmid TEXT PRIMARY KEY,
