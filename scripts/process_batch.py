@@ -274,10 +274,15 @@ def main():
         conn.execute("SELECT COUNT(*) FROM papers WHERE relevance_status IS NULL").fetchone()[0]
         for conn in shard_conns.values()
     )
-    print(json.dumps({
+    summary = {
         "batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
         "still_pending": still_pending, "cost_usd": cost_usd,
-    }, ensure_ascii=False, indent=2))
+    }
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    # Also on a single sentinel-prefixed line, since retry warnings or the digest below can put
+    # other text before/after the pretty-printed block above in a combined stdout+stderr capture,
+    # breaking naive "parse from the start" extraction. Callers should grep for this line.
+    print("RESULT_JSON:" + json.dumps(summary, ensure_ascii=False))
 
     if args.cost_log and args.claude:
         with args.cost_log.open("a", encoding="utf-8") as f:
