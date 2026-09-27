@@ -167,7 +167,14 @@ def main():
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--batch-size", type=int, default=25)
     parser.add_argument("--claude", action="store_true", help="Actually call Claude; omit for a structural dry run")
-    parser.add_argument("--model", default="")
+    parser.add_argument(
+        "--model", default="claude-haiku-4-5",
+        help="Model for the Claude Code call. Default claude-haiku-4-5: benchmarked against "
+             "sonnet on 10 real backlog papers (see commit history), identical classifications "
+             "except one genuinely borderline case where even sonnet disagreed with itself "
+             "across runs, at roughly half the average cost. Pass --model sonnet to escalate a "
+             "specific batch if a digest ever looks off.",
+    )
     args = parser.parse_args()
 
     shard_paths = existing_shard_paths(args.db_dir)
