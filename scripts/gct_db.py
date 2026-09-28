@@ -8,14 +8,19 @@ lives in the private data repo (gct-literature-data), passed in via --db.
 
 Pipeline stages a row moves through:
   ingested (relevance_status IS NULL, ai_relevance IS NULL)
-    -> AI-processed by process_batch.py (ai_relevance/ai_tags/ai_summary_*
-       filled in, relevance_status auto-set from the AI verdict)
+    -> AI-processed by process_batch.py (ai_relevance/ai_tags/ai_summary_*/
+       ai_abstract_ja filled in, relevance_status auto-set from the AI
+       verdict)
     -> optionally hand-corrected later by editing relevance_status directly
        (sqlite3 the_db.db "UPDATE papers SET relevance_status='kept',
        relevance_note='...' WHERE pmid='...'" -- always reversible)
-    -> published_to_site=1 once exported into the public papers.json by a
-       separate export step (not implemented yet; out of scope until the
-       backlog itself is in good shape).
+    -> human-reviewed for publish quality by export_publish_review.py /
+       publish_to_site.py (human_review_status set to approved/rejected/
+       needs_edit -- a separate gate from relevance_status: relevance_status
+       is "is this paper in scope", human_review_status is "is the AI-authored
+       content good enough to publish as-is")
+    -> published_to_site=1, published_at set once publish_to_site.py has
+       copied the row into the public papers.json.
 """
 import json
 import sqlite3
@@ -88,6 +93,7 @@ CREATE TABLE IF NOT EXISTS papers (
   ai_tags TEXT,
   ai_summary_en TEXT,
   ai_summary_ja TEXT,
+  ai_abstract_ja TEXT,
   ai_processed_at TEXT,
   batch_id TEXT,
 
@@ -95,14 +101,30 @@ CREATE TABLE IF NOT EXISTS papers (
   relevance_note TEXT,
   relevance_reviewed_at TEXT,
 
+  human_review_status TEXT,
+  human_review_note TEXT,
+  human_reviewed_at TEXT,
+
   jif_tier TEXT,
 
   published_to_site INTEGER NOT NULL DEFAULT 0,
+  published_at TEXT,
   added_at TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_papers_pending
   ON papers (relevance_status, publication_year);
 """
+
+# Columns added after the original schema. Existing shard files predate
+# these, and CREATE TABLE IF NOT EXISTS does not retrofit a table that
+# already exists, so connect() adds any that are missing on open.
+ADDED_COLUMNS = {
+    "ai_abstract_ja": "TEXT",
+    "human_review_status": "TEXT",
+    "human_review_note": "TEXT",
+    "human_reviewed_at": "TEXT",
+    "published_at": "TEXT",
+}
 
 
 def connect(db_path: Path) -> sqlite3.Connection:
@@ -110,6 +132,10 @@ def connect(db_path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    existing = {row["name"] for row in conn.execute("PRAGMA table_info(papers)")}
+    for column, sql_type in ADDED_COLUMNS.items():
+        if column not in existing:
+            conn.execute(f"ALTER TABLE papers ADD COLUMN {column} {sql_type}")
     return conn
 
 
