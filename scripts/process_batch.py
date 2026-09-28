@@ -38,6 +38,12 @@ The backlog is sharded into one SQLite file per era (see gct_db.py's
 SHARDS); this walks shards newest-first and pulls pending rows from each in
 turn until --batch-size is reached, so "newest first" holds across shard
 boundaries too.
+
+--refill-missing-translations switches to a second mode: instead of pending
+rows, it pulls already-'kept' rows whose ai_title_ja/ai_abstract_ja are
+still empty (batches run before those fields existed) and fills in just
+those two fields via a smaller, cheaper prompt -- relevance/summaries/
+relevance_status are left untouched.
 """
 import argparse
 import json
@@ -84,6 +90,18 @@ def now_utc():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
+def _append_cost_log(cost_log_path, batch_id, papers, model, cost_usd):
+    with cost_log_path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps({
+            "batch_id": batch_id, "papers": papers, "model": model, "cost_usd": cost_usd,
+        }, ensure_ascii=False) + "\n")
+    cumulative = sum(
+        json.loads(line)["cost_usd"]
+        for line in cost_log_path.read_text(encoding="utf-8").splitlines() if line.strip()
+    )
+    print(f"cumulative_cost_usd (from {cost_log_path.name}): {cumulative:.4f}")
+
+
 def terminology_note():
     if not TERMINOLOGY_PATH.is_file():
         return ""
@@ -123,6 +141,57 @@ def claude_schema():
         "required": ["papers"],
         "additionalProperties": False,
     }
+
+
+def refill_schema():
+    return {
+        "type": "object",
+        "properties": {
+            "papers": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "pmid": {"type": "string"},
+                        "title_ja": {"type": "string"},
+                        "abstract_ja": {"type": "string"},
+                    },
+                    "required": ["pmid", "title_ja", "abstract_ja"],
+                    "additionalProperties": False,
+                },
+            }
+        },
+        "required": ["papers"],
+        "additionalProperties": False,
+    }
+
+
+def refill_prompt(rows):
+    """Prompt for --refill-missing-translations: these rows are already
+    relevance_status='kept' (settled), so this only asks for the two fields
+    that batches processed before title_ja/abstract_ja existed are missing --
+    no relevance/summary regeneration, to keep cost down over ~6,600 rows."""
+    payload = []
+    for row in rows:
+        payload.append({
+            "pmid": row["pmid"],
+            "title": row["title"] or "",
+            "abstract": row["abstract"] or "",
+        })
+    return (
+        "Each paper below was already confirmed relevant to this germ cell tumor (GCT) "
+        "literature site. For each, write title_ja: a natural, faithful Japanese "
+        "translation of the title (this is displayed as the paper's heading in Japanese "
+        "mode, so keep it a title, not a sentence-form summary). Also write abstract_ja: "
+        "a full, faithful Japanese translation of the abstract (not a summary -- translate "
+        "the whole thing, preserving its structure/sections if it has them). If the "
+        "abstract is empty, set abstract_ja to an empty string. Return exactly one result "
+        "per pmid, for every pmid supplied. Return only a JSON object that conforms "
+        "exactly to this JSON Schema; do not use Markdown fences:\n"
+        + json.dumps(refill_schema(), ensure_ascii=False, separators=(",", ":"))
+        + terminology_note()
+        + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
+    )
 
 
 def claude_prompt(rows):
@@ -171,16 +240,15 @@ def parse_claude_payload(response):
     return parsed
 
 
-def call_claude(rows, model="", max_retries=2):
+def call_claude(prompt, model="", max_retries=2):
     if shutil.which("claude") is None:
         raise RuntimeError("Claude Code executable was not found. Install/login before using --claude.")
     command = [
-        "claude", "-p", "Complete the JSON relevance-and-summary task supplied on standard input.",
+        "claude", "-p", "Complete the JSON task supplied on standard input.",
         "--output-format", "json", "--max-turns", "5",
     ]
     if model:
         command.extend(["--model", model])
-    prompt = claude_prompt(rows)
 
     last_error = None
     for attempt in range(1, max_retries + 2):
@@ -233,6 +301,14 @@ def main():
              "and print the cumulative total across every line in the file. Lets a caller (or a "
              "human) track spend across many invocations without re-deriving it each time.",
     )
+    parser.add_argument(
+        "--refill-missing-translations", action="store_true",
+        help="Instead of pulling pending (relevance_status IS NULL) rows, pulls already-'kept' "
+             "rows whose ai_title_ja/ai_abstract_ja are still empty (i.e. processed by an older "
+             "batch, before those fields existed) and fills in just those two fields. Relevance, "
+             "summaries, and relevance_status are left untouched -- this only backfills "
+             "translations, it never re-judges relevance.",
+    )
     args = parser.parse_args()
 
     shard_paths = existing_shard_paths(args.db_dir)
@@ -241,29 +317,75 @@ def main():
         return
     shard_conns = {path: connect(path) for path in shard_paths}  # newest era first
 
+    if args.refill_missing_translations:
+        select_sql = (
+            "SELECT * FROM papers WHERE relevance_status = 'kept' "
+            "AND (ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '') "
+            "ORDER BY publication_year DESC, pmid DESC LIMIT ?"
+        )
+        empty_message = "No 'kept' papers with missing ai_title_ja/ai_abstract_ja in any shard. Nothing to do."
+    else:
+        select_sql = (
+            "SELECT * FROM papers WHERE relevance_status IS NULL "
+            "ORDER BY publication_year DESC, pmid DESC LIMIT ?"
+        )
+        empty_message = "No pending papers (relevance_status IS NULL) in any shard. Nothing to do."
+
     rows = []
     row_conn = {}  # pmid -> connection, for writing results back to the right shard
     for conn in shard_conns.values():
         if len(rows) >= args.batch_size:
             break
         remaining = args.batch_size - len(rows)
-        for row in conn.execute(
-            """SELECT * FROM papers WHERE relevance_status IS NULL
-               ORDER BY publication_year DESC, pmid DESC LIMIT ?""",
-            (remaining,),
-        ).fetchall():
+        for row in conn.execute(select_sql, (remaining,)).fetchall():
             rows.append(row)
             row_conn[row["pmid"]] = conn
 
     if not rows:
-        print("No pending papers (relevance_status IS NULL) in any shard. Nothing to do.")
+        print(empty_message)
         return
 
     batch_id = now_utc()
     ai_results = {}
     cost_usd = 0.0
     if args.claude:
-        ai_results, cost_usd = call_claude(rows, args.model)
+        prompt = refill_prompt(rows) if args.refill_missing_translations else claude_prompt(rows)
+        ai_results, cost_usd = call_claude(prompt, args.model)
+
+    if args.refill_missing_translations:
+        counts = {"filled": 0, "claude_not_run": 0}
+        for row in rows:
+            pmid = row["pmid"]
+            result = ai_results.get(pmid)
+            if result is None:
+                counts["claude_not_run"] += 1
+                continue
+            row_conn[pmid].execute(
+                "UPDATE papers SET ai_title_ja = ?, ai_abstract_ja = ?, ai_processed_at = ?, batch_id = ? "
+                "WHERE pmid = ?",
+                (result.get("title_ja", ""), result.get("abstract_ja", ""), now_utc(), batch_id, pmid),
+            )
+            counts["filled"] += 1
+
+        for conn in shard_conns.values():
+            conn.commit()
+
+        still_missing = sum(
+            conn.execute(
+                "SELECT COUNT(*) FROM papers WHERE relevance_status = 'kept' "
+                "AND (ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '')"
+            ).fetchone()[0]
+            for conn in shard_conns.values()
+        )
+        summary = {
+            "batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
+            "still_missing": still_missing, "cost_usd": cost_usd,
+        }
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        print("RESULT_JSON:" + json.dumps(summary, ensure_ascii=False))
+        if args.cost_log and args.claude:
+            _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd)
+        return
 
     counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "claude_not_run": 0}
     digest = []
@@ -319,14 +441,7 @@ def main():
     print("RESULT_JSON:" + json.dumps(summary, ensure_ascii=False))
 
     if args.cost_log and args.claude:
-        with args.cost_log.open("a", encoding="utf-8") as f:
-            f.write(json.dumps({
-                "batch_id": batch_id, "papers": len(rows), "model": args.model, "cost_usd": cost_usd,
-            }, ensure_ascii=False) + "\n")
-        cumulative = sum(
-            json.loads(line)["cost_usd"] for line in args.cost_log.read_text(encoding="utf-8").splitlines() if line.strip()
-        )
-        print(f"cumulative_cost_usd (from {args.cost_log.name}): {cumulative:.4f}")
+        _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd)
 
     if digest:
         print("\n--- uncertain / not_relevant this batch (skim and correct if needed) ---")
