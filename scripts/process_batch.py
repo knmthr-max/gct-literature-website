@@ -7,12 +7,16 @@ else runs until this is invoked again, so token spend is entirely under the
 caller's control.
 
 For that one batch, a single Claude Code call judges GCT relevance and
-writes a bilingual summary (combining what would otherwise be two separate
-AI passes, since this scale makes a strict propose/apply gate impractical).
-Category tags are NOT asked of the AI: they are computed deterministically
-from the MEDLINE publication-type field via the same classify() used by
-scripts/import_medline.py, for zero extra cost and consistency with the
-already-published 65 entries.
+writes a bilingual summary plus a full Japanese abstract translation
+(abstract_ja) -- combining what would otherwise be several separate AI
+passes, since this scale makes a strict propose/apply gate impractical).
+Terminology is kept consistent with docs/data_dictionary/terminology_ja.md,
+embedded directly in the prompt. title_ja is deliberately NOT generated:
+summary_ja already serves that role well enough on the site, and skipping
+it keeps each call smaller. Category tags are NOT asked of the AI either:
+they are computed deterministically from the MEDLINE publication-type field
+via the same classify() used by scripts/import_medline.py, for zero extra
+cost and consistency with the already-published 65 entries.
 
 The AI verdict directly sets relevance_status (relevant -> kept, uncertain
 -> needs_review, not_relevant -> excluded) rather than going through a
@@ -51,6 +55,7 @@ from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
 
 RELEVANCE_VALUES = ("relevant", "uncertain", "not_relevant")
 DEFAULT_STATUS = {"relevant": "kept", "uncertain": "needs_review", "not_relevant": "excluded"}
+TERMINOLOGY_PATH = ROOT / "docs" / "data_dictionary" / "terminology_ja.md"
 
 DOMAIN_NOTE = (
     "This website curates literature specifically about germ cell tumors (GCT): "
@@ -76,6 +81,17 @@ def now_utc():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
+def terminology_note():
+    if not TERMINOLOGY_PATH.is_file():
+        return ""
+    return (
+        "\n\nWhen writing summary_ja/abstract_ja, use this site's controlled Japanese "
+        "terminology glossary for tumor/pathology names, anatomy, and treatment terms -- "
+        "the same English term must always get the same Japanese translation used here:\n"
+        + TERMINOLOGY_PATH.read_text(encoding="utf-8")
+    )
+
+
 def claude_schema():
     return {
         "type": "object",
@@ -90,8 +106,12 @@ def claude_schema():
                         "relevance_reason": {"type": "string"},
                         "summary_en": {"type": "string"},
                         "summary_ja": {"type": "string"},
+                        "abstract_ja": {"type": "string"},
                     },
-                    "required": ["pmid", "relevance", "relevance_reason", "summary_en", "summary_ja"],
+                    "required": [
+                        "pmid", "relevance", "relevance_reason",
+                        "summary_en", "summary_ja", "abstract_ja",
+                    ],
                     "additionalProperties": False,
                 },
             }
@@ -114,11 +134,15 @@ def claude_prompt(rows):
     return (
         DOMAIN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant) "
         "with a one-sentence Japanese reason, and write a short bilingual summary: summary_en "
-        "60-100 words, summary_ja 120-200 Japanese characters. If the abstract is empty, base "
-        "the summary on the title alone and keep it brief rather than inventing details. Return "
-        "exactly one result per pmid, for every pmid supplied. Return only a JSON object that "
-        "conforms exactly to this JSON Schema; do not use Markdown fences:\n"
+        "60-100 words, summary_ja 120-200 Japanese characters. Also write abstract_ja: a full, "
+        "faithful Japanese translation of the abstract (not a summary -- translate the whole "
+        "thing, preserving its structure/sections if it has them). If the abstract is empty, "
+        "set abstract_ja to an empty string and base summary_en/summary_ja on the title alone, "
+        "keeping them brief rather than inventing details. Return exactly one result per pmid, "
+        "for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
+        "Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
+        + terminology_note()
         + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
     )
 
@@ -243,25 +267,27 @@ def main():
         if result is None:
             relevance = ""
             reason = "" if not args.claude else "claude_result_missing"
-            summary_en = summary_ja = ""
+            summary_en = summary_ja = abstract_ja = ""
             counts["claude_not_run"] += 1
         else:
             relevance = result.get("relevance", "")
             reason = result.get("relevance_reason", "")
             summary_en = result.get("summary_en", "")
             summary_ja = result.get("summary_ja", "")
+            abstract_ja = result.get("abstract_ja", "")
             counts[relevance] = counts.get(relevance, 0) + 1
 
         status = DEFAULT_STATUS.get(relevance)  # None (still pending) if claude wasn't run
         row_conn[pmid].execute(
             """UPDATE papers SET
                  ai_relevance = ?, ai_relevance_reason = ?, ai_tags = ?,
-                 ai_summary_en = ?, ai_summary_ja = ?, ai_processed_at = ?, batch_id = ?,
+                 ai_summary_en = ?, ai_summary_ja = ?, ai_abstract_ja = ?,
+                 ai_processed_at = ?, batch_id = ?,
                  relevance_status = COALESCE(?, relevance_status),
                  relevance_reviewed_at = CASE WHEN ? IS NOT NULL THEN ? ELSE relevance_reviewed_at END
                WHERE pmid = ?""",
             (relevance, reason, json.dumps([tags] if tags else [], ensure_ascii=False),
-             summary_en, summary_ja, now_utc(), batch_id,
+             summary_en, summary_ja, abstract_ja, now_utc(), batch_id,
              status, status, now_utc(), pmid),
         )
         if relevance in ("uncertain", "not_relevant"):
