@@ -7,13 +7,16 @@ else runs until this is invoked again, so token spend is entirely under the
 caller's control.
 
 For that one batch, a single Claude Code call judges GCT relevance and
-writes a bilingual summary plus a full Japanese abstract translation
-(abstract_ja) -- combining what would otherwise be several separate AI
-passes, since this scale makes a strict propose/apply gate impractical).
-Terminology is kept consistent with docs/data_dictionary/terminology_ja.md,
-embedded directly in the prompt. title_ja is deliberately NOT generated:
-summary_ja already serves that role well enough on the site, and skipping
-it keeps each call smaller. Category tags are NOT asked of the AI either:
+writes a bilingual summary, a Japanese title translation (title_ja), and a
+full Japanese abstract translation (abstract_ja) -- combining what would
+otherwise be several separate AI passes, since this scale makes a strict
+propose/apply gate impractical. Terminology is kept consistent with
+docs/data_dictionary/terminology_ja.md, embedded directly in the prompt.
+title_ja is generated (not just summary_ja) because assets/app.js uses it
+as the actual page heading in Japanese mode, distinct from summary_ja which
+renders as a separate description -- all 65 already-published entries have
+it, so new entries need it too for consistent display. Category tags are
+NOT asked of the AI either:
 they are computed deterministically from the MEDLINE publication-type field
 via the same classify() used by scripts/import_medline.py, for zero extra
 cost and consistency with the already-published 65 entries.
@@ -106,11 +109,12 @@ def claude_schema():
                         "relevance_reason": {"type": "string"},
                         "summary_en": {"type": "string"},
                         "summary_ja": {"type": "string"},
+                        "title_ja": {"type": "string"},
                         "abstract_ja": {"type": "string"},
                     },
                     "required": [
                         "pmid", "relevance", "relevance_reason",
-                        "summary_en", "summary_ja", "abstract_ja",
+                        "summary_en", "summary_ja", "title_ja", "abstract_ja",
                     ],
                     "additionalProperties": False,
                 },
@@ -134,11 +138,14 @@ def claude_prompt(rows):
     return (
         DOMAIN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant) "
         "with a one-sentence Japanese reason, and write a short bilingual summary: summary_en "
-        "60-100 words, summary_ja 120-200 Japanese characters. Also write abstract_ja: a full, "
-        "faithful Japanese translation of the abstract (not a summary -- translate the whole "
-        "thing, preserving its structure/sections if it has them). If the abstract is empty, "
-        "set abstract_ja to an empty string and base summary_en/summary_ja on the title alone, "
-        "keeping them brief rather than inventing details. Return exactly one result per pmid, "
+        "60-100 words, summary_ja 120-200 Japanese characters. Also write title_ja: a natural, "
+        "faithful Japanese translation of the title (this is displayed as the paper's heading "
+        "in Japanese mode, so keep it a title, not a sentence-form summary). Also write "
+        "abstract_ja: a full, faithful Japanese translation of the abstract (not a summary -- "
+        "translate the whole thing, preserving its structure/sections if it has them). If the "
+        "abstract is empty, set abstract_ja to an empty string and base summary_en/summary_ja "
+        "on the title alone, keeping them brief rather than inventing details. Return exactly "
+        "one result per pmid, "
         "for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
         "Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
@@ -267,13 +274,14 @@ def main():
         if result is None:
             relevance = ""
             reason = "" if not args.claude else "claude_result_missing"
-            summary_en = summary_ja = abstract_ja = ""
+            summary_en = summary_ja = title_ja = abstract_ja = ""
             counts["claude_not_run"] += 1
         else:
             relevance = result.get("relevance", "")
             reason = result.get("relevance_reason", "")
             summary_en = result.get("summary_en", "")
             summary_ja = result.get("summary_ja", "")
+            title_ja = result.get("title_ja", "")
             abstract_ja = result.get("abstract_ja", "")
             counts[relevance] = counts.get(relevance, 0) + 1
 
@@ -281,13 +289,13 @@ def main():
         row_conn[pmid].execute(
             """UPDATE papers SET
                  ai_relevance = ?, ai_relevance_reason = ?, ai_tags = ?,
-                 ai_summary_en = ?, ai_summary_ja = ?, ai_abstract_ja = ?,
+                 ai_summary_en = ?, ai_summary_ja = ?, ai_title_ja = ?, ai_abstract_ja = ?,
                  ai_processed_at = ?, batch_id = ?,
                  relevance_status = COALESCE(?, relevance_status),
                  relevance_reviewed_at = CASE WHEN ? IS NOT NULL THEN ? ELSE relevance_reviewed_at END
                WHERE pmid = ?""",
             (relevance, reason, json.dumps([tags] if tags else [], ensure_ascii=False),
-             summary_en, summary_ja, abstract_ja, now_utc(), batch_id,
+             summary_en, summary_ja, title_ja, abstract_ja, now_utc(), batch_id,
              status, status, now_utc(), pmid),
         )
         if relevance in ("uncertain", "not_relevant"):

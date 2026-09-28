@@ -94,6 +94,7 @@ CREATE TABLE IF NOT EXISTS papers (
   ai_summary_en TEXT,
   ai_summary_ja TEXT,
   ai_abstract_ja TEXT,
+  ai_title_ja TEXT,
   ai_processed_at TEXT,
   batch_id TEXT,
 
@@ -120,6 +121,7 @@ CREATE INDEX IF NOT EXISTS idx_papers_pending
 # already exists, so connect() adds any that are missing on open.
 ADDED_COLUMNS = {
     "ai_abstract_ja": "TEXT",
+    "ai_title_ja": "TEXT",
     "human_review_status": "TEXT",
     "human_review_note": "TEXT",
     "human_reviewed_at": "TEXT",
