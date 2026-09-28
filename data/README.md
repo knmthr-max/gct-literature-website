@@ -98,17 +98,35 @@ Google Driveに保存されている1929〜2026年の一括検索結果(年別ME
    `relevance_status`未設定(pending)で登録する。AI呼び出しは一切行わない、何度再実行しても
    安全な機械的処理
 2. `scripts/process_batch.py --claude` — 実行するたびに、pending中の文献を**発行年が新しい順に
-   (年代シャードをまたいで)`--batch-size`件(既定25件)だけ**取り出し、関連性判定(relevant/uncertain/not_relevant)と
-   和英要約をまとめて1回のAI呼び出しで生成する。タグは既存の`import_medline.py`の`classify()`を
-   再利用し決定的に付与する(AI呼び出し不要)。実行するたびに次のバッチへ進むだけで、
-   それ以上は何もしない、つまりこのコマンドを実行すること自体が「Go」の合図になる
+   (年代シャードをまたいで)`--batch-size`件(既定25件)だけ**取り出し、関連性判定(relevant/uncertain/not_relevant)、
+   和英要約、タイトルの日本語訳(`title_ja`)、抄録全文の日本語訳(`abstract_ja`)をまとめて1回のAI
+   呼び出しで生成する。`title_ja`はサイトの日本語モードで見出しとして使われる(`summary_ja`とは
+   別の役割)ため必須。タグは既存の`import_medline.py`の`classify()`を再利用し決定的に付与する
+   (AI呼び出し不要)。実行するたびに次のバッチへ進むだけで、それ以上は何もしない、つまりこの
+   コマンドを実行すること自体が「Go」の合図になる
 3. AIの判定はそのまま`relevance_status`(`kept`/`needs_review`/`excluded`)へ反映される
    (65件のときのような別途decisions TSV承認は、この規模では非現実的なため省略)。
    バッチ実行後に`uncertain`/`not_relevant`だった項目の一覧が表示されるので、それだけ目を通し、
    誤りがあれば`sqlite3`で該当`pmid`の`relevance_status`/`relevance_note`を直接書き換えれば
    いつでも修正できる(65件の運用と同じ「除外は常に後から復元可能」という方針を踏襲)
-4. このDBから`papers.json`への公開用エクスポート(採用分のみ・実データの絞り込み)は別途実装予定。
-   現時点では取り込み・AI判定までがこの経路の範囲
+4. `relevance_status='kept'`は「AIがGCT関連と判定した」という意味に過ぎず、AIが書いた
+   `summary_en`/`summary_ja`/`title_ja`/`abstract_ja`がそのまま公開して良い品質かどうかは
+   別の判断が必要。そのための人間レビュー→公開ゲートが以下の2ステージ:
+   - `scripts/export_publish_review.py --db-dir ... --review-dir ... --batch-size 25` —
+     `relevance_status='kept'`かつ未公開・未レビューの文献を発行年が新しい順に`--batch-size`件
+     取り出し、`review_<run_id>.html`(内容を確認用)と`decisions_<run_id>.tsv`
+     (`decision`列が`approve`で初期化済み)を出力する。何も公開しない、読み取り専用の処理
+   - `decisions_<run_id>.tsv`の`decision`列を確認・修正する(問題なければ`approve`のまま、
+     出さない方がよければ`reject`、AI生成内容を直したい/直してほしいものは`needs_edit`)。
+     空欄や`needs_edit`を含めそれ以外の値は公開されない(fail-closed)
+   - `scripts/publish_to_site.py --decisions <decisions_tsv> --db-dir ...` — `approve`の行だけ
+     `papers.json`にエントリを追加し(既存PMIDは重複追加しない)、対応するSQLite行に
+     `human_review_status`/`published_to_site`/`published_at`を書き込む。`reject`/`needs_edit`は
+     `human_review_status`に記録されるだけで`papers.json`には反映されない(DB側はいつでも
+     `sqlite3`で修正して再実行可能)
+
+   3ステージ目の実行(実際にバックログを`papers.json`へ反映していくこと)は現状ではまだ
+   小規模な検証のみで、本格的な運用開始は別途判断が必要
 
 ## サイト情報を変える
 
