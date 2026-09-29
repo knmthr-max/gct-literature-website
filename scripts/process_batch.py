@@ -44,6 +44,16 @@ rows, it pulls already-'kept' rows whose ai_title_ja/ai_abstract_ja are
 still empty (batches run before those fields existed) and fills in just
 those two fields via a smaller, cheaper prompt -- relevance/summaries/
 relevance_status are left untouched.
+
+Rows with no abstract (blank, or MEDLINE's literal "No abstract available.")
+are the one exception in both modes: there is no source text to summarize
+or translate, so the AI is only asked for relevance and title_ja, and
+ai_summary_en/ai_summary_ja/ai_abstract_ja are set here to fixed "no
+abstract" sentinels instead -- asking the model anyway just invites content
+grounded in nothing but the title. The sentinels are the same ones
+programs/literature_pipeline and docs/data_dictionary/literature_tsv_v1.md
+already use, and being non-empty they also keep refill from re-selecting
+these rows forever and let export_publish_review.py pick them up.
 """
 import argparse
 import json
@@ -53,6 +63,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -86,6 +97,25 @@ DOMAIN_NOTE = (
     "control) without it being a subject of the paper, is not relevant."
 )
 
+NO_ABSTRACT_SUMMARY_EN = "No abstract available."
+NO_ABSTRACT_JA = "Abstractなし"
+# MEDLINE puts this literal text in AB for some records instead of leaving it blank (one row
+# in the backlog as of this writing). It is not source text, so it must not reach the model as
+# if it were an abstract to translate/summarize.
+ABSTRACT_PLACEHOLDERS = {"no abstract available", "abstract not available"}
+
+# Seconds before the first retry, doubled for each one after. Most call_claude failures are
+# transient (overload/rate limiting); retrying immediately just pays for the same failure again.
+RETRY_BACKOFF_SECONDS = 15
+
+
+def source_abstract(row):
+    """The row's abstract, or "" if it has none (blank or a MEDLINE placeholder)."""
+    text = row["abstract"] or ""
+    if text.strip().strip("[].").strip().lower() in ABSTRACT_PLACEHOLDERS | {""}:
+        return ""
+    return text
+
 
 def now_utc():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
@@ -107,7 +137,7 @@ def terminology_note():
     if not TERMINOLOGY_PATH.is_file():
         return ""
     return (
-        "\n\nWhen writing summary_ja/abstract_ja, use this site's controlled Japanese "
+        "\n\nWhen writing title_ja/summary_ja/abstract_ja, use this site's controlled Japanese "
         "terminology glossary for tumor/pathology names, anatomy, and treatment terms -- "
         "the same English term must always get the same Japanese translation used here:\n"
         + TERMINOLOGY_PATH.read_text(encoding="utf-8")
@@ -177,7 +207,7 @@ def refill_prompt(rows):
         payload.append({
             "pmid": row["pmid"],
             "title": row["title"] or "",
-            "abstract": row["abstract"] or "",
+            "abstract": source_abstract(row),
         })
     return (
         "Each paper below was already confirmed relevant to this germ cell tumor (GCT) "
@@ -203,7 +233,7 @@ def claude_prompt(rows):
             "title": row["title"] or "",
             "journal": row["journal_abbrev"] or row["journal_title"] or "",
             "year": row["publication_year"],
-            "abstract": row["abstract"] or "",
+            "abstract": source_abstract(row),
         })
     return (
         DOMAIN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant) "
@@ -213,10 +243,10 @@ def claude_prompt(rows):
         "in Japanese mode, so keep it a title, not a sentence-form summary). Also write "
         "abstract_ja: a full, faithful Japanese translation of the abstract (not a summary -- "
         "translate the whole thing, preserving its structure/sections if it has them). If the "
-        "abstract is empty, set abstract_ja to an empty string and base summary_en/summary_ja "
-        "on the title alone, keeping them brief rather than inventing details. Return exactly "
-        "one result per pmid, "
-        "for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
+        "abstract is empty, judge relevance and write title_ja from the title alone, and set "
+        "summary_en, summary_ja and abstract_ja to empty strings (there is no source text to "
+        "summarize or translate; they are filled in separately). Return exactly one result "
+        "per pmid, for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
         "Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
         + terminology_note()
@@ -265,25 +295,34 @@ def call_claude(prompt, model="", max_retries=2):
     }
 
     last_error = None
+    # Summed over every attempt, not just the one that succeeds: a failed attempt that got as
+    # far as a response (e.g. error_max_turns) was still billed, and dropping it would make the
+    # cost log under-report exactly the batches that went wrong.
+    total_cost = 0.0
     for attempt in range(1, max_retries + 2):
+        if attempt > 1:
+            time.sleep(RETRY_BACKOFF_SECONDS * 2 ** (attempt - 2))
         completed = subprocess.run(
             command, input=prompt, capture_output=True, text=True, check=False, env=child_env,
         )
+        try:
+            response = json.loads(completed.stdout)
+        except json.JSONDecodeError:
+            response = None
+        if isinstance(response, dict):
+            total_cost += response.get("total_cost_usd") or 0.0
         if completed.returncode:
             last_error = RuntimeError(f"Claude Code failed ({completed.returncode}): {completed.stderr.strip()}")
             print(f"warning: call_claude attempt {attempt} failed to run: {last_error}", file=sys.stderr)
             continue
         try:
-            response = json.loads(completed.stdout)
+            if not isinstance(response, dict):
+                raise ValueError("Claude Code stdout was not a JSON object")
             structured = parse_claude_payload(response)
-        except (json.JSONDecodeError, ValueError) as error:
+        except ValueError as error:
             # Occasionally the model exhausts --max-turns mid tool-use without ever emitting a
             # final text response (subtype often "error_max_turns"); retrying is usually enough.
-            subtype = None
-            try:
-                subtype = json.loads(completed.stdout).get("subtype")
-            except Exception:
-                pass
+            subtype = response.get("subtype") if isinstance(response, dict) else None
             last_error = error
             print(
                 f"warning: call_claude attempt {attempt} could not parse a response "
@@ -292,10 +331,15 @@ def call_claude(prompt, model="", max_retries=2):
             continue
         result = {}
         for item in structured.get("papers", []):
-            result[item["pmid"]] = item
-        return result, response.get("total_cost_usd", 0.0)
+            # str(): a model that returns pmid as a number would otherwise silently miss every
+            # row's lookup in main() after the batch has already been paid for.
+            result[str(item.get("pmid", ""))] = item
+        return result, total_cost
 
-    raise RuntimeError(f"call_claude failed after {max_retries + 1} attempts: {last_error}")
+    raise RuntimeError(
+        f"call_claude failed after {max_retries + 1} attempts "
+        f"(cost_usd spent on them: {total_cost:.4f}): {last_error}"
+    )
 
 
 def main():
@@ -323,7 +367,8 @@ def main():
              "rows whose ai_title_ja/ai_abstract_ja are still empty (i.e. processed by an older "
              "batch, before those fields existed) and fills in just those two fields. Relevance, "
              "summaries, and relevance_status are left untouched -- this only backfills "
-             "translations, it never re-judges relevance.",
+             "translations, it never re-judges relevance. (Exception: rows with no abstract get "
+             "the fixed no-abstract sentinels in abstract_ja and both summaries; see above.)",
     )
     args = parser.parse_args()
 
@@ -364,14 +409,38 @@ def main():
     batch_id = now_utc()
     ai_results = {}
     cost_usd = 0.0
-    if args.claude:
-        prompt = refill_prompt(rows) if args.refill_missing_translations else claude_prompt(rows)
+    if args.refill_missing_translations:
+        # A no-abstract row needs nothing from the AI here unless its title_ja is also missing.
+        ai_rows = [row for row in rows if source_abstract(row) or not (row["ai_title_ja"] or "").strip()]
+    else:
+        ai_rows = rows  # relevance always needs the AI
+    if args.claude and ai_rows:
+        prompt = refill_prompt(ai_rows) if args.refill_missing_translations else claude_prompt(ai_rows)
         ai_results, cost_usd = call_claude(prompt, args.model)
 
     if args.refill_missing_translations:
-        counts = {"filled": 0, "claude_not_run": 0}
+        counts = {"filled": 0, "no_abstract": 0, "claude_not_run": 0}
         for row in rows:
             pmid = row["pmid"]
+            if not args.claude:
+                counts["claude_not_run"] += 1
+                continue  # dry run: report only, never write to the shards
+            if not source_abstract(row):
+                result = ai_results.get(pmid, {})
+                title_ja = result.get("title_ja") or row["ai_title_ja"] or ""
+                if not title_ja:
+                    counts["claude_not_run"] += 1
+                    continue
+                # Summaries too, not just abstract_ja: a no-abstract row's existing summaries were
+                # written by the old prompt from the title alone, which is what this replaces.
+                row_conn[pmid].execute(
+                    "UPDATE papers SET ai_title_ja = ?, ai_abstract_ja = ?, ai_summary_en = ?, "
+                    "ai_summary_ja = ?, ai_processed_at = ?, batch_id = ? WHERE pmid = ?",
+                    (title_ja, NO_ABSTRACT_JA, NO_ABSTRACT_SUMMARY_EN, NO_ABSTRACT_JA,
+                     now_utc(), batch_id, pmid),
+                )
+                counts["no_abstract"] += 1
+                continue
             result = ai_results.get(pmid)
             if result is None:
                 counts["claude_not_run"] += 1
@@ -403,17 +472,19 @@ def main():
             _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd)
         return
 
-    counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "claude_not_run": 0}
+    counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "no_abstract": 0, "claude_not_run": 0}
     digest = []
     for row in rows:
         pmid = row["pmid"]
         tags = classify(json_load(row["publication_types"]))
         result = ai_results.get(pmid)
         if result is None:
-            relevance = ""
-            reason = "" if not args.claude else "claude_result_missing"
-            summary_en = summary_ja = title_ja = abstract_ja = ""
             counts["claude_not_run"] += 1
+            if not args.claude:
+                continue  # dry run: report only, never write to the shards
+            relevance = ""
+            reason = "claude_result_missing"
+            summary_en = summary_ja = title_ja = abstract_ja = ""
         else:
             relevance = result.get("relevance", "")
             reason = result.get("relevance_reason", "")
@@ -422,6 +493,11 @@ def main():
             title_ja = result.get("title_ja", "")
             abstract_ja = result.get("abstract_ja", "")
             counts[relevance] = counts.get(relevance, 0) + 1
+            if not source_abstract(row):
+                # Set here regardless of what the model returned: the prompt asks for empty
+                # strings, but nothing it could put in these fields would be grounded in source text.
+                summary_en, summary_ja, abstract_ja = NO_ABSTRACT_SUMMARY_EN, NO_ABSTRACT_JA, NO_ABSTRACT_JA
+                counts["no_abstract"] += 1
 
         status = DEFAULT_STATUS.get(relevance)  # None (still pending) if claude wasn't run
         row_conn[pmid].execute(
