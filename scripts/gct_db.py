@@ -59,6 +59,16 @@ def shard_path(db_dir: Path, label: str) -> Path:
     return db_dir / shard_filename(label)
 
 
+def jif_reference_files(reference_dir: Path) -> list[Path]:
+    """Per-year JIF reference TSVs (jcr_jif_reference_<year>_v<version>.tsv) under reference_dir.
+
+    The cleaner also writes *_conflicts_v*.tsv there; loading that as reference data would feed
+    excluded, contradictory JIF values back into matching, so a plain *.tsv glob is unsafe.
+    """
+    import re
+    return sorted(p for p in reference_dir.glob("*.tsv") if re.search(r"_\d{4}_v", p.name))
+
+
 def existing_shard_paths(db_dir: Path) -> list[Path]:
     """All shard files that already exist under db_dir, newest era first."""
     paths = []

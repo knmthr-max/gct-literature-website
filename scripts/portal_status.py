@@ -22,7 +22,8 @@ SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-from gct_db import existing_shard_paths  # noqa: E402
+from gct_db import existing_shard_paths, jif_reference_files  # noqa: E402
+from jif_reference_add import pending_raw  # noqa: E402
 
 TRANSLATED = "ai_title_ja IS NOT NULL AND ai_title_ja != '' AND ai_abstract_ja IS NOT NULL AND ai_abstract_ja != ''"
 JIF_STATUS_LABELS = (
@@ -101,7 +102,7 @@ def review_runs(data_dir, shard_paths):
 def reference_summary(data_dir):
     years = Counter()
     files = []
-    for tsv in sorted((data_dir / "reference" / "jif").glob("*.tsv")):
+    for tsv in jif_reference_files(data_dir / "reference" / "jif"):
         with tsv.open(encoding="utf-8", newline="") as f:
             rows = list(csv.DictReader(f, delimiter="\t"))
         files.append((tsv.name, len(rows)))
@@ -175,6 +176,9 @@ def render(data_dir):
         lines.append("参照データがカバーする年: " + "、".join(f"{y}" for y in sorted(years)))
     else:
         lines.append("参照データがありません。")
+    pending = pending_raw(data_dir / "reference" / "jif")
+    if pending:
+        lines += ["", "**未変換のJCR CSV(Actions「5 JIF参照データ追加」で変換)**: " + "、".join(f"`{n}`" for n in pending)]
     lines += ["", "| 照合結果(全文献) | 件数 |", "|---|---:|"]
     known = set()
     for key, label in JIF_STATUS_LABELS:

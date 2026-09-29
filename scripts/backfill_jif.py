@@ -48,7 +48,7 @@ for _path in (SCRIPTS_DIR, PIPELINE_DIR):
     if str(_path) not in sys.path:
         sys.path.insert(0, str(_path))
 
-from gct_db import connect, existing_shard_paths  # noqa: E402
+from gct_db import connect, existing_shard_paths, jif_reference_files  # noqa: E402
 from pipeline import JIFMatcher, jif_tier  # noqa: E402
 
 PAPERS_PATH = ROOT / "data" / "papers.json"
@@ -199,7 +199,7 @@ def run(args):
     shard_paths = existing_shard_paths(args.db_dir)
     if not shard_paths:
         raise SystemExit(f"No shard database files found under {args.db_dir}")
-    references = args.reference or sorted((args.db_dir.parent / "reference" / "jif").glob("*.tsv"))
+    references = args.reference or jif_reference_files(args.db_dir.parent / "reference" / "jif")
     if not references:
         raise SystemExit(
             f"No JIF reference TSV found (looked in {args.db_dir.parent / 'reference' / 'jif'}); pass --reference."
