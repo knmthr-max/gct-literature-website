@@ -245,7 +245,7 @@ def call_claude(prompt, model="", max_retries=2):
         raise RuntimeError("Claude Code executable was not found. Install/login before using --claude.")
     command = [
         "claude", "-p", "Complete the JSON task supplied on standard input.",
-        "--output-format", "json", "--max-turns", "5",
+        "--output-format", "json", "--max-turns", "5", "--no-session-persistence",
     ]
     if model:
         command.extend(["--model", model])
