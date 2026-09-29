@@ -346,6 +346,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--batch-size", type=int, default=25)
+    parser.add_argument(
+        "--pmids",
+        help="Comma-separated PMIDs to process instead of the usual newest-first --batch-size "
+             "selection -- e.g. to fix a small, specific set of rows without touching (or paying "
+             "for) whatever else is next in the queue. Still respects the mode's usual filter "
+             "(relevance_status IS NULL for the normal pass, ='kept' with missing translations "
+             "for --refill-missing-translations): a PMID that doesn't match is silently skipped, "
+             "same as if it weren't in the queue at all. --batch-size is ignored when this is set.",
+    )
     parser.add_argument("--claude", action="store_true", help="Actually call Claude; omit for a structural dry run")
     parser.add_argument(
         "--model", default="claude-haiku-4-5",
@@ -379,26 +388,35 @@ def main():
     shard_conns = {path: connect(path) for path in shard_paths}  # newest era first
 
     if args.refill_missing_translations:
-        select_sql = (
-            "SELECT * FROM papers WHERE relevance_status = 'kept' "
-            "AND (ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '') "
-            "ORDER BY publication_year DESC, pmid DESC LIMIT ?"
+        base_where = (
+            "relevance_status = 'kept' "
+            "AND (ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '')"
         )
         empty_message = "No 'kept' papers with missing ai_title_ja/ai_abstract_ja in any shard. Nothing to do."
     else:
-        select_sql = (
-            "SELECT * FROM papers WHERE relevance_status IS NULL "
-            "ORDER BY publication_year DESC, pmid DESC LIMIT ?"
-        )
+        base_where = "relevance_status IS NULL"
         empty_message = "No pending papers (relevance_status IS NULL) in any shard. Nothing to do."
+
+    pmids = [p.strip() for p in args.pmids.split(",")] if args.pmids else None
+    if pmids:
+        placeholders = ",".join("?" * len(pmids))
+        select_sql = f"SELECT * FROM papers WHERE {base_where} AND pmid IN ({placeholders})"
+        select_params = pmids
+        empty_message = "None of --pmids matched the mode's filter (already done, wrong status, etc.) in any shard."
+    else:
+        select_sql = f"SELECT * FROM papers WHERE {base_where} ORDER BY publication_year DESC, pmid DESC LIMIT ?"
+        select_params = None  # filled in per-shard below (remaining budget)
 
     rows = []
     row_conn = {}  # pmid -> connection, for writing results back to the right shard
     for conn in shard_conns.values():
-        if len(rows) >= args.batch_size:
-            break
-        remaining = args.batch_size - len(rows)
-        for row in conn.execute(select_sql, (remaining,)).fetchall():
+        if pmids:
+            params = select_params  # every shard is checked; a pmid only lives in one
+        else:
+            if len(rows) >= args.batch_size:
+                break
+            params = (args.batch_size - len(rows),)
+        for row in conn.execute(select_sql, params).fetchall():
             rows.append(row)
             row_conn[row["pmid"]] = conn
 
