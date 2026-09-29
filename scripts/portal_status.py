@@ -197,7 +197,7 @@ def render(data_dir):
     if runs:
         lines += ["| run_id | 件数 | 未決定 | 状態 |", "|---|---:|---:|---|"]
         for r in runs[:8]:
-            state = "**未反映(「4 公開反映」で処理)**" if r["undecided"] else "反映済み"
+            state = "**未処理(「4 公開反映」で処理)**" if r["undecided"] else "処理済み"
             lines.append(f"| `{r['run_id']}` | {r['rows']} | {r['undecided']} | {state} |")
     else:
         lines.append("レビュー実行の履歴はありません。")

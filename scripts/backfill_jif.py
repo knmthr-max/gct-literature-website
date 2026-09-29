@@ -245,7 +245,9 @@ def main():
     args = parser.parse_args()
 
     summary, gap_years, gap_journals = run(args)
-    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    # The per-year gap map is printed as a ranked list below (and kept in the saved summary).
+    print(json.dumps({k: v for k, v in summary.items() if k != "fillable_by_adding_jcr_year"},
+                     ensure_ascii=False, indent=2))
     if gap_years:
         print("\n参照データに追加すると埋まる発行年(その年の雑誌がリストにあるのに、その年のJIFが無い行):")
         for year, count in sorted(gap_years.items(), key=lambda kv: -kv[1])[: args.top_gaps]:
