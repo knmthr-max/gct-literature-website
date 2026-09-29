@@ -107,6 +107,9 @@ CREATE TABLE IF NOT EXISTS papers (
   human_reviewed_at TEXT,
 
   jif_tier TEXT,
+  jif_match_status TEXT,
+  jif_reference_version TEXT,
+  jif_matched_at TEXT,
 
   published_to_site INTEGER NOT NULL DEFAULT 0,
   published_at TEXT,
@@ -126,6 +129,9 @@ ADDED_COLUMNS = {
     "human_review_note": "TEXT",
     "human_reviewed_at": "TEXT",
     "published_at": "TEXT",
+    "jif_match_status": "TEXT",
+    "jif_reference_version": "TEXT",
+    "jif_matched_at": "TEXT",
 }
 
 

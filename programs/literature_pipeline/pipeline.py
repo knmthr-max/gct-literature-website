@@ -173,7 +173,11 @@ class JIFMatcher:
             for identifier in (row.get("issn", ""), row.get("eissn", "")):
                 normalized = normalize_issn(identifier)
                 if normalized and year:
-                    self.by_identifier.setdefault((normalized, year), []).append(row)
+                    bucket = self.by_identifier.setdefault((normalized, year), [])
+                    # ISSN == eISSN for some journals; without this the same row lands twice
+                    # and match() reports it as ambiguous_match against itself.
+                    if not any(row is existing for existing in bucket):
+                        bucket.append(row)
             for title_field in ("journal_title", "journal_abbreviation"):
                 title = normalize_title(row.get(title_field, ""))
                 if title and year:
