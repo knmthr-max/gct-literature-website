@@ -34,6 +34,7 @@ import argparse
 import csv
 import html
 import json
+import os
 import pathlib
 import re
 import shutil
@@ -147,12 +148,18 @@ def call_claude(rows, model=""):
         raise RuntimeError("Claude Code executable was not found. Install/login before using --claude.")
     command = [
         "claude", "-p", "Complete the JSON relevance-review task supplied on standard input.",
-        "--output-format", "json", "--max-turns", "3",
+        "--output-format", "json", "--max-turns", "3", "--no-session-persistence",
     ]
     if model:
         command.extend(["--model", model])
+    # Same fix as process_batch.call_claude(): without stripping these, running this from
+    # inside a Claude Code session makes every "one-shot" call resume and grow that session.
+    child_env = {
+        key: value for key, value in os.environ.items()
+        if key not in ("CLAUDE_CODE_SESSION_ID", "CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_REMOTE_SESSION_ID")
+    }
     completed = subprocess.run(
-        command, input=claude_prompt(rows), capture_output=True, text=True, check=False
+        command, input=claude_prompt(rows), capture_output=True, text=True, check=False, env=child_env,
     )
     if completed.returncode:
         raise RuntimeError(f"Claude Code failed ({completed.returncode}): {completed.stderr.strip()}")
