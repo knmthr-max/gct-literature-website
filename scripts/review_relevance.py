@@ -149,6 +149,10 @@ def call_claude(rows, model=""):
     command = [
         "claude", "-p", "Complete the JSON relevance-review task supplied on standard input.",
         "--output-format", "json", "--max-turns", "3", "--no-session-persistence",
+        # Same fix as process_batch.call_claude(): a pure text-in/JSON-out task never needs a
+        # tool, and without this the child could try one (e.g. Bash), get denied (headless -p
+        # has no one to approve it), and burn a turn on that instead of ever answering.
+        "--tools", "", "--strict-mcp-config",
     ]
     if model:
         command.extend(["--model", model])
