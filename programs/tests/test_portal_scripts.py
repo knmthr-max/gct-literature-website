@@ -62,6 +62,16 @@ class PortalScriptTests(unittest.TestCase):
         self.assertIn("| kept のうち和訳(タイトル・抄録)未完了 | 1 |", text)
         self.assertIn("| 公開前レビュー待ち(和訳完了・未公開) | 2 |", text)
 
+    def test_status_lists_raw_jcr_csvs_not_yet_converted(self):
+        with tempfile.TemporaryDirectory() as temp:
+            data_dir, _ = self.make_data(Path(temp))
+            raw = data_dir / "reference" / "jif" / "raw"
+            raw.mkdir(parents=True)
+            (raw / "new_upload.csv").write_text("x", encoding="utf-8")
+            text = load_module("portal_status_test2", SCRIPTS / "portal_status.py").render(data_dir)
+        self.assertIn("未変換のJCR CSV", text)
+        self.assertIn("new_upload.csv", text)
+
     def test_review_export_skips_untranslated_rows_and_writes_markdown(self):
         with tempfile.TemporaryDirectory() as temp:
             data_dir, _ = self.make_data(Path(temp))

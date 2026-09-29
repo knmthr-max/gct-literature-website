@@ -185,6 +185,23 @@ class JIFMatcher:
                     if row not in bucket:
                         bucket.append(row)
 
+    @staticmethod
+    def _collapse_agreeing(candidates: list[dict[str, str]]) -> list[dict[str, str]]:
+        """Rows for the same journal-year that carry the same JIF are one fact, not an ambiguity.
+
+        Happens when a later JCR export adds categories for a year already loaded (a journal listed
+        under several categories appears in both files). Genuinely different JIFs stay separate, so
+        they still report ambiguous_match rather than silently picking one. Of agreeing rows the
+        newest reference_version is kept, so the audit trail points at the latest source.
+        """
+        unique: dict[tuple[str, str], dict[str, str]] = {}
+        for row in candidates:
+            key = (row.get("jif", "").strip(), row.get("jif_data_year", "").strip())
+            current = unique.get(key)
+            if current is None or row.get("reference_version", "") > current.get("reference_version", ""):
+                unique[key] = row
+        return list(unique.values())
+
     def match(self, article: Mapping[str, str]) -> dict[str, str]:
         year = article.get("publication_year", "").strip()
         empty = {field: "" for field in JIF_FIELDS}
@@ -216,6 +233,7 @@ class JIFMatcher:
                         match_key = f"{field}:{title}"
                         break
 
+        candidates = self._collapse_agreeing(candidates)
         if len(candidates) > 1:
             empty["jif_match_status"] = "ambiguous_match"
             empty["jif_match_key"] = match_key

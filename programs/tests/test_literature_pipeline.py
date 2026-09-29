@@ -112,6 +112,21 @@ class LiteraturePipelineTests(unittest.TestCase):
         self.assertEqual(result["jif_match_status"], "exact")
         self.assertEqual(result["jif"], "3.3")
 
+    def test_jif_duplicate_rows_across_reference_files_collapse_only_when_they_agree(self):
+        header = "journal_title\tissn\tjif_data_year\tjif\treference_version\n"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            (root / "onc.tsv").write_text(header + "Test Journal\t1234-5678\t2025\t4.0\tv1\n", encoding="utf-8")
+            (root / "surg.tsv").write_text(header + "Test Journal\t1234-5678\t2025\t4.0\tv2\n", encoding="utf-8")
+            (root / "odd.tsv").write_text(header + "Test Journal\t1234-5678\t2025\t4.5\tv3\n", encoding="utf-8")
+            agree = self.pipeline.JIFMatcher([root / "onc.tsv", root / "surg.tsv"]).match(
+                {"issn": "1234-5678", "publication_year": "2025"})
+            conflict = self.pipeline.JIFMatcher([root / "onc.tsv", root / "odd.tsv"]).match(
+                {"issn": "1234-5678", "publication_year": "2025"})
+        self.assertEqual(agree["jif_match_status"], "exact")
+        self.assertEqual(agree["jif_reference_version"], "v2")
+        self.assertEqual(conflict["jif_match_status"], "ambiguous_match")
+
     def test_search_keywords_keep_mesh_and_author_terms(self):
         result = self.pipeline.search_keywords({
             "mesh_terms": '["Germ Cell Tumor","Humans"]',

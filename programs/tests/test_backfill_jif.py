@@ -48,7 +48,7 @@ class BackfillJifTests(unittest.TestCase):
         conn.close()
         ref_dir = root / "data" / "reference" / "jif"
         ref_dir.mkdir(parents=True)
-        (ref_dir / "jcr_2025.tsv").write_text(
+        (ref_dir / "jcr_jif_reference_2025_vt.tsv").write_text(
             REFERENCE_HEADER + "Alpha J\t1111-1111\t\t2025\t2026\t6.0\tv1\n", encoding="utf-8"
         )
         papers = root / "papers.json"
@@ -102,7 +102,7 @@ class BackfillJifTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))
             self.backfill.run(self.args(db_dir, papers))
-            (ref_dir / "jcr_2024.tsv").write_text(
+            (ref_dir / "jcr_jif_reference_2024_vt.tsv").write_text(
                 REFERENCE_HEADER
                 + "Alpha J\t1111-1111\t\t2024\t2025\t2.0\tv1\n"
                 + "Beta J\t2222-222X\t2222-222X\t2024\t2025\t3.5\tv1\n",
@@ -134,7 +134,7 @@ class BackfillJifTests(unittest.TestCase):
     def test_issn_equal_to_eissn_matches_instead_of_ambiguous(self):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))
-            (ref_dir / "jcr_2024.tsv").write_text(
+            (ref_dir / "jcr_jif_reference_2024_vt.tsv").write_text(
                 REFERENCE_HEADER + "Beta J\t2222-222X\t2222-222X\t2024\t2025\t3.5\tv1\n", encoding="utf-8"
             )
             self.backfill.run(self.args(db_dir, papers))
