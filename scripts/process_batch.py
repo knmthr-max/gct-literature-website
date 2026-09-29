@@ -277,6 +277,13 @@ def call_claude(prompt, model="", max_retries=2):
     command = [
         "claude", "-p", "Complete the JSON task supplied on standard input.",
         "--output-format", "json", "--max-turns", "5", "--no-session-persistence",
+        # This is a pure text-in/JSON-out task; it should never need a tool. Without this, the
+        # child inherits every built-in tool plus whatever MCP servers/CLAUDE.md/settings apply
+        # to the caller, and would occasionally try to use one (e.g. Bash, to write its answer to
+        # a file instead of returning it) -- get denied (headless -p has no one to approve it),
+        # and burn a turn on that instead of ever emitting the final JSON, hitting --max-turns.
+        # Disabling tools entirely removes that failure mode at the source.
+        "--tools", "", "--strict-mcp-config",
     ]
     if model:
         command.extend(["--model", model])
