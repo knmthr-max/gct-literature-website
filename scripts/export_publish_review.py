@@ -6,8 +6,11 @@ process_batch.py already judges relevance and writes AI-authored bilingual
 content (ai_summary_en/ja, ai_abstract_ja). relevance_status='kept' means
 "AI thinks this is in scope" -- it does NOT mean the AI-authored content is
 good enough to publish as-is. This script is the second, separate gate: it
-picks the next --batch-size 'kept' papers not yet reviewed for publish,
-across shards newest publication year first, and writes:
+picks the next --batch-size 'kept' papers not yet reviewed for publish
+(and whose ai_title_ja/ai_abstract_ja are already filled in -- otherwise
+publish_to_site.py would ship an entry with a blank Japanese heading/body;
+run process_batch.py --refill-missing-translations first for any row still
+missing them), across shards newest publication year first, and writes:
 
   - review_<run_id>.html   a human-readable table to skim
   - decisions_<run_id>.tsv one row per paper, decision defaulted to
@@ -101,6 +104,8 @@ def main():
                WHERE relevance_status = 'kept'
                  AND (published_to_site IS NULL OR published_to_site = 0)
                  AND human_review_status IS NULL
+                 AND ai_title_ja IS NOT NULL AND ai_title_ja != ''
+                 AND ai_abstract_ja IS NOT NULL AND ai_abstract_ja != ''
                ORDER BY publication_year DESC, pmid DESC LIMIT ?""",
             (remaining,),
         ).fetchall():

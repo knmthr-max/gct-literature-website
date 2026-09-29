@@ -47,6 +47,7 @@ relevance_status are left untouched.
 """
 import argparse
 import json
+import os
 import pathlib
 import re
 import shutil
@@ -245,14 +246,29 @@ def call_claude(prompt, model="", max_retries=2):
         raise RuntimeError("Claude Code executable was not found. Install/login before using --claude.")
     command = [
         "claude", "-p", "Complete the JSON task supplied on standard input.",
-        "--output-format", "json", "--max-turns", "5",
+        "--output-format", "json", "--max-turns", "5", "--no-session-persistence",
     ]
     if model:
         command.extend(["--model", model])
 
+    # subprocess.run inherits the parent environment by default. When this script itself
+    # runs inside an active Claude Code session (e.g. called from a shell tool during an
+    # interactive session), CLAUDE_CODE_SESSION_ID/CLAUDE_CODE_CHILD_SESSION are set and get
+    # passed straight through, causing the child `claude -p` call to resume that surrounding
+    # session (and its whole history/cache) instead of running as an isolated one-shot call --
+    # confirmed by the child's reported session_id matching the caller's. That caused
+    # intermittent empty-stdout failures and made cost/latency balloon with the caller's
+    # growing transcript. Stripping these env vars forces a genuinely fresh session per call.
+    child_env = {
+        key: value for key, value in os.environ.items()
+        if key not in ("CLAUDE_CODE_SESSION_ID", "CLAUDE_CODE_CHILD_SESSION", "CLAUDE_CODE_REMOTE_SESSION_ID")
+    }
+
     last_error = None
     for attempt in range(1, max_retries + 2):
-        completed = subprocess.run(command, input=prompt, capture_output=True, text=True, check=False)
+        completed = subprocess.run(
+            command, input=prompt, capture_output=True, text=True, check=False, env=child_env,
+        )
         if completed.returncode:
             last_error = RuntimeError(f"Claude Code failed ({completed.returncode}): {completed.stderr.strip()}")
             print(f"warning: call_claude attempt {attempt} failed to run: {last_error}", file=sys.stderr)
