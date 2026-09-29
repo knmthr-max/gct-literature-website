@@ -99,6 +99,19 @@ class LiteraturePipelineTests(unittest.TestCase):
         self.assertEqual(match_2024["jif"], "4.0")
         self.assertEqual(match_2025["jif"], "5.0")
 
+    def test_jif_match_is_not_ambiguous_when_issn_equals_eissn(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reference = Path(temp_dir) / "jif.tsv"
+            reference.write_text(
+                "journal_title\tissn\teissn\tjif_data_year\tjif\n"
+                "Test Journal\t2234-943X\t2234-943X\t2025\t3.3\n",
+                encoding="utf-8",
+            )
+            matcher = self.pipeline.JIFMatcher(reference)
+            result = matcher.match({"issn": "2234-943X", "publication_year": "2025"})
+        self.assertEqual(result["jif_match_status"], "exact")
+        self.assertEqual(result["jif"], "3.3")
+
     def test_search_keywords_keep_mesh_and_author_terms(self):
         result = self.pipeline.search_keywords({
             "mesh_terms": '["Germ Cell Tumor","Humans"]',
