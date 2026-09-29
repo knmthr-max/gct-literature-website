@@ -92,7 +92,14 @@ def main():
     parser.add_argument("--decisions", type=pathlib.Path, required=True)
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--papers", type=pathlib.Path, default=PAPERS_PATH)
+    parser.add_argument("--reject-pmids", default="",
+                        help="Comma-separated PMIDs to reject, overriding the decisions file "
+                             "(so a reviewer needn't hand-edit a TSV). Must all appear in it.")
+    parser.add_argument("--hold-pmids", default="",
+                        help="Comma-separated PMIDs to mark needs_edit (not published), same rules.")
     args = parser.parse_args()
+    reject = {p.strip() for p in args.reject_pmids.split(",") if p.strip()}
+    hold = {p.strip() for p in args.hold_pmids.split(",") if p.strip()}
 
     shard_paths = existing_shard_paths(args.db_dir)
     if not shard_paths:
@@ -105,12 +112,23 @@ def main():
     with args.decisions.open(encoding="utf-8", newline="") as f:
         decisions = list(csv.DictReader(f, delimiter="\t"))
 
+    listed = {(r.get("pmid") or "").strip() for r in decisions}
+    if reject & hold:
+        raise SystemExit(f"PMIDs given both to reject and hold: {sorted(reject & hold)}")
+    if (reject | hold) - listed:
+        # A typo'd PMID would otherwise silently leave that paper approved.
+        raise SystemExit(f"PMIDs not in the decisions file: {sorted((reject | hold) - listed)}")
+
     reviewed_at = now_utc()
     counts = {"published": 0, "rejected": 0, "needs_edit": 0, "already_published": 0, "unknown_pmid": 0}
     for decision_row in decisions:
         pmid = decision_row.get("pmid", "").strip()
         decision = (decision_row.get("decision") or "").strip()
         note = (decision_row.get("note") or "").strip()
+        if pmid in reject:
+            decision, note = "reject", note or "rejected at review"
+        elif pmid in hold:
+            decision, note = "needs_edit", note or "held at review"
 
         row, conn = find_row_and_conn(shard_conns, pmid)
         if row is None:

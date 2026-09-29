@@ -80,6 +80,33 @@ th,td{{border:1px solid #ccd1d8;padding:6px;vertical-align:top;max-width:340px}}
 <tbody>{''.join(table_rows)}</tbody></table></body></html>""", encoding="utf-8")
 
 
+def _md(text):
+    return " ".join(str(text or "").split())
+
+
+def render_review_markdown(path, run_id, rows):
+    """Per-paper blocks rather than a table: reads well in a phone browser on GitHub."""
+    lines = [
+        f"# 公開前レビュー `{run_id}` ({len(rows)}件)", "",
+        "AIが kept と判定した文献です。**却下・保留にしたい文献のPMIDだけ**を控えて、",
+        "Actionsの「4 公開反映」に入力してください(入力しなければ全件が承認されます)。", "",
+    ]
+    for i, row in enumerate(rows, 1):
+        pmid = row["pmid"]
+        journal = row.get("journal_abbrev") or row.get("journal_title") or ""
+        tags = ", ".join(json_load(row.get("ai_tags")))
+        lines += [
+            f"### {i}. [{pmid}](https://pubmed.ncbi.nlm.nih.gov/{pmid}/)  ·  {row.get('publication_year')}  ·  {_md(journal)}"
+            + (f"  ·  {tags}" if tags else "") + f"  ·  JIF: {row.get('jif_tier') or 'unknown'}",
+            "",
+            f"**JA** {_md(row.get('ai_title_ja'))}  ",
+            f"**EN** {_md(row.get('title'))}", "",
+            f"> {_md(row.get('ai_summary_ja'))}", "",
+            f"抄録(和訳・冒頭): {_md((row.get('ai_abstract_ja') or '')[:200])}", "",
+        ]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
@@ -144,10 +171,13 @@ def main():
         writer.writeheader()
         writer.writerows(decision_rows)
     render_review_html(review_path, html_rows)
+    review_md_path = run_dir / f"review_{identifier}.md"
+    render_review_markdown(review_md_path, identifier, rows)
 
     print(json.dumps({"reviewed": len(rows), "run_id": identifier}, ensure_ascii=False, indent=2))
     print(f"wrote: {review_path}")
     print(f"wrote: {decisions_path}")
+    print(f"wrote: {review_md_path}")
     print("Edit the 'decision' column (approve/reject/needs_edit) as needed, then run:")
     print(f"  python3 scripts/publish_to_site.py --decisions {decisions_path} --db-dir {args.db_dir}")
 
