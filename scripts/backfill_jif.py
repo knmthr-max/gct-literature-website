@@ -51,7 +51,7 @@ for _path in (SCRIPTS_DIR, PIPELINE_DIR):
         sys.path.insert(0, str(_path))
 
 from gct_db import connect, existing_shard_paths, jif_reference_files  # noqa: E402
-from pipeline import JIFMatcher, jif_tier, title_keys  # noqa: E402
+from pipeline import JIFMatcher, jif_tier, normalize_title, title_keys  # noqa: E402
 
 PAPERS_PATH = ROOT / "data" / "papers.json"
 KNOWN_TIERS = {"low", "moderate", "high", "very-high"}
@@ -155,7 +155,28 @@ def backfill_db(matcher, shard_conns, allow_downgrade, apply):
     return stats, status_counts, changes, gap_years, gap_journals, tier_by_pmid, db_title_keys
 
 
-def backfill_papers(matcher, papers_path, tier_by_pmid, allow_downgrade, apply):
+def journal_index(shard_conns):
+    """PubMed abbreviation -> (issn, eissn, full title), taken from the DB's own rows.
+
+    A hand-published papers.json entry carries only the abbreviation ("J Urol"), which can't link to
+    a reference row keyed by ISSN or by the full JCR title ("JOURNAL OF UROLOGY"). Any DB row of
+    the same journal knows its ISSN and full title; the most common combination wins.
+    """
+    seen = {}
+    for conn in shard_conns.values():
+        for row in conn.execute(
+            "SELECT journal_abbrev, issn, eissn, journal_title, COUNT(*) AS n FROM papers "
+            "WHERE journal_abbrev IS NOT NULL AND journal_abbrev != '' "
+            "GROUP BY journal_abbrev, issn, eissn, journal_title"
+        ):
+            key = normalize_title(row["journal_abbrev"])
+            entry = (row["issn"] or "", row["eissn"] or "", row["journal_title"] or "")
+            counts = seen.setdefault(key, Counter())
+            counts[entry] += row["n"]
+    return {key: counts.most_common(1)[0][0] for key, counts in seen.items()}
+
+
+def backfill_papers(matcher, papers_path, tier_by_pmid, allow_downgrade, apply, journals=None):
     papers = json.loads(papers_path.read_text(encoding="utf-8"))
     stats = Counter()
     for paper in papers:
@@ -172,9 +193,11 @@ def backfill_papers(matcher, papers_path, tier_by_pmid, allow_downgrade, apply):
             # Hand-published entries that never went through the DB: papers.json has only the
             # PubMed journal abbreviation and year, so this is the same fallback match_jif.py uses.
             journal = paper.get("journal", "")
+            issn, eissn, full_title = (journals or {}).get(normalize_title(journal), ("", "", ""))
+            stats["journal_resolved_via_db"] += bool(issn or eissn or full_title)
             result = matcher.match({
-                "publication_year": str(paper.get("year", "")), "issn": "", "eissn": "",
-                "journal_title": journal, "journal_abbrev": journal,
+                "publication_year": str(paper.get("year", "")), "issn": issn, "eissn": eissn,
+                "journal_title": full_title or journal, "journal_abbrev": journal,
             })
             new_tier = decide(old_tier, result, allow_downgrade)[0]
             stats["journal_name_fallback"] += 1
@@ -232,7 +255,8 @@ def run(args):
     })
     papers_stats = None
     if not args.no_papers and args.papers.is_file():
-        papers_stats = backfill_papers(matcher, args.papers, tier_by_pmid, args.allow_downgrade, args.apply)
+        papers_stats = backfill_papers(matcher, args.papers, tier_by_pmid, args.allow_downgrade, args.apply,
+                                       journal_index(shard_conns))
 
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     summary = {

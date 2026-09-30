@@ -153,6 +153,26 @@ class BackfillJifTests(unittest.TestCase):
             self.backfill.run(self.args(db_dir, papers))
             self.assertEqual(self.tiers(db_dir)["90"], ("moderate", "exact"))
 
+    def test_hand_published_entry_links_through_the_dbs_abbreviation_to_issn_and_title(self):
+        with tempfile.TemporaryDirectory() as temp:
+            db_dir, ref_dir, papers = self.make_env(Path(temp))
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2020s"))
+            conn.execute(
+                "INSERT INTO papers (pmid, publication_year, issn, journal_abbrev, journal_title, ingested_at) "
+                "VALUES ('60', 2020, '3333-3333', 'Delta J', 'The Delta journal : official journal of X', 'x')")
+            conn.commit()
+            conn.close()
+            (ref_dir / "jcr_jif_reference_2025_vtitle.tsv").write_text(
+                REFERENCE_HEADER + "DELTA JOURNAL\t\t\t2025\t2026\t9.0\tv1\n", encoding="utf-8")
+            data = json.loads(papers.read_text(encoding="utf-8"))
+            # not in the DB, and all it knows is the PubMed abbreviation
+            data.append({"id": "hand-2", "pmid": "700", "journal": "Delta J", "year": 2025, "jif_tier": "unknown"})
+            papers.write_text(json.dumps(data), encoding="utf-8")
+            summary, _, _ = self.backfill.run(self.args(db_dir, papers))
+            tier = {p["pmid"]: p["jif_tier"] for p in json.loads(papers.read_text(encoding="utf-8"))}["700"]
+        self.assertEqual(tier, "very-high")
+        self.assertEqual(summary["papers_json"]["journal_resolved_via_db"], 1)  # "Gamma J" has no DB row to resolve from
+
     def test_reports_title_only_reference_journals_that_link_to_nothing(self):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))
