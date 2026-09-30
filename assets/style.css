@@ -103,6 +103,12 @@ body {
   flex: 1;
 }
 
+.jif-note {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
 .filters-label {
   font-size: 0.83rem;
   color: var(--color-text-muted);

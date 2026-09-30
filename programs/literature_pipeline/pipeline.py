@@ -187,6 +187,8 @@ class JIFMatcher:
             missing = [field for field in JIF_REFERENCE_REQUIRED if field not in self.rows[0]]
             if missing:
                 raise ValueError(f"JIF reference lacks required columns: {', '.join(missing)}")
+        years = [int(row["jif_data_year"]) for row in self.rows if row.get("jif_data_year", "").strip().isdigit()]
+        self.latest_data_year = max(years, default=0)
         for row in self.rows:
             year = row.get("jif_data_year", "").strip()
             for identifier in (row.get("issn", ""), row.get("eissn", "")):
@@ -225,6 +227,20 @@ class JIFMatcher:
                 unique[key] = row
         return list(unique.values())
 
+    def _lookup(self, article: Mapping[str, str], year: str) -> tuple[list[dict[str, str]], str]:
+        for field in ("issn", "eissn"):
+            identifier = normalize_issn(article.get(field, ""))
+            if identifier:
+                matches = self.by_identifier.get((identifier, year), [])
+                if matches:
+                    return matches, f"{field}:{identifier}"
+        for field in ("journal_title", "journal_abbrev"):
+            for title in title_keys(article.get(field, "")):
+                matches = self.by_title.get((title, year), [])
+                if matches:
+                    return matches, f"{field}:{title}"
+        return [], ""
+
     def match(self, article: Mapping[str, str]) -> dict[str, str]:
         year = article.get("publication_year", "").strip()
         empty = {field: "" for field in JIF_FIELDS}
@@ -236,26 +252,17 @@ class JIFMatcher:
             empty["jif_match_status"] = "publication_year_missing"
             return empty
 
-        candidates: list[dict[str, str]] = []
-        match_key = ""
-        for field in ("issn", "eissn"):
-            identifier = normalize_issn(article.get(field, ""))
-            if identifier:
-                matches = self.by_identifier.get((identifier, year), [])
-                if matches:
-                    candidates = matches
-                    match_key = f"{field}:{identifier}"
-                    break
-        if not candidates:
-            for field in ("journal_title", "journal_abbrev"):
-                for title in title_keys(article.get(field, "")):
-                    matches = self.by_title.get((title, year), [])
-                    if matches:
-                        candidates = matches
-                        match_key = f"{field}:{title}"
-                        break
-                if candidates:
-                    break
+        candidates, match_key = self._lookup(article, year)
+        status = "exact"
+        if not candidates and year.isdigit() and int(year) > self.latest_data_year:
+            # The JIF of this publication year is not out yet (the newest JCR year is older). Borrow the
+            # journal's previous-year JIF as a provisional value; a later JCR release replaces it with
+            # the confirmed one. Never done for a year that is already covered: there a missing row is a
+            # fact (not indexed / suppressed) and would stay "provisional" forever.
+            prior, prior_key = self._lookup(article, str(int(year) - 1))
+            prior = [row for row in self._collapse_agreeing(prior) if row.get("jif", "").strip()]
+            if len(prior) == 1:
+                candidates, match_key, status = prior, prior_key, "prior_year"
 
         candidates = self._collapse_agreeing(candidates)
         if len(candidates) > 1:
@@ -278,7 +285,7 @@ class JIFMatcher:
             "jcr_release_year": reference.get("jcr_release_year", ""),
             "jif_source": reference.get("source", ""),
             "jif_reference_version": reference.get("reference_version", ""),
-            "jif_match_status": "exact" if reference.get("jif", "").strip() else "suppressed_or_unavailable",
+            "jif_match_status": status if reference.get("jif", "").strip() else "suppressed_or_unavailable",
             "jif_match_key": match_key,
         })
         return empty

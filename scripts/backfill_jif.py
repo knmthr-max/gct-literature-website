@@ -20,6 +20,9 @@ DBにはISSNがあるので papers.json 単独の match_jif.py より照合精�
   - 発行年が1996年以前の文献は、JIFデータが存在しないので「保留(pending_pre1997)」として扱い、
     「不足している年・雑誌」の集計には数えない(旧JCRを入手できれば、参照データに足すだけで埋まる)
   - exact一致した場合は常に上書きする(JCRの再公開でJIFが変わった場合の追随)。
+  - 発行年が「参照データにある最新のJIF年」より新しい文献(その年のJIFが未公開)は、その雑誌の前年JIFを
+    暫定値として借りる(prior_year)。その年のJIFを参照データに追加して再実行すると確定値(exact)に置き換わる。
+    既にJIFが公開済みの年に該当行が無い場合は借りない(その年は非収載・非開示という事実のため)。
 
 使い方:
     # 1. 何が埋まるかの確認(書き込みなし)
@@ -81,7 +84,7 @@ def decide(old_tier, result, allow_downgrade):
     keep_existing=True means the stored jif_* columns must be left untouched.
     """
     status = result["jif_match_status"]
-    if status == "exact":
+    if status in ("exact", "prior_year"):  # prior_year: latest year's JIF not out yet, previous year borrowed
         return jif_tier(result["jif"]), status, result["jif_reference_version"], False
     if old_tier in KNOWN_TIERS and not allow_downgrade:
         return old_tier, status, "", True
@@ -306,6 +309,10 @@ def main():
     if pending:
         print(f"\n保留(Pending): {FIRST_JIF_YEAR - 1}年以前の文献 {pending:,}件 "
               "(Clarivate JIFが存在しないため、上の不足には数えていません。旧JCRを入手できれば対応)")
+    provisional = summary["match_status"].get("prior_year", 0)
+    if provisional:
+        print(f"\n暫定: その年のJIFが未公開のため前年JIFで代用した文献 {provisional:,}件 "
+              "(その年のJIFを参照データに追加して再実行すると確定値に置き換わります)")
     if summary["unlinked_reference_journals"]:
         print("\n参照データにあるが、DBのどの雑誌とも紐付かない雑誌(DBに該当論文が無いか、誌名の表記違い。要確認):")
         for name in summary["unlinked_reference_journals"]:

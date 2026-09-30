@@ -28,6 +28,7 @@ from jif_reference_add import pending_raw, tidy_needed  # noqa: E402
 TRANSLATED = "ai_title_ja IS NOT NULL AND ai_title_ja != '' AND ai_abstract_ja IS NOT NULL AND ai_abstract_ja != ''"
 JIF_STATUS_LABELS = (
     ("exact", "照合済み(tier確定)"),
+    ("prior_year", "暫定(その年のJIF未公開のため前年JIFで代用。公開後に確定値へ置換)"),
     ("year_not_found", "その年のJIFが参照データに無い"),
     ("journal_not_found", "雑誌が参照データに無い"),
     ("ambiguous_match", "曖昧一致"),
