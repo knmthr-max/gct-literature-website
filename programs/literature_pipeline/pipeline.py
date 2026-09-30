@@ -180,6 +180,7 @@ class JIFMatcher:
         self.rows: list[dict[str, str]] = []
         self.by_identifier: dict[tuple[str, str], list[dict[str, str]]] = {}
         self.by_title: dict[tuple[str, str], list[dict[str, str]]] = {}
+        self.titles_seen: set[str] = set()
         for reference_path in self.reference_paths:
             reference_rows = read_tsv(reference_path)
             self.rows.extend(reference_rows)
@@ -201,6 +202,7 @@ class JIFMatcher:
                         bucket.append(row)
             for title_field in ("journal_title", "journal_abbreviation"):
                 for title in title_keys(row.get(title_field, "")):
+                    self.titles_seen.add(title)
                     if year:
                         bucket = self.by_title.setdefault((title, year), [])
                         if row not in bucket:
@@ -274,6 +276,10 @@ class JIFMatcher:
             journal_exists = any(
                 identifier and any(key[0] == identifier for key in self.by_identifier)
                 for identifier in identifiers
+            ) or any(  # title-only references (single-journal "All Years" exports carry no ISSN)
+                title in self.titles_seen
+                for field in ("journal_title", "journal_abbrev")
+                for title in title_keys(article.get(field, ""))
             )
             empty["jif_match_status"] = "year_not_found" if journal_exists else "journal_not_found"
             return empty

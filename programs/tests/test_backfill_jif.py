@@ -217,6 +217,15 @@ class BackfillJifTests(unittest.TestCase):
             summary, _, _ = self.backfill.run(self.args(db_dir, papers, apply=False))
         self.assertEqual(summary["unlinked_reference_journals"], ["Nowhere Journal"])
 
+    def test_journal_known_only_by_title_reports_missing_year_not_missing_journal(self):
+        with tempfile.TemporaryDirectory() as temp:
+            db_dir, ref_dir, papers = self.make_env(Path(temp))
+            (ref_dir / "jcr_jif_reference_2025_vtitle.tsv").write_text(
+                "journal_title\tissn\teissn\tjif_data_year\tjif\nBETA J\t\t\t2025\t1.0\n", encoding="utf-8")
+            self.backfill.run(self.args(db_dir, papers))
+            # pmid 3 is Beta J 2024: the journal is in the reference (by title), only that year is missing
+            self.assertEqual(self.tiers(db_dir)["3"], ("unknown", "year_not_found"))
+
     def test_issn_equal_to_eissn_matches_instead_of_ambiguous(self):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))
