@@ -32,6 +32,7 @@ JIF_STATUS_LABELS = (
     ("journal_not_found", "雑誌が参照データに無い"),
     ("ambiguous_match", "曖昧一致"),
     ("suppressed_or_unavailable", "JIF非開示"),
+    ("pending_pre1997", "保留: 1996年以前(JIFデータが存在しない。旧JCRを入手できれば対応)"),
 )
 
 
