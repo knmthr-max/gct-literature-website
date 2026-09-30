@@ -33,6 +33,7 @@ import re
 import shutil
 import subprocess
 import sys
+from decimal import Decimal, InvalidOperation
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
@@ -214,7 +215,11 @@ class JIFMatcher:
         """
         unique: dict[tuple[str, str], dict[str, str]] = {}
         for row in candidates:
-            key = (row.get("jif", "").strip(), row.get("jif_data_year", "").strip())
+            try:
+                jif = str(Decimal(row.get("jif", "").strip()).normalize())  # "2" and "2.0" agree
+            except InvalidOperation:
+                jif = row.get("jif", "").strip()
+            key = (jif, row.get("jif_data_year", "").strip())
             current = unique.get(key)
             if current is None or row.get("reference_version", "") > current.get("reference_version", ""):
                 unique[key] = row
