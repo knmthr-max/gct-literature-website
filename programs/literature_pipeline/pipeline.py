@@ -122,6 +122,24 @@ def normalize_title(value: str) -> str:
     return re.sub(r"[^a-z0-9]", "", (value or "").casefold())
 
 
+def loose_title(value: str) -> str:
+    """Journal-title key that survives PubMed's decorations.
+
+    PubMed stores "The Journal of urology" and "Journal of clinical oncology : official journal of
+    the American Society of Clinical Oncology", while JCR (and the ISSN-less All Years exports,
+    which match on title alone) say "JOURNAL OF UROLOGY". Drop a leading "The" and everything
+    after a colon, and treat "&" as "and".
+    """
+    text = (value or "").split(":")[0] or (value or "")
+    text = re.sub(r"^\s*the\s+", "", text, flags=re.IGNORECASE).replace("&", " and ")
+    return normalize_title(text)
+
+
+def title_keys(value: str) -> tuple[str, ...]:
+    """Strict key first, then the loose one (deduplicated, empty keys dropped)."""
+    return tuple(dict.fromkeys(key for key in (normalize_title(value), loose_title(value)) if key))
+
+
 def json_list(value: str) -> list[str]:
     if not value:
         return []
@@ -179,11 +197,11 @@ class JIFMatcher:
                     if not any(row is existing for existing in bucket):
                         bucket.append(row)
             for title_field in ("journal_title", "journal_abbreviation"):
-                title = normalize_title(row.get(title_field, ""))
-                if title and year:
-                    bucket = self.by_title.setdefault((title, year), [])
-                    if row not in bucket:
-                        bucket.append(row)
+                for title in title_keys(row.get(title_field, "")):
+                    if year:
+                        bucket = self.by_title.setdefault((title, year), [])
+                        if row not in bucket:
+                            bucket.append(row)
 
     @staticmethod
     def _collapse_agreeing(candidates: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -225,13 +243,14 @@ class JIFMatcher:
                     break
         if not candidates:
             for field in ("journal_title", "journal_abbrev"):
-                title = normalize_title(article.get(field, ""))
-                if title:
+                for title in title_keys(article.get(field, "")):
                     matches = self.by_title.get((title, year), [])
                     if matches:
                         candidates = matches
                         match_key = f"{field}:{title}"
                         break
+                if candidates:
+                    break
 
         candidates = self._collapse_agreeing(candidates)
         if len(candidates) > 1:

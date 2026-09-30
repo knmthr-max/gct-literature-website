@@ -131,6 +131,18 @@ class BackfillJifTests(unittest.TestCase):
             self.backfill.run(self.args(db_dir, papers, reference=[empty_ref], allow_downgrade=True))
             self.assertEqual(self.tiers(db_dir)["1"][0], "unknown")
 
+    def test_reports_title_only_reference_journals_that_link_to_nothing(self):
+        with tempfile.TemporaryDirectory() as temp:
+            db_dir, ref_dir, papers = self.make_env(Path(temp))
+            (ref_dir / "jcr_jif_reference_2025_vtitle.tsv").write_text(
+                "journal_title\tissn\teissn\tjif_data_year\tjif\n"
+                "THE ALPHA J\t\t\t2025\t7.0\n"
+                "Nowhere Journal\t\t\t2025\t1.0\n",
+                encoding="utf-8",
+            )
+            summary, _, _ = self.backfill.run(self.args(db_dir, papers, apply=False))
+        self.assertEqual(summary["unlinked_reference_journals"], ["Nowhere Journal"])
+
     def test_issn_equal_to_eissn_matches_instead_of_ambiguous(self):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))

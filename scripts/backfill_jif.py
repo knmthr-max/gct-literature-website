@@ -49,7 +49,7 @@ for _path in (SCRIPTS_DIR, PIPELINE_DIR):
         sys.path.insert(0, str(_path))
 
 from gct_db import connect, existing_shard_paths, jif_reference_files  # noqa: E402
-from pipeline import JIFMatcher, jif_tier  # noqa: E402
+from pipeline import JIFMatcher, jif_tier, title_keys  # noqa: E402
 
 PAPERS_PATH = ROOT / "data" / "papers.json"
 KNOWN_TIERS = {"low", "moderate", "high", "very-high"}
@@ -89,6 +89,7 @@ def backfill_db(matcher, shard_conns, allow_downgrade, apply):
     gap_years = Counter()
     gap_journals = Counter()
     tier_by_pmid = {}
+    db_title_keys = set()
 
     for shard_path, conn in shard_conns.items():
         shard = shard_path.stem.replace("gct_literature_", "")
@@ -106,6 +107,8 @@ def backfill_db(matcher, shard_conns, allow_downgrade, apply):
                 "journal_abbrev": row["journal_abbrev"] or "",
             })
             status_counts[result["jif_match_status"]] += 1
+            db_title_keys.update(title_keys(row["journal_title"] or ""))
+            db_title_keys.update(title_keys(row["journal_abbrev"] or ""))
             tier, status, version, keep_existing = decide(row["jif_tier"], result, allow_downgrade)
             tier_by_pmid[row["pmid"]] = tier
             stats["rows"] += 1
@@ -140,7 +143,7 @@ def backfill_db(matcher, shard_conns, allow_downgrade, apply):
                 updates,
             )
             conn.commit()
-    return stats, status_counts, changes, gap_years, gap_journals, tier_by_pmid
+    return stats, status_counts, changes, gap_years, gap_journals, tier_by_pmid, db_title_keys
 
 
 def backfill_papers(matcher, papers_path, tier_by_pmid, allow_downgrade, apply):
@@ -207,9 +210,17 @@ def run(args):
     matcher = JIFMatcher(references)
     shard_conns = {path: connect(path) for path in shard_paths}
 
-    stats, status_counts, changes, gap_years, gap_journals, tier_by_pmid = backfill_db(
+    stats, status_counts, changes, gap_years, gap_journals, tier_by_pmid, db_title_keys = backfill_db(
         matcher, shard_conns, args.allow_downgrade, args.apply
     )
+    # Reference journals that carry no ISSN (single-journal All Years exports) link by title alone.
+    # One whose title matches no journal in the DB is either a journal with no papers here, or a
+    # naming mismatch -- surface it so a silent non-link doesn't look like "no JIF exists".
+    unlinked = sorted({
+        row["journal_title"] for row in matcher.rows
+        if not (row.get("issn", "").strip() or row.get("eissn", "").strip())
+        and not set(title_keys(row["journal_title"])) & db_title_keys
+    })
     papers_stats = None
     if not args.no_papers and args.papers.is_file():
         papers_stats = backfill_papers(matcher, args.papers, tier_by_pmid, args.allow_downgrade, args.apply)
@@ -221,6 +232,7 @@ def run(args):
         "db": dict(stats), "match_status": dict(status_counts),
         "papers_json": dict(papers_stats) if papers_stats else None,
         "fillable_by_adding_jcr_year": dict(sorted((str(y), n) for y, n in gap_years.items())),
+        "unlinked_reference_journals": unlinked,
     }
     if args.apply:
         audit_dir = args.audit_dir or (args.db_dir.parent / "processed" / "jif_backfill")
@@ -246,7 +258,8 @@ def main():
 
     summary, gap_years, gap_journals = run(args)
     # The per-year gap map is printed as a ranked list below (and kept in the saved summary).
-    print(json.dumps({k: v for k, v in summary.items() if k != "fillable_by_adding_jcr_year"},
+    print(json.dumps({k: v for k, v in summary.items()
+                     if k not in ("fillable_by_adding_jcr_year", "unlinked_reference_journals")},
                      ensure_ascii=False, indent=2))
     if gap_years:
         print("\n参照データに追加すると埋まる発行年(その年の雑誌がリストにあるのに、その年のJIFが無い行):")
@@ -256,6 +269,10 @@ def main():
         print("\n参照データに存在しない雑誌(件数上位):")
         for (name, issn), count in gap_journals.most_common(args.top_gaps):
             print(f"  {count:5d}  {name} [{issn}]")
+    if summary["unlinked_reference_journals"]:
+        print("\n参照データにあるが、DBのどの雑誌とも紐付かない雑誌(DBに該当論文が無いか、誌名の表記違い。要確認):")
+        for name in summary["unlinked_reference_journals"]:
+            print(f"  {name}")
     if not args.apply:
         print("\n(ドライラン: 何も書き込んでいません。反映するには --apply)")
 
