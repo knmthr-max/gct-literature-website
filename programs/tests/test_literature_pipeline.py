@@ -127,6 +127,29 @@ class LiteraturePipelineTests(unittest.TestCase):
         self.assertEqual(agree["jif_reference_version"], "v2")
         self.assertEqual(conflict["jif_match_status"], "ambiguous_match")
 
+    def test_title_only_reference_links_to_pubmed_decorated_titles(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reference = Path(temp_dir) / "jif.tsv"
+            reference.write_text(
+                "journal_title\tissn\teissn\tjif_data_year\tjif\n"
+                "JOURNAL OF UROLOGY\t\t\t2020\t5.9\n"
+                "JOURNAL OF CLINICAL ONCOLOGY\t\t\t2020\t44.5\n"
+                "UROLOGY\t\t\t2020\t2.6\n"
+                "Urology Case Reports\t\t\t2020\t0.4\n",
+                encoding="utf-8",
+            )
+            matcher = self.pipeline.JIFMatcher(reference)
+            def status(title, abbrev=""):
+                return matcher.match({"publication_year": "2020", "journal_title": title, "journal_abbrev": abbrev})
+            self.assertEqual(status("The Journal of urology", "J Urol")["jif"], "5.9")
+            self.assertEqual(status(
+                "Journal of clinical oncology : official journal of the American Society of Clinical Oncology"
+            )["jif"], "44.5")
+            # a different journal whose name merely starts with the same words must not link
+            self.assertEqual(status("Urology")["jif"], "2.6")
+            self.assertEqual(status("Urology case reports")["jif"], "0.4")
+            self.assertEqual(status("Urologic oncology")["jif_match_status"], "journal_not_found")
+
     def test_search_keywords_keep_mesh_and_author_terms(self):
         result = self.pipeline.search_keywords({
             "mesh_terms": '["Germ Cell Tumor","Humans"]',
