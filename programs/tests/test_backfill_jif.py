@@ -131,6 +131,28 @@ class BackfillJifTests(unittest.TestCase):
             self.backfill.run(self.args(db_dir, papers, reference=[empty_ref], allow_downgrade=True))
             self.assertEqual(self.tiers(db_dir)["1"][0], "unknown")
 
+    def test_pre_1997_papers_are_pending_not_counted_as_gaps(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            db_dir, ref_dir, papers = self.make_env(root)
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2020s"))
+            for pmid, year, issn in (("90", 1990, "1111-1111"), ("91", 1985, "7777-7777")):
+                conn.execute(
+                    "INSERT INTO papers (pmid, publication_year, issn, journal_abbrev, journal_title, ingested_at) "
+                    "VALUES (?, ?, ?, 'Old J', 'Old J', 'x')", (pmid, year, issn))
+            conn.commit()
+            conn.close()
+            summary, gap_years, gap_journals = self.backfill.run(self.args(db_dir, papers))
+            self.assertEqual(summary["match_status"].get("pending_pre1997"), 2)
+            self.assertNotIn(1990, gap_years)
+            self.assertNotIn(("Old J", "7777-7777"), gap_journals)
+            self.assertEqual(self.tiers(db_dir)["90"], ("unknown", "pending_pre1997"))
+            # once old JCR data exists for that year, the same run fills it in
+            (ref_dir / "jcr_jif_reference_1990_vold.tsv").write_text(
+                REFERENCE_HEADER + "Alpha J\t1111-1111\t\t1990\t1991\t1.5\told\n", encoding="utf-8")
+            self.backfill.run(self.args(db_dir, papers))
+            self.assertEqual(self.tiers(db_dir)["90"], ("moderate", "exact"))
+
     def test_reports_title_only_reference_journals_that_link_to_nothing(self):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))

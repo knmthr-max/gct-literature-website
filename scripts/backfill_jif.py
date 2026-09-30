@@ -17,6 +17,8 @@ DBにはISSNがあるので papers.json 単独の match_jif.py より照合精�
   - 既に既知のtier(low/moderate/high/very-high)が入っている行は、今回の参照データで
     照合できなくても "unknown" に戻さない(参照TSVを一部だけ指定して実行した時に、
     過去の結果を消さないため)。戻したい場合のみ --allow-downgrade。
+  - 発行年が1996年以前の文献は、JIFデータが存在しないので「保留(pending_pre1997)」として扱い、
+    「不足している年・雑誌」の集計には数えない(旧JCRを入手できれば、参照データに足すだけで埋まる)
   - exact一致した場合は常に上書きする(JCRの再公開でJIFが変わった場合の追随)。
 
 使い方:
@@ -54,6 +56,11 @@ from pipeline import JIFMatcher, jif_tier, title_keys  # noqa: E402
 PAPERS_PATH = ROOT / "data" / "papers.json"
 KNOWN_TIERS = {"low", "moderate", "high", "very-high"}
 PUBLIC_TIERS = KNOWN_TIERS | {"unknown"}
+# Clarivate's JIF data starts with data year 1997. Older papers can't be filled by adding more
+# current JCR exports, so they are parked as "pending" (not counted as a gap to close) until old
+# JCR volumes are obtained; if such data is ever added, matching them is automatic (exact wins).
+FIRST_JIF_YEAR = 1997
+PENDING_PRE_JIF = "pending_pre1997"
 GAP_STATUSES = ("year_not_found", "journal_not_found", "ambiguous_match", "suppressed_or_unavailable")
 
 CHANGES_HEADER = (
@@ -106,6 +113,8 @@ def backfill_db(matcher, shard_conns, allow_downgrade, apply):
                 "journal_title": row["journal_title"] or "",
                 "journal_abbrev": row["journal_abbrev"] or "",
             })
+            if result["jif_match_status"] != "exact" and year and year < FIRST_JIF_YEAR:
+                result = {**result, "jif_match_status": PENDING_PRE_JIF}
             status_counts[result["jif_match_status"]] += 1
             db_title_keys.update(title_keys(row["journal_title"] or ""))
             db_title_keys.update(title_keys(row["journal_abbrev"] or ""))
@@ -269,6 +278,10 @@ def main():
         print("\n参照データに存在しない雑誌(件数上位):")
         for (name, issn), count in gap_journals.most_common(args.top_gaps):
             print(f"  {count:5d}  {name} [{issn}]")
+    pending = summary["match_status"].get(PENDING_PRE_JIF, 0)
+    if pending:
+        print(f"\n保留(Pending): {FIRST_JIF_YEAR - 1}年以前の文献 {pending:,}件 "
+              "(Clarivate JIFが存在しないため、上の不足には数えていません。旧JCRを入手できれば対応)")
     if summary["unlinked_reference_journals"]:
         print("\n参照データにあるが、DBのどの雑誌とも紐付かない雑誌(DBに該当論文が無いか、誌名の表記違い。要確認):")
         for name in summary["unlinked_reference_journals"]:
