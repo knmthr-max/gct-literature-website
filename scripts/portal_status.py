@@ -23,7 +23,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from gct_db import existing_shard_paths, jif_reference_files  # noqa: E402
-from jif_reference_add import pending_raw  # noqa: E402
+from jif_reference_add import pending_raw, tidy_needed  # noqa: E402
 
 TRANSLATED = "ai_title_ja IS NOT NULL AND ai_title_ja != '' AND ai_abstract_ja IS NOT NULL AND ai_abstract_ja != ''"
 JIF_STATUS_LABELS = (
@@ -172,9 +172,11 @@ def render(data_dir):
     files, years = reference_summary(data_dir)
     lines += ["", "## JIF(インパクトファクター)", ""]
     if files:
-        lines.append("参照データ: " + "、".join(f"`{name}`({n}誌)" for name, n in files))
+        lines.append(f"参照データ: {len(files)}ファイル / {sum(n for _, n in files):,}行(年ごとに1ファイル)")
         lines.append("")
         lines.append("参照データがカバーする年: " + "、".join(f"{y}" for y in sorted(years)))
+        if tidy_needed(data_dir / "reference" / "jif"):
+            lines += ["", "**整理待ちのファイルがあります**(Actions「5 JIF参照データ追加」を実行すると年ごとに1つへ統合されます)"]
     else:
         lines.append("参照データがありません。")
     pending = pending_raw(data_dir / "reference" / "jif")

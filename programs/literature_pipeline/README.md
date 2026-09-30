@@ -13,6 +13,12 @@ python3 programs/literature_pipeline/jif_reference_cleaner.py \
   data/reference/jif/raw
 ```
 
+> The data repository does not run this cleaner directly. `scripts/jif_reference_add.py` runs it on
+> the not-yet-processed CSVs in a scratch folder and merges the result with the existing TSVs into
+> one `jcr_jif_reference_<year>_vmerged.tsv` per year, so repeated runs never multiply files. Rows
+> that state the same JIF are one fact (`2` equals `2.0`); different values for the same
+> journal-year are left out and listed in `jcr_jif_reference_conflicts_vmerged.tsv`.
+
 `--reference-version`, `--jcr-release-year`, `--license-note`, and
 `--output-dir` are all optional as of `1.2.1`: the reference version defaults
 to today's date, the JCR release year is inferred from the Clarivate

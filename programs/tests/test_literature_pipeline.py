@@ -69,6 +69,20 @@ class LiteraturePipelineTests(unittest.TestCase):
         self.assertEqual(references, {})
         self.assertEqual(len(conflicts), 2)
 
+    def test_jcr_cleaner_treats_2_and_2_point_0_as_the_same_jif(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            first = Path(temp_dir) / "first.csv"
+            second = Path(temp_dir) / "second.csv"
+            header = 'Journal name,JCR Abbreviation,ISSN,eISSN,2024 JIF\n'
+            first.write_text(header + 'Example Journal,EX J,1234-5678,,2\n', encoding="utf-8")
+            second.write_text(header + 'Example Journal,EX J,1234-5678,,2.0\n', encoding="utf-8")
+            references, conflicts = self.jif_cleaner.build_reference_rows(
+                [first, second], jcr_release_year="2026", source="JCR", reference_version="test-v1",
+                retrieved_at="2026-07-23", license_note="internal only",
+            )
+        self.assertEqual(len(references["2024"]), 1)
+        self.assertEqual(conflicts, [])
+
     def test_jif_match_requires_same_publication_year(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             reference = Path(temp_dir) / "jif.tsv"

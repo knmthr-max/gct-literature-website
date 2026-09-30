@@ -22,6 +22,7 @@ import re
 import sys
 from collections import defaultdict
 from datetime import date
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Iterable, Optional, Sequence
 
@@ -107,6 +108,14 @@ def read_csv_rows(path: Path) -> list[list[str]]:
 
 def row_value(row: Sequence[str], index: int) -> str:
     return row[index].strip() if index < len(row) else ""
+
+
+def jif_number(value: str) -> str:
+    """Canonical form for comparing JIF strings: "2" and "2.0" are the same value."""
+    try:
+        return str(Decimal(value.strip()).normalize())
+    except InvalidOperation:
+        return value.strip()
 
 
 def is_available_jif(value: str) -> bool:
@@ -252,7 +261,7 @@ def build_reference_rows(
     output: dict[str, list[dict[str, str]]] = defaultdict(list)
     conflicts: list[dict[str, str]] = []
     for (jif_year, key), rows in grouped.items():
-        values = {row["jif"] for row in rows}
+        values = {jif_number(row["jif"]) for row in rows}
         if len(values) != 1:
             for row in rows:
                 conflicts.append(
