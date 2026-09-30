@@ -63,7 +63,7 @@ def main():
         status = result["jif_match_status"]
         status_counts[status] = status_counts.get(status, 0) + 1
 
-        tier = jif_tier(result["jif"]) if status == "exact" else "unknown"
+        tier = jif_tier(result["jif"]) if status in ("exact", "prior_year") else "unknown"
         paper["jif_tier"] = tier
 
         audit_rows.append({
