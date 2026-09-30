@@ -120,6 +120,8 @@
     }
   }
 
+  const haystacks = new WeakMap();
+
   function matches(paper) {
     if (state.activeTags.size > 0) {
       const tags = paper.tags || [];
@@ -132,12 +134,17 @@
     }
     if (!state.query) return true;
     const q = state.query.toLowerCase();
-    const haystack = [
-      paper.title, paper.title_ja, paper.journal,
-      paper.summary_en, paper.summary_ja, paper.abstract, paper.abstract_ja,
-      ...(paper.authors || []), ...(paper.tags || []),
-      String(paper.year || ""), paper.pmid, paper.doi,
-    ].filter(Boolean).join(" ").toLowerCase();
+    // 検索対象の文字列は論文ごとに1度だけ作る(入力のたびに全件分を作り直さない)
+    let haystack = haystacks.get(paper);
+    if (haystack === undefined) {
+      haystack = [
+        paper.title, paper.title_ja, paper.journal,
+        paper.summary_en, paper.summary_ja, paper.abstract, paper.abstract_ja,
+        ...(paper.authors || []), ...(paper.tags || []),
+        String(paper.year || ""), paper.pmid, paper.doi,
+      ].filter(Boolean).join(" ").toLowerCase();
+      haystacks.set(paper, haystack);
+    }
     return haystack.includes(q);
   }
 
@@ -212,13 +219,38 @@
       </article>`;
   }
 
+  // 一覧は PAGE_SIZE 件ずつ描画し、「もっと見る」で追加する(件数が増えても描画コストを一定に保つ)。
+  // 絞り込み・並び替え・検索が変わると先頭から描き直し、「もっと見る」では続きだけを追記する
+  // (追記なので、開いている抄録の状態は保たれる)
+  const PAGE_SIZE = 50;
+  let shown = [];
+  let shownCount = 0;
+
+  function renderMoreButton() {
+    const remaining = shown.length - shownCount;
+    const btn = $("load-more");
+    btn.hidden = remaining <= 0;
+    btn.textContent = LANG === "en"
+      ? `Show more (${remaining} remaining)`
+      : `もっと見る(残り${remaining}件)`;
+  }
+
   function renderList() {
-    const filtered = sortPapers(state.papers.filter(matches));
-    $("paper-list").innerHTML = filtered.map(paperCard).join("");
-    $("empty-message").hidden = filtered.length > 0;
+    shown = sortPapers(state.papers.filter(matches));
+    shownCount = Math.min(PAGE_SIZE, shown.length);
+    $("paper-list").innerHTML = shown.slice(0, shownCount).map(paperCard).join("");
+    $("empty-message").hidden = shown.length > 0;
     $("result-count").textContent = LANG === "en"
-      ? `${filtered.length} of ${state.papers.length} results`
-      : `${filtered.length}件 / 全${state.papers.length}件`;
+      ? `${shown.length} of ${state.papers.length} results`
+      : `${shown.length}件 / 全${state.papers.length}件`;
+    renderMoreButton();
+  }
+
+  function renderMore() {
+    const next = Math.min(shownCount + PAGE_SIZE, shown.length);
+    $("paper-list").insertAdjacentHTML("beforeend", shown.slice(shownCount, next).map(paperCard).join(""));
+    shownCount = next;
+    renderMoreButton();
   }
 
   async function init() {
@@ -226,6 +258,7 @@
       state.query = e.target.value.trim();
       renderList();
     });
+    $("load-more").addEventListener("click", renderMore);
     $("sort-select").addEventListener("change", (e) => {
       state.sort = e.target.value;
       renderList();
