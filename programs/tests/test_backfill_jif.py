@@ -153,6 +153,38 @@ class BackfillJifTests(unittest.TestCase):
             self.backfill.run(self.args(db_dir, papers))
             self.assertEqual(self.tiers(db_dir)["90"], ("moderate", "exact"))
 
+    def test_latest_year_borrows_previous_year_jif_and_is_replaced_when_the_year_is_published(self):
+        with tempfile.TemporaryDirectory() as temp:
+            db_dir, ref_dir, papers = self.make_env(Path(temp))
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2020s"))
+            for pmid, year, issn in (("70", 2026, "1111-1111"), ("71", 2026, "9999-9999"), ("72", 2023, "5555-5555")):
+                conn.execute(
+                    "INSERT INTO papers (pmid, publication_year, issn, journal_abbrev, journal_title, ingested_at) "
+                    "VALUES (?, ?, ?, 'X J', 'X J', 'x')", (pmid, year, issn))
+            conn.commit()
+            conn.close()
+            # Alpha J (1111-1111) has 2025 = 6.0; 5555-5555 has only 2024, so its 2023 paper is a real gap
+            (ref_dir / "jcr_jif_reference_2024_vt.tsv").write_text(
+                REFERENCE_HEADER + "Other J\t5555-5555\t\t2024\t2025\t2.0\tv1\n", encoding="utf-8")
+            data = json.loads(papers.read_text(encoding="utf-8"))
+            data.append({"id": "pmid-70", "pmid": "70", "journal": "Alpha J", "year": 2026, "jif_tier": "unknown"})
+            papers.write_text(json.dumps(data), encoding="utf-8")
+            summary, gap_years, _ = self.backfill.run(self.args(db_dir, papers))
+            tiers = self.tiers(db_dir)
+            self.assertEqual(tiers["70"], ("very-high", "prior_year"))       # 2026 paper, 2025 JIF borrowed
+            self.assertEqual(tiers["71"], ("unknown", "journal_not_found"))  # no previous year either
+            self.assertEqual(tiers["72"], ("unknown", "year_not_found"))     # 2023 is covered: not borrowed
+            self.assertNotIn(2026, gap_years)
+            self.assertEqual(summary["match_status"]["prior_year"], 1)
+            published = {p["id"]: p["jif_tier"] for p in json.loads(papers.read_text(encoding="utf-8"))}
+            self.assertEqual(published["pmid-70"], "very-high")
+            # 2026's JIF gets published and added: the provisional value becomes the confirmed one
+            (ref_dir / "jcr_jif_reference_2026_vt.tsv").write_text(
+                REFERENCE_HEADER + "Alpha J\t1111-1111\t\t2026\t2027\t0.5\tv2\n", encoding="utf-8")
+            self.backfill.run(self.args(db_dir, papers))
+            self.assertEqual(self.tiers(db_dir)["70"], ("low", "exact"))
+            self.assertEqual({p["id"]: p["jif_tier"] for p in json.loads(papers.read_text(encoding="utf-8"))}["pmid-70"], "low")
+
     def test_hand_published_entry_links_through_the_dbs_abbreviation_to_issn_and_title(self):
         with tempfile.TemporaryDirectory() as temp:
             db_dir, ref_dir, papers = self.make_env(Path(temp))
