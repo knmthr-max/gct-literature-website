@@ -103,6 +103,12 @@ body {
   flex: 1;
 }
 
+.search-hint {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
 .jif-note {
   margin: 4px 0 0;
   font-size: 0.78rem;

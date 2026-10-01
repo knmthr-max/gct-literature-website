@@ -31,3 +31,16 @@ jobs:
           EOF
       - name: Run programs/ regression tests
         run: python3 -m unittest discover -s programs/tests -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Search - unit tests
+        run: |
+          npm ci
+          npm run test:search
+      - name: Search - build data and check it against a plain full-text match
+        run: |
+          npm run build:search
+          npx playwright install --with-deps chromium
+          npm run check:search
