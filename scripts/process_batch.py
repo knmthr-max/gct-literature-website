@@ -47,8 +47,9 @@ relevance_status are left untouched.
 
 A paper the AI judges not_relevant gets no abstract_ja (stored empty): those rows are hidden on the
 site, and translating every abstract before knowing the verdict would spend roughly a fifth of the
-output on text nobody reads. Its summaries and title_ja are still written (short), so if a human later
-flips it to kept, --refill-missing-translations fills just the abstract_ja and the row is complete.
+output on text nobody reads. The model may also leave the summaries empty for such a paper (title_ja and the
+reason are always written), so if a human later
+flips it to kept, --refill-missing-translations fills the abstract_ja and the missing summaries.
 
 Rows with no abstract (blank, or MEDLINE's literal "No abstract available.")
 are the one exception in both modes: there is no source text to summarize
@@ -179,6 +180,16 @@ def claude_schema():
     }
 
 
+# Rows --refill-missing-translations works on: kept, but missing a translation or a summary. A summary is only
+# ever missing on a row the AI judged not_relevant (nothing but the reason and title_ja was written) that a human
+# later flipped to kept.
+REFILL_WHERE = (
+    "relevance_status = 'kept' AND ("
+    "ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '' "
+    "OR ai_summary_ja IS NULL OR ai_summary_ja = '' OR ai_summary_en IS NULL OR ai_summary_en = '')"
+)
+
+
 def refill_schema():
     return {
         "type": "object",
@@ -191,8 +202,10 @@ def refill_schema():
                         "pmid": {"type": "string"},
                         "title_ja": {"type": "string"},
                         "abstract_ja": {"type": "string"},
+                        "summary_en": {"type": "string"},
+                        "summary_ja": {"type": "string"},
                     },
-                    "required": ["pmid", "title_ja", "abstract_ja"],
+                    "required": ["pmid", "title_ja", "abstract_ja", "summary_en", "summary_ja"],
                     "additionalProperties": False,
                 },
             }
@@ -213,6 +226,7 @@ def refill_prompt(rows):
             "pmid": row["pmid"],
             "title": row["title"] or "",
             "abstract": source_abstract(row),
+            "needs_summary": not ((row["ai_summary_en"] or "").strip() and (row["ai_summary_ja"] or "").strip()),
         })
     return (
         "Each paper below was already confirmed relevant to this germ cell tumor (GCT) "
@@ -221,7 +235,9 @@ def refill_prompt(rows):
         "mode, so keep it a title, not a sentence-form summary). Also write abstract_ja: "
         "a full, faithful Japanese translation of the abstract (not a summary -- translate "
         "the whole thing, preserving its structure/sections if it has them). If the "
-        "abstract is empty, set abstract_ja to an empty string. Return exactly one result "
+        "abstract is empty, set abstract_ja to an empty string. For papers with needs_summary "
+        "true, also write summary_en (60-100 words) and summary_ja (120-200 Japanese "
+        "characters); for the others set both to empty strings. Return exactly one result "
         "per pmid, for every pmid supplied. Return only a JSON object that conforms "
         "exactly to this JSON Schema; do not use Markdown fences:\n"
         + json.dumps(refill_schema(), ensure_ascii=False, separators=(",", ":"))
@@ -403,11 +419,8 @@ def main():
     shard_conns = {path: connect(path) for path in shard_paths}  # newest era first
 
     if args.refill_missing_translations:
-        base_where = (
-            "relevance_status = 'kept' "
-            "AND (ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '')"
-        )
-        empty_message = "No 'kept' papers with missing ai_title_ja/ai_abstract_ja in any shard. Nothing to do."
+        base_where = REFILL_WHERE
+        empty_message = "No 'kept' papers with a missing translation or summary in any shard. Nothing to do."
     else:
         base_where = "relevance_status IS NULL"
         empty_message = "No pending papers (relevance_status IS NULL) in any shard. Nothing to do."
@@ -479,9 +492,13 @@ def main():
                 counts["claude_not_run"] += 1
                 continue
             row_conn[pmid].execute(
-                "UPDATE papers SET ai_title_ja = ?, ai_abstract_ja = ?, ai_processed_at = ?, batch_id = ? "
-                "WHERE pmid = ?",
-                (result.get("title_ja", ""), result.get("abstract_ja", ""), now_utc(), batch_id, pmid),
+                "UPDATE papers SET ai_title_ja = ?, ai_abstract_ja = ?, "
+                # a summary is filled only where it is missing: an existing one is never replaced
+                "ai_summary_en = CASE WHEN COALESCE(ai_summary_en, '') = '' THEN ? ELSE ai_summary_en END, "
+                "ai_summary_ja = CASE WHEN COALESCE(ai_summary_ja, '') = '' THEN ? ELSE ai_summary_ja END, "
+                "ai_processed_at = ?, batch_id = ? WHERE pmid = ?",
+                (result.get("title_ja", ""), result.get("abstract_ja", ""),
+                 result.get("summary_en", ""), result.get("summary_ja", ""), now_utc(), batch_id, pmid),
             )
             counts["filled"] += 1
 
@@ -489,10 +506,7 @@ def main():
             conn.commit()
 
         still_missing = sum(
-            conn.execute(
-                "SELECT COUNT(*) FROM papers WHERE relevance_status = 'kept' "
-                "AND (ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '')"
-            ).fetchone()[0]
+            conn.execute(f"SELECT COUNT(*) FROM papers WHERE {REFILL_WHERE}").fetchone()[0]
             for conn in shard_conns.values()
         )
         summary = {
