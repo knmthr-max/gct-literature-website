@@ -26,9 +26,10 @@
   const jifTierOf = (p) => p.jif_tier || "unknown";
   const jifRank = (p) => JIF_RANK[jifTierOf(p)] ?? 0;
 
-  // 検索方式: ?search=pagefind のときだけ、抄録まで検索できる新方式(Pagefind)を使う。
+  // 検索方式: 既定は、抄録まで検索できる新方式(Pagefind)。?search=legacy を付けると従来の方式(全件を読み込んで
+  // ブラウザ内で部分一致)になる。新方式の検索データ(search/list.json)を読めなかったときも、従来の方式に戻る。
   // 設計: docs/decisions/2026-09-30_pagefind_search.md
-  const SEARCH_MODE = new URLSearchParams(location.search).get("search") === "pagefind";
+  let SEARCH_MODE = new URLSearchParams(location.search).get("search") !== "legacy";
   const pageUrl = (path) => new URL(DATA_ROOT + path, document.baseURI).href;
 
   const state = {
@@ -357,23 +358,37 @@
     renderMoreButton();
   }
 
+  // 新方式の画面部品(検索の説明・抄録の遅延読み込み)。検索データを読み込めてから有効にする
+  function enableSearchUi() {
+    $("search-hint").hidden = false;
+    $("search-box").placeholder = LANG === "en"
+      ? "Search title, authors, summary, abstract…"
+      : "タイトル・著者・要約・抄録で検索…";
+    $("search-box").addEventListener("focus", () => loadEngine().catch(() => {}), { once: true });
+    // toggle は伝播しないので、捕捉(capture)で受ける
+    $("paper-list").addEventListener("toggle", (e) => {
+      if (e.target.matches("details[data-abstract-id]") && e.target.open) loadAbstract(e.target);
+    }, true);
+  }
+
+  async function loadPapers() {
+    if (SEARCH_MODE) {
+      try {
+        return await loadJson("search/list.json");
+      } catch (err) {
+        console.error(err);
+        SEARCH_MODE = false; // 検索データが無い・読めない: 従来の方式で表示する
+      }
+    }
+    return loadJson("data/papers.json");
+  }
+
   async function init() {
     $("search-box").addEventListener("input", (e) => {
       state.query = e.target.value.trim();
       if (SEARCH_MODE) scheduleSearch();
       else renderList();
     });
-    if (SEARCH_MODE) {
-      $("search-hint").hidden = false;
-      $("search-box").placeholder = LANG === "en"
-        ? "Search title, authors, summary, abstract…"
-        : "タイトル・著者・要約・抄録で検索…";
-      $("search-box").addEventListener("focus", () => loadEngine().catch(() => {}), { once: true });
-      // toggle は伝播しないので、捕捉(capture)で受ける
-      $("paper-list").addEventListener("toggle", (e) => {
-        if (e.target.matches("details[data-abstract-id]") && e.target.open) loadAbstract(e.target);
-      }, true);
-    }
     $("load-more").addEventListener("click", renderMore);
     $("sort-select").addEventListener("change", (e) => {
       state.sort = e.target.value;
@@ -381,11 +396,9 @@
     });
 
     try {
-      const [site, papers] = await Promise.all([
-        loadJson("data/site.json"),
-        loadJson(SEARCH_MODE ? "search/list.json" : "data/papers.json"),
-      ]);
+      const [site, papers] = await Promise.all([loadJson("data/site.json"), loadPapers()]);
       applySiteInfo(site);
+      if (SEARCH_MODE) enableSearchUi();
       // relevance_status: "excluded" の文献のみ一覧から除外する。未設定/"kept"/"needs_review"は
       // すべて表示する(人間が明示的に除外と判断するまでは隠さない方針)
       const all = Array.isArray(papers) ? papers : [];
