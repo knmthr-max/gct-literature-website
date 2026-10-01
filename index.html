@@ -21,6 +21,8 @@
   <main class="container">
     <section class="controls" aria-label="検索・絞り込み">
       <input type="search" id="search-box" placeholder="タイトル・著者・要約・タグで検索…" aria-label="検索">
+      <p id="search-hint" class="search-hint" hidden>AND は空白、OR は「OR」、除外は「-語」(例: 精巣 OR 卵巣 -腫瘍)。</p>
+      <p id="search-notice" class="search-hint" hidden>抄録の検索を読み込めなかったため、タイトル・要約・著者・雑誌の範囲で検索しています。</p>
       <div class="controls-row">
         <div id="tag-filters" class="tag-filters" aria-label="タグで絞り込み"></div>
         <select id="sort-select" aria-label="並び順">

@@ -26,6 +26,11 @@
   const jifTierOf = (p) => p.jif_tier || "unknown";
   const jifRank = (p) => JIF_RANK[jifTierOf(p)] ?? 0;
 
+  // 検索方式: ?search=pagefind のときだけ、抄録まで検索できる新方式(Pagefind)を使う。
+  // 設計: docs/decisions/2026-09-30_pagefind_search.md
+  const SEARCH_MODE = new URLSearchParams(location.search).get("search") === "pagefind";
+  const pageUrl = (path) => new URL(DATA_ROOT + path, document.baseURI).href;
+
   const state = {
     papers: [],
     query: "",
@@ -132,6 +137,7 @@
     if (state.activeJifTiers.size > 0 && !state.activeJifTiers.has(jifTierOf(paper))) {
       return false;
     }
+    if (SEARCH_MODE) return hitIds === null || hitIds.has(paper.id);
     if (!state.query) return true;
     const q = state.query.toLowerCase();
     // 検索対象の文字列は論文ごとに1度だけ作る(入力のたびに全件分を作り直さない)
@@ -194,7 +200,18 @@
     // 日本語訳(abstract_ja)がある場合は「抄録」に訳文を表示しつつ、「抄録原文(英語)」で原文も別途提示する。
     // 訳がまだ無い場合は、これまでどおり「抄録(英語)」に原文だけを表示する
     let abstractHtml = "";
-    if (LANG === "en") {
+    if (SEARCH_MODE) {
+      // 新方式の一覧には抄録の本文が無い。開いたときに search/abstract/<id>.json から読む
+      const lazy = (field, label) =>
+        `<details class="paper-abstract" data-abstract-id="${escapeHtml(p.id)}" data-abstract-field="${field}"><summary>${label}</summary><p></p></details>`;
+      if (LANG === "en") {
+        if (p.has_abstract) abstractHtml = lazy("abstract", "Abstract");
+      } else if (p.has_abstract_ja) {
+        abstractHtml = lazy("abstract_ja", "抄録") + (p.has_abstract ? lazy("abstract", "抄録原文(英語)") : "");
+      } else if (p.has_abstract) {
+        abstractHtml = lazy("abstract", "抄録(英語)");
+      }
+    } else if (LANG === "en") {
       if (p.abstract) {
         abstractHtml = `<details class="paper-abstract"><summary>Abstract</summary><p>${escapeHtml(p.abstract)}</p></details>`;
       }
@@ -217,6 +234,93 @@
         ${tags ? `<div class="paper-tags">${tags}</div>` : ""}
         ${links.length ? `<div class="paper-links">${links.join("")}</div>` : ""}
       </article>`;
+  }
+
+  // ---- 新方式の検索(SEARCH_MODE) ----
+  // Pagefind は「語 → 該当する論文ID」の引き当てにだけ使い、絞り込み・並び替え・ページ分けは一覧(list.json)で行う
+  let hitIds = null; // null = 検索語なし
+  let searchSeq = 0;
+  let searchTimer = null;
+  let enginePromise = null;
+  const abstractCache = new Map();
+
+  function loadEngine() {
+    if (!enginePromise) {
+      enginePromise = Promise.all([
+        import(pageUrl("assets/search-lib.js")).then(async (lib) => ({ lib, pagefind: await lib.loadPagefind(pageUrl("pagefind/pagefind.js")) })),
+        loadJson("search/idmap.json"),
+      ]).then(([{ lib, pagefind }, idmap]) => ({ lib, pagefind, idmap }));
+      enginePromise.catch(() => { enginePromise = null; });
+    }
+    return enginePromise;
+  }
+
+  // 一覧の範囲(タイトル・要約・著者・雑誌)での部分一致。1文字の日本語と、Pagefind を読めなかったときに使う
+  function substringIds(text) {
+    const needle = text.toLowerCase();
+    return new Set(state.papers.filter((p) => [
+      p.title, p.title_ja, p.journal, p.summary_en, p.summary_ja, ...(p.authors || []), ...(p.tags || []),
+    ].filter(Boolean).join(" ").toLowerCase().includes(needle)).map((p) => p.id));
+  }
+
+  async function searchIds(query) {
+    const allIds = state.papers.map((p) => p.id);
+    let engine;
+    try {
+      engine = await loadEngine();
+    } catch (err) {
+      console.error(err);
+      const lib = await import(pageUrl("assets/search-lib.js"));
+      $("search-notice").hidden = false;
+      return lib.evaluateQuery(query, async (sub) => substringIds(sub.text), allIds);
+    }
+    $("search-notice").hidden = true;
+    const { lib, pagefind, idmap } = engine;
+    const lookup = async (sub) => {
+      const q = lib.pagefindQuery(sub);
+      if (q === null) return substringIds(sub.text); // 1文字の日本語
+      const { results } = await pagefind.search(q);
+      return new Set(results.map((r) => idmap[r.id]).filter(Boolean));
+    };
+    return lib.evaluateQuery(query, lookup, allIds);
+  }
+
+  async function runSearch() {
+    const seq = ++searchSeq;
+    let ids = null;
+    if (state.query) {
+      try {
+        ids = await searchIds(state.query);
+      } catch (err) {
+        console.error(err);
+        ids = null;
+      }
+    }
+    if (seq !== searchSeq) return; // 入力が進んだ後の古い結果は捨てる
+    hitIds = ids;
+    renderList();
+  }
+
+  function scheduleSearch() {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(runSearch, state.query ? 150 : 0);
+  }
+
+  function loadAbstract(details) {
+    const id = details.dataset.abstractId;
+    const field = details.dataset.abstractField;
+    const target = details.querySelector("p");
+    if (!id || target.dataset.loaded) return;
+    target.dataset.loaded = "1";
+    target.textContent = LANG === "en" ? "Loading…" : "読み込み中…";
+    if (!abstractCache.has(id)) abstractCache.set(id, loadJson(`search/abstract/${encodeURIComponent(id)}.json`));
+    abstractCache.get(id).then((data) => {
+      target.textContent = data[field] || "";
+    }).catch((err) => {
+      console.error(err);
+      delete target.dataset.loaded;
+      target.textContent = LANG === "en" ? "Could not load the abstract." : "抄録を読み込めませんでした。";
+    });
   }
 
   // 一覧は PAGE_SIZE 件ずつ描画し、「もっと見る」で追加する(件数が増えても描画コストを一定に保つ)。
@@ -256,8 +360,20 @@
   async function init() {
     $("search-box").addEventListener("input", (e) => {
       state.query = e.target.value.trim();
-      renderList();
+      if (SEARCH_MODE) scheduleSearch();
+      else renderList();
     });
+    if (SEARCH_MODE) {
+      $("search-hint").hidden = false;
+      $("search-box").placeholder = LANG === "en"
+        ? "Search title, authors, summary, abstract…"
+        : "タイトル・著者・要約・抄録で検索…";
+      $("search-box").addEventListener("focus", () => loadEngine().catch(() => {}), { once: true });
+      // toggle は伝播しないので、捕捉(capture)で受ける
+      $("paper-list").addEventListener("toggle", (e) => {
+        if (e.target.matches("details[data-abstract-id]") && e.target.open) loadAbstract(e.target);
+      }, true);
+    }
     $("load-more").addEventListener("click", renderMore);
     $("sort-select").addEventListener("change", (e) => {
       state.sort = e.target.value;
@@ -267,7 +383,7 @@
     try {
       const [site, papers] = await Promise.all([
         loadJson("data/site.json"),
-        loadJson("data/papers.json"),
+        loadJson(SEARCH_MODE ? "search/list.json" : "data/papers.json"),
       ]);
       applySiteInfo(site);
       // relevance_status: "excluded" の文献のみ一覧から除外する。未設定/"kept"/"needs_review"は
