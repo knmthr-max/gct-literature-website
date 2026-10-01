@@ -45,6 +45,11 @@ still empty (batches run before those fields existed) and fills in just
 those two fields via a smaller, cheaper prompt -- relevance/summaries/
 relevance_status are left untouched.
 
+A paper the AI judges not_relevant gets no abstract_ja (stored empty): those rows are hidden on the
+site, and translating every abstract before knowing the verdict would spend roughly a fifth of the
+output on text nobody reads. Its summaries and title_ja are still written (short), so if a human later
+flips it to kept, --refill-missing-translations fills just the abstract_ja and the row is complete.
+
 Rows with no abstract (blank, or MEDLINE's literal "No abstract available.")
 are the one exception in both modes: there is no source text to summarize
 or translate, so the AI is only asked for relevance and title_ja, and
@@ -242,7 +247,10 @@ def claude_prompt(rows):
         "faithful Japanese translation of the title (this is displayed as the paper's heading "
         "in Japanese mode, so keep it a title, not a sentence-form summary). Also write "
         "abstract_ja: a full, faithful Japanese translation of the abstract (not a summary -- "
-        "translate the whole thing, preserving its structure/sections if it has them). If the "
+        "translate the whole thing, preserving its structure/sections if it has them), but ONLY "
+        "when relevance is relevant or uncertain: if relevance is not_relevant, set abstract_ja "
+        "to an empty string and do not translate it (still write the reasons, summaries and "
+        "title_ja). If the "
         "abstract is empty, judge relevance and write title_ja from the title alone, and set "
         "summary_en, summary_ja and abstract_ja to empty strings (there is no source text to "
         "summarize or translate; they are filled in separately). Return exactly one result "
@@ -517,6 +525,8 @@ def main():
             summary_ja = result.get("summary_ja", "")
             title_ja = result.get("title_ja", "")
             abstract_ja = result.get("abstract_ja", "")
+            if relevance == "not_relevant":
+                abstract_ja = ""  # not translated (see the module docstring), whatever the model returned
             counts[relevance] = counts.get(relevance, 0) + 1
             if not source_abstract(row):
                 # Set here regardless of what the model returned: the prompt asks for empty
