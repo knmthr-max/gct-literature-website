@@ -32,10 +32,15 @@
 
 1文字だけの日本語は、タイトル・要約・著者・雑誌の範囲の部分一致になります(抄録は対象外)。
 
-## 新方式の有効化(現在)
+## 検索方式の切り替え
 
-現在は、URL に `?search=pagefind` を付けたときだけ新方式です(例: `https://<サイト>/?search=pagefind`)。
-付けなければ従来の検索(全件読み込み)です。実機での確認後に、既定を切り替えます。
+- 既定は新方式(Pagefind。抄録まで検索、AND / OR / 除外)です。
+- URL に `?search=legacy` を付けると、従来の方式(全件を読み込んで、ブラウザ内で部分一致)で表示します。
+  新方式で問題が出たときの比較や、切り分けに使えます。
+- 新方式の検索データ(`search/list.json`)を読み込めなかった場合は、自動で従来の方式に戻ります
+  (一覧は表示されます。抄録の検索と AND / OR / 除外は使えません)。
+- Pagefind の検索エンジンだけを読み込めなかった場合は、一覧の範囲(タイトル・要約・著者・雑誌)での部分一致検索に切り替わり、
+  その旨が画面に表示されます。
 
 ## 手元で確認する
 
@@ -45,7 +50,7 @@ npm run test:search          # 単体テスト(速い)
 npm run build:search         # 検索データを生成(リポジトリ直下に search/ と pagefind/ ができる)
 npx playwright install chromium   # 初回のみ
 npm run check:search         # 実ブラウザでの一致テスト
-python3 -m http.server 8000  # http://localhost:8000/?search=pagefind で表示を確認
+python3 -m http.server 8000  # http://localhost:8000/ で表示を確認
 ```
 
 ## 件数が増えたとき

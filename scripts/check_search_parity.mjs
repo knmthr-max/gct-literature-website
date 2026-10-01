@@ -61,7 +61,7 @@ const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePa
 const page = await browser.newPage();
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
-await page.goto(`${base}/index.html?search=pagefind`);
+await page.goto(`${base}/index.html`);
 await page.waitForSelector(".paper-card");
 
 // 画面と同じ手順(語ごとに Pagefind を引き、論文IDの集合で組み合わせる)をページ内で実行する

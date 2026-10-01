@@ -1,7 +1,7 @@
 # Decision: サイト内検索に Pagefind を採用する(設計まで。実装は未着手)
 
 - Date: 2026-09-30
-- Status: フェーズ1・2 実装済み(`?search=pagefind` を付けたときだけ有効。既定は従来の検索)
+- Status: 実装済み・既定で有効(2026-10-01。スマホで確認後に既定化)。従来の検索は `?search=legacy` と、検索データを読めないときの代替として残す
 - 改訂: 2026-10-01(検索語の扱いを「単語ごとのAND/OR/NOT」に改め、原因分析と代替案を追記)
 - 試作コード: [`2026-09-30_pagefind_spike/build_index.mjs`](2026-09-30_pagefind_spike/build_index.mjs)
 
@@ -190,7 +190,7 @@ Pagefind 標準の日本語は、**辞書で単語に分割する方式**だが�
 
 - 実装済み(フェーズ1・2): `assets/search-lib.js`(検索式・変換・集合演算。ブラウザとビルドで共有)、
   `scripts/build_site_search.mjs`(生成)、`scripts/check_search_parity.mjs`(一致テスト)、`tests/search/`(単体テスト)、
-  `assets/app.js`(`?search=pagefind` のときだけ新方式)、`deploy.yml` / `validate.yml`(生成と検証)。
+  `assets/app.js`(既定が新方式。`?search=legacy` と読み込み失敗時は従来方式)、`deploy.yml` / `validate.yml`(生成と検証)。
   運用の手順は `docs/operations/site_search.md`。
 - 一致テスト: 54通りの検索式(代表例 + 頻出語)と、画面の件数表示で、取りこぼし0。
 - 6,600件相当のダミーデータ(同じ文書を複製し、語を混ぜたもの。ローカルサーバ・ヘッドレスブラウザでの測定)
