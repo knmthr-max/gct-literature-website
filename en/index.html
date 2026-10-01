@@ -21,6 +21,8 @@
   <main class="container">
     <section class="controls" aria-label="Search and filters">
       <input type="search" id="search-box" placeholder="Search by title, author, summary, or tag…" aria-label="Search">
+      <p id="search-hint" class="search-hint" hidden>AND: space, OR: "OR", exclude: "-word" (e.g. testis OR ovary -tumor).</p>
+      <p id="search-notice" class="search-hint" hidden>Abstract search could not be loaded; searching titles, summaries, authors and journals only.</p>
       <div class="controls-row">
         <div id="tag-filters" class="tag-filters" aria-label="Filter by category"></div>
         <select id="sort-select" aria-label="Sort order">

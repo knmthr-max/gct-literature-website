@@ -1,0 +1,17 @@
+{
+  "name": "gct-literature-website",
+  "private": true,
+  "type": "module",
+  "description": "サイト内検索(Pagefind)の生成と検証用。サイト本体は静的ファイルのみで、ブラウザでは依存を読み込まない",
+  "scripts": {
+    "build:search": "node scripts/build_site_search.mjs",
+    "test:search": "node --test tests/search/*.test.mjs",
+    "check:search": "node scripts/check_search_parity.mjs"
+  },
+  "dependencies": {
+    "pagefind": "1.5.2"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

@@ -22,9 +22,18 @@ jobs:
           python3 -m json.tool data/papers.json > /dev/null
           python3 -m json.tool data/site.json > /dev/null
           echo "JSON OK"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Build search data (list / abstracts / Pagefind index)
+        # 失敗するとデプロイも失敗し、公開中のサイトは前の状態のまま残る。生成物はコミットせず、公開ブランチにだけ出る
+        run: |
+          npm ci --omit=dev
+          node scripts/build_site_search.mjs
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          exclude_assets: '.github'
+          exclude_assets: '.github,.gitignore,node_modules,package.json,package-lock.json'
