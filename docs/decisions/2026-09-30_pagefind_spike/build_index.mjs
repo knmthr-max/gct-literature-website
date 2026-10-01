@@ -5,8 +5,9 @@
 //   npm install pagefind
 //   node build_index.mjs ../../../data/papers.json ./out en
 //
-// Query side (browser): convert the query with the same `bigrams` idea, quote the longest Japanese
-// term as a phrase, e.g.  pf.search('"胚細 細胞 胞腫 腫瘍" 化学 学療 療法')
+// Query side (browser): split the query into terms; search each term separately (a Japanese term as a quoted
+// phrase of bigrams, e.g.  pf.search('"胚細 細胞 胞腫 腫瘍"')), map result ids with idmap.json, then combine the
+// id sets: AND = intersection, OR = union, NOT = difference.
 import * as pagefind from "pagefind";
 import fs from "fs";
 
@@ -41,4 +42,13 @@ for (const p of papers) {
 }
 const w = await index.writeFiles({ outputPath: outDir });
 console.log("records", papers.length, w.errors?.length ? w.errors : "ok");
+
+// result id (fragment file name) -> paper id, so a search can return paper ids without fetching any fragment
+import zlib from "zlib";
+const idmap = {};
+for (const f of fs.readdirSync(`${outDir}/fragment`)) {
+  const json = zlib.gunzipSync(fs.readFileSync(`${outDir}/fragment/${f}`)).toString().replace(/^pagefind_dcd/, "");
+  idmap[f.replace(".pf_fragment", "")] = JSON.parse(json).url.slice(2); // url is "/#<paper id>"
+}
+fs.writeFileSync(`${outDir}/idmap.json`, JSON.stringify(idmap));
 await pagefind.close();
