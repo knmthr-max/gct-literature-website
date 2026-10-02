@@ -332,6 +332,32 @@ def claude_schema() -> dict[str, Any]:
     }
 
 
+GLOSSARY_DEFAULT = Path("data/reference/terminology/terminology_ja.md")
+_glossary_text = ""  # set once by set_glossary() from --glossary; appended to every Claude prompt
+
+
+def set_glossary(path: Path | None) -> str:
+    """Load the Japanese terminology glossary for the Claude prompts. None = explicit --no-glossary."""
+    global _glossary_text
+    if path is None:
+        _glossary_text = ""
+    elif not path.is_file():
+        raise SystemExit(f"Glossary not found: {path}. Pass --glossary PATH, or --no-glossary to run without one.")
+    else:
+        _glossary_text = path.read_text(encoding="utf-8")
+    return _glossary_text
+
+
+def glossary_note() -> str:
+    if not _glossary_text:
+        return ""
+    return (
+        "\n\nWhen writing summary_ja, use this site's controlled Japanese terminology glossary for tumor/pathology "
+        "names, anatomy, and treatment terms -- the same English term must always get the same Japanese "
+        "translation used here:\n" + _glossary_text
+    )
+
+
 def claude_prompt(rows: Sequence[Mapping[str, str]]) -> str:
     payload = []
     for row in rows:
@@ -353,6 +379,7 @@ def claude_prompt(rows: Sequence[Mapping[str, str]]) -> str:
         "provided schema enum. Use Other only if no listed subtype fits. Return one result per PMID. "
         "Return only a JSON object that conforms exactly to this JSON Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
+        + glossary_note()
         + "\n\nINPUT ARTICLES:\n"
         + json.dumps(payload, ensure_ascii=False)
     )
@@ -545,6 +572,7 @@ def step1(args: argparse.Namespace) -> None:
     claude_errors = 0
     claude_error_messages: list[str] = []
     if args.claude:
+        set_glossary(None if args.no_glossary else args.glossary)
         for start in range(0, len(candidates), args.claude_batch_size):
             batch = candidates[start:start + args.claude_batch_size]
             try:
@@ -832,6 +860,7 @@ def step1_classify(args: argparse.Namespace) -> None:
     claude_errors = 0
     claude_error_messages: list[str] = []
     if args.claude:
+        set_glossary(None if args.no_glossary else args.glossary)
         total_batches = (len(candidates) + args.claude_batch_size - 1) // args.claude_batch_size
         progress_path = run_dir / "classify_progress.json"
         for batch_index, start in enumerate(range(0, len(candidates), args.claude_batch_size), start=1):
@@ -1114,6 +1143,9 @@ def parser() -> argparse.ArgumentParser:
                         help="Use its latest version automatically when --master is omitted")
     first.add_argument("--claude", action="store_true")
     first.add_argument("--claude-model", default="")
+    first.add_argument("--glossary", type=Path, default=GLOSSARY_DEFAULT,
+                       help="Japanese terminology glossary appended to the Claude prompt (missing = error)")
+    first.add_argument("--no-glossary", action="store_true", help="Run Claude without a glossary (explicit opt-out)")
     first.add_argument("--claude-batch-size", type=int, default=5)
     first.add_argument("--run-id", default="")
     first.add_argument("--output-dir", type=Path, default=Path("data/processed/literature_candidates"))
@@ -1145,6 +1177,9 @@ def parser() -> argparse.ArgumentParser:
     classify.add_argument("--intermediate-dir", type=Path, default=Path("data/intermediate"))
     classify.add_argument("--claude", action="store_true")
     classify.add_argument("--claude-model", default="")
+    classify.add_argument("--glossary", type=Path, default=GLOSSARY_DEFAULT,
+                       help="Japanese terminology glossary appended to the Claude prompt (missing = error)")
+    classify.add_argument("--no-glossary", action="store_true", help="Run Claude without a glossary (explicit opt-out)")
     classify.add_argument("--claude-batch-size", type=int, default=5)
     classify.add_argument("--output-dir", type=Path, default=Path("data/processed/literature_candidates"))
     classify.add_argument("--review-dir", type=Path, default=Path("data/processed/review_reports"))
