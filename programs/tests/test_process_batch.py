@@ -104,6 +104,14 @@ class ProcessBatchTests(unittest.TestCase):
             self.assertIn("Glossary not found", str(caught.exception))
             self.run_main(["--batch-size", "1", "--no-glossary"], db_dir)  # explicit opt-out: a dry run proceeds
 
+    def test_the_first_json_object_is_used_even_if_the_model_adds_trailing_text(self):
+        parse = self.batch.parse_claude_payload
+        self.assertEqual(parse({"result": '{"papers": []}\n\nNote: done.'}), {"papers": []})
+        self.assertEqual(parse({"result": '```json\n{"papers": [1]}\n```\nextra'}), {"papers": [1]})
+        self.assertEqual(parse({"result": '{"papers": []}\n{"papers": [2]}'}), {"papers": []})
+        with self.assertRaises(ValueError):
+            parse({"result": "no json here"})
+
     def test_prompt_tells_the_model_to_skip_the_abstract_for_not_relevant(self):
         prompt = self.batch.claude_prompt([{
             "pmid": "1", "title": "t", "journal_abbrev": "J", "journal_title": "J", "publication_year": 2019,

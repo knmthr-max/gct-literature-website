@@ -315,7 +315,9 @@ def parse_claude_payload(response):
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
         text = re.sub(r"\s*```$", "", text)
-    parsed = json.loads(text)
+    # raw_decode, not json.loads: the model sometimes appends text (or a second object) after the JSON; the first
+    # object is the answer, and failing the whole batch on trailing text just pays for the same call again.
+    parsed, _ = json.JSONDecoder().raw_decode(text)
     if not isinstance(parsed, dict):
         raise ValueError("Claude result must be a JSON object")
     return parsed
