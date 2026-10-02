@@ -156,19 +156,23 @@ def norm_ja(text):
 
 
 def aggregate(args):
-    raw_path = args.out / f"raw_{args.mode}.jsonl"
+    modes = ["titles", "abstracts"] if args.mode == "all" else [args.mode]
     glossary = read_glossary(args.glossary)
     by_term = collections.defaultdict(lambda: collections.defaultdict(set))  # en -> ja -> {pmid}
     papers = 0
-    for line in raw_path.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
+    for mode in modes:
+        raw_path = args.out / f"raw_{mode}.jsonl"
+        if not raw_path.is_file():
             continue
-        item = json.loads(line)
-        papers += 1
-        for term in item["terms"]:
-            en, ja = (term.get("en") or "").strip().lower(), norm_ja(term.get("ja"))
-            if len(en) >= 3 and ja:
-                by_term[en][ja].add(item["pmid"])
+        for line in raw_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            item = json.loads(line)
+            papers += 1
+            for term in item["terms"]:
+                en, ja = (term.get("en") or "").strip().lower(), norm_ja(term.get("ja"))
+                if len(en) >= 3 and ja:
+                    by_term[en][ja].add(item["pmid"])
     rows = []
     for en, variants in by_term.items():
         counts = collections.Counter({ja: len(p) for ja, p in variants.items()})
@@ -200,7 +204,7 @@ def main():
     parser.add_argument("command", choices=["extract", "aggregate"])
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--out", type=pathlib.Path, required=True)
-    parser.add_argument("--mode", choices=["titles", "abstracts"], default="titles")
+    parser.add_argument("--mode", choices=["titles", "abstracts", "all"], default="titles", help="all: aggregate only")
     parser.add_argument("--batch-size", type=int, default=None)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--limit", type=int, default=0, help="Only the first N not-yet-extracted papers")
