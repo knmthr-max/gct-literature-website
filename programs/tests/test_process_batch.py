@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import io
+import json
 import sys
 import tempfile
 import unittest
@@ -29,6 +30,9 @@ class ProcessBatchTests(unittest.TestCase):
 
     def make_db(self, root: Path):
         db_dir = root / "master"
+        glossary = root / "reference" / "terminology" / "terminology_ja.md"
+        glossary.parent.mkdir(parents=True)
+        glossary.write_text("| 英語 | 日本語 |\n|---|---|\n| Seminoma | セミノーマ |\n", encoding="utf-8")
         conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2010s"))
         rows = [
             ("1", 2019, "Relevant paper", "An abstract about a testicular germ cell tumor."),
@@ -70,6 +74,35 @@ class ProcessBatchTests(unittest.TestCase):
         self.assertEqual(rows["2"]["ai_title_ja"], "題")                 # the title is always written
         self.assertEqual(rows["2"]["relevance_status"], "excluded")
         self.assertEqual(rows["4"]["ai_abstract_ja"], self.batch.NO_ABSTRACT_JA)  # no-abstract sentinel unchanged
+
+    def run_main(self, argv_extra, db_dir):
+        argv = ["process_batch.py", "--db-dir", str(db_dir), *argv_extra]
+        with mock.patch.object(sys, "argv", argv), redirect_stdout(io.StringIO()) as out:
+            self.batch.main()
+        return out.getvalue()
+
+    def test_the_glossary_is_in_both_prompts_and_its_id_is_logged(self):
+        glossary = "| 英語 | 日本語 |\n|---|---|\n| Seminoma | セミノーマ |\n"
+        row = {"pmid": "1", "title": "t", "journal_abbrev": "J", "journal_title": "J", "publication_year": 2019,
+               "abstract": "a", "ai_summary_en": "", "ai_summary_ja": ""}
+        self.assertIn("セミノーマ", self.batch.claude_prompt([row], glossary))
+        self.assertIn("セミノーマ", self.batch.refill_prompt([row], glossary))
+        self.assertNotIn("セミノーマ", self.batch.claude_prompt([row]))
+        self.assertEqual(self.batch.glossary_terms(glossary), 1)
+        with tempfile.TemporaryDirectory() as temp:
+            log = Path(temp) / "cost.jsonl"
+            with redirect_stdout(io.StringIO()):
+                self.batch._append_cost_log(log, "b", 1, "m", 0.1, glossary)
+            self.assertEqual(json.loads(log.read_text())["glossary"], self.batch.glossary_id(glossary))
+
+    def test_a_missing_glossary_stops_the_run_unless_no_glossary_is_explicit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            db_dir = self.make_db(Path(temp))
+            (Path(temp) / "reference" / "terminology" / "terminology_ja.md").unlink()
+            with self.assertRaises(SystemExit) as caught:
+                self.run_main(["--batch-size", "1"], db_dir)
+            self.assertIn("Glossary not found", str(caught.exception))
+            self.run_main(["--batch-size", "1", "--no-glossary"], db_dir)  # explicit opt-out: a dry run proceeds
 
     def test_prompt_tells_the_model_to_skip_the_abstract_for_not_relevant(self):
         prompt = self.batch.claude_prompt([{

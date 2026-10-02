@@ -69,6 +69,21 @@ class LiteraturePipelineTests(unittest.TestCase):
         self.assertEqual(references, {})
         self.assertEqual(len(conflicts), 2)
 
+    def test_glossary_is_appended_to_the_claude_prompt_and_a_missing_one_is_an_error(self):
+        row = {"pmid": "1", "title": "t", "abstract": "a"}
+        with tempfile.TemporaryDirectory() as temp_dir:
+            glossary = Path(temp_dir) / "terminology_ja.md"
+            glossary.write_text("| 英語 | 日本語 |\n|---|---|\n| Seminoma | セミノーマ |\n", encoding="utf-8")
+            try:
+                self.pipeline.set_glossary(glossary)
+                self.assertIn("セミノーマ", self.pipeline.claude_prompt([row]))
+                with self.assertRaises(SystemExit):
+                    self.pipeline.set_glossary(Path(temp_dir) / "missing.md")
+                self.pipeline.set_glossary(None)  # explicit --no-glossary
+                self.assertNotIn("セミノーマ", self.pipeline.claude_prompt([row]))
+            finally:
+                self.pipeline.set_glossary(None)
+
     def test_jcr_cleaner_treats_2_and_2_point_0_as_the_same_jif(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             first = Path(temp_dir) / "first.csv"
