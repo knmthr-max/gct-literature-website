@@ -24,6 +24,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 from gct_db import existing_shard_paths, jif_reference_files  # noqa: E402
 from jif_reference_add import pending_raw, tidy_needed  # noqa: E402
+from process_batch import glossary_id, glossary_terms  # noqa: E402
 
 TRANSLATED = "ai_title_ja IS NOT NULL AND ai_title_ja != '' AND ai_abstract_ja IS NOT NULL AND ai_abstract_ja != ''"
 JIF_STATUS_LABELS = (
@@ -209,6 +210,15 @@ def render(data_dir):
             lines.append(f"| `{r['run_id']}` | {r['rows']} | {r['undecided']} | {state} |")
     else:
         lines.append("レビュー実行の履歴はありません。")
+
+    glossary = data_dir / "reference" / "terminology" / "terminology_ja.md"
+    lines += ["", "## 和訳の用語集", ""]
+    if glossary.is_file():
+        text = glossary.read_text(encoding="utf-8")
+        lines.append(f"`data/reference/terminology/terminology_ja.md`: {glossary_terms(text)}語(版 `{glossary_id(text)}`)。"
+                     "AI処理は実行のたびにこれを指示文へ埋め込みます。")
+    else:
+        lines.append("**用語集がありません**(`data/reference/terminology/terminology_ja.md`)。AI処理は用語集なしでは実行できません。")
 
     costs = cost_summary(data_dir)
     lines += ["", "## AI処理コスト(累計)", ""]

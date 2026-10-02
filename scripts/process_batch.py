@@ -11,7 +11,8 @@ writes a bilingual summary, a Japanese title translation (title_ja), and a
 full Japanese abstract translation (abstract_ja) -- combining what would
 otherwise be several separate AI passes, since this scale makes a strict
 propose/apply gate impractical. Terminology is kept consistent with
-docs/data_dictionary/terminology_ja.md, embedded directly in the prompt.
+the glossary at <data repo>/data/reference/terminology/terminology_ja.md (--glossary), embedded directly in the
+prompt. A missing glossary is an error, never a silent fallback (--no-glossary opts out explicitly).
 title_ja is generated (not just summary_ja) because assets/app.js uses it
 as the actual page heading in Japanese mode, distinct from summary_ja which
 renders as a separate description -- all 65 already-published entries have
@@ -62,6 +63,7 @@ already use, and being non-empty they also keep refill from re-selecting
 these rows forever and let export_publish_review.py pick them up.
 """
 import argparse
+import hashlib
 import json
 import os
 import pathlib
@@ -82,7 +84,30 @@ from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
 
 RELEVANCE_VALUES = ("relevant", "uncertain", "not_relevant")
 DEFAULT_STATUS = {"relevant": "kept", "uncertain": "needs_review", "not_relevant": "excluded"}
-TERMINOLOGY_PATH = ROOT / "docs" / "data_dictionary" / "terminology_ja.md"
+GLOSSARY_RELATIVE = pathlib.Path("reference") / "terminology" / "terminology_ja.md"  # under the data dir (db-dir/..)
+
+
+def default_glossary_path(db_dir):
+    return db_dir.parent / GLOSSARY_RELATIVE
+
+
+def load_glossary(path):
+    """The glossary text, or "" for an explicit --no-glossary (path None). A missing file is an error."""
+    if path is None:
+        return ""
+    if not path.is_file():
+        raise SystemExit(f"Glossary not found: {path}. Pass --glossary PATH, or --no-glossary to run without one.")
+    return path.read_text(encoding="utf-8")
+
+
+def glossary_terms(text):
+    """Number of table rows (terms) in the glossary."""
+    return sum(1 for line in text.splitlines()
+               if line.startswith("|") and not re.match(r"^\|\s*(英語|-+)", line))
+
+
+def glossary_id(text):
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:8] if text else ""
 
 DOMAIN_NOTE = (
     "This website curates literature specifically about germ cell tumors (GCT): "
@@ -127,11 +152,12 @@ def now_utc():
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
-def _append_cost_log(cost_log_path, batch_id, papers, model, cost_usd):
+def _append_cost_log(cost_log_path, batch_id, papers, model, cost_usd, glossary=""):
+    entry = {"batch_id": batch_id, "papers": papers, "model": model, "cost_usd": cost_usd}
+    if glossary:
+        entry["glossary"] = glossary_id(glossary)  # which glossary version this batch's translations used
     with cost_log_path.open("a", encoding="utf-8") as f:
-        f.write(json.dumps({
-            "batch_id": batch_id, "papers": papers, "model": model, "cost_usd": cost_usd,
-        }, ensure_ascii=False) + "\n")
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
     cumulative = sum(
         json.loads(line)["cost_usd"]
         for line in cost_log_path.read_text(encoding="utf-8").splitlines() if line.strip()
@@ -139,14 +165,14 @@ def _append_cost_log(cost_log_path, batch_id, papers, model, cost_usd):
     print(f"cumulative_cost_usd (from {cost_log_path.name}): {cumulative:.4f}")
 
 
-def terminology_note():
-    if not TERMINOLOGY_PATH.is_file():
+def terminology_note(glossary=""):
+    if not glossary:
         return ""
     return (
         "\n\nWhen writing title_ja/summary_ja/abstract_ja, use this site's controlled Japanese "
         "terminology glossary for tumor/pathology names, anatomy, and treatment terms -- "
         "the same English term must always get the same Japanese translation used here:\n"
-        + TERMINOLOGY_PATH.read_text(encoding="utf-8")
+        + glossary
     )
 
 
@@ -215,7 +241,7 @@ def refill_schema():
     }
 
 
-def refill_prompt(rows):
+def refill_prompt(rows, glossary=""):
     """Prompt for --refill-missing-translations: these rows are already
     relevance_status='kept' (settled), so this only asks for the two fields
     that batches processed before title_ja/abstract_ja existed are missing --
@@ -241,12 +267,12 @@ def refill_prompt(rows):
         "per pmid, for every pmid supplied. Return only a JSON object that conforms "
         "exactly to this JSON Schema; do not use Markdown fences:\n"
         + json.dumps(refill_schema(), ensure_ascii=False, separators=(",", ":"))
-        + terminology_note()
+        + terminology_note(glossary)
         + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
     )
 
 
-def claude_prompt(rows):
+def claude_prompt(rows, glossary=""):
     payload = []
     for row in rows:
         payload.append({
@@ -273,7 +299,7 @@ def claude_prompt(rows):
         "per pmid, for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
         "Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
-        + terminology_note()
+        + terminology_note(glossary)
         + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
     )
 
@@ -388,6 +414,12 @@ def main():
     )
     parser.add_argument("--claude", action="store_true", help="Actually call Claude; omit for a structural dry run")
     parser.add_argument(
+        "--glossary", type=pathlib.Path,
+        help="Japanese terminology glossary embedded in the prompt. Default: <db-dir>/../reference/terminology/"
+             "terminology_ja.md in the data repository. A missing file is an error.",
+    )
+    parser.add_argument("--no-glossary", action="store_true", help="Run without a glossary (explicit opt-out)")
+    parser.add_argument(
         "--model", default="claude-haiku-4-5",
         help="Model for the Claude Code call. Default claude-haiku-4-5: benchmarked against "
              "sonnet on 10 real backlog papers (see commit history), identical classifications "
@@ -411,6 +443,9 @@ def main():
              "the fixed no-abstract sentinels in abstract_ja and both summaries; see above.)",
     )
     args = parser.parse_args()
+    glossary = "" if args.no_glossary else load_glossary(args.glossary or default_glossary_path(args.db_dir))
+    if glossary:
+        print(f"glossary: {glossary_terms(glossary)} terms, id {glossary_id(glossary)}")
 
     shard_paths = existing_shard_paths(args.db_dir)
     if not shard_paths:
@@ -461,7 +496,8 @@ def main():
     else:
         ai_rows = rows  # relevance always needs the AI
     if args.claude and ai_rows:
-        prompt = refill_prompt(ai_rows) if args.refill_missing_translations else claude_prompt(ai_rows)
+        prompt = (refill_prompt(ai_rows, glossary) if args.refill_missing_translations
+                  else claude_prompt(ai_rows, glossary))
         ai_results, cost_usd = call_claude(prompt, args.model)
 
     if args.refill_missing_translations:
@@ -511,12 +547,12 @@ def main():
         )
         summary = {
             "batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
-            "still_missing": still_missing, "cost_usd": cost_usd,
+            "still_missing": still_missing, "cost_usd": cost_usd, "glossary": glossary_id(glossary),
         }
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         print("RESULT_JSON:" + json.dumps(summary, ensure_ascii=False))
         if args.cost_log and args.claude:
-            _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd)
+            _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd, glossary)
         return
 
     counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "no_abstract": 0, "claude_not_run": 0}
@@ -573,7 +609,7 @@ def main():
     )
     summary = {
         "batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
-        "still_pending": still_pending, "cost_usd": cost_usd,
+        "still_pending": still_pending, "cost_usd": cost_usd, "glossary": glossary_id(glossary),
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     # Also on a single sentinel-prefixed line, since retry warnings or the digest below can put
@@ -582,7 +618,7 @@ def main():
     print("RESULT_JSON:" + json.dumps(summary, ensure_ascii=False))
 
     if args.cost_log and args.claude:
-        _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd)
+        _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd, glossary)
 
     if digest:
         print("\n--- uncertain / not_relevant this batch (skim and correct if needed) ---")
