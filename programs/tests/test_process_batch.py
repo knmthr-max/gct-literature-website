@@ -106,6 +106,45 @@ class ProcessBatchTests(unittest.TestCase):
             self.assertIn("Glossary not found", str(caught.exception))
             self.run_main(["--batch-size", "1", "--no-glossary"], db_dir)  # explicit opt-out: a dry run proceeds
 
+    def test_retranslate_replaces_only_the_translations_keeps_a_backup_and_skips_no_abstract_text(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            db_dir = self.make_db(root)
+            self.run_batch(db_dir, {
+                "1": {"pmid": "1", "relevance": "relevant", "relevance_reason": "r", "summary_en": "english one",
+                      "summary_ja": "旧要約", "title_ja": "旧題", "abstract_ja": "旧訳"},
+                "4": {"pmid": "4", "relevance": "relevant", "relevance_reason": "r", "summary_en": "x",
+                      "summary_ja": "y", "title_ja": "旧題4", "abstract_ja": ""}})
+            backup = root / "backup.jsonl"
+
+            def fake_call(prompt, model=""):
+                self.assertIn("summary_en", prompt)
+                self.assertIn("セミノーマ", prompt)  # glossary terms of the batch are injected
+                return {"1": {"pmid": "1", "title_ja": "新題", "abstract_ja": "新訳", "summary_ja": "新要約"},
+                        "4": {"pmid": "4", "title_ja": "新題4", "abstract_ja": "垂れ流し", "summary_ja": "垂れ流し"}}, 0.02
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2010s"))
+            conn.execute("UPDATE papers SET title = 'A seminoma case' WHERE pmid = '1'")
+            conn.commit()
+            conn.close()
+            argv = ["process_batch.py", "--claude", "--retranslate", "--pmids", "1,4,2", "--backup", str(backup),
+                    "--db-dir", str(db_dir)]
+            with mock.patch.object(self.batch, "call_claude", fake_call), mock.patch.object(sys, "argv", argv), \
+                    redirect_stdout(io.StringIO()):
+                self.batch.main()
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2010s"))
+            rows = {r["pmid"]: dict(r) for r in conn.execute("SELECT * FROM papers")}
+            conn.close()
+            old = {json.loads(line)["pmid"]: json.loads(line)["old"] for line in backup.read_text().splitlines()}
+        self.assertEqual((rows["1"]["ai_title_ja"], rows["1"]["ai_abstract_ja"], rows["1"]["ai_summary_ja"]),
+                         ("新題", "新訳", "新要約"))
+        self.assertEqual(rows["1"]["ai_summary_en"], "english one")  # English and review state untouched
+        self.assertEqual(rows["1"]["relevance_status"], "kept")
+        self.assertEqual(old["1"], {"title_ja": "旧題", "abstract_ja": "旧訳", "summary_ja": "旧要約"})
+        # no source abstract: only the title is redone, the sentinels stay
+        self.assertEqual(rows["4"]["ai_title_ja"], "新題4")
+        self.assertEqual(rows["4"]["ai_abstract_ja"], self.batch.NO_ABSTRACT_JA)
+        self.assertNotIn("2", old)  # pmid 2 was never translated: not touched, not backed up
+
     def test_the_first_json_object_is_used_even_if_the_model_adds_trailing_text(self):
         parse = self.batch.parse_claude_payload
         self.assertEqual(parse({"result": '{"papers": []}\n\nNote: done.'}), {"papers": []})

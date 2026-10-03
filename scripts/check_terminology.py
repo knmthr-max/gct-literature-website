@@ -6,6 +6,8 @@
   check  標準の訳が無く、避ける訳も無い(言い換え・略語・未登録の訳。目視確認用)
 
     python3 scripts/check_terminology.py --db-dir <data>/master --out <data>/processed/terminology/check.tsv
+    # papers to redo first: published ones (DB flag or in the site's papers.json) with an 'avoid' problem
+    python3 scripts/check_terminology.py --db-dir ... --scope published --site-papers data/papers.json --pmids-out pmids.txt
 """
 import argparse
 import collections
@@ -29,13 +31,24 @@ PAIRS = (("title", "ai_title_ja", "title"), ("abstract", "ai_abstract_ja", "abst
          ("ai_summary_en", "ai_summary_ja", "summary"))
 
 
-def check_db(db_dir, entries):
+# which kept papers to look at ("published" also includes site_pmids: entries of the site's papers.json)
+SCOPES = {
+    "all": "1",
+    "published": "published_to_site = 1",
+    "review-ready": "(published_to_site IS NULL OR published_to_site = 0) AND human_review_status IS NULL "
+                    "AND ai_title_ja IS NOT NULL AND ai_title_ja != '' AND ai_abstract_ja IS NOT NULL AND ai_abstract_ja != ''",
+}
+
+
+def check_db(db_dir, entries, scope="all", site_pmids=frozenset()):
     """Yield (pmid, field, status, english term, expected, found-avoid) for every problem."""
     for path in existing_shard_paths(db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
         conn.row_factory = sqlite3.Row
+        condition = SCOPES[scope] + (" OR pmid IN (%s)" % ",".join("?" * len(site_pmids)) if scope == "published" and site_pmids else "")
+        params = list(site_pmids) if scope == "published" and site_pmids else []
         for row in conn.execute("SELECT pmid, title, abstract, ai_title_ja, ai_abstract_ja, ai_summary_en, "
-                                "ai_summary_ja FROM papers WHERE relevance_status = 'kept'"):
+                                f"ai_summary_ja FROM papers WHERE relevance_status = 'kept' AND ({condition})", params):
             for en_col, ja_col, label in PAIRS:
                 english, japanese = row[en_col] or "", row[ja_col] or ""
                 if not english or not japanese or japanese in SENTINELS or english in SENTINELS:
@@ -52,11 +65,20 @@ def main():
     parser.add_argument("--glossary", type=pathlib.Path,
                         help="default: <db-dir>/../reference/terminology/terminology_ja.md")
     parser.add_argument("--out", type=pathlib.Path, help="Write every problem as TSV here")
+    parser.add_argument("--scope", choices=sorted(SCOPES), default="all")
+    parser.add_argument("--site-papers", type=pathlib.Path,
+                        help="the site's papers.json: with --scope published, its pmids count as published too")
+    parser.add_argument("--pmids-out", type=pathlib.Path,
+                        help="Write the pmids that have an 'avoid' problem (one per line), for process_batch --retranslate")
     parser.add_argument("--top", type=int, default=15)
     args = parser.parse_args()
     path = args.glossary or args.db_dir.parent / "reference" / "terminology" / "terminology_ja.md"
     entries = glossary_lib.parse(path.read_text(encoding="utf-8"))
-    problems = list(check_db(args.db_dir, entries))
+    site_pmids = frozenset()
+    if args.site_papers:
+        import json
+        site_pmids = frozenset(str(p["pmid"]) for p in json.loads(args.site_papers.read_text(encoding="utf-8")) if p.get("pmid"))
+    problems = list(check_db(args.db_dir, entries, args.scope, site_pmids))
     by_status = collections.Counter(p[2] for p in problems)
     papers = {p[0] for p in problems if p[2] == "avoid"}
     print(f"glossary: {len(entries)} terms | problems: {dict(by_status)} | papers with an 'avoid' problem: {len(papers)}")
@@ -65,6 +87,10 @@ def main():
         print(f"\n-- {status}: top terms")
         for (english, expected, avoided), n in top:
             print(f"  {n:4d}  {english} => {expected}" + (f"   (found: {avoided})" if avoided else ""))
+    if args.pmids_out:
+        args.pmids_out.parent.mkdir(parents=True, exist_ok=True)
+        args.pmids_out.write_text("".join(f"{pmid}\n" for pmid in sorted(papers)), encoding="utf-8")
+        print(f"\nwrote {len(papers)} pmids -> {args.pmids_out}")
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
         with args.out.open("w", encoding="utf-8", newline="") as f:
