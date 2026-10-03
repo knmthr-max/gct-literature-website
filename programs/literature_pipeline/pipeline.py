@@ -44,6 +44,9 @@ if str(PROGRAMS_ROOT) not in sys.path:
 
 from pubmed_cleaner import pubmed_cleaner as cleaner  # noqa: E402
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import glossary as glossary_lib  # noqa: E402
+
 __version__ = "1.2.0"
 
 PIPELINE_DIR = Path(__file__).resolve().parent
@@ -348,14 +351,12 @@ def set_glossary(path: Path | None) -> str:
     return _glossary_text
 
 
-def glossary_note() -> str:
+def glossary_note(rows: Sequence[Mapping[str, str]] = ()) -> str:
+    """Prompt text with only the glossary terms that occur in these rows' English title/abstract."""
     if not _glossary_text:
         return ""
-    return (
-        "\n\nWhen writing summary_ja, use this site's controlled Japanese terminology glossary for tumor/pathology "
-        "names, anatomy, and treatment terms -- the same English term must always get the same Japanese "
-        "translation used here:\n" + _glossary_text
-    )
+    texts = [t for row in rows for t in (row.get("title", ""), row.get("abstract", ""))]
+    return glossary_lib.render_note(glossary_lib.terms_in(glossary_lib.parse(_glossary_text), texts))
 
 
 def claude_prompt(rows: Sequence[Mapping[str, str]]) -> str:
@@ -379,7 +380,7 @@ def claude_prompt(rows: Sequence[Mapping[str, str]]) -> str:
         "provided schema enum. Use Other only if no listed subtype fits. Return one result per PMID. "
         "Return only a JSON object that conforms exactly to this JSON Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
-        + glossary_note()
+        + glossary_note(rows)
         + "\n\nINPUT ARTICLES:\n"
         + json.dumps(payload, ensure_ascii=False)
     )

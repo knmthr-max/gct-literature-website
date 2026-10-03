@@ -78,6 +78,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+PIPELINE_DIR = ROOT / "programs" / "literature_pipeline"
+if str(PIPELINE_DIR) not in sys.path:
+    sys.path.insert(0, str(PIPELINE_DIR))
+import glossary as glossary_lib  # noqa: E402
 
 from import_medline import classify  # noqa: E402
 from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
@@ -165,15 +169,12 @@ def _append_cost_log(cost_log_path, batch_id, papers, model, cost_usd, glossary=
     print(f"cumulative_cost_usd (from {cost_log_path.name}): {cumulative:.4f}")
 
 
-def terminology_note(glossary=""):
+def terminology_note(glossary="", rows=()):
+    """Prompt text with only the glossary terms that occur in these rows' English title/abstract."""
     if not glossary:
         return ""
-    return (
-        "\n\nWhen writing title_ja/summary_ja/abstract_ja, use this site's controlled Japanese "
-        "terminology glossary for tumor/pathology names, anatomy, and treatment terms -- "
-        "the same English term must always get the same Japanese translation used here:\n"
-        + glossary
-    )
+    texts = [t for row in rows for t in (row["title"], source_abstract(row))]
+    return glossary_lib.render_note(glossary_lib.terms_in(glossary_lib.parse(glossary), texts))
 
 
 def claude_schema():
@@ -267,7 +268,7 @@ def refill_prompt(rows, glossary=""):
         "per pmid, for every pmid supplied. Return only a JSON object that conforms "
         "exactly to this JSON Schema; do not use Markdown fences:\n"
         + json.dumps(refill_schema(), ensure_ascii=False, separators=(",", ":"))
-        + terminology_note(glossary)
+        + terminology_note(glossary, rows)
         + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
     )
 
@@ -299,7 +300,7 @@ def claude_prompt(rows, glossary=""):
         "per pmid, for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
         "Schema; do not use Markdown fences:\n"
         + json.dumps(claude_schema(), ensure_ascii=False, separators=(",", ":"))
-        + terminology_note(glossary)
+        + terminology_note(glossary, rows)
         + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
     )
 
