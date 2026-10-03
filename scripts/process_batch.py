@@ -173,7 +173,13 @@ def terminology_note(glossary="", rows=()):
     """Prompt text with only the glossary terms that occur in these rows' English title/abstract."""
     if not glossary:
         return ""
-    texts = [t for row in rows for t in (row["title"], source_abstract(row))]
+    texts = []
+    for row in rows:
+        texts += [row["title"], source_abstract(row)]
+        try:
+            texts.append(row["ai_summary_en"])
+        except (KeyError, IndexError):
+            pass
     return glossary_lib.render_note(glossary_lib.terms_in(glossary_lib.parse(glossary), texts))
 
 
@@ -215,6 +221,38 @@ REFILL_WHERE = (
     "ai_title_ja IS NULL OR ai_title_ja = '' OR ai_abstract_ja IS NULL OR ai_abstract_ja = '' "
     "OR ai_summary_ja IS NULL OR ai_summary_ja = '' OR ai_summary_en IS NULL OR ai_summary_en = '')"
 )
+
+
+def retranslate_schema():
+    return {
+        "type": "object",
+        "properties": {"papers": {"type": "array", "items": {
+            "type": "object",
+            "properties": {"pmid": {"type": "string"}, "title_ja": {"type": "string"},
+                           "abstract_ja": {"type": "string"}, "summary_ja": {"type": "string"}},
+            "required": ["pmid", "title_ja", "abstract_ja", "summary_ja"], "additionalProperties": False}}},
+        "required": ["papers"], "additionalProperties": False,
+    }
+
+
+def retranslate_prompt(rows, glossary=""):
+    """Prompt for --retranslate: papers that are already translated, redone to follow the controlled terminology."""
+    payload = [{"pmid": row["pmid"], "title": row["title"] or "", "abstract": source_abstract(row),
+                "summary_en": row["ai_summary_en"] or ""} for row in rows]
+    return (
+        "Each paper below already has a Japanese translation, but it must be redone so that it follows the "
+        "controlled terminology given further down (the same English term must always get the same Japanese "
+        "wording). For each paper write title_ja: a natural, faithful Japanese translation of the title (it is "
+        "displayed as the heading, so keep it a title). abstract_ja: a full, faithful Japanese translation of "
+        "the abstract (not a summary; preserve its structure/sections); an empty string if the abstract is empty. "
+        "summary_ja: a Japanese summary of 120-200 characters that conveys the same content as summary_en "
+        "(an empty string if summary_en is empty); add no facts that are not in the source. Return exactly one "
+        "result per pmid, for every pmid supplied. Return only a JSON object that conforms exactly to this JSON "
+        "Schema; do not use Markdown fences:\n"
+        + json.dumps(retranslate_schema(), ensure_ascii=False, separators=(",", ":"))
+        + terminology_note(glossary, rows)
+        + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False)
+    )
 
 
 def refill_schema():
@@ -402,6 +440,45 @@ def call_claude(prompt, model="", max_retries=2):
     )
 
 
+def retranslate(args, rows, row_conn, shard_conns, glossary, batch_id):
+    counts = {"retranslated": 0, "title_only": 0, "claude_not_run": 0}
+    results, cost_usd = ({}, 0.0)
+    if args.claude:
+        results, cost_usd = call_claude(retranslate_prompt(rows, glossary), args.model)
+    backup = []
+    for row in rows:
+        pmid = row["pmid"]
+        result = results.get(pmid)
+        if result is None:
+            counts["claude_not_run"] += 1
+            continue  # dry run, or the model skipped this paper: leave the row as it is
+        has_abstract = bool(source_abstract(row))
+        title_ja = (result.get("title_ja") or "").strip() or row["ai_title_ja"]
+        # an empty answer never replaces an existing translation; a no-abstract row keeps its sentinels
+        abstract_ja = (result.get("abstract_ja") or "").strip() if has_abstract else row["ai_abstract_ja"]
+        summary_ja = (result.get("summary_ja") or "").strip() if has_abstract else row["ai_summary_ja"]
+        abstract_ja = abstract_ja or row["ai_abstract_ja"]
+        summary_ja = summary_ja or row["ai_summary_ja"]
+        backup.append({"pmid": pmid, "batch_id": batch_id, "old": {
+            "title_ja": row["ai_title_ja"], "abstract_ja": row["ai_abstract_ja"], "summary_ja": row["ai_summary_ja"]}})
+        row_conn[pmid].execute(
+            "UPDATE papers SET ai_title_ja = ?, ai_abstract_ja = ?, ai_summary_ja = ?, ai_processed_at = ?, "
+            "batch_id = ? WHERE pmid = ?", (title_ja, abstract_ja, summary_ja, now_utc(), batch_id, pmid))
+        counts["retranslated" if has_abstract else "title_only"] += 1
+    if backup and args.backup:
+        args.backup.parent.mkdir(parents=True, exist_ok=True)
+        with args.backup.open("a", encoding="utf-8") as f:
+            f.writelines(json.dumps(item, ensure_ascii=False) + "\n" for item in backup)
+    for conn in shard_conns.values():
+        conn.commit()
+    summary = {"batch_id": batch_id, "batch_size": len(rows), "claude_used": args.claude, **counts,
+               "cost_usd": cost_usd, "glossary": glossary_id(glossary)}
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    print("RESULT_JSON:" + json.dumps(summary, ensure_ascii=False))
+    if args.cost_log and args.claude:
+        _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd, glossary)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
@@ -445,7 +522,17 @@ def main():
              "translations, it never re-judges relevance. (Exception: rows with no abstract get "
              "the fixed no-abstract sentinels in abstract_ja and both summaries; see above.)",
     )
+    parser.add_argument(
+        "--retranslate", action="store_true",
+        help="Redo the translations (title_ja, abstract_ja, summary_ja) of already-translated 'kept' papers given by "
+             "--pmids, following the glossary. Relevance, English fields and review/publish state are untouched. "
+             "Use --backup to save the replaced values (reversible).",
+    )
+    parser.add_argument("--backup", type=pathlib.Path,
+                        help="--retranslate: append the replaced translations to this JSONL file before overwriting")
     args = parser.parse_args()
+    if args.retranslate and not args.pmids:
+        parser.error("--retranslate needs --pmids")
     glossary = "" if args.no_glossary else load_glossary(args.glossary or default_glossary_path(args.db_dir))
     if glossary:
         print(f"glossary: {glossary_terms(glossary)} terms, id {glossary_id(glossary)}")
@@ -456,7 +543,10 @@ def main():
         return
     shard_conns = {path: connect(path) for path in shard_paths}  # newest era first
 
-    if args.refill_missing_translations:
+    if args.retranslate:
+        base_where = "relevance_status = 'kept' AND ai_title_ja IS NOT NULL AND ai_title_ja != ''"
+        empty_message = "None of the --pmids is a translated 'kept' paper. Nothing to do."
+    elif args.refill_missing_translations:
         base_where = REFILL_WHERE
         empty_message = "No 'kept' papers with a missing translation or summary in any shard. Nothing to do."
     else:
@@ -493,6 +583,9 @@ def main():
     batch_id = now_utc()
     ai_results = {}
     cost_usd = 0.0
+    if args.retranslate:
+        retranslate(args, rows, row_conn, shard_conns, glossary, batch_id)
+        return
     if args.refill_missing_translations:
         # A no-abstract row needs nothing from the AI here unless its title_ja is also missing.
         ai_rows = [row for row in rows if source_abstract(row) or not (row["ai_title_ja"] or "").strip()]
