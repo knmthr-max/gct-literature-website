@@ -83,11 +83,13 @@ class ProcessBatchTests(unittest.TestCase):
 
     def test_the_glossary_is_in_both_prompts_and_its_id_is_logged(self):
         glossary = "| 英語 | 日本語 |\n|---|---|\n| Seminoma | セミノーマ |\n"
-        row = {"pmid": "1", "title": "t", "journal_abbrev": "J", "journal_title": "J", "publication_year": 2019,
-               "abstract": "a", "ai_summary_en": "", "ai_summary_ja": ""}
+        row = {"pmid": "1", "title": "A seminoma case", "journal_abbrev": "J", "journal_title": "J",
+               "publication_year": 2019, "abstract": "a", "ai_summary_en": "", "ai_summary_ja": ""}
+        other = {**row, "title": "An unrelated paper"}
         self.assertIn("セミノーマ", self.batch.claude_prompt([row], glossary))
         self.assertIn("セミノーマ", self.batch.refill_prompt([row], glossary))
         self.assertNotIn("セミノーマ", self.batch.claude_prompt([row]))
+        self.assertNotIn("セミノーマ", self.batch.claude_prompt([other], glossary))  # only terms found in the batch
         self.assertEqual(self.batch.glossary_terms(glossary), 1)
         with tempfile.TemporaryDirectory() as temp:
             log = Path(temp) / "cost.jsonl"
