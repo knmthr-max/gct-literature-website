@@ -129,7 +129,15 @@ DOMAIN_NOTE = (
     "animal/plant/veterinary study using 'teratoma' in a non-oncologic sense, or one that "
     "only mentions GCT (or the gestational trophoblastic disease spectrum above) in "
     "passing (e.g. in a differential diagnosis list, or as an unrelated tool/cell-line "
-    "control) without it being a subject of the paper, is not relevant."
+    "control) without it being a subject of the paper, is not relevant. "
+    "OUT OF SCOPE (editorial decision, 2026-10): germ cell tumors that arise primarily in the central "
+    "nervous system -- intracranial (pineal, suprasellar/neurohypophyseal, basal ganglia, thalamus, "
+    "ventricles, cerebellum, etc.) or intraspinal -- such as intracranial germinoma or intracranial "
+    "teratoma. Judge a paper not_relevant when such a primary CNS germ cell tumor is its subject. "
+    "These are STILL relevant: brain/CNS metastases of a germ cell tumor that arose elsewhere, "
+    "neurological complications of a non-CNS germ cell tumor (e.g. anti-NMDA receptor encephalitis "
+    "with an ovarian teratoma), and papers on germ cell tumors of all sites in which CNS tumors are "
+    "only one part."
 )
 
 NO_ABSTRACT_SUMMARY_EN = "No abstract available."
