@@ -22,7 +22,10 @@ PAPERS_PATH = ROOT / "data" / "papers.json"
 # タグクラウドが機能しなくなるため)。優先度は上から順に判定する。
 CATEGORY_RULES = [
     ("症例報告", {"Case Reports"}),
-    ("総説", {"Review", "Systematic Review", "Meta-Analysis"}),
+    # システマティックレビュー/メタ解析は、一次研究を統合して解析する研究なので「臨床研究」(2026-10-06 決定)。
+    # 症例報告の次、総説の前に判定する(Review も付いていても、こちらを優先する)
+    ("臨床研究", {"Systematic Review", "Meta-Analysis"}),
+    ("総説", {"Review"}),
     ("ガイドライン", {"Guideline", "Practice Guideline"}),
     ("論説", {"Editorial"}),
     ("レター", {"Letter"}),
