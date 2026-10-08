@@ -5,6 +5,8 @@
 次の段階で行う(DBは screen では変更しない)。
   screen  キーワードで候補を絞り(kept / needs_review のうち、脳・脊髄に関する語を含む論文)、AIに
           「主題が、脳・脊髄に原発する胚細胞腫瘍か」を1件ずつ判定させる。結果は JSONL に追記(再開可能)
+  --scope not_relevant  新ラベル cns_gct の導入前に not_relevant で除外した論文(CNS-GCTかどうか未確認)を対象にする。
+          apply では除外のまま relevance_note を付けるだけ(--out は別ファイルにする)
   apply   判定が cns_primary のものを relevance_status='excluded' にする(元の状態は --backup に保存)。
           mixed / uncertain は触らず、一覧に出す。--site-papers で、サイトの該当エントリも
           relevance_status='excluded'(一覧から隠れる)にする。既定はドライラン
@@ -36,7 +38,7 @@ KEYWORDS = re.compile(
     r"intramedullary|central nervous|\bcns\b|basal ganglia|hypothalam|thalam|ventric|cerebell|meninge|neurosurg",
     re.I)
 VERDICTS = ("cns_primary", "not_cns_primary", "mixed", "uncertain")
-NOTE = "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)"
+NOTE = process_batch.CNS_NOTE
 
 SCHEMA = {
     "type": "object",
@@ -67,12 +69,21 @@ def prompt_for(rows):
         + json.dumps(SCHEMA, separators=(",", ":")) + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False))
 
 
-def candidates(db_dir):
+# --scope live: papers still in the site's scope (kept / needs_review).
+# --scope not_relevant: papers the AI excluded as not_relevant before the cns_gct label existed (about 2,700 at the
+#   time of writing, never checked for CNS germ cell tumors). 'apply' then only adds the CNS relevance_note; they stay
+#   excluded and keep whatever translations they have. Use a separate --out file for this scope.
+SCOPES = {"live": "relevance_status IN ('kept', 'needs_review')",
+          "not_relevant": "relevance_status = 'excluded' AND ai_relevance = 'not_relevant' "
+                          "AND COALESCE(relevance_note, '') != '%s'" % process_batch.CNS_NOTE}
+
+
+def candidates(db_dir, scope="live"):
     rows = []
     for path in existing_shard_paths(db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
         conn.row_factory = sqlite3.Row
-        for r in conn.execute("SELECT pmid, title, abstract FROM papers WHERE relevance_status IN ('kept', 'needs_review')"):
+        for r in conn.execute(f"SELECT pmid, title, abstract FROM papers WHERE {SCOPES[scope]}"):
             if KEYWORDS.search(f"{r['title'] or ''} {r['abstract'] or ''}"):
                 rows.append(dict(r))
         conn.close()
@@ -91,7 +102,7 @@ def read_verdicts(path):
 
 def screen(args):
     done = read_verdicts(args.out)
-    todo = [r for r in candidates(args.db_dir) if r["pmid"] not in done]
+    todo = [r for r in candidates(args.db_dir, args.scope) if r["pmid"] not in done]
     jobs = queue.Queue()
     for i in range(0, len(todo), args.batch_size):
         jobs.put(todo[i:i + args.batch_size])
@@ -141,8 +152,7 @@ def apply(args):
     for path in existing_shard_paths(args.db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
         for pmid, status, note, published in conn.execute(
-                "SELECT pmid, relevance_status, relevance_note, published_to_site FROM papers "
-                "WHERE relevance_status IN ('kept', 'needs_review')"):
+                f"SELECT pmid, relevance_status, relevance_note, published_to_site FROM papers WHERE {SCOPES[args.scope]}"):
             if str(pmid) in targets:
                 changes.append((path, str(pmid), status, note, published))
         conn.close()
@@ -186,6 +196,7 @@ def main():
     parser.add_argument("command", choices=["screen", "apply"])
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--out", type=pathlib.Path, required=True, help="verdicts JSONL")
+    parser.add_argument("--scope", choices=sorted(SCOPES), default="live", help="which papers to look at (see SCOPES)")
     parser.add_argument("--claude", action="store_true")
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--batch-size", type=int, default=20)

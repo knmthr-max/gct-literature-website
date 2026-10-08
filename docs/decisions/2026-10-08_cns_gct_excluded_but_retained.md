@@ -32,16 +32,26 @@ CNS-GCT の集合を取り出すには、`relevance_note` が上の文言の行�
 4. **本サイトとの相互リンク**: 専用サイトを作る場合、本サイトからの案内リンク(「脳・脊髄原発は別サイトへ」)を置ける。
 5. **症例報告の属性抽出**(`extract_case_attributes.py`)は、CNS-GCT の症例にも使える(部位の選択肢に「頭蓋内/脊髄内」などを足す)。
 
-## 注意点・限界(専用サイトにするときの前提)
+## 未確認の範囲と、今後の判定のしかた(2026-10-08 追記)
 
-- 今ある684件は、**関連性の判定を通過した論文**(kept / needs_review)から選んだもの。
-  過去に `not_relevant` で除外済みの論文(約2,700件)は、CNS-GCT かどうかを調べていないので、含まれていない。
-- 今後判定する約25,779件のうち CNS-GCT は、新しい判定プロンプトにより `not_relevant` / `excluded` になる。
-  この場合は**和訳・要約が付かない**(`not_relevant` は抄録訳を作らない方針)。
-  また `relevance_note` に上の文言は入らず、`ai_relevance_reason` に理由が入るだけなので、
-  後から CNS-GCT だけを集めにくい。専用サイトを作る段階で、
-  (a) 判定プロンプトで CNS-GCT を別のラベルにして残す、または
-  (b) その時点で `screen_cns_gct.py` を `not_relevant` にも広げて実行する、のどちらかが必要。
+### 1. 過去に not_relevant で除外した 2,734 件は、CNS-GCT かどうか**未確認**
+- 今回の 684 件は、関連性の判定を通過した論文(kept / needs_review)から選んだもの。
+  過去のバッチで AI が `not_relevant` とした論文(`ai_relevance='not_relevant'` かつ `excluded`、2,734 件)は調べていない。
+  この中に CNS-GCT が含まれている可能性があるが、含まれる件数は不明。
+- 判定できるようにしてある: `screen_cns_gct.py screen --scope not_relevant --out <別ファイル> --claude`
+  (候補は同じキーワードで絞る)。`apply --scope not_relevant` は、除外のまま `relevance_note` に CNS の文言を付けるだけ
+  (元の AI 判定や和訳は変えない)。実行は必要になったとき(専用サイトを作る段階など)でよい。
+- 判定済みの印は `relevance_note`。印が付いた論文は、次回の候補から外れる。
+
+### 2. これから判定する約 25,779 件: 判定プロンプトに別ラベル `cns_gct` を追加した
+- 判定の選択肢は relevant / uncertain / not_relevant / **cns_gct**。脳・脊髄原発の胚細胞腫瘍が主題なら `cns_gct`。
+- `cns_gct` の扱い: `relevance_status='excluded'`、`relevance_note='対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)'`
+  (684 件と同じ印)、`ai_relevance='cns_gct'`。題名の和訳と要約(英・日)は付く。抄録の全文訳は付けない(費用を抑えるため。
+  専用サイトを作る段階で `--refill-missing-translations` を拡張して補う)。
+- これにより、CNS-GCT の集合は常に `relevance_note` が上の文言の行(または `ai_relevance='cns_gct'`)で取り出せる。
+- 既存の 684 件の `ai_relevance` は変えていない(AI が relevant と判定した履歴を残すため)。集合の取り出しは `relevance_note` を使う。
+
+## 注意点・限界
 - 判定はAI(haiku)で、抜き取り確認のみ。専用サイトにする場合は、`uncertain` 82件を中心に人が確認する。
 - キーワードで候補を絞っているため、語に当たらない CNS-GCT 論文は漏れている可能性がある。
 - 公開済みだった12件は、サイト側では非表示にしただけで、`data/papers.json` のエントリは残している(`relevance_status: excluded`)。

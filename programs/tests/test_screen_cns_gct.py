@@ -94,6 +94,23 @@ class ScreenCnsGctTests(unittest.TestCase):
             self.assertEqual(entries["1"]["relevance_status"], "excluded")
             self.assertNotIn("relevance_status", entries["3"])
 
+    def test_not_relevant_scope_looks_at_old_exclusions_and_only_adds_the_note(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            db_dir = self.make_db(root)
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2010s"))
+            conn.execute("UPDATE papers SET ai_relevance = 'not_relevant' WHERE pmid = '4'")   # excluded earlier by the AI
+            conn.commit()
+            conn.close()
+            self.assertEqual({r["pmid"] for r in self.screen.candidates(db_dir, "not_relevant")}, {"4"})
+            out = root / "v.jsonl"
+            out.write_text(json.dumps({"pmid": "4", "verdict": "cns_primary", "reason": "r"}) + "\n", encoding="utf-8")
+            self.run_main(["apply", "--db-dir", str(db_dir), "--out", str(out), "--scope", "not_relevant", "--apply"])
+            conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2010s"))
+            row = dict(conn.execute("SELECT * FROM papers WHERE pmid = '4'").fetchone())
+            conn.close()
+            self.assertEqual((row["relevance_status"], row["relevance_note"]), ("excluded", self.screen.NOTE))
+            self.assertEqual(self.screen.candidates(db_dir, "not_relevant"), [])   # now marked: not offered again
 
 if __name__ == "__main__":
     unittest.main()
