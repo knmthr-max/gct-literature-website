@@ -362,7 +362,12 @@ def parse_claude_payload(response):
     return parsed
 
 
-def call_claude(prompt, model="", max_retries=2):
+# Model and effort for every AI batch task (relevance, translation, term extraction, screening).
+DEFAULT_MODEL = "claude-haiku-5-5"
+DEFAULT_EFFORT = "low"
+
+
+def call_claude(prompt, model="", max_retries=2, effort=""):
     if shutil.which("claude") is None:
         raise RuntimeError("Claude Code executable was not found. Install/login before using --claude.")
     command = [
@@ -378,6 +383,8 @@ def call_claude(prompt, model="", max_retries=2):
     ]
     if model:
         command.extend(["--model", model])
+    if effort:
+        command.extend(["--effort", effort])
 
     # subprocess.run inherits the parent environment by default. When this script itself
     # runs inside an active Claude Code session (e.g. called from a shell tool during an
@@ -444,7 +451,7 @@ def retranslate(args, rows, row_conn, shard_conns, glossary, batch_id):
     counts = {"retranslated": 0, "title_only": 0, "claude_not_run": 0}
     results, cost_usd = ({}, 0.0)
     if args.claude:
-        results, cost_usd = call_claude(retranslate_prompt(rows, glossary), args.model)
+        results, cost_usd = call_claude(retranslate_prompt(rows, glossary), args.model, effort=args.effort)
     backup = []
     for row in rows:
         pmid = row["pmid"]
@@ -500,12 +507,13 @@ def main():
     )
     parser.add_argument("--no-glossary", action="store_true", help="Run without a glossary (explicit opt-out)")
     parser.add_argument(
-        "--model", default="claude-haiku-4-5",
-        help="Model for the Claude Code call. Default claude-haiku-4-5: benchmarked against "
-             "sonnet on 10 real backlog papers (see commit history), identical classifications "
-             "except one genuinely borderline case where even sonnet disagreed with itself "
-             "across runs, at roughly half the average cost. Pass --model sonnet to escalate a "
-             "specific batch if a digest ever looks off.",
+        "--model", default=DEFAULT_MODEL,
+        help="Model for the Claude Code call (default: %(default)s). Escalate a specific batch with "
+             "--model sonnet if a digest ever looks off.",
+    )
+    parser.add_argument(
+        "--effort", default=DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"],
+        help="Effort level passed to claude --effort (default: %(default)s).",
     )
     parser.add_argument(
         "--cost-log", type=pathlib.Path,
@@ -594,7 +602,7 @@ def main():
     if args.claude and ai_rows:
         prompt = (refill_prompt(ai_rows, glossary) if args.refill_missing_translations
                   else claude_prompt(ai_rows, glossary))
-        ai_results, cost_usd = call_claude(prompt, args.model)
+        ai_results, cost_usd = call_claude(prompt, args.model, effort=args.effort)
 
     if args.refill_missing_translations:
         counts = {"filled": 0, "no_abstract": 0, "claude_not_run": 0}
