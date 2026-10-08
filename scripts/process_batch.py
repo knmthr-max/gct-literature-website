@@ -46,6 +46,10 @@ still empty (batches run before those fields existed) and fills in just
 those two fields via a smaller, cheaper prompt -- relevance/summaries/
 relevance_status are left untouched.
 
+A paper the AI judges cns_gct (a germ cell tumor primary to the central nervous system: out of scope, but labelled
+separately so the set can be collected later) is treated like not_relevant: excluded, no abstract_ja, and
+relevance_note = CNS_NOTE, and an English summary only (no summary_ja).
+
 A paper the AI judges not_relevant gets no abstract_ja (stored empty): those rows are hidden on the
 site, and translating every abstract before knowing the verdict would spend roughly a fifth of the
 output on text nobody reads. The model may also leave the summaries empty for such a paper (title_ja and the
@@ -86,8 +90,12 @@ import glossary as glossary_lib  # noqa: E402
 from import_medline import classify  # noqa: E402
 from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
 
-RELEVANCE_VALUES = ("relevant", "uncertain", "not_relevant")
-DEFAULT_STATUS = {"relevant": "kept", "uncertain": "needs_review", "not_relevant": "excluded"}
+# "cns_gct": a germ cell tumor that arises primarily in the central nervous system. It is out of scope for this
+# site (editorial decision 2026-10) but kept as its own label instead of "not_relevant", so those papers can be
+# collected later (e.g. for a dedicated CNS-GCT site). Like not_relevant it ends up excluded.
+RELEVANCE_VALUES = ("relevant", "uncertain", "not_relevant", "cns_gct")
+DEFAULT_STATUS = {"relevant": "kept", "uncertain": "needs_review", "not_relevant": "excluded", "cns_gct": "excluded"}
+CNS_NOTE = "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)"  # relevance_note of every excluded CNS-GCT paper
 GLOSSARY_RELATIVE = pathlib.Path("reference") / "terminology" / "terminology_ja.md"  # under the data dir (db-dir/..)
 
 
@@ -129,7 +137,16 @@ DOMAIN_NOTE = (
     "animal/plant/veterinary study using 'teratoma' in a non-oncologic sense, or one that "
     "only mentions GCT (or the gestational trophoblastic disease spectrum above) in "
     "passing (e.g. in a differential diagnosis list, or as an unrelated tool/cell-line "
-    "control) without it being a subject of the paper, is not relevant."
+    "control) without it being a subject of the paper, is not relevant. "
+    "OUT OF SCOPE (editorial decision, 2026-10): germ cell tumors that arise primarily in the central "
+    "nervous system -- intracranial (pineal, suprasellar/neurohypophyseal, basal ganglia, thalamus, "
+    "ventricles, cerebellum, etc.) or intraspinal -- such as intracranial germinoma or intracranial "
+    "teratoma. Judge a paper cns_gct (not not_relevant: it is kept as a separate label) when such a primary "
+    "CNS germ cell tumor is its subject. "
+    "These are STILL relevant: brain/CNS metastases of a germ cell tumor that arose elsewhere, "
+    "neurological complications of a non-CNS germ cell tumor (e.g. anti-NMDA receptor encephalitis "
+    "with an ovarian teratoma), and papers on germ cell tumors of all sites in which CNS tumors are "
+    "only one part."
 )
 
 NO_ABSTRACT_SUMMARY_EN = "No abstract available."
@@ -322,16 +339,17 @@ def claude_prompt(rows, glossary=""):
             "abstract": source_abstract(row),
         })
     return (
-        DOMAIN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant) "
+        DOMAIN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant/cns_gct) "
         "with a one-sentence Japanese reason, and write a short bilingual summary: summary_en "
         "60-100 words, summary_ja 120-200 Japanese characters. Also write title_ja: a natural, "
         "faithful Japanese translation of the title (this is displayed as the paper's heading "
         "in Japanese mode, so keep it a title, not a sentence-form summary). Also write "
         "abstract_ja: a full, faithful Japanese translation of the abstract (not a summary -- "
         "translate the whole thing, preserving its structure/sections if it has them), but ONLY "
-        "when relevance is relevant or uncertain: if relevance is not_relevant, set abstract_ja "
-        "to an empty string and do not translate it (still write the reasons, summaries and "
-        "title_ja). If the "
+        "when relevance is relevant or uncertain: "
+        "if relevance is not_relevant or cns_gct, set abstract_ja to an empty string and do not "
+        "translate it (still write the reasons, summaries and title_ja). For cns_gct only, also "
+        "set summary_ja to an empty string (write summary_en and title_ja as usual). If the "
         "abstract is empty, judge relevance and write title_ja from the title alone, and set "
         "summary_en, summary_ja and abstract_ja to empty strings (there is no source text to "
         "summarize or translate; they are filled in separately). Return exactly one result "
@@ -659,7 +677,7 @@ def main():
             _append_cost_log(args.cost_log, batch_id, len(rows), args.model, cost_usd, glossary)
         return
 
-    counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "no_abstract": 0, "claude_not_run": 0}
+    counts = {"relevant": 0, "uncertain": 0, "not_relevant": 0, "cns_gct": 0, "no_abstract": 0, "claude_not_run": 0}
     digest = []
     for row in rows:
         pmid = row["pmid"]
@@ -679,7 +697,9 @@ def main():
             summary_ja = result.get("summary_ja", "")
             title_ja = result.get("title_ja", "")
             abstract_ja = result.get("abstract_ja", "")
-            if relevance == "not_relevant":
+            if relevance == "cns_gct":
+                summary_ja = ""  # English summary only: saves output tokens for papers that are out of scope
+            if relevance in ("not_relevant", "cns_gct"):
                 abstract_ja = ""  # not translated (see the module docstring), whatever the model returned
             counts[relevance] = counts.get(relevance, 0) + 1
             if not source_abstract(row):
@@ -695,13 +715,14 @@ def main():
                  ai_summary_en = ?, ai_summary_ja = ?, ai_title_ja = ?, ai_abstract_ja = ?,
                  ai_processed_at = ?, batch_id = ?,
                  relevance_status = COALESCE(?, relevance_status),
-                 relevance_reviewed_at = CASE WHEN ? IS NOT NULL THEN ? ELSE relevance_reviewed_at END
+                 relevance_reviewed_at = CASE WHEN ? IS NOT NULL THEN ? ELSE relevance_reviewed_at END,
+                 relevance_note = COALESCE(?, relevance_note)
                WHERE pmid = ?""",
             (relevance, reason, json.dumps([tags] if tags else [], ensure_ascii=False),
              summary_en, summary_ja, title_ja, abstract_ja, now_utc(), batch_id,
-             status, status, now_utc(), pmid),
+             status, status, now_utc(), CNS_NOTE if relevance == "cns_gct" else None, pmid),
         )
-        if relevance in ("uncertain", "not_relevant"):
+        if relevance in ("uncertain", "not_relevant", "cns_gct"):
             digest.append((pmid, row["publication_year"], row["title"], relevance, reason))
 
     for conn in shard_conns.values():
