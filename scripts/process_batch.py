@@ -48,7 +48,7 @@ relevance_status are left untouched.
 
 A paper the AI judges cns_gct (a germ cell tumor primary to the central nervous system: out of scope, but labelled
 separately so the set can be collected later) is treated like not_relevant: excluded, no abstract_ja, and
-relevance_note = CNS_NOTE.
+relevance_note = CNS_NOTE, and an English summary only (no summary_ja).
 
 A paper the AI judges not_relevant gets no abstract_ja (stored empty): those rows are hidden on the
 site, and translating every abstract before knowing the verdict would spend roughly a fifth of the
@@ -348,7 +348,8 @@ def claude_prompt(rows, glossary=""):
         "translate the whole thing, preserving its structure/sections if it has them), but ONLY "
         "when relevance is relevant or uncertain: "
         "if relevance is not_relevant or cns_gct, set abstract_ja to an empty string and do not "
-        "translate it (still write the reasons, summaries and title_ja). If the "
+        "translate it (still write the reasons, summaries and title_ja). For cns_gct only, also "
+        "set summary_ja to an empty string (write summary_en and title_ja as usual). If the "
         "abstract is empty, judge relevance and write title_ja from the title alone, and set "
         "summary_en, summary_ja and abstract_ja to empty strings (there is no source text to "
         "summarize or translate; they are filled in separately). Return exactly one result "
@@ -696,6 +697,8 @@ def main():
             summary_ja = result.get("summary_ja", "")
             title_ja = result.get("title_ja", "")
             abstract_ja = result.get("abstract_ja", "")
+            if relevance == "cns_gct":
+                summary_ja = ""  # English summary only: saves output tokens for papers that are out of scope
             if relevance in ("not_relevant", "cns_gct"):
                 abstract_ja = ""  # not translated (see the module docstring), whatever the model returned
             counts[relevance] = counts.get(relevance, 0) + 1

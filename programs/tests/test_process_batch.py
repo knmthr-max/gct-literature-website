@@ -85,7 +85,8 @@ class ProcessBatchTests(unittest.TestCase):
             rows = self.run_batch(self.make_db(Path(temp)), output)
         self.assertEqual((rows["2"]["ai_relevance"], rows["2"]["relevance_status"]), ("cns_gct", "excluded"))
         self.assertEqual(rows["2"]["relevance_note"], self.batch.CNS_NOTE)
-        self.assertEqual((rows["2"]["ai_abstract_ja"], rows["2"]["ai_title_ja"], rows["2"]["ai_summary_ja"]), ("", "題", "ja"))
+        self.assertEqual((rows["2"]["ai_abstract_ja"], rows["2"]["ai_title_ja"], rows["2"]["ai_summary_ja"]), ("", "題", ""))
+        self.assertEqual(rows["2"]["ai_summary_en"], "en")      # cns_gct: English summary only
         self.assertIsNone(rows["3"]["relevance_note"])          # plain not_relevant carries no CNS note
         self.assertIsNone(rows["1"]["relevance_note"])
         self.assertIn("cns_gct", self.batch.claude_prompt([{"pmid": "1", "title": "t", "journal_abbrev": "J",

@@ -46,7 +46,7 @@ CNS-GCT の集合を取り出すには、`relevance_note` が上の文言の行�
 ### 2. これから判定する約 25,779 件: 判定プロンプトに別ラベル `cns_gct` を追加した
 - 判定の選択肢は relevant / uncertain / not_relevant / **cns_gct**。脳・脊髄原発の胚細胞腫瘍が主題なら `cns_gct`。
 - `cns_gct` の扱い: `relevance_status='excluded'`、`relevance_note='対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)'`
-  (684 件と同じ印)、`ai_relevance='cns_gct'`。題名の和訳と要約(英・日)は付く。抄録の全文訳は付けない(費用を抑えるため。
+  (684 件と同じ印)、`ai_relevance='cns_gct'`。題名の和訳と英語の要約は付く。日本語の要約と抄録の全文訳は付けない(出力を減らして費用を抑えるため。
   専用サイトを作る段階で `--refill-missing-translations` を拡張して補う)。
 - これにより、CNS-GCT の集合は常に `relevance_note` が上の文言の行(または `ai_relevance='cns_gct'`)で取り出せる。
 - 既存の 684 件の `ai_relevance` は変えていない(AI が relevant と判定した履歴を残すため)。集合の取り出しは `relevance_note` を使う。
