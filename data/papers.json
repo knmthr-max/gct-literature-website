@@ -2191,8 +2191,8 @@
     "abstract_ja": "背景：頭頂葉の原発性未熟奇形腫は極めて稀な頭蓋内胚細胞腫瘍であり、全原発性頭蓋内悪性腫瘍の1%未満である。その稀少性と神経膠腫などの他の腫瘍との重複する放射線学的特徴のため、未熟奇形腫はしばしば誤診されている。ここでは、頭頂葉未熟奇形腫を有する48歳女性の症例報告をし、最初は「神経膠腫」と誤診されたが、診断の課題と管理戦略を強調している。症例提示：48歳女性が進行性頭痛で来院した。コンピュータ断層撮影(CT)及び磁気共鳴画像法(MRI)により、右頭頂葉に不均質な密度、明瞭な辺縁、及び病変周囲浮腫を伴う占拠性病変が認められた。初期の放射線学的解釈は神経膠腫を示唆したが、術後の病理組織学的検査により未熟奇形腫の診断が確認された。最初の手術後、患者は放射線療法を受けた。8ヶ月後、MRIで腫瘍の再発が検出され、2回目の外科的切除が行われた。患者は合併症のない回復を遂行し退院した。結論：本症例は成人における頭蓋内未熟奇形腫の診断的および治療的課題を浮き彫りにしている。主要な放射線学的特徴は以下の通りである：CT：脂肪成分および/または石灰化を伴う不均質な密度。MRI：混合信号強度、病変周囲浮腫、及び強化される壁結節を伴う造影剤で強化された環状強化。早期の正確な診断は治療成績の最適化に重要である。外科的切除は管理の要となり、補助療法は再発性または残存疾患のために予約されている。臨床医は非典型的な脳実質性腫瘤の鑑別診断に未熟奇形腫を考慮すべきであり、特にCT上の不均質な密度とMRI上の環状強化を伴う混合信号を含む画像所見がある場合である。",
     "added_at": "2026-09-29",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "成人女性の頭蓋内未熟奇形腫の症例報告であり胚細胞腫瘍に該当。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T05:02:06+00:00"
   },
   {
@@ -2588,8 +2588,8 @@
     "abstract_ja": "【目的】後頭窩の高密度成熟奇形腫の画像および病理学的特性を研究すること。【症例記述】症例1：1年間の間欠的頭痛を提示した11歳の少年は、1ヶ月間で徐々に悪化し、4日間の悪心と嘔吐を伴っていた。コンピュータ断層撮影（CT）スキャンは、閉塞性水頭症を伴う大きな後頭窩高密度腫瘤を明らかにした。主に高密度、石灰化、脂肪および軟組織成分からなり、高密度のCT値は約100 HUである。磁気共鳴画像（MRI）スキャンは、腫瘤が主にT1強調画像上で等信号、T2強調画像上で低信号、直線的な造影を示すことを明らかにした。SWIスキャンは、ほとんどの病変が低信号を示し、ヘモシデリン沈着を表すことを明らかにした。下後頭骨開頭および病変切除を通じて。組織病理学的解析は成熟奇形腫の診断を確認した。症例2：2ヶ月間の頭痛とめまいを提示した27歳の女性は、2回の悪心と嘔吐を伴っていた。CTおよびMRIスキャンは、閉塞性水頭症を伴う大きな後頭窩高密度腫瘤を明らかにした。密度および信号強度は症例1と同様であった。下後頭骨開頭および病変切除を通じて。組織病理学的解析は成熟奇形腫の診断を確認した。【結論】後頭窩の成熟高密度奇形腫は稀に報告されている。嚢胞性病変が石灰化、脂肪および軟組織成分を伴う高密度を示す場合、奇形腫は鑑別診断で考慮されるべきである。本研究は、神経外科医および神経放射線医に異常な奇形腫の鑑別診断を拡大することにより支援する可能性がある。",
     "added_at": "2026-09-29",
     "jif_tier": "moderate",
-    "relevance_status": "kept",
-    "relevance_note": "後頭蓋窩の成熟高吸収性奇形腫の画像・病理学的特徴を報告。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T05:02:06+00:00"
   },
   {
@@ -3453,8 +3453,8 @@
     "abstract_ja": "脊髄奇形腫は脊髄腫瘍の中ではまれですが、硬膜内髄内病変の鑑別診断で考慮される必要があり、特に尿および便症状を呈する小児でそうです。CT およびMRI を含む包括的な画像評価は、嚢胞性および固形成分、脂肪組織の存在、および脊髄空洞形成などの関連脊髄異常などの特徴的所見により、早期診断の補助となります。外科的切除は治療の主流であり、影響を受けた患者における症状進行および軽減を防ぐために迅速な介入が重要です。ここで、我々はCTおよびMRIを使用して遅滞なく診断され、全外科的切除で治療された6歳小児の硬膜内髄内奇形腫の症例について論じます。",
     "added_at": "2026-09-29",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "脊髄内奇形腫は髄外生殖細胞腫瘍であり、GCTの臨床管理に関連しており、スコープ内である。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T05:42:36+00:00"
   },
   {
@@ -6099,8 +6099,8 @@
     "abstract_ja": "【背景】セミノーマは特に中枢神経系における稀な胚細胞腫瘍であり、その発生の理由は不明である。精巣石灰化は精巣微小石灰化の前駆病変であり、若年男性における精巣がんの高リスク因子であり、セミノーマは精巣がんの一般的な病理組織学的形態である。【症例説明】本論文は、頭痛と四肢脱力により入院した思春期後男性を報告する。画像検査では視床の大脳基底核に腫瘤が存在することが示された。脳生検が完了した後、病理結果はセミノーマであることを示したため、同一入院中に陰嚢超音波検査を施行し、患者が両精巣に複数の離散的な石灰化を有することを認めた。その後、患者は内科に転科され放射線療法と化学療法を受け、現在回復して退院しており、その後のフォローアップで患者に合併症はない。本論文はセミノーマと精巣石灰化に関する文献を評価し、2つの疾患間の可能性のある関連性と因果関係について論じている。【結論】頭蓋内胚腫は稀に報告されており、病因は不明である。それは精巣病変と関連しうることを発見し、若年男性において定期的に陰嚢超音波検査を施行すべきであり、そのような脳腫瘍を有する患者において脳生検は腫瘍切除よりも優先されるべきである。",
     "added_at": "2026-10-02",
     "jif_tier": "moderate",
-    "relevance_status": "kept",
-    "relevance_note": "精巣セミノーマと頭蓋内セミノーマ（生殖細胞腫瘍）の関連性を検討している。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T05:55:18+00:00"
   },
   {
@@ -7146,7 +7146,7 @@
     "doi": "10.1016/j.clinsp.2025.100583",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Meta-analysis of 15 studies examining pembrolizumab efficacy for gestational trophoblastic neoplasia. Pembrolizumab achieved complete sustained remission in 71.59% of cases, with similar performance across age groups, GTN histopathology subtypes, and chemotherapy combinations. Effective for high-risk, chemoresistant or relapsed disease including PSTT/ETT.",
     "summary_ja": "妊娠性絨毛性腫瘍に対するペムブロリズマブの有効性を検討した15研究のメタ解析。ペムブロリズマブは症例の71.59%で完全持続寛解を達成。年齢、GTN組織型、免疫療法開始までの時間、化学療法併用の有無を問わず同様の有効性を示した。",
@@ -8480,7 +8480,7 @@
     "doi": "10.3802/jgo.2025.36.e49",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review and meta-analysis of 8 studies (1,409 patients) comparing carboplatin-based versus cisplatin-based chemotherapy in malignant gonadal germ cell tumors (GCTs). Carboplatin showed increased treatment failure rate but similar overall survival. High-dose carboplatin (AUC 7.9) achieved comparable efficacy to cisplatin with more tolerable toxicity, suggesting carboplatin as viable alternative.",
     "summary_ja": "性腺胚細胞腫瘍患者1,409名を対象とした8研究のメタアナリシス。カルボプラチン系療法はシスプラチン系より治療失敗率が高いが、全生存率は同等。高用量カルボプラチン(AUC 7.9)はシスプラチンと同等の有効性で毒性がより許容可能。カルボプラチンは実行可能な代替選択肢を示唆している。",
@@ -10422,7 +10422,7 @@
     "doi": "10.1002/wjs.12400",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "A systematic review of surgically treated malignant struma ovarii (MSO) with or without adjuvant thyroid therapy in 376 patients. Overall survival was 91% at 10 years and 87% at 20 years. Adjuvant thyroid-related therapy showed no survival benefit, suggesting potential overtreatment.",
     "summary_ja": "卵巣悪性ストルマ患者376例の系統的レビュー。10年生存率91%、20年生存率87%。補助甲状腺治療による生存率改善なく、過度治療の可能性が示唆された。",
@@ -10607,7 +10607,7 @@
     "doi": "10.1016/j.eururo.2024.10.023",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "A systematic review of 53 studies on testicular germ cell tumor (TGCT) epidemiology and risk factors. Genetic predisposition accounts for ~44% of heritability. In utero exposure to endocrine-disrupting chemicals, cryptorchidism, and early-life factors are associated with increased TGCT risk.",
     "summary_ja": "53の研究に関するシステマティックレビュー。精巣胚細胞腫瘍(TGCT)の疫学とリスク因子。遺伝的素因は遺伝率の約44%を占める。出生前内分泌撹乱物質曝露、停留精巣などの早期生活因子がリスク増加に関連。",
@@ -10985,7 +10985,7 @@
     "doi": "10.17305/bb.2024.11287",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Retrospective analysis of 23 struma ovarii cases and systematic review of 164 malignant struma ovarii (MSO) cases. Identifies ovarian cystectomy as risk factor for recurrence, while salpingo-oophorectomy significantly reduces recurrence risk. Emphasizes importance of surgical approach selection in stage I MSO management and prognosis.",
     "summary_ja": "23卵巣甲状腺腫症例と164悪性卵巣甲状腺腫症例のシステマティック分析。卵巣嚢胞摘出術は再発リスク因子であり、卵管卵巣摘除術で再発リスク有意に低下。病期I悪性卵巣甲状腺腫管理における外科的アプローチ選択の重要性を強調。",
@@ -11015,7 +11015,7 @@
     "doi": "10.1111/bju.16536",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review of primary retroperitoneal lymph node dissection (RPLND) for stage II testicular seminoma. Analyzes 6 studies involving 385 patients. Reports acceptable perioperative outcomes with low morbidity rates. Recurrence rate higher than standard treatment, though long-term survival data suggests 92% 5-year OS.",
     "summary_ja": "病期II精巣セミノーマにおける一次性後腹膜リンパ節郭清のシステマティックレビュー。385人の患者を含む6つの研究。低合併症率と許容可能な周術期転帰。標準治療より高い再発率だが、長期生存データは92%の5年全生存期間(全生存率)を示唆する。",
@@ -11087,8 +11087,8 @@
     "abstract_ja": "思春期および若年成人(AYA；15～39歳)は、専門的ケアへのアクセス、ケアの移行、独特な腫瘍生物学、および臨床試験での悪い表現を含む腫瘍医学的ケアの課題に直面する脆弱な集団である。脳腫瘍はAYAにおいて2番目に最も一般的な腫瘍型であり、悪性脳腫瘍はがん関連死の最も一般的な原因である。2021年のWHO中枢神経系(CNS)腫瘍分類は、AYA集団に関連する複数の腫瘍における組織学的診断と統合された分子特性評価の重要性を強調している。神経腫瘍学会(SNO)からの本立場論文では、AYAにおけるCNS腫瘍の診断と管理をレビューし、この集団における最も一般的な腫瘍型、すなわちグリオーマ、髄芽腫、上衣腫、およびCNS胚細胞腫瘍に焦点を当てている。AYA固有の現在の課題と今後の方向性も強調されている。最後に、AYA患者のケアの障壁に対処するための可能な解決策について、小児および成人ケアのパラダイムにまたがる多学科的で協調的なアプローチの必要性を強調し、高度な分子検査、標的療法、およびAYA中心のケアを組み込むことが議論されている。",
     "added_at": "2026-10-06",
     "jif_tier": "very-high",
-    "relevance_status": "kept",
-    "relevance_note": "思春期・若年成人のCNS腫瘍に関するコンセンサスレビューで、中枢神経系生殖細胞腫瘍が主要対象の一つとして明記",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T06:22:38+00:00"
   },
   {
@@ -14845,7 +14845,7 @@
     "doi": "10.1159/000542672",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review and meta-analysis of squamous cell carcinoma arising in mature cystic teratoma (SCC-MCT). Analysis of 654 patients reveals SCC-MCT typically occurs postmenopausally in tumors >10 cm. FIGO stage, age, and tumor markers predict prognosis; surgical lymphadenectomy improves survival; chemotherapy/radiotherapy show no benefit.",
     "summary_ja": "卵巣成熟嚢胞性奇形腫における扁平上皮癌(SCC-MCT)のシステマティックレビューとメタ解析。654人の患者分析では、SCC-MCTは典型的に腫瘍径>10 cm以上の閉経後女性に発生。FIGO病期、年齢、腫瘍マーカーが予後を予測；外科的リンパ節郭清は生存を改善；化学療法や放射線療法は有益ではない。",
@@ -15744,7 +15744,7 @@
     "doi": "10.37349/etat.2024.00270",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review evaluating neutrophil-to-lymphocyte ratio (NLR) as a diagnostic and prognostic marker in testicular cancer. NLR was elevated in testicular cancer patients compared to controls, predicted poor prognosis and advanced disease, but could not differentiate between seminoma and non-seminomatous subtypes.",
     "summary_ja": "精巣がんにおける好中球/リンパ球比(NLR)の診断的および予後的マーカーとしての評価システマティックレビュー。精巣がん患者でNLRが上昇し、予後不良と進行期を予測したが、セミノーマと非セミノーマ性亜型の鑑別はできなかった。",
@@ -16382,7 +16382,7 @@
     "doi": "10.3389/fonc.2024.1437574",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review and meta-analysis of high-dose chemotherapy with autologous hematopoietic cell transplantation in relapsed/refractory germ cell tumors. Based on IT94 randomized trial (N=263), high-dose therapy showed little to no effect on overall survival (HR 0.98). Insufficient evidence supports or refutes this treatment.",
     "summary_ja": "再発/難治性胚細胞腫瘍における自家造血幹細胞移植を伴う大量化学療法のシステマティックレビューとメタ解析。IT94ランダム化試験(N=263)に基づいて、大量化学療法は全生存期間にほとんど効果を示さなかった(HR 0.98)。この治療法の有効性を支持または反論する十分なエビデンスは不足している。",
@@ -16660,8 +16660,8 @@
     "abstract_ja": "低ゴナドトロピン性性腺機能低下症は脳腫瘍によって引き起こされることがある。悪性腫瘍(例えば胚細胞腫瘍)の場合、化学療法と放射線療法を組み合わせて投与する。子どもを望む患者において、精子生成および/または射精機能障害に基づく治療前の精子凍結保存を受けることができないことは問題となりえる。本報告では、頭蓋内胚腫による低ゴナドトロピン性性腺機能低下症を伴う26歳男性と30歳男性、およびともに子どもを望む患者の2例を提示する。抗がん化学療法前のゴナドトロピン補充療法は、その後の自然妊娠または補助生殖医療技術をもたらした。腫瘍の後続治療は、それぞれ9年および2年間の再発がなかった。このような症例では腫瘍内科医との密接な相談が必須である。腫瘍予後に応じて、しかし、追加化学療法による精子生成障害の可能性があるため、腫瘍治療を遅延させ、妊孕性を優先することが可能である場合がある。",
     "added_at": "2026-10-06",
     "jif_tier": "low",
-    "relevance_status": "kept",
-    "relevance_note": "頭蓋内germinomaを原因とする低ゴナドトロピン性性腺機能低下症患者における精子凍結前のgonadotropin置換療法による生殖能温存の症例報告である。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T07:09:13+00:00"
   },
   {
@@ -18427,8 +18427,8 @@
     "abstract_ja": "背景:定量および定性的なヒト絨毛性ゴナドトロピン(hCG)検査は、生殖年齢の女性の妊娠判定のため、救急部門で実施される。hCG 陽性結果は一般的に子宮内妊娠またはその他の形態の妊娠を示すと推定される。しかし、hCG 値の上昇は卵巣腫瘍、下垂体腫瘍、甲状腺障害など、様々な他の状態からも発生しうる。頭蓋内胚細胞腫瘍は稀な中枢神経系腫瘍であり、hCG を分泌する能力があり、主に青年期および若年成人女性に影響を与える。症例報告:有意な既往歴のない16歳の女学生が、2日間の間欠的な両側前頭部頭痛を主訴に救急部門に来院した。月経開始は受診の2日前であった。頭痛に伴い、音声恐怖、光恐怖、悪心および嘔吐が認められた。血清定量 hCG は上昇していた。患者は性的活動または性的暴力の既往を否定した。経腹超音波検査では子宮内妊娠の所見は認められなかった。産婦人科と小児腫瘍学に診察が依頼された。脳画像を含む後続の検査により、右尾状核と脳梁に3.5cm の腫瘤が認められた。患者は頭蓋内非胚腫型胚細胞腫瘍と診断され、入院および化学療法の緊急開始が必要となった。救急医がこれを認識すべき理由:定量 hCG 値の上昇は必ずしも妊娠を示すものではなく、特に性的接触の既往がない若い患者では注意が必要である。経腹超音波検査で所見が得られない場合、産婦人科は追加検査および画像検査の実施を検討すべきである。救急医は鑑別診断に悪性腫瘍を高く考慮する必要がある。なぜなら化学療法の緊急開始、外科サービスによる評価、および家族計画が必要となるためである。",
     "added_at": "2026-10-06",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "非性的活動履歴を持つ若年女性の頭蓋内非ジェルミノーマ胚細胞腫瘍とhCG上昇に関する重要な症例報告である",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T07:21:04+00:00"
   },
   {
@@ -19258,7 +19258,7 @@
     "doi": "10.3390/ijms25168739",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review of molecular basis of gestational trophoblastic disease (molar pregnancies), examining genetic and epigenetic factors contributing to disease progression. Key findings include dysregulations in p53, BCL-2 pathways, growth factor receptors, and microRNAs differentiating molar disease from normal placentation.",
     "summary_ja": "Gestational trophoblastic disease (hydatidiform mole等)のmolecular基盤に関する系統的レビュー。p53、BCL-2、growth factor receptor、microRNAの異常が妊娠性trophoblastic neoplasiaの進行と臨床転帰に関与することを示している。",
@@ -21062,8 +21062,8 @@
     "abstract_ja": "背景:一次中枢神経系胚細胞腫瘍(GCT)は小児における稀な新生物である。治療は組織学的亜型および疾患の範囲に依存する。全生存期間(全生存率)は高所得国(HIC)ではジャーミノーマ(胚細胞腫)で90%以上、非ジャーミノーマ胚細胞腫瘍(NGGCT)で70%-80%であるが、低中所得国(LMIC)の患者ではデータが通常不足している。目的:本研究は、中米血液腫瘍小児科医会(AHOPCA)のメンバーである8ヶ国中4ヶ国における中枢神経系胚細胞腫瘍患者の治療経験を説明し、5年全生存期間(全生存率)を決定することを目的とする。デザイン/方法:中枢神経系胚細胞腫瘍患者の治療の後方視的カルテレビューを実施した。疫学的および臨床的特性、組織学、治療方法、および転帰を分析した。結果:2001年から2021年までに、48例の患者が含まれた:グアテマラから22例、ニカラグアから18例、ドミニカ共和国から3例、エルサルバドルから5例。31例(64.6%)は男児であり、診断時の中央年齢は10.2歳(範囲:1〜17歳)であった。初発症状は頭痛(n=24、50%)、視覚障害(n=17、35.4%)、嘔吐(n=12、25%)、悪心(n=8、16.7%)、および尿崩症(n=7、14.6%)であった。NGGCT患者2例が思春期早発を呈した。38例(79.2%)で生検または腫瘍切除を実施した:ジャーミノーマ(胚細胞腫)23例(88.4%)、NGGCT 11例(78.6%)、中枢神経系胚細胞腫瘍4例(50%)。8例の患者は脳脊髄液腫瘍マーカー上昇に基づいて診断・治療を受けた;ジャーミノーマ(胚細胞腫)4例(BHCG 11.32-29.41 mUI/mL)およびNGGCT 4例(BHCG 84.43-201.97 mUI/mLまたはαフェトプロテイン(AFP) > 10 UI/mL陽性)。腫瘍位置は視交叉上部(n=17、35.4%)、松果体(n=13、27.1%)、視床/大脳基底核(n=5、10.4%)、その他(n=12、25%)、および1例の両焦点性を含んでいた。4例(8.3%)は転移性疾患を有し、6例は脳脊髄液陽性であった;病期分類データは25例(52%)で不完全であった。患者は様々な化学療法および放射線療法のモダリティで治療を受けた。9例は治療に関するデータが不完全であった。5年全生存期間(全生存率)は65%(ジャーミノーマ(胚細胞腫)で68%、NGGCTで50.6%、分類不明の胚細胞腫瘍で85.7%)であった。結論:ジャーミノーマ(胚細胞腫)が最も一般的な組織学であり、男性優位性があった。患者の半数以上が不完全な病期分類データを有していた、および治療は地域全体で可変であった。全生存期間(全生存率)はHICと比較して低かった。標準化された治療プロトコルは、適切な病期分類および治療計画を支援し、合併症を予防し、生存率を改善するのに役立つであろう。",
     "added_at": "2026-10-06",
     "jif_tier": "high",
-    "relevance_status": "kept",
-    "relevance_note": "中米カリブ海地域の中枢神経系生殖細胞腫瘍の治療経験と予後が主題である。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T07:36:09+00:00"
   },
   {
@@ -21631,8 +21631,8 @@
     "abstract_ja": "一次性頭蓋内胚細胞腫瘍は小児および若年成人でしばしば生じる稀な腫瘍である。2ヶ月間の悪心、頭痛、および左眼の側頭側視覚のぼやけで発症した17歳男性の二部位胚腫症例を報告する。生物学的評価では汎下垂体機能低下症が示された。血清マーカーではベータヒト絨毛性ゴナドトロピン(hCG)およびラクテートデヒドロゲナーゼの上昇が認められた。画像検査では、トルコ鞍、傍トルコ鞍領域、および松果体部を侵す固い嚢胞性病変が認められ、内部に石灰化が認められた。腫瘍生検により二部位胚腫の診断が確認された。患者の治療プロトコルはエトポシドとカルボプラチンを用いた4サイクルの化学療法、続いて放射線療法の実施を含んだ。",
     "added_at": "2026-10-06",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "頭蓋内精上皮腫（原発性生殖細胞腫瘍）が本論文の直接的な主体である。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T07:38:30+00:00"
   },
   {
@@ -24323,7 +24323,7 @@
     "doi": "10.1186/s13023-024-03199-6",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Retrospective study of 14 patients with intraplacental choriocarcinoma and review of 89 literature cases. Found IC sensitive to chemotherapy with good remission rates and low recurrence. Discusses fertility outcomes showing patients achieving successful pregnancies post-treatment, while emphasizing psychological support importance.",
     "summary_ja": "胎盤内絨毛癌14症例と文献89症例のレビュー研究。化学療法に感受性があり、良好な寛解率と低い再発率。転移の有無にかかわらず治療後の妊娠成績が良好。患者への心理的支援が重要である。",
@@ -25441,7 +25441,7 @@
     "doi": "10.1590/S1677-5538.IBJU.2024.0134",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review and meta-analysis of primary retroperitoneal lymph node dissection (RPLND) for stage IIA/B seminomas. Analysis of 7 studies comprising 331 male patients. 2-year recurrence-free survival rate was 81% with 17.69% recurrence rate. Complication rate 9.16%, retrograde ejaculation 7.01%. Demonstrates RPLND as viable alternative to chemotherapy/radiation with favorable long-term outcomes, particularly relevant given toxicities of conventional treatments in young males.",
     "summary_ja": "病期IIA/Bセミノーマに対する一次後腹膜リンパ節郭清のシステマティックレビュー・メタ解析。7研究、331人の男性を分析。2年無再発生存率は81%で再発率17.69%。合併症率9.16%、逆行性射精7.01%。従来の化学療法・放射線療法の毒性を考慮すると、実行可能な代替治療選択肢。",
@@ -26237,8 +26237,8 @@
     "abstract_ja": "背景：Klippel-Feil症候群（KFS）は頸椎癒合を特徴とする稀な先天奇形であり、皮膚様腫瘍や奇形腫などの他の奇形に関連する可能性がある。別の存在する可能性のある状態は皮膚洞（DS）であり、頭蓋内腫瘍と皮下組織の間の交通であり、感染を前駆する可能性がある。本症例報告は、これらの3つの病理の関連を説明することを目的とし、文献との相関を図る。本報告は、包含および除外方法に基づいた医療記録の後方視的レビューと、索引付きデータベースを用いたシステマティックな書誌的相談に基づいている。症例説明：24歳の成人男性患者が発熱および髄膜刺激症状で当院に入院した。患者の臨床歴では、小児期に後頭皮膚洞と診断されたが、別の神経外科チームによって手術を受けるよう指示されたが、患者は手術を受けないことを選択した。磁気共鳴画像法(MRI)調査は、小脳に位置する2 cmがその主径上の感染された腫瘤を伴うDSを示した。患者は術前抗生物質療法を受け、腫瘍およびDS補正の肉眼的全切除を受けるとともに、病理組織学的検査で奇形腫として確認された。手術後、さらなるコンピュータ断層撮影(CT)スキャン分析は、KFS診断と合致する頸椎癒合の存在を示した。結論：KFS、小脳奇形腫、およびDSの関連は、最初の2つの関連のみが極めて稀であることで文献で未だ説明されていない。",
     "added_at": "2026-10-06",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "成人患者における感染性小脳奇形腫の症例報告であり、Klippel-Feil症候群との稀な関連性を示している。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T08:09:01+00:00"
   },
   {
@@ -27770,8 +27770,8 @@
     "abstract_ja": "非セミノーマ性胚細胞腫瘍（NSGCT）は頭蓋内胚細胞腫瘍の3分の1を占める。セミノーマグループは優れた全生存期間を有しているが、NGSCTを有する小児の標準治療はまだ評価中である。2013年以来、病理組織学的検査および/または血清/脳脊髄液（CSF）腫瘍マーカー（βhCG >200mlU/mlおよび/または陽性αフェトプロテイン(AFP)）によるNGSCTの診断を受けた15例の患者は、カルボプラチン、シクロフォスファミド、エトポシドによる導入化学療法に続いて、原発巣への増感（32Gy）を伴う脳室放射線療法（RTV）18Gyで治療された。転移患者は全脳脊髄放射線照射（CSI）を受け、初期4サイクルの化学療法に対する「低反応者」は自家幹細胞移植（ASCT）に続いてCSIを受けた。平均年齢13.1歳。男性13名。原発巣：松果体（n=12）、鞍上部（n=2）、両側（n=1）。4名の患者は診断時に転移性であった。8名の患者はCSFおよび/または血清αフェトプロテイン(AFP)値>1,000ng/mlを有していた。化学療法後の腫瘍反応は完全奏効6例、部分奏効7例を示し、「第2次手術」が5例で実施され、2名の患者が生存可能な病変を示し、ASCTに照会された。観察された主な毒性は血液学的3/4度であった。転移性疾患を有する2名の患者（ダウン症候群およびAFP>1,000ng/mlを有する患者1名、および肺転移を伴う絨毛癌を有する患者1名）は進行性疾患が発生し、死亡し、また無病徴候を有する他の2名の患者は内分泌学的障害のため死亡した。2年および5年での無事象生存および全生存期間は80%および72.7%であり、平均フォローアップは48ヶ月（範囲7-107）であった。小患者数にもかかわらず、本シリーズでは、6サイクルの化学療法とRTVおよび限局性疾患の焦点増感（n=11）とASCTおよび同定された低反応者の治療（n=2）は、この患者集団の転帰改善への全体的努力に貢献する効果的な戦略であるようである。",
     "added_at": "2026-10-06",
     "jif_tier": "high",
-    "relevance_status": "kept",
-    "relevance_note": "小児および思春期における頭蓋内非胚種腫（非胚細胞腫瘍型胚細胞腫瘍）の治療結果に関する臨床研究である。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T08:17:17+00:00"
   },
   {
@@ -28835,8 +28835,8 @@
     "abstract_ja": "背景：主に同一の組織構成を有する二焦点胚細胞腫瘍は、神経下垂体および松果体部に同時に発生する。観察：16歳男性患者は頭蓋内圧亢進症状を呈し、松果体および神経下垂体領域に同時腫瘍があり、閉塞性水頭症を引き起こしていた。血清ヒト絨毛性ゴナドトロピン（hCG）レベルは506.6 mIU/mLで上昇していた。肉眼的内視鏡検査時、松果体腫瘍は白色に見え、神経下垂体腫瘍は赤色で出血性であった。後者のサンプルサイズが限定的であったため、凍結切片生検は松果体病変にのみ可能であり、ジャーミノーマ（胚細胞腫）の存在を示唆した。その後、カルボプラチンとエトポシドが投与され、松果体腫瘍の縮小をもたらしたが、神経下垂体腫瘍には効果が観察されなかった。病理組織学的分析により、松果体病変はジャーミノーマ（胚細胞腫）として確認され、神経下垂体病変は胎児性癌であった。したがって、治療はイホスファミド、カルボプラチン、およびエトポシド（ICE）に変更され、両腫瘍で反応が認められた。患者は3サイクルの追加ICE療法および大量化学療法を受けた後、全脳脊髄放射線照射を受け、完全寛解を達成した。教訓：ほとんどの二焦点胚細胞腫瘍が同じ組織学的組織を共有しているが、時に差異が生じる可能性があり、正確な評価のための別々の生検が必要である。",
     "added_at": "2026-10-06",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "両側性生殖細胞腫瘍（松果体ジェルミノーマと神経下垂体胚胎癌）が研究の中心テーマであり、異なる組織型を有する稀な症例である。",
+    "relevance_status": "excluded",
+    "relevance_note": "対象外: 脳・脊髄原発の胚細胞腫瘍(編集方針 2026-10)",
     "relevance_reviewed_at": "2026-09-27T08:22:26+00:00"
   },
   {
@@ -30205,7 +30205,7 @@
     "doi": "10.1016/j.urolonc.2024.01.014",
     "url": "",
     "tags": [
-      "総説"
+      "臨床研究"
     ],
     "summary_en": "Systematic review and meta-analysis of 8 studies with 355 stage II seminoma patients undergoing primary RPLND. Overall recurrence rate 14% (infield 4%) with 4% ≥grade III complications. Antegrade ejaculation preserved in 98% of cases. Concluded primary RPLND is safe and effective treatment option for CS II seminomatous GCT with excellent cure rates.",
     "summary_ja": "355名の病期IIセミノーマ患者における一次後腹膜リンパ節郭清(RPLND)を実施した8つの研究のシステマティックレビューおよびメタ解析。全体的再発率14%(領内4%)、4%≥病期III合併症。順行性射精が98%のケースで保存。臨床病期IIセミノーマに対する一次RLPNDは安全で有効な治療選択肢、優れた治癒率。",

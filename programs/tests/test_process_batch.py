@@ -49,7 +49,7 @@ class ProcessBatchTests(unittest.TestCase):
         return db_dir
 
     def run_batch(self, db_dir: Path, model_output: dict):
-        def fake_call(prompt, model=""):
+        def fake_call(prompt, model="", **_):
             return model_output, 0.01
         argv = ["process_batch.py", "--claude", "--db-dir", str(db_dir), "--batch-size", "10"]
         with mock.patch.object(self.batch, "call_claude", fake_call), mock.patch.object(sys, "argv", argv), \
@@ -117,7 +117,7 @@ class ProcessBatchTests(unittest.TestCase):
                       "summary_ja": "y", "title_ja": "旧題4", "abstract_ja": ""}})
             backup = root / "backup.jsonl"
 
-            def fake_call(prompt, model=""):
+            def fake_call(prompt, model="", **_):
                 self.assertIn("summary_en", prompt)
                 self.assertIn("セミノーマ", prompt)  # glossary terms of the batch are injected
                 return {"1": {"pmid": "1", "title_ja": "新題", "abstract_ja": "新訳", "summary_ja": "新要約"},
@@ -160,7 +160,7 @@ class ProcessBatchTests(unittest.TestCase):
         self.assertIn("if relevance is not_relevant, set abstract_ja to an empty string", prompt)
 
     def test_a_not_relevant_paper_flipped_to_kept_is_completed_by_refill_without_touching_other_rows(self):
-        def refill_call(prompt, model=""):
+        def refill_call(prompt, model="", **_):
             self.assertIn("needs_summary", prompt)
             return {"2": {"pmid": "2", "title_ja": "題2", "abstract_ja": "全文訳2", "summary_en": "SUM-EN",
                           "summary_ja": "要約2"},
