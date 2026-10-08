@@ -364,7 +364,7 @@ def parse_claude_payload(response):
 
 # Model and effort for every AI batch task (relevance, translation, term extraction, screening).
 DEFAULT_MODEL = "claude-haiku-5-5"
-DEFAULT_EFFORT = "medium"
+DEFAULT_EFFORT = "low"
 
 
 def call_claude(prompt, model="", max_retries=2, effort=""):
