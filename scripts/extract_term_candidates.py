@@ -109,7 +109,7 @@ def extract(args):
             except queue.Empty:
                 return
             try:
-                result, cost = process_batch.call_claude(prompt_for(batch, args.mode), args.model)
+                result, cost = process_batch.call_claude(prompt_for(batch, args.mode), args.model, effort=args.effort)
             except Exception as error:  # noqa: BLE001 - keep going; the batch stays "not done" for the next run
                 with lock:
                     totals["failed"] += 1
@@ -208,7 +208,8 @@ def main():
     parser.add_argument("--batch-size", type=int, default=None)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--limit", type=int, default=0, help="Only the first N not-yet-extracted papers")
-    parser.add_argument("--model", default="claude-haiku-4-5")
+    parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)
+    parser.add_argument("--effort", default=process_batch.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
     parser.add_argument("--claude", action="store_true", help="Actually call the AI (extract only)")
     parser.add_argument("--glossary", type=pathlib.Path, help="aggregate: default <db-dir>/../reference/terminology/terminology_ja.md")
     args = parser.parse_args()
