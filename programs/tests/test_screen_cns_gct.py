@@ -57,7 +57,7 @@ class ScreenCnsGctTests(unittest.TestCase):
     def test_screen_records_verdicts_and_resumes_without_asking_again(self):
         calls = []
 
-        def fake_call(prompt, model=""):
+        def fake_call(prompt, model="", **_):
             calls.append(prompt)
             return {"1": {"pmid": "1", "verdict": "cns_primary", "reason": "r"},
                     "3": {"pmid": "3", "verdict": "bogus", "reason": "r"}}, 0.01

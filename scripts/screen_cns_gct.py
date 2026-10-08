@@ -109,7 +109,7 @@ def screen(args):
             except queue.Empty:
                 return
             try:
-                result, cost = process_batch.call_claude(prompt_for(batch), args.model)
+                result, cost = process_batch.call_claude(prompt_for(batch), args.model, effort=args.effort)
             except Exception as error:  # noqa: BLE001 - the batch stays undone for the next run
                 with lock:
                     totals["failed"] += 1
@@ -189,7 +189,8 @@ def main():
     parser.add_argument("--claude", action="store_true")
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--batch-size", type=int, default=20)
-    parser.add_argument("--model", default="claude-haiku-4-5")
+    parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)
+    parser.add_argument("--effort", default=process_batch.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
     parser.add_argument("--backup", type=pathlib.Path)
     parser.add_argument("--site-papers", type=pathlib.Path)
     parser.add_argument("--apply", action="store_true")
