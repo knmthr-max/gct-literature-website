@@ -75,6 +75,24 @@ class ProcessBatchTests(unittest.TestCase):
         self.assertEqual(rows["2"]["relevance_status"], "excluded")
         self.assertEqual(rows["4"]["ai_abstract_ja"], self.batch.NO_ABSTRACT_JA)  # no-abstract sentinel unchanged
 
+    def test_a_cns_gct_paper_is_excluded_with_its_own_label_note_and_no_abstract_translation(self):
+        def item(pmid, relevance):
+            return {"pmid": pmid, "relevance": relevance, "relevance_reason": "r", "summary_en": "en",
+                    "summary_ja": "ja", "title_ja": "題", "abstract_ja": "全文訳"}
+        output = {"1": item("1", "relevant"), "2": item("2", "cns_gct"), "3": item("3", "not_relevant"),
+                  "4": item("4", "cns_gct")}
+        with tempfile.TemporaryDirectory() as temp:
+            rows = self.run_batch(self.make_db(Path(temp)), output)
+        self.assertEqual((rows["2"]["ai_relevance"], rows["2"]["relevance_status"]), ("cns_gct", "excluded"))
+        self.assertEqual(rows["2"]["relevance_note"], self.batch.CNS_NOTE)
+        self.assertEqual((rows["2"]["ai_abstract_ja"], rows["2"]["ai_title_ja"], rows["2"]["ai_summary_ja"]), ("", "題", ""))
+        self.assertEqual(rows["2"]["ai_summary_en"], "en")      # cns_gct: English summary only
+        self.assertIsNone(rows["3"]["relevance_note"])          # plain not_relevant carries no CNS note
+        self.assertIsNone(rows["1"]["relevance_note"])
+        self.assertIn("cns_gct", self.batch.claude_prompt([{"pmid": "1", "title": "t", "journal_abbrev": "J",
+                                                           "journal_title": "J", "publication_year": 2019,
+                                                           "abstract": "a"}]))
+
     def run_main(self, argv_extra, db_dir):
         argv = ["process_batch.py", "--db-dir", str(db_dir), *argv_extra]
         with mock.patch.object(sys, "argv", argv), redirect_stdout(io.StringIO()) as out:
@@ -157,7 +175,7 @@ class ProcessBatchTests(unittest.TestCase):
         prompt = self.batch.claude_prompt([{
             "pmid": "1", "title": "t", "journal_abbrev": "J", "journal_title": "J", "publication_year": 2019,
             "abstract": "a"}])
-        self.assertIn("if relevance is not_relevant, set abstract_ja to an empty string", prompt)
+        self.assertIn("if relevance is not_relevant or cns_gct, set abstract_ja to an empty string", prompt)
 
     def test_a_not_relevant_paper_flipped_to_kept_is_completed_by_refill_without_touching_other_rows(self):
         def refill_call(prompt, model="", **_):
