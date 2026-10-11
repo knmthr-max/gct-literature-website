@@ -41,9 +41,10 @@ import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
+import papers_store  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAPERS_PATH = ROOT / "data" / "papers.json"
+PAPERS_PATH = ROOT / "data" / "papers"
 
 RELEVANCE_VALUES = ("relevant", "uncertain", "not_relevant")
 DEFAULT_DECISION = {"relevant": "keep", "uncertain": "needs_review", "not_relevant": "exclude"}
@@ -72,11 +73,11 @@ def run_id():
 
 
 def load_papers(path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    return papers_store.load(path)
 
 
 def save_papers(path, papers):
-    path.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    papers_store.save(path, papers)
 
 
 def claude_schema():

@@ -28,6 +28,7 @@ import threading
 SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 from gct_db import existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 
 spec = importlib.util.spec_from_file_location("process_batch", SCRIPTS_DIR / "process_batch.py")
 process_batch = importlib.util.module_from_spec(spec)
@@ -160,7 +161,7 @@ def apply(args):
     print(f"DB rows to exclude: {len(changes)} (of which published on the site: {len(published)})")
     papers = site_hits = None
     if args.site_papers:
-        papers = json.loads(args.site_papers.read_text(encoding="utf-8"))
+        papers = papers_store.load(args.site_papers)
         site_hits = [e for e in papers if str(e.get("pmid") or "") in targets and e.get("relevance_status") != "excluded"]
         print(f"site entries to hide: {len(site_hits)}")
     for kind in ("mixed", "uncertain"):
@@ -187,7 +188,7 @@ def apply(args):
         for entry in site_hits:
             entry["relevance_status"] = "excluded"
             entry["relevance_note"] = NOTE
-        args.site_papers.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        papers_store.save(args.site_papers, papers)
     print("applied")
 
 

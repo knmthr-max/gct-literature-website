@@ -25,12 +25,13 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAPERS_PATH = ROOT / "data" / "papers.json"
+PAPERS_PATH = ROOT / "data" / "papers"
 PIPELINE_DIR = ROOT / "programs" / "literature_pipeline"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
 
 from pipeline import JIFMatcher, jif_tier  # noqa: E402
+import papers_store  # noqa: E402
 
 AUDIT_HEADER = (
     "id", "pmid", "journal", "year", "jif_match_status", "jif_match_key",
@@ -47,7 +48,7 @@ def main():
     parser.add_argument("--papers", type=pathlib.Path, default=PAPERS_PATH)
     args = parser.parse_args()
 
-    papers = json.loads(args.papers.read_text(encoding="utf-8"))
+    papers = papers_store.load(args.papers)
     matcher = JIFMatcher(args.reference)
 
     audit_rows = []
@@ -80,9 +81,7 @@ def main():
             "jif_tier": tier,
         })
 
-    args.papers.write_text(
-        json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    papers_store.save(args.papers, papers)
 
     args.audit_output.parent.mkdir(parents=True, exist_ok=True)
     with args.audit_output.open("w", encoding="utf-8", newline="") as f:

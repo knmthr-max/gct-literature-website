@@ -24,6 +24,7 @@ for path in (SCRIPTS_DIR, ROOT / "programs" / "literature_pipeline"):
 
 import glossary as glossary_lib  # noqa: E402
 from gct_db import existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 
 SENTINELS = {"Abstractなし", "No abstract available."}
 # (english column, japanese column, label): the English text is the source, or the AI's English summary
@@ -77,7 +78,7 @@ def main():
     site_pmids = frozenset()
     if args.site_papers:
         import json
-        site_pmids = frozenset(str(p["pmid"]) for p in json.loads(args.site_papers.read_text(encoding="utf-8")) if p.get("pmid"))
+        site_pmids = frozenset(str(p["pmid"]) for p in papers_store.load(args.site_papers) if p.get("pmid"))
     problems = list(check_db(args.db_dir, entries, args.scope, site_pmids))
     by_status = collections.Counter(p[2] for p in problems)
     papers = {p[0] for p in problems if p[2] == "avoid"}

@@ -22,6 +22,7 @@ SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 from gct_db import existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 
 # site field -> (DB column, key in the backup's "old")
 FIELDS = {"title_ja": ("ai_title_ja", "title_ja"), "summary_ja": ("ai_summary_ja", "summary_ja"),
@@ -78,7 +79,7 @@ def main():
     parser.add_argument("--backup", type=pathlib.Path, required=True)
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
-    papers = json.loads(args.papers.read_text(encoding="utf-8"))
+    papers = papers_store.load(args.papers)
     db = read_db(args.db_dir, [str(p.get("pmid")) for p in papers if p.get("pmid")])
     updates, manual, same = plan(papers, db, read_backup(args.backup))
     by_field = collections.Counter(field for _, field, _ in updates)
@@ -89,7 +90,7 @@ def main():
     if args.apply and updates:
         for entry, field, new in updates:
             entry[field] = new
-        args.papers.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        papers_store.save(args.papers, papers)
         print(f"wrote {args.papers}")
     elif not args.apply:
         print("(dry run: nothing written; pass --apply)")

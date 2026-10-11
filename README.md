@@ -5,7 +5,7 @@ GCT関連文献を収集・整理して公開するWebサイト。**部分公開
 ## アーキテクチャ
 
 - **ビルドステップなしの静的サイト**: HTML + CSS + Vanilla JS のみ。フレームワーク・npm 依存なし
-- **データソースは `data/` の JSON のみ**: サイトの表示内容はすべて `data/papers.json`(文献)と `data/site.json`(サイト情報)から動的に描画
+- **データソースは `data/` の JSON のみ**: サイトの表示内容はすべて `data/papers/`(文献。年代別の `papers_*.json`)と `data/site.json`(サイト情報)から動的に描画
 - **ホスティングは GitHub Pages**: `main` への push で GitHub Actions が自動デプロイ
 
 ```
@@ -16,7 +16,7 @@ assets/
   style.css         … スタイル(日英共通)
 data/
   site.json         … サイトタイトル・説明・お知らせ
-  papers.json       … 文献データ本体(ここに追記していく)
+  papers/           … 文献データ本体(年代別の papers_*.json と index.json。scripts/papers_store.py で読み書き)
   raw/              … PubMedからエクスポートした生データ(.nbib)の保管場所
   README.md         … データ追加手順とフィールド仕様
 scripts/
