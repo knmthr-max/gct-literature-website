@@ -42,8 +42,9 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 
-PAPERS_PATH = ROOT / "data" / "papers.json"
+PAPERS_PATH = ROOT / "data" / "papers"
 
 
 def now_utc():
@@ -106,7 +107,7 @@ def main():
         raise FileNotFoundError(f"No shard database files found under {args.db_dir}")
     shard_conns = {path: connect(path) for path in shard_paths}
 
-    papers = json.loads(args.papers.read_text(encoding="utf-8")) if args.papers.is_file() else []
+    papers = papers_store.load(args.papers) if papers_store.exists(args.papers) else []
     existing_pmids = {str(p.get("pmid")) for p in papers if p.get("pmid")}
 
     with args.decisions.open(encoding="utf-8", newline="") as f:
@@ -168,7 +169,7 @@ def main():
                 (note, reviewed_at, pmid),
             )
 
-    args.papers.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    papers_store.save(args.papers, papers)
     for conn in shard_conns.values():
         conn.commit()
 

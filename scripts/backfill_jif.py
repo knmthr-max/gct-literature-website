@@ -54,9 +54,10 @@ for _path in (SCRIPTS_DIR, PIPELINE_DIR):
         sys.path.insert(0, str(_path))
 
 from gct_db import connect, existing_shard_paths, jif_reference_files  # noqa: E402
+import papers_store  # noqa: E402
 from pipeline import JIFMatcher, jif_tier, normalize_title, title_keys  # noqa: E402
 
-PAPERS_PATH = ROOT / "data" / "papers.json"
+PAPERS_PATH = ROOT / "data" / "papers"
 KNOWN_TIERS = {"low", "moderate", "high", "very-high"}
 PUBLIC_TIERS = KNOWN_TIERS | {"unknown"}
 # Clarivate's JIF data starts with data year 1997. Older papers can't be filled by adding more
@@ -180,7 +181,7 @@ def journal_index(shard_conns):
 
 
 def backfill_papers(matcher, papers_path, tier_by_pmid, allow_downgrade, apply, journals=None):
-    papers = json.loads(papers_path.read_text(encoding="utf-8"))
+    papers = papers_store.load(papers_path)
     stats = Counter()
     for paper in papers:
         old_tier = paper.get("jif_tier", "unknown")
@@ -211,7 +212,7 @@ def backfill_papers(matcher, papers_path, tier_by_pmid, allow_downgrade, apply, 
             paper["jif_tier"] = new_tier
     stats["entries"] = len(papers)
     if apply and stats["tier_changed"]:
-        papers_path.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        papers_store.save(papers_path, papers)
     return stats
 
 
@@ -257,7 +258,7 @@ def run(args):
         and not set(title_keys(row["journal_title"])) & db_title_keys
     })
     papers_stats = None
-    if not args.no_papers and args.papers.is_file():
+    if not args.no_papers and papers_store.exists(args.papers):
         papers_stats = backfill_papers(matcher, args.papers, tier_by_pmid, args.allow_downgrade, args.apply,
                                        journal_index(shard_conns))
 

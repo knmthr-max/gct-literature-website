@@ -25,6 +25,7 @@ SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 from gct_db import existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 from import_medline import classify  # noqa: E402
 
 CATEGORIES = {"症例報告", "臨床研究", "基礎研究", "総説", "ガイドライン", "論説", "レター"}
@@ -117,7 +118,7 @@ def main():
     site_updates, site_manual = [], []
     papers = None
     if args.site_papers:
-        papers = json.loads(args.site_papers.read_text(encoding="utf-8"))
+        papers = papers_store.load(args.site_papers)
         site_updates, site_manual = plan_site(papers, changes)
         print(f"site: {len(site_updates)} entries to update, {len(site_manual)} left alone (tags edited by hand)")
     if not args.apply:
@@ -127,7 +128,7 @@ def main():
     if papers is not None and site_updates:
         for entry, new in site_updates:
             entry["tags"] = new
-        args.site_papers.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        papers_store.save(args.site_papers, papers)
     print("applied")
 
 

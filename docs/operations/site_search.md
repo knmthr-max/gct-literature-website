@@ -9,7 +9,7 @@
 
 ## 仕組み(自動)
 
-デプロイのたびに `node scripts/build_site_search.mjs` が `data/papers.json` から次を生成し、公開ブランチ(gh-pages)に出します。
+デプロイのたびに `node scripts/build_site_search.mjs` が `data/papers/`(年代別の文献データ)から次を生成し、公開ブランチ(gh-pages)に出します。
 リポジトリにはコミットしません(`.gitignore` 済み)。
 
 | 生成物 | 内容 |

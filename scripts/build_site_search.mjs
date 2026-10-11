@@ -1,6 +1,6 @@
-// 公開用の検索データを data/papers.json から生成する(デプロイ時に実行。生成物はコミットしない)。
+// 公開用の検索データを data/papers/(年代別の文献データ)から生成する(デプロイ時に実行。生成物はコミットしない)。
 //
-//   node scripts/build_site_search.mjs [papers.json] [出力ディレクトリ]   (既定: data/papers.json と、リポジトリ直下)
+//   node scripts/build_site_search.mjs [papers(ディレクトリまたはJSON)] [出力ディレクトリ]   (既定: data/papers と、リポジトリ直下)
 //
 // 出力:
 //   search/list.json          軽い一覧(抄録・人向けメモを除く)
@@ -14,7 +14,7 @@ import path from "node:path";
 import zlib from "node:zlib";
 import { indexText } from "../assets/search-lib.js";
 
-const papersPath = process.argv[2] || "data/papers.json";
+const papersPath = process.argv[2] || "data/papers";
 const outDir = process.argv[3] || ".";
 
 const LIST_FIELDS = ["id", "pmid", "doi", "url", "title", "title_ja", "journal", "year", "authors", "tags",
@@ -23,7 +23,16 @@ const SAFE_ID = /^[A-Za-z0-9._-]+$/;
 // 検索に使わない Pagefind の部品(UI・ハイライト)と、読まない結果詳細は公開しない
 const UNUSED = [/^pagefind-.*ui\.(js|css)$/, /^pagefind-highlight\.js$/, /^fragment$/];
 
-const papers = JSON.parse(fs.readFileSync(papersPath, "utf8")).filter((p) => p.relevance_status !== "excluded");
+// 文献データは data/papers/ の年代別ファイル(index.json の順)。1つのJSONファイルを渡すこともできる
+function readPapers(target) {
+  if (fs.existsSync(target) && fs.statSync(target).isDirectory()) {
+    const index = JSON.parse(fs.readFileSync(path.join(target, "index.json"), "utf8"));
+    return index.shards.flatMap((name) => JSON.parse(fs.readFileSync(path.join(target, name), "utf8")));
+  }
+  return JSON.parse(fs.readFileSync(target, "utf8"));
+}
+
+const papers = readPapers(papersPath).filter((p) => p.relevance_status !== "excluded");
 
 const seen = new Set();
 for (const p of papers) {

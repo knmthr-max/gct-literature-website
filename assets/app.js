@@ -380,7 +380,10 @@
         SEARCH_MODE = false; // 検索データが無い・読めない: 従来の方式で表示する
       }
     }
-    return loadJson("data/papers.json");
+    // 検索データが使えないときの従来方式: 年代別に分けた文献データを全部読んで連結する
+    const index = await loadJson("data/papers/index.json");
+    const parts = await Promise.all(index.shards.map((name) => loadJson("data/papers/" + name)));
+    return parts.flat();
   }
 
   async function init() {
