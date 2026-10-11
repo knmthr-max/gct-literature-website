@@ -19,9 +19,19 @@ export const normalise = (text) => String(text ?? "").normalize("NFKC");
 const ngrams = (run, n) =>
   run.length < n ? [] : Array.from({ length: run.length - n + 1 }, (_, i) => run.slice(i, i + n));
 
+// 英語の語に記号が付く場合(•patients, (GCT), 5-FU, cell/tissue)は、そのままの形に加えて、記号で区切った部分も
+// 索引に入れる。Pagefind は箇条書きの「•」などを語の一部として扱うため、そのままでは「patients」で見つからない。
+const SYMBOL = /[^\p{L}\p{N}\s]/u;
+const withSymbolParts = (text) =>
+  text.split(/\s+/).map((token) => {
+    if (!SYMBOL.test(token)) return token;
+    const parts = token.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+    return parts.length && parts.join("") !== token ? `${token} ${parts.join(" ")}` : token;
+  }).join(" ");
+
 export const indexText = (text) =>
-  normalise(text).replace(CJK_RUN, (run) =>
-    ` ${run.length < 2 ? run : [...ngrams(run, 2), ...ngrams(run, 3)].join(" ")} `);
+  withSymbolParts(normalise(text).replace(CJK_RUN, (run) =>
+    ` ${run.length < 2 ? run : [...ngrams(run, 2), ...ngrams(run, 3)].join(" ")} `));
 
 // 検索語(空白を含まない1語)を、日本語の連続と、それ以外に分ける。
 //   BEP療法 → [{kind:"latin", text:"BEP"}, {kind:"cjk", text:"療法"}]
@@ -102,6 +112,25 @@ export async function evaluateQuery(query, lookup, allIds) {
     for (const id of await tokenSet(term)) result.delete(id);
   }
   return result;
+}
+
+// Pagefind の索引は語の並び順に分割され、検索した語の部分だけ読み込まれる。前方一致で広がる語(seminoma → seminomatous)が
+// 隣の分割に入っていると、まだ読み込まれていないため、その論文が検索結果から漏れる(件数が約2万件になると約1割漏れた)。
+// そこで英語の語は、検索の前に「語+英数字1文字」の語を先読みして、前方一致の範囲にかかる分割を全部読み込む。
+// 2文字以下の語は範囲が広すぎる(数秒かかる)ので先読みしない(in, of など)。
+const PREFIX_FILLERS = "abcdefghijklmnopqrstuvwxyz0123456789";
+const warmed = new WeakMap();
+export async function searchWord(pagefind, sub) {
+  const query = pagefindQuery(sub);
+  if (query === null) return null;
+  if (sub.kind === "latin" && sub.text.length >= 3 && typeof pagefind.preload === "function") {
+    const seen = warmed.get(pagefind) ?? warmed.set(pagefind, new Set()).get(pagefind);
+    if (!seen.has(sub.text)) {
+      seen.add(sub.text);
+      await Promise.all([...PREFIX_FILLERS].map((c) => pagefind.preload(sub.text + c)));
+    }
+  }
+  return pagefind.search(query);
 }
 
 // Pagefind を読み込む(ブラウザ専用)。Pagefind は <html lang> で検索言語を決める。索引は日本語を2文字ずつの語に

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { indexText, parseQuery, subterms, pagefindQuery, evaluateQuery } from "../../assets/search-lib.js";
+import { indexText, parseQuery, subterms, pagefindQuery, evaluateQuery, searchWord } from "../../assets/search-lib.js";
 
 test("indexText: 日本語は重なる2文字ずつと3文字ずつに分け、英数字はそのまま", () => {
   assert.deepEqual(indexText("胚細胞腫瘍").trim().split(/\s+/),
@@ -58,4 +58,27 @@ test("evaluateQuery: AND / OR / NOT と、日本語+英字の混在", async () =
   assert.deepEqual(await run("精巣腫瘍 cisplatin"), ["a"]);
   assert.equal(await evaluateQuery("   ", lookup, ALL), null);
   assert.deepEqual(await run("存在しない語"), []);
+});
+
+test("indexText: 記号が付いた英語の語は、そのままの形と、記号で区切った部分の両方を索引に入れる", () => {
+  const words = indexText("•patients non-seminomatous (GCT) cell/tissue plain").trim().split(/\s+/);
+  for (const word of ["•patients", "patients", "non-seminomatous", "non", "seminomatous", "(GCT)", "GCT", "cell/tissue", "cell", "tissue", "plain"]) {
+    assert.ok(words.includes(word), word);
+  }
+  assert.deepEqual(indexText("plain words").trim().split(/\s+/), ["plain", "words"]); // 記号の無い語は増やさない
+});
+
+test("searchWord: 3文字以上の英語の語は、前方一致の範囲の索引を先読みしてから1度だけ検索する", async () => {
+  const preloaded = [];
+  const pagefind = { preload: async (word) => { preloaded.push(word); }, search: async (query) => ({ query, results: [] }) };
+  const result = await searchWord(pagefind, { kind: "latin", text: "seminoma" });
+  assert.equal(result.query, "seminoma");
+  assert.equal(preloaded.length, 36);
+  assert.ok(preloaded.includes("seminomaa") && preloaded.includes("seminoma9"));
+  await searchWord(pagefind, { kind: "latin", text: "seminoma" });
+  assert.equal(preloaded.length, 36); // 同じ語は2回目は先読みしない
+  await searchWord(pagefind, { kind: "latin", text: "in" });
+  await searchWord(pagefind, { kind: "cjk", text: "精巣" });
+  assert.equal(preloaded.length, 36); // 2文字以下の英語と、日本語は先読みしない
+  assert.equal(await searchWord(pagefind, { kind: "cjk", text: "腫" }), null); // 1文字の日本語は呼び出し側が探す
 });
