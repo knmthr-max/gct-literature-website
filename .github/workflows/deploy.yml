@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate JSON data
         run: |
-          python3 -m json.tool data/papers.json > /dev/null
+          for f in data/papers/*.json; do python3 -m json.tool "$f" > /dev/null; done
           python3 -m json.tool data/site.json > /dev/null
           echo "JSON OK"
       - uses: actions/setup-node@v4

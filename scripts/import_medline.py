@@ -13,9 +13,10 @@ import json
 import pathlib
 import re
 import sys
+import papers_store  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAPERS_PATH = ROOT / "data" / "papers.json"
+PAPERS_PATH = ROOT / "data" / "papers"
 
 # 公開サイトのタグは、この固定7分類だけに限定する(PubMedの著者キーワードや
 # 細かい文献種別をそのままタグにすると、1件にしか付かないタグが大量発生し
@@ -113,7 +114,7 @@ def main(argv):
         print(__doc__)
         return 1
 
-    papers = json.loads(PAPERS_PATH.read_text(encoding="utf-8"))
+    papers = papers_store.load(PAPERS_PATH)
     known_pmids = {p.get("pmid") for p in papers if p.get("pmid")}
     today = datetime.date.today().isoformat()
 
@@ -135,9 +136,7 @@ def main(argv):
             added += 1
             print(f"追加: PMID={entry['pmid']} {entry['title'][:60]}")
 
-    PAPERS_PATH.write_text(
-        json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    papers_store.save(PAPERS_PATH, papers)
     print(f"\n完了: {added}件追加, {skipped}件スキップ, 合計{len(papers)}件")
     return 0
 

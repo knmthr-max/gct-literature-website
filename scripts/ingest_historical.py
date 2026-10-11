@@ -33,8 +33,9 @@ if str(PUBMED_CLEANER_DIR) not in sys.path:
 
 from pubmed_cleaner import pubmed_cleaner as cleaner  # noqa: E402
 from gct_db import connect, json_dump, shard_for_year, shard_path, existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 
-PAPERS_PATH = ROOT / "data" / "papers.json"
+PAPERS_PATH = ROOT / "data" / "papers"
 
 
 def now_utc():
@@ -64,9 +65,9 @@ def record_to_row(record, source_file):
 
 
 def load_published_pmids(papers_path: pathlib.Path) -> set[str]:
-    if not papers_path.is_file():
+    if not papers_store.exists(papers_path):
         return set()
-    papers = json.loads(papers_path.read_text(encoding="utf-8"))
+    papers = papers_store.load(papers_path)
     return {str(p["pmid"]) for p in papers if p.get("pmid")}
 
 

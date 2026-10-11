@@ -1,0 +1,10 @@
+{
+  "shards": [
+    "papers_pre1980.json",
+    "papers_1980s.json",
+    "papers_1990s.json",
+    "papers_2000s.json",
+    "papers_2010s.json",
+    "papers_2020s.json"
+  ]
+}
