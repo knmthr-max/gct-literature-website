@@ -144,7 +144,7 @@ def main():
     parser.add_argument("--batch-size", type=int, default=15)
     parser.add_argument("--passes", type=int, default=4, help="Re-run for papers the AI skipped, up to this many passes")
     parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)
-    parser.add_argument("--effort", default=process_batch.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
+    parser.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
     args = parser.parse_args()
     (stats if args.stats else run)(args)
 
