@@ -27,8 +27,9 @@ if str(SCRIPTS_DIR) not in sys.path:
 from gct_db import existing_shard_paths  # noqa: E402
 import papers_store  # noqa: E402
 from import_medline import classify  # noqa: E402
+import study_design  # noqa: E402
 
-CATEGORIES = {"症例報告", "臨床研究", "基礎研究", "総説", "ガイドライン", "論説", "レター"}
+CATEGORIES = set(study_design.CATEGORIES)
 
 
 def read_overrides(path):
@@ -46,14 +47,32 @@ def read_overrides(path):
     return overrides
 
 
-def wanted_tags(publication_types, pmid, overrides):
+def read_ai_results(path):
+    """pmid -> (AI design, confidence)  (scripts/classify_design.py の結果)。"""
+    results = {}
+    if path and path.is_file():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                item = json.loads(line)
+                if item.get("design") in CATEGORIES:
+                    results[str(item["pmid"])] = (item["design"], item.get("confidence", ""))
+    return results
+
+
+def wanted_tags(publication_types, pmid, overrides, ai=None):
     if pmid in overrides:
         return [overrides[pmid]] if overrides[pmid] else []
-    tag = classify(publication_types)
+    by_type = classify(publication_types)
+    design, confidence = (ai or {}).get(pmid, (None, ""))
+    # 出版タイプで決まらない論文はAIの判定(確信度が低くても)を使う。出版タイプがある(症例報告・総説)場合は、
+    # 確信度が低いAIの判定で出版タイプの分類を覆さない
+    if design and by_type and confidence == "low":
+        design = None
+    tag = study_design.final_design(by_type, design)
     return [tag] if tag else []
 
 
-def plan_db(db_dir, overrides):
+def plan_db(db_dir, overrides, ai=None):
     """[(shard path, pmid, old tags, new tags)] for processed rows whose tag differs from the rules."""
     changes = []
     for path in existing_shard_paths(db_dir):
@@ -61,7 +80,7 @@ def plan_db(db_dir, overrides):
         for pmid, pt, tags in conn.execute(
                 "SELECT pmid, publication_types, ai_tags FROM papers WHERE ai_tags IS NOT NULL"):
             old = json.loads(tags or "[]")
-            new = wanted_tags(json.loads(pt or "[]"), str(pmid), overrides)
+            new = wanted_tags(json.loads(pt or "[]"), str(pmid), overrides, ai)
             if old != new:
                 changes.append((path, str(pmid), old, new))
         conn.close()
@@ -105,12 +124,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--overrides", type=pathlib.Path)
+    parser.add_argument("--ai-results", type=pathlib.Path, help="classify_design.py の結果(JSONL)")
     parser.add_argument("--site-papers", type=pathlib.Path)
     parser.add_argument("--backup", type=pathlib.Path)
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
     overrides = read_overrides(args.overrides)
-    changes = plan_db(args.db_dir, overrides)
+    changes = plan_db(args.db_dir, overrides, read_ai_results(args.ai_results))
     kinds = collections.Counter((tuple(old), tuple(new)) for _, _, old, new in changes)
     print(f"overrides: {len(overrides)} | DB rows to retag: {len(changes)}")
     for (old, new), n in kinds.most_common():
