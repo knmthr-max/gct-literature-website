@@ -278,10 +278,9 @@
     $("search-notice").hidden = true;
     const { lib, pagefind, idmap } = engine;
     const lookup = async (sub) => {
-      const q = lib.pagefindQuery(sub);
-      if (q === null) return substringIds(sub.text); // 1文字の日本語
-      const { results } = await pagefind.search(q);
-      return new Set(results.map((r) => idmap[r.id]).filter(Boolean));
+      const found = await lib.searchWord(pagefind, sub);
+      if (found === null) return substringIds(sub.text); // 1文字の日本語
+      return new Set(found.results.map((r) => idmap[r.id]).filter(Boolean));
     };
     return lib.evaluateQuery(query, lookup, allIds);
   }

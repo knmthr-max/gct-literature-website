@@ -46,7 +46,10 @@ const frequent = (() => {
   }
   return [...df].filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).slice(0, 40).map(([w]) => w);
 })();
-const queries = [...new Set([...golden, ...frequent])];
+// 英語の冠詞・前置詞などの超頻出語(ほぼ全件に含まれ、前方一致の範囲が広すぎる)は、検索で完全には探さない(searchWord を参照)。
+// テストの対象からも外す。
+const STOP_WORDS = new Set(["a", "an", "of", "in", "on", "to", "for", "and", "the", "with", "by", "is", "at", "or", "as"]);
+const queries = [...new Set([...golden, ...frequent])].filter((q) => !STOP_WORDS.has(q.toLowerCase()));
 
 const types = { ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".css": "text/css", ".wasm": "application/wasm" };
 const server = http.createServer((req, res) => {
@@ -70,10 +73,9 @@ const engineResult = (query) => page.evaluate(async ({ q, allIds: all }) => {
   window.__engine ??= { pagefind: await lib.loadPagefind("/pagefind/pagefind.js"), idmap: await (await fetch("/search/idmap.json")).json() };
   const { pagefind, idmap } = window.__engine;
   const lookup = async (sub) => {
-    const pq = lib.pagefindQuery(sub);
-    if (pq === null) return new Set(); // 1文字の日本語は画面側が別の方法で探す(このテストの対象外)
-    const { results } = await pagefind.search(pq);
-    return new Set(results.map((r) => idmap[r.id]).filter(Boolean));
+    const found = await lib.searchWord(pagefind, sub);
+    if (found === null) return new Set(); // 1文字の日本語は画面側が別の方法で探す(このテストの対象外)
+    return new Set(found.results.map((r) => idmap[r.id]).filter(Boolean));
   };
   const ids = await lib.evaluateQuery(q, lookup, all);
   return ids && [...ids];
@@ -96,14 +98,22 @@ for (const query of queries) {
 }
 
 // 画面の件数表示が検索結果と一致するか(代表の検索式のみ)
+// 件数は検索が終わってから更新される。約2万件では1秒を超えることがあるので、固定時間ではなく、全件の表示でなくなるまで待つ。
+// 期待値は素朴な全文一致の件数。Pagefind 側の余分(語幹処理・日本語の2文字語)があるので、3%までの増加を許容する。
+const shownCount = async () => Number((await page.locator("#result-count").innerText()).match(/^(\d+)/)?.[1] ?? NaN);
 for (const query of golden.slice(0, 5)) {
-  await page.fill("#search-box", query);
-  await page.waitForTimeout(700);
-  const shown = await page.locator("#result-count").innerText();
   const want = await evaluateQuery(query, reference, allIds);
-  const expected = `${want ? want.size : list.length}件`;
-  const ok = shown.startsWith(expected);
-  if (!ok) { failed++; console.error(`画面の件数が違います: 「${query}」 画面=${shown} 期待=${expected}`); }
+  const expected = want ? want.size : list.length;
+  await page.fill("#search-box", "");
+  await page.waitForFunction((total) => Number(document.querySelector("#result-count").innerText.match(/^(\d+)/)?.[1]) === total,
+    list.length, { timeout: 20000 }).catch(() => {});
+  await page.fill("#search-box", query);
+  await page.waitForFunction((total) => Number(document.querySelector("#result-count").innerText.match(/^(\d+)/)?.[1]) !== total,
+    list.length, { timeout: 20000 }).catch(() => {});
+  await page.waitForTimeout(300);
+  const shown = await shownCount();
+  const ok = shown >= expected && shown <= Math.ceil(expected * 1.03);
+  if (!ok) { failed++; console.error(`画面の件数が違います: 「${query}」 画面=${shown}件 期待=${expected}件(3%増まで許容)`); }
 }
 await page.fill("#search-box", "");
 
