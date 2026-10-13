@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""症例報告(タグ「症例報告」)から、年齢・性別・原発部位・組織型などを抽出する。
+"""症例報告・集積(タグ「症例報告・集積」)から、年齢・性別・原発部位・組織型などを抽出する。
 
   extract  AI(haiku)に、抄録から患者の属性を決まった選択肢で抽出させる。結果は JSONL に追記(再開可能)。
            DBは変更しない。まず --limit 50 などで精度を確認する
@@ -66,14 +66,14 @@ SCHEMA = {
 
 
 def rows_for(db_dir):
-    """(pmid, title, abstract) of kept papers tagged 症例報告 that have an abstract, in a fixed pseudo-random order."""
+    """(pmid, title, abstract) of kept / needs_review papers tagged 症例報告・集積 that have an abstract, in a fixed pseudo-random order."""
     out = []
     for path in existing_shard_paths(db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
         for pmid, title, abstract, tags in conn.execute(
-                "SELECT pmid, title, abstract, ai_tags FROM papers WHERE relevance_status = 'kept' "
+                "SELECT pmid, title, abstract, ai_tags FROM papers WHERE relevance_status IN ('kept', 'needs_review') "
                 "AND abstract IS NOT NULL AND abstract != ''"):
-            if "症例報告" in json.loads(tags or "[]"):
+            if "症例報告・集積" in json.loads(tags or "[]"):
                 out.append({"pmid": str(pmid), "title": title or "", "abstract": abstract})
         conn.close()
     out.sort(key=lambda r: hashlib.sha256(r["pmid"].encode()).hexdigest())
