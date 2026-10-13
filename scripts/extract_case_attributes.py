@@ -38,7 +38,8 @@ HISTOLOGY = ("seminoma_germinoma", "mature_teratoma", "immature_teratoma", "tera
              "yolk_sac_tumor", "embryonal_carcinoma", "choriocarcinoma", "mixed_gct", "spermatocytic_tumor",
              "gonadoblastoma", "gct_nos", "other", "unknown")
 TREATMENT = ("surgery", "chemotherapy", "radiotherapy", "observation", "high_dose_chemo_transplant", "other")
-OUTCOME = ("alive_no_evidence", "alive_with_disease", "dead", "unknown")
+STAGE_GROUPS = ("I", "II", "III", "IV", "not_stated")  # 病期の粗い分類(体系によらない)。IS は I
+IGCCCG = ("good", "intermediate", "poor", "not_stated")  # IGCCCG の予後リスク分類(転移性の胚細胞腫瘍)
 
 SCHEMA = {
     "type": "object",
@@ -56,10 +57,12 @@ SCHEMA = {
             "histology": {"type": "array", "items": {"type": "string", "enum": list(HISTOLOGY)}},
             "metastatic": {"type": ["boolean", "null"]},
             "treatment": {"type": "array", "items": {"type": "string", "enum": list(TREATMENT)}},
-            "outcome": {"type": "string", "enum": list(OUTCOME)},
+            "stage_group": {"type": "string", "enum": list(STAGE_GROUPS)},
+            "stage_detail": {"type": "string"},
+            "igcccg": {"type": "string", "enum": list(IGCCCG)},
         },
         "required": ["pmid", "is_case_report", "n_patients", "age_years", "age_group", "sex", "primary_site",
-                     "site_detail", "histology", "metastatic", "treatment", "outcome"],
+                     "site_detail", "histology", "metastatic", "treatment", "stage_group", "stage_detail", "igcccg"],
         "additionalProperties": False}}},
     "required": ["papers"], "additionalProperties": False,
 }
@@ -101,7 +104,11 @@ def prompt_for(rows):
         "- metastatic: true if metastases are stated, false if explicitly localized/no metastasis, null if not stated.\n"
         "- treatment: modalities stated: surgery, chemotherapy, radiotherapy, observation, "
         "high_dose_chemo_transplant, other (empty list if not stated).\n"
-        "- outcome: alive_no_evidence (disease-free), alive_with_disease, dead, unknown.\n"
+        "- stage_group: the overall stage group of the (main) patient(s) ONLY if the text states a stage, mapped to "
+        "I, II, III or IV whatever the system (AJCC/UICC stage group, FIGO, Children's Oncology Group, Royal Marsden; "
+        "stage IS counts as I); not_stated if no stage is given (do not derive a stage from TNM yourself). "
+        "stage_detail: the stage exactly as written, e.g. \"stage IIIC\", \"FIGO IA\", \"pT1N0M0 S0\" (else \"\").\n"
+        "- igcccg: the IGCCCG risk group (good, intermediate, poor) ONLY if explicitly stated; else not_stated.\n"
         "Return exactly one result per pmid. Return only a JSON object that conforms exactly to this JSON Schema; "
         "do not use Markdown fences:\n" + json.dumps(SCHEMA, separators=(",", ":")) + "\n\nINPUT PAPERS:\n"
         + json.dumps(payload, ensure_ascii=False))
@@ -161,7 +168,7 @@ def extract(args):
 def stats(args):
     items = list(read_done(args.out).values())
     print(f"{len(items)} papers")
-    for key in ("is_case_report", "sex", "age_group", "primary_site", "outcome", "metastatic"):
+    for key in ("is_case_report", "sex", "age_group", "primary_site", "stage_group", "igcccg", "metastatic"):
         print(f"\n{key}: {dict(collections.Counter(str(i.get(key)) for i in items).most_common())}")
     for key in ("histology", "treatment"):
         print(f"\n{key}: {dict(collections.Counter(v for i in items for v in i.get(key, [])).most_common())}")
@@ -178,7 +185,7 @@ def main():
     parser.add_argument("--batch-size", type=int, default=10)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)
-    parser.add_argument("--effort", default=process_batch.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
+    parser.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
     parser.add_argument("--claude", action="store_true")
     args = parser.parse_args()
     if args.command == "extract" and not args.db_dir:
