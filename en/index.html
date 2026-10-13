@@ -23,8 +23,19 @@
       <input type="search" id="search-box" placeholder="Search by title, author, summary, or tag…" aria-label="Search">
       <p id="search-hint" class="search-hint" hidden>AND: space, OR: "OR", exclude: "-word" (e.g. testis OR ovary -tumor).</p>
       <p id="search-notice" class="search-hint" hidden>Abstract search could not be loaded; searching titles, summaries, authors and journals only.</p>
+      <div class="design-panel">
+        <div class="design-row">
+          <span class="filters-label">Category:</span>
+          <div id="kubun-filters" class="seg" role="group" aria-label="Filter by basic or clinical"></div>
+        </div>
+        <div id="design-row" class="design-row design-sub" hidden>
+          <span class="filters-label">Study design:</span>
+          <div id="design-filters" class="tag-filters" role="group" aria-label="Filter by study design"></div>
+          <button id="design-clear" class="clear-link" type="button" hidden>Clear selection</button>
+        </div>
+        <p id="design-hint" class="design-hint" hidden></p>
+      </div>
       <div class="controls-row">
-        <div id="tag-filters" class="tag-filters" aria-label="Filter by category"></div>
         <select id="sort-select" aria-label="Sort order">
           <option value="year-desc">Year: newest first</option>
           <option value="year-asc">Year: oldest first</option>
