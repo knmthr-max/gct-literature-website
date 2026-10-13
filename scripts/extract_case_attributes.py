@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""症例報告(タグ「症例報告」)から、年齢・性別・原発部位・組織型などを抽出する。
+"""症例報告・集積(タグ「症例報告・集積」)から、年齢・性別・原発部位・組織型などを抽出する。
 
   extract  AI(haiku)に、抄録から患者の属性を決まった選択肢で抽出させる。結果は JSONL に追記(再開可能)。
            DBは変更しない。まず --limit 50 などで精度を確認する
@@ -38,7 +38,8 @@ HISTOLOGY = ("seminoma_germinoma", "mature_teratoma", "immature_teratoma", "tera
              "yolk_sac_tumor", "embryonal_carcinoma", "choriocarcinoma", "mixed_gct", "spermatocytic_tumor",
              "gonadoblastoma", "gct_nos", "other", "unknown")
 TREATMENT = ("surgery", "chemotherapy", "radiotherapy", "observation", "high_dose_chemo_transplant", "other")
-OUTCOME = ("alive_no_evidence", "alive_with_disease", "dead", "unknown")
+STAGE_GROUPS = ("I", "II", "III", "IV", "not_stated")  # 病期の粗い分類(体系によらない)。IS は I
+IGCCCG = ("good", "intermediate", "poor", "not_stated")  # IGCCCG の予後リスク分類(転移性の胚細胞腫瘍)
 
 SCHEMA = {
     "type": "object",
@@ -56,24 +57,26 @@ SCHEMA = {
             "histology": {"type": "array", "items": {"type": "string", "enum": list(HISTOLOGY)}},
             "metastatic": {"type": ["boolean", "null"]},
             "treatment": {"type": "array", "items": {"type": "string", "enum": list(TREATMENT)}},
-            "outcome": {"type": "string", "enum": list(OUTCOME)},
+            "stage_group": {"type": "string", "enum": list(STAGE_GROUPS)},
+            "stage_detail": {"type": "string"},
+            "igcccg": {"type": "string", "enum": list(IGCCCG)},
         },
         "required": ["pmid", "is_case_report", "n_patients", "age_years", "age_group", "sex", "primary_site",
-                     "site_detail", "histology", "metastatic", "treatment", "outcome"],
+                     "site_detail", "histology", "metastatic", "treatment", "stage_group", "stage_detail", "igcccg"],
         "additionalProperties": False}}},
     "required": ["papers"], "additionalProperties": False,
 }
 
 
 def rows_for(db_dir):
-    """(pmid, title, abstract) of kept papers tagged 症例報告 that have an abstract, in a fixed pseudo-random order."""
+    """(pmid, title, abstract) of kept / needs_review papers tagged 症例報告・集積 that have an abstract, in a fixed pseudo-random order."""
     out = []
     for path in existing_shard_paths(db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
         for pmid, title, abstract, tags in conn.execute(
-                "SELECT pmid, title, abstract, ai_tags FROM papers WHERE relevance_status = 'kept' "
+                "SELECT pmid, title, abstract, ai_tags FROM papers WHERE relevance_status IN ('kept', 'needs_review') "
                 "AND abstract IS NOT NULL AND abstract != ''"):
-            if "症例報告" in json.loads(tags or "[]"):
+            if "症例報告・集積" in json.loads(tags or "[]"):
                 out.append({"pmid": str(pmid), "title": title or "", "abstract": abstract})
         conn.close()
     out.sort(key=lambda r: hashlib.sha256(r["pmid"].encode()).hexdigest())
@@ -101,7 +104,11 @@ def prompt_for(rows):
         "- metastatic: true if metastases are stated, false if explicitly localized/no metastasis, null if not stated.\n"
         "- treatment: modalities stated: surgery, chemotherapy, radiotherapy, observation, "
         "high_dose_chemo_transplant, other (empty list if not stated).\n"
-        "- outcome: alive_no_evidence (disease-free), alive_with_disease, dead, unknown.\n"
+        "- stage_group: the overall stage group of the (main) patient(s) ONLY if the text states a stage, mapped to "
+        "I, II, III or IV whatever the system (AJCC/UICC stage group, FIGO, Children's Oncology Group, Royal Marsden; "
+        "stage IS counts as I); not_stated if no stage is given (do not derive a stage from TNM yourself). "
+        "stage_detail: the stage exactly as written, e.g. \"stage IIIC\", \"FIGO IA\", \"pT1N0M0 S0\" (else \"\").\n"
+        "- igcccg: the IGCCCG risk group (good, intermediate, poor) ONLY if explicitly stated; else not_stated.\n"
         "Return exactly one result per pmid. Return only a JSON object that conforms exactly to this JSON Schema; "
         "do not use Markdown fences:\n" + json.dumps(SCHEMA, separators=(",", ":")) + "\n\nINPUT PAPERS:\n"
         + json.dumps(payload, ensure_ascii=False))
@@ -127,10 +134,13 @@ def extract(args):
         print("(dry run: pass --claude to call the AI)")
         return
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    lock, totals = threading.Lock(), {"batches": 0, "cost": 0.0, "failed": 0}
+    lock, totals = threading.Lock(), {"batches": 0, "cost": 0.0, "failed": 0, "consecutive": 0}
+    stop = threading.Event()  # 使用量の上限に達した(または失敗が続く)とき、残りは再開に回して止める
 
     def worker():
         while True:
+            if stop.is_set():
+                return
             try:
                 batch = jobs.get_nowait()
             except queue.Empty:
@@ -140,7 +150,12 @@ def extract(args):
             except Exception as error:  # noqa: BLE001 - the batch stays undone for the next run
                 with lock:
                     totals["failed"] += 1
-                    print(f"batch failed: {str(error)[:160]}", file=sys.stderr)
+                    totals["consecutive"] += 1
+                    print(f"batch failed: {str(error)[:160]}", file=sys.stderr, flush=True)
+                    if totals["consecutive"] >= 6 or any(w in str(error).lower() for w in ("usage limit", "rate limit", "limit reached")):
+                        if not stop.is_set():
+                            print("STOP: usage limit or repeated failures; resume later with the same command", flush=True)
+                        stop.set()
                 continue
             with lock:
                 with args.out.open("a", encoding="utf-8") as f:
@@ -149,6 +164,7 @@ def extract(args):
                         if isinstance(item, dict):
                             f.write(json.dumps({**item, "pmid": r["pmid"]}, ensure_ascii=False) + "\n")
                 totals["batches"] += 1
+                totals["consecutive"] = 0
                 totals["cost"] += cost
                 print(f"batch {totals['batches']} done, ${totals['cost']:.2f}", flush=True)
 
@@ -161,7 +177,7 @@ def extract(args):
 def stats(args):
     items = list(read_done(args.out).values())
     print(f"{len(items)} papers")
-    for key in ("is_case_report", "sex", "age_group", "primary_site", "outcome", "metastatic"):
+    for key in ("is_case_report", "sex", "age_group", "primary_site", "stage_group", "igcccg", "metastatic"):
         print(f"\n{key}: {dict(collections.Counter(str(i.get(key)) for i in items).most_common())}")
     for key in ("histology", "treatment"):
         print(f"\n{key}: {dict(collections.Counter(v for i in items for v in i.get(key, [])).most_common())}")
@@ -178,7 +194,7 @@ def main():
     parser.add_argument("--batch-size", type=int, default=10)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)
-    parser.add_argument("--effort", default=process_batch.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
+    parser.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
     parser.add_argument("--claude", action="store_true")
     args = parser.parse_args()
     if args.command == "extract" and not args.db_dir:
