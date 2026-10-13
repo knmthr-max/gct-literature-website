@@ -39,7 +39,8 @@ SCHEMA = {
 }
 
 
-def candidates(db_dir):
+def candidates(db_dir, only=None):
+    """only: pmids to judge (a re-judgement of part of the papers); None = all."""
     rows = []
     for path in existing_shard_paths(db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
@@ -48,6 +49,8 @@ def candidates(db_dir):
                               "WHERE relevance_status IN ('kept', 'needs_review')"):
             types = json.loads(r["publication_types"] or "[]")
             if study_design.design_from_pubtypes(types) in study_design.TRUSTED:
+                continue
+            if only is not None and str(r["pmid"]) not in only:
                 continue
             rows.append({"pmid": str(r["pmid"]), "title": r["title"] or "", "abstract": r["abstract"] or "",
                          "types": [t for t in types if not t.startswith("Research Support")]})
@@ -76,10 +79,19 @@ def read_done(path):
     return done
 
 
+def redo_set(args):
+    """--redo-from の結果のうち、--redo-designs の分類だった論文(基準を変えたとき、その境目だけを再判定する)。"""
+    if not args.redo_from:
+        return None
+    wanted = set(args.redo_designs.split(","))
+    return {pmid for pmid, item in read_done(args.redo_from).items() if item["design"] in wanted}
+
+
 def run(args):
+    only = redo_set(args)
     for attempt in range(1, args.passes + 1):
         done = read_done(args.out)
-        todo = [r for r in candidates(args.db_dir) if r["pmid"] not in done]
+        todo = [r for r in candidates(args.db_dir, only) if r["pmid"] not in done]
         if args.limit:
             todo = todo[:max(0, args.limit - len(done))]
         jobs = queue.Queue()
@@ -139,6 +151,8 @@ def main():
     parser.add_argument("--out", type=pathlib.Path, required=True)
     parser.add_argument("--claude", action="store_true")
     parser.add_argument("--stats", action="store_true")
+    parser.add_argument("--redo-from", type=pathlib.Path, help="再判定する論文を、この結果ファイルの分類で選ぶ")
+    parser.add_argument("--redo-designs", default="症例報告・集積,観察研究", help="--redo-from で選ぶ分類(カンマ区切り)")
     parser.add_argument("--limit", type=int, default=0, help="Stop after this many papers in total (for a pilot)")
     parser.add_argument("--workers", type=int, default=5)
     parser.add_argument("--batch-size", type=int, default=15)
