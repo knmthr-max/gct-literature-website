@@ -4,16 +4,31 @@
   const LANG = document.body.dataset.lang === "en" ? "en" : "ja";
   const DATA_ROOT = document.body.dataset.root || "";
 
-  // 公開タグ(症例報告/臨床研究/基礎研究/総説/ガイドライン/論説/レター)の英語表示ラベル。
-  // フィルタ処理は常にこの日本語の原値(paper.tags)に対して行い、表示だけを差し替える。
+  // 公開タグは、研究デザインの9分類(1論文に1つ)。基礎・トランスレーショナル以外はすべて「臨床」として扱う
+  // (docs/decisions/2026-10-12_study_design_taxonomy.md)。フィルタ処理は常に日本語の原値(paper.tags)に対して行い、
+  // 表示だけを差し替える。臨床の分類は、エビデンスの強い順に並べる。
+  const BASIC = "基礎・トランスレーショナル";
+  const CLINICAL = ["SR・MA", "RCT", "非ランダム化試験", "観察研究", "症例報告・集積", "総説", "ガイドライン・コンセンサス", "その他"];
+  const designOf = (p) => (p.tags || [])[0] || "";
+  const groupOf = (p) => (designOf(p) === BASIC ? "basic" : "clinical");
   const TAG_LABELS_EN = {
-    "症例報告": "Case Report",
-    "臨床研究": "Clinical Study",
-    "基礎研究": "Basic Research",
+    "SR・MA": "SR / MA",
+    "RCT": "RCT",
+    "非ランダム化試験": "Non-randomized trial",
+    "観察研究": "Observational study",
+    "症例報告・集積": "Case report / series",
     "総説": "Review",
-    "ガイドライン": "Guideline",
-    "論説": "Editorial",
-    "レター": "Letter",
+    "ガイドライン・コンセンサス": "Guideline / consensus",
+    "基礎・トランスレーショナル": "Basic / translational",
+    "その他": "Other",
+  };
+  const KUBUN_LABELS = {
+    ja: { all: "すべて", clinical: "臨床", basic: "基礎" },
+    en: { all: "All", clinical: "Clinical", basic: "Basic" },
+  };
+  const DESIGN_TEXT = {
+    ja: { hintNone: "分類を選ばなければ、臨床の論文すべてを表示します。", hintSome: "選んだ分類のいずれかに当てはまる臨床論文を表示しています。", clear: "選択を解除" },
+    en: { hintNone: "With no design selected, all clinical papers are shown.", hintSome: "Showing clinical papers that match any selected design.", clear: "Clear selection" },
   };
 
   const JIF_LABELS = {
@@ -35,7 +50,8 @@
   const state = {
     papers: [],
     query: "",
-    activeTags: new Set(),
+    kubun: "all", // all | clinical | basic
+    designs: new Set(), // 臨床の中で選んだ研究デザイン(選ばなければ臨床すべて)
     activeJifTiers: new Set(),
     sort: "year-desc",
   };
@@ -70,34 +86,83 @@
     if (site.last_updated) $("last-updated").textContent = site.last_updated;
   }
 
-  function collectTags(papers) {
-    const counts = new Map();
-    for (const p of papers) {
-      for (const t of p.tags || []) {
-        counts.set(t, (counts.get(t) || 0) + 1);
-      }
-    }
-    return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
-  }
-
   function tagLabel(tag) {
     return LANG === "en" ? (TAG_LABELS_EN[tag] || tag) : tag;
   }
 
-  function renderTagFilters() {
-    const box = $("tag-filters");
-    box.innerHTML = "";
-    for (const tag of collectTags(state.papers)) {
+  // 区分(すべて/臨床/基礎)と、臨床のときだけ出す研究デザインの選択。件数は、検索語とIFの絞り込みを反映する
+  // (区分と研究デザインの選択は反映しない。選ぶとどれだけ出るかが分かるように)。
+  function renderDesignFilters() {
+    const counts = new Map();
+    let nClinical = 0;
+    let nBasic = 0;
+    for (const p of state.papers) {
+      if (!baseMatches(p)) continue;
+      if (groupOf(p) === "basic") nBasic += 1;
+      else nClinical += 1;
+      const d = designOf(p);
+      counts.set(d, (counts.get(d) || 0) + 1);
+    }
+    const fmt = (n) => n.toLocaleString(LANG === "en" ? "en-US" : "ja-JP");
+    const seg = $("kubun-filters");
+    seg.innerHTML = "";
+    for (const [key, n] of [["all", nClinical + nBasic], ["clinical", nClinical], ["basic", nBasic]]) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "tag-filter" + (state.activeTags.has(tag) ? " active" : "");
-      btn.textContent = tagLabel(tag);
+      btn.className = key === state.kubun ? "active" : "";
+      btn.setAttribute("aria-pressed", String(key === state.kubun));
+      btn.innerHTML = `${escapeHtml(KUBUN_LABELS[LANG][key])}<span class="n">${fmt(n)}</span>`;
       btn.addEventListener("click", () => {
-        state.activeTags.has(tag) ? state.activeTags.delete(tag) : state.activeTags.add(tag);
-        renderTagFilters();
+        if (state.kubun === key) return;
+        state.kubun = key;
+        state.designs.clear();
+        syncUrl();
+        renderList();
+      });
+      seg.appendChild(btn);
+    }
+    const showDesigns = state.kubun === "clinical";
+    $("design-row").hidden = !showDesigns;
+    $("design-hint").hidden = !showDesigns;
+    if (!showDesigns) return;
+    const box = $("design-filters");
+    box.innerHTML = "";
+    for (const design of CLINICAL) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "tag-filter" + (state.designs.has(design) ? " active" : "");
+      btn.setAttribute("aria-pressed", String(state.designs.has(design)));
+      btn.innerHTML = `${escapeHtml(tagLabel(design))}<span class="n">${fmt(counts.get(design) || 0)}</span>`;
+      btn.addEventListener("click", () => {
+        state.designs.has(design) ? state.designs.delete(design) : state.designs.add(design);
+        syncUrl();
         renderList();
       });
       box.appendChild(btn);
+    }
+    const clear = $("design-clear");
+    clear.hidden = state.designs.size === 0;
+    clear.textContent = DESIGN_TEXT[LANG].clear;
+    $("design-hint").textContent = state.designs.size ? DESIGN_TEXT[LANG].hintSome : DESIGN_TEXT[LANG].hintNone;
+  }
+
+  // 区分と研究デザインの選択をURLに入れる(?kubun=clinical&design=RCT,観察研究)。結果を人に渡せる。他のURLの指定(?search=legacy)は残す。
+  function syncUrl() {
+    const params = new URLSearchParams(location.search);
+    params.delete("kubun");
+    params.delete("design");
+    if (state.kubun !== "all") params.set("kubun", state.kubun);
+    if (state.kubun === "clinical" && state.designs.size) params.set("design", [...state.designs].join(","));
+    const query = params.toString();
+    history.replaceState(null, "", location.pathname + (query ? `?${query}` : "") + location.hash);
+  }
+
+  function readUrlSelection() {
+    const params = new URLSearchParams(location.search);
+    const kubun = params.get("kubun");
+    if (kubun === "clinical" || kubun === "basic") state.kubun = kubun;
+    if (state.kubun === "clinical") {
+      for (const d of (params.get("design") || "").split(",")) if (CLINICAL.includes(d)) state.designs.add(d);
     }
   }
 
@@ -128,13 +193,19 @@
 
   const haystacks = new WeakMap();
 
+  // 区分・研究デザインの選択に合うか
+  function designMatches(paper) {
+    if (state.kubun === "all") return true;
+    if (groupOf(paper) !== state.kubun) return false;
+    return state.kubun !== "clinical" || state.designs.size === 0 || state.designs.has(designOf(paper));
+  }
+
   function matches(paper) {
-    if (state.activeTags.size > 0) {
-      const tags = paper.tags || [];
-      for (const t of state.activeTags) {
-        if (!tags.includes(t)) return false;
-      }
-    }
+    return designMatches(paper) && baseMatches(paper);
+  }
+
+  // 検索語とIFの絞り込みに合うか
+  function baseMatches(paper) {
     if (state.activeJifTiers.size > 0 && !state.activeJifTiers.has(jifTierOf(paper))) {
       return false;
     }
@@ -186,7 +257,7 @@
       (JIF_LABELS[LANG] || {})[p.jif_tier] || "",
     ].filter(Boolean);
     const tags = (p.tags || [])
-      .map((t) => `<span class="paper-tag">${escapeHtml(tagLabel(t))}</span>`)
+      .map((t) => `<span class="paper-tag${t === BASIC ? " paper-tag-basic" : ""}">${escapeHtml(KUBUN_LABELS[LANG][t === BASIC ? "basic" : "clinical"])} › ${escapeHtml(tagLabel(t))}</span>`)
       .join("");
 
     // 要約: 表示言語側を優先し、無ければ他言語、どちらも無ければ「準備中」を明示する
@@ -340,6 +411,7 @@
   }
 
   function renderList() {
+    renderDesignFilters();
     shown = sortPapers(state.papers.filter(matches));
     shownCount = Math.min(PAGE_SIZE, shown.length);
     $("paper-list").innerHTML = shown.slice(0, shownCount).map(paperCard).join("");
@@ -405,7 +477,12 @@
       // すべて表示する(人間が明示的に除外と判断するまでは隠さない方針)
       const all = Array.isArray(papers) ? papers : [];
       state.papers = all.filter((p) => p.relevance_status !== "excluded");
-      renderTagFilters();
+      readUrlSelection();
+      $("design-clear").addEventListener("click", () => {
+        state.designs.clear();
+        syncUrl();
+        renderList();
+      });
       renderJifFilters();
       renderList();
     } catch (err) {

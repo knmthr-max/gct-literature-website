@@ -45,3 +45,5 @@ jobs:
           npm run build:search
           npx playwright install --with-deps chromium
           npm run check:search
+      - name: Filter - basic/clinical and study-design filters against the data
+        run: npm run check:filter
