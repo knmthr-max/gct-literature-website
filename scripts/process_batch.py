@@ -88,6 +88,7 @@ if str(PIPELINE_DIR) not in sys.path:
 import glossary as glossary_lib  # noqa: E402
 
 from import_medline import classify  # noqa: E402
+import study_design  # noqa: E402
 from gct_db import connect, json_load, existing_shard_paths  # noqa: E402
 
 # "cns_gct": a germ cell tumor that arises primarily in the central nervous system. It is out of scope for this
@@ -216,10 +217,11 @@ def claude_schema():
                         "summary_ja": {"type": "string"},
                         "title_ja": {"type": "string"},
                         "abstract_ja": {"type": "string"},
+                        "study_design": {"type": "string", "enum": study_design.DESIGN_ENUM},
                     },
                     "required": [
                         "pmid", "relevance", "relevance_reason",
-                        "summary_en", "summary_ja", "title_ja", "abstract_ja",
+                        "summary_en", "summary_ja", "title_ja", "abstract_ja", "study_design",
                     ],
                     "additionalProperties": False,
                 },
@@ -339,7 +341,7 @@ def claude_prompt(rows, glossary=""):
             "abstract": source_abstract(row),
         })
     return (
-        DOMAIN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant/cns_gct) "
+        DOMAIN_NOTE + " " + study_design.DESIGN_NOTE + " For each paper below, judge relevance (relevant/uncertain/not_relevant/cns_gct) "
         "with a one-sentence Japanese reason, and write a short bilingual summary: summary_en "
         "60-100 words, summary_ja 120-200 Japanese characters. Also write title_ja: a natural, "
         "faithful Japanese translation of the title (this is displayed as the paper's heading "
@@ -681,8 +683,10 @@ def main():
     digest = []
     for row in rows:
         pmid = row["pmid"]
-        tags = classify(json_load(row["publication_types"]))
         result = ai_results.get(pmid)
+        # 研究デザイン(タグ): 出版タイプで確実に決まるものはそれ、決まらないものや症例報告・総説は AI の判定
+        tags = study_design.final_design(classify(json_load(row["publication_types"])),
+                                         (result or {}).get("study_design"))
         if result is None:
             counts["claude_not_run"] += 1
             if not args.claude:

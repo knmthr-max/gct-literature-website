@@ -26,18 +26,33 @@ class RetagCategoriesTests(unittest.TestCase):
         cls.medline = load("import_medline")
         cls.gct_db = load("gct_db")
 
-    def test_systematic_reviews_and_meta_analyses_are_clinical_research_but_case_reports_still_win(self):
+    def test_pubmed_types_decide_the_clear_cases_and_a_case_report_beats_a_review(self):
         classify = self.medline.classify
-        self.assertEqual(classify(["Journal Article", "Review", "Systematic Review"]), "臨床研究")
-        self.assertEqual(classify(["Meta-Analysis"]), "臨床研究")
+        self.assertEqual(classify(["Journal Article", "Review", "Systematic Review"]), "SR・MA")
+        self.assertEqual(classify(["Meta-Analysis"]), "SR・MA")
+        self.assertEqual(classify(["Randomized Controlled Trial", "Clinical Trial"]), "RCT")
+        self.assertEqual(classify(["Clinical Trial, Phase II"]), "非ランダム化試験")
+        self.assertEqual(classify(["Practice Guideline"]), "ガイドライン・コンセンサス")
         self.assertEqual(classify(["Review"]), "総説")
-        self.assertEqual(classify(["Case Reports", "Review", "Systematic Review"]), "症例報告")
-        self.assertIsNone(classify(["Journal Article"]))
+        self.assertEqual(classify(["Case Reports", "Review"]), "症例報告・集積")   # 850 papers are both: case report wins
+        self.assertEqual(classify(["Letter"]), "その他")
+        self.assertIsNone(classify(["Journal Article", "Multicenter Study"]))        # original articles: left to the AI
+
+    def test_the_ai_decides_the_undecided_and_the_checkable_but_never_overrules_a_trusted_type(self):
+        design = self.retag.study_design
+        self.assertEqual(design.final_design(None, "観察研究"), "観察研究")
+        self.assertEqual(design.final_design("症例報告・集積", "観察研究"), "観察研究")      # a "case report" that is really a cohort
+        self.assertEqual(design.final_design("総説", "基礎・トランスレーショナル"), "基礎・トランスレーショナル")
+        self.assertEqual(design.final_design("RCT", "観察研究"), "RCT")                      # trusted
+        self.assertEqual(design.final_design("症例報告・集積", None), "症例報告・集積")       # no AI result: keep PubMed's
+        self.assertEqual(design.final_design(None, "なんでも"), None)
+        self.assertEqual(design.group_of("基礎・トランスレーショナル"), "basic")
+        self.assertEqual(design.group_of("その他"), "clinical")
 
     def make_db(self, root):
         db_dir = root / "master"
         conn = self.gct_db.connect(self.gct_db.shard_path(db_dir, "2020s"))
-        rows = [("1", ["Review", "Systematic Review"], ["総説"]),    # rule change: becomes 臨床研究
+        rows = [("1", ["Review", "Systematic Review"], ["総説"]),    # rule change: becomes SR・MA
                 ("2", ["Review"], ["総説"]),                         # a true review: unchanged
                 ("3", ["Review"], ["総説"]),                         # overridden by hand
                 ("4", ["Journal Article"], []),                     # no category
@@ -54,11 +69,11 @@ class RetagCategoriesTests(unittest.TestCase):
             root = Path(temp)
             db_dir = self.make_db(root)
             overrides_path = root / "overrides.tsv"
-            overrides_path.write_text("pmid\ttag\treason\n3\t臨床研究\tcase series\n", encoding="utf-8")
+            overrides_path.write_text("pmid\ttag\treason\n3\t症例報告・集積\tcase series\n", encoding="utf-8")
             overrides = self.retag.read_overrides(overrides_path)
             changes = self.retag.plan_db(db_dir, overrides)
             self.assertEqual(sorted((pmid, new) for _, pmid, _, new in changes),
-                             [("1", ["臨床研究"]), ("3", ["臨床研究"])])
+                             [("1", ["SR・MA"]), ("3", ["症例報告・集積"])])
             papers = [{"pmid": "1", "tags": ["総説"]}, {"pmid": "3", "tags": ["症例報告"]}, {"pmid": "2", "tags": ["総説"]}]
             updates, manual = self.retag.plan_site(papers, changes)
             self.assertEqual([e["pmid"] for e, _ in updates], ["1"])

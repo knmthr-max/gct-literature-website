@@ -18,32 +18,17 @@ import papers_store  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAPERS_PATH = ROOT / "data" / "papers"
 
-# 公開サイトのタグは、この固定7分類だけに限定する(PubMedの著者キーワードや
-# 細かい文献種別をそのままタグにすると、1件にしか付かないタグが大量発生し
-# タグクラウドが機能しなくなるため)。優先度は上から順に判定する。
-CATEGORY_RULES = [
-    ("症例報告", {"Case Reports"}),
-    # システマティックレビュー/メタ解析は、一次研究を統合して解析する研究なので「臨床研究」(2026-10-06 決定)。
-    # 症例報告の次、総説の前に判定する(Review も付いていても、こちらを優先する)
-    ("臨床研究", {"Systematic Review", "Meta-Analysis"}),
-    ("総説", {"Review"}),
-    ("ガイドライン", {"Guideline", "Practice Guideline"}),
-    ("論説", {"Editorial"}),
-    ("レター", {"Letter"}),
-    ("臨床研究", {
-        "Clinical Trial", "Randomized Controlled Trial", "Observational Study",
-        "Multicenter Study", "Comparative Study",
-    }),
-]
+# 公開サイトのタグは、固定の9分類(研究デザイン)だけに限定する(PubMedの著者キーワードや細かい文献種別を
+# そのままタグにすると、1件にしか付かないタグが大量発生しタグクラウドが機能しなくなるため)。
+# 定義と判定の順序は scripts/study_design.py。出版タイプで決まらない論文(原著論文の多く)は、ここでは None にして、
+# AI の判定(process_batch.py の study_design)で補う。
+from study_design import design_from_pubtypes  # noqa: E402
 
 
 def classify(publication_types):
-    """PubMedの文献種別(PT)から固定7分類のうち1つを判定する。該当なしはNone。"""
-    types = set(publication_types)
-    for category, matching_pt in CATEGORY_RULES:
-        if types & matching_pt:
-            return category
-    return None
+    """PubMedの文献種別(PT)から固定9分類のうち1つを判定する。出版タイプで決まらなければNone。"""
+    return design_from_pubtypes(publication_types)
+
 
 TAG_LINE = re.compile(r"^([A-Z]{1,4})\s*-\s(.*)$")
 
