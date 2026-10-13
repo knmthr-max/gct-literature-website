@@ -134,10 +134,13 @@ def extract(args):
         print("(dry run: pass --claude to call the AI)")
         return
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    lock, totals = threading.Lock(), {"batches": 0, "cost": 0.0, "failed": 0}
+    lock, totals = threading.Lock(), {"batches": 0, "cost": 0.0, "failed": 0, "consecutive": 0}
+    stop = threading.Event()  # 使用量の上限に達した(または失敗が続く)とき、残りは再開に回して止める
 
     def worker():
         while True:
+            if stop.is_set():
+                return
             try:
                 batch = jobs.get_nowait()
             except queue.Empty:
@@ -147,7 +150,12 @@ def extract(args):
             except Exception as error:  # noqa: BLE001 - the batch stays undone for the next run
                 with lock:
                     totals["failed"] += 1
-                    print(f"batch failed: {str(error)[:160]}", file=sys.stderr)
+                    totals["consecutive"] += 1
+                    print(f"batch failed: {str(error)[:160]}", file=sys.stderr, flush=True)
+                    if totals["consecutive"] >= 6 or any(w in str(error).lower() for w in ("usage limit", "rate limit", "limit reached")):
+                        if not stop.is_set():
+                            print("STOP: usage limit or repeated failures; resume later with the same command", flush=True)
+                        stop.set()
                 continue
             with lock:
                 with args.out.open("a", encoding="utf-8") as f:
@@ -156,6 +164,7 @@ def extract(args):
                         if isinstance(item, dict):
                             f.write(json.dumps({**item, "pmid": r["pmid"]}, ensure_ascii=False) + "\n")
                 totals["batches"] += 1
+                totals["consecutive"] = 0
                 totals["cost"] += cost
                 print(f"batch {totals['batches']} done, ${totals['cost']:.2f}", flush=True)
 
