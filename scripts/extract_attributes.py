@@ -108,23 +108,32 @@ SPECIFIC_NOTE = {
     "guideline": "- issuing_body: the organization that issued it (e.g. EAU, ESMO, NCCN, JSCO), else \"\". scope: a few English words on what it covers.\n",
 }
 CORE_NOTE = (
-    "COMMON FIELDS (describe the study population; use the same meaning as for case reports):\n"
+    "COMMON FIELDS (describe the study population; use the same meaning as for case reports). A value may be filled when "
+    "the title/abstract state it OR when the study population is DEFINED by it (e.g. a Turner syndrome or ovarian cohort "
+    "is female; a testicular cancer cohort has primary_site testis); otherwise use unknown. Never fill from general "
+    "medical knowledge about what such studies usually include.\n"
     "- n_patients: number of patients/subjects analyzed (integer) or null. sex: male, female, mixed, unknown. "
     "age_group: the group the study population belongs to (infant <2 y, child 2-12, adolescent 13-17, adult 18-64, "
     "elderly 65+, mixed, unknown).\n"
-    "- primary_site: where the germ cell tumors arose (testis, ovary, mediastinum, retroperitoneum, sacrococcygeal, "
-    "other_extragonadal, multiple, unknown). histology: every histological type the study covers (seminoma_germinoma, "
-    "mature_teratoma, immature_teratoma, teratoma_with_malignant_transformation, yolk_sac_tumor, embryonal_carcinoma, "
-    "choriocarcinoma, mixed_gct, spermatocytic_tumor, gonadoblastoma, gct_nos, other, unknown).\n"
+    "- primary_site: where the tumors arose (testis, ovary, mediastinum, retroperitoneum, sacrococcygeal, "
+    "other_extragonadal, cns for brain/spinal cord, multiple, unknown). Use multiple when the study pools several sites; "
+    "use a single site only if the study is restricted to it, even if one site predominates.\n"
+    "- histology: only the histological types the title/abstract NAME as covered (seminoma_germinoma, mature_teratoma, "
+    "immature_teratoma, teratoma_with_malignant_transformation, yolk_sac_tumor, embryonal_carcinoma, choriocarcinoma "
+    "(non-gestational), gestational_choriocarcinoma, mixed_gct, nonseminomatous_gct (non-seminomatous germ cell tumors "
+    "as a group), spermatocytic_tumor, gonadoblastoma, gct_nos, other, unknown). A generic word such as \"cancer\" or "
+    "\"tumor\" is NOT a histology: use gct_nos when germ cell tumors in general are covered, unknown otherwise. Do not "
+    "turn a type that appears only in a result into the studied scope unless the study is about that type.\n"
     "- disease_setting: localized, advanced_metastatic, mixed, not_stated (disease extent of the study population). "
     "stage_group: I, II, III or IV ONLY if the study is restricted to one stage group; otherwise not_stated. igcccg: good, "
     "intermediate or poor ONLY if the study is restricted to that IGCCCG risk group; otherwise not_stated.\n"
     "- treatment: the modalities studied or used (surgery, chemotherapy, radiotherapy, observation, "
     "high_dose_chemo_transplant, other).\n")
 THEME_NOTE = (
-    "- clinical_themes: every theme the paper substantially addresses (diagnosis_imaging, surgery, chemotherapy, "
-    "radiotherapy, surveillance, late_effects, fertility, epidemiology, pathology_molecular, prognosis, qol; an empty "
-    "list if none fits).\n")
+    "- clinical_themes: every theme the paper substantially addresses (diagnosis_imaging = imaging or diagnostic tests "
+    "themselves, NOT clinical presentation or when to investigate; surgery, chemotherapy, radiotherapy, surveillance, "
+    "late_effects, fertility, epidemiology = incidence, frequency, distribution or population characteristics; "
+    "pathology_molecular, prognosis, qol; an empty list if none fits).\n")
 RULES = (
     "Extract ONLY what the TITLE/ABSTRACT STATE EXPLICITLY. Never guess: use unknown / not_stated / null / an empty list when "
     "not stated. Do NOT extract numerical results (hazard ratios, survival or response rates, p-values): only the "
