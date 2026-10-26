@@ -71,6 +71,20 @@ class ExtractAttributesTests(unittest.TestCase):
             self.assertEqual(rct, {"1", "2"})
             self.assertEqual(len(calls), 2)   # second run finds nothing to do
 
+    def test_site_attributes_drop_unknowns_and_keep_design_specific_fields_only_for_the_same_design(self):
+        sa = load("sync_site_attributes")
+        row = {"pmid": "1", "design": "RCT", "n_patients": 120, "sex": "male", "age_group": "unknown",
+               "primary_site": "testis", "histology": ["unknown", "seminoma_germinoma"], "stage_group": "not_stated",
+               "igcccg": "good", "treatment": ["chemotherapy", "other"], "phase": "III", "line_of_therapy": "first_line",
+               "primary_endpoint": "other", "clinical_themes": ["chemotherapy"]}
+        info = {"design": "RCT", "core": sa.core_attrs(row), "themes": ["chemotherapy"], "row": row}
+        attrs = sa.attrs_for({"tags": ["RCT"]}, info)
+        self.assertEqual(attrs, {"si": "testis", "sx": "male", "ig": "good", "hi": ["seminoma_germinoma"],
+                                 "tr": ["chemotherapy"], "n": 120, "th": ["chemotherapy"], "ph": "III", "ln": "first_line"})
+        retagged = sa.attrs_for({"tags": ["症例報告・集積"]}, info)   # タグを直した論文: 試験の固有項目は付けない
+        self.assertNotIn("ph", retagged)
+        self.assertEqual(retagged["si"], "testis")
+
 
 if __name__ == "__main__":
     unittest.main()

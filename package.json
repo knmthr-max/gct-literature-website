@@ -7,7 +7,8 @@
     "build:search": "node scripts/build_site_search.mjs",
     "test:search": "node --test tests/search/*.test.mjs",
     "check:search": "node scripts/check_search_parity.mjs",
-    "check:filter": "node scripts/check_design_filter.mjs"
+    "check:filter": "node scripts/check_design_filter.mjs",
+    "check:attr": "node scripts/check_attr_filter.mjs"
   },
   "dependencies": {
     "pagefind": "1.5.2"
