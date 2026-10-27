@@ -32,10 +32,11 @@ spec.loader.exec_module(process_batch)
 
 SEX = ("male", "female", "mixed", "unknown")
 AGE_GROUPS = ("infant", "child", "adolescent", "adult", "elderly", "mixed", "unknown")  # <2y, 2-12, 13-17, 18-64, 65+
-SITES = ("testis", "ovary", "mediastinum", "retroperitoneum", "sacrococcygeal", "other_extragonadal", "multiple",
+SITES = ("testis", "ovary", "mediastinum", "retroperitoneum", "sacrococcygeal", "other_extragonadal", "cns", "multiple",
          "unknown")
 HISTOLOGY = ("seminoma_germinoma", "mature_teratoma", "immature_teratoma", "teratoma_with_malignant_transformation",
-             "yolk_sac_tumor", "embryonal_carcinoma", "choriocarcinoma", "mixed_gct", "spermatocytic_tumor",
+             "yolk_sac_tumor", "embryonal_carcinoma", "choriocarcinoma", "gestational_choriocarcinoma", "mixed_gct",
+             "nonseminomatous_gct", "spermatocytic_tumor",
              "gonadoblastoma", "gct_nos", "other", "unknown")
 TREATMENT = ("surgery", "chemotherapy", "radiotherapy", "observation", "high_dose_chemo_transplant", "other")
 STAGE_GROUPS = ("I", "II", "III", "IV", "not_stated")  # 病期の粗い分類(体系によらない)。IS は I
@@ -95,11 +96,12 @@ def prompt_for(rows):
         "elderly (65+), mixed (patients of different groups), unknown.\n"
         "- sex: male, female, mixed (both sexes in a series), unknown.\n"
         "- primary_site: where the germ cell tumor arose: testis, ovary, mediastinum, retroperitoneum, sacrococcygeal, "
-        "other_extragonadal (e.g. pelvis, uterus, vagina, bladder, neck, stomach), multiple (a series covering several "
+        "other_extragonadal (e.g. pelvis, uterus, vagina, bladder, neck, stomach), cns (brain/spinal cord), multiple (a series covering several "
         "sites), unknown. site_detail: a few English words with the specific location if stated (else \"\").\n"
         "- histology: every histological type stated: seminoma_germinoma (seminoma/dysgerminoma/germinoma), "
         "mature_teratoma, immature_teratoma, teratoma_with_malignant_transformation (somatic-type malignancy), "
-        "yolk_sac_tumor, embryonal_carcinoma, choriocarcinoma, mixed_gct, spermatocytic_tumor, gonadoblastoma, "
+        "yolk_sac_tumor, embryonal_carcinoma, choriocarcinoma (non-gestational), gestational_choriocarcinoma, mixed_gct, "
+        "nonseminomatous_gct (non-seminomatous germ cell tumors as a group), spermatocytic_tumor, gonadoblastoma, "
         "gct_nos (germ cell tumor, not otherwise specified), other, unknown.\n"
         "- metastatic: true if metastases are stated, false if explicitly localized/no metastasis, null if not stated.\n"
         "- treatment: modalities stated: surgery, chemotherapy, radiotherapy, observation, "

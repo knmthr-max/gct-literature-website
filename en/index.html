@@ -49,12 +49,25 @@
         <div id="jif-filters" class="tag-filters" aria-label="Filter by IF"></div>
       </div>
       <p class="jif-note">* For the most recent year, the IF of that year is not yet published, so the previous year's IF is used as a provisional value. It is replaced with the confirmed value once published.</p>
+      <div id="attr-open-row" class="attr-open-row" hidden><button id="attr-open" class="attr-open" type="button">Filters<span id="attr-badge"></span></button></div>
       <p id="result-count" class="result-count" role="status"></p>
     </section>
 
-    <section id="paper-list" class="paper-list" aria-label="Literature list"></section>
+    <div class="results-layout">
+      <aside id="attr-panel" class="attr-panel" aria-label="Filter by attributes" hidden>
+        <div class="attr-head"><h2>Filter by attributes</h2><button id="attr-reset" class="clear-link" type="button" hidden>Clear all</button></div>
+        <div id="attr-active" class="tag-filters"></div>
+        <div id="attr-specific"></div>
+        <div id="attr-facets"></div>
+        <p class="attr-hint">"Unknown" is not offered. Papers whose abstract does not state an attribute are excluded when you pick that attribute.</p>
+        <button id="attr-close" class="attr-close" type="button">Show results</button>
+      </aside>
+      <div class="results-main">
+      <section id="paper-list" class="paper-list" aria-label="Literature list"></section>
 
-    <div class="load-more-wrap"><button id="load-more" class="load-more" type="button" hidden></button></div>
+      <div class="load-more-wrap"><button id="load-more" class="load-more" type="button" hidden></button></div>
+      </div>
+    </div>
 
     <p id="empty-message" class="empty-message" hidden>No matching papers found.</p>
     <p id="error-message" class="empty-message" hidden>Failed to load data. Please try again later.</p>

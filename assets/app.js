@@ -52,6 +52,7 @@
     query: "",
     kubun: "all", // all | clinical | basic
     designs: new Set(), // 臨床の中で選んだ研究デザイン(選ばなければ臨床すべて)
+    attr: {}, // 属性の絞り込み。項目の短い名前 → 選んだ値の Set(項目の中はOR、項目どうしはAND)
     activeJifTiers: new Set(),
     sort: "year-desc",
   };
@@ -116,6 +117,7 @@
         if (state.kubun === key) return;
         state.kubun = key;
         state.designs.clear();
+        state.attr = {};
         syncUrl();
         renderList();
       });
@@ -146,13 +148,18 @@
     $("design-hint").textContent = state.designs.size ? DESIGN_TEXT[LANG].hintSome : DESIGN_TEXT[LANG].hintNone;
   }
 
-  // 区分と研究デザインの選択をURLに入れる(?kubun=clinical&design=RCT,観察研究)。結果を人に渡せる。他のURLの指定(?search=legacy)は残す。
+  // 区分・研究デザイン・属性の選択をURLに入れる(?kubun=clinical&design=RCT,観察研究&f_si=testis)。結果を人に渡せる。他のURLの指定(?search=legacy)は残す。
   function syncUrl() {
     const params = new URLSearchParams(location.search);
     params.delete("kubun");
     params.delete("design");
+    for (const key of [...params.keys()]) if (key.startsWith("f_")) params.delete(key);
     if (state.kubun !== "all") params.set("kubun", state.kubun);
     if (state.kubun === "clinical" && state.designs.size) params.set("design", [...state.designs].join(","));
+    for (const f of activeFacets()) {
+      const sel = state.attr[f.key];
+      if (sel && sel.size) params.set(`f_${f.key}`, [...sel].join(","));
+    }
     const query = params.toString();
     history.replaceState(null, "", location.pathname + (query ? `?${query}` : "") + location.hash);
   }
@@ -163,6 +170,10 @@
     if (kubun === "clinical" || kubun === "basic") state.kubun = kubun;
     if (state.kubun === "clinical") {
       for (const d of (params.get("design") || "").split(",")) if (CLINICAL.includes(d)) state.designs.add(d);
+      for (const f of activeFacets()) {
+        const values = (params.get(`f_${f.key}`) || "").split(",").filter((v) => f.values[v]);
+        if (values.length) state.attr[f.key] = new Set(values);
+      }
     }
   }
 
@@ -191,6 +202,116 @@
     }
   }
 
+  // ---- 属性の絞り込み(臨床のみ) ----
+  // 項目と表示名は assets/attr-labels.js。論文の属性は paper.attrs(scripts/sync_site_attributes.py が入れる)
+  let ATTR = null;
+  const T = {
+    ja: { title: "属性で絞り込み", reset: "すべて解除", open: "絞り込み", close: "結果を見る", specific: "に固有の項目",
+      hint: "「不明」は選択肢に出しません。抄録に書かれていない論文は、その項目を選ぶと除かれます。", themes: "テーマ" },
+    en: { title: "Filter by attributes", reset: "Clear all", open: "Filters", close: "Show results", specific: " specific",
+      hint: "\"Unknown\" is not offered. Papers whose abstract does not state an attribute are excluded when you pick that attribute.", themes: "Themes" },
+  }[LANG];
+  const attrValues = (p, key) => {
+    const v = p.attrs && p.attrs[key];
+    return v === undefined ? [] : Array.isArray(v) ? v : [v];
+  };
+  const activeFacets = () => (ATTR && state.kubun === "clinical" ? [...ATTR.FACETS, ...ATTR.specificFacets(state.designs)] : []);
+  const facetLabel = (f) => (LANG === "en" ? f.en : f.ja);
+  const valueLabel = (f, v) => (f.values[v] ? f.values[v][LANG === "en" ? 1 : 0] : v);
+  // 選択中の項目のうち、論文が満たさない項目の名前(skip の項目は見ない)
+  const failedFacets = (p, facets) => facets.filter((f) => {
+    const sel = state.attr[f.key];
+    return sel && sel.size > 0 && !attrValues(p, f.key).some((v) => sel.has(v));
+  });
+  function attrMatches(p) {
+    const facets = activeFacets();
+    return facets.length === 0 || failedFacets(p, facets).length === 0;
+  }
+  function pruneAttrSelection() {
+    const keys = new Set(activeFacets().map((f) => f.key));
+    for (const key of Object.keys(state.attr)) if (!keys.has(key)) delete state.attr[key];
+  }
+  const selectedCount = () => Object.values(state.attr).reduce((n, set) => n + set.size, 0);
+
+  function renderAttrPanel() {
+    const panel = $("attr-panel");
+    const facets = activeFacets();
+    panel.hidden = facets.length === 0;
+    $("attr-open-row").hidden = facets.length === 0;
+    if (facets.length === 0) return;
+    // 件数: ほかの条件(検索語・IF・区分・デザイン・他の項目の選択)を満たす論文のうち、その値を持つ数
+    const counts = new Map(facets.map((f) => [f.key, new Map()]));
+    const bump = (key, p) => { const m = counts.get(key); for (const v of attrValues(p, key)) m.set(v, (m.get(v) || 0) + 1); };
+    for (const p of state.papers) {
+      if (!(designMatches(p) && baseMatches(p))) continue;
+      const failed = failedFacets(p, facets);
+      if (failed.length === 0) for (const f of facets) bump(f.key, p);
+      else if (failed.length === 1) bump(failed[0].key, p);
+    }
+    const fmt = (n) => n.toLocaleString(LANG === "en" ? "en-US" : "ja-JP");
+    const build = (facet, alwaysOpen = false) => {
+      const sel = state.attr[facet.key] || new Set();
+      const d = document.createElement("details");
+      d.className = "attr-facet";
+      d.open = alwaysOpen || Boolean(facet.open) || sel.size > 0;
+      d.dataset.facet = facet.id;
+      d.innerHTML = `<summary>${escapeHtml(facetLabel(facet))}</summary><div class="attr-chips"></div>`;
+      const chips = d.querySelector(".attr-chips");
+      for (const value of Object.keys(facet.values)) {
+        const n = counts.get(facet.key).get(value) || 0;
+        if (n === 0 && !sel.has(value)) continue;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "tag-filter" + (sel.has(value) ? " active" : "");
+        btn.setAttribute("aria-pressed", String(sel.has(value)));
+        btn.dataset.value = value;
+        btn.innerHTML = `${escapeHtml(valueLabel(facet, value))}<span class="n">${fmt(n)}</span>`;
+        btn.addEventListener("click", () => {
+          const set = state.attr[facet.key] || (state.attr[facet.key] = new Set());
+          set.has(value) ? set.delete(value) : set.add(value);
+          syncUrl();
+          renderList();
+        });
+        chips.appendChild(btn);
+      }
+      return d;
+    };
+    const keep = new Set([...panel.querySelectorAll("details[open]")].map((d) => d.dataset.facet));
+    const common = $("attr-facets");
+    const specific = $("attr-specific");
+    common.innerHTML = "";
+    specific.innerHTML = "";
+    for (const f of ATTR.FACETS) common.appendChild(build(f));
+    const spec = ATTR.specificFacets(state.designs);
+    if (spec.length) {
+      const title = document.createElement("p");
+      title.className = "attr-specific-title";
+      title.textContent = `${[...state.designs].map(tagLabel).join(" / ")}${T.specific}`;
+      specific.appendChild(title);
+      for (const f of spec) specific.appendChild(build(f, true));
+    }
+    for (const d of panel.querySelectorAll("details")) if (keep.has(d.dataset.facet)) d.open = true;
+    // 選択中の条件(×で外せる)
+    const active = $("attr-active");
+    active.innerHTML = "";
+    for (const f of facets) {
+      for (const value of state.attr[f.key] || []) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "tag-filter active";
+        btn.textContent = `${facetLabel(f)}: ${valueLabel(f, value)} ×`;
+        btn.addEventListener("click", () => {
+          state.attr[f.key].delete(value);
+          syncUrl();
+          renderList();
+        });
+        active.appendChild(btn);
+      }
+    }
+    $("attr-reset").hidden = selectedCount() === 0;
+    $("attr-badge").textContent = selectedCount() ? `(${selectedCount()})` : "";
+  }
+
   const haystacks = new WeakMap();
 
   // 区分・研究デザインの選択に合うか
@@ -201,7 +322,7 @@
   }
 
   function matches(paper) {
-    return designMatches(paper) && baseMatches(paper);
+    return designMatches(paper) && baseMatches(paper) && attrMatches(paper);
   }
 
   // 検索語とIFの絞り込みに合うか
@@ -240,6 +361,28 @@
       s.sort((a, b) => (b.year || 0) - (a.year || 0));
     }
     return s;
+  }
+
+  // カードに出す属性: 部位・組織型・性別・年齢区分・病期・IGCCCG・例数、臨床テーマ。結果の数値は出さない
+  function attrTags(p) {
+    if (!ATTR || !p.attrs || groupOf(p) !== "clinical") return "";
+    const a = p.attrs;
+    const label = (key, value) => {
+      const f = ATTR.FACETS.find((x) => x.key === key);
+      return f ? valueLabel(f, value) : value;
+    };
+    const parts = [];
+    if (a.si) parts.push(label("si", a.si));
+    for (const h of a.hi || []) parts.push(label("hi", h));
+    if (a.sx) parts.push(label("sx", a.sx));
+    if (a.ag) parts.push(label("ag", a.ag));
+    if (a.sg && ATTR.STAGE_LABEL[a.sg]) parts.push(ATTR.STAGE_LABEL[a.sg][LANG === "en" ? 1 : 0]);
+    if (a.ig && ATTR.IGCCCG_LABEL[a.ig]) parts.push(ATTR.IGCCCG_LABEL[a.ig][LANG === "en" ? 1 : 0]);
+    if (a.n) parts.push(`n = ${a.n.toLocaleString(LANG === "en" ? "en-US" : "ja-JP")}`);
+    const themes = (a.th || []).map((v) => label("th", v));
+    if (!parts.length && !themes.length) return "";
+    return `<div class="paper-attrs">${parts.map((x) => `<span class="paper-attr">${escapeHtml(x)}</span>`).join("")}</div>`
+      + (themes.length ? `<p class="paper-themes">${escapeHtml(T.themes)}: ${escapeHtml(themes.join(" · "))}</p>` : "");
   }
 
   function paperCard(p) {
@@ -304,6 +447,7 @@
         ${summaryHtml}
         ${abstractHtml}
         ${tags ? `<div class="paper-tags">${tags}</div>` : ""}
+        ${attrTags(p)}
         ${links.length ? `<div class="paper-links">${links.join("")}</div>` : ""}
       </article>`;
   }
@@ -411,7 +555,9 @@
   }
 
   function renderList() {
+    pruneAttrSelection();
     renderDesignFilters();
+    renderAttrPanel();
     shown = sortPapers(state.papers.filter(matches));
     shownCount = Math.min(PAGE_SIZE, shown.length);
     $("paper-list").innerHTML = shown.slice(0, shownCount).map(paperCard).join("");
@@ -477,9 +623,18 @@
       // すべて表示する(人間が明示的に除外と判断するまでは隠さない方針)
       const all = Array.isArray(papers) ? papers : [];
       state.papers = all.filter((p) => p.relevance_status !== "excluded");
+      ATTR = await import(pageUrl("assets/attr-labels.js"));
       readUrlSelection();
+      $("attr-reset").addEventListener("click", () => {
+        state.attr = {};
+        syncUrl();
+        renderList();
+      });
+      $("attr-open").addEventListener("click", () => $("attr-panel").classList.add("open"));
+      $("attr-close").addEventListener("click", () => $("attr-panel").classList.remove("open"));
       $("design-clear").addEventListener("click", () => {
         state.designs.clear();
+        state.attr = {};
         syncUrl();
         renderList();
       });
