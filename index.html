@@ -49,12 +49,25 @@
         <div id="jif-filters" class="tag-filters" aria-label="IFで絞り込み"></div>
       </div>
       <p class="jif-note">※ 最新年の文献は、その年のIF(インパクトファクター)が未公開のため、前年のIFで代用して評価しています。公開後に確定値へ更新します。</p>
+      <div id="attr-open-row" class="attr-open-row" hidden><button id="attr-open" class="attr-open" type="button">絞り込み<span id="attr-badge"></span></button></div>
       <p id="result-count" class="result-count" role="status"></p>
     </section>
 
-    <section id="paper-list" class="paper-list" aria-label="文献一覧"></section>
+    <div class="results-layout">
+      <aside id="attr-panel" class="attr-panel" aria-label="属性で絞り込み" hidden>
+        <div class="attr-head"><h2>属性で絞り込み</h2><button id="attr-reset" class="clear-link" type="button" hidden>すべて解除</button></div>
+        <div id="attr-active" class="tag-filters"></div>
+        <div id="attr-specific"></div>
+        <div id="attr-facets"></div>
+        <p class="attr-hint">「不明」は選択肢に出しません。抄録に書かれていない論文は、その項目を選ぶと除かれます。</p>
+        <button id="attr-close" class="attr-close" type="button">結果を見る</button>
+      </aside>
+      <div class="results-main">
+      <section id="paper-list" class="paper-list" aria-label="文献一覧"></section>
 
-    <div class="load-more-wrap"><button id="load-more" class="load-more" type="button" hidden></button></div>
+      <div class="load-more-wrap"><button id="load-more" class="load-more" type="button" hidden></button></div>
+      </div>
+    </div>
 
     <p id="empty-message" class="empty-message" hidden>該当する文献が見つかりませんでした。</p>
     <p id="error-message" class="empty-message" hidden>データの読み込みに失敗しました。時間をおいて再度お試しください。</p>

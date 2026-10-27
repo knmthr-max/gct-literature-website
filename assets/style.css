@@ -364,3 +364,29 @@ body {
   .seg { display: flex; width: 100%; }
   .seg button { flex: 1; padding: 8px 4px; }
 }
+
+/* 属性の絞り込み(臨床のみ): PCは左の列、スマホは下から開くパネル。設計: docs/decisions/2026-10-26_attribute_filters.md */
+.results-layout { display: flex; gap: 20px; align-items: flex-start; }
+.results-main { flex: 1 1 0; min-width: 0; }
+.attr-panel { flex: 0 0 260px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 14px; }
+.attr-panel[hidden] { display: none; }
+.attr-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.attr-head h2 { font-size: 0.95rem; margin: 0; }
+.attr-facet { border-top: 1px solid var(--color-border); padding: 8px 0; }
+.attr-facet summary { cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+.attr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.attr-specific-title { font-size: 0.8rem; color: var(--color-accent); font-weight: 600; margin: 12px 0 0; }
+.attr-hint { font-size: 0.75rem; color: var(--color-text-muted); margin: 10px 0 0; }
+.attr-close, .attr-open-row { display: none; }
+.paper-attrs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.paper-attr { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 6px; padding: 1px 8px; font-size: 0.78rem; }
+.paper-themes { margin: 6px 0 0; font-size: 0.78rem; color: var(--color-text-muted); }
+@media (max-width: 760px) {
+  .results-layout { display: block; }
+  .attr-open-row:not([hidden]) { display: block; margin: 8px 0; }
+  .attr-open { border: 1px solid var(--color-accent); background: var(--color-surface); color: var(--color-accent); border-radius: 999px; padding: 6px 16px; font: inherit; cursor: pointer; }
+  .attr-panel { display: none; }
+  .attr-panel.open { display: block; position: fixed; inset: auto 0 0 0; max-height: 78vh; overflow: auto; z-index: 20;
+    border-radius: 16px 16px 0 0; padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25); }
+  .attr-close { display: block; width: 100%; margin-top: 12px; border: 0; background: var(--color-accent); color: #fff; border-radius: 8px; padding: 10px; font: inherit; cursor: pointer; }
+}

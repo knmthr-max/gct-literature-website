@@ -18,7 +18,7 @@ const papersPath = process.argv[2] || "data/papers";
 const outDir = process.argv[3] || ".";
 
 const LIST_FIELDS = ["id", "pmid", "doi", "url", "title", "title_ja", "journal", "year", "authors", "tags",
-  "jif_tier", "added_at", "summary_ja", "summary_en"];
+  "jif_tier", "added_at", "summary_ja", "summary_en", "attrs"];
 const SAFE_ID = /^[A-Za-z0-9._-]+$/;
 // 検索に使わない Pagefind の部品(UI・ハイライト)と、読まない結果詳細は公開しない
 const UNUSED = [/^pagefind-.*ui\.(js|css)$/, /^pagefind-highlight\.js$/, /^fragment$/];
