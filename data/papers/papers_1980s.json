@@ -70452,7 +70452,7 @@
     "doi": "10.1159/000463762",
     "url": "",
     "tags": [
-      "SR・MA"
+      "症例報告・集積"
     ],
     "summary_en": "This 1984 review evaluated 1,124 published and 45 institutional cases of childhood testicular tumors and compared them with 1,062 adult cases. Non-germinal histologies accounted for 29% of pediatric cases versus 8% of adult cases, and yolk sac tumor was the most common histology at 49%. Metastases were less frequent in children (9%) than adults (61%). Teratoma had the best prognosis and was cured by orchiectomy. Localized yolk sac tumor in infants under 2 years was treated with orchiectomy alone, while older children required adjuvant chemotherapy, which was indicated in 15% of cases.",
     "summary_ja": "1984年の文献的検討で、小児精巣腫瘍の既報1,124例と自施設45例を、成人1,062例と比較した。非胚細胞性組織型は小児で29%、成人で8%であり、卵黄嚢腫瘍が49%を占めた。転移は小児9%、成人61%であった。奇形腫は精巣摘除術で治癒し、2歳未満の限局性卵黄嚢腫瘍は精巣摘除術のみで治療可能で、年長児には補助化学療法が必要とされた。",
@@ -70484,8 +70484,7 @@
         "chemotherapy",
         "prognosis",
         "late_effects"
-      ],
-      "mt": "no"
+      ]
     }
   },
   {
