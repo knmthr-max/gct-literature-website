@@ -7,7 +7,7 @@ on:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Validate JSON data
@@ -47,3 +47,5 @@ jobs:
           npm run check:search
       - name: Filter - basic/clinical and study-design filters against the data
         run: npm run check:filter
+      - name: Filter - attribute filters (site, tag, histology, themes) against the data
+        run: npm run check:attr
