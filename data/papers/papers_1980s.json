@@ -26632,7 +26632,7 @@
       "sx": "female",
       "hi": [
         "seminoma_germinoma",
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "tr": [
         "chemotherapy",
@@ -87606,7 +87606,7 @@
       "sx": "male",
       "hi": [
         "seminoma_germinoma",
-        "mixed_gct"
+        "nonseminomatous_gct"
       ],
       "n": 2,
       "th": [
@@ -106092,6 +106092,9 @@
     "relevance_note": "転移性妊娠性栄養膜疾患によるくも膜下出血の症例報告で、GTDが主題である。",
     "relevance_reviewed_at": "2026-10-10T21:28:06+00:00",
     "attrs": {
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
       "n": 2,
       "th": [
         "prognosis",
@@ -110513,7 +110516,7 @@
     "relevance_note": "脊柱背側に隣接して生じた性腺外の奇形腫を伴う症例報告で、脊髄内原発ではないため関連ありと判断した。",
     "relevance_reviewed_at": "2026-10-10T21:23:07+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "ag": "infant",
       "hi": [
         "gct_nos"

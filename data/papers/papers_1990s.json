@@ -122179,6 +122179,9 @@
     "relevance_note": "部分胞状奇胎に続発した妊娠性絨毛癌の症例報告で、GTDが主題であるため。",
     "relevance_reviewed_at": "2026-10-10T18:06:09+00:00",
     "attrs": {
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
       "tr": [
         "chemotherapy"
       ],
