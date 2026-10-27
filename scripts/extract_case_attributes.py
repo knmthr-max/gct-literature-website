@@ -125,7 +125,8 @@ def read_done(path):
 
 def extract(args):
     done = read_done(args.out)
-    todo = [r for r in rows_for(args.db_dir) if r["pmid"] not in done]
+    only = set(args.only_pmids.read_text(encoding="utf-8").split()) if args.only_pmids else None   # 一部だけやり直すとき
+    todo = [r for r in rows_for(args.db_dir) if r["pmid"] not in done and (only is None or r["pmid"] in only)]
     if args.limit:
         todo = todo[:max(0, args.limit - len(done))]
     jobs = queue.Queue()
@@ -193,6 +194,7 @@ def main():
     parser.add_argument("--db-dir", type=pathlib.Path)
     parser.add_argument("--out", type=pathlib.Path, required=True)
     parser.add_argument("--limit", type=int, default=0, help="Total papers to have in --out (for a pilot)")
+    parser.add_argument("--only-pmids", type=pathlib.Path, help="PMIDを1行ずつ書いたファイル。その論文だけを対象にする(やり直し用)")
     parser.add_argument("--batch-size", type=int, default=10)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)

@@ -305,7 +305,8 @@
         "seminoma_germinoma",
         "yolk_sac_tumor",
         "immature_teratoma",
-        "choriocarcinoma"
+        "choriocarcinoma",
+        "mixed_gct"
       ],
       "tr": [
         "surgery",
@@ -2043,7 +2044,7 @@
     "attrs": {
       "si": "testis",
       "hi": [
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "tr": [
         "surgery"
@@ -2333,7 +2334,7 @@
       "sx": "female",
       "ag": "adult",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "n": 1
     }
@@ -2911,7 +2912,8 @@
       "si": "testis",
       "sx": "male",
       "hi": [
-        "mature_teratoma"
+        "mature_teratoma",
+        "nonseminomatous_gct"
       ],
       "tr": [
         "chemotherapy"
@@ -3038,8 +3040,9 @@
     "relevance_note": "胞状奇胎に続発する絨毛性疾患の症例報告が主題であり、本サイトで扱う妊娠性絨毛性疾患に該当します。",
     "relevance_reviewed_at": "2026-10-10T21:34:59+00:00",
     "attrs": {
+      "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "tr": [
         "surgery",
@@ -3491,11 +3494,11 @@
     "relevance_reviewed_at": "2026-10-10T21:34:16+00:00",
     "attrs": {
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "tr": [
-        "chemotherapy",
-        "surgery"
+        "surgery",
+        "chemotherapy"
       ],
       "n": 24,
       "th": [
@@ -4075,7 +4078,7 @@
     "attrs": {
       "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "tr": [
         "chemotherapy"
@@ -4374,6 +4377,7 @@
     "relevance_note": "絨毛癌の脳転移例の報告であり、非CNS原発の胚細胞系腫瘍の転移として対象に該当する。",
     "relevance_reviewed_at": "2026-10-10T21:32:36+00:00",
     "attrs": {
+      "si": "cns",
       "hi": [
         "choriocarcinoma"
       ],
@@ -4673,9 +4677,9 @@
       "si": "testis",
       "sx": "male",
       "hi": [
-        "seminoma_germinoma",
         "choriocarcinoma",
-        "mixed_gct"
+        "seminoma_germinoma",
+        "embryonal_carcinoma"
       ],
       "tr": [
         "surgery"
@@ -7143,6 +7147,9 @@
       "hi": [
         "choriocarcinoma"
       ],
+      "tr": [
+        "surgery"
+      ],
       "n": 1
     }
   },
@@ -8509,7 +8516,7 @@
       "si": "other_extragonadal",
       "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "n": 1
     }
@@ -8758,7 +8765,7 @@
     "attrs": {
       "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "n": 1
     }
@@ -11554,7 +11561,7 @@
     "attrs": {
       "ag": "mixed",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "tr": [
         "chemotherapy"
@@ -12260,9 +12267,9 @@
         "choriocarcinoma"
       ],
       "tr": [
+        "surgery",
         "radiotherapy",
-        "chemotherapy",
-        "surgery"
+        "chemotherapy"
       ],
       "n": 1,
       "th": [
@@ -12628,7 +12635,7 @@
       "si": "testis",
       "sx": "male",
       "hi": [
-        "gct_nos",
+        "nonseminomatous_gct",
         "choriocarcinoma"
       ],
       "tr": [
@@ -12853,15 +12860,15 @@
     "relevance_reviewed_at": "2026-10-10T21:54:18+00:00",
     "attrs": {
       "si": "testis",
-      "sx": "male",
       "ag": "mixed",
       "hi": [
-        "embryonal_carcinoma"
+        "embryonal_carcinoma",
+        "nonseminomatous_gct"
       ],
       "tr": [
         "surgery",
-        "chemotherapy",
-        "radiotherapy"
+        "radiotherapy",
+        "chemotherapy"
       ],
       "n": 43,
       "th": [
@@ -13368,7 +13375,7 @@
       "si": "testis",
       "sx": "male",
       "hi": [
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "tr": [
         "chemotherapy"
@@ -14052,10 +14059,6 @@
     "relevance_reviewed_at": "2026-10-10T21:51:22+00:00",
     "attrs": {
       "si": "mediastinum",
-      "hi": [
-        "choriocarcinoma",
-        "gct_nos"
-      ],
       "tr": [
         "surgery",
         "radiotherapy",
@@ -16578,8 +16581,7 @@
       "sx": "male",
       "hi": [
         "choriocarcinoma",
-        "seminoma_germinoma",
-        "mixed_gct"
+        "seminoma_germinoma"
       ],
       "n": 3,
       "th": [
@@ -17972,11 +17974,11 @@
       "sx": "male",
       "ag": "mixed",
       "hi": [
-        "choriocarcinoma",
         "seminoma_germinoma",
-        "immature_teratoma",
+        "choriocarcinoma",
         "embryonal_carcinoma",
-        "mixed_gct"
+        "mixed_gct",
+        "nonseminomatous_gct"
       ],
       "n": 20,
       "th": [
@@ -18134,7 +18136,7 @@
       "si": "testis",
       "sx": "male",
       "hi": [
-        "gct_nos",
+        "nonseminomatous_gct",
         "mature_teratoma"
       ],
       "tr": [
@@ -18844,7 +18846,7 @@
       "si": "testis",
       "sx": "male",
       "hi": [
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "tr": [
         "chemotherapy",
@@ -18886,7 +18888,7 @@
     "attrs": {
       "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "th": [
         "pathology_molecular"
@@ -19204,7 +19206,8 @@
       "hi": [
         "yolk_sac_tumor",
         "seminoma_germinoma",
-        "choriocarcinoma"
+        "choriocarcinoma",
+        "teratoma_with_malignant_transformation"
       ],
       "tr": [
         "surgery",
@@ -19766,7 +19769,7 @@
       "si": "other_extragonadal",
       "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "n": 25,
       "th": [
@@ -20126,11 +20129,11 @@
     "relevance_reviewed_at": "2026-10-10T21:58:01+00:00",
     "attrs": {
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "tr": [
-        "chemotherapy",
-        "surgery"
+        "surgery",
+        "chemotherapy"
       ],
       "n": 1,
       "th": [
@@ -20800,7 +20803,6 @@
     "relevance_note": "絨毛癌の脳転移に対する治療後の妊娠・分娩転帰を扱う症例報告であり、関連性が高い。",
     "relevance_reviewed_at": "2026-10-10T21:57:09+00:00",
     "attrs": {
-      "sx": "female",
       "hi": [
         "choriocarcinoma"
       ],
@@ -21113,12 +21115,12 @@
     "relevance_note": "精巣セミノーマ（胎児性癌成分を含む）の根治的精巣摘除術後15年に対側後腹膜で絨毛癌が見つかった症例で、胚細胞腫瘍の再発が主題である。",
     "relevance_reviewed_at": "2026-10-10T21:56:43+00:00",
     "attrs": {
-      "si": "retroperitoneum",
+      "si": "testis",
       "sx": "male",
       "hi": [
-        "choriocarcinoma",
         "seminoma_germinoma",
-        "embryonal_carcinoma"
+        "embryonal_carcinoma",
+        "choriocarcinoma"
       ],
       "tr": [
         "surgery"
@@ -21352,11 +21354,10 @@
     "relevance_reviewed_at": "2026-10-10T21:56:10+00:00",
     "attrs": {
       "si": "testis",
-      "sx": "male",
       "sg": "III",
       "hi": [
         "seminoma_germinoma",
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "tr": [
         "surgery",
@@ -22023,6 +22024,9 @@
       "sx": "male",
       "hi": [
         "choriocarcinoma"
+      ],
+      "tr": [
+        "chemotherapy"
       ],
       "n": 1,
       "th": [
@@ -24141,8 +24145,8 @@
       "hi": [
         "seminoma_germinoma",
         "embryonal_carcinoma",
-        "mixed_gct",
-        "choriocarcinoma"
+        "choriocarcinoma",
+        "mixed_gct"
       ],
       "tr": [
         "radiotherapy",
@@ -25057,7 +25061,7 @@
     "attrs": {
       "sx": "female",
       "hi": [
-        "choriocarcinoma"
+        "gestational_choriocarcinoma"
       ],
       "tr": [
         "surgery",
