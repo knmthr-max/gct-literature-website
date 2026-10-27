@@ -103,7 +103,8 @@ def read_verdicts(path):
 
 def screen(args):
     done = read_verdicts(args.out)
-    todo = [r for r in candidates(args.db_dir, args.scope) if r["pmid"] not in done]
+    only = set(args.only_pmids.read_text(encoding="utf-8").split()) if args.only_pmids else None   # 一部だけ判定するとき
+    todo = [r for r in candidates(args.db_dir, args.scope) if r["pmid"] not in done and (only is None or r["pmid"] in only)]
     jobs = queue.Queue()
     for i in range(0, len(todo), args.batch_size):
         jobs.put(todo[i:i + args.batch_size])
@@ -198,6 +199,7 @@ def main():
     parser.add_argument("--db-dir", type=pathlib.Path, required=True)
     parser.add_argument("--out", type=pathlib.Path, required=True, help="verdicts JSONL")
     parser.add_argument("--scope", choices=sorted(SCOPES), default="live", help="which papers to look at (see SCOPES)")
+    parser.add_argument("--only-pmids", type=pathlib.Path, help="PMIDを1行ずつ書いたファイル。screen でその論文だけを対象にする")
     parser.add_argument("--claude", action="store_true")
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--batch-size", type=int, default=20)
