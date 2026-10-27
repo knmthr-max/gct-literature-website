@@ -14,7 +14,7 @@ attrs の項目(短い名前。値は英語の選択肢のまま。assets/app.js
 「不明」「記載なし」「その他」「空」は入れない(絞り込みの選択肢に出さないため)。結果の数値は持たない。
 
     python3 scripts/sync_site_attributes.py --papers data/papers --attributes <data>/processed/attributes_v2 \
-        --case <data>/processed/case_attributes/full.jsonl [--apply]
+        --case <data>/processed/case_attributes/full.jsonl [<やり直しのファイル> ...] [--apply]
 """
 import argparse
 import collections
@@ -61,7 +61,7 @@ def read_jsonl(path):
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
-def build(attributes_dir, case_path):
+def build(attributes_dir, case_paths):
     """pmid -> {"design": 抽出時のデザイン, "core": {...}, "specific": {...}, "themes": [...]}"""
     rows = {}
     for path in sorted(attributes_dir.glob("*.jsonl")):
@@ -70,9 +70,10 @@ def build(attributes_dir, case_path):
             entry["themes"] = clean_list(r.get("clinical_themes"))
             if "sex" in r:  # 共通項目を持つデザイン(症例報告の臨床テーマだけの行は持たない)
                 entry.update(design=r.get("design"), core=core_attrs(r), row=r)
-    for r in read_jsonl(case_path):
-        entry = rows.setdefault(r["pmid"], {})
-        entry.update(design=sd.CASE, core=core_attrs(r), row=r)
+    for case_path in case_paths:   # 後ろのファイルが前のファイルを上書きする(やり直した行を重ねる)
+        for r in read_jsonl(case_path):
+            entry = rows.setdefault(r["pmid"], {})
+            entry.update(design=sd.CASE, core=core_attrs(r), row=r)
     return rows
 
 
@@ -95,7 +96,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--papers", type=pathlib.Path, required=True)
     parser.add_argument("--attributes", type=pathlib.Path, required=True)
-    parser.add_argument("--case", type=pathlib.Path, required=True)
+    parser.add_argument("--case", type=pathlib.Path, nargs="+", required=True,
+                        help="症例報告の抽出結果。複数なら、後ろが前を上書きする(例: full.jsonl chorio_redo.jsonl nsgct_redo.jsonl)")
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
     rows = build(args.attributes, args.case)
