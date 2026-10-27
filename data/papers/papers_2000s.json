@@ -44763,6 +44763,9 @@
     "relevance_note": "妊娠性絨毛性疾患とその関連疾患を主題とした病理学的研究である。",
     "relevance_reviewed_at": "2026-10-10T09:39:09+00:00",
     "attrs": {
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
       "th": [
         "pathology_molecular"
       ]
@@ -95540,6 +95543,9 @@
     "attrs": {
       "si": "other_extragonadal",
       "sx": "female",
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
       "n": 1,
       "th": [
         "diagnosis_imaging",
@@ -100911,7 +100917,7 @@
     "relevance_note": "脳室内原発の成熟奇形腫に加え胸部と腸骨部にも病変を生じた多発例の報告で、CNSは複数部位の一つにすぎないため対象とした。",
     "relevance_reviewed_at": "2026-10-10T10:48:50+00:00",
     "attrs": {
-      "si": "multiple",
+      "si": "cns",
       "ag": "child",
       "hi": [
         "mature_teratoma"

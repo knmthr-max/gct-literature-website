@@ -575,6 +575,9 @@
       "si": "other_extragonadal",
       "sx": "male",
       "ag": "adult",
+      "hi": [
+        "nonseminomatous_gct"
+      ],
       "tr": [
         "surgery"
       ],
@@ -14157,7 +14160,7 @@
     "relevance_note": "髄外生殖細胞腫瘍の一種である基底核germinomaで、同期栄養栄養細胞巨細胞を含む稀な症例報告です。",
     "relevance_reviewed_at": "2026-09-27T20:04:43+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "hi": [
         "seminoma_germinoma"
       ],
@@ -14822,6 +14825,7 @@
     "relevance_note": "小児頭蓋底病変の経鼻内視鏡手術シリーズで、ゲルミノーマを含む胚細胞腫瘍が対象症例に含まれる。",
     "relevance_reviewed_at": "2026-09-27T20:01:41+00:00",
     "attrs": {
+      "si": "cns",
       "ag": "mixed",
       "hi": [
         "seminoma_germinoma"
@@ -15080,6 +15084,7 @@
     "relevance_note": "下垂体の稀な病変の総合的評価で、ゲルミノーマを含む胚細胞腫瘍が対象に含まれている。",
     "relevance_reviewed_at": "2026-09-27T20:01:41+00:00",
     "attrs": {
+      "si": "cns",
       "hi": [
         "seminoma_germinoma"
       ],
@@ -25092,7 +25097,7 @@
     "relevance_note": "頭蓋内ジェルミノーマと精巣表皮様嚢胞はクラインフェルター症候群に関連する生殖細胞腫瘍である。",
     "relevance_reviewed_at": "2026-09-27T19:18:55+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "male",
       "ag": "adolescent",
       "hi": [
@@ -28504,7 +28509,7 @@
     "relevance_note": "脊髄円錐部の成熟奇形腫という腹腔外生殖細胞腫瘍の症例報告である。",
     "relevance_reviewed_at": "2026-09-27T22:54:49+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "female",
       "ag": "adult",
       "hi": [
@@ -33891,6 +33896,7 @@
     "relevance_note": "中枢神経GCT診断におけるCSF βhCG解釈の困難性に関する症例報告",
     "relevance_reviewed_at": "2026-09-27T22:21:26+00:00",
     "attrs": {
+      "si": "cns",
       "sx": "male",
       "ag": "adult",
       "n": 1,
@@ -40942,7 +40948,7 @@
     "relevance_note": "小児患者における先天性奇形腫（皮様嚢胞）の外傷による破裂と化学髄膜炎を報告している症例研究である。",
     "relevance_reviewed_at": "2026-09-27T21:53:28+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "male",
       "ag": "child",
       "hi": [
@@ -56253,7 +56259,7 @@
     "relevance_note": "脳室内腫瘍の内視鏡手術に未熟奇形腫（松果体領域）が含まれている。",
     "relevance_reviewed_at": "2026-09-28T00:37:56+00:00",
     "attrs": {
-      "si": "multiple",
+      "si": "cns",
       "sx": "mixed",
       "ag": "mixed",
       "hi": [
@@ -77252,6 +77258,7 @@
     "relevance_note": "非定型奇形腫様ラブドイド腫瘍の神経膠芽腫様分化を示す症例であり、AT/RTはこのサイトの関連腫瘍である",
     "relevance_reviewed_at": "2026-10-01T10:29:52+00:00",
     "attrs": {
+      "si": "cns",
       "n": 1,
       "th": [
         "pathology_molecular"
@@ -77553,6 +77560,7 @@
     "relevance_note": "小児脳非定型奇形腫様ラブドイド腫瘍のMR分光画像的特性が研究主題であり、AT/RTはこのサイトの関連腫瘍タイプである",
     "relevance_reviewed_at": "2026-10-01T10:29:52+00:00",
     "attrs": {
+      "si": "cns",
       "ag": "mixed",
       "n": 7,
       "th": [
@@ -111166,7 +111174,7 @@
       "si": "mediastinum",
       "hi": [
         "seminoma_germinoma",
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "n": 15,
       "th": [
@@ -117514,6 +117522,7 @@
     "relevance_note": "転移性胚細胞腫瘍とその治療後に記憶障害を生じた患者の認知リハビリテーションを扱う症例研究で、胚細胞腫瘍が主題の一つであるため。",
     "relevance_reviewed_at": "2026-10-10T07:03:52+00:00",
     "attrs": {
+      "si": "cns",
       "sx": "male",
       "ag": "adolescent",
       "hi": [

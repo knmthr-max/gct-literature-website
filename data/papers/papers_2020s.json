@@ -21336,6 +21336,9 @@
     "attrs": {
       "si": "other_extragonadal",
       "sx": "female",
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
       "tr": [
         "surgery"
       ],
@@ -76962,7 +76965,7 @@
     "relevance_note": "脊髄頸髄移行部の成熟奇形腫は生殖細胞腫瘍の一種で、稀な椎管内外腫瘍である。",
     "relevance_reviewed_at": "2026-09-27T09:30:41+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "female",
       "ag": "adult",
       "hi": [
@@ -83533,7 +83536,7 @@
     "relevance_note": "腰仙部脊髄空洞瘻に伴う成熟奇形腫の症例報告であり、生殖細胞腫瘍の一形態である。",
     "relevance_reviewed_at": "2026-09-27T14:06:21+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "ag": "infant",
       "hi": [
         "mature_teratoma"
@@ -88462,7 +88465,7 @@
       "sx": "female",
       "ag": "child",
       "hi": [
-        "gct_nos"
+        "nonseminomatous_gct"
       ],
       "tr": [
         "chemotherapy",
@@ -95027,7 +95030,7 @@
     "relevance_note": "海綿静脈洞病変の複数病態の中でジスジェルミノーマ(生殖細胞腫瘍)が1例含まれており、GCT治療法に関連する。",
     "relevance_reviewed_at": "2026-09-27T12:57:42+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "hi": [
         "seminoma_germinoma"
       ],
@@ -143260,6 +143263,7 @@
     "relevance_note": "卵巣奇形腫とNMDAR脳炎の既知の関連性について論じており、腫瘍関連パラネオプラスティック症候群の重要な内容を扱っている。",
     "relevance_reviewed_at": "2026-09-27T14:38:42+00:00",
     "attrs": {
+      "si": "cns",
       "sx": "female",
       "ag": "adult",
       "n": 1
@@ -145731,6 +145735,7 @@
     "relevance_note": "中枢神経系の非定型奇形様横紋筋肉腫で、小児胚胎性悪性新生物として本サイトの関連対象である。",
     "relevance_reviewed_at": "2026-09-27T14:26:57+00:00",
     "attrs": {
+      "si": "cns",
       "sx": "male",
       "ag": "adolescent",
       "tr": [
@@ -147428,7 +147433,7 @@
     "relevance_note": "松果体領域の混合生殖細胞腫と精巣成熟類皮嚢胞の同時性病変の極めて稀な症例報告である。",
     "relevance_reviewed_at": "2026-09-27T14:16:26+00:00",
     "attrs": {
-      "si": "multiple",
+      "si": "cns",
       "sx": "male",
       "ag": "child",
       "hi": [
@@ -150718,7 +150723,7 @@
     "relevance_note": "成人女性における頭頂骨上皮性皮様嚢胞(成熟奇形腫)の稀な局在の症例報告であり、腫瘍が主題である。",
     "relevance_reviewed_at": "2026-09-27T18:59:03+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "female",
       "ag": "adult",
       "tr": [
@@ -160965,7 +160970,7 @@
     "relevance_note": "β-hCG分泌腫瘍による周腫瘍症候群の報告で、頭蓋内生殖細胞腫瘍を含む2症例を記述している。",
     "relevance_reviewed_at": "2026-09-27T17:56:32+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "male",
       "ag": "infant",
       "hi": [
@@ -170032,7 +170037,7 @@
     "relevance_note": "脊髄終糸の成熟奇形腫に関する症例報告であり、頻外性胚細胞腫瘍学に直接関連。",
     "relevance_reviewed_at": "2026-09-27T17:07:05+00:00",
     "attrs": {
-      "si": "other_extragonadal",
+      "si": "cns",
       "sx": "male",
       "ag": "adult",
       "hi": [
