@@ -1,6 +1,6 @@
 # データの追加・更新方法
 
-このディレクトリがサイトの**唯一のデータソース**です。ここの JSON を編集して push するだけでサイトに反映されます(ビルド作業は不要)。
+このディレクトリがサイトの**唯一のデータソース**です。文献データは `data/papers/`(年代別の `papers_<年代>.json` と `index.json`)にあり、スクリプトは `scripts/papers_store.py` で読み書きします。以下で `papers.json` と書いている箇所は、この `data/papers/` のことです。検索データ(`search/`・`pagefind/`)は、デプロイ時に自動で生成されます。
 
 ## 文献を追加する(推奨: PubMedデータから自動取り込み)
 
@@ -52,13 +52,14 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `pmid` | – | PubMed ID。あれば PubMed へのリンクを自動生成 |
 | `doi` | – | DOI。あれば doi.org へのリンクを自動生成 |
 | `url` | – | その他のリンク(PMID/DOI がない場合用) |
-| `tags` | – | 絞り込み用タグ。**必ず次の7分類のうち1つのみ**を入れる: `症例報告` / `臨床研究` / `基礎研究` / `総説` / `ガイドライン` / `論説` / `レター`。PubMedの著者キーワードや細かい文献種別はここに入れない(タグクラウドが機能しなくなるため)。該当なしなら空配列 `[]` |
+| `tags` | – | 研究デザイン。**必ず次の9分類のうち1つのみ**を入れる: `SR・MA` / `RCT` / `非ランダム化試験` / `観察研究` / `症例報告・集積` / `総説` / `ガイドライン・コンセンサス` / `基礎・トランスレーショナル` / `その他`(`基礎・トランスレーショナル` 以外は「臨床」)。PubMedの著者キーワードや細かい文献種別はここに入れない。分類の決め方は `docs/decisions/2026-10-12_study_design_taxonomy.md`。該当なしなら空配列 `[]` |
+| `attrs` | – | AIが抄録から抽出した属性(臨床論文のみ)。`th` 臨床テーマ[]、`si` 原発部位、`hi` 組織型[]、`sx` 性別、`ag` 年齢区分、`tr` 治療[]、`sg` 病期、`ig` IGCCCG、`n` 例数。デザイン別に `ln` 治療ライン・`ep` 主要評価項目の種類・`ph` 相(RCT・非ランダム化試験)、`sc` 統合の対象・`mt` メタ解析の有無(SR・MA)、`st` 研究の型(観察研究)。値が分からない項目は入れない。結果の数値は持たない。`scripts/sync_site_attributes.py` が書く。仕様: `docs/decisions/2026-10-26_attribute_filters.md` |
 | `summary_en` | – | 英語の短い要約・コメント |
 | `summary_ja` | – | 日本語の短い要約・コメント |
 | `abstract` | – | 英語の全文抄録。サイトでは折りたたみ表示される |
 | `abstract_ja` | – | 日本語訳の全文抄録。収載文献は基本的に英語が原文であるため、日本語ページでは訳文(「抄録」)と英語原文(「抄録原文(英語)」)を**両方**、別々の折りたたみで常に参照できる。訳が無い場合は「抄録(英語)」に原文のみ表示する |
 | `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`/`unknown`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない。`unknown` は「JCR参照データに該当誌・該当年のデータが無く判定できない」ことを明示する値で、フィールド自体を省略する(未整備で表示されないのか、判定不能なのか区別できない)よりも意図的にこちらを使う。`programs/literature_pipeline/README.md` の `scripts/match_jif.py` で自動生成する |
-| `relevance_status` | – | GCT(胚細胞腫瘍)関連性レビューの結果。`kept`(掲載継続)/`excluded`(除外)/`needs_review`(要確認)のいずれか。**フィールド未設定は`kept`と同じ扱い**(サイトは`excluded`のときだけ非表示にする)。`scripts/review_relevance.py` で生成・反映する。採否は後からdecisions TSVを作り直してAI判定・人間の確認を経ればいつでも修正できる |
+| `relevance_status` | – | GCT(胚細胞腫瘍)関連性レビューの結果。`kept`(掲載継続)/`excluded`(除外。脳・脊髄原発のGCTを含む)/`needs_review`(要確認)のいずれか。**フィールド未設定は`kept`と同じ扱い**(サイトは`excluded`のときだけ非表示にする)。`scripts/review_relevance.py` で生成・反映する。採否は後からdecisions TSVを作り直してAI判定・人間の確認を経ればいつでも修正できる |
 | `relevance_note` | – | `relevance_status` の判断理由(AIの判定理由、または人間が上書きした場合はそのメモ) |
 | `relevance_reviewed_at` | – | 関連性レビューを反映した日時(ISO 8601) |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
