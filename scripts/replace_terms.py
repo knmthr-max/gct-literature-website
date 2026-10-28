@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""和訳の誤った表記を、機械的に置換する(DBの ai_title_ja / ai_summary_ja / ai_abstract_ja と、サイトの title_ja / summary_ja / abstract_ja)。
+"""和訳の誤った表記を、機械的に置換する(DBの ai_title_ja / ai_summary_ja / ai_abstract_ja と、サイトの title_ja / summary_ja / abstract_ja / relevance_note)。
 
 用語集(terminology_ja.md)の「避ける訳」に入れた表記を、標準の訳に直すときに使う。置換は単純な文字列の置き換え。
 既定はドライラン(--apply なしでは何も書かない)。--backup に、変えた行の元の値を JSONL で保存する(元に戻せる)。
@@ -21,7 +21,7 @@ from gct_db import existing_shard_paths  # noqa: E402
 import papers_store  # noqa: E402
 
 DB_FIELDS = ("ai_title_ja", "ai_summary_ja", "ai_abstract_ja")
-SITE_FIELDS = ("title_ja", "summary_ja", "abstract_ja")
+SITE_FIELDS = ("title_ja", "summary_ja", "abstract_ja", "relevance_note")
 
 
 def apply_pairs(text, pairs):
