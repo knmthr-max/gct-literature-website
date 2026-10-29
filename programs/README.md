@@ -16,7 +16,7 @@ The parts that the live workflow still uses:
 
 | Used by | What |
 |---|---|
-| `../scripts/process_batch.py`, `../scripts/check_terminology.py`, `../scripts/extract_term_candidates.py` | `literature_pipeline/glossary.py` (terminology glossary parser) |
+| `../scripts/process_batch.py`, `../scripts/check_terminology.py`, `../scripts/portal_status.py` | `literature_pipeline/glossary.py` (terminology glossary parser) |
 | `../scripts/backfill_jif.py`, `../scripts/match_jif.py` | `JIFMatcher` in `literature_pipeline/pipeline.py` |
 | `../scripts/jif_reference_add.py` (portal workflow 5) | `literature_pipeline/jif_reference_cleaner.py` |
 | `../scripts/review_relevance.py` | modelled on the `step1` / `approve` two-stage gate of `pipeline.py` |
