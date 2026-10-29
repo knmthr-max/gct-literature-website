@@ -11,7 +11,7 @@
 
 複数年のデータがある場合は --reference を複数回指定する。
 
-マッチングは programs/literature_pipeline/pipeline.py の JIFMatcher をそのまま
+マッチングは programs/literature_pipeline/jif_matcher.py の JIFMatcher をそのまま
 再利用する(ISSN/eISSN+年 → 誌名/略称(正規化)+年 の順でフォールバック)。
 papers.json にはISSNを保持していないため、実際には誌名(PubMed略称)フォール
 バックのみで照合される。参照TSVに当該誌・当該年のデータが無い場合は
@@ -30,7 +30,7 @@ PIPELINE_DIR = ROOT / "programs" / "literature_pipeline"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
 
-from pipeline import JIFMatcher, jif_tier  # noqa: E402
+from jif_matcher import JIFMatcher, jif_tier  # noqa: E402
 import papers_store  # noqa: E402
 
 AUDIT_HEADER = (

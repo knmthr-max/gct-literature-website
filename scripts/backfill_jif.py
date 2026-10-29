@@ -6,7 +6,7 @@
      照合の根拠(jif_match_status / jif_reference_version / jif_matched_at)
   2. 公開済みの data/papers.json -- jif_tier のみ(実数値のJIFは一切書かない)
 
-照合は programs/literature_pipeline/pipeline.py の JIFMatcher をそのまま使う
+照合は programs/literature_pipeline/jif_matcher.py の JIFMatcher をそのまま使う
 (ISSN/eISSN+発行年 → 誌名/略称+発行年)。**発行年と同じ年のJIFしか使わない**ため、
 参照TSVに新しい年(例: 2024年版)を足すたびに、その年に発行された過去の文献が新たに埋まる。
 DBにはISSNがあるので papers.json 単独の match_jif.py より照合精度が高い。
@@ -55,7 +55,7 @@ for _path in (SCRIPTS_DIR, PIPELINE_DIR):
 
 from gct_db import connect, existing_shard_paths, jif_reference_files  # noqa: E402
 import papers_store  # noqa: E402
-from pipeline import JIFMatcher, jif_tier, normalize_title, title_keys  # noqa: E402
+from jif_matcher import JIFMatcher, jif_tier, normalize_title, title_keys  # noqa: E402
 
 PAPERS_PATH = ROOT / "data" / "papers"
 KNOWN_TIERS = {"low", "moderate", "high", "very-high"}

@@ -40,22 +40,21 @@ scripts/            … データ処理・検証のスクリプト(一覧と使�
 - 言語判定は `<body data-lang="en">` 属性で行う。`en/index.html` は `data-root="../"` も併せて指定し、1階層上の `assets/`・`data/` を参照する
 - `site.json` は `title`/`description`/`notice`(英語)と `title_ja`/`description_ja`/`notice_ja`(日本語)を両方持つ。機械翻訳ではなく、GCT領域の文脈を踏まえて人(Claude)が直接執筆する方針
 
-## `programs/` — 本来のデータ処理パイプライン(移植済み)
+## `programs/` — 共有モジュールとテスト
 
-`scripts/import_medline.py` はこのサイト単体で使える簡易版インポータですが、`programs/` 配下にはより本格的な、人によるレビューを挟む処理パイプラインが移植されています(元は別ワークスペースで運用されていたもの):
+`scripts/` のデータ処理が使う共有モジュールと、回帰テストを置いています(`python3 -m unittest discover -s programs/tests`)。
 
 ```
 programs/
-  README.md, VERSIONS.md    … プログラム一覧と版情報
-  pubmed_cleaner/            … PubMed MEDLINE textをMH/OT保持TSVへ変換
-  literature_pipeline/       … PubMed取り込み→JIF照合→Claude分類→人によるレビュー→マスター昇格
-  literature_site/           … 承認済みマスターTSVから公開用TSV・検索indexを生成
-  tests/                     … 上記プログラムの回帰テスト(`python3 -m unittest discover -s programs/tests`)
+  README.md, VERSIONS.md    … 一覧と版情報
+  pubmed_cleaner/            … MEDLINE テキストのパーサー(scripts/ingest_historical.py が使う)
+  literature_pipeline/       … JIF の参照データ変換(jif_reference_cleaner.py)・照合(jif_matcher.py)、用語集のパーサー(glossary.py)
+  tests/                     … 上記と scripts/ の回帰テスト
 ```
 
-`literature_pipeline/pipeline.py` は `--claude` オプション付きでローカルの `claude` CLI を呼び出し、文献の分類・要約下書きを行い、`approve` ステップで人が承認したものだけを `data/master/literature/` に昇格させる設計です(現時点ではこのリポジトリの `data/papers.json` とは連携していません — 将来の統合候補)。
+最初に作った TSV ベースのパイプライン(候補TSV → マスターTSV → UMIN SQUARE 向けTSVサイト)は、本番で使わなかったため **2026-10 に削除しました**(git の履歴に残っています。`programs/README.md`)。現行の流れは、下の「データフロー」と `docs/architecture/current_architecture.md` です。
 
-**非公開データとの接続に注意:** `jif_reference_cleaner.py` はJournal Impact Factor(JCR)のライセンスデータを扱うプログラムですが、そのデータ自体(`data/reference/jif/`)は著作権上**このリポジトリには含めていません**。ローカルで運用する場合は、ライセンスされた別データを別途用意してください。
+**非公開データとの接続に注意:** JCR のJournal Impact Factor のライセンスデータ(`data/reference/jif/`)は、著作権上**このリポジトリには含めていません**。参照データの追加と遡及は、非公開リポジトリの GitHub Actions で行います。
 
 設計の詳細・データ定義は [`docs/`](docs/) を参照。
 
