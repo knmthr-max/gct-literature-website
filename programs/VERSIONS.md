@@ -6,6 +6,8 @@ library and are also regression-tested with the locally available Python
 
 ## Maintained programs
 
+Only `jif_reference_cleaner.py` and the shared parts of `literature_pipeline` (`glossary.py`, `JIFMatcher`) are used by the live workflow; see `README.md`. The scripts in `../scripts/` are not versioned here.
+
 | Program | Version | Entry point | Purpose |
 |---|---:|---|---|
 | PubMed Cleaner | `3.0.0` | `pubmed_cleaner/pubmed_cleaner.py` | Preserve expanded PubMed fields including all MH and OT values in TSV. |

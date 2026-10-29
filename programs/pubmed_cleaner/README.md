@@ -1,5 +1,7 @@
 # PubMed Cleaner
 
+> Not used by the live workflow (2026-10). See `../README.md`.
+
 Version: `3.0.0`
 
 Converts one PubMed MEDLINE text export into a UTF-8 TSV without dropping

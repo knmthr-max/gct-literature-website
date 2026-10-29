@@ -1,3 +1,5 @@
+> **旧世代の文書(2026-10)。** TSVパイプライン(`programs/`)の定義です。本番では使っていません。現行は `site_papers_v1.md` と `sqlite_papers_db.md`。
+
 # Literature TSV data dictionary v1.0.0
 
 ## Repeated PubMed fields
