@@ -39,6 +39,6 @@ PubMed の MEDLINE テキスト(年別。data/raw/historical_bulk/)
 - `deploy.yml`(main への push): 検証 → 検索データ生成 → gh-pages に公開。
 - 本番に反映されるのは、PR をマージしたときだけです。
 
-## 旧世代(TSV パイプライン)
+## 旧世代(TSV パイプライン。削除済み)
 
-`programs/` の TSV ベースのパイプライン(PubMed クリーナー → 候補TSV → マスターTSV → UMIN SQUARE 向けのTSVサイト)は、本番では使っていません(設計の記録: `tsv_site_architecture.md`)。一部だけが現役です(用語集のパーサー、JIFの照合、JCR CSV の変換)。詳細は `programs/README.md`。
+最初に設計した TSV ベースのパイプライン(候補TSV → マスターTSV → UMIN SQUARE 向けのTSVサイト)は、本番では一度も使わず、2026-10 に削除しました(git の履歴に残っています。採否の記録: `docs/decisions/2026-07-20_tsv_review_gated_site.md`)。`programs/` に残っているのは、現行のスクリプトが使う共有モジュール(MEDLINE のパーサー、JIF の変換と照合、用語集のパーサー)だけです(`programs/README.md`)。

@@ -83,7 +83,7 @@ python3 scripts/import_medline.py data/raw/2026-09-07-import.nbib
 
 `summary_en`/`summary_ja` がどちらも空の場合、サイトには「要約: 準備中」(英語ページでは "Summary: not yet available")と表示され、要約が存在しないのではなく未整備であることが分かるようになっています。
 
-`jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`programs/literature_pipeline/pipeline.py` の `jif_tier()` と同じ定義。
+`jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`programs/literature_pipeline/jif_matcher.py` の `jif_tier()` と同じ定義。
 
 ## JIF(インパクトファクター)の tier
 

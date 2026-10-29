@@ -1,8 +1,12 @@
-# Literature Update Pipeline
+# JIF reference tools and glossary parser
 
-> Of this program, the live workflow uses `glossary.py`, `JIFMatcher` in `pipeline.py` and `jif_reference_cleaner.py` (see `../README.md`). The Step 1 / Step 2 workflow below is not the live workflow (2026-10).
+Contents (2026-10; the first-generation Step 1 / Step 2 TSV workflow that used to live here was removed, see git history):
 
-Version: `1.1.0`
+| File | Role |
+|---|---|
+| `jif_reference_cleaner.py` (`1.2.1`) | Convert licensed JCR CSV exports into annual JIF reference TSVs (run by `scripts/jif_reference_add.py`) |
+| `jif_matcher.py` | `JIFMatcher` and `jif_tier()`: exact-year matching of a journal to the reference, and the JIF tier (used by `scripts/backfill_jif.py`, `scripts/match_jif.py`, `scripts/jif_reference_add.py`) |
+| `glossary.py` | Parser for the Japanese terminology glossary (used by `scripts/process_batch.py`, `scripts/check_terminology.py`, `scripts/portal_status.py`) |
 
 ## Annual JIF reference preparation
 
@@ -49,11 +53,11 @@ never overwritten. The generated reference retains only the fields defined in
 `docs/data_dictionary/jif_reference_v1.md`; the raw CSV remains the source
 record and is not modified.
 
-## papers.json への反映(`scripts/match_jif.py`)
+## 公開データへの反映(`scripts/match_jif.py`・`scripts/backfill_jif.py`)
 
-現在公開中のサイトは `step1`/`step2` のTSVマスター方式ではなく、`data/papers.json`
-を直接編集する軽量な方式で運用している。JIFの反映もそれに合わせ、`JIFMatcher`と
-`jif_tier()` だけを再利用する `scripts/match_jif.py` を使う:
+照合は `jif_matcher.py`(`JIFMatcher`・`jif_tier()`)が行う。公開データ(`data/papers/`)だけを対象にする簡易版が
+`scripts/match_jif.py`、非公開DBと公開データの両方に遡及するのが `scripts/backfill_jif.py`(非公開リポジトリの
+GitHub Actions「2 JIF遡及」)。
 
 ```bash
 python3 scripts/match_jif.py \
@@ -61,7 +65,7 @@ python3 scripts/match_jif.py \
   --audit-output ../gct-literature-data/data/processed/jif_match_audit/2026-09-24.csv
 ```
 
-複数の年次参照TSVがある場合は `--reference` を繰り返し指定する。`papers.json` の
+複数の年次参照TSVがある場合は `--reference` を繰り返し指定する。公開データの
 各エントリを `journal`(PubMed略称)+`year` で参照TSVに照合し(ISSNは
 `papers.json` に保持していないため誌名フォールバックのみで照合される)、完全一致
 (`jif_match_status == exact`)の場合のみ実測JIFから `jif_tier` を計算して書き戻す。
@@ -72,50 +76,3 @@ python3 scripts/match_jif.py \
 JCRのカバー範囲(カテゴリ・年)を追加で取得した場合は、`jif_reference_cleaner.py`
 で参照TSVを追加生成したうえで、この `match_jif.py` を再実行すれば
 `"unknown"` だったエントリも含めて全件が再照合される。
-
-The pipeline implements the two human-gated update stages.
-
-## Step 1
-
-```bash
-python3 programs/literature_pipeline/pipeline.py step1 \
-  --raw-dir data/raw/pubmed_alerts \
-  --jif-reference data/reference/jif/jcr_jif_reference_2024_v2026.07.0.tsv \
-  --jif-reference data/reference/jif/jcr_jif_reference_2025_v2026.07.0.tsv \
-  --claude
-```
-
-This parses every PubMed text file, deduplicates by PMID, loads each specified
-annual Reference and performs exact-year JIF matching, optionally invokes Claude Code in five-record structured batches,
-and writes a candidate TSV, anomaly TSV, review HTML, and run log.
-
-When `--master` is omitted, the latest version under
-`data/master/literature/` is compared automatically. Claude results are checked
-again in Python for summary length, missing-Abstract sentinels, controlled
-vocabulary, `Other`, and clear PubMed publication-type conflicts. Failed rows
-remain anomalies and cannot be bulk-approved.
-
-Omit `--jif-reference` until a licensed annual reference exists. Omit
-`--claude` for a deterministic dry run that does not consume Claude usage.
-
-## Approval
-
-```bash
-python3 programs/literature_pipeline/pipeline.py approve CANDIDATE.tsv \
-  --output DECISIONS.tsv \
-  --reviewer "Reviewer name" \
-  --approve-all-valid
-```
-
-Rows with a non-`ok` quality status remain `needs_edit`. An optional exception
-TSV can override individual PMIDs with `approved`, `rejected`, or `needs_edit`.
-
-## Step 2
-
-```bash
-python3 programs/literature_pipeline/pipeline.py step2 CANDIDATE.tsv DECISIONS.tsv
-```
-
-Step 2 writes a new versioned master. It never overwrites an earlier master.
-The exact-JIF export is local-only under `data/processed/private_jif_export/`
-and is not copied into the website build automatically.

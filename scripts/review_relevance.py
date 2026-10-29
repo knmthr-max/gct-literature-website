@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """data/papers.json の各文献がGCT(胚細胞腫瘍)に本当に関連しているかをレビューする。
 
-既存の programs/literature_pipeline/pipeline.py の step1/approve と同じ「AIは提案
+旧TSVパイプライン(2026-10 に削除)の step1/approve と同じ「AIは提案
 のみ、採否は人間が承認してから反映」という二段階ゲートを踏襲する:
 
   1. propose  — 未レビューの文献をClaude Code CLIでバッチ判定し、

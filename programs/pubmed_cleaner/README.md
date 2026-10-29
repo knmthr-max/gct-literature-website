@@ -1,6 +1,6 @@
 # PubMed Cleaner
 
-> Not used by the live workflow (2026-10). See `../README.md`.
+> The live workflow uses this program as a MEDLINE parser (`scripts/ingest_historical.py`); its TSV output is not used (2026-10). See `../README.md`.
 
 Version: `3.0.0`
 
@@ -30,5 +30,5 @@ python3 programs/pubmed_cleaner/pubmed_cleaner.py \
   --output data/processed/cleaned_pubmed/20260621cleaned_pubmed_v3.tsv
 ```
 
-The two-stage operational workflow normally calls this parser through
-`programs/literature_pipeline/pipeline.py`.
+The live workflow calls this parser as a library from `scripts/ingest_historical.py`
+(the TSV pipeline that used to call it was removed in 2026-10).

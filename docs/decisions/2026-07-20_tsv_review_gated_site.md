@@ -1,3 +1,5 @@
+> **追記(2026-10-29):** この設計は本番で採用されず、TSV パイプライン一式(`programs/literature_pipeline/pipeline.py` と `programs/literature_site/` など)を削除した。現行の構成は `docs/architecture/current_architecture.md`。以下は当時の記録。
+
 # Decision: review-gated TSV literature website
 
 - Date: 2026-07-20
