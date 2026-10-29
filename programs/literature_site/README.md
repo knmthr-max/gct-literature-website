@@ -1,5 +1,7 @@
 # Literature Site Builder
 
+> Not used by the live website (2026-10): the live site is the GitHub Pages site in the repository root. See `../README.md`.
+
 Version: `3.0.0`
 
 Builds a static UMIN SQUARE-compatible website from an approved, versioned
