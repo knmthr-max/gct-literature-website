@@ -1,5 +1,13 @@
 # Literature website update workflow v1.1.0
 
+> **Not the live workflow (2026-10).** This describes the first-generation TSV
+> pipeline (`programs/`), which was never run in production. The live site is
+> updated through the SQLite working database, `scripts/process_batch.py`, the
+> publish review and a pull request to this repository: see
+> `data/README.md`, `docs/architecture/current_architecture.md` and
+> `docs/operations/attributes_and_screening.md`. This document is kept for the
+> TSV pipeline.
+
 ## Before Step 1
 
 1. Save new PubMed MEDLINE exports under `data/raw/pubmed_alerts/<year>/` with a

@@ -1,5 +1,7 @@
 # Literature Update Pipeline
 
+> Of this program, the live workflow uses `glossary.py`, `JIFMatcher` in `pipeline.py` and `jif_reference_cleaner.py` (see `../README.md`). The Step 1 / Step 2 workflow below is not the live workflow (2026-10).
+
 Version: `1.1.0`
 
 ## Annual JIF reference preparation

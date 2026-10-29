@@ -1,5 +1,9 @@
 # TSV-backed literature site architecture v1.0.0
 
+> **Design record, not the current architecture (2026-10).** This TSV-backed
+> design for UMIN SQUARE was not adopted for the live site. The current
+> architecture is in `current_architecture.md`.
+
 ```text
 PubMed raw txt
   -> Cleaner 3.0.0 (loss-aware PubMed TSV rows)

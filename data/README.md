@@ -1,24 +1,41 @@
 # データの追加・更新方法
 
-このディレクトリがサイトの**唯一のデータソース**です。文献データは `data/papers/`(年代別の `papers_<年代>.json` と `index.json`)にあり、スクリプトは `scripts/papers_store.py` で読み書きします。以下で `papers.json` と書いている箇所は、この `data/papers/` のことです。検索データ(`search/`・`pagefind/`)は、デプロイ時に自動で生成されます。
+このディレクトリがサイトの**唯一のデータソース**です。文献データは `data/papers/`(年代別の `papers_<年代>.json` と、その一覧 `index.json`)にあり、スクリプトは `scripts/papers_store.py` で読み書きします。サイト情報は `site.json`。検索データ(`search/`・`pagefind/`)は、デプロイ時に自動で生成され、リポジトリには含まれません。
 
-## 文献を追加する(推奨: PubMedデータから自動取り込み)
+全体の構成は `docs/architecture/current_architecture.md`、スクリプトの使い方は `docs/operations/attributes_and_screening.md` を参照してください。
 
-1. PubMed で文献を選び、**Save → Format: PubMed** でエクスポートする(MEDLINE形式)。ファイルの拡張子は `.nbib` でも `.txt` でも構いません(PubMed形式の表示をコピーして .txt に貼り付けたものでもOK)。スクリプトは拡張子ではなく中身で判断します
-2. そのファイルを `data/raw/` に置く(例: `data/raw/2026-09-07-import.nbib`)
-3. 取り込みスクリプトを実行する:
+## 論文が公開されるまでの流れ(現行)
+
+大量の文献は、非公開リポジトリ `gct-literature-data` のSQLite(年代ごとに分割した `data/master/gct_literature_<年代>.db`)で処理し、公開してよいものだけをこのディレクトリに反映します。`data/papers/` を直接編集する必要はありません。
+
+1. **取り込み**(AIなし): `scripts/ingest_historical.py` が、MEDLINE形式のテキスト(`gct-literature-data/data/raw/historical_bulk/`)を読み、PMIDで重複を除いてDBに登録します(`relevance_status` 未設定=未判定)。何度実行しても安全です。
+2. **判定・和訳**(AI): `scripts/process_batch.py --claude` が、未判定の論文を発行年の新しい順に `--batch-size` 件だけ取り出し、GCTとの関連性の判定、日英の要約、題名と抄録の和訳を1回の呼び出しで作ります。実行のたびに次のバッチへ進むだけです。既定のモデルは Haiku 5.5、effort は low。和訳は用語集(`gct-literature-data/data/reference/terminology/terminology_ja.md`)に従います。
+   - 判定は `relevance_status` に反映されます: relevant → `kept`、uncertain → `needs_review`、not_relevant と、脳・脊髄原発の胚細胞腫瘍(`cns_gct`)→ `excluded`。誤りは、DBの `relevance_status`/`relevance_note` を直接書き換えれば、いつでも直せます(除外も復元できます)。
+   - タグ(研究デザイン)は、PubMed の文献種別から決定的に付けます。決まらないものは `scripts/classify_design.py`(AI)で判定します。
+   - `--refill-missing-translations`(抜けた和訳の補完)、`--retranslate`(再和訳。`sync_site_translations.py` でサイトへ反映)、`--pmids`(指定した論文だけ)も使えます。
+3. **公開前レビュー**: `kept` は「GCTに関連する」という意味にすぎず、AIが書いた和訳・要約をそのまま公開してよいかは別の判断です。次のいずれかで確認し、承認した分だけを公開します。
+   - 少数ずつ確認する: `scripts/export_publish_review.py` が確認用のHTMLと `decisions_<run_id>.tsv`(`decision` 列は `approve` で初期化)を作ります。直したい行は `reject` か `needs_edit` にします。空欄とそれ以外の値は公開されません(fail-closed)。
+   - 年の範囲ごとに一括で公開する: `scripts/bulk_publish_decisions.py` が、候補(`kept`・未公開・和訳が揃ったもの)を全件 `approve` にした decisions を作ります(方針: `needs_review` だけ人が確認する)。
+4. **公開反映**: `scripts/publish_to_site.py --decisions <decisions.tsv> --db-dir ...` が、`approve` の行だけを `data/papers/` にエントリとして追加し(既存のPMIDは重複追加しない)、DB側に `published_to_site` などを記録します。実際の運用では、非公開リポジトリの GitHub Actions「3 公開前レビュー作成」「4 公開反映」(`gct-literature-data/portal/README.md`)が、この2つを実行し、このリポジトリへの **PR を作ります**。
+5. **PR をマージ**すると、`deploy.yml` が検索データを生成して GitHub Pages に公開します。**本番に反映されるのは、PR をマージしたときだけ**です。マージ前に `validate.yml` が緑であることを確認してください。
+
+公開後に直すもの(研究デザインのタグ、和訳の表記、属性、CNS 除外)は、`docs/operations/attributes_and_screening.md` の手順で、DBとこのディレクトリの両方を直します。
+
+## 文献を追加するその他の方法
+
+小規模・手動の用途で、上の流れを通さずに追加する方法もあります。この場合、AIの判定・和訳・公開前レビューを通らないため、`relevance_status`・和訳・属性は自分で用意してください。
+
+### PubMed のファイルから直接取り込む
+PubMed で **Save → Format: PubMed**(MEDLINE形式。拡張子は `.nbib` でも `.txt` でも可)でエクスポートし、`data/raw/` に置いて実行します。
 
 ```sh
 python3 scripts/import_medline.py data/raw/2026-09-07-import.nbib
-# 複数ファイルをまとめて取り込むこともできます
-python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 ```
 
-タイトル・著者・掲載誌・年・PMID・DOI・抄録・タグ(下記の固定7分類のいずれか)が自動で `papers.json` に追記されます。PMIDで重複判定するので、同じファイルを二度実行しても二重登録にはなりません。取り込み後、`title_ja`(日本語タイトル)や `summary_ja`(日本語要約)、`abstract_ja`(日本語抄録)を手で書き足すと、サイトでは日本語が優先表示されます。
+題名・著者・掲載誌・年・PMID・DOI・抄録・タグ(研究デザイン)が自動で追記されます。PMIDで重複を判定するので、同じファイルを二度実行しても二重登録になりません。手で書いた `title_ja` などは上書きされません。
 
-## 文献を手動で追加する
-
-`papers.json` の配列にエントリを1件追記します。
+### 手動で1件追加する
+`data/papers/` の該当する年代のファイルの配列に、エントリを1件追記します(`papers_store.py` で読み書きすると、年代の振り分けが正しくなります)。
 
 ```json
 {
@@ -39,7 +56,7 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 }
 ```
 
-### フィールド仕様
+## エントリのフィールド仕様
 
 | フィールド | 必須 | 説明 |
 |---|---|---|
@@ -59,75 +76,22 @@ python3 scripts/import_medline.py data/raw/*.nbib data/raw/*.txt
 | `abstract` | – | 英語の全文抄録。サイトでは折りたたみ表示される |
 | `abstract_ja` | – | 日本語訳の全文抄録。収載文献は基本的に英語が原文であるため、日本語ページでは訳文(「抄録」)と英語原文(「抄録原文(英語)」)を**両方**、別々の折りたたみで常に参照できる。訳が無い場合は「抄録(英語)」に原文のみ表示する |
 | `jif_tier` | – | Journal Impact Factorの階層(`low`/`moderate`/`high`/`very-high`/`unknown`)。実数値は非公開リポジトリ(`gct-literature-data`)にのみ保持し、ここには入れない。`unknown` は「JCR参照データに該当誌・該当年のデータが無く判定できない」ことを明示する値で、フィールド自体を省略する(未整備で表示されないのか、判定不能なのか区別できない)よりも意図的にこちらを使う。`programs/literature_pipeline/README.md` の `scripts/match_jif.py` で自動生成する |
-| `relevance_status` | – | GCT(胚細胞腫瘍)関連性レビューの結果。`kept`(掲載継続)/`excluded`(除外。脳・脊髄原発のGCTを含む)/`needs_review`(要確認)のいずれか。**フィールド未設定は`kept`と同じ扱い**(サイトは`excluded`のときだけ非表示にする)。`scripts/review_relevance.py` で生成・反映する。採否は後からdecisions TSVを作り直してAI判定・人間の確認を経ればいつでも修正できる |
+| `relevance_status` | – | GCT(胚細胞腫瘍)関連性レビューの結果。`kept`(掲載継続)/`excluded`(除外。脳・脊髄原発のGCTを含む)/`needs_review`(要確認)のいずれか。**フィールド未設定は`kept`と同じ扱い**(サイトは`excluded`のときだけ非表示にする)。`scripts/process_batch.py` の判定が反映される(直接の書き換えもできる)。採否は後からいつでも修正できる |
 | `relevance_note` | – | `relevance_status` の判断理由(AIの判定理由、または人間が上書きした場合はそのメモ) |
 | `relevance_reviewed_at` | – | 関連性レビューを反映した日時(ISO 8601) |
 | `added_at` | – | 掲載日 (`YYYY-MM-DD`)。新着表示に使用 |
 
 `summary_en`/`summary_ja` がどちらも空の場合、サイトには「要約: 準備中」(英語ページでは "Summary: not yet available")と表示され、要約が存在しないのではなく未整備であることが分かるようになっています。
 
-`jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`gct-literature-data/programs/literature_pipeline/pipeline.py` の `jif_tier()` と同じ定義。
+`jif_tier` の境界値: low(<1) / moderate(1〜3未満) / high(3〜5未満) / very-high(5以上)。`programs/literature_pipeline/pipeline.py` の `jif_tier()` と同じ定義。
 
-## GCT関連性レビュー(掲載文献の採否を後から修正する)
+## JIF(インパクトファクター)の tier
 
-文献は今後も継続的に追加していく方針のため、掲載後に「実はGCTとあまり関連が無い」と分かった文献を
-後から除外(またはいったん除外したものを復活)できるよう、`scripts/review_relevance.py` に二段階の
-AIレビューフローを用意しています(詳細な使い方はスクリプト冒頭のdocstring参照):
+公開データには、実数値ではなく tier(`low`/`moderate`/`high`/`very-high`/`unknown`)だけを持たせます。実数値とJCRの参照データは、非公開リポジトリにだけ置きます。参照データの追加と、過去の論文への遡及は、非公開リポジトリの GitHub Actions「5 JIF参照データ追加」「2 JIF遡及」で行います(`scripts/jif_reference_add.py`、`scripts/backfill_jif.py`)。`scripts/match_jif.py` は、`data/papers/` だけを対象にした簡易版です。1996年以前の論文は、JIFのデータが存在しないため、保留(pending)として扱います。
 
-1. `propose --claude` — `relevance_status` 未設定(＝未レビュー)の文献をClaude Code CLIでバッチ判定し、
-   非公開リポジトリ側に一覧レビューHTMLと `decisions_<run_id>.tsv` を出力する(AIは提案のみ)
-2. 人間が `decisions_<run_id>.tsv` の `decision` 列(`keep`/`exclude`/`needs_review`)を確認・修正する
-3. `apply` — 承認済みdecisionsを `papers.json` の `relevance_status`/`relevance_note` に反映する
+## 以前の関連性レビュー(`review_relevance.py`)
 
-`relevance_status` が `excluded` の文献だけがサイトの一覧から除外されます。それ以外(未設定/`kept`/
-`needs_review`)はすべて表示されるため、レビューが済むまで文献が勝手に消えることはありません。採否は
-`decision` 列を書き換えて `apply` を再実行すればいつでも修正できます。新規追加分だけを対象にしたい
-場合は `propose` をそのまま実行すれば(`--all` を付けない限り)未レビューの文献だけが対象になります。
-
-## 過去文献バックログの取り込み(SQLite、大規模インポート用)
-
-Google Driveに保存されている1929〜2026年の一括検索結果(年別MEDLINEテキスト、数千件規模)を、
-少しずつ・トークン消費を自分で制御しながら取り込むための別経路です。件数が多いため
-`papers.json` を直接編集する方式ではなく、非公開リポジトリ側のSQLite
-(`data/master/gct_literature_<年代>.db`、1年代=10年ごとに分割)を作業用の正本として使います。
-1ファイルに一本化しないのは、Git LFSがこのサンドボックス環境ではネットワークポリシーにより
-使えず(`lfs.github.com`への通信がブロックされる)、GitHubの1ファイルあたり100MB上限に
-将来引っかからないようにするためです。詳細な使い方は各スクリプトの冒頭docstring参照。
-
-1. `scripts/ingest_historical.py` — MEDLINEテキストをパースし、PMIDで重複排除(ファイル間・
-   既存`papers.json`との両方、かつ全年代シャードを横断)して、発行年に応じた年代別DBファイルに
-   `relevance_status`未設定(pending)で登録する。AI呼び出しは一切行わない、何度再実行しても
-   安全な機械的処理
-2. `scripts/process_batch.py --claude` — 実行するたびに、pending中の文献を**発行年が新しい順に
-   (年代シャードをまたいで)`--batch-size`件(既定25件)だけ**取り出し、関連性判定(relevant/uncertain/not_relevant)、
-   和英要約、タイトルの日本語訳(`title_ja`)、抄録全文の日本語訳(`abstract_ja`)をまとめて1回のAI
-   呼び出しで生成する。`title_ja`はサイトの日本語モードで見出しとして使われる(`summary_ja`とは
-   別の役割)ため必須。タグは既存の`import_medline.py`の`classify()`を再利用し決定的に付与する
-   (AI呼び出し不要)。実行するたびに次のバッチへ進むだけで、それ以上は何もしない、つまりこの
-   コマンドを実行すること自体が「Go」の合図になる
-3. AIの判定はそのまま`relevance_status`(`kept`/`needs_review`/`excluded`)へ反映される
-   (65件のときのような別途decisions TSV承認は、この規模では非現実的なため省略)。
-   バッチ実行後に`uncertain`/`not_relevant`だった項目の一覧が表示されるので、それだけ目を通し、
-   誤りがあれば`sqlite3`で該当`pmid`の`relevance_status`/`relevance_note`を直接書き換えれば
-   いつでも修正できる(65件の運用と同じ「除外は常に後から復元可能」という方針を踏襲)
-4. `relevance_status='kept'`は「AIがGCT関連と判定した」という意味に過ぎず、AIが書いた
-   `summary_en`/`summary_ja`/`title_ja`/`abstract_ja`がそのまま公開して良い品質かどうかは
-   別の判断が必要。そのための人間レビュー→公開ゲートが以下の2ステージ:
-   - `scripts/export_publish_review.py --db-dir ... --review-dir ... --batch-size 25` —
-     `relevance_status='kept'`かつ未公開・未レビューの文献を発行年が新しい順に`--batch-size`件
-     取り出し、`review_<run_id>.html`(内容を確認用)と`decisions_<run_id>.tsv`
-     (`decision`列が`approve`で初期化済み)を出力する。何も公開しない、読み取り専用の処理
-   - `decisions_<run_id>.tsv`の`decision`列を確認・修正する(問題なければ`approve`のまま、
-     出さない方がよければ`reject`、AI生成内容を直したい/直してほしいものは`needs_edit`)。
-     空欄や`needs_edit`を含めそれ以外の値は公開されない(fail-closed)
-   - `scripts/publish_to_site.py --decisions <decisions_tsv> --db-dir ...` — `approve`の行だけ
-     `papers.json`にエントリを追加し(既存PMIDは重複追加しない)、対応するSQLite行に
-     `human_review_status`/`published_to_site`/`published_at`を書き込む。`reject`/`needs_edit`は
-     `human_review_status`に記録されるだけで`papers.json`には反映されない(DB側はいつでも
-     `sqlite3`で修正して再実行可能)
-
-   3ステージ目の実行(実際にバックログを`papers.json`へ反映していくこと)は現状ではまだ
-   小規模な検証のみで、本格的な運用開始は別途判断が必要
+最初に公開した65件のために作った、`data/papers/` の `relevance_status` を後から直す二段階の流れ(`propose --claude` → 人が decisions TSV を確認 → `apply`)です。現在の大量処理では使いません(関連性の判定は `process_batch.py` が行い、`needs_review` だけを人が確認します)。`relevance_status` が `excluded` の論文だけが一覧から除外され、それ以外(未設定・`kept`・`needs_review`)はすべて表示される、という表示のルールは、現在も同じです。
 
 ## サイト情報を変える
 
@@ -135,4 +99,4 @@ Google Driveに保存されている1929〜2026年の一括検索結果(年別ME
 
 ## 注意
 
-- JSON の文法エラー(カンマ忘れ等)があるとサイトにデータが表示されなくなります。push 前にローカルで確認するか、`python3 -m json.tool data/papers.json` でチェックしてください(CI でも自動チェックされます)。
+- JSON の文法エラー(カンマ忘れ等)があるとサイトにデータが表示されなくなります。PR を出す前に、`python3 -m unittest discover -s programs/tests` を実行してください。CI(`validate.yml`)でも、JSON の文法・重複ID・必須項目・検索と絞り込みの動作が自動で検証されます。
