@@ -1,39 +1,28 @@
 from __future__ import annotations
 
-import importlib.util
-import argparse
 import csv
+import importlib.util
 import tempfile
 import unittest
 from pathlib import Path
 
-
 PROGRAMS = Path(__file__).resolve().parents[1]
 
 
-def load_pipeline():
-    path = PROGRAMS / "literature_pipeline" / "pipeline.py"
-    spec = importlib.util.spec_from_file_location("maintained_literature_pipeline", path)
+def load(name: str):
+    path = PROGRAMS / "literature_pipeline" / f"{name}.py"
+    spec = importlib.util.spec_from_file_location(f"maintained_{name}", path)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     spec.loader.exec_module(module)
     return module
 
 
-def load_jif_reference_cleaner():
-    path = PROGRAMS / "literature_pipeline" / "jif_reference_cleaner.py"
-    spec = importlib.util.spec_from_file_location("maintained_jif_reference_cleaner", path)
-    module = importlib.util.module_from_spec(spec)
-    assert spec.loader is not None
-    spec.loader.exec_module(module)
-    return module
-
-
-class LiteraturePipelineTests(unittest.TestCase):
+class JifMatcherTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.pipeline = load_pipeline()
-        cls.jif_cleaner = load_jif_reference_cleaner()
+        cls.jif = load("jif_matcher")
+        cls.jif_cleaner = load("jif_reference_cleaner")
 
     def test_jcr_cleaner_collapses_category_duplicates_and_skips_footer(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -69,21 +58,6 @@ class LiteraturePipelineTests(unittest.TestCase):
         self.assertEqual(references, {})
         self.assertEqual(len(conflicts), 2)
 
-    def test_glossary_is_appended_to_the_claude_prompt_and_a_missing_one_is_an_error(self):
-        row = {"pmid": "1", "title": "A seminoma case", "abstract": "a"}
-        with tempfile.TemporaryDirectory() as temp_dir:
-            glossary = Path(temp_dir) / "terminology_ja.md"
-            glossary.write_text("| 英語 | 日本語 |\n|---|---|\n| Seminoma | セミノーマ |\n", encoding="utf-8")
-            try:
-                self.pipeline.set_glossary(glossary)
-                self.assertIn("セミノーマ", self.pipeline.claude_prompt([row]))
-                with self.assertRaises(SystemExit):
-                    self.pipeline.set_glossary(Path(temp_dir) / "missing.md")
-                self.pipeline.set_glossary(None)  # explicit --no-glossary
-                self.assertNotIn("セミノーマ", self.pipeline.claude_prompt([row]))
-            finally:
-                self.pipeline.set_glossary(None)
-
     def test_jcr_cleaner_treats_2_and_2_point_0_as_the_same_jif(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             first = Path(temp_dir) / "first.csv"
@@ -106,7 +80,7 @@ class LiteraturePipelineTests(unittest.TestCase):
                 "Test Journal\t1234-5678\t\t2025\t2026\t4.5\tJCR\t2026-v1\n",
                 encoding="utf-8",
             )
-            matcher = self.pipeline.JIFMatcher(reference)
+            matcher = self.jif.JIFMatcher(reference)
             exact = matcher.match({"issn": "1234-5678", "publication_year": "2025"})
             missing = matcher.match({"issn": "1234-5678", "publication_year": "2024"})
         self.assertEqual(exact["jif"], "4.5")
@@ -122,7 +96,7 @@ class LiteraturePipelineTests(unittest.TestCase):
             header = "journal_title\tissn\tjif_data_year\tjif\n"
             first.write_text(header + "Test Journal\t1234-5678\t2024\t4.0\n", encoding="utf-8")
             second.write_text(header + "Test Journal\t1234-5678\t2025\t5.0\n", encoding="utf-8")
-            matcher = self.pipeline.JIFMatcher([first, second])
+            matcher = self.jif.JIFMatcher([first, second])
             match_2024 = matcher.match({"issn": "1234-5678", "publication_year": "2024"})
             match_2025 = matcher.match({"issn": "1234-5678", "publication_year": "2025"})
         self.assertEqual(match_2024["jif"], "4.0")
@@ -136,7 +110,7 @@ class LiteraturePipelineTests(unittest.TestCase):
                 "Test Journal\t2234-943X\t2234-943X\t2025\t3.3\n",
                 encoding="utf-8",
             )
-            matcher = self.pipeline.JIFMatcher(reference)
+            matcher = self.jif.JIFMatcher(reference)
             result = matcher.match({"issn": "2234-943X", "publication_year": "2025"})
         self.assertEqual(result["jif_match_status"], "exact")
         self.assertEqual(result["jif"], "3.3")
@@ -148,9 +122,9 @@ class LiteraturePipelineTests(unittest.TestCase):
             (root / "onc.tsv").write_text(header + "Test Journal\t1234-5678\t2025\t4.0\tv1\n", encoding="utf-8")
             (root / "surg.tsv").write_text(header + "Test Journal\t1234-5678\t2025\t4.0\tv2\n", encoding="utf-8")
             (root / "odd.tsv").write_text(header + "Test Journal\t1234-5678\t2025\t4.5\tv3\n", encoding="utf-8")
-            agree = self.pipeline.JIFMatcher([root / "onc.tsv", root / "surg.tsv"]).match(
+            agree = self.jif.JIFMatcher([root / "onc.tsv", root / "surg.tsv"]).match(
                 {"issn": "1234-5678", "publication_year": "2025"})
-            conflict = self.pipeline.JIFMatcher([root / "onc.tsv", root / "odd.tsv"]).match(
+            conflict = self.jif.JIFMatcher([root / "onc.tsv", root / "odd.tsv"]).match(
                 {"issn": "1234-5678", "publication_year": "2025"})
         self.assertEqual(agree["jif_match_status"], "exact")
         self.assertEqual(agree["jif_reference_version"], "v2")
@@ -167,7 +141,7 @@ class LiteraturePipelineTests(unittest.TestCase):
                 "Urology Case Reports\t\t\t2020\t0.4\n",
                 encoding="utf-8",
             )
-            matcher = self.pipeline.JIFMatcher(reference)
+            matcher = self.jif.JIFMatcher(reference)
             def status(title, abbrev=""):
                 return matcher.match({"publication_year": "2020", "journal_title": title, "journal_abbrev": abbrev})
             self.assertEqual(status("The Journal of urology", "J Urol")["jif"], "5.9")
@@ -179,82 +153,14 @@ class LiteraturePipelineTests(unittest.TestCase):
             self.assertEqual(status("Urology case reports")["jif"], "0.4")
             self.assertEqual(status("Urologic oncology")["jif_match_status"], "journal_not_found")
 
-    def test_search_keywords_keep_mesh_and_author_terms(self):
-        result = self.pipeline.search_keywords({
-            "mesh_terms": '["Germ Cell Tumor","Humans"]',
-            "author_keywords": '["biomarker","Humans"]',
-        })
-        self.assertEqual(result, '["Germ Cell Tumor","Humans","biomarker"]')
-
     def test_jif_tiers_have_explicit_boundaries(self):
-        self.assertEqual(self.pipeline.jif_tier("0.9"), "low")
-        self.assertEqual(self.pipeline.jif_tier("1"), "moderate")
-        self.assertEqual(self.pipeline.jif_tier("2.99"), "moderate")
-        self.assertEqual(self.pipeline.jif_tier("3"), "high")
-        self.assertEqual(self.pipeline.jif_tier("4.99"), "high")
-        self.assertEqual(self.pipeline.jif_tier("5"), "very-high")
-        self.assertEqual(self.pipeline.jif_tier(""), "unknown")
-
-    def test_ai_validation_blocks_short_summaries_and_other_subtype(self):
-        problems = self.pipeline.validate_ai_result(
-            {"abstract": "A real abstract", "publication_types": '["Journal Article"]'},
-            {
-                "summary_ja": "短い要約", "summary_en": "Too short.", "type": "Clinical",
-                "subtype": "Other", "classification_basis": "abstract",
-            },
-        )
-        self.assertIn("summary_ja_length", problems)
-        self.assertIn("summary_en_length", problems)
-        self.assertIn("subtype_other_needs_review", problems)
-
-    def test_ai_validation_accepts_exact_missing_abstract_sentinel(self):
-        problems = self.pipeline.validate_ai_result(
-            {"abstract": "", "publication_types": '["Journal Article"]'},
-            {
-                "summary_ja": "Abstractなし", "summary_en": "No abstract available.",
-                "type": "Clinical", "subtype": "Clinical Study",
-                "classification_basis": "metadata_only",
-            },
-        )
-        self.assertEqual(problems, [])
-
-    def test_review_publication_type_conflict_is_not_bulk_approvable(self):
-        problems = self.pipeline.validate_ai_result(
-            {"abstract": "A", "publication_types": '["Review"]'},
-            {
-                "summary_ja": "あ" * 120, "summary_en": "word " * 60,
-                "type": "Clinical", "subtype": "Clinical Study",
-                "classification_basis": "abstract",
-            },
-        )
-        self.assertIn("publication_type_classification_conflict", problems)
-
-    def test_bulk_approval_accepts_only_quality_ok(self):
-        with tempfile.TemporaryDirectory() as temp_dir:
-            root = Path(temp_dir)
-            candidate = root / "candidate.tsv"
-            output = root / "decisions.tsv"
-            with candidate.open("w", encoding="utf-8", newline="") as target:
-                writer = csv.DictWriter(target, ["pmid", "quality_status"], delimiter="\t")
-                writer.writeheader()
-                writer.writerows([
-                    {"pmid": "1", "quality_status": "ok"},
-                    {"pmid": "2", "quality_status": "claude_not_run"},
-                ])
-            self.pipeline.approve(argparse.Namespace(
-                candidate=candidate, output=output, reviewer="test", approve_all_valid=True,
-                exceptions=None,
-            ))
-            decisions = self.pipeline.read_tsv(output)
-        self.assertEqual(decisions[0]["decision"], "approved")
-        self.assertEqual(decisions[1]["decision"], "needs_edit")
-
-    def test_claude_standard_json_result_is_parsed(self):
-        payload = self.pipeline.parse_claude_payload({
-            "type": "result",
-            "result": '```json\n{"articles": [{"pmid": "1"}]}\n```',
-        })
-        self.assertEqual(payload["articles"][0]["pmid"], "1")
+        self.assertEqual(self.jif.jif_tier("0.9"), "low")
+        self.assertEqual(self.jif.jif_tier("1"), "moderate")
+        self.assertEqual(self.jif.jif_tier("2.99"), "moderate")
+        self.assertEqual(self.jif.jif_tier("3"), "high")
+        self.assertEqual(self.jif.jif_tier("4.99"), "high")
+        self.assertEqual(self.jif.jif_tier("5"), "very-high")
+        self.assertEqual(self.jif.jif_tier(""), "unknown")
 
 
 if __name__ == "__main__":

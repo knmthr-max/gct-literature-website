@@ -62,7 +62,7 @@ or translate, so the AI is only asked for relevance and title_ja, and
 ai_summary_en/ai_summary_ja/ai_abstract_ja are set here to fixed "no
 abstract" sentinels instead -- asking the model anyway just invites content
 grounded in nothing but the title. The sentinels are the same ones
-programs/literature_pipeline and docs/data_dictionary/literature_tsv_v1.md
+the former TSV pipeline (removed 2026-10; see git history)
 already use, and being non-empty they also keep refill from re-selecting
 these rows forever and let export_publish_review.py pick them up.
 """

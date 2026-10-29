@@ -175,7 +175,7 @@ def tidy_needed(reference_dir):
 def run(args):
     from gct_db import jif_reference_files
     from jif_reference_cleaner import REFERENCE_HEADER, CONFLICT_HEADER, identity_key
-    from pipeline import JIFMatcher
+    from jif_matcher import JIFMatcher
     reference_dir = args.reference_dir
     new, done, modified = classify_raw(reference_dir)
     report = [f"raw CSV: 新規 {len(new)} / 処理済み {len(done)} / 内容が変わっている {len(modified)}"]
