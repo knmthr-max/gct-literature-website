@@ -2,6 +2,8 @@
 
 ## 2つのリポジトリ
 
+フォルダごとの役割は `directory_roles.md`。
+
 | リポジトリ | 公開 | 役割 |
 |---|---|---|
 | `gct-literature-website` | Public | サイト本体(静的ファイル)、公開データ(`data/papers/`)、データ処理のスクリプト(`scripts/`)、検証(`programs/tests/`、`tests/`)、設計文書(`docs/`) |
