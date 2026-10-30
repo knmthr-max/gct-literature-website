@@ -45,15 +45,15 @@
 | `data/processed/relevance_review/` | 関連性レビューの記録(最初の65件の時代のもの) | 生成 |
 | `data/processed/jif_backfill/`, `jif_match_audit/` | JIF の遡及・照合の監査 CSV(**実測のJIFを含む。外に出さない**) | 生成 |
 | `data/processed/literature_json/` | 2025年の週次AI出力(過去の作業環境からの移行分) | 原本に準じる |
-| `data/processed/cleaned_pubmed/`, `literature_candidates/`, `review_reports/`, `private_jif_export/`, `data/intermediate/`, `data/manifests/` | 旧世代の TSV 経路の名残。**いずれも空で、使っていない**(削除は別途確認) | - |
 
 ### その他
+
+旧世代の TSV 経路の名残だった空のフォルダ(`data/intermediate/`、`data/manifests/`、`data/master/literature/`、`data/processed/` の `cleaned_pubmed`・`literature_candidates`・`review_reports`・`private_jif_export`、`logs/`)は、使っていないため 2026-10-30 に削除した。
 
 | パス | 内容 | 編集 |
 |---|---|---|
 | `.github/workflows/portal-*.yml` | データ作業ポータル(状況レポート、JIFの参照データ追加・遡及、公開前レビュー作成、公開反映) | 手 |
 | `portal/` | ポータルの説明(`README.md`)、状況レポート(`STATUS.md`。生成)、トークン確認・コミット・PR 作成の補助スクリプト | 手 / 生成 |
-| `logs/` | 実行ログ・更新履歴の置き場(現在は空) | 生成 |
 | `programs/archive/` | 旧版コードの保管(参照専用。実行しない・変更しない) | 原本 |
 
 ## 守るルール(両方のリポジトリ共通)
