@@ -158059,5 +158059,30 @@
     "relevance_status": "kept",
     "relevance_note": "人の判断(2026-10-31): 掲載。",
     "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-7685095",
+    "title": "Expression of integrin alpha 6 beta 4 in human trophoblast and its loss from extravillous cells.",
+    "title_ja": "ヒト栄養膜におけるインテグリンα6β4の発現と絨毛外細胞での消失",
+    "authors": [
+      "Aplin JD"
+    ],
+    "journal": "Placenta",
+    "year": 1993,
+    "pmid": "7685095",
+    "doi": "10.1016/s0143-4004(05)80261-9",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study mapped integrin alpha6beta4 distribution in first-trimester and term villous trophoblast, cytotrophoblast columns, and extravillous cells using immunohistochemistry. The subunits localized to basal and cell-contact surfaces but were absent from the apical syncytial surface and interstitial extravillous cytotrophoblast. Primary term trophoblast and the choriocarcinoma line BeWo were also examined. The results suggest integrin loss enables trophoblast migration into maternal tissue.",
+    "summary_ja": "妊娠初期および満期の絨毛栄養膜において、インテグリンα6β4の分布を免疫組織化学で検討した研究である。間質性の絨毛外栄養膜細胞では発現が消失しており、細胞の移動に関与すると考えられた。絨毛癌細胞株BeWoも比較対象として解析されている。",
+    "abstract": "Villous trophoblast from first trimester and term placenta expresses the integrin subunits alpha 6 and beta 4, as monitored by immunohistochemistry. The subunits, which co-distribute in all locations, are present at the basal cell surface where cyto- and syncytiotrophoblast make contact with the villous basement membrane and, in addition, in areas of contact between cytotrophoblast or cyto- and syncytiotrophoblast, but both are absent from the apical syncytial surface. This distribution, which together with other evidence suggests that the two subunits are associated in trophoblast as the heterodimer alpha 6 beta 4, differs from other epithelia in which alpha 6 beta 4 is predominantly basally disposed. Anti-cytokeratin antibodies were used to identify cytotrophoblast columns at the tips of anchoring villi and the migratory interstitial extravillous cytotrophoblast population in the placental bed. Cells in the columns showed a level of expression that diminished with distance from the villous basement membrane, and the alpha 6 and beta 4 subunits were not detected in interstitial cytotrophoblast. In trophoblast of the chorion laeve, both the subunits were expressed in all layers from the pseudobasement membrane to the edge of the parietal decidua, but not in the decidua itself. Integrin alpha 6 beta 4 distribution was also examined in primary cultures of term trophoblast and in the choriocarcinoma cell line BeWo. The alpha 6 and beta 4 subunits were present at or near cell contact areas, where basement membrane components including laminin were also detected. The results suggest that integrin alpha 6 beta 4 plays a role in anchoring trophoblast to basement membrane and its loss may play a role in enabling cells to migrate into the maternal tissue compartment.",
+    "abstract_ja": "妊娠初期および満期胎盤の絨毛栄養膜は、免疫組織化学によりインテグリンサブユニットα6およびβ4を発現している。両サブユニットはすべての部位で共局在し、細胞栄養膜および合胞体栄養膜が絨毛基底膜と接する基底細胞表面、ならびに細胞栄養膜同士または細胞栄養膜と合胞体栄養膜の接触域に存在する一方、合胞体の頂端面には存在しない。この分布は、他の他の上皮でα6β4が主に基底側に局在することと異なり、他の証拠とあわせて、両サブユニットが栄養膜においてヘテロ二量体α6β4として会合していることを示唆する。アンカリング絨毛の先端にある細胞栄養膜の柱状構造および胎盤床における間質性の遊走性絨毛外細胞集団を同定するために抗サイトケラチン抗体を用いた。柱状構造内の細胞では、絨毛基底膜から離れるにつれて発現が減少し、間質性細胞栄養膜ではα6およびβ4サブユニットは検出されなかった。唇側絨毛膜の栄養膜では、偽基底膜から壁側脱落膜の縁まで全層で両サブユニットが発現していたが、脱落膜自体では発現していなかった。満期栄養膜の初代培養およびBeWo絨毛癌細胞株においてもα6β4の分布を検討した。α6およびβ4サブユニットは細胞接触部位またはその近傍に存在し、ラミニンを含む基底膜成分も同部位で検出された。これらの結果は、インテグリンα6β4が栄養膜を基底膜に固定する役割を果たし、その消失が細胞の母体組織への遊走を可能にする役割を果たしうることを示唆する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
   }
 ]
