@@ -171095,5 +171095,45 @@
         "chemotherapy"
       ]
     }
+  },
+  {
+    "id": "pmid-23860605",
+    "title": "Laparoscopic resection of paraaortic or paracaval lesions: feasibility and outcome.",
+    "title_ja": "傍大動脈・傍下大静脈病変に対する腹腔鏡下切除の実施可能性と成績",
+    "authors": [
+      "Chung L",
+      "O'Dwyer PJ"
+    ],
+    "journal": "Surg Endosc",
+    "year": 2013,
+    "pmid": "23860605",
+    "doi": "10.1007/s00464-013-3013-5",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "A consecutive series (2007–2011) of 25 patients with paraaortic, aortocaval, or paracaval tumors under 10 cm. Seventeen underwent laparoscopic resection, achieving R0 in all; one was converted to open surgery for bleeding and one had diffuse peritoneal disease. Laparoscopic patients had shorter hospital stays than open patients (2 vs 6 days). The lesions included primary retroperitoneal tumors and metastases, and the background is laparoscopic lymph node dissection used for staging nonseminomatous germ cell tumors.",
+    "summary_ja": "2007～2011年に後腹膜の傍大動脈・傍下大静脈病変を有した25例を対象とした。17例で腹腔鏡下切除を行い、全例でR0切除が達成された。腹腔鏡群は開腹群より在院日数が短かった（2日対6日）。非セミノーマ性胚細胞腫瘍の病期分類に用いられる後腹膜リンパ節郭清が背景にある報告である。",
+    "abstract": "BACKGROUND: Laparoscopic retroperitoneal lymph node dissection of paraaortic and paracaval lymph nodes is used to stage nonseminomatous germ cell tumors. Primary tumors can arise from the retroperitoneum, and tumors from nonurologic malignancy also may metastasize to retroperitoneal lymph nodes. This study aimed to describe the authors' experience with laparoscopic resection of these lesions. METHODS: A consecutive series of patients between January 2007 and June 2011 with paraaortic, aortocaval, or paracaval tumors with a maximum diameter smaller than 10 cm and confined to the abdomen were considered for laparoscopic resection. Data were collected on size and pathology of the lesions, anesthesia time, postoperative stay, and postoperative morbidity and mortality. RESULTS: In this study, 25 patients with a median age of 49 years were assessed for laparoscopic resection. Eight patients were considered unsuitable for a laparoscopic approach because of tumor location (n = 5), previous retroperitoneal surgery (n = 1), stoma (n = 1), or lesion not clearly visible on computed tomography (n = 1). Of the 17 patients undergoing laparoscopic resection, 1 was found to have diffuse peritoneal disease at laparoscopy, whereas another was converted to an open procedure due to bleeding. All the laparoscopic patients had an R0 resection. The median hospital stay was significantly shorter in the laparoscopic group (2 days) than in the open group (6 days) (P = 0.009). One patient in the laparoscopic group with a functioning paraganglioma and advanced cardiac disease died on postoperative day 7. CONCLUSION: Laparoscopic paraaortic and paracaval surgery for primary and recurrent tumors of the retroperitoneum is feasible, with clear resection margin rates similar to that observed for open surgery.",
+    "abstract_ja": "背景：後腹膜リンパ節郭清は、非セミノーマ性胚細胞腫瘍の病期分類に用いられる。原発性腫瘍は後腹膜から発生しうるほか、非泌尿器系悪性腫瘍も後腹膜リンパ節に転移しうる。本研究の目的は、これらの病変に対する腹腔鏡下切除の経験を報告することである。方法：2007年1月から2011年6月までに連続して、最大径10cm未満で腹部に限局した傍大動脈、大動脈・下大静脈間、傍下大静脈の腫瘍を有する患者を、腹腔鏡下切除の対象として検討した。病変のサイズと病理、麻酔時間、術後在院日数、術後合併症と死亡に関するデータを収集した。結果：中央値49歳の25例が腹腔鏡下切除の適応を評価された。8例は腫瘍の位置（5例）、既往の後腹膜手術（1例）、人工肛門（1例）、またはCTで明瞭に描出されない病変（1例）のため、腹腔鏡手術に不適と判断された。腹腔鏡下切除を施行した17例のうち、1例では腹腔鏡検査で広範な腹膜播種が認められ、別の1例は出血のため開腹手術に移行した。腹腔鏡群の全例でR0切除が達成された。在院日数の中央値は腹腔鏡群（2日）が開腹群（6日）より有意に短かった（P=0.009）。腹腔鏡群の1例は、機能性パラガングリオーマと重篤な心疾患を有し、術後7日目に死亡した。結論：後腹膜の原発性および再発性腫瘍に対する腹腔鏡下傍大動脈・傍下大静脈手術は実施可能であり、切除断端陰性率は開腹手術と同程度であった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "retroperitoneum",
+      "ag": "adult",
+      "hi": [
+        "nonseminomatous_gct"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 25,
+      "th": [
+        "surgery"
+      ]
+    }
   }
 ]
