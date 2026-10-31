@@ -27226,5 +27226,2289 @@
         "pathology_molecular"
       ]
     }
+  },
+  {
+    "id": "pmid-113204",
+    "title": "Human chorionic gonadotropin in BeWo trophoblastic cells after 12 years in continuous culture: retention of intact human chorionic gonadotropin secretion in mechanically versus enzyme-dispersed cells.",
+    "title_ja": "12年間の連続培養後のBeWo栄養膜細胞におけるヒト絨毛性ゴナドトロピン(hCG)分泌：機械的分散と酵素分散の比較",
+    "authors": [
+      "Pattillo RA",
+      "Hussa RO",
+      "Ruckert AC",
+      "Kurtz JW",
+      "Cade JM",
+      "Rinke ML"
+    ],
+    "journal": "Endocrinology",
+    "year": 1979,
+    "pmid": "113204",
+    "doi": "10.1210/endo-105-4-967",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1979 Endocrinology study examines BeWo malignant trophoblastic cells, a choriocarcinoma-derived line. Cells subcultured for 12 years by scalpel dissection retained secretion of intact hCG. In contrast, cells subcultured weekly with trypsin-EDTA lost this ability and secreted a large hCG-alpha form and low molecular weight hCG-beta fragments. The authors suggest that habitual enzymatic dispersal may accelerate loss of hormone secretory fidelity in continuous culture, which matters for hCG as a tumor marker in such models.",
+    "summary_ja": "1979年の内分泌学研究で、絨毛癌由来のBeWo細胞株におけるヒト絨毛性ゴナドトロピン(hCG)分泌を検討しています。メスによる切除で12年間継代した細胞は完全なhCGを分泌し続けました。一方、トリプシン-EDTAで週1回継代した細胞は能力を失い、hCG-αの大きな型が主産物となりました。酵素処理が培養下でのホルモン分泌能の喪失を早める可能性を示唆しています。",
+    "abstract": "Gel filtration and radioimmunological studies were used to demonstrate that BeWo malignant trophoblastic cells, subcultured for more than 12 yr as roller tube colonies using dissection by scalpel, retained the ability to secrete large quantities of intact hCG. By contrast, BeWo cells that had been subcultured weekly for 12 hr using proteolytic enzyme dispersion lost their ability to secrete intact hCG. Rather, a large form of hCG-alpha was the major secretory product, along with lesser amounts of heterogeneous low molecular weight forms of hCG-beta. The gradual loss of hormone secretory ability and fidelity of hormone product by cells in continuous culture is a well known phenomenon. Our results suggest that the habitual use of trypsin-EDTA to subculture cells may accelerate this process.",
+    "abstract_ja": "ゲル濾過とラジオイムノアッセイを用いて、BeWo悪性栄養膜細胞がインタクトなヒト絨毛性ゴナドトロピン(hCG)を大量に分泌する能力を保持していることを示した。12年以上にわたりローラーチューブのコロニーとして、メスによる切除で継代された細胞はこの能力を保持していた。一方、12時間にわたる蛋白分解酵素による分散を用いて週1回継代された細胞は、インタクトなヒト絨毛性ゴナドトロピン(hCG)を分泌する能力を失った。むしろ、hCG-αの大きな型が主な分泌産物となり、低分子量のhCG-βのさまざまな型が少量生じた。連続培養中の細胞がホルモン分泌能とホルモン産物の忠実性を徐々に失うことはよく知られた現象である。本結果は、細胞の継代にトリプシン-EDTAを習慣的に用いると、この過程が加速される可能性を示唆している。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-221889",
+    "title": "Expression of single copy DNA sequences in nuclear RNA from undifferentiated mouse embryonal carcinoma and differentiated muscle cell line.",
+    "title_ja": "未分化マウス胎児性癌細胞および分化筋細胞株の核RNAにおける単一コピーDNA配列の発現",
+    "authors": [
+      "Jacquet M",
+      "Gros F"
+    ],
+    "journal": "Nucleic Acids Res",
+    "year": 1979,
+    "pmid": "221889",
+    "doi": "10.1093/nar/6.4.1639",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The authors analyzed nuclear RNA from an undifferentiated mouse embryonal carcinoma cell line and a differentiated muscle cell line of similar origin. Using single-copy genomic DNA probes, they found that embryonal carcinoma and muscle nuclear RNA have sequence complexities of about 100 kb and 140 kb, respectively. Nuclear poly A+ RNA had one fifth the complexity of total nuclear RNA, and poly A+ sequence distributions were restricted, with implications for transcriptional and post-transcriptional control.",
+    "summary_ja": "未分化マウス胎児性癌細胞株と、同起源の分化した筋細胞株の核RNAを解析しました。胎児性癌株と筋細胞株の配列複雑性はそれぞれ約100kbと140kbでした。核内poly A+RNAは全核RNAの約5分の1の複雑性を示し、転写および転写後制御への示唆を論じています。",
+    "abstract": "Nuclear RNA from an undifferentiated mouse embryonal carcionma (EC) cell line and a differentiated muscle (Mt) cell line from similar origin has been analysed with respect to base sequence complexity and frequency distribution with different probes. With the single copy component of mouse genomic DNA it is shown that total EC nuclear RNA and Mt nuclear RNA have respectively base sequence complexities of 100 Kb and 140 Kb corresponding to 6% and 8% of one strand of DNA. It is shown by hybridization with a purified DNA component complementary to total nuclear RNA that nuclear poly A+RNA in both cell types has only one fifth of total nuclear RNA complexity (as has polysomal RNA), but still contains all poly A+RNA present in polysomal poly A+RNA. Polysomal poly A+ sequences in total and poly A+ nuclear RNA are present in a restricted range of frequency distribution in contrast to the situation observed at the polysomal level. The implication of these results in terms of transcriptional and post-transcriptional control is discussed.",
+    "abstract_ja": "未分化マウス胎児性癌(EC)細胞株と、同起源の分化した筋細胞(Mt)株の核RNAについて、塩基配列の複雑性と頻度分布を異なるプローブで解析した。マウスゲノムDNAのシングルコピー成分を用いると、全EC核RNAとMt核RNAの塩基配列複雑性はそれぞれ100 Kbおよび140 Kbであり、DNA一本鎖の6%および8%に相当することが示された。全核RNAの相補的な精製DNA成分とのハイブリダイゼーションにより、両細胞型の核poly A+RNAは全核RNAの複雑性の5分の1しかないが(ポリソームRNAと同様)、ポリソームpoly A+RNAに含まれるすべてのpoly A+RNAを依然として含むことが示された。全核RNAおよびpoly A+核RNA中のポリソームpoly A+配列は、ポリソームレベルで観察される状況とは対照的に、限られた頻度分布範囲に存在する。これらの結果が転写および転写後制御に与える意味について考察する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-286302",
+    "title": "Alkaline phosphatase of mouse teratoma stem cells: immunochemical and structural evidence for its identity as a somatic gene product.",
+    "title_ja": "マウス奇形腫幹細胞のアルカリホスファターゼ：体細胞性遺伝子産物であることの免疫化学的・構造的証拠",
+    "authors": [
+      "Hass PE",
+      "Wada HG",
+      "Herman MM",
+      "Sussman HH"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1979,
+    "pmid": "286302",
+    "doi": "10.1073/pnas.76.3.1164",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The authors compare alkaline phosphatase from mouse teratoma stem cells (OTT-6050 teratoma and the F9 and PCC4 lines) with enzymes from mouse placenta, kidney, liver, and brain. Immunochemical crossreactivity, two-dimensional electrophoresis, and peptide mapping indicate that the stem cell enzyme is the same core protein as placental and kidney enzymes, differing mainly in sialic acid content. Intestinal alkaline phosphatase is distinct. The teratoma stem cells serve as an enzyme source, so the focus is enzyme identity rather than germ cell tumor biology.",
+    "summary_ja": "マウス奇形腫幹細胞のアルカリホスファターゼを胎盤・腎臓などの体細胞由来酵素と比較した。免疫化学的交差反応と構造解析の結果、両者は同じコア酵素で、唾液酸含量のみ異なることが示された。奇形腫幹細胞は酵素供給源として用いられており、主題は胚細胞腫瘍の生物学ではなく酵素の同一性である。",
+    "abstract": "The immunochemical and structural characteristics of the alkaline phosphatase [orthophosphoric-monoester phosphohydrolase (alkaline optimum), EC 3.1.3.1] from mouse teratoma stem cells derived from the OTT-6050 teratoma (ascitic and solid tumors and the F9 and PCC4 cell lines) have been compared to those of the alkaline phosphatases expressed in normal mouse placenta and several adult organs. Crossreactivity of the stem cell alkaline phosphatase with antisera reacting with placental, kidney, liver, and brain alkaline phosphatases indicated that the stem cell enzyme had common antigenic determinants. Structural studies utilizing two-dimensional electrophoresis of the (32)P-labeled alkaline phosphatase subunits showed that the stem cell, placental, and kidney alkaline phosphatases differed only in their sialic acid content and comigrated after removal of terminal sialic acid by neuraminidase digestion. Furthermore, one-dimensional peptide mapping of partial proteolysis fragments from (32)P-labeled enzymes demonstrated identical fragmentation patterns for the stem cell and somatic enzymes. These immunochemical and structural data indicate that the stem cell alkaline phosphatase is the same core enzyme as that produced in the mouse placenta and kidney, with different amounts of terminal sialic acid. The one mouse alkaline phosphatase examined that differed from the other enzymes was the intestinal alkaline phosphatase. This isoenzyme was not immunochemically crossreactive with the other alkaline phosphatases, did not comigrate in two-dimensional electrophoresis after neuraminidase digestion, and did not give identical peptide maps after partial proteolysis.",
+    "abstract_ja": "マウス奇形腫幹細胞(OTT-6050奇形腫の腹水および固形腫瘍、ならびにF9およびPCC4細胞株)由来のアルカリホスファターゼ[オルトリン酸モノエステルホスホヒドロラーゼ(アルカリ至適)、EC 3.1.3.1]の免疫化学的および構造的特徴を、マウス胎盤および複数の成体臓器で発現するアルカリホスファターゼと比較した。幹細胞酵素は胎盤、腎臓、肝臓、脳のアルカリホスファターゼと抗血清に対して交差反応を示し、共通の抗原決定基を有していた。二次元電気泳動による構造解析では、幹細胞、胎盤、腎臓のアルカリホスファターゼは末端唾液酸含量のみが異なり、唾液酸除去後に同一の泳動位置を示した。さらに部分タンパク質分解断片のペプチドマッピングでも、幹細胞酵素と体細胞酵素は同一の断片パターンを示した。これらの免疫化学的・構造的データは、幹細胞のアルカリホスファターゼが、マウス胎盤・腎臓で産生されるものと同一のコア酵素であり、末端唾液酸含量のみが異なることを示している。検討したマウスアルカリホスファターゼのうち唯一異なったのは腸型アルカリホスファターゼであった。この異性体は他のアルカリホスファターゼと免疫化学的交差反応を示さず、唾液酸除去後の二次元電気泳動で同一の移動を示さず、部分分解後のペプチドマップも同一にならなかった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-291012",
+    "title": "Junctional modulation in mouse embryonal carcinoma cells by Fab fragments of rabbit anti-embryonal carcinoma cell serum.",
+    "title_ja": "マウス胎児性癌細胞におけるFab断片によるジャンクション修飾",
+    "authors": [
+      "Dunia I",
+      "Nicolas JF",
+      "Jakob H",
+      "Benedetti EL",
+      "Jacob F"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1979,
+    "pmid": "291012",
+    "doi": "10.1073/pnas.76.7.3387",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Mouse embryonal carcinoma PCC4 cells, which are connected by gap and tight junctions, were treated with Fab fragments of anti-F9 embryonal carcinoma serum. The treatment caused cells to round up and internalized gap junctions, and after 30 hours both junction types were lost from the cell surface. Cells remained attached through small attachment sites. The study is a basic cell biology analysis of junction removal in an embryonal carcinoma model.",
+    "summary_ja": "マウス胚性癌細胞PCC4をギャップ結合・タイト結合で連結した状態から、抗F9胚性癌細胞血清由来Fab断片で処理した基礎研究である。細胞は丸くなり、ギャップ結合は細胞内に取り込まれ、30時間後には両結合が細胞表面から消失した。細胞は小さな接着部位で接触を保った。胚性癌モデルにおける細胞接着と結合の除去機構を解析しており、臨床研究ではない。",
+    "abstract": "Mouse embryonal carcinoma PCC4 cells are connected by extensive gap and tight junctions. When the cells are incubated in a medium containing Fab fragments against embryonal carcinoma F9 cells, they round up and a process of junctional removal is initiated. In particular, gap junctions are internalized and after 30 hr of incubation with the anti-F9 Fab fragments both tight and gap junctions are no longer present at the cell surface; however, the cells are still in contact by means of small attachment sites.",
+    "abstract_ja": "マウス胎児性癌細胞PCC4は、ギャップ結合およびタイト結合により広範に連結している。細胞を胎児性癌F9細胞に対する抗体由来のFab断片を含む培地でインキュベートすると、細胞は丸くなり、ジャンクション除去の過程が開始される。特にギャップ結合は細胞内へ取り込まれ、抗F9 Fab断片による30時間のインキュベート後には、タイト結合とギャップ結合の両方が細胞表面から消失する。ただし、細胞は依然として小さな接着部位を介して接触を保っている。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-423668",
+    "title": "Dermoid cysts of the floor of the mouth and lateral neck.",
+    "title_ja": "口腔底および外側頸部の類皮嚢腫",
+    "authors": [
+      "Leveque H",
+      "Saraceno CA",
+      "Tang CK",
+      "Blanchard CL"
+    ],
+    "journal": "Laryngoscope",
+    "year": 1979,
+    "pmid": "423668",
+    "doi": "10.1288/00005537-197902000-00012",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1979 Laryngoscope report presents three cases of dermoid cysts in the floor of the mouth and submandibular region. The authors review clinical presentation and pathologic classification. They stress identifying and excising any epithelialized tract extending toward the midline mandible or hyoid to prevent recurrence. Because these are congenital developmental cysts rather than germ cell tumors, their relevance to germ cell tumor literature is uncertain, although dermoid terminology overlaps with teratoma classification.",
+    "summary_ja": "口腔底および顎下部に生じた類皮嚢腫の3症例を報告する。臨床像と病理学的分類を検討し、再発予防のため正中の下顎骨や舌骨に至る上皮化した瘻管を認識して切除することの重要性を強調する。胚細胞腫瘍ではなく先天性嚢胞に関する報告であり、関連性は限定的である。",
+    "abstract": "Dermoid cysts of the floor of the mouth and submandibular area represent an unusual clinical entity. We present three such cases and review their clinical presentation and pathologic classification. This study stresses the importance of recognizing and excising any tract leading from such cysts to the midline mandible or hyoid, in order to avoid a recurrence, since these tracts may be epithelialized.",
+    "abstract_ja": "口腔底および顎下部の類皮嚢腫は稀な臨床単位である。3症例を提示し、臨床像と病理学的分類を概説する。再発を避けるため、正中の下顎骨や舌骨へ向かう上皮化した瘻管を認識して切除することの重要性を強調する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "n": 3,
+      "th": [
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-455474",
+    "title": "Protein synthesis and differentiation in a clonal line of teratocarcinoma and in preimplantation mouse embryo.",
+    "title_ja": "奇形癌クローン株の分化とマウス着床前胚におけるタンパク質合成",
+    "authors": [
+      "Failly-Crépin C",
+      "Martin GR"
+    ],
+    "journal": "Cell Differ",
+    "year": 1979,
+    "pmid": "455474",
+    "doi": "10.1016/0045-6039(79)90018-6",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1979 Cell Differentiation study compares protein synthesis during in vitro differentiation of a clonal murine teratocarcinoma line into embryoid bodies with protein synthesis in preimplantation mouse embryos. Two-dimensional gel electrophoresis showed that the late blastocyst pattern shares many polypeptides with differentiated teratocarcinoma cells. Early embryonic protein patterns differed markedly from undifferentiated teratocarcinoma cells. The work is basic developmental biology using a murine model rather than clinical germ cell tumor research.",
+    "summary_ja": "マウス奇形癌のクローン細胞株が胚様体へ分化する過程のタンパク質合成を、着床前マウス胚と比較した基礎研究である。後期胞胚のタンパク質パターンは分化した奇形癌と多くを共有した。臨床的な胚細胞腫瘍の研究ではなく、マウスモデルを用いた発生生物学的研究である。",
+    "abstract": "Undifferentiated cells of a clonal line of teratocarcinoma can differentiate in vitro into embryoid bodies with morphological and biochemical features of early mouse embryo. During the first step of differentiation protein synthesis has been analysed by 2 dimensional gel electrophoresis. While new proteins are synthesized, the synthesis of others turned off with the appearance of endodermal cells in embryoid bodies. We have compared protein synthesis during teratocarcinoma differentiation and during early mouse embryogenesis at three stages of mouse preimplantation embryo. The results demonstrate that only the late blastocyst protein synthesis pattern shows most of the polypeptides identified in the differentiated protein synthesis pattern of teratocarcinoma. In contrast, protein synthesis during the early stages of mouse embryonic development is very different from protein synthesis in undifferentiated teratocarcinoma.",
+    "abstract_ja": "奇形癌の一クローン株の未分化細胞は、in vitroで胚様体に分化し、初期マウス胚の形態学的および生化学的特徴を示す。分化の初期段階において、2次元ゲル電気泳動によりタンパク質合成を解析した。新たなタンパク質が合成される一方、胚様体の内胚葉細胞の出現に伴い、他のタンパク質の合成は停止した。奇形癌の分化とマウス着床前胚の発生の各段階におけるタンパク質合成を比較した。その結果、後期胞胚のタンパク質合成パターンのみが、分化した奇形癌で同定されたポリペプチドの大部分を示した。対照的に、マウス初期胚発生の段階でのタンパク質合成は、未分化奇形癌のそれとは大きく異なっていた。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-531732",
+    "title": "Necessity for two human chromosomes for human chorionic gonadotropin production in human-mouse hybrids.",
+    "title_ja": "ヒト-マウス雑種細胞におけるヒト絨毛性ゴナドトロピン(hCG)産生に必要な2本の染色体",
+    "authors": [
+      "Bordelon-Riser ME",
+      "Siciliano MJ",
+      "Kohler PO"
+    ],
+    "journal": "Somatic Cell Genet",
+    "year": 1979,
+    "pmid": "531732",
+    "doi": "10.1007/BF01542697",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This genetics study used human-mouse hybrid clones derived from human choriocarcinoma cells to identify which human chromosomes are required for hCG production. Only clones retaining both chromosomes 10 and 18 produced whole hCG, while clones with either alone did not. Subclone experiments confirmed the finding. The work demonstrates a method combining cytogenetic and isozyme data to map genes in heterogeneous hybrids. It is primarily a chromosomal mapping study rather than a clinical GCT report.",
+    "summary_ja": "絨毛癌由来の細胞とマウス細胞の雑種細胞を用い、hCG産生に必要なヒト染色体を同定した遺伝学的研究である。10番と18番の両方を保持するクローンでのみ完全なhCGが産生された。サブクローンでも同様の結果が確認された。染色体データと酵素データを組み合わせる手法を示した点が特徴である。臨床的なGCT研究ではなく、主に染色体マッピングの研究である。",
+    "abstract": "Through a series of human-mouse hybrids we have identified that two human chromosomes, 10 and 18, must be present for production of the pregnancy protein hormone human chorionic gonadotropin (hCG). Human choriocarcinoma cells producing hCG were hybridized to mouse cells. From 49 independent clones three hybrid clones continued to produce whole hCG. Chromosomal analysis was done on the 3 producer clones and 5 nonproducer clones. The additional 41 nonproducer clones were genetically characterized by isozymes. Only when chromosomes 10 and 18 were present in a clone would the whole hCG molecule be produced. Clones with only 10 or only 18 did not produce hormone. Nine subclones of a producer clone confirmed this observation. Three subclones retaining both 10 and 18 continued to produce hCG. This study demonstrated the need to use cellular chromosome data and population enzyme data to identify two chromosomes necessary for hCG production in heterogeneous human-mouse hybrids.",
+    "abstract_ja": "ヒト-マウス雑種細胞の系列を用いて、ヒト絨毛性ゴナドトロピン(hCG)の産生に必要な2本のヒト染色体、10番と18番を同定した。hCGを産生するヒト絨毛癌細胞をマウス細胞と融合させた。49の独立クローンのうち3つのクローンが完全なhCGを産生し続けた。この3つの産生クローンと5つの非産生クローンについて染色体解析を行った。残りの41の非産生クローンはアイソザイムにより遺伝学的に特性を明らかにした。10番と18番の両方が存在するクローンでのみ、完全なhCG分子が産生された。10番または18番のみを持つクローンはホルモンを産生しなかった。産生クローンのサブクローン9個がこの観察を確認した。10番と18番の両方を保持する3つのサブクローンは、引き続きhCGを産生した。本研究は、不均一なヒト-マウス雑種細胞においてhCG産生に必要な2本の染色体を同定するために、細胞の染色体データと集団の酵素データを併用する必要があることを示した。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-544928",
+    "title": "Human placental cell surface antigens:expression by cultured cells of diverse phenotypic origin.",
+    "title_ja": "培養ヒト細胞における胎盤細胞表面抗原の発現：多様な表現型起源の細胞での検討",
+    "authors": [
+      "Hamilton TA",
+      "Wada HG",
+      "Sussman HH"
+    ],
+    "journal": "J Supramol Struct",
+    "year": 1979,
+    "pmid": "544928",
+    "doi": "10.1002/jss.400110409",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1979 study characterized cell surface glycoprotein antigens in cultured human cell lines, including choriocarcinoma-derived trophoblastic lines (BeWo, JEG-3), using antiplacental brush border antiserum. Nineteen antigens were detected in placental membranes. Placental alkaline phosphatase (PAP) was expressed only in choriocarcinoma cells and Chang liver cells, not in fibroblasts. PAP is normally restricted to differentiated placenta but appears in both trophoblastic and nontrophoblastic neoplasms. Ten antigens were common to all five cell lines, suggesting ubiquitous cell surface expression.",
+    "summary_ja": "絨毛癌由来の栄養膜細胞株（BeWo、JEG-3）を含む培養ヒト細胞の表面糖タンパク質抗原を、胎盤刷子縁膜に対する抗血清で解析した研究です。胎盤型アルカリホスファターゼ（PAP）は絨毛癌細胞とChang肝細胞でのみ発現し、線維芽細胞では認められませんでした。PAPは正常では分化した胎盤に特異的な抗原です。",
+    "abstract": "The present work examined the expression of cell surface glycoprotein antigens in cultured human cell lines. The set of glycoproteins studied was defined by their immunoreactivity with antiserum developed to Triton-solubilized extracts of placental brush border membranes. Studies were performed using cell lines of trophoblastic (BeWo, JEG-3) and nontrophoblastic (Chang liver cells) origin, as well as diploid fibroblast cell lines (WI-38, GM-38). Antiplacental brush border antiserum reacts with at least 19 distinct antigens present in placental membrane preparations, each of which can be resolved and identified in two-dimensional electrophoresis. The subunit molecular weight and isoelectric point for all components were defined by their positions in the two-dimensional matrix. Thirteen of these could be detected among the five cell lines examined by lactoperoxidase-catalyzed cell surface iodination. One of these 13 antigens has been identified as the placental isoenzyme of alkaline phosphatase (PAP). The expression of this component is limited to choriocarcinoma cells and Chang liver cells and it is not present in diploid fibroblasts. Under normal circumstances expression of PAP is unique to the differentiated placenta but has been frequently demonstrated in both trophoblastic and nontrophoblastic neoplasms. Two other antigens are variably expressed among the different cell types examined in the present study and their presence or absence was independent of the trophoblastic, epithelial nontrophoblastic, or fibroblastic origin of the cells. Ten surface antigens were expressed in all five cell lines. Six of these had previously been found common to membranes from three adult differentiated tissues, including liver and kidney, as well as placenta (Wada et al, J Supramol Struc 10(3): 287-305, 1979). The presence of this set of antigens in cultured cells as well extends the possibility that these are ubiquitously expressed on human cell surfaces. Two other antigens observed in all cultured cells had been found in both placental and either kidney or liver membranes and may represent common functions shared by many tissues which are also necessary for growth in vitro. The two remaining placental antigens seen in all cultured cells have previously been shown to be absent in adult tissues. Their presence in cultured cells but not in the membranes of resting differentiated tissues may signify the expression of glycoproteins characteristic of trophoblasts in all cells adapted to growth in culture.",
+    "abstract_ja": "本研究では、培養ヒト細胞株における細胞表面糖タンパク質抗原の発現を検討した。対象となる糖タンパク質群は、Triton可溶化したヒト胎盤刷子縁膜抽出物に対する抗血清との免疫反応性によって定義した。検討には、栄養膜由来（BeWo、JEG-3）および非栄養膜由来（Chang肝細胞）の細胞株、ならびに二倍体線維芽細胞株（WI-38、GM-38）を用いた。抗胎盤刷子縁抗血清は、胎盤膜標品中の少なくとも19種の異なる抗原と反応し、それぞれ二次元電気泳動で分離・同定できた。すべての成分の分子量と等電点は、二次元マトリックス上の位置により定義した。このうち13種は、ラクトペルオキシダーゼ触媒による細胞表面ヨウ素化により、検討した5株中で検出可能であった。これらの一つは胎盤型アルカリホスファターゼ（PAP）と同定された。PAPの発現は絨毛癌細胞およびChang肝細胞に限られ、二倍体線維芽細胞には認められなかった。正常ではPAPの発現は分化した胎盤に特異的だが、栄養膜性および非栄養膜性の腫瘍でしばしば認められる。さらに2種の抗原は細胞種間で発現が変動したが、その有無は細胞が栄養膜・上皮（非栄養膜）・線維芽細胞のいずれ由来かとは無関係であった。培養5株のすべてに10種の表面抗原が発現していた。このうち6種は、肝臓、腎臓などの成人分化組織および胎盤の膜標品に共通して既に見出されていた（Wada et al, 1979）。培養細胞にも存在するこの抗原セットは、ヒト細胞表面に広く発現している可能性を示唆する。残りの2種の胎盤抗原は、静止した分化組織の膜には存在しないが培養細胞には存在し、培養増殖に適応した細胞で栄養膜由来糖タンパク質が発現している可能性を示唆する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-91173",
+    "title": "Non-H-2 antigens on fibroblasts and an embryocarcinoma cell line react with xenoantisera against H-2 antigens.",
+    "title_ja": "線維芽細胞および胎児性癌細胞株上の非H-2抗原は抗H-2抗血清と反応する",
+    "authors": [
+      "Kvist S",
+      "Ostberg L",
+      "Peterson PA"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1979,
+    "pmid": "91173",
+    "doi": "10.1073/pnas.76.8.4051",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1979 immunology study shows that rabbit antisera against H-2 antigens react with non-H-2 molecules on the murine embryocarcinoma line F9 and on fibroblasts. The F9 line lacks classical transplantation antigens, but synthesizes 49,000-, 25,000-, and 15,000-dalton molecules. The 25,000- and 15,000-dalton components were found on fibroblasts from embryos and adults but not on lymphoid or other tumor lines. The F9 cells serve as the source material, while the paper's focus is transplantation antigen cross-reactivity rather than germ cell tumor biology.",
+    "summary_ja": "マウス胎児性癌細胞株F9と線維芽細胞に存在する非H-2抗原を、抗H-2抗血清を用いて解析した免疫学的研究である。F9細胞は古典的な移植抗原を欠くが、抗H-2血清と反応する分子を産生していた。研究の主題は移植抗原であり、胚細胞腫瘍の臨床や治療を扱うものではない。",
+    "abstract": "The murine embryocarcinoma cell line F9 lacks the classical transplantation antigens. However, rabbit anti-H-2 antigen sera, recognizing \"backbone structures\" of H-2 K and D antigens, react with three types of molecules manufactured by F9 cells. A 49,000- and a 25,000-dalton chain are glycoproteins located on the cell surface. The third component with an apparent molecular weight of 15,000, and the 25,000-dalton chain seem to be unrelated to the 49,000-dalton glycoprotein. The 25,000- and 15,000-dalton components are not manufactured by splenocytes, thymocytes, hepatocytes, or various lymphoma, mastocytoma, and plasmacytoma cell lines. However, fibroblasts derived from both embryos and adult animals synthesize 25,000- and 15,000-dalton molecules reactive with the rabbit anti-H-2 antigen sera. The 49,000-, 25,000-, and 15,000-dalton molecules are not recognized by a syngeneic anti-F9 cell serum.",
+    "abstract_ja": "マウスの胎児性癌（embryocarcinoma）細胞株F9は古典的な移植抗原を欠いている。しかし、H-2 KおよびD抗原の「骨格構造」を認識するウサギ抗H-2抗原血清は、F9細胞が産生する3種の分子と反応する。49,000ダルトンおよび25,000ダルトンの鎖は細胞表面に存在する糖タンパク質である。見かけの分子量15,000の第3の成分と25,000ダルトンの鎖は、49,000ダルトンの糖タンパク質とは無関係と思われる。25,000および15,000ダルトンの成分は、脾細胞、胸腺細胞、肝細胞、各種のリンパ腫、肥満細胞腫、形質細胞腫の細胞株では産生されない。しかし、胎生および成体動物由来の線維芽細胞は、ウサギ抗H-2抗原血清と反応する25,000および15,000ダルトンの分子を合成する。49,000、25,000、15,000ダルトンの分子は、同系の抗F9細胞血清では認識されない。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-212849",
+    "title": "Estrogen synthetase in choriocarcinoma cell culture. Stimulation by dibutyryl cyclic adenosine monophosphate and theophylline.",
+    "title_ja": "絨毛癌細胞培養におけるエストロゲン合成酵素：ジブチリル環状AMPおよびテオフィリンによる刺激",
+    "authors": [
+      "Bellino FL",
+      "Hussa RO",
+      "Osawa Y"
+    ],
+    "journal": "Steroids",
+    "year": 1978,
+    "pmid": "212849",
+    "doi": "10.1016/0039-128x(78)90097-1",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examined estrogen biosynthesis in cultured JAr choriocarcinoma cells. Treatment with dibutyryl cAMP and theophylline increased aromatase (estrogen synthetase) activity four- to tenfold. Enzyme kinetics showed unchanged Km values with increased Vmax, suggesting a greater amount of active enzyme rather than altered substrate affinity. The findings describe regulation of steroidogenesis in a choriocarcinoma cell model.",
+    "summary_ja": "絨毛癌由来JAr細胞株におけるエストロゲン合成を検討した研究。ジブチリルcAMPとテオフィリンで処理すると、アロマターゼ活性が4〜10倍に上昇した。Km値は変わらずVmaxが増加したことから、活性のある酵素量の増加が示唆された。絨毛癌細胞モデルにおけるステロイド合成の調節を示す。",
+    "abstract": "The stimulation of estrogen biosynthesis by N6,O2'--dibutyryl adenosine 3':5'-cyclic monophosphate and theophylline dbT) in cultures of the JAr line of choriocarcinoma cells was investigated by measuring the specific activity and kinetic constants of estrogen synthetase (aromatase) in the various subcellular fractions after differential centrifugation of homogenized cells in isotonic sucrose. The low speed (900xg) pellet, from cells grown with or without dbT and homogenized in isotonic sucrose, contains the majority of the aromatase activity and the highest aromatase specific activity. The aromatase specific activity in the homogenate of cells grown with dbT and in the various subcellular fractions is 4- to 10-fold higher than in cells grown without dbT. The Vmax of androstenedione (4-androstene-3,17-dione) aromatization in homogenates from dbT-stimulated cells (6.9 pmol estrogen/min per mg protein) is significantly increased over that measured in the absence of dbT (1.5 pmol estrogen/min per mg protein); the Km values, however, are not significantly different (average of 43.8nM in dbT-stimulated fractions; 53.2nM in control fractions). These results suggest that the increased aromatase specific activity in dbT-stimulated cells results from an increase in amount of active enzyme, rather than from an increase in affinity of the enzyme for its substrate.",
+    "abstract_ja": "絨毛癌の培養細胞株JArにおけるエストロゲン生合成を、N6,O2'-ジブチリルアデノシン3',5'-環状一リン酸（dbT）およびテオフィリンがどのように刺激するかについて検討した。等張スクロース中で細胞を均質化した後、示差遠心分離によって得た各細胞内画分について、エストロゲン合成酵素（アロマターゼ）の比活性と速度論的定数を測定した。dbTの有無にかかわらず培養した細胞の低速（900×g）ペレットに、アロマターゼ活性の大部分と最も高い比活性が含まれていた。dbTで培養した細胞のホモジネートおよび各細胞内画分におけるアロマターゼ比活性は、dbTなしで培養した細胞の4〜10倍高かった。dbT刺激細胞のホモジネートにおけるアンドロステンジオン（4-アンドロステン-3,17-ジオン）の芳香化のVmaxは、dbTなしの場合（1.5 pmol エストロゲン/分/mg タンパク質）と比べて有意に増加していた（6.9 pmol エストロゲン/分/mg タンパク質）。一方、Km値には有意差がなかった（dbT刺激画分の平均43.8 nM、対照画分の平均53.2 nM）。これらの結果は、dbT刺激細胞でアロマターゼ比活性が増加するのは、酵素に対する基質親和性の変化ではなく、活性のある酵素量の増加によるものであることを示唆する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-21302088",
+    "title": "Relationship of F9 antigen and genes of theT/t complex.",
+    "title_ja": "F9抗原とT/t複合体遺伝子の関係",
+    "authors": [
+      "Marticorena P",
+      "Artzt K",
+      "Bennett D"
+    ],
+    "journal": "Immunogenetics",
+    "year": 1978,
+    "pmid": "21302088",
+    "doi": "10.1007/BF01844023",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study extends serological work relating the F9 antigen of embryonal carcinoma cells to the murine T/t complex. Only the t(12) lethal haplotype altered quantitative F9 antigen expression on sperm, not the other five lethal haplotypes. Cytotoxicity assays on preimplantation embryos showed t(12) homozygotes were less susceptible to anti-F9 serum than t(w5) homozygotes. The F9 antigen mainly serves as a genetic marker tool.",
+    "summary_ja": "胎児性癌細胞のF9抗原とマウスT/t複合体の関係を検討した研究。精子上のF9抗原量を変化させるのは致死型t(12)のみであった。着床前胚を用いた細胞傷害試験では、t(12)ホモ接合体は抗F9血清に対する感受性が低かった。F9抗原は主に遺伝学的マーカーとして用いられている。t(12)抗原は桑実胚でも検出された。",
+    "abstract": "Serological studies relating F9 antigen of embryonal carcinoma cells to[Formula: see text] at the murineT/t complex have been extended and confirm that only the lethal haplotype t(12)- and none of the other five lethal haplotypes-affects the quantitative expression of F9 antigen on sperm. Cytotoxicity tests on preimplantation embryos show that t(12) homozygotes are less susceptible to antiF9 serum than t(w5) homozygotes, and that using specific antimutant haplotype antisera prepared against sperm, t(12) antigen is detectable on morulae, whereas t(w5) antigen is not.",
+    "abstract_ja": "胎児性癌細胞のF9抗原と、マウスT/t複合体の[数式]との関係に関する血清学的研究を拡張した。その結果、精子上のF9抗原の定量的発現に影響するのは致死型ハプロタイプt(12)のみであり、他の5つの致死型ハプロタイプはいずれも影響しないことが確認された。着床前胚を用いた細胞傷害試験では、t(12)ホモ接合体はt(w5)ホモ接合体に比べて抗F9血清に対する感受性が低かった。また、精子に対して作製した特異的な変異ハプロタイプ抗血清を用いると、t(12)抗原は桑実胚で検出されたが、t(w5)抗原は検出されなかった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-263339",
+    "title": "Regulation by plasma lipoproteins of progesterone biosynthesis and 3-hydroxy-3-methyl glutaryl coenzyme a reductase activity in cultured human choriocarcinoma cells.",
+    "title_ja": "培養ヒト絨毛癌細胞におけるプロゲステロン合成とHMG CoA還元酵素活性の血漿リポタンパク質による調節",
+    "authors": [
+      "Simpson ER",
+      "Porter JC",
+      "Milewich L",
+      "Bilheimer DW",
+      "MacDonald PC"
+    ],
+    "journal": "J Clin Endocrinol Metab",
+    "year": 1978,
+    "pmid": "263339",
+    "doi": "10.1210/jcem-47-5-1099",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1978 study examined how plasma lipoproteins regulate HMG CoA reductase activity and progesterone secretion in cultured human choriocarcinoma cells. Reductase activity was inversely related to the presence of lipoprotein in the medium and rose after lipoprotein removal. Progesterone and pregnenolone secretion were 2 to 8 times higher in lipoprotein-containing medium. The authors conclude that lipoproteins control cholesterol synthesis and progesterone production by supplying cholesterol, and suggest similar regulation of placental progesterone synthesis by maternal blood lipoproteins.",
+    "summary_ja": "培養した絨毛癌細胞を用い、血漿リポタンパク質がHMG CoA還元酵素活性とプロゲステロン分泌を調節する仕組みを検討した1978年の研究。培地中のリポタンパク質が多いほど還元酵素活性は低下し、プロゲステロン分泌は2〜8倍高かった。リポタンパク質がコレステロールを供給して合成と産生を制御すると結論している。母体血中のリポタンパク質も胎盤のプロゲステロン合成を調節する可能性を指摘している。",
+    "abstract": "The regulation of both the activity of 3-hydroxy-3-methyl glutaryl coenzyme A (HMG CoA) reductase [mevalonate-NADP+ oxidoreductase (CoA-acylating) EC 1.1.1.34] and the secretion of progesterone by human plasma lipoproteins has been investigated in human choriocarcinoma cells in culture. HMG CoA reductase activity was computed from the rate of formation of [14C]mevalonolactone from [14C]HMG CoA. The activity of HMG CoA reductase was expressed as nanomoles of mevalonolactone formed/min . mg solubilized cell protein. An inverse relationship was found between the presence of lipoprotein in the culture medium and the activity of HMG CoA reductase in these cells. In cells maintained in the presence of lipoprotein-enriched culture medium containing 840 micrograms cholesterol/ml, the average activity of HMG CoA reductase was 0.25 nmol/min . mg protein. After removal of lipoprotein, the activity of HMG CoA reductase increased to 1.3 nmol/min . mg protein. The average activity of HMG CoA reductase in cells maintained in lipoprotein-deficient culture medium was 1.5 nmol/min . mg protein but fell to 0.3 nmol/min . mg protein after addition of lipoprotein to the medium. When cells were maintained in the presence of lipoprotein, the rates of section of progesterone and pregnenolone into the culture medium were 2-8 times greater than the rates of secretion of these steroids by cells maintained in the absence of lipoprotein. On the basis of these results, it is concluded that lipoproteins control the rate of cholesterol biosynthesis in cultured choriocarcinoma cells by regulating the activity of HMG CoA reductase, and control the rate of synthesis of progesterone by providing the precursor, cholesterol. We suggest that progesterone synthesis by the trophoblast of the human placenta may also be regulated by the uptake of lipoprotein from maternal blood.",
+    "abstract_ja": "培養ヒト絨毛癌細胞において、血漿リポタンパク質によるHMG CoA還元酵素[メバロン酸-NADP+酸化還元酵素(CoA-アシル化)、EC 1.1.1.34]の活性と、プロゲステロン分泌の調節を検討した。HMG CoA還元酵素活性は、[14C]HMG CoAから[14C]メバロノラクトンが生成される速度から算出した。活性は、細胞可溶化タンパク質1mg当たり1分間に生成されるメバロノラクトンのナノモル数で表した。培地中のリポタンパク質の存在と還元酵素活性の間には逆相関が認められた。840μgコレステロール/mlを含むリポタンパク質富化培地で維持した細胞では、還元酵素活性の平均は0.25 nmol/分・mgタンパク質であった。リポタンパク質を除去すると活性は1.3 nmol/分・mgタンパク質に上昇した。リポタンパク質欠乏培地で維持した細胞の平均活性は1.5 nmol/分・mgタンパク質であったが、リポタンパク質を添加すると0.3 nmol/分・mgタンパク質に低下した。リポタンパク質存在下で維持した細胞では、プロゲステロンとプレグネノロンの培地への分泌速度が、リポタンパク質非存在下の細胞の2〜8倍であった。以上から、リポタンパク質は還元酵素活性を調節することでコレステロール生合成速度を制御し、コレステロールという前駆体を供給することでプロゲステロン合成速度を制御すると結論する。胎盤栄養膜によるプロゲステロン合成も、母体血からのリポタンパク質の取り込みによって同様に調節されている可能性がある。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-281705",
+    "title": "Monoclonal antibody defining a stage-specific mouse embryonic antigen (SSEA-1).",
+    "title_ja": "段階特異的マウス胚抗原（SSEA-1）を規定するモノクローナル抗体",
+    "authors": [
+      "Solter D",
+      "Knowles BB"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1978,
+    "pmid": "281705",
+    "doi": "10.1073/pnas.75.11.5565",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1978 PNAS study describes a monoclonal antibody made by fusing myeloma cells with spleen cells from a mouse immunized with F9 teratocarcinoma cells. The antibody reacts with embryonal carcinoma cells of mouse and human origin and with some preimplantation mouse embryos, defining a stage-specific embryonic antigen, SSEA-1. The antigen first appears on 8-cell stage blastomeres, is transiently expressed on trophectoderm, and is eventually expressed by every inner cell mass cell.",
+    "summary_ja": "1978年の報告で、F9奇形癌細胞で免疫したマウスの脾細胞とミエローマ細胞を融合して得たモノクローナル抗体を解析しました。この抗体はマウスとヒト由来の胎児性癌細胞および一部の着床前マウス胚に反応し、段階特異的胚抗原SSEA-1を規定します。抗原は8細胞期の割球に初めて現れ、内部細胞塊のすべての細胞で最終的に発現します。",
+    "abstract": "A monoclonal antibody derived by fusion of mouse myeloma cells with spleen cells from a mouse immunized with F9 teratocarcinoma cells is described. This antibody, which reacts with embryonal carcinoma cells of mouse and human origin and with some preimplantation stage mouse embryos, defines an embryonic stage-specific antigen. This stage-specific antigen (SSEA-1) is first detected on blastomeres of 8-cell stage embryos. Trophectodermal cells are transitorily positive; however, each cell in the inner cell mass eventually expresses this antigen.",
+    "abstract_ja": "F9奇形癌細胞で免疫したマウスの脾細胞をミエローマ細胞と融合して得た、モノクローナル抗体を記述する。この抗体は、マウスおよびヒト由来の胎児性癌細胞、ならびに一部の着床前マウス胚と反応し、段階特異的胚抗原を規定する。この段階特異的抗原（SSEA-1）は8細胞期の割球で初めて検出される。栄養外胚葉細胞は一時的に陽性であるが、内部細胞塊の各細胞は最終的にこの抗原を発現する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-356353",
+    "title": "Absence of reaction of a xenogenic anti-H-2 serum with mouse embryonal carcinoma cells.",
+    "title_ja": "マウス胎児性癌細胞に対する異種抗H-2血清の非反応性",
+    "authors": [
+      "Morello D",
+      "Gachelin G",
+      "Dubois P",
+      "Tanigaki N",
+      "Pressman D",
+      "Jacob F"
+    ],
+    "journal": "Transplantation",
+    "year": 1978,
+    "pmid": "356353",
+    "doi": "10.1097/00007890-197808000-00012",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study tested whether a rabbit antiserum against papain-solubilized H-2 antigens reacts with mouse embryonal carcinoma cells and other mouse cells. The serum did not react with F9-antigen-bearing cells, leading the authors to conclude that neither H-2 antigen nor cross-reacting material is expressed on these embryonal carcinoma cells. The work is basic immunology using mouse embryonal carcinoma lines as experimental cells rather than investigating tumors in patients. It has limited direct relevance to clinical germ cell tumor management. Only the abstract is available, so the conclusions rest on that summary alone.",
+    "summary_ja": "マウス胎児性癌(EC)細胞とその他のマウス細胞について、H-2抗原の発現を異種抗血清で検討した基礎免疫学の研究である。F9抗原を持つ細胞には反応せず、H-2抗原も交差反応物質も発現していないと結論した。臨床の胚細胞腫瘍を対象とした研究ではなく、関連性は限定的である。",
+    "abstract": "A rabbit antiserum raised against papain-solubilized H-2 antigens has been used to investigate the eventual expression of H-2 antigens and related molecules on embryonal carcinoma cells and on other types of mouse cells. No material reacting with this serum could be detected on cells carrying the F9 antigen. It is concluded that no H-2 antigen or cross-reacting material is expressed on these cell types.",
+    "abstract_ja": "パパイン可溶化したH-2抗原に対するウサギ抗血清を用い、マウス胎児性癌細胞およびその他のマウス細胞におけるH-2抗原関連分子の発現の有無を検討した。F9抗原を持つ細胞では、この血清と反応する物質は検出されなかった。したがって、これらの細胞種ではH-2抗原も交差反応物質も発現していないと結論された。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-359167",
+    "title": "Characterization of a xenogeneic antiserum raised against the fetal germ cells of the mouse: cross-reactivity with embryonal carcinoma cells.",
+    "title_ja": "マウス胎児の胚細胞に対する異種抗血清の特性解析：胎児性癌細胞との交差反応性",
+    "authors": [
+      "Heath JK"
+    ],
+    "journal": "Cell",
+    "year": 1978,
+    "pmid": "359167",
+    "doi": "10.1016/0092-8674(78)90105-8",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The authors raised a xenogeneic antiserum (PG-1) against mouse 13.5-day conceptus germ cells, which reacted with fetal germ cells of both sexes and adult male germ cells but not with tested nongerminal tissues. The serum also reacted with embryonal carcinoma cells from four teratocarcinoma lines, though absorption capacity varied between lines and some lines showed only partial reactivity. The antiserum is presented as a tool for studying the origin and development of the mouse germ cell lineage. The paper is basic developmental biology using teratocarcinoma lines as reagents rather than clinical research on patients with germ cell tumors.",
+    "summary_ja": "マウス13.5日胚の胚細胞に対する異種抗血清PG-1を作製し、胎児の胚細胞と成体の雄の胚細胞に反応したが、胚細胞以外の組織には反応しなかった。また4系統の奇形癌細胞株の胎児性癌細胞とも反応した。本抗血清はマウス胚細胞系譜の起源と発生の研究に有用とされる。臨床の胚細胞腫瘍患者を対象とした研究ではなく、基礎発生学の研究である。",
+    "abstract": "A xenogeneic antiserum (PG-1) raised against the germ cells of the 13.5d p.c. mouse conceptus reacts with the fetal germ cells of both sexes and adult male germ cells, but not with any nongerminal tissue that has been tested. PG-1 can also react with the EC cells of four different teratocarcinoma cell lines. There are, however, marked differences in the absorptive capacity of the different EC cell lines. The antigen(s) recognized by the antiserum are confined to only a proportion of cells in some EC lines. This antiserum has a number of potential applications in studies of the origin and development of the mouse germ cell lineage.",
+    "abstract_ja": "マウス13.5日胚の胚細胞に対して作製された異種抗血清(PG-1)は、両性の胎児の胚細胞と成体の雄の胚細胞に反応するが、検査した胚細胞以外の組織には反応しない。また、PG-1は4つの奇形癌細胞株の胎児性癌細胞と反応する。ただし、胎児性癌細胞株間で吸収能力には大きな差があり、一部の株では抗原を認識する細胞は一部に限られる。この抗血清は、マウス胚細胞系譜の起源と発生の研究に多くの応用が期待できる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-618547",
+    "title": "Complexity of nuclear and polysomal polyadenylated RNA in a pluripotent embryonal carcinoma cell line.",
+    "title_ja": "多能性胎児性癌細胞株における核内およびポリソーム内ポリアデニル化RNAの複雑性",
+    "authors": [
+      "Jacquet M",
+      "Affara NA",
+      "Robert B",
+      "Jakob H",
+      "Jacob F",
+      "Gros F"
+    ],
+    "journal": "Biochemistry",
+    "year": 1978,
+    "pmid": "618547",
+    "doi": "10.1021/bi00594a010",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study analyzed the complexity and abundance of polysomal and nuclear poly(A+) RNA sequences in a pluripotent embryonal carcinoma cell line. Using hybridization with specific cDNAs, the authors found that polysomal RNA represented about 0.5% and nuclear poly(A+) RNA about 2.5% of the single-copy component of haploid mouse DNA. Polysomal RNA contained three abundance classes corresponding to thousands of mRNA species. Most polysomal sequences were present in nuclear RNA but within a more restricted abundance range, suggesting posttranscriptional regulation. Globin-specific RNA was undetectable.",
+    "summary_ja": "多能性を持つ胎児性癌細胞株を用いて、ポリソーム及び核内のポリアデニル化RNAの配列複雑性と存在量を解析した基礎研究。ポリソームRNAは一倍体マウスDNAの単一コピー成分の約0.5%、核内RNAは約2.5%に相当した。ポリソームRNA中には約7000～8000種のmRNAに相当する存在量クラスが認められ、その多くは転写後の機構により量的に修飾されると考えられた。グロビン特異的RNAは検出されなかった。",
+    "abstract": "The base-sequence complexities and relative abundance of polysomal and nuclear polyadenylated [poly(A+)] RNA sequences have been analyzed in a pluripotent embryonal carcinoma cell line. Polysomal RNA and nuclear poly(A+) RNA have a complexity representing respectively 0.5% and 2.5% of the single copy component of haploid mouse DNA (1.8 X 10(6) K base pairs). By hybridization with specific cDNAs, three abundance classes were found in polysomal poly(A+) RNA, representing respectively 31%, 33%, and 36% of the RNA, with base sequence complexities of 0.1 X 10(3), 0.9 X 10(3), and 14.5 X 10(3) kilobases. This corresponds to 7000-8000 different mRNA species of an average length of 2000 nucleotides, present on an average of 5 to 600 copies per cell. In nuclear RNA, a major class of abundance was found with a complexity of 100 X 10(3) kilobases, each sequence being present in 1 copy per nucleus. The majority of the polysomal poly(A+) RNA sequences are represented in the nuclear poly(A+) RNA but are present in a more restricted range of relative abundance implying posttranscriptional mechanisms of quantitative modulation: polysomal RNA sequences appear to be preferentially transcribed into nuclear cDNA suggesting a preferential location of these sequences close to poly(A) sequences. The presence of a specialized gene product, globin specific RNA, could not be detected either in the nuclear or polysomal compartments of embryonal carcinoma cells, even at levels that would have detected one sequence per 50 cells.",
+    "abstract_ja": "多能性を持つ胎児性癌細胞株において、ポリソーム及び核内のポリアデニル化[poly(A+)]RNA配列の塩基配列複雑性と相対存在量を解析した。ポリソームRNA及び核内poly(A+)RNAの複雑性は、一倍体マウスDNA（1.8×10^6 kb）の単一コピー成分のそれぞれ0.5%及び2.5%に相当した。特異的cDNAとのハイブリダイゼーションにより、ポリソームpoly(A+)RNAには3つの存在量クラスが認められ、それぞれRNAの31%、33%、36%を占め、塩基配列複雑性は0.1×10^3、0.9×10^3、14.5×10^3 kbであった。これは平均長2000ヌクレオチドの約7000～8000種のmRNA種に相当し、細胞あたり平均5～600コピーで存在する。核内RNAには複雑性100×10^3 kbの主要な存在量クラスが認められ、各配列は核あたり1コピーであった。ポリソームpoly(A+)RNA配列の大部分は核内poly(A+)RNAにも含まれるが、より限定された相対存在量の範囲にあり、定量的な修飾に転写後機構が関与することが示唆された。ポリソームRNA配列は核内cDNAへ優先的に転写されており、これらの配列がポリA配列の近傍に優先的に位置することが示唆された。胎児性癌細胞では、核内またはポリソーム区画においてグロビン特異的RNAは検出されず、その検出限界は細胞50個に1配列であった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-641346",
+    "title": "Inhibition of tumor growth mediated by lymphocytes sensitized in vitro to a syngeneic murine teratocarcinoma 402AX.",
+    "title_ja": "同系マウス奇形癌402AXに体外感作したリンパ球による腫瘍増殖抑制",
+    "authors": [
+      "Bartlett PF",
+      "Fenderson BA",
+      "Edidin M"
+    ],
+    "journal": "J Immunol",
+    "year": 1978,
+    "pmid": "641346",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Syngeneic mouse lymphocytes were sensitized in vitro against TerC, a cell line derived from the 129-strain teratocarcinoma 402AX. The effector cells inhibited TerC growth in vitro and prevented its growth in vivo. Cytotoxicity by 51Cr release was not observed, though BCG- and ConA-activated killers lysed TerC. The effectors showed no H-2 restriction and inhibited various tumor lines, suggesting shared oncofetal antigens.",
+    "summary_ja": "129系マウスの奇形癌402AXに由来する細胞株TerCで同系リンパ球を体外感作した。生成された効果細胞はTerCの増殖をin vitroおよびin vivoで抑制した。51Cr遊離法では細胞傷害は確認されなかったが、TerCは他の活性化キラー細胞により溶解された。オンコフェタル抗原の関与が示唆される。",
+    "abstract": "TerC, a cell line derived from a strain 129 teratocarcinoma 402AX, was used to sensitize syngeneic 129 (H-2bc) splenic lymphocytes in vitro. The effector cells generated inhibited in vitro growth of TerC as measured by an 125I-IUDR ost-labeling technique. It was also shown, with a modified Winn assay, that the sensitized cells were effective in preventing TerC growth in vivo. The effector lymphocyte was nonadherent to nylon wool was sensitive to anti-Thy-1.2 + C, and was phenotypically Ly 1-2+. The anti-TerC effector T lymphocytes were not functional in a 51Cr-release assay. However, this failure to lyse appears not to be due to some intrinsic membrane resistance since both BCG and ConA-activated killers were able to lyse TerC. The TerC-sensitized lymphocytes displayed no H-2 restriction and were able to growth inhibit in vitro a wide range of tumorigenic cell lines, e.g., P815 (H-2d), EL-4 (H-2b),Sal (H-2a), and BALB/c (H-2d) 3T12. Mouse blastocyst cell lines were also inhibited. BALB/c 3T3 and mouse fibroblast cell strains were not growth inhibited. Thus, it appears that oncofetal antigens expressed on TerC are capable of initiating a cell-mediated response and that these antigenic specificities are shared by many transformed cell lines.",
+    "abstract_ja": "129系マウス由来の奇形癌402AXの細胞株TerCを用いて、同系129系(H-2bc)の脾リンパ球を体外で感作した。生成された効果細胞は、125I-IUdR後標識法によりin vitroでのTerCの増殖を抑制した。改変Winnアッセイにより、感作細胞はin vivoでもTerCの増殖を防止できることが示された。効果リンパ球はナイロンウール非付着性で、抗Thy-1.2+補体に感受性であり、表現型はLy 1-2+であった。抗TerC効果T細胞は51Cr遊離法では機能せず溶解できなかった。ただし、この溶解不全は膜の内在性抵抗によるものではないと思われる。BCGおよびConA活性化キラー細胞はTerCを溶解可能だった。TerC感作リンパ球はH-2拘束性を示さず、多様な腫瘍性細胞株の増殖をin vitroで抑制した。マウス胚盤胞細胞株も抑制された。BALB/c 3T3およびマウス線維芽細胞株は増殖抑制されなかった。したがって、TerCに発現するオンコフェタル抗原が細胞性免疫応答を惹起でき、これら抗原特異性は多くの形質転換細胞株に共通していると思われる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-646299",
+    "title": "Dermoid of the nasopharynx.",
+    "title_ja": "鼻咽頭の皮様嚢腫",
+    "authors": [
+      "Lloyd R",
+      "Chuprevich T",
+      "Gilbert E"
+    ],
+    "journal": "Ann Otol Rhinol Laryngol",
+    "year": 1978,
+    "pmid": "646299",
+    "doi": "10.1177/000348947808700222",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a cystic nasopharyngeal polyp in a three-year-old girl. The authors note that teratomas of the nasopharynx have been reported, but the lesion they found fits a hamartoma-like or dermoid pattern and had not been described before in this site. The report is primarily about a rare head and neck lesion and its histological features, with germ cell tumor classification uncertain.",
+    "summary_ja": "3歳女児の鼻咽頭嚢胞性ポリープの症例報告である。鼻咽頭の奇形腫の報告はあるものの、本例は過誤腫様あるいは皮様嚢腫様の組織像を示し、既報は見当たらなかった。主題は稀な頭頸部病変の組織学的特徴であり、胚細胞腫瘍としての分類は不確かである。",
+    "abstract": "A case of a cystic polyp of the nasopharynx in a three-year-old Caucasian female is presented. Although cases of teratomas of the nasopharynx have been reported, our literature search revealed only one prior report of a hamartoma. To our knowledge, a lesion with these histological features occurring in the nasopharynx has not been previously reported.",
+    "abstract_ja": "3歳の白人女児に生じた鼻咽頭の嚢胞性ポリープの症例を報告する。鼻咽頭の奇形腫の症例は報告されているが、文献検索では過誤腫の報告が1例あるのみであった。著者らの知る限り、この組織学的特徴を有する病変が鼻咽頭に生じた例は報告されていない。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "female",
+      "ag": "child",
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-686026",
+    "title": "Primary amenorrhea associated with hirsutism, acanthosis nigricans, dermoid cysts of the ovaries and a new type of insulin resistance.",
+    "title_ja": "原発性無月経、多毛症、黒色表皮症、卵巣類皮嚢腫、および新型インスリン抵抗性",
+    "authors": [
+      "Imperato-McGinley J",
+      "Peterson RE",
+      "Sturla E",
+      "Dawood Y",
+      "Bar RS"
+    ],
+    "journal": "Am J Med",
+    "year": 1978,
+    "pmid": "686026",
+    "doi": "10.1016/0002-9343(78)90838-0",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "A 15.5-year-old girl presented with primary amenorrhea, hirsutism, acanthosis nigricans, and insulin resistance. Ovarian vein catheterization showed bilaterally elevated testosterone and androstenedione. Surgery revealed multiple dermoid cysts of both ovaries together with polycystic ovaries. The authors propose that the dermoid cysts may contribute to polycystic ovarian disease. Insulin resistance appeared to be at the post-receptor level, and acanthosis nigricans improved after surgery as androgen levels normalized.",
+    "summary_ja": "原発性無月経、多毛、黒色表皮症、インスリン抵抗性を呈した15歳半の女児例。卵巣静脈採血で両側のテストステロン・アンドロステンジオンの高値を確認した。手術で両側卵巣に多発する類皮嚢腫と多嚢胞性卵巣所見を認めた。類皮嚢腫が多嚢胞性卵巣疾患の成因に関与した可能性を提唱し、術後に黒色表皮症とアンドロゲン値は改善した。",
+    "abstract": "We describe a 15 1/2 year old presenting with primary amenorrhea, hirsutism, acanthosis nigricans and insulin resistance. Ovarian vein catheterization studies revealed bilateral excess plasma testosterone and androstenedione secretion, and at surgery multiple dermoid cysts of both ovaries were found in association with polycystic ovaries. The suggestion that the dermoid cysts may be causative in the evolution of the polycystic ovarian disease has been made. The mechanism of the insulin resistance appears to be at the post receptor level. The acanthosis nigricans diminished following surgery with normalization of the plasma androgens.",
+    "abstract_ja": "15歳半の女児が、原発性無月経、多毛症、黒色表皮症、およびインスリン抵抗性を呈した症例を報告する。卵巣静脈カテーテル検査では両側のテストステロンおよびアンドロステンジオンの過剰分泌が認められた。手術時には、多嚢胞性卵巣とともに両側卵巣に多発する類皮嚢腫が認められた。類皮嚢腫が多嚢胞性卵巣疾患の進展に関与している可能性が示唆されている。インスリン抵抗性は受容体後レベルの機序と考えられた。黒色表皮症は手術後に軽快し、アンドロゲン値は正常化した。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adolescent",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
+  },
+  {
+    "id": "pmid-77018",
+    "title": "Growth of embryonal carcinoma cells in serum-free medium.",
+    "title_ja": "無血清培地におけるマウス胎児性癌細胞の増殖",
+    "authors": [
+      "Rizzino A",
+      "Sato G"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1978,
+    "pmid": "77018",
+    "doi": "10.1073/pnas.75.4.1844",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1978 PNAS study describes a serum-free medium that supports long-term growth of two mouse embryonal carcinoma cell lines, PCC.4 aza-1 and F9. Cells transferred from serum-containing medium showed no detectable lag in growth. PCC.4 aza-1 retained its capacity to differentiate in vivo after more than 20 generations. The authors propose the medium as a general serum-free formulation for embryonal carcinoma cell culture.",
+    "summary_ja": "1978年のPNAS誌掲載研究。マウス胎児性癌細胞株PCC.4 aza-1とF9の長期増殖を支える無血清培地を報告した。血清含有培地から移行しても増殖の遅れは検出されなかった。PCC.4 aza-1は20世代以上培養後も、生体内での分化能を保持していた。胎児性癌細胞の培養に広く使える培地として提案された。",
+    "abstract": "Two mouse embryonal carcinoma cell lines, PCC.4 aza-1 and F9, have been grown in serum-free F-12 medium supplemented with Pedersen fetuin, insulin, transferrin, and 2-mercaptoethanol. This medium supports long-term growth of both cell lines. When these cells are transferred from medium containing serum to this serum-free medium, growth continues without any detectable lag. PCC.4 aza-1 grown in this medium for over 20 generations retains the capacity to differentiate in vivo. This medium appears to be a general serum-free medium for the growth of embryonal carcinoma cells.",
+    "abstract_ja": "マウスの胎児性癌細胞株2種、PCC.4 aza-1およびF9を、Pedersenフェツイン、インスリン、トランスフェリン、2-メルカプトエタノールを添加した無血清F-12培地で培養した。この培地で長期増殖が維持された。血清含有培地から本無血清培地へ移行しても、検出可能な増殖の遅れは認められなかった。この培地で20世代以上培養したPCC.4 aza-1は、生体内で分化する能力を保持していた。この培地は胎児性癌細胞の増殖に一般的に使用できる無血清培地と思われる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-201648",
+    "title": "The characterization of SV40-transformed cell lines derived from mouse teratocarcinoma: growth properties and differentiated characteristics.",
+    "title_ja": "SV40で形質転換したマウス奇形癌由来細胞株：増殖特性と分化形質",
+    "authors": [
+      "Topp W",
+      "Hall JD",
+      "Rifkin D",
+      "Levine AJ",
+      "Pollack R"
+    ],
+    "journal": "J Cell Physiol",
+    "year": 1977,
+    "pmid": "201648",
+    "doi": "10.1002/jcp.1040930212",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The authors established 31 SV40-transformed cell lines from mouse teratocarcinoma embryoid bodies and characterized their growth properties, tumorigenicity, and differentiation markers. None formed tumors in syngeneic mice, and only three showed transformation across all criteria. Some lines expressed creatine phosphokinase while others expressed plasminogen activator, and no line expressed both. The authors suggest these lines may help reconstruct developmental pathways of differentiating teratomas in vitro.",
+    "summary_ja": "マウス奇形癌の胚様体から、SV40で形質転換した31の細胞株を樹立し、増殖性、腫瘍形成能、分化マーカーを解析した研究である。同系マウスでの腫瘍形成はみられず、3株のみが全基準で形質転換を示した。分化マーカーの発現パターンは株により異なり、二つの酵素活性が同時に高い株はなかった。in vitroで奇形腫の分化経路を再構築する系としての利用が示唆されている。",
+    "abstract": "Mouse teratocarcinoma cells derived from embryoid bodies of 129SVsl mice were cultured in vitro to permit their differentiation. These cells were then infected with simiam virus 40 (SV40) and 31 cloned cell lines (SVTER) were derived from these cultures. All 31 SVTER cell lines contained the SV40 tumor (T) antigen and grew as permanent lines in culture. Mock-infected embryoid body cultures did not give rise to permanent cell lines. The morphology of each SVTER cell line was distinct and did not change during successive subclonings. The growth properties and tumorigenic potential of all 31 SVTER cell lines were investigated. None of these lines produced tumors in 129SVsl mice. Each cell line was tested for its ability to (1) grow in medium containing 1% serum, (2) plate on cell monolayer, and (3) form clones in methocel suspension. Only three of the SVTER cell lines were transformed with respect to all three of these criteria. Most of these cell lines were minimal transformants. The SVTER cell lines were tested for creatine phospholinase (CPK), an enzyme activity chracteristic of mouse brain and muscle tissue, and the protease, plasminogen activator (PA) which is found in embryoid bodies and several differentiated cell types. Some of the SVTER cell lines contained high levels of CPK, while others had high levels of PA and a third group of cells contained neither enzyme activity. No SVTER cell line was found with high levels of both these enzyme activities. This result suggests that mutually exclusive sets of genes are expressed in these cells as might be expected from the distinct tissue distribution of the two enzyme activities studied. These SVTER cell lines may be useful in reconstructing developmental pathways of differentiating teratomas in vitro.",
+    "abstract_ja": "マウスの奇形癌細胞を培養して分化させ、そこからSV40ウイルスに感染させて、31の永続的なクローン細胞株（SVTER）を得た。これら31株はいずれもSV40のT抗原を含み、継代培養で永続的に増殖した。非感染の胚様体培養からは永続株は得られなかった。各細胞株の形態は互いに異なり、サブクローニングを重ねても変化しなかった。増殖特性と腫瘍形成能を調べたところ、いずれの株も129SVsl系マウスでは腫瘍を形成しなかった。各細胞株について、(1)1%血清を含む培地での増殖、(2)単層培養上での接着、(3)メチルセルロース懸濁中でのコロニー形成、を試験した。3つの基準すべてで形質転換していたのは3株のみであり、大半は最小限の形質転換体であった。SVTER細胞株は、脳と筋肉に特徴的なクレアチンホスホキナーゼ（CPK）活性と、胚様体や多くの分化細胞に見られるプラスミノーゲンアクチベーター（PA）活性について検査された。CPKを高発現する株、PAを高発現する株、どちらも発現しない株があり、両方が高いものはなかった。これは、この2つの酵素活性の組織分布が異なることと一致して、互いに排他的な遺伝子群が発現していることを示唆する。これらのSVTER細胞株は、in vitroで分化する奇形腫の発生経路を再構築するのに有用かもしれない。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-264681",
+    "title": "Rejection by syngeneic mice of cell variants obtained by mutagenesis of a malignant teratocarcinoma cell line.",
+    "title_ja": "悪性奇形癌株の変異体クローンは同系マウスで拒絶される",
+    "authors": [
+      "Boon T",
+      "Kellermann O"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1977,
+    "pmid": "264681",
+    "doi": "10.1073/pnas.74.1.272",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Researchers treated PCC4.azal malignant teratocarcinoma cells with a mutagen and isolated 55 clones, of which 12 failed to form tumors in syngeneic 129/Sv mice. These tum-minus clones still formed tumors in irradiated mice and stimulated immune memory cells that protected animals and conferred resistance by adoptive transfer. The authors conclude that the tum-minus clones are rejected by an immune response in syngeneic hosts. The study is a murine tumor immunology model using embryonal carcinoma-derived cells.",
+    "summary_ja": "PCC4.azal悪性奇形癌細胞に変異原を作用させ、55クローンを単離した研究である。そのうち12クローンは同系マウスで腫瘍を形成しなかったが、照射マウスでは形成した。これらの株は免疫記憶細胞を誘導し、養子移入により防御能を与えた。同系宿主での免疫拒絶が原因と結論づけられている。胎児性癌由来細胞を用いたマウス腫瘍免疫モデルの研究である。",
+    "abstract": "Cells from the malignant teratocarcinoma line PCC4.azal were treated with the mutagen N-methyl-N'-nitro-N-nitrosoguanidine. Fifty-five clones were isolated from the surviving cells. Twelve clones are unable to form tumors in the syngeneic 129/Sv mice. However, these \"tum-\" clones form tumors as readily as the original cells when they are injected into irradiated mice. Moreover, they stimulate the production of immune memory cells, which protect the injected animals and confer resistance by adoptive transfer. The tum- clones are therefore unable to generate tumors in syngeneic mice because they elicit an immune rejection response.",
+    "abstract_ja": "悪性奇形癌株PCC4.azalの細胞を変異原N-メチル-N'-ニトロ-N-ニトロソグアニジンで処理し、生存細胞から55クローンを単離した。そのうち12クローンは同系129/Svマウスで腫瘍を形成できなかった。しかしこれらの「tum-」クローンは、照射マウスに注射すると元の細胞と同様に腫瘍を形成する。さらに、免疫記憶細胞の産生を誘導し、それらが注射された動物を防御し、養子移入によって抵抗性を付与する。したがって、tum-クローンは同系マウスでは免疫拒絶反応により腫瘍を形成できない。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-269895",
+    "title": "Dermoid cyst of the floor of the mouth in an infant. (Case report).",
+    "title_ja": "乳児の口腔底に生じた類皮嚢腫（症例報告）",
+    "authors": [
+      "Yeschua R",
+      "Bab IA",
+      "Wexler MR",
+      "Neuman Z"
+    ],
+    "journal": "J Maxillofac Surg",
+    "year": 1977,
+    "pmid": "269895",
+    "doi": "10.1016/s0301-0503(77)80109-4",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a dermoid cyst of the floor of the mouth in an infant. The authors review its embryological etiology and the classification proposed by Meyer, which is based on histological differentiation of the cyst wall. Differences in the epithelial lining of the cysts are highlighted, followed by a discussion of differential diagnosis and treatment. The paper concerns an oral developmental cyst rather than a testicular or ovarian germ cell tumor, so its link to the site's scope is indirect.",
+    "summary_ja": "本症例報告は、乳児の口腔底に生じた類皮嚢腫を取り上げたものである。病因は主に発生学的であり、嚢胞壁の組織学的分化に基づくMeyerの分類を紹介している。嚢胞上皮の差異、鑑別診断、治療について述べている。精巣や卵巣の胚細胞腫瘍を扱う論文ではなく、当サイトの対象との関連は間接的である。",
+    "abstract": "Dermoid cysts of the floor of the mouth in the infant are rarely encountered although the aetiology is mainly embryological. Meyer proposes the classification of the cysts based on the histological differentiation of the elements of the cyst wall. A case is reported which shows differences in the epithelial lining of the cysts found followed by the differential diagnosis and treatment.",
+    "abstract_ja": "乳児の口腔底の類皮嚢腫はまれであるが、病因は主に発生学的である。Meyerは、嚢胞壁の上皮成分の組織学的分化に基づいて嚢胞の分類を提唱している。症例が報告されており、発見された嚢胞の上皮ライニングの違いが示され、その後鑑別診断と治療が述べられている。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "ag": "infant",
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-271982",
+    "title": "Mosaic mice with teratocarcinoma-derived mutant cells deficient in hypoxanthine phosphoribosyltransferase.",
+    "title_ja": "ヒポキサンチンホスホリボシルトランスフェラーゼ欠損の奇形癌由来変異細胞を有するモザイクマウス",
+    "authors": [
+      "Dewey MJ",
+      "Martin DW Jr",
+      "Martin GR",
+      "Mintz B"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1977,
+    "pmid": "271982",
+    "doi": "10.1073/pnas.74.12.5564",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Mutagenized, HPRT-deficient cells from a mouse teratocarcinoma line were injected into blastocysts to generate mosaic mice. The tumor-derived cells contributed to normal embryogenesis without forming tumors, showing developmental totipotency and tissue-specific differentiation. The model mirrors human Lesch-Nyhan disease and may help identify tissue sources of disease features. The study is basic developmental genetics rather than clinical germ cell tumor research.",
+    "summary_ja": "変異導入したHPRT欠損のマウス奇形癌細胞を胚盤胞に注入し、モザイクマウスを作製した基礎研究。腫瘍由来細胞は腫瘍を形成せず正常発生に参加し、分化した組織でも機能を保った。ヒトのLesch-Nyhan病のモデルとなりうる。臨床的な胚細胞腫瘍の研究ではない。",
+    "abstract": "Mutagenized stem cells of a cultured mouse teratocarcinoma cell line were selected for resistance to the purine base analog 6-thioguanine. Cells of a resistant clone were completely deficient in activity of the enzyme hypoxanthine phosphoribosyltransferase (HPRT, IMP:pyrophosphate phosphoribosyltransferase, EC 2.4.2.8), the same X-linked lesion as occurs in human Lesch-Nyhan disease. After microinjection into blastocysts of another genetic strain, the previously malignant cells successfully participated in normal embryogenesis and tumor-free, viable mosaic mice were obtained. Cells of tumor lineage were identified by strain markers in virtually all tissues of some individuals. Mature function of those cells was evident from their tissue-specific products (e.g., melanins, liver proteins). These mutagenized teratocarcinoma cells are therefore developmentally totipotent. Retention of the severe HPRT deficiency in the differentiated state was documented in extracts of mosaic tissues by depressed specific activity of the enzyme, and also by presence of unlabeled clones in autoradiographs of explanted cells incubated in [(3)H]hypoxanthine. Some mosaic individuals had mutant-strain cells in only one or a few tissues. Such animals may provide unique opportunities to identify the tissue sources of particular aspects of the complex disease syndrome. The tissue distribution of HPRT-deficient cells suggests that selection against them is particularly strong in blood of the mosaic mice, as is already known to be the case in human heterozygotes. This phenotypic parallelism supports the expectation that afflicted F(1) male mice that might be obtained from mutant germ cells can serve as a model of the human disease.",
+    "abstract_ja": "変異原処理したマウス奇形癌細胞株の幹細胞を、6-チオグアニンに対する耐性によって選択した。耐性クローンは、ヒポキサンチンホスホリボシルトランスフェラーゼ(HPRT、IMP:ピロリン酸ホスホリボシルトランスフェラーゼ、EC 2.4.2.8)活性を完全に欠いていた。この欠損は、ヒトのLesch-Nyhan病と同じX連鎖性の病変である。別の遺伝系統の胚盤胞に顕微注入すると、以前は悪性であった細胞は正常な胚発生に参加し、腫瘍を形成しない生存可能なモザイクマウスが得られた。一部の個体では、腫瘍系譜の細胞が系統マーカーによりほぼ全ての組織で同定された。分化した機能は、組織特異的産物(例:メラニン、肝臓タンパク質)により明らかであった。これらの変異奇形癌細胞は、発生学的に全能性を保持している。モザイク組織の抽出物では、酵素の比活性低下により分化状態でもHPRT欠損の維持が確認された。また、[3H]ヒポキサンチンで標識した外植細胞のオートラジオグラフにおいて未標識クローンが認められたことからも裏付けられた。一部のモザイク個体では、変異株由来の細胞が一つまたはいくつかの組織にのみ存在した。このような動物は、この複雑な疾患症候群の特定の側面の組織起源を同定する独自の機会を提供しうる。HPRT欠損細胞の組織分布は、ヒトヘテロ接合体で既に知られているように、モザイクマウスの血液では特に強い淘汰が働くことを示唆する。この表現型の類似性は、変異胚細胞から得られた被罹患F1雄マウスがヒト疾患のモデルとなり得るという予測を支持する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-558990",
+    "title": "Embryonal carcinoma cells (and their somatic cell hybrids) are resistant to infection by the murine parvovirus MVM, which does infect other teratocarcinoma-derived cell lines.",
+    "title_ja": "胎児性癌細胞(およびその体細胞雑種)はマウスパルボウイルスMVMの感染に抵抗性を示し、他の奇形癌由来細胞株は感染される",
+    "authors": [
+      "Miller RA",
+      "Ward DC",
+      "Ruddle FH"
+    ],
+    "journal": "J Cell Physiol",
+    "year": 1977,
+    "pmid": "558990",
+    "doi": "10.1002/jcp.1040910309",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1977 cell biology study examines whether teratocarcinoma-derived cells are infected by minute virus of mice (MVM), a parvovirus. Pluripotent embryonal carcinoma cells resisted infection, as did somatic cell hybrids containing them. Among blastocyst-derived lines, only a parietal yolk sac cell line was resistant. Non-pluripotent teratocarcinoma-derived cells were susceptible. The authors suggest these cultures could help identify cellular factors controlling viral susceptibility. The work is basic virology rather than clinical oncology.",
+    "summary_ja": "1977年の基礎研究で、奇形癌由来の細胞株がマウスパルボウイルスMVMに感受性を示すかを検討している。多能性の胎児性癌細胞はこの感染に抵抗性を示し、その体細胞雑種も同様であった。感受性を決める細胞因子の解析に役立つ可能性が示されている。",
+    "abstract": "Minute virus of mice (MVM), a non-defective parvovirus, has been shown to infect cultures of non-pluripotent differentiated teratocarcinoma-derived cells, but pluripotent (and \"nullipotent\") embryonal carcinoma cells derived from the same teratocarcinoma resist MVN infection. Somatic cell hybrids between an embryonal carcinoma line and Friend erythroblastic leukemia cells are also resistant to MVM, even though Friend cells are susceptible. Among three blastocyst-derived lines tested, only one, a parietal yolk sac cell line, resists MVM infection. These results suggest that teratocarcinoma cultures may provide useful systems in which to study the cellular factors which mediate susceptibility to this teratogenic and oncolytic virus.",
+    "abstract_ja": "マウスの最小ウイルス（MVM）は、非欠損性のパルボウイルスであり、分化した非多能性の奇形癌由来細胞の培養には感染することが示されている。一方、同じ奇形癌に由来する多能性（および「無能性」）の胎児性癌細胞はMVM感染に抵抗性を示す。胎児性癌細胞株と感受性のあるFriend赤白血病細胞との体細胞雑種もMVMに抵抗性であった。胚盤胞由来の3系統の検討では、壁側卵黄嚢細胞株のみがMVM感染に抵抗性を示した。これらの結果は、奇形癌の培養系が、このウイルスへの感受性を媒介する細胞因子の研究に有用な系を提供しうることを示唆している。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-844971",
+    "title": "Ovarian neoplasms and pregnancy.",
+    "title_ja": "妊娠における卵巣腫瘍",
+    "authors": [
+      "Karpathios S",
+      "Lolis D",
+      "Tzigounis B",
+      "Kaskarelis D"
+    ],
+    "journal": "Int Surg",
+    "year": 1977,
+    "pmid": "844971",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This report describes 16 benign cystic ovarian neoplasms identified among 5,616 pregnancies, including 13 serous cystadenomas and 3 dermoid cysts. The only serious complication was ovarian torsion in one case. Dermoid cysts, which are mature teratomas, form a small part of the cohort, so germ cell tumor content is limited. The study focuses on the frequency and complications of ovarian neoplasms during pregnancy rather than on germ cell tumors specifically.",
+    "summary_ja": "妊娠5,616例の中で見つかった良性嚢胞性卵巣腫瘍16例を報告した研究です。内訳は漿液性嚢胞腺腫13例と類皮嚢腫（成熟奇形腫）3例です。重篤な合併症は1例の卵巣捻転のみでした。胚細胞腫瘍は一部にとどまり、主題は妊娠中の卵巣腫瘍の頻度と合併症です。",
+    "abstract": "Sixteen cases of benign cystic ovarian neoplasms (13 serous cystadenomas and 3 dermoids) were discovered among 5,616 pregnancies. The only serious complication was torsion of the ovary containing the tumor in one case.",
+    "abstract_ja": "妊娠5,616例のうち、良性嚢胞性卵巣腫瘍16例（漿液性嚢胞腺腫13例、類皮嚢腫3例）を認めた。重大な合併症は、1例で生じた腫瘍を含む卵巣捻転のみであった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "n": 16,
+      "th": [
+        "epidemiology"
+      ]
+    }
+  },
+  {
+    "id": "pmid-886245",
+    "title": "Blood formation in a clonal cell line of mouse teratocarcinoma.",
+    "title_ja": "マウス奇形癌クローン細胞株における血液形成",
+    "authors": [
+      "Cudennec C",
+      "Nicolas JF"
+    ],
+    "journal": "J Embryol Exp Morphol",
+    "year": 1977,
+    "pmid": "886245",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examines a clonal mouse teratocarcinoma cell line cultured in submerged and organotypic conditions. The cells differentiate into endodermal vesicles and blood islands, which give rise to megalocytes resembling those of the normal mouse embryo yolk sac. Haemoglobin-containing cell formation ceases after a time and is not replaced by adult haematopoiesis in culture. The work mainly uses the teratocarcinoma line as a model of embryonic differentiation and haematopoiesis. It does not investigate germ cell tumor biology or clinical management.",
+    "summary_ja": "マウス奇形癌のクローン細胞株を用いて、器官培養で内胚葉小胞と血島が形成されることを示す。これらは正常胚の卵黄嚢に見られるメガロサイトを生じる。ヘモグロビン含有細胞の形成は一定期間後に停止し、成体型造血には置き換わらない。胚発生と造血の研究モデルとしての性格が強い。",
+    "abstract": "Pluripotent cells of a teratocarcinoma clonal line differentiate into various tissues when they are cultivated in submerged cultures. We describe here the formation of endodermal vesicles and blood islands in organotypic cultures of such cells. These are the first macroscopically visible tissues to appear in organ culture and they give rise to megalocytes, the ultimate stage of blood cell evolution in the normal mouse embryo yolk-sac. As in the normal embryo yolk-sac, the formation of haemoglobin-containing cells stops after a while, but it is not replaced by adult haemopoiesis in culture.",
+    "abstract_ja": "奇形癌のクローン細胞株の多能性細胞は、液中培養下で各種組織へ分化する。本研究では、そのような細胞の器官培養において内胚葉小胞と血島が形成されることを記載する。これらは正常マウス胚の卵黄嚢で最初に肉眼的に観察される組織であり、正常マウス胚における血球進化の最終段階であるメガロサイトを生じる。正常な卵黄嚢と同様に、ヘモグロビン含有細胞の形成は一定期間後に停止するが、培養下では成体型造血に置き換わることはない。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1067391",
+    "title": "Pigmented dermoid cyst of the floor to the mouth: a comparison of two cases.",
+    "title_ja": "色素性類皮嚢腫（口腔底）の2例の比較",
+    "authors": [
+      "Adekeye EO",
+      "Shamia RI"
+    ],
+    "journal": "J Oral Surg",
+    "year": 1976,
+    "pmid": "1067391",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1976 J Oral Surg report describes two cases of very large midline sublingual dermoid cysts. One case showed unusual features, including failure of the cyst to penetrate the geniohyoid septum despite its size, and melanin pigmentation of the cyst lining. A surgical technique for managing such cysts is described. The report focuses on oral surgery rather than germ cell tumor biology.",
+    "summary_ja": "口腔底の大型正中部舌下類皮嚢腫2例を比較した1976年の口腔外科報告。1例では嚢腫が顎舌骨筋隔壁を越えず、嚢胞内面にメラニン色素沈着を認めた。大型嚢腫に対する手術手技が記載されている。胚細胞腫瘍としての検討ではなく、口腔外科的管理が中心である。",
+    "abstract": "Two cases of very large midline sublingual dermoid cysts are reported; one case had unique features. A useful surgical technique for the management of such cysts in described. The failure of the cyst in one case to penetrate the geniohyoid septum despite its large size and the presence of melanin pigmentation in the cystic lining are emphasized.",
+    "abstract_ja": "2例の非常に大きな正中舌下類皮嚢腫を報告する。1例は特異な所見を有していた。嚢腫は大きいにもかかわらず、オトガイ舌骨筋隔壁を貫通していなかった。また、嚢腫の内面にはメラニン色素沈着が認められた。このような嚢腫の治療に有用な手術手技を記載する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 2,
+      "th": [
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1255585",
+    "title": "Monoamine oxidase in rat placenta, human placenta, and cultured choriocarcinoma.",
+    "title_ja": "ラット・ヒト胎盤および培養絨毛癌におけるモノアミン酸化酵素",
+    "authors": [
+      "Chen CH",
+      "Klein DC",
+      "Robinson JC"
+    ],
+    "journal": "J Reprod Fertil",
+    "year": 1976,
+    "pmid": "1255585",
+    "doi": "10.1530/jrf.0.0460477",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study compared monoamine oxidase (MAO) activity in rat placenta at several gestational stages, in human term placenta, and in cultured choriocarcinoma cells. MAO activity in rat placenta rose during late gestation and then fell near term, while human term placenta showed much higher activity than rat placenta. Cultured choriocarcinoma showed no detectable MAO activity. The work is primarily an enzymological study of placental tissue rather than of choriocarcinoma as a disease.",
+    "summary_ja": "ラットおよびヒト胎盤、培養絨毛癌細胞におけるモノアミン酸化酵素(MAO)活性を比較した研究である。ラット胎盤のMAO活性は妊娠後期に上昇し、分娩前に低下した。ヒト正期胎盤の活性はラットより高く、培養絨毛癌ではMAO活性は検出されなかった。主眼は胎盤の酵素学的研究であり、絨毛癌という疾患そのものの研究ではない。",
+    "abstract": "The activity of monoamine oxidase (MAO), an enzyme which metabolized catecholamines and indoleamines, was determined in rat placenta at various stages of gestation, in human term placenta, and in choriocarcinoma grown in culture. From Day 15 to Day 20 of gestation the specific activity (units/mg protein) of MAO in rat placenta increased at least 3-fold; from Day 20 to the time of parturition, it decreased about 50%. The specific activity of MAO in human placenta at term was about 50%. The specific activity of MAO in human placenta at term was about 8 times higher than that of rat placenta at term. No MAO activity was found in choriocarcinoma grown in culture.",
+    "abstract_ja": "ラット胎盤(妊娠第15～20日および分娩時まで)、ヒト正期胎盤、そして培養絨毛癌におけるモノアミン酸化酵素(MAO)の活性を測定した。MAOはカテコールアミンおよびインドールアミンを代謝する酵素である。ラット胎盤のMAO比活性(units/mg protein)は妊娠第15日から第20日にかけて少なくとも3倍に上昇し、第20日から分娩までに約50%低下した。正期ヒト胎盤のMAO比活性はラットの約8倍であった。正期ヒト胎盤におけるMAO比活性は約50%であった(原文の記載)。培養絨毛癌ではMAO活性は検出されなかった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1261075",
+    "title": "45,XO/46,XYg dic mosaicism in a patient with ambiguous genitalia.",
+    "title_ja": "両性具有の外観を呈した患者における45,XO/46,XY dicモザイク症",
+    "authors": [
+      "Tuncbilek E",
+      "Halicioglu C",
+      "Bobrow M",
+      "Ustay K"
+    ],
+    "journal": "Clin Genet",
+    "year": 1976,
+    "pmid": "1261075",
+    "doi": "10.1111/j.1399-0004.1976.tb01588.x",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a patient with ambiguous genitalia who had 45,XO/46,XY dic mosaicism, a dysgenetic testis, and a gonadoblastoma. The same mosaicism was detected in cultured skin and gonadal fibroblasts. The paper also discusses the chromosomal localization of genes related to height and male sex determination. Its focus is mainly genetic rather than tumor management, and the gonadoblastoma is presented as one clinical finding within that genetic context.",
+    "summary_ja": "両性具有の外観を呈した患者で、45,XO/46,XY dicモザイク症が確認された症例報告である。患者には異形成精巣と性腺芽腫が認められ、皮膚および性腺由来の培養線維芽細胞に同じモザイクが検出された。身長や男性決定に関わる遺伝子の局在についても考察している。主題は腫瘍の治療よりも遺伝学的な側面にある。",
+    "abstract": "45,XO/46,XYq dic mosaicism was found in a patient with ambiguous genitalia. The patient had dysgenetic testis and gonadoblastoma. The same mosaicism was found in skin and gonadal tissue cultured fibroblasts. Localization of the genes related to height and male determination is discussed.",
+    "abstract_ja": "「両性具有の外観を呈した患者で、45,XO/46,XYq dic（原文表記）モザイク症が確認された。患者は異形成精巣と性腺芽腫を有していた。同じモザイク症が、皮膚および性腺組織由来の培養線維芽細胞でも確認された。身長および男性決定に関わる遺伝子の染色体上の局在について考察する。」",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "testis",
+      "hi": [
+        "gonadoblastoma"
+      ],
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1277113",
+    "title": "Current status of the treatment of gynecologic cancer by site: ovary.",
+    "title_ja": "婦人科癌の部位別治療の現状：卵巣",
+    "authors": [
+      "Barber HR",
+      "Kwon TH"
+    ],
+    "journal": "Cancer",
+    "year": 1976,
+    "pmid": "1277113",
+    "doi": "10.1002/1097-0142(197607)38:1<610::aid-cncr2820380186>3.0.co;2-t",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This 1976 review covers the surgical and medical treatment of ovarian cancer, focusing on common epithelial tumors. It describes standard surgery by stage, the role of single-agent alkylating chemotherapy, and the use of radiation therapy for stage IV disease. The authors note that combination chemotherapy was superior only for embryonal tumors. The review also states that it will discuss germ cell tumors, gonadal stromal tumors, and pediatric and pregnancy-associated ovarian tumors, although these are secondary to the epithelial focus.",
+    "summary_ja": "1976年の総説で、主に上皮性卵巣癌の外科的および化学療法による治療を扱っています。病期別の標準手術や、単剤アルキル化剤による化学療法の役割を記述しています。胚細胞腫瘍は胚性腫瘍での併用療法に言及されており、主題としては副次的な位置づけです。",
+    "abstract": "Cancer of the ovary is the leading cause of death from gynecologic cancer. The constant challenge presented by ovarian cancer is that about 11,000 women die from ovarian cancer each year and the results in 1974 are no better than have been achieved in the previous two decades. Standard practice of treatment for truly invasive common epithelial ovarian cancer includes total hysterectomy, bilateral salpingo-oophorectomy, appendectomy, omentectomy, and post-surgical insertion of tubes and administration of P32 (if the disease is of limited extent). Although it is occasionally necessary to resect isolated segments of bowel, exenterative or ultraradical surgery in the management of ovarian cancer is not usually chosen because of the natural history of the disease. However, aggressive surgery is indicated not so much because it is curative, but because it potentiates other forms of treatment. All stages I through IV are treated surgically, to remove as much tumor as possible without running a risk of a gastrointestinal or genitourinary fistula. Radiation therapy has been utilized in addition to the surgical therapy in stage IV to control supraclavicular and/or inguinal node involvement. Single agent alkylating chemotherapy is chosen for the treatment of common epithelial ovarian cancers. Combination chemotherapy does not produce better results at this time, except in the treatment of embryonal tumors. The treatment of the common epithelial tumors by stage is outlined. The treatment of germ cell tumors, gonadal stromal tumors, ovarian tumors in childhood, ovarian tumors in pregnancy, as well as tumors not specific for the ovary, will also be discussed.",
+    "abstract_ja": "卵巣癌は、婦人科癌による死亡の主要な原因である。卵巣癌の治療における最大の課題は、毎年約11,000人の女性が卵巣癌で死亡していること、そして1974年の治療成績が過去20年間と比べて改善していないことである。浸潤性の一般的な上皮性卵巣癌に対する標準的な治療には、子宮全摘出術、両側卵管卵巣摘出術、虫垂切除術、大網切除術、手術後のリン酸32（P32）の投与などが含まれる。限局した病変では、P32の腹腔内投与も行われる。腸管の部分切除が必要になることもあるが、この疾患の自然経過を考慮すると、卵巣癌の治療では一般に骨盤内臓器全摘術などの超根治的手術は選択されない。それでも、積極的な手術は根治を目的とするというより、他の治療の効果を高めるために重要である。I期からIV期はすべて、消化管または泌尿生殖器への瘻孔形成の危険を冒さずに、可能な限り腫瘍を切除するための外科的治療の対象となる。IV期では、鎖骨上窩および/または鼠径リンパ節転移の制御のため、手術に加えて放射線療法が用いられてきた。一般的な上皮性腫瘍には、単剤のアルキル化剤による化学療法が選択される。併用化学療法は、胚細胞性腫瘍のうち胚性腫瘍を除けば、現時点で優れた成績を示していない。上皮性腫瘍の病期別治療方針を概説する。胚細胞腫瘍、性索間質性腫瘍、小児期の卵巣腫瘍、妊娠時の卵巣腫瘍、ならびに卵巣に特異的ではない腫瘍の治療についても論じる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-181523",
+    "title": "Isoenzyme transitions of creatine phosphokinase, aldolase and phosphoglycerate mutase in differentiating mouse cells.",
+    "title_ja": "分化するマウス細胞におけるクレアチンホスホキナーゼ、アルドラーゼ、ホスホグリセリン酸ムターゼのアイソザイム転換",
+    "authors": [
+      "Adamson ED"
+    ],
+    "journal": "J Embryol Exp Morphol",
+    "year": 1976,
+    "pmid": "181523",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Isoenzyme patterns of creatine phosphokinase, aldolase, and phosphoglycerate mutase were compared in developing mouse embryonic tissues and cloned teratocarcinoma cells. Adult enzyme forms appeared during gestation. Undifferentiated embryonal carcinoma cells expressed only early embryonic isoforms, while differentiated cells expressed adult types, paralleling in vivo development.",
+    "summary_ja": "発生中のマウス胎児組織と奇形癌細胞について、クレアチンホスホキナーゼなど三種の酵素のアイソザイムを比較しました。妊娠中に成体型が出現しました。未分化の胎児性癌細胞は胎児型のみを示し、分化した細胞は成体型を発現しており、生体内の発生と類似していました。胚細胞腫瘍の分化モデルとしての知見を含みます。",
+    "abstract": "Extracts of embryonic mouse tissues (skeletal, cardiac and smooth muscle, and brain) were analysed by Cellogel electrophoresis for their isoenzymic distributions of three enzymes, creatine phosphokinase, aldolase and phosphoglycerate mutase. Embryonic tissues from the 12th day to the end of gestation were examined for isoenzyme transitions, and it was found that the adult forms of these enzymes appeared during gestation. Extracts from cloned teratocarcinoma cells were similarly examined in order to determine their degree of bio-chemical differentiation. Undifferentiated embryonal carcinoma cells contained only the early embryonic forms of all three enzymes, while differentiated cells formed in vivo, and in some cases in vitro, started to express the adult types of creatine phosphokinase and aldolase. Thus, biochemical parallels have been demonstrated between developing embryonic tissues and teratocarcinoma cells differentiating in vitro.",
+    "abstract_ja": "発生中のマウス胚組織（骨格筋、心筋、平滑筋、脳）の抽出物を、Cellogel電気泳動によりクレアチンホスホキナーゼ、アルドラーゼ、ホスホグリセリン酸ムターゼの3種の酵素のアイソザイム分布について解析した。妊娠12日目から妊娠末期までの胚組織をアイソザイム転換について検討したところ、これらの酵素の成体型は妊娠中に出現することがわかった。クローン化した奇形癌細胞の抽出物についても同様に検討し、生化学的分化の程度を明らかにした。未分化の胎児性癌細胞は、3種の酵素すべての初期胚型のみを含んでいたが、in vivoで形成された分化細胞、およびいくつかの場合にはin vitroで形成された分化細胞は、クレアチンホスホキナーゼとアルドラーゼの成体型を発現し始めた。このように、発生中の胚組織と体外で分化する奇形癌細胞との間に生化学的な類似性が示された。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-28722519",
+    "title": "Fine Needle Biopsy of Metastases at Retrograde Pyelography, Directed by Fluoroscopy.",
+    "title_ja": "逆行性腎盂造影下で行った転移病変の穿刺吸引生検",
+    "authors": [
+      "Ekelund L",
+      "Göthlin J"
+    ],
+    "journal": "Scand J Urol Nephrol",
+    "year": 1976,
+    "pmid": "28722519",
+    "doi": "10.1080/21681805.1976.11882085",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This report describes fluoroscopy-guided percutaneous fine needle aspiration biopsy performed during retrograde pyelography. It distinguished metastatic from scarring involvement of a strictured ureter in a patient previously treated for malignant teratoma. The authors recommend this method for malignant disease when differential diagnosis cannot be established by retrograde pyelography or urography.",
+    "summary_ja": "逆行性腎盂造影中に透視下で行った経皮的細針吸引生検の報告である。以前に悪性奇形腫の治療を受けた患者で、狭窄した尿管の転移と瘢痕を鑑別するために用いられた。逆行性腎盂造影や尿路造影で鑑別診断が困難な悪性疾患に対して、この方法が推奨されている。",
+    "abstract": "Percutaneous fine needle aspiration biopsy was performed at retrograde pyelography in order to differentiate between metastatic and scarry involvement of a strictured ureter in a patient earlier operated upon because of malignant teratoma. The method is recommended in patients with malignant diseases where the differential diagnosis is impossible to establish at retrograde pyelography or urography.",
+    "abstract_ja": "悪性奇形腫の既往がある患者において、狭窄した尿管の転移性浸潤と瘢痕性変化を鑑別するため、逆行性腎盂造影の際に透視下で経皮的細針吸引生検を施行した。鑑別診断が逆行性腎盂造影や尿路造影では確定できない悪性疾患の患者には、この方法を推奨する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
+  },
+  {
+    "id": "pmid-62839",
+    "title": "Ectopic and eutopic secretion of chorionic gonadotropin and its sub-nits in vitro: comparison of clonal strains from carcinomas of lung and placenta.",
+    "title_ja": "肺癌および胎盤癌由来クローン株におけるヒト絨毛性ゴナドトロピンおよびサブユニットの異所性・正所性分泌の比較",
+    "authors": [
+      "Lieblich JM",
+      "Weintraub BD",
+      "Krauth GH",
+      "Kohler PO",
+      "Rabson AS",
+      "Rosen SW"
+    ],
+    "journal": "J Natl Cancer Inst",
+    "year": 1976,
+    "pmid": "62839",
+    "doi": "10.1093/jnci/56.5.911",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Secretion of hCG and its alpha and beta subunits was compared in vitro among clonal lines from a bronchogenic carcinoma (ChaGo) and a choriocarcinoma (JEG). ChaGo lines secreted only alpha subunit, whereas JEG-3 secreted only hCG. Ectopic alpha subunit secretion exceeded the eutopic trophoblastic hCG secretion. The findings suggest major differences in cellular control between these tumor types. The choriocarcinoma line serves mainly as a comparator.",
+    "summary_ja": "肺の気管支原性癌(ChaGo)株と絨毛癌(JEG)株のクローン細胞について、hCGおよびそのサブユニット分泌をin vitroで比較した研究である。ChaGo株はαサブユニットのみを分泌し、JEG-3株はhCGのみを分泌した。異所性αサブユニット分泌は栄養膜によるhCG分泌を上回った。絨毛癌株は主に比較対象として用いられている。",
+    "abstract": "We compared rates of secretion in vitro of human chorionic gonadotropin (HCG) and its subunits alpha and beta by established clonal cell lines of a bronchogenic carcinoma (ChaGo) and a choriocarcinoma (JEG). Clones showing the highest secretion rates of either HCG or its subunits were studied: ChaGo-K1, a new clonal strain, and ChaGo-C5 and JEG-3, two previously reported clonal lines. Cells were grown under identical conditions in the same laboratory. Hormone and subunit concentrations were measured by radioimmunoassays. ChaGo-K1 and ChaGo-C5 secreted only alpha-subunit whereas JEG-3 secreted only HCG. Average peak secretion rates in picomoles/day/mg protein were: for ChaGo-K1, HCG less than 0.3, alpha=290, and beta less than 0.5; for ChaGo-C5, HCG less than 0.3, alpha=21, and beta less than 0.5; and for JEG-3, HCG=18, alpha less than 0.7, and beta less than 0.5. The ChaGo-K1 secretion rate of alpha was greater than that of any of out previously reported ChaGo clones. Significant quantities of estradiol and progesterone accumulated in the media of all three cell lines; however, only JEG-3 secreted detectable quantities of placental lactogen. Thus under identical culture conditions, a bronchogenic carcinoma clonal line secreted only alpha-subunit, whereas a choriocarcinoma line secreted only HCG; these findings implied major differences in cellular control mechanisms. Moreover, the ectopic secretions of alpha exceeded the eutopic trophoblastic secretion of HCG, which suggested that in certain cases ectopic protein production may be even more efficient than nonectopic production.",
+    "abstract_ja": "気管支原性癌(ChaGo)および絨毛癌(JEG)の確立されたクローン細胞株について、ヒト絨毛性ゴナドトロピン(HCG)とそのαおよびβサブユニットのin vitro分泌速度を比較した。分泌速度が最も高かったクローンを検討した。ChaGo-K1は新規クローン株である。ChaGo-C5とJEG-3は既報のクローン株である。細胞は同一条件下、同一研究室で培養した。ホルモンおよびサブユニット濃度はラジオイムノアッセイで測定した。ChaGo-K1とChaGo-C5はαサブユニットのみを分泌し、JEG-3はHCGのみを分泌した。ピーク時の平均分泌速度(pmol/日/mg蛋白)は、ChaGo-K1でHCG<0.3、α=290、β<0.5、ChaGo-C5でHCG<0.3、α=21、β<0.5、JEG-3でHCG=18、α<0.7、β<0.5であった。ChaGo-K1のα分泌速度は、既報のいずれのChaGoクローンよりも高かった。3株すべての培養液に有意量のエストラジオールとプロゲステロンが蓄積していた。ただしJEG-3のみが検出可能量の胎盤性ラクトゲンを分泌した。同一培養条件下で、気管支原性癌株はαサブユニットのみを分泌し、絨毛癌株はHCGのみを分泌した。これは細胞の制御機構に大きな違いがあることを示唆する。さらに、異所性のα分泌量は正所性の栄養膜によるHCG分泌量を上回った。このことは、一部の症例では異所性蛋白産生が非異所性産生より効率的である可能性を示唆する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-63168",
+    "title": "Absence of a serologically detectable association of murine beta2-microglobulin with the embryonic F9 antigen.",
+    "title_ja": "マウスβ2ミクログロブリンと胚性F9抗原との血清学的に検出可能な関連の欠如",
+    "authors": [
+      "Dubois P",
+      "Fellous M",
+      "Gachelin G",
+      "Jacob F",
+      "Kemler R",
+      "Pressman D",
+      "Tanigaki N"
+    ],
+    "journal": "Transplantation",
+    "year": 1976,
+    "pmid": "63168",
+    "doi": "10.1097/00007890-197611000-00009",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The association of murine beta2-microglobulin with the embryonic F9 antigen, expressed mainly on primitive teratocarcinoma cells, was investigated by immunofluorescence and radioimmunoassay. Although some cell lines expressed both molecules, beta2-microglobulin was not detected on the teratocarcinoma cells. The authors conclude that the low-molecular-weight subunit linked to F9 antigen is not adult beta2-microglobulin.",
+    "summary_ja": "主に原始的奇形癌細胞に発現する胚性F9抗原と、マウスβ2ミクログロブリンの関連を免疫蛍光法とラジオイムノアッセイで検討した研究である。一部の細胞株は両分子を発現したが、奇形癌細胞上ではβ2ミクログロブリンは検出されなかった。F9抗原に結合する低分子量サブユニットは成体型のβ2ミクログロブリンではないと結論している。",
+    "abstract": "The association of murine beta2-microglobulin to the early embryonic F9 antigen has been investigated by indirect immunofluorescence and by radioimmunoassay. Although some cell lines carry both types of molecules, the beta2-microglobulin was not found expressed on primitive teratocarcinoma cells, where F9 antigen was primarily detected. It is concluded that the low m.w. (12,000 daltons) subunit that was reported to be associated to the F9 antigen is not the adult beta2-microglobulin.",
+    "abstract_ja": "マウスβ2ミクログロブリンの初期胚性F9抗原への関連を、間接免疫蛍光法およびラジオイムノアッセイで検討した。一部の細胞株は両方の分子を保有していたが、主にF9抗原が検出された原始的奇形癌細胞上ではβ2ミクログロブリンは発現していなかった。F9抗原に関連すると報告されていた低分子量(12,000ダルトン)サブユニットは、成体型のβ2ミクログロブリンではないと結論された。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-975058",
+    "title": "Differentiation of early mouse embryonic and teratocarcinoma cells in vitro: plasminogen activator production.",
+    "title_ja": "マウス初期胚および胎児性癌細胞のin vitro分化におけるプラスミノーゲンアクチベーター産生",
+    "authors": [
+      "Sherman MI",
+      "Strickland S",
+      "Reich E"
+    ],
+    "journal": "Cancer Res",
+    "year": 1976,
+    "pmid": "975058",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1976 Cancer Research study examines plasminogen activator production in cultured mouse blastocysts and their derived cell types. The enzyme is restricted to parietal endoderm cells, suggesting a role in their migration along the trophoblast during yolk sac expansion. F9 embryonal carcinoma cells do not secrete it, but their differentiated parietal endoderm-like derivatives do. The work is basic developmental biology using F9 cells as a model, rather than a clinical study of human germ cell tumours.",
+    "summary_ja": "培養マウス胚盤胞とその派生細胞におけるプラスミノーゲンアクチベーター産生を調べた基礎研究である。本酵素は壁側内胚葉細胞に限局し、卵黄嚢の拡大期における移動に関与する可能性がある。F9胎児性癌細胞は分泌しないが、分化した壁側内胚葉様細胞は産生する。ヒト胚細胞腫瘍の臨床研究ではなく、基礎発生生物学の報告である。",
+    "abstract": "Cultured mouse blastocysts produce plasminogen activator, a protease that converts the zymogen plasminogen into the trypsin-like enzyme, plasmin. We have fractionated the blastocyst and cultured the constituent cell types. Trophoblast outgrowths free of inner cell mass derivatives secrete plasminogen activator during a time period that closely parallels the invasive phase of trophoblast cells in utero. Isolated inner cell masses also produce plasminogen activator; further fractionation of the inner cell mass as well as studies with primary cultures obtained from midgestation tissues demonstrate that enzyme formation is restricted entirely to parietal endoderm cells. Secretion of the enzyme may facilitate the migration of parietal endoderm cells along the trophoblast layer as the yolk sac cavity enlarges during gestation. F9 embryonal carcinoma cells do not secrete detectable amounts of plasminogen activator. However, when these cells are induced to differentiate, the resulting parietal endoderm-like cells are capable of producing the enzyme. These results are consistent with previous findings suggesting that plasminogen activator production may be a characteristic of invasive and/or migratory cells.",
+    "abstract_ja": "培養マウス胚盤胞はプラスミノーゲンアクチベーターを産生する。胚盤胞を分画して構成細胞型を培養した。内細胞塊の派生細胞を含まない栄養膜の外植片は、子宮内における栄養膜細胞の浸潤期とほぼ平行して本酵素を分泌した。内細胞塊の単離体も本酵素を産生し、さらに分画と妊娠中期組織の初代培養により、酵素産生は壁側内胚葉細胞に限られることが示された。本酵素の分泌は、妊娠中に卵黄嚢腔が拡大する際に、壁側内胚葉細胞が栄養膜に沿って移動することを助ける可能性がある。F9胎児性癌細胞は検出可能な量の本酵素を分泌しなかったが、分化誘導すると、生じた壁側内胚葉様細胞は本酵素を産生できた。これらの結果は、プラスミノーゲンアクチベーター産生が浸潤性および/または遊走性細胞の特徴であるという考えと一致する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-988033",
+    "title": "Clonal lines of teratocarcinoma cells in vitro: differentiation and cytogenetic characteristics.",
+    "title_ja": "奇形癌細胞のクローン株：in vitroでの分化と染色体特性",
+    "authors": [
+      "McBurney MW"
+    ],
+    "journal": "J Cell Physiol",
+    "year": 1976,
+    "pmid": "988033",
+    "doi": "10.1002/jcp.1040890310",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Clonal lines of embryonal carcinoma cells were established from four transplantable mouse teratocarcinomas. All lines retained differentiation capacity both in vivo and in vitro. Karyotypes were near-diploid with recurrent chromosomal abnormalities. Hybrids with 3T3 fibroblasts failed to differentiate and were contact inhibited. The paper is basic cell biology using murine models, relevant to germ cell tumor biology only indirectly.",
+    "summary_ja": "マウス移植性奇形癌4系統から胎児性癌細胞のクローン株を樹立した。全株はin vivoとin vitroの両方で多分化能を保持していた。核型はほぼ二倍体で、染色体異常が繰り返し見られた。3T3線維芽細胞との雑種細胞は分化せず、接触阻止を示した。マウスモデルの基礎細胞生物学研究であり、胚細胞腫瘍への関連は間接的である。",
+    "abstract": "Clonal lines of embryonal carcinoma cells have been established in culture from four independently-derived transplantable teratocarcinomas of mice: three from strain C3H and one from strain 129/Sv. Cells from all lines retain the capacity to differentiate into a variety of tissue types both in tumors formed following the injection of cells into syngeneic animals and in vitro under appropriate culture conditions. Analysis of their G-banded chromosomes indicated that the four lines have near-diploid but not absolutely normal karyotypes. The same chromosomal abnormalities were often present in more than one line. Tetraploid embryonal carcinoma cells made by Colcemid or cytochalasin B treatment were also pluripotential in spite of chromosomal instability. Hybrid cells were readily obtained between diploid or tetraploid embryonal carcinoma cells and mouse 3T3 fibroblasts. Hybrid cells failed to differentiate and were contact inhibited like the 3T3 parent.",
+    "abstract_ja": "移植可能なマウス奇形癌4系統（C3H系3系統、129/Sv系1系統）由来の胎児性癌細胞のクローン株を培養系で樹立した。各株は、同系動物に移植して形成された腫瘍内でも、適切な培養条件下のin vitroでも、多様な組織型へ分化する能力を保持していた。G分染による染色体解析では、4株ともほぼ二倍体であるが完全には正常でない核型を示した。同一の染色体異常が複数の株で見られることがしばしばあった。コルセミドまたはサイトカラシンB処理により作製した四倍体の胎児性癌細胞も、染色体不安定性にもかかわらず多能性を保持していた。二倍体または四倍体の胎児性癌細胞とマウス3T3線維芽細胞との雑種細胞は容易に得られた。雑種細胞は分化せず、親株の3T3と同様に接触阻止を示した。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1052770",
+    "title": "Formation of a keratinizing epithelium in culture by a cloned cell line derived from a teratoma.",
+    "title_ja": "奇形腫由来の細胞株による角化上皮の形成",
+    "authors": [
+      "Rheinwald JG",
+      "Green H"
+    ],
+    "journal": "Cell",
+    "year": 1975,
+    "pmid": "1052770",
+    "doi": "10.1016/0092-8674(75)90183-x",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Describes an established keratinizing cell line (XB) derived from a transplantable mouse teratoma. Single cells form colonies of stratified squamous epithelium in culture on irradiated 3T3 fibroblasts, and fibroblast function is required for keratinization. Keratinizing colonies were also detected in primary cultures of teratoma cells, and keratinizing and nonkeratinizing colonies can be isolated in the living state.",
+    "summary_ja": "移植可能なマウス奇形腫から樹立された角化細胞株XBを報告。照射した3T3線維芽細胞上で単一細胞が重層扁平上皮様のコロニーを形成し、角化には線維芽細胞の機能が必須であることを示した。奇形腫細胞の初代培養にも角化コロニーが検出され、生体外で分離可能としている。",
+    "abstract": "From a transplantable mouse teratoma it has been possible to derive an established keratinizing cell line (XB) which grows well in cultures containing lethally irradiated 3T3 fibroblasts at the correct density. Single cells of the keratinizing line grow into colonies each consisting of a stratified squamous epithelium. The keratinizing nature of the colonies has been demonstrated by specific staining with Rhodanile blue, and by light and electron microscopy of sections through the colonies. A function of fibroblasts appears to be a strict requirement for keratinization and an important though less strict requirement for cell growth. The fibroblast function can be carried out by medium harvested from 3T3 cultures. It is possible to detect keratinizing colonies in primary cultures of disaggregated teratoma cells combined with 3T3 cells. Such colonies appeared in cultures of a transplantable teratoma with an overall frequency of 6 X 10(-6) of the cells plated. Nonkeratinizing colonies of cells with otherwise very similar appearance were about 10 fold more abundant. Since both the keratinizing and the related nonkeratinizing colonies can be identified in the living state, it is possible to isolate them from the primary cultures.",
+    "abstract_ja": "移植可能なマウス奇形腫から、樹立された角化細胞株（XB）を得た。この細胞株は、適切な密度で致死量の照射を受けた3T3線維芽細胞とともに培養すると、良好に増殖する。単一細胞は、重層扁平上皮からなるコロニーへと増殖する。コロニーが角化していることは、Rhodanile blue による特異染色、ならびにコロニー切片の光学顕微鏡および電子顕微鏡観察により示された。角化には線維芽細胞の機能が厳密に必要であり、細胞増殖にも重要な（ただし厳密ではない）要件である。線維芽細胞の機能は3T3培養から採取した培地によって代替できる。奇形腫細胞を3T3細胞と組み合わせた初代培養でも、角化コロニーを検出できる。移植可能な奇形腫の初代培養では、播種した細胞のうち約6×10⁻⁶の頻度で角化コロニーが出現した。非角化性コロニーは、形態が非常に類似しているが、約10倍多く存在した。角化コロニーと関連する非角化コロニーはいずれも生細胞の状態で同定できるため、初代培養から分離することが可能である。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1114152",
+    "title": "Problems in the management of mediastinal tumours.",
+    "title_ja": "縦隔腫瘍の管理上の問題",
+    "authors": [
+      "Lallemand RC",
+      "Keates JR"
+    ],
+    "journal": "Postgrad Med J",
+    "year": 1975,
+    "pmid": "1114152",
+    "doi": "10.1136/pgmj.51.592.89",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "Five cases of anterior mediastinal tumour are described, including haemangioma, teratoma, metastatic renal carcinoma, and malignant thymoma. The authors emphasise that full investigation of mediastinal swellings is needed before mediastinoscopy, that incision of neck swellings should be avoided, and that asymptomatic adult mediastinal haemangioma may be managed expectantly. Teratoma is one of several diagnoses rather than the main focus, so germ cell tumor content is partial.",
+    "summary_ja": "前縦隔腫瘍の5症例を報告し、血管腫、奇形腫、腎癌の転移、悪性胸腺腫を含む。縦隔腫瘤の精査の必要性、頸部腫脹の切開の回避、無症状の血管腫の経過観察などを論じる。奇形腫は複数の診断の一つであり、生殖細胞腫瘍は部分的な関連にとどまる。",
+    "abstract": "Five cases of anterior mediastinal tumour are presented. Two cases were asymptomatic, being discovered by routine chest radiography. The remainder presented with dyspnoea, dysphagia and a sinus over the manubrium. Each case provided a lesson in the management of the mediastinal mass. Pathologies included haemangioma, teratoma, secondary carcinoma from the kidney and a malignant thymoma which caused cardiac tamponade. Features of interest in the presentation, treatment and pathology are discussed. It is concluded that a full investigation of mediastinal swellings is needed before mediastinoscopy is performed; that incision of swellings in the base of the neck should be avoided; and it is suggested that the management of asymptomatic mediastinal haemangioma in adults may be expectant.",
+    "abstract_ja": "前縦隔腫瘍の5症例を提示する。2例は無症状で、胸部X線の定期検査で発見された。残りは呼吸困難、嚥下困難、胸骨柄上の瘻孔で受診した。各症例は縦隔腫瘤の管理に関する教訓を与えた。病理診断は血管腫、奇形腫、腎臓からの続発性癌、心タンポナーデを起こした悪性胸腺腫であった。縦隔腫瘤では縦隔鏡検査の前に十分な精査が必要であること、頸部腫脹の切開は避けるべきであること、無症状の成人の縦隔血管腫は経過観察が妥当かもしれないことを提案する。症状、治療、病理の興味深い点について論じる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "mediastinum",
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 5,
+      "th": [
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1118495",
+    "title": "Benign teratoid tumor of the parotid; Case report.",
+    "title_ja": "耳下腺の良性奇形腫様腫瘍：症例報告",
+    "authors": [
+      "Shadid EA",
+      "Engeron O",
+      "Glass RT"
+    ],
+    "journal": "Plast Reconstr Surg",
+    "year": 1975,
+    "pmid": "1118495",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a patient with a benign teratoid tumor of the parotid gland, which the authors describe as the first such case reported. The paper gives minimal clinical detail; the abstract provides no histologic or imaging description and no treatment outcome. Because parotid teratoid lesions are typically salivary gland neoplasms rather than germ cell tumors, the relevance to germ cell tumor literature is unclear and would need full-text review.",
+    "summary_ja": "耳下腺に発生した良性奇形腫様腫瘍の1症例報告です。当時の報告としては初めての症例とされています。組織所見や治療経過の記載は抄録にはありません。耳下腺の奇形腫様病変は胚細胞腫瘍ではなく唾液腺腫瘍であることが多いため、GCTとしての関連性は全文確認が必要です。",
+    "abstract": "We present a patient who had a benign teratoid tumor of the parotid gland. We believe this is the first such case reported.",
+    "abstract_ja": "耳下腺の良性奇形腫様腫瘍の患者を報告する。著者らは、これが報告された初めての症例であると考えている。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "n": 1
+    }
+  },
+  {
+    "id": "pmid-1119644",
+    "title": "Lymphangiography in ovarian cancer.",
+    "title_ja": "卵巣癌におけるリンパ管造影",
+    "authors": [
+      "Athey PA",
+      "Wallace S",
+      "Jing BS",
+      "Gallager HS",
+      "Smith JP"
+    ],
+    "journal": "Am J Roentgenol Radium Ther Nucl Med",
+    "year": 1975,
+    "pmid": "1119644",
+    "doi": "10.2214/ajr.123.1.106",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1975 paper examines lymphangiography in ovarian cancer for pretreatment staging. The authors found that lymph node spread differed by histologic type: germ cell tumors more often involved para-aortic nodes, whereas epithelial tumors spread to pelvic and para-aortic nodes in continuity. Ascites was seldom associated with lymph node metastasis in this series. The germ cell findings are a comparative subset within a study focused on ovarian neoplasms generally.",
+    "summary_ja": "1975年の研究で、卵巣癌の術前病期分類におけるリンパ管造影の有用性を検討しています。組織型により節転移の分布が異なり、胚細胞腫瘍は傍大動脈リンパ節へ転移しやすいと報告されています。胚細胞腫瘍の所見は卵巣腫瘍全般を対象とした研究内の比較対象です。",
+    "abstract": "Lymphangiography can be of assistance in pre-treatment staging and thereby influence management of patients with ovarian cancer. The distribution of lymph node metastases was related to the histologic type of ovarian neoplasm. Tumors of germ cell origin more frequently spread to para-aortic lymph nodes, while epithelial neoplasms of the ovary metastasized to the pelvic and para-aortic lymph nodes, apparently in continuity. In this series, lymph node metastasis from ovarian cancer was seldom associated with ascites.",
+    "abstract_ja": "リンパ管造影は、卵巣癌の治療前病期分類に役立ち、治療方針に影響を与えることがある。リンパ節転移の分布は卵巣腫瘍の組織型と関連していた。胚細胞起源の腫瘍は傍大動脈リンパ節へより高頻度に広がる一方、卵巣の上皮性腫瘍は骨盤および傍大動脈リンパ節へ連続して転移した。本シリーズでは、卵巣癌のリンパ節転移に腹水を伴うことはまれであった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "hi": [
+        "gct_nos"
+      ],
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1122161",
+    "title": "Life-threatening respiratory distress from mediastinal masses in infants.",
+    "title_ja": "乳児の縦隔腫瘤による生命を脅かす呼吸窮迫",
+    "authors": [
+      "Haller JA",
+      "Shermeta DW",
+      "Donahoo JS",
+      "White JJ"
+    ],
+    "journal": "Ann Thorac Surg",
+    "year": 1975,
+    "pmid": "1122161",
+    "doi": "10.1016/s0003-4975(10)64035-0",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This article describes five infants with severe respiratory distress from mediastinal masses, treated at Johns Hopkins between 1972 and 1974. The masses included bronchial cysts, an esophageal duplication, a benign teratoma, and a neuroblastoma. Individualized management, including complete resection of the teratoma, was successful in all cases. The authors emphasize that mediastinal tumors can cause lethal respiratory distress in neonates and infants and must be considered in the differential diagnosis.",
+    "summary_ja": "1972年から1974年にジョンズ・ホプキンス病院で治療した、縦隔腫瘤による重度の呼吸窮迫を呈した乳児5例を報告しています。腫瘤は気管支嚢胞、食道重複症、良性奇形腫、神経芽腫でした。奇形腫は完全切除され、全例で治療に成功しています。新生児・乳児の縦隔腫瘍は生命を脅かしうるため注意が必要です。",
+    "abstract": "From 1972 through 1974, 5 infants with severe respiratory distress secondary to mediastinal tumors were treated in the Division of Pediatric Surgery of The Johns Hopkins thospital; The mediastinal masses included 2 intramural bronchial cysts, a giant esophageal duplication, a benign teratoma, and a highly malignant neuroblastomamindividualized management was carried out successfully in all: total resection of the bronchial cysts and teratoma; partial resection of the duplication cyst with stripping of the remaining mucosa from the contiguous esophageal wall, thereby preserving esophageal integrity; and excision of involved chest wall and tumor combined with radiotherapy and chemotherapy for the neuroblastoma. This experience emphasizes the potential for lethal respiratory distress from mediastinal tumors in infants and supports the experience reported by others of serious consequences if resection is not performed. Primary physicians and thoracic surgeons must be aware of the lethal potential of such mediastinal tumors among the many other \"surgical\" causes of respiratory distress in neonates and infants.",
+    "abstract_ja": "1972年から1974年にかけて、ジョンズ・ホプキンス病院小児外科で、縦隔腫瘤による重度の呼吸窮迫を呈した乳児5例を治療した。縦隔腫瘤は、2例の壁内気管支嚢胞、巨大な食道重複症、良性奇形腫、そして悪性度の高い神経芽腫であった。症例ごとに個別の治療を行い、全例で成功した。気管支嚢胞と奇形腫は完全切除し、食道重複嚢胞は食道壁の連続性を保つように粘膜を剥離して部分切除した。神経芽腫では、胸壁と腫瘍を切除し、放射線療法と化学療法を併用した。本経験は、乳児の縦隔腫瘍が致死的な呼吸窮迫を引き起こしうることを強調する。新生児の呼吸窮迫の他の外科的原因の中でも、縦隔腫瘍の致死的な可能性を一次医や胸部外科医は認識しておくべきである。切除を行わない場合に重大な結果が生じるという他施設の報告も、この見解を支持している。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "mediastinum",
+      "ag": "infant",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery",
+        "radiotherapy",
+        "chemotherapy"
+      ],
+      "n": 5,
+      "th": [
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1133590",
+    "title": "A light and electron microscopical study of the nervous tissue of mouse teratomas.",
+    "title_ja": "マウス奇形腫の神経組織の光学および電子顕微鏡による研究",
+    "authors": [
+      "Tresman RL",
+      "Evans MJ"
+    ],
+    "journal": "J Neurocytol",
+    "year": 1975,
+    "pmid": "1133590",
+    "doi": "10.1007/BF01102115",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examined the nervous tissue within experimentally induced mouse teratomas using light and electron microscopy. The tissue contained neuroepithelial tubules, neurons, glia, neuropil, and synapses, but lacked myelin and the complex organization of mature central nervous tissue. The authors attribute this limited differentiation to the developmental context of the tumors and suggest that synapse formation reflects an intrinsic tendency of neuronal processes.",
+    "summary_ja": "実験的に誘導されたマウス奇形腫内の神経組織を、光学および電子顕微鏡で検討した研究である。神経上皮性細管、神経細胞、グリア細胞、シナプスは認められたが、ミエリンや成熟した中枢神経の複雑な構造は見られなかった。著者らは、この限られた分化を奇形腫の発生状況に起因すると考察している。",
+    "abstract": "Teratomas are tumours which may arise spontaneously in the testis or ovary or may be induced experimentally by the implantation of young embryos into ectopic sites. In this study the nervous tissue within mouse teratomas was investigated by light and electronmicroscopy. Characteristic neuroepithelial tubules, neurons, glia and neuropil were recognized and showed no ultrastructural abnormality apart from collagenous infiltration. Synapses were frequently observed. However, other features of mature C.N.S. tissue including myelin and complex synaptic configurations were never seen, and it was not possible to recognize distinct classes of neurons, or organizations of cells and processes which characterized specific regions of the C.N.S. The limited differentiation of the nervous tissue of teratomas is discussed with reference to the normal development of C.N.A. in vivo and in vitro. The presence of synapses in the nervous tissue of teratomas is interpreted as a reflection of an intrinsic tendency of neuronal processes to form these specialized contacts even under conditions which prevent the development of certain other characteristics of nervous tissue.",
+    "abstract_ja": "奇形腫は、自然に精巣または卵巣に生じることがあり、また、胚を異所性部位に移植することで実験的に誘発されることもある腫瘍である。本研究では、マウス奇形腫内の神経組織を光学顕微鏡および電子顕微鏡で検討した。神経上皮性の細管、神経細胞、グリア、神経網が特徴的に認められ、コラーゲンの浸潤を除いて超微細構造に異常はなかった。シナプスは頻繁に観察された。しかし、ミエリンや複雑なシナプス構造など、成熟した中枢神経組織のその他の特徴は見られず、特定の中枢神経領域を特徴付ける神経細胞の種類や細胞・突起の構成を識別することはできなかった。奇形腫の神経組織の分化が限られていることを、生体内および生体外における中枢神経の正常発生と関連づけて考察する。奇形腫内の神経組織にシナプスが存在することは、神経突起が特殊な接触を形成しようとする内在的傾向を反映していると解釈され、中枢神経組織の他の特徴の発達を妨げる条件下でも認められる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1157010",
+    "title": "Insular carcinoid primary in the ovary. A clinicopathologic analysis of 48 cases.",
+    "title_ja": "卵巣原発インスリノイドカルチノイド:48例の臨床病理学的解析",
+    "authors": [
+      "Robboy SJ",
+      "Norris HJ",
+      "Scully RE"
+    ],
+    "journal": "Cancer",
+    "year": 1975,
+    "pmid": "1157010",
+    "doi": "10.1002/1097-0142(197508)36:2<404::aid-cncr2820360216>3.0.co;2-0",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This clinicopathologic analysis of 48 primary insular carcinoids of the ovary describes their frequency of carcinoid syndrome, which correlated with tumor volume and acinar differentiation. Many cases arose as a component of teratomas, and syndrome occurred in tumors between 4 and 7 cm in half of cases. Prognosis was generally favorable after resection, though fatal recurrences occurred in two patients. The authors distinguish primary ovarian carcinoid from bilateral metastatic carcinoid, which carries a poor prognosis.",
+    "summary_ja": "卵巣原発インスリノイドカルチノイド48例の臨床病理学的解析である。カルチノイド症候群の頻度は腫瘍の大きさや腺房様分化と相関した。多くは奇形腫の一成分として発生していた。切除後の予後は概ね良好であったが、2例で致死的な再発がみられた。原発性卵巣カルチノイドは、両側性で予後不良な転移性カルチノイドと区別されるべきと論じている。",
+    "abstract": "Forty-eight cases of primary insular carcinoid of the ovary were analyzed from a clinicopathologic viewpoint. Sixteen (33%) were associated with preoperative clinical evidence of the carcinoid syndrome. At operation only one ovary was usually enlarged, but in 16% the contralateral ovary was also enlarged by either a dermoid cyst or a mucinous cystadenoma or cystadenocarcinoma. The volume of the carcinoid was the most important determinant of whether the carcinoid syndrome was present. No patient had the syndrome whose carcinoid formed only a small portion of a teratoma. Pure tumors or components of teratomas between 4 and 7 cm in diameter were associated with the syndrome in one-half, and larger carcinoids in two-third of the cases. Prominent acinar differentiation also correlated with the presence of the syndrome. Although the prognosis was nearly always favorable after the removal of the tumor, tricuspid valve damage continued to progress and led to cardiac decompensation in one patient; fatal recurrences developed in two others. The primary insular carcinoid should be distinguished from carcinoid metastatic to the ovary, which is nearly always bilateral, is usually associated with the presence of peritoneal metastases, and has a poor prognosis.",
+    "abstract_ja": "本論文は、卵巣原発インスリノイドカルチノイド48例の臨床病理学的解析である。術前にカルチノイド症候群の臨床所見を示したのは16例(33%)であった。手術時には通常片側の卵巣のみが腫大していたが、16%では反対側卵巣も皮様嚢腫、粘液性嚢胞腺腫、または嚢胞腺癌により腫大していた。カルチノイド症候群の有無を最も規定したのはカルチノイドの体積であった。奇形腫のごく一部のみを占めるカルチノイドでは、症候群を示した患者はいなかった。奇形腫の成分または純粋腫瘍で直径4〜7cmのものは半数で症候群と関連し、より大きいカルチノイドでは3分の2の症例で関連した。顕著な腺房状分化も症候群の存在と相関した。腫瘍摘出後の予後はほぼ常に良好であったが、1例では三尖弁障害が進行して心不全に至った。また2例では致死的な再発が生じた。原発性インスリノイドカルチノイドは、両側性でほぼ常に腹膜転移を伴い予後不良な卵巣への転移性カルチノイドと区別すべきである。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "tr": [
+        "surgery"
+      ],
+      "n": 48,
+      "th": [
+        "pathology_molecular",
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1164251",
+    "title": "Ovarian giant cell tumor with cystadenocarcinoma.",
+    "title_ja": "卵巣巨細胞腫瘍と嚢胞腺癌の合併例",
+    "authors": [
+      "Veliath AJ",
+      "Sankaran V",
+      "Aurora AL"
+    ],
+    "journal": "Arch Pathol",
+    "year": 1975,
+    "pmid": "1164251",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "A 25-year-old woman had an ovarian tumor with two distinct patterns, pseudomucinous cystadenocarcinoma and malignant giant cell tumor-like areas resembling osteoclasts, without blending between them. Mitoses were frequent in both components. The authors suggest the tumor may have histogenesis from a malignant teratoma. This case report focuses on mixed ovarian malignancy and its proposed origin rather than germ cell tumor biology in general.",
+    "summary_ja": "25歳女性の卵巣腫瘍で、偽粘液性嚢胞腺癌と破骨細胞様の多核巨細胞を伴う悪性巨細胞性成分の二相性を示した。両成分は混在せず、双方で核分裂像が多数認められた。著者らは悪性奇形腫由来の可能性を示唆している。胚細胞腫瘍の一般的な生物学ではなく、混合型卵巣悪性腫瘍とその起源を扱う症例報告である。",
+    "abstract": "A 25-year-old woman had a malignant ovarian tumor with two distinct tumor patterns: pseudomucinous cystadenocarcinoma and malignant giant cell tumor of bone. One area of the tumor had a lining of tall columnar epithelium with abundant mucin production; however, another area of the same tumor had a number of large multinucleated giant cells that resembled osteoclasts, intermingled with mononuclear stromal cells. There was no blending of the two tumor patterns. Mitoses were frequent in both areas. A probable histogenesis of the tumor from a malignant teratoma is suggested.",
+    "abstract_ja": "25歳女性に、偽粘液性嚢胞腺癌と悪性巨細胞性腫瘍(骨の巨細胞腫様)の2つの明瞭な腫瘍パターンを示す悪性卵巣腫瘍を認めた。一方の領域は多量の粘液を産生する高円柱上皮で覆われ、もう一方の領域には破骨細胞様の多数の大型多核巨細胞が間質の単核細胞と混在していた。両パターンは混和していなかった。両領域とも核分裂像が多く認められた。本腫瘍は悪性奇形腫から組織発生した可能性が示唆される。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "teratoma_with_malignant_transformation"
+      ],
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1165873",
+    "title": "Ovarian tumors in pregnancy. An ovarian tumor registry review.",
+    "title_ja": "妊娠中の卵巣腫瘍：卵巣腫瘍登録の検討",
+    "authors": [
+      "Novak ER",
+      "Lambrou CD",
+      "Woodruff JD"
+    ],
+    "journal": "Obstet Gynecol",
+    "year": 1975,
+    "pmid": "1165873",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This registry review of 2300 Emil Novak Tumor Registry cases (1942 to 1972) identified 100 ovarian neoplasms associated with pregnancy, excluding luteomas. Only 10 were dermoid (benign cystic teratoma) cases. The five-year salvage rate was 76%, notably higher than for ovarian tumors generally, likely reflecting low-grade malignant potential. Some aggressive, advanced tumors still fared well after pregnancy termination, prompting speculation about gestation-related immunologic effects.",
+    "summary_ja": "1942～1972年のEmil Novak腫瘍登録の2300例から、妊娠に関連した卵巣腫瘍100例を検討した。黄体嚢胞と黄体腫は除外され、奇形腫（嚢胞性奇形腫）は10例のみであった。5年生存率は76%と卵巣腫瘍全般より高く、低悪性度の腫瘍が多いことが示唆された。妊娠終結後に進行例が良好に経過することもあり、妊娠による免疫学的影響が推測された。",
+    "abstract": "Among the 2300 cases accumulated in the Emil Novak Tumor Registry between the years 1942 and 1972, there were 100 examples of ovarian neoplasia associated with gestation. Lutein cysts or luteomas were excluded since such lesions usually represent physiologic responses of the gonad to increased levels of chorionic gonadotropin. Only 10 cases of dermoids (benign cystic teratomas) were reviewed. We believe this to be the largest series reported in conjunction with pregnancy. There was a total 5-year salvage rate of 76%, which is obviously much greater than with ovarian tumors in general, although there are certain patients alive with a late recurrence. This excellent survival rate seemingly reflects the low-grade malignant potential of many of the neoplasms encountered during pregnancy. However, certain cases of extremely aggressive and advanced ovarian tumors as noted at operation seemed to do surprisingly well following termination of pregnancy, and one must speculate whether gestation impairs antibody response with an apparent immunologic rebound postpartum.",
+    "abstract_ja": "Emil Novak腫瘍登録において1942年から1972年の間に蓄積された2300例のうち、妊娠に関連した卵巣腫瘍の症例が100例あった。黄体嚢胞や黄体腫は、一般に増加したヒト絨毛性ゴナドトロピン(hCG)に対する卵巣の生理的反応を表すため除外した。奇形腫の類皮嚢腫（良性嚢胞性奇形腫）は10例のみ検討した。妊娠に関連した症例の報告としては、これが最大規模のシリーズであると考える。5年生存率（サルベージ率）は76%で、卵巣腫瘍全般よりはるかに高い。これは妊娠中に見られる多くの腫瘍の低悪性度の潜在能を反映していると思われる。一部の患者は晩期再発を伴いながらも生存している。ただし、手術時に極めて侵襲性が高く進行していた卵巣腫瘍の一部は、妊娠終結後に予想外に良好な経過をたどった。妊娠が抗体反応を抑制し、産後に免疫の反跳が生じるのではないかと推測される。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "n": 100,
+      "th": [
+        "prognosis"
+      ],
+      "st": "retrospective_cohort"
+    }
+  },
+  {
+    "id": "pmid-1168262",
+    "title": "Characteristics of a cytotoxic human lymphocyte-dependent antibody.",
+    "title_ja": "ヒトリンパ球依存性細胞傷害性抗体の特性",
+    "authors": [
+      "Wunderlich J",
+      "Rosenberg E",
+      "Connolly J",
+      "Parks J"
+    ],
+    "journal": "J Natl Cancer Inst",
+    "year": 1975,
+    "pmid": "1168262",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1975 study characterized a lymphocyte-dependent cytotoxic antibody found in the blood of a choriocarcinoma patient. The antibody reacted with specific target cells, including cells from the patient's husband, and normal lymphocytes damaged antibody-coated targets. Its activity was associated with IgG and not IgM. Sera from 14 of 16 normal donors lacked this activity. The focus is immunologic characterization rather than tumor biology or treatment.",
+    "summary_ja": "絨毛癌患者の血清中に見いだされたリンパ球依存性細胞傷害性抗体の性状を解析した。抗体の活性はIgG画分に関連し、正常リンパ球により抗体で被覆された標的細胞の傷害が媒介された。正常ドナー16例中14例には活性がなかった。腫瘍生物学や治療を扱った研究ではなく、免疫学的な性状解析が主題である。",
+    "abstract": "Lymphocyte-dependent antobody (LDA) from the blood of a patient with choriocarcinoma was characterized in an allogeneic in vitro system. The antibody reacted with specific traget cells, including cells from the patient's husband. Antibody-coated traget cells were damaged by normal lymphocytes from man and other species. Neither cytotoxic, complement-dependent antibody nor sensitized cytotoxic lymphocytes were found in the patient. LDA activity was associated with IgG gamma-globulin by G-200 Sephadex filtration, electrophoretic mobility, and reactivity with anti-IgG, but there was no activity associated with IgM immunoglobulin. Sera from 14 of 16 normal donors lacked detectable LDA activity, and only low levels were found in sera from the other two donors.",
+    "abstract_ja": "絨毛癌患者の血液から得られたリンパ球依存性抗体（LDA）を、同種異系in vitro系で解析した。この抗体は、患者の夫の細胞を含む特異的な標的細胞に反応した。抗体で被覆された標的細胞は、ヒトおよび他種の正常リンパ球により傷害された。患者には補体依存性の細胞傷害性抗体も感作リンパ球も認められなかった。LDA活性はG-200 Sephadexろ過、電気泳動移動度、抗IgGとの反応により、IgGγグロブリンに関連していた。IgM免疫グロブリンには活性は認められなかった。正常ドナー16例中14例の血清にはLDA活性が検出されず、残る2例の血清では低いレベルのみが認められた。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1180813",
+    "title": "Intracisternal A-particles in transplantable murine teratomas.",
+    "title_ja": "マウス移植性奇形腫におけるイントラシスターナルA粒子",
+    "authors": [
+      "Spence AM",
+      "Vandenberg SR",
+      "Herman MM"
+    ],
+    "journal": "Beitr Pathol",
+    "year": 1975,
+    "pmid": "1180813",
+    "doi": "10.1016/s0005-8165(75)80105-3",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Intracisternal A-particles were examined in two transplantable murine teratomas, OTT 2466 and OTT 6050. The particles appeared in stem cells of both tumors and in more differentiated cells of OTT 6050, including primitive endodermal and neuroepithelial cells. Both parent strains also carried these particles. The study is an experimental murine oncology report focusing on endogenous retroviral particles, with limited direct clinical relevance to human germ cell tumors.",
+    "summary_ja": "移植性マウス奇形腫OTT 2466およびOTT 6050に存在する細胞内A粒子を観察。粒子は両腫瘍の幹細胞や分化細胞に認められ、親系統にも存在した。内在性レトロウイルス様粒子の研究であり、ヒトGCTへの臨床的意義は限定的。",
+    "abstract": "Intracisternal A-particles occur in experimental transplantable murine teratomas OTT 2466 and OTT 6050 derived from embryos of the A/He and 129/Sv strains respectively. They are present in stem cells of both tumors and in the more differentiated cell types in OTT 6050, consisting of primitive endodermal cells, cells of neuroepithelial rosettes, neuroblasts, primitive glial cells and respiratory epithelial cells. Both parent strains, A/He and 129/Sv, also contain these particles.",
+    "abstract_ja": "移植性実験用マウス奇形腫OTT 2466(A/He系由来胚)およびOTT 6050(129/Sv系由来胚)には、細胞内A粒子が存在する。これらの粒子は両腫瘍の幹細胞に存在し、OTT 6050ではより分化した細胞型にも認められる。その細胞型には、原始内胚葉細胞、神経上皮ロゼット細胞、神経芽細胞、原始グリア細胞、気道上皮細胞が含まれる。両親系統であるA/He系と129/Sv系にも、これらの粒子が存在する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1194837",
+    "title": "Development of parthenogenetic and fertilized mouse embryos in the uterus and in extra-uterine sites.",
+    "title_ja": "単為生殖および受精マウス胚の子宮内および子宮外部位での発育",
+    "authors": [
+      "Iles SA",
+      "McBurney MW",
+      "Bramwell SR",
+      "Deussen ZA",
+      "Graham CF"
+    ],
+    "journal": "J Embryol Exp Morphol",
+    "year": 1975,
+    "pmid": "1194837",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Mouse eggs were activated in vitro and transferred to the oviduct, or haploid blastocysts were placed under kidney capsules. Haploid and diploid parthenogenetic embryos formed growths under the testis capsule containing neural, epithelial, cartilage, bone, and muscle tissues, similar to fertilized controls. Parthenogenones did not produce identifiable yolk sac or embryonal carcinoma cells. Cultured cells lacked a Y chromosome and had near-diploid chromosome numbers. The study examines embryonic developmental potential rather than human germ cell tumors.",
+    "summary_ja": "体外で活性化したマウス卵を卵管に移し、また半数体胚盤胞を腎被膜下に移植して発育を比較した。単為生殖胚から精巣被膜下に生じた増殖塊は、神経、上皮、軟骨、骨などの多様な組織を含んでいた。ただし卵黄嚢癌や胎児性癌の細胞は同定されなかった。培養細胞はY染色体を欠き、ほぼ二倍体の染色体数を示した。",
+    "abstract": "Mouse eggs were activated with hyaluronidase in vitro and subsequently transferred to the oviduct. In the female reproductive tract they formed morulae and blastocysts which died soon after implantation. Haploid blastocysts were transferred beneath the kidney capsule and here some formed disorganized egg-cylinder structures in a week. Morulae and blastocysts from haploid and diploid parthenogenones were also transferred beneath the testis capsule. Two to four months later the growths which had formed were sectioned. They contained neural tissue, pigment, keratinized epithelium, glandular epithelium, ciliated epithelium, cartilage, bone, muscle, adipose tissue, and haemopoietic tissue. The range of cell types was similar to that produced by fertilized control blastocysts except that the parthenogenones did not form identifiable yolk-sac carcinoma or embryonal carcinoma cells. The growths from haploid and diploid parthenogenones in the testis were stained with Feulgen and their DNA content measured. Growths from diploid embryos contained the normal diploid amount of DNA while growths from haploid embryos contained less than this amount. Cell cultures were prepared from the growths. The cells which were investigated contained no Y chromosome, suggesting that they were derived from the embryonic cells rather than the cells of the male host. These cells contained a near diploid chromosome number, although some of them were originally derived from haploid embryos.",
+    "abstract_ja": "マウス卵子をin vitroでヒアルロニダーゼにより活性化し、その後卵管に移植した。雌性生殖路内では、桑実胚および胚盤胞を形成したが、着床後まもなく死滅した。半数体胚盤胞を腎被膜下に移植すると、一部は1週間以内に秩序を欠いた卵筒様構造を形成した。半数体および二倍体の単為生殖胚の桑実胚・胚盤胞は精巣被膜下にも移植された。2〜4か月後に形成された増殖塊を切片にして観察した。増殖塊には神経組織、色素、角化上皮、腺上皮、繊毛上皮、軟骨、骨、筋肉、脂肪組織、造血組織が含まれていた。細胞の種類の範囲は受精卵対照胚から生じたものと類似していたが、単為生殖胚では同定可能な卵黄嚢癌や胎児性癌の細胞は形成されなかった。精巣内の単為生殖増殖塊についてFeulgen染色によりDNA量を測定した。二倍体胚由来の増殖塊は正常な二倍体量のDNAを含んでいたが、半数体胚由来のものは通常より少なかった。増殖塊から細胞培養を作製した。調べた細胞はY染色体を含まず、ほぼ二倍体の染色体数を示したが、一部は元々半数体胚由来であった。これらの細胞は宿主の雄由来ではなく、胚細胞に由来すると考えられた。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-1194945",
+    "title": "Malignant teratoma arising within a lipomeningocele. Case report.",
+    "title_ja": "腰仙部リポメニンゴセールに生じた悪性奇形腫：症例報告",
+    "authors": [
+      "Mickle JP",
+      "McLennan JE"
+    ],
+    "journal": "J Neurosurg",
+    "year": 1975,
+    "pmid": "1194945",
+    "doi": "10.3171/jns.1975.43.6.0761",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "Case report of an 11-year-old girl with lipomeningocele, followed since birth, who developed a malignant teratoma within the lumbosacral lesion with pulmonary and groin metastases. The patient was neurologically normal. The authors discuss the rarity of this occurrence from embryological and management perspectives. The abstract does not specify whether the primary site lay within the spinal canal.",
+    "summary_ja": "腰仙部リポメニンゴセールに悪性奇形腫を生じた11歳女児の症例報告である。出生時から経過観察されていた神経学的に正常な患者である。腫瘍は腰仙部病変内に発生し、肺および鼠径部へ転移していた。胚発生学と治療の観点から、このまれな事象が考察されている。原発部位と脊柱管との関係は抄録では明記されていない。",
+    "abstract": "The authors report the case of an 11-year-old, neurologically normal girl, followed since birth for lipomeningocele, who developed a malignant teratoma within the lymbosacral lesion and presented with metastases to the lungs and groin. This rare occurrence is discussed from an embryological and management viewpoint.",
+    "abstract_ja": "著者らは、出生時から腰仙部リポメニンゴセールの経過観察を受けていた、神経学的に正常な11歳の女児の症例を報告する。この患者は腰仙部病変内に悪性奇形腫を発症し、肺および鼠径部への転移を認めた。この希少な事象について、発生学的および治療管理の観点から考察する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "female",
+      "ag": "child",
+      "n": 1
+    }
+  },
+  {
+    "id": "pmid-1195482",
+    "title": "Chylous ascites following retroperitoneal lymphadenectomy.",
+    "title_ja": "後腹膜リンパ節郭清後の乳び腹水",
+    "authors": [
+      "Bigley HA Jr",
+      "Chenault OW Jr"
+    ],
+    "journal": "J Urol",
+    "year": 1975,
+    "pmid": "1195482",
+    "doi": "10.1016/s0022-5347(17)67183-0",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "Reviews a case of postoperative chylous ascites after retroperitoneal lymph node dissection. Although uncommon, the complication is distressing, and it can occur after any retroperitoneal procedure near the cisterna chyli and renal pedicles. The authors recommend specific identification and ligation of these structures for avoidance. Operative and nonoperative treatments have been described, with good survival in iatrogenic cases in a limited series. The abstract does not specify the underlying malignancy.",
+    "summary_ja": "後腹膜リンパ節郭清後に生じた術後乳び腹水の症例を報告している。まれだが患者にとって苦痛の大きい合併症である。乳糜槽と腎茎に近接する部位の処置で起こりうる。予防には、これらの構造の同定と結紮が最善とされる。治療は手術的および非手術的方法があり、医原性の場合は生存率が良好とされる。",
+    "abstract": "A case of postoperative chylous ascites accumulation after retroperitoneal lymph node dissection is reviewed. Although uncommon, this complication is distressing and because of the close proximity of the cisterna chyli to the renal pedicles it may be encountered with any retroperitoneal procedures involving this area. Avoidance of the complication by specific identification and ligation of these structures appears to be the best treatment. Several forms of operative and non-operative therapy have been noted and survival rates in the iatrogenic form of chylous ascites appear to be good based on a limited series of cases.",
+    "abstract_ja": "後腹膜リンパ節郭清後に生じた術後乳び腹水の症例を検討した。この合併症はまれではあるが厄介である。乳糜槽が腎茎に近接しているため、後腹膜の処置であればいずれでも生じうる。予防には、これらの構造を明確に同定して結紮することが最善と思われる。手術的・非手術的を含むいくつかの治療法が報告されている。限られた症例数では、医原性乳び腹水の生存率は良好と思われる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1243206",
+    "title": "Tumours of the thymus.",
+    "title_ja": "胸腺腫瘍",
+    "authors": [
+      "Sundström C"
+    ],
+    "journal": "Ups J Med Sci",
+    "year": 1975,
+    "pmid": "1243206",
+    "doi": "10.3109/03009737509179012",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This study reclassified 22 consecutive thymic tumors. Two-thirds were benign lymphoepitheliomas, and one-third were malignant carcinomas, lymphomas, or seminomas. Three seminomas, all in young men, were identified, and one showed no recurrence or metastasis over 10 years. Malignant tumors usually produced symptoms, while benign ones did not. Four lymphoepitheliomas were associated with myasthenia gravis.",
+    "summary_ja": "連続した胸腺腫瘍22例を改訂分類で再分類した。約3分の2は良性のリンパ上皮腫で、3分の1は癌腫、リンパ腫、セミノーマなどの悪性腫瘍であった。セミノーマは3例すべてが若年男性で、うち1例は10年間再発や転移を認めなかった。悪性腫瘍は通常症状を呈し、良性腫瘍は症状がなかった。",
+    "abstract": "A series of 22 consecutive cases of thymic tumour was collected and the tumours were reclassified according to a modified classification scheme. Two-thirds of them were benign lympho-epitheliomas, though in one case pleural implants were noted. One-third of the tumours were clearly malignant (carcinomas, lymphomas and seminomas). In one of the seminomas and in a case of Hodgkin's disease of the thymus no signs of recurrence or metastases have been observed in 10 and 8 years respectively. The sex distribution was fairly equal except that all three seminomas were detected in young men. The malignant tumours usually gave rise to symptoms, while the benign ones did not. Four of the lympho-epitheliomas were associated with myasthenia gravis. No other associated syndrome was observed. The possibility that lympho-epitheliomas may be malignant is discussed.",
+    "abstract_ja": "連続した胸腺腫瘍22例を収集し、改訂分類法に従って腫瘍を再分類した。その3分の2は良性のリンパ上皮腫であったが、1例では胸膜播種が認められた。腫瘍の3分の1は明らかに悪性(癌腫、リンパ腫、セミノーマ)であった。セミノーマの1例と胸腺のホジキン病の1例では、それぞれ10年および8年にわたり再発や転移の兆候は認められていない。性別の分布はおおむね均等であったが、3例のセミノーマはすべて若年男性で検出された。悪性腫瘍は通常症状を呈したが、良性腫瘍は症状を呈さなかった。リンパ上皮腫4例は重症筋無力症を伴っていた。その他の関連症候群は認められなかった。リンパ上皮腫が悪性である可能性について考察する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "mediastinum",
+      "sx": "mixed",
+      "hi": [
+        "seminoma_germinoma"
+      ],
+      "n": 22,
+      "th": [
+        "pathology_molecular",
+        "epidemiology"
+      ]
+    }
+  },
+  {
+    "id": "pmid-168655",
+    "title": "Surgical lesions of the ovary in infancy and childhood.",
+    "title_ja": "乳幼児期および小児期の卵巣病変の手術所見",
+    "authors": [
+      "Adelman S",
+      "Benson CD",
+      "Hertzler JH"
+    ],
+    "journal": "Surg Gynecol Obstet",
+    "year": 1975,
+    "pmid": "168655",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1975 surgical series reviewed 64 girls operated for ovarian lesions over 27 years, of whom 43 had tumors. Among girls with malignant abdominal lesions, 10.8% had ovarian tumors, and four of eleven endocrine-active tumors were malignant. Patients with stage I and II disease had no postoperative deaths, while deaths occurred only in stage III and IV. Ovary-conserving surgery was emphasized, and adjuvant chemotherapy and radiotherapy were infrequently used. Histologic subtypes are not specified in the abstract.",
+    "summary_ja": "1975年の外科的症例検討で、27年間に卵巣病変で手術を受けた小児64例（うち腫瘍43例）を報告した。内分泌活性のある腫瘍11例中4例が悪性であった。病期Iおよび病期IIでは術後死亡はなく、死亡は病期IIIおよびIVに限られた。組織型は抄録に明記されていない。",
+    "abstract": "In 27 years, 64 patients were operated upon for ovarian lesions, 43 for tumors, 12 for nonneoplastic cysts and nine for ovarian torsion. Of all the girls in this age group who were operated upon for appendicitis, 2 percent had ovarian lesions. Of the girls referred for isosexual precocity in the last ten years, 4.7 per cent had ovarian lesions. Of the girls in this age group operated upon for malignant abdominal lesions, excluding hepatic, in the last 15 years, 10.8 per cent had ovarian tumors. Of the 11 tumors with endocrine function, four were malignant. This association is statistically significant. There were no operative deaths. There were no postoperative deaths among six patients with Stage I and II lesions. Mortality was confined to the two patients with Stage III and IV lesions. The surgical approach was designed to conserve ovarian tissue, and adjunctive chemotherapy and radiotherapy were infrequently used.",
+    "abstract_ja": "27年間にわたり、64例の患者が卵巣病変に対して手術を受けた。内訳は腫瘍43例、非腫瘍性嚢胞12例、卵巣捻転9例であった。同年齢層で虫垂炎の手術を受けた女児の2%に卵巣病変が認められた。思春期早発症の評価を受けた女児のうち4.7%に卵巣病変があった。過去15年間に、肝臓を除く悪性腹部病変の手術を受けたこの年齢層の女児のうち、10.8%に卵巣腫瘍があった。内分泌機能を有する11の腫瘍のうち4例が悪性であった。この関連は統計学的に有意であった。手術死亡はなかった。病期Iおよび病期IIの病変を有する6例では術後死亡はなかった。死亡は病期IIIおよびIVの2例に限られた。手術アプローチは卵巣組織の温存を目的として計画され、補助化学療法および放射線療法はまれにしか用いられなかった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "mixed",
+      "tr": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy"
+      ],
+      "n": 64,
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy",
+        "epidemiology",
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-177958",
+    "title": "Histochemistry of hormonally active ovarian tumors.",
+    "title_ja": "ホルモン活性を有する卵巣腫瘍の組織化学的検討",
+    "authors": [
+      "Kedzia H",
+      "Pisarski T"
+    ],
+    "journal": "Pol Med Sci Hist Bull (1973)",
+    "year": 1975,
+    "pmid": "177958",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examined histochemical enzyme activities in 35 ovarian tumors, including granulosa-cell tumors, thecomas, dysgerminomas, cystadenomas, adenocarcinomas, Krukenberg tumors, and one early embryonic tumor. Granulosa-cell tumors showed high alpha-glycerophosphate dehydrogenase activity, and their stromal cells showed changes in glucose-6-phosphate and isocitrate dehydrogenases. The four dysgerminomas showed high alkaline phosphatase, acid phosphatase, and nonspecific esterase activities. The authors emphasize the role of stromal cells in the hormonal activity of ovarian neoplasms. Germ cell tumors make up only a small subset.",
+    "summary_ja": "1975年の研究では、顆粒膜細胞腫、莢膜細胞腫、ディスジャーミノーマ（未分化胚細胞腫）など卵巣腫瘍35例の組織化学的酵素活性を検討した。ディスジャーミノーマ4例ではアルカリホスファターゼ、酸性ホスファターゼ、非特異的エステラーゼ活性が高かった。ホルモン産生における間質細胞の役割が強調されている。胚細胞腫瘍は一部にすぎない。",
+    "abstract": "Thirty-five ovarian tumors were examined (7 granulosa-cell tumors, 2 thecomas, 4 dysgerminomas, 6 mucinous cystadenomas, 10 serous cystadenomas, 2 adenocarcinomas, 3 Krukenberg tumors and 1 early embryonic tumor). The granulosa-cell tumors showed high activity of alpha-glycerophosphate dehydrogenase, and the changed cells of their stroma--that of glucose-6 phosphate and isocitrate dehydrogenases. The activity of the latter enzymes was striking also in thecomas. Dysgerminomas showed high alkaline phosphatase, acid phosphatase and nonspecific esterase activities. The authors emphasize the role of stromal cells in the hormonal activity of ovarian neoplasms.",
+    "abstract_ja": "35例の卵巣腫瘍を検討した（顆粒膜細胞腫7例、莢膜細胞腫2例、ディスジャーミノーマ4例、粘液性嚢胞腺腫6例、漿液性嚢胞腺腫10例、腺癌2例、クルーケンベルグ腫瘍3例、初期胚性腫瘍1例）。顆粒膜細胞腫ではα-グリセロリン酸脱水素酵素の活性が高く、その間質細胞ではグルコース-6-リン酸脱水素酵素およびイソクエン酸脱水素酵素の変化がみられた。後者の酵素活性は莢膜細胞腫でも顕著であった。ディスジャーミノーマは、アルカリホスファターゼ、酸性ホスファターゼ、非特異的エステラーゼの活性が高かった。著者らは、卵巣腫瘍のホルモン活性における間質細胞の役割を強調している。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-47262",
+    "title": "Carcinoembryonic antigen and alpha fetoprotein in malignant tumors of the female genital tract.",
+    "title_ja": "女性生殖管悪性腫瘍におけるCEAおよびαフェトプロテイン(AFP)",
+    "authors": [
+      "Seppälä M",
+      "Pihko H",
+      "Ruoslahti E"
+    ],
+    "journal": "Cancer",
+    "year": 1975,
+    "pmid": "47262",
+    "doi": "10.1002/1097-0142(197505)35:5<1377::aid-cncr2820350521>3.0.co;2-q",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "Serum CEA and AFP were measured in 53 patients with ovarian carcinoma, 16 with other malignant genital tumors, and 31 with nonmalignant genital disease. CEA was elevated mainly in advanced malignancy, including one benign embryonal cystic teratoma. AFP was normal in nearly all patients, though one advanced genital carcinoma showed markedly raised CEA and AFP. Carcinofetal antigen expression was generally a late phenomenon.",
+    "summary_ja": "卵巣癌53例などの女性生殖管疾患でCEAとAFPを測定した。CEAは主に進行癌で上昇し、良性の嚢胞性奇形腫1例でも上昇した。AFPはほぼ全例で正常範囲だったが、進行性の生殖器癌1例ではCEAとAFPの両方が著明に上昇していた。癌胎児性抗原の発現は一般に後期の現象であった。",
+    "abstract": "Circulating carcinoembryonic antigen (CEA) and alpha fetoprotein (AFP) levels were measured by radioimmunoassay in 53 patients with carcinoma of the ovary, 16 patients with other malignant genital tumors, and 31 women with nonmalignant diseases of the genital tract. The serum CEA concentration was elevated (greater than 5 ng/ml) in 11 patients with ovarian cancer, 2 patients with endometrial cancer, 1 patient with carcinoma of the cervix, and 1 patient with a benign embryonal cystic teratoma. Elevated CEA levels were found only in patients with advanced malignant disease, while early stages were associated with normal CEA concentrations. AFP levels were normal in all but 1 patient. Both CEA and AFP levels were markedly raised in a case of advanced genital carcinoma arising probably from the ovary. Ascitic fluid of another patient with ovarian cancer contained a high concentration of CEA, giving an identical reaction in immunodiffusion with CEA from colon cancer. The present results indicate that while the increased expression of carcinofetal components takes place in some malignant tumors of the female genital tract, it is usually a late phenomenon.",
+    "abstract_ja": "循環血中の癌胎児性抗原(CEA)とαフェトプロテイン(AFP)を、卵巣癌患者53例、その他の悪性生殖器腫瘍患者16例、非悪性の生殖器疾患患者31例で放射免疫測定法により測定した。血清CEA濃度(5 ng/ml超)は、卵巣癌11例、子宮内膜癌2例、子宮頸癌1例、良性の胚性嚢胞性奇形腫1例で上昇していた。CEAの上昇は進行した悪性疾患に限られ、早期病変ではCEA濃度は正常であった。AFPは1例を除き全例で正常であった。卵巣由来と思われる進行生殖器癌の1例では、CEAとAFPの両方が著明に上昇していた。別の卵巣癌患者の腹水には高濃度のCEAが含まれ、大腸癌由来のCEAと免疫拡散法で同一の反応を示した。これらの結果から、女性生殖管の一部の悪性腫瘍では癌胎児性成分の発現が増加するものの、通常は後期に起こる現象であることが示された。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "multiple",
+      "sx": "female",
+      "n": 100,
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
+  },
+  {
+    "id": "pmid-49425",
+    "title": "Alpha-feto-protein during development and in disease.",
+    "title_ja": "発生期および疾患におけるαフェトプロテイン",
+    "authors": [
+      "Adinolfi A",
+      "Adinolfi M",
+      "Lessof"
+    ],
+    "journal": "J Med Genet",
+    "year": 1975,
+    "pmid": "49425",
+    "doi": "10.1136/jmg.12.2.138",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This 1975 review covers alpha-feto-protein (AFP) across development and disease. AFP is present in many species and declines in the human fetus, persisting in trace amounts. It rises in liver cancer, and elevated levels occur in undifferentiated testicular and ovarian tumors, falling after remission and rising with metastases. The paper also notes its value in prenatal diagnosis of neural-tube defects. Germ cell tumors form one part of a broader survey.",
+    "summary_ja": "1975年のレビューで、αフェトプロテイン(AFP)の発生期および疾患における役割を概説する。AFPは胎児で低下し、肝癌で上昇する。未分化な精巣・卵巣腫瘍でも高値を示し、寛解で低下、転移で再上昇する。胚細胞腫瘍は総説の一部として扱われる。",
+    "abstract": "An alpha-feto-protein (AFP) is present in many mammals, in birds, and in sharks during development. The AFP present in different species have similar physicochemical properties and often have common antigenic determinants. Their study, both in health and disease, has provided a useful model for the understanding of other phase-specific antigens and the activation of the genes which control their synthesis. In the human fetus, the level of AFP falls with increasing maturity. The more sensitive methods of detection have disclosed that this fetal protein persists in trace amounts throughout life and its level increases in maternal blood during pregnancy. The principal sites of synthesis are the fetal liver and in some mammals, the yolk sac splanchnopleur. In humans as well as in mice and cows, it is notable that the synthesis of AFP is increased in liver cancer cells and that high levels of this protein are present in serum. Elevated values of AFP have also been detected in human subjects with undifferentiated tumours of the testis and ovary. A fall to normal levels has been noted in cases of complete remission after surgery and a return to high levels in patients who develop metastases. In some patients with hepatitis a temporary rise in the level of AFP has also been observed. In recent years, the detection of high levels of AFP in amniotic fluid has proved to be of great value for the prenatal diagnosis of neural-tube defects. Abnormal levels have also been found in the amniotic fluid or in maternal serum in cases of spontaneous abortion. Such measurements are now being assessed as a methodof monitoring abnormal pregnancy.",
+    "abstract_ja": "哺乳類、鳥類およびサメの多くでは、発生期にαフェトプロテイン(AFP)が存在する。異なる種のAFPは類似した物理化学的性質を持ち、しばしば共通の抗原決定基を有する。健康および疾患におけるその研究は、他の発生段階特異的抗原とその合成を制御する遺伝子の活性化を理解するための有用なモデルとなってきた。ヒト胎児ではAFPのレベルは成熟に伴って低下する。より感度の高い検出法により、この胎児性タンパクは生涯を通じて微量に持続することが明らかになった。母体血中のレベルは妊娠中に上昇する。主要な合成部位は胎児肝臓であり、一部の哺乳類では卵黄嚢の臓側中胚葉である。ヒト、マウスおよびウシのいずれにおいても、肝癌細胞でAFPの合成が増加し、血清中に高値を示すことが注目される。ヒトでは、精巣および卵巣の未分化腫瘍の患者においてもAFPの高値が報告されている。完全寛解に至った手術後にはレベルが正常に戻り、転移を生じた患者では再び高値となる。一部の肝炎患者でも一過性のAFP上昇が観察されている。近年、羊水中の高いAFP検出は、神経管欠損の出生前診断に非常に有用であることが示された。自然流産の症例でも羊水または母体血清に異常値が認められている。これらの測定は、異常妊娠の監視法として現在評価されている。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "th": [
+        "diagnosis_imaging",
+        "surveillance"
+      ]
+    }
+  },
+  {
+    "id": "pmid-50881",
+    "title": "Atopic hypersensitivity to cis-dichlorodiammineplatinum(II) and other platinum complexes.",
+    "title_ja": "cis-ジクロロジアンミン白金(II)およびその他の白金錯体に対するアトピー性過敏症",
+    "authors": [
+      "Khan A",
+      "Hill JM",
+      "Grater W",
+      "Loeb E",
+      "MacLellan A",
+      "Hill N"
+    ],
+    "journal": "Cancer Res",
+    "year": 1975,
+    "pmid": "50881",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "A 15-year-old boy with pulmonary metastases from testicular embryonal carcinoma, treated with cisplatin (DDP) combination chemotherapy, developed an anaphylactic reaction at the eighth infusion. Immediate skin tests and histamine release confirmed atopic hypersensitivity specific to the platinum amine complex. Palladium substitution abolished reactivity, and the patient tolerated other platinum complexes without cross-reactivity. The germ cell tumor is the clinical context rather than the focus.",
+    "summary_ja": "精巣胎児性癌の肺転移に対しDDP併用化学療法を受けた15歳男性で、8回目投与時にアナフィラキシー反応が生じた。即時型皮膚反応と白血球からのヒスタミン遊離から、アトピー性過敏症と確認された。パラジウム置換で反応は消失し、他の白金錯体との交差反応は認められなかった。",
+    "abstract": "Allergic reaction to an antitumor agent, cis-dichlorodiammineplatinum(II) (DDP) was investigated. A 15-year-old white male with pulmonary metastases from embryonal carcinoma of testis was treated with a combination of DDP, bleomycin, and vinblastine. The dose of DDP varied from 2 to 2.25 mg/kg given i.v. He received 7 doses of DDP in 9 months. An anaphylactic reaction was seen within 3 min of the initiation of i.v. infusion of the 8th dose of DDP. The reaction was due to atopic hypersensitivity, as confirmed by an immediate wheal and flair reaction and increased histamine release from leukocytes with DDP. His serum IgE level was elevated. Neither the presence of chloride nor the amine grouping in DDP was essential for reactivity. The replacement of platinum with palladium abrogated the reactivity. There was no cross-reactivity with 3 other platinum complexes of known antitumor activity (platinum blue, platinum(II) 1,2-diaminocyclohexane malonate, and platinum(II) ethylenediamine malonate). This was also confirmed by the lack of reaction to subsequent i.v. administration of platinum(II) 1,2-diaminocyclohexane malonate (10 mg/kg) in this patient.",
+    "abstract_ja": "cis-ジクロロジアンミン白金(II)(DDP)という抗腫瘍薬に対するアレルギー反応を検討した。15歳の白人男性で、精巣の胎児性癌による肺転移があり、DDP、ブレオマイシン、ビンブラスチンの併用療法を受けた。DDPの投与量は2〜2.25 mg/kgを静脈内投与で変動させた。9か月で計7回のDDPを投与された。8回目の静脈内投与開始3分以内にアナフィラキシー反応が生じた。即時型皮膚反応(膨疹と紅斑)と白血球からのヒスタミン遊離増加から、アトピー性過敏症であることが確認された。血清IgEは上昇していた。DDPの塩化物やアミン基は反応性に必須ではなかった。白金をパラジウムに置換すると反応性は消失した。既知の抗腫瘍活性を持つ他の3種の白金錯体(白金ブルー、1,2-ジアミノシクロヘキサンマロン酸白金(II)、エチレンジアミンマロン酸白金(II))とは交差反応性がなかった。この患者では、その後に1,2-ジアミノシクロヘキサンマロン酸白金(II)(10 mg/kg)を静脈内投与しても反応がみられず、これも確認された。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "ag": "adolescent",
+      "hi": [
+        "embryonal_carcinoma"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "chemotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-51345",
+    "title": "Fulminant hepatic failure in leukaemia and choriocarcinoma related to withdrawal of cytotoxic drug therapy.",
+    "title_ja": "白血病および絨毛癌における細胞傷害性薬物療法中止に関連した劇症肝不全",
+    "authors": [
+      "Galbraith RM",
+      "Eddleston AL",
+      "Williams R",
+      "Zuckerman AJ"
+    ],
+    "journal": "Lancet",
+    "year": 1975,
+    "pmid": "51345",
+    "doi": "10.1016/s0140-6736(75)90897-1",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "Three patients with malignancy, including one with choriocarcinoma, had HBsAg detected months before acute hepatitis B. Each developed fulminant hepatitis and died after cytotoxic drug therapy was withdrawn. The authors propose that cytotoxic immunosuppression allowed widespread hepatocyte infection, and that immune recovery caused massive liver destruction. They recommend HBsAg screening before chemotherapy, liver function monitoring during withdrawal, and corticosteroid treatment.",
+    "summary_ja": "白血病と絨毛癌の患者3例で、細胞傷害性薬物療法の中止後に劇症B型肝炎が発症し死亡した。治療前からHBs抗原が検出されており、薬剤による免疫抑制下でHBV感染が広がり、免疫回復時に肝細胞が一斉に破壊されたと考察している。化学療法前のHBs抗原スクリーニング、中止時の肝機能監視、副腎皮質ステロイドによる早期治療を提唱している。",
+    "abstract": "In three patients with malignant disease HBsAg was detected in the serum at least 6 months before the development of acute hepatitis type B, which in each case followed a fulminant course to death. It is suggested that suppression of the normal immunological responses to hepatitis-B viral antigens by cytotoxic drug therapy permitted widespread infection of hepatocytes. Subsequently, upon withdrawal of these drugs, recovery of immunocompetence resulted in rapid destruction of all infected hepatocytes and massive liver damage. Screening for HBsAg before cytotoxic drug therapy, careful monitoring of liver function during its withdrawal, and prompt treatment with corticosteroids should abnormalities occur may prevent this unfortunate sequence of events.",
+    "abstract_ja": "悪性疾患の3例で、急性B型肝炎の発症に数か月先立って血清中にHBs抗原が検出された。いずれも急性B型肝炎は劇症経過をたどり死亡した。細胞傷害性薬物療法によりB型肝炎ウイルス抗原に対する正常な免疫応答が抑制され、肝細胞への広範な感染が許容されたと考えられる。その後、薬剤中止に伴い免疫能が回復すると、感染した肝細胞が急速に破壊され、大量の肝障害を生じたと示唆される。化学療法前のHBs抗原スクリーニング、中止後の肝機能の慎重なモニタリング、異常があった場合の速やかな副腎皮質ステロイドによる治療により、この一連の経過を防ぐことができるかもしれない。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "hi": [
+        "choriocarcinoma"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 3,
+      "th": [
+        "chemotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-4129924",
+    "title": "Editorial: Alpha 1-fetoprotein: need for quantitative assays.",
+    "title_ja": "αフェトプロテイン(AFP)：定量測定法の必要性",
+    "authors": [
+      "Alpert E"
+    ],
+    "journal": "N Engl J Med",
+    "year": 1974,
+    "pmid": "4129924",
+    "doi": "10.1056/NEJM197403072901014",
+    "url": "",
+    "tags": [
+      "その他"
+    ],
+    "summary_en": "No abstract available.",
+    "summary_ja": "Abstractなし",
+    "abstract": "",
+    "abstract_ja": "Abstractなし",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-4215075",
+    "title": "Antiinflammatory effects of murine malignant cells.",
+    "title_ja": "マウス悪性細胞の抗炎症作用",
+    "authors": [
+      "Fauve RM",
+      "Hevin B",
+      "Jacob H",
+      "Gaillard JA",
+      "Jacob F"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1974,
+    "pmid": "4215075",
+    "doi": "10.1073/pnas.71.10.4052",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examines how murine malignant cells, including teratocarcinoma cells, suppress host immunity. Teratocarcinoma did not impair systemic immunization against Listeria, but its cells repelled macrophages in vitro and impaired local inflammation in vivo. Similar effects were seen with other malignant cells and trophoblast cells, and malignant cells released a small inhibitor of inflammation. The authors suggest tumors evade immune surveillance through direct macrophage toxicity and inflammation inhibition.",
+    "summary_ja": "マウスの悪性細胞が宿主免疫を回避する機序を検討した研究である。奇形癌は全身免疫（リステリア免疫）を障害しなかったが、in vitroでマクロファージを退けて局所炎症を抑制した。他の悪性細胞や栄養膜細胞でも同様の所見がみられ、炎症抑制物質の放出も示された。",
+    "abstract": "Development of teratocarcinoma does not impair immunization of mice against Listeria monocytogenes. Endotoxin injection a short time before tumor cell inoculation allows the growth of teratocarcinoma in non syngenic mice despite immune stimulation. In contrast with this absence of impaired systematic immunity, teratocarcinoma cells were found to repulse macrophages in vitro. This effect on macrophages was also found with three other malignant cells and with trophoblast cells. In vivo, teratocarcinoma cells were found to impair local inflammation. These cells and other malignant cells are able to produce a compound(s) of molecular weight between 10(3) and 10(4), which prevents inflammatory reaction. These results suggest that mouse teratocarcinomas and other tumors by-pass the host immunological system of surveillance by at least two mechanisms: a direct toxic effect on macrophages and the release of an inhibitor of inflammation. The possible relations between these properties of malignant cells and physiological functions of trophoblast are discussed.",
+    "abstract_ja": "マウス奇形癌の発生は、リステリア菌に対する免疫付与を妨げない。エンドトキシンを腫瘍細胞接種の少し前に投与すると、免疫刺激があるにもかかわらず、非同種のマウスで奇形癌の増殖が可能になる。全身性の免疫障害がみられないのとは対照的に、奇形癌細胞はin vitroでマクロファージを退けた。この作用は、他の3種の悪性細胞および栄養膜細胞でも認められた。in vivoでは、奇形癌細胞は局所の炎症を障害した。これらの細胞および他の悪性細胞は、炎症反応を阻害する分子量10^3～10^4の化合物を産生することができる。これらの結果は、マウスの奇形癌およびその他の腫瘍が、少なくとも2つの機序（マクロファージに対する直接的な毒性作用と炎症阻害物質の放出）によって、宿主の免疫監視機構を回避していることを示唆する。悪性細胞のこれらの性質と栄養膜の生理機能との関係について考察する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-4471720",
+    "title": "Fetus-in-fetu: An ususual cause for abdominal mass in infancy.",
+    "title_ja": "胎児内胎児（Fetus-in-fetu）：乳児の腹部腫瘤のまれな原因",
+    "authors": [
+      "Grosfeld JL",
+      "Stepita DS",
+      "Nance WE",
+      "Palmer CG"
+    ],
+    "journal": "Ann Surg",
+    "year": 1974,
+    "pmid": "4471720",
+    "doi": "10.1097/00000658-197407000-00011",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1974 Annals of Surgery report describes fetus-in-fetu, a rare retroperitoneal mass in infants thought to arise from an included monozygotic diamniotic twin. The authors distinguish it from teratoma by embryologic origin, location, benign behavior, and organized vertebral and limb structures. Diagnosis can be made radiographically by a small vertebral column. Treatment is complete excision with attention to blood supply from the superior mesenteric vessels. A six-week-old male case is presented. Because it is a teratoma-like entity that is differentiated from teratoma, its relevance to germ cell tumors is borderline.",
+    "summary_ja": "1974年の論文で、乳児の後腹膜に生じるまれな腫瘤「胎児内胎児」を報告している。一卵性二羊膜双胎の取り込みに由来すると考えられ、奇形腫とは発生起源、部位、良性であること、椎骨や四肢芽を伴う器官構造で区別される。単純X線で小さな脊柱を認めれば診断でき、治療は上腸間膜血管からの血流に注意した完全切除である。6週齢の男児例を示す。奇形腫様病変として奇形腫との鑑別が主題であり、胚細胞腫瘍との関連は境界的である。",
+    "abstract": "Fetus-in-fetu is an unusual cause of retroperitoneal abdominal mass in infants, which most likely arises from inclusion of a monozygotic, diamniotic twin. This entity is distinguished from teratoma by its embryological origin, its unusual location in the retroperitoneal space, its invariable benignity, and by the presence of vertebral organization with limb buds and well-developed organ systems. Diagnosis is made radiographically by the finding of a diminutive vertebral column on a plain abdominal film. The treatment of choice is total excision with special attention being given to the fetus' blood supply which may be directly from the host's superior mesenteric vessels. A well-documented example of this unusual entity that occurred in a six-week old infant male is presented.",
+    "abstract_ja": "胎児内胎児は、乳児の後腹膜腫瘤のまれな原因であり、多くは一卵性二羊膜双胎の取り込みに由来すると考えられる。本疾患は、発生起源、後腹膜という特異な部位、常に良性であること、そして四肢芽と十分に発達した器官系を伴う椎骨構造の存在により、奇形腫と区別される。診断は腹部単純X線写真で小さな脊柱を認めることによりなされる。第一選択の治療は全摘除であり、胎児の血流が宿主の上腸間膜血管から直接来ている場合があるため、その点に特に注意を払う必要がある。ここでは、生後6週齢の男児に生じたこのまれな疾患の、十分に記録された症例を提示する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "retroperitoneum",
+      "sx": "male",
+      "ag": "infant",
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-4522792",
+    "title": "Primitive teratocarcinoma cells express a differentiation antigen specified by a gene at the T-locus in the mouse.",
+    "title_ja": "原始奇形癌細胞はマウスのT遺伝子座によって規定される分化抗原を発現する",
+    "authors": [
+      "Artzt K",
+      "Bennett D",
+      "Jacob F"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1974,
+    "pmid": "4522792",
+    "doi": "10.1073/pnas.71.3.811",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1974 PNAS report shows that mouse primitive teratocarcinoma cells express a cell-surface antigen specified by a wild-type T-locus gene. The same antigen is found on morulae and sperm, and the mutant allele is lethal in homozygotes at the morula stage. The study uses serological methods to link teratocarcinoma stem cells to early embryonic cells. Because it is an experimental murine developmental and antigen study rather than a clinical germ cell tumor study, its relevance is uncertain, though it uses embryonal carcinoma-type cells as a model.",
+    "summary_ja": "1974年のPNAS論文で、マウスの原始奇形癌細胞が、野生型T遺伝子座の遺伝子によって規定される細胞表面抗原を発現することを示した。同じ抗原は桑実胚と精子にも存在し、変異型はホモ接合体で桑実胚期に致死となる。血清学的手法で奇形癌幹細胞と初期胚細胞の関係を検討した。臨床の胚細胞腫瘍ではなく、胚性癌型細胞をモデルとした実験的研究であり、関連性は不確実である。",
+    "abstract": "A cell-surface antigen common to mouse primitive teratocarcinoma cells, morulae, and sperm has been shown by serological methods to be specified by a wild-type T-locus gene whose mutant form is lethal in homozygotes at the morula stage.",
+    "abstract_ja": "マウスの原始奇形癌細胞、桑実胚、精子に共通する細胞表面抗原が、血清学的方法により、野生型T遺伝子座の遺伝子によって規定されることが示された。その変異型は、ホモ接合体では桑実胚期に致死となる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-4525289",
+    "title": "Contact-mediated myogenesis and increased acetylcholinesterase activity in primary cultures of mouse teratocarcinoma cells.",
+    "title_ja": "マウス奇形癌細胞の初代培養における接触依存的筋形成とアセチルコリンエステラーゼ活性の増加",
+    "authors": [
+      "Gearhart JD",
+      "Mintz B"
+    ],
+    "journal": "Proc Natl Acad Sci U S A",
+    "year": 1974,
+    "pmid": "4525289",
+    "doi": "10.1073/pnas.71.5.1734",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1974 PNAS study examines primary cultures of mouse teratocarcinoma cells, comparing attached cells with suspended embryoid bodies. Attached cells showed markedly increased acetylcholinesterase activity within weeks, mainly in cells undergoing myogenesis with aberrant muscle fibers. Smaller embryoid bodies with more multipotent cells also showed AChE increase when attached. The authors conclude that substrate attachment initiates and sustains cell differentiation. The work is an in vitro developmental model of teratocarcinoma stem cells rather than a clinical germ cell tumor study, so relevance is uncertain.",
+    "summary_ja": "1974年のPNAS論文で、マウス奇形癌細胞の初代培養を用い、付着培養と浮遊させた胚様体を比較した。付着細胞では数週間でアセチルコリンエステラーゼ活性が著明に増加し、主に筋形成を示す細胞で異常な筋線維が形成された。多能性細胞を多く含む小型の胚様体でも付着時に活性が増加した。奇形癌幹細胞の体外分化モデルであり、臨床の胚細胞腫瘍研究ではないため関連性は不確実である。",
+    "abstract": "Transplantable mouse teratomas are known to contain multipotential teratocarcinoma stem cells analogous to early embryo cells and capable of giving rise to a wide variety of specialized cell types in vivo when they attach to a substratum; if they are grown instead in suspension in the body cavity, they form multicellular embryoid bodies which proliferate with little or no cell specialization. Thus, changes initiated at the cell surface may play some role in promoting early cell differentiation. In order to establish an in vitro system for experimental investigation of this hypothesis, embryoid body cells were explanted under conditions of cell attachment versus suspension and maintained in primary culture. Because cell differentiation in previous reports was relatively limited in vitro, the two cellular populations were first compared for genesis of a quantifiable macromolecular phenotype, acetylcholinesterase (AChE) activity, which characterizes several of the cell types most commonly formed in the attached tumors in vivo. The attached cells produced markedly increased levels of AChE activity within a few weeks, while cells in suspension retained basal levels. AChE was histochemically visualized and was found to occur chiefly in cells undergoing myogenesis, especially during myotube formation. Aberrant muscle fibers formed and became predominant in the cultures. When embryoid bodies were first fractionated by increasing size, which reflects their progressive differentiation, the smallest ones, with relatively more multipotential cells and no apparent muscle cells, also showed AChE increase in attached cultures. The results are consistent with the view that attachment of the cell surface to a substratum may play a critical role in initiating some cellular developmental commitments, as well as in sustaining differentiation of cells whose specialization has already been determined. Further experimental modifications of this primary culture system of teratocarcinoma cells should be useful in analyzing cell-substratum relations and cell-surface changes in early mammalian development.",
+    "abstract_ja": "マウスの奇形腫は、多能性の奇形癌幹細胞を含むことが知られており、これは培養された胚と類似し、基質に付着すると、体内で多様な特殊化した細胞型を生じることができる。一方、浮遊状態で体腔内で培養すると、細胞の特殊化をほとんど伴わず増殖する胚様体を形成する。したがって、細胞表面に起こる変化が初期の細胞分化の促進に何らかの役割を果たしている可能性がある。この仮説を実験的に検討するための体外系を確立するため、胚様体細胞を付着条件と浮遊条件で外植し、初代培養で維持した。以前の報告では体外での細胞分化が比較的限られていたため、まず両集団を、生体内で付着腫瘍に最も多く形成される細胞型の1つであるアセチルコリンエステラーゼ(AChE)活性という定量可能な高分子表現型の生成について比較した。付着細胞では数週間以内にAChE活性が著明に増加し、浮遊細胞では基礎レベルにとどまった。AChEは組織化学的に可視化され、主に筋形成、特に筋管形成の過程にある細胞に認められた。異常な筋線維が形成され、培養中で優勢となった。サイズごとに分画された胚様体は、サイズが大きいほど分化が進んでいることを反映しており、最も小さいもの、すなわち多能性細胞がより多く、筋細胞がほとんど見られないものでも、付着培養ではAChE活性の増加を示した。これらの結果は、細胞表面が基質に付着することが、細胞の発生的な決定の開始や、既に特殊化が決まった細胞の分化の維持に重要な役割を果たしうるという見解と一致する。この奇形癌細胞の初代培養系をさらに実験的に改変することは、哺乳類の初期発生における細胞と基質の関係や細胞表面の変化を解析するうえで有用であろう。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-5075618",
+    "title": "Primary mediastinal tumours in Iceland 1956-70.",
+    "title_ja": "1956〜70年のアイスランドにおける原発性縦隔腫瘍",
+    "authors": [
+      "Hallgrímsson JG"
+    ],
+    "journal": "Thorax",
+    "year": 1972,
+    "pmid": "5075618",
+    "doi": "10.1136/thx.27.4.468",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This Icelandic series reviews 16 histologically confirmed primary mediastinal tumours diagnosed from 1956 to 1970 in a population of about 180,000. Cysts were the most common type, followed by lymphatic lesions, and 37.5% were malignant. Most tumours arose in the anterior and posterior compartments. Surgical management included radical excision in 11 patients, and there were no postoperative deaths. The abstract does not specifically address germ cell tumours, which are only a potential subset of this broad series.",
+    "summary_ja": "1956〜70年にアイスランドで診断された原発性縦隔腫瘍16例を検討した報告である。嚢胞が最も多く、次いでリンパ組織由来の病変であった。悪性は37.5%だった。11例に根治的切除が行われ、術後死亡はなかった。要旨には胚細胞腫瘍への言及はなく、広い縦隔腫瘍の一部として含まれる可能性にとどまる。",
+    "abstract": "Seventeen histologically proved cases of primary mediastinal tumours were diagnosed in Iceland in 1956-70, during which period the average population was 180,000. Sixteen of these cases, seen at the Department of Thoracic Surgery, Landspítalinn, Iceland, are analysed. The patients' ages ranged from 1 to 59 years; 6 were males and 10 were females. Their symptoms are described. The commonest histological types were cysts (31·2%) followed by lesions of lymphatic origin (25%); 62·5% of the tumours were benign and 37·5% malignant. The commonest sites were the anterior and posterior compartments where 62·6% of the tumours were located. Radical excision was performed in 11 cases, partial excision in one case, and biopsy of the mediastinal tumour in five cases. There were no postoperative deaths. Further details of each case are given and the fates of the patients have been traced.",
+    "abstract_ja": "1956〜70年にアイスランドで組織学的に確定された原発性縦隔腫瘍17例が診断された。この期間の平均人口は18万人であった。そのうち16例はLandspítalinn病院（アイスランド）の胸部外科で診察され、分析されている。患者の年齢は1〜59歳で、男性6例、女性10例であった。症状を記述する。最も多い組織型は嚢胞（31.2%）であり、続いてリンパ組織由来の病変（25%）であった。腫瘍の62.5%は良性、37.5%は悪性であった。最も多い部位は前部と後部のコンパートメントで、縦隔腫瘍の62.6%が位置していた。根治的切除が11例に、部分切除が1例に、縦隔腫瘍の生検が5例に行われた。術後死亡はなかった。各症例の詳細を示し、患者の転帰も追跡されている。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "mediastinum",
+      "sx": "mixed",
+      "ag": "mixed",
+      "tr": [
+        "surgery"
+      ],
+      "n": 16,
+      "th": [
+        "surgery",
+        "epidemiology",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-5115830",
+    "title": "Zinc induction of testicular teratomas in Japanese quail (Coturnix coturnix Japonica) after photoperiodic stimulation of testis.",
+    "title_ja": "光周期刺激後のウズラの精巣に対する亜鉛投与による精巣奇形腫の誘発",
+    "authors": [
+      "Guthrie J"
+    ],
+    "journal": "Br J Cancer",
+    "year": 1971,
+    "pmid": "5115830",
+    "doi": "10.1038/bjc.1971.40",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1971 study induced teratomas in Japanese quail by intratesticular injection of zinc chloride during photoperiod-stimulated testicular growth. The resulting tumours resembled those previously produced in domestic fowl and shared histological features with spontaneous human testicular teratomas. Because the work is an animal experiment rather than a patient study, its relevance to clinical germ cell tumor care is uncertain, though it offers a model for testicular teratoma biology.",
+    "summary_ja": "1971年の動物実験。日長刺激で精巣発育を促した後、ウズラの精巣に塩化亜鉛を注射して精巣奇形腫を誘発した。生じた腫瘍は家禽での先行報告に似ており、ヒトの自然発生精巣奇形腫と組織学的特徴を共有する。患者を対象とした研究ではないため、臨床への関連性は不確実だが、精巣奇形腫の生物学を考えるモデルとなりうる。",
+    "abstract": "Teratomas have been induced in Japanese quail (Coturnix coturnix Japonica) by intra-testicular injections of 3% zinc chloride solution during a period of testicular growth artificially stimulated by increased photoperiod. These tumours resemble those previously induced by similar methods in domestic fow1 and have histological features in common with spontaneous testicular teratomas in man.",
+    "abstract_ja": "ウズラ（Coturnix coturnix japonica）において、精巣の成長を光周期の増加によって人為的に促進した期間中に、3%塩化亜鉛溶液を精巣内注射することで奇形腫を誘発した。これらの腫瘍は、以前に家禽で同様の方法により誘発された腫瘍に似ており、ヒトの自然発生精巣奇形腫と組織学的特徴を共有している。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-5555494",
+    "title": "Congenital subgaleal cysts over the anterior fontanelle in Nigerians.",
+    "title_ja": "ナイジェリア人の前囟上方にみられる先天性皮下帽状腱膜下嚢胞",
+    "authors": [
+      "Adeloye A",
+      "Odeku EL"
+    ],
+    "journal": "Arch Dis Child",
+    "year": 1971,
+    "pmid": "5555494",
+    "doi": "10.1136/adc.46.245.95",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1971 series describes eighteen Nigerian infants with congenital cystic swellings over the anterior fontanelle, with a female-to-male ratio of 2:1. Of the 14 histologically examined, most were dermoid cysts, with one containing nerve tissue suggesting encephalocele. No intracranial connection was found, and excision was curative. The paper concerns scalp developmental cysts rather than germ cell tumors, so relevance is uncertain.",
+    "summary_ja": "ナイジェリアの乳児18例で前囟上方にみられた先天性嚢胞性腫脹を報告した1971年の症例集積。男女比は2:1。組織学的に確認された14例のうち、類皮嚢腫が大部分で、1例では神経組織を認め脳瘤が疑われた。頭蓋内交通はなく、切除により治癒した。生殖細胞腫瘍ではなく頭皮の発生性嚢胞を扱うため、関連性は不確実と判断した。",
+    "abstract": "Eighteen cases of a congenital cystic swelling located over the anterior fontanelle are described in Nigerian patients who were otherwise clinically normal, There was a female: male ratio of 2: 1. Radiologically and at operation, the cysts showed no evidence of intracranial connexion. Excision was curative. Of 14 cases which were histologically verified, all were dermoid cysts except one in which nerve tissue was present suggesting an encephalocele. Air cystography was the most useful diagnostic procedure.",
+    "abstract_ja": "ナイジェリア人の患者18例で前囟上方にみられる先天性の嚢胞性腫脹を記述する。その他は臨床的に正常であった。男女比は2:1であった。放射線学的検査および手術時に、嚢胞には頭蓋内交通の所見は認められなかった。組織学的に確認された14例はすべて類皮嚢腫であったが、1例のみ神経組織を含み、脳瘤が示唆された。空気嚢胞造影が最も有用な診断法であった。切除により治癒した。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "mixed",
+      "tr": [
+        "surgery"
+      ],
+      "n": 18,
+      "th": [
+        "epidemiology",
+        "pathology_molecular",
+        "diagnosis_imaging",
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-4192953",
+    "title": "Alpha-fetoprotein: occurrence in certain malignant diseases and review of clinical applications.",
+    "title_ja": "悪性疾患におけるαフェトプロテイン(AFP)：出現状況と臨床応用の総説",
+    "authors": [
+      "Smith JB"
+    ],
+    "journal": "Med Clin North Am",
+    "year": 1970,
+    "pmid": "4192953",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "No abstract available.",
+    "summary_ja": "Abstractなし",
+    "abstract": "",
+    "abstract_ja": "Abstractなし",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-4315971",
+    "title": "Coincidence of congenital malformation and embryonic tumours of childhood.",
+    "title_ja": "小児胎児性腫瘍と先天奇形の合併",
+    "authors": [
+      "Berry CL",
+      "Keeling J",
+      "Hilton C"
+    ],
+    "journal": "Arch Dis Child",
+    "year": 1970,
+    "pmid": "4315971",
+    "doi": "10.1136/adc.45.240.229",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1970 Archives of Disease in Childhood study reviewed records of childhood embryonal tumours, including neuroblastoma, nephroblastoma, hepatoblastoma, and teratoma, for association with congenital malformation. No significant association was found between neoplasia and malformation. The authors suggest that an increase in local abnormalities in sacrococcygeal teratomata might reflect local growth effects. They also discuss how malformation definitions and comparisons with general population malformation rates affect interpretation.",
+    "summary_ja": "1970年の本研究は、神経芽腫、腎芽腫、肝芽腫、奇形腫を含む小児の胎児性腫瘍の症例記録を検討し、先天奇形との関連を調べたものです。腫瘍と奇形の間に有意な関連は認められませんでした。仙尾部奇形腫で局所の異常が多い点は、局所の発育への影響によるかもしれないと示唆されています。",
+    "abstract": "Examination of the records of cases of neuroblastoma, nephroblastoma, hepatoblastoma, and teratoma has not revealed a significant association between neoplasia and malformation. An increase in 'local' abnormalities in sacrococcygeal teratomata might be explained by local growth effects. The significance of the definition of malformation, the validity of comparisons between 'general incidence' figures for malformations, and those obtained in tumour-bearing patients is considered.",
+    "abstract_ja": "神経芽腫、腎芽腫、肝芽腫、奇形腫の症例記録を検討したところ、腫瘍と奇形の間に有意な関連は認められなかった。仙尾部奇形腫では局所の異常が多い可能性があり、これは局所の発育への影響によって説明されるかもしれない。奇形の定義の妥当性、一般集団の奇形発生率との比較、腫瘍保有患者における奇形の評価の解釈についても考察する。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "multiple",
+      "ag": "child",
+      "th": [
+        "epidemiology"
+      ]
+    }
+  },
+  {
+    "id": "pmid-5429108",
+    "title": "Study of the clinical efficiency of bleomycin in human cancer.",
+    "title_ja": "悪性腫瘍に対するブレオマイシンの臨床効果に関する研究",
+    "authors": [],
+    "journal": "Br Med J",
+    "year": 1970,
+    "pmid": "5429108",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This 1970 British Medical Journal clinical trial evaluated bleomycin in 237 patients with actively growing, non-surgical cancers. Bleomycin lacked hematopoietic toxicity and immunosuppression, with side effects mainly affecting skin, mucosae, and lungs. It outperformed earlier drugs for skin squamous cell carcinoma, penile, vulvar, esophageal, and cervical cancers, melanoma, and mycosis fungoides, and matched prior regimens for testicular dysembryoma or choriocarcinoma. It was of little value in hematopoietic tumours.",
+    "summary_ja": "1970年の臨床試験で、手術や放射線療法の適応がない進行性の悪性腫瘍237例にブレオマイシンを投与した。造血毒性や免疫抑制はなく、副作用は主に皮膚・粘膜・肺に現れた。皮膚の扁平上皮癌や陰茎癌などで従来薬より有効で、精巣のdysembryomaや絨毛癌では既存療法と同等の効果を示した。造血器腫瘍にはほとんど効果がなかった。",
+    "abstract": "A trial of the action of bleomycin was made on 237 cancer patients with tumours in a visible and actively growing phase who did not require surgery or radiotherapy. Bleomycin was found to have several special properties-absence of haemopoietic toxicity or immunosuppressive action and toxic side-effects affecting skin, mucosae, and lungs. The drug is more effective than drugs previously available for squamous cell carcinoma of the skin and cancer of the penis, the vulva, oesophagus, and uterine cervix, as well as for melanoma and mycosis fungoides. It is at least as effective as those drugs or combinations of drugs previously used for oropharyngeal tumours and testicular dysembryoma or choriocarcinoma. It is very effective when used in arterial perfusion therapy of otorhinolaryngeal tumours. It is of little value in other tumours, in particular for those of the haemopoietic system.",
+    "abstract_ja": "手術や放射線療法を必要としない、視認可能で増殖期にある腫瘍を有する癌患者237例に対してブレオマイシンの作用を検討した。ブレオマイシンは造血毒性や免疫抑制作用がなく、皮膚、粘膜、肺に毒性を生じるという特異的な性質を有することが示された。皮膚の扁平上皮癌、陰茎癌、外陰癌、食道癌、子宮頸癌、メラノーマ、菌状息肉症においては、従来の薬剤よりも有効であった。中咽頭腫瘍や精巣のdysembryoma、絨毛癌においては、従来の薬剤や併用療法と少なくとも同等の効果があった。耳鼻咽喉科領域の腫瘍に対する動脈灌流療法では非常に有効であった。造血器系腫瘍など、その他の腫瘍にはほとんど効果がなかった。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "multiple",
+      "hi": [
+        "gct_nos",
+        "choriocarcinoma"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 237,
+      "th": [
+        "chemotherapy"
+      ],
+      "ep": "response_rate"
+    }
+  },
+  {
+    "id": "pmid-6035800",
+    "title": "Acquired pulmonary stenosis and pulmonary artery compression.",
+    "title_ja": "肺動脈の後天性狭窄と肺動脈圧迫",
+    "authors": [
+      "Gough JH",
+      "Gold RG",
+      "Gibson RV"
+    ],
+    "journal": "Thorax",
+    "year": 1967,
+    "pmid": "6035800",
+    "doi": "10.1136/thx.22.4.358",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1967 Thorax report describes seven patients with acquired pulmonary stenosis caused by external compression of the pulmonary artery. Three cases were due to anterior mediastinal teratoma, Hodgkin's disease, and ascending aortic aneurysm, while four involved compression of the right or left pulmonary artery branches. Angiography demonstrated compression in every case, and pressure tracings in bilateral compression resembled bilateral stenosis. The authors recommend cardiac catheterization with selective angiography to distinguish extrinsic compression from intrinsic stenosis and to localize the obstruction.",
+    "summary_ja": "1967年の報告で、肺動脈が外部から圧迫されて生じた後天性肺動脈狭窄の7例を記述しています。原因は縦隔奇形腫、ホジキン病、上行大動脈瘤で、残り4例は左右の肺動脈分枝の圧迫でした。全例で血管造影により圧迫が確認され、外因性圧迫と器質的狭窄の鑑別にはカテーテル検査と選択的造影が有用と述べています。",
+    "abstract": "Three patients suffering from acquired pulmonary stenosis are described resulting from compression of the main pulmonary artery by anterior mediastinal teratoma, Hodgkin's disease, and aneurysm of the ascending aorta, respectively; also four others who had compression of the right or left primary branch of the pulmonary artery. The pulmonary artery compression was demonstrated angiographically in every case, and in the patient with right and left pulmonary artery compression the main pulmonary artery pressure tracing was characteristic of bilateral pulmonary artery stenosis. Cardiac catheterization and selective angiography are indicated in patients who have evidence of right ventricular outflow obstruction to determine the site and severity of the obstruction and to differentiate between extrinsic compression and intrinsic stenosis.",
+    "abstract_ja": "肺動脈主幹の縦隔前部奇形腫、ホジキン病、上行大動脈瘤による圧迫によって生じた後天性肺動脈狭窄の3例と、右または左肺動脈主枝の圧迫を受けた4例を記述する。肺動脈圧迫は全例で血管造影により確認され、右と左の肺動脈が両方圧迫された例では、主肺動脈の圧記録が両側肺動脈狭窄に特徴的であった。右心室流出路閉塞の兆候を有する患者では、閉塞部位と重症度を確認し、外因性圧迫と内因性狭窄を鑑別するために心カテーテル検査と選択的血管造影が適応となる。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46",
+    "attrs": {
+      "si": "mediastinum",
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 7,
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
+  },
+  {
+    "id": "pmid-5921063",
+    "title": "Quantitative immunologic assay of human chorionic gonadotropin in normal and abnormal pregnancies.",
+    "title_ja": "正常および異常妊娠におけるヒト絨毛性ゴナドトロピン(hCG)の定量的免疫学的測定",
+    "authors": [
+      "Mishell DR Jr",
+      "Davajan V"
+    ],
+    "journal": "Am J Obstet Gynecol",
+    "year": 1966,
+    "pmid": "5921063",
+    "doi": "10.1016/0002-9378(66)90320-6",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "No abstract available.",
+    "summary_ja": "Abstractなし",
+    "abstract": "",
+    "abstract_ja": "Abstractなし",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-5839223",
+    "title": "Observations on immunochemical assays of human chorionic gonadotropin.",
+    "title_ja": "ヒト絨毛性ゴナドトロピン(hCG)の免疫化学的測定に関する観察",
+    "authors": [
+      "Lucis OJ",
+      "Tannenbaum H"
+    ],
+    "journal": "Can Med Assoc J",
+    "year": 1965,
+    "pmid": "5839223",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1965 study evaluated commercial immunochemical hCG assays (UCG and Prepuerin) against the bioassay. The immunoassays detected hCG at higher concentrations than the bioassay and remained positive longer in abnormal pregnancies because they detect biologically inactive hCG. Several non-pregnant patients with ovarian cysts and cystic teratomas excreted UCG-reactive substances that disappeared after tumour removal.",
+    "summary_ja": "ヒト絨毛性ゴナドトロピン(hCG)の市販の免疫化学的検査（UCG、Prepuerin）を生物学的測定法と比較した研究である。免疫化学的測定は生物学的に不活性なhCGも検出するため、異常妊娠で陽性が長く続いた。嚢胞性奇形腫などの非妊娠患者でも尿中に反応物質が排泄され、腫瘍摘出後に消失した。",
+    "abstract": "Commercial immunochemical tests, \"UCG\" and \"Prepuerin\", detected standardized human chorionic gonadotropin (HCG) in concentrations comparable to the rat ovarian hyperemia test. These in vitro systems also cross-reacted with pituitary luteinizing hormone (LH) but not with follicle-stimulating hormone (FSH) of animal origin. The latex agglutination slide tests required a higher concentration of HCG for a positive test than did the bioassay. In cases of abnormal pregnancies the immunochemical assays remained positive longer than the bioassay, which is apparently due to their detection of biologically inactive HCG. Several non-pregnant patients with ovarian cysts and cystic teratomas excreted in their urine some substances which reacted with the UCG test. After surgical removal of the tumour these substances disappeared from the urine.",
+    "abstract_ja": "市販の免疫化学的検査「UCG」および「Prepuerin」は、標準化されたヒト絨毛性ゴナドトロピン(hCG)を、ラットの卵巣充血試験と同程度の濃度で検出した。これらの試験管内システムは、動物由来の下垂体黄体形成ホルモン(LH)とも交差反応したが、卵胞刺激ホルモン(FSH)とは交差反応しなかった。ラテックス凝集スライド検査では、陽性となるために生物学的測定法よりも高いhCG濃度を必要とした。異常妊娠の症例では、免疫化学的測定は生物学的測定よりも長く陽性を示したが、これは生物学的に不活性なhCGを検出するためと考えられる。卵巣嚢胞および嚢胞性奇形腫の非妊娠患者数名の尿中には、「UCG」検査と反応する物質が排泄されていた。腫瘍の外科的切除後、これらの物質は尿中から消失した。",
+    "added_at": "2026-10-31",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-10-31): 掲載。",
+    "relevance_reviewed_at": "2026-10-31 13:49:46"
   }
 ]
