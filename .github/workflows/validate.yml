@@ -49,3 +49,5 @@ jobs:
         run: npm run check:filter
       - name: Filter - attribute filters (site, tag, histology, themes) against the data
         run: npm run check:attr
+      - name: Split loading (head / list / details) of the list data
+        run: npm run check:split
