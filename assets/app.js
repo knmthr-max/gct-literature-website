@@ -50,6 +50,7 @@
   const state = {
     papers: [],
     query: "",
+    loadingFull: false, // 全件の一覧(list.json)を読み込み中か
     kubun: "all", // all | clinical | basic
     designs: new Set(), // 臨床の中で選んだ研究デザイン(選ばなければ臨床すべて)
     attr: {}, // 属性の絞り込み。項目の短い名前 → 選んだ値の Set(項目の中はOR、項目どうしはAND)
@@ -407,9 +408,13 @@
     // (要約が存在するのに表示していないと誤解されないようにするため、単純に非表示にはしない)
     const summary = LANG === "en" ? (p.summary_en || p.summary_ja) : (p.summary_ja || p.summary_en);
     const summaryPending = LANG === "en" ? "Summary: not yet available" : "要約: 準備中";
-    const summaryHtml = summary
-      ? `<p class="paper-summary">${escapeHtml(summary)}</p>`
-      : `<p class="paper-summary paper-summary-pending">${escapeHtml(summaryPending)}</p>`;
+    // 要約・著者・DOI は、一覧の核とは別に(details)裏で読み込む。届くまでは「読み込み中」を出す
+    const waiting = SEARCH_MODE && p._d !== true;
+    const summaryHtml = waiting
+      ? `<p class="paper-summary paper-summary-pending" data-part="summary">${LANG === "en" ? "Loading summary…" : "要約を読み込み中…"}</p>`
+      : summary
+        ? `<p class="paper-summary" data-part="summary">${escapeHtml(summary)}</p>`
+        : `<p class="paper-summary paper-summary-pending" data-part="summary">${escapeHtml(summaryPending)}</p>`;
 
     // 抄録: 収載文献は基本的に英語が原文のため、日本語ページでも英語原文を常に参照できるようにする。
     // 日本語訳(abstract_ja)がある場合は「抄録」に訳文を表示しつつ、「抄録原文(英語)」で原文も別途提示する。
@@ -440,15 +445,15 @@
     }
 
     return `
-      <article class="paper-card">
+      <article class="paper-card" data-card-id="${escapeHtml(p.id)}">
         <h2>${escapeHtml(mainTitle)}</h2>
         ${subTitle}
-        ${metaParts.length ? `<p class="paper-meta">${escapeHtml(metaParts.join(" · "))}</p>` : ""}
+        ${metaParts.length ? `<p class="paper-meta" data-part="meta">${escapeHtml(metaParts.join(" · "))}</p>` : ""}
         ${summaryHtml}
         ${abstractHtml}
         ${tags ? `<div class="paper-tags">${tags}</div>` : ""}
         ${attrTags(p)}
-        ${links.length ? `<div class="paper-links">${links.join("")}</div>` : ""}
+        ${links.length ? `<div class="paper-links" data-part="links">${links.join("")}</div>` : ""}
       </article>`;
   }
 
@@ -472,7 +477,8 @@
   }
 
   // 一覧の範囲(タイトル・要約・著者・雑誌)での部分一致。1文字の日本語と、Pagefind を読めなかったときに使う
-  function substringIds(text) {
+  async function substringIds(text) {
+    await detailsPromise; // 要約・著者は details にあるので、全部届いてから探す
     const needle = text.toLowerCase();
     return new Set(state.papers.filter((p) => [
       p.title, p.title_ja, p.journal, p.summary_en, p.summary_ja, ...(p.authors || []), ...(p.tags || []),
@@ -568,6 +574,16 @@
     renderMoreButton();
   }
 
+  // 全件が届く前の最初の表示: 先頭のカードだけを描く(絞り込み・件数の欄は触らない)
+  function renderListOnly() {
+    shown = state.papers;
+    shownCount = Math.min(PAGE_SIZE, shown.length);
+    $("paper-list").innerHTML = shown.slice(0, shownCount).map(paperCard).join("");
+    $("empty-message").hidden = true;
+    renderMoreButton();
+    $("load-more").hidden = true;
+  }
+
   function renderMore() {
     const next = Math.min(shownCount + PAGE_SIZE, shown.length);
     $("paper-list").insertAdjacentHTML("beforeend", shown.slice(shownCount, next).map(paperCard).join(""));
@@ -588,24 +604,83 @@
     }, true);
   }
 
-  async function loadPapers() {
-    if (SEARCH_MODE) {
-      try {
-        return await loadJson("search/list.json");
-      } catch (err) {
-        console.error(err);
-        SEARCH_MODE = false; // 検索データが無い・読めない: 従来の方式で表示する
-      }
-    }
+  async function loadLegacyPapers() {
     // 検索データが使えないときの従来方式: 年代別に分けた文献データを全部読んで連結する
     const index = await loadJson("data/papers/index.json");
     const parts = await Promise.all(index.shards.map((name) => loadJson("data/papers/" + name)));
     return parts.flat();
   }
 
+  // 最初の表示を速くするため、新方式では次の順に読む(設計: docs/decisions/2026-11-01_split_list_data.md)
+  //  1. search/head.json … 先頭の100件(要約・著者つき)。すぐにカードを出す
+  //  2. search/list.json … 全件の核(題名・年・タグ・属性など)。届くと絞り込み・検索・並び替えが使える
+  //  3. search/details/<n>.json … 要約・著者・DOI。裏で順に読み、届いたカードから埋める
+  const visible = (p) => p.relevance_status !== "excluded";
+  const byId = new Map();
+  let detailsPromise = Promise.resolve();
+
+  function refreshCard(p) {
+    const old = document.querySelector(`[data-card-id="${CSS.escape(p.id)}"]`);
+    if (!old) return;
+    const fresh = document.createElement("template");
+    fresh.innerHTML = paperCard(p);
+    for (const part of ["meta", "summary", "links"]) {
+      const next = fresh.content.querySelector(`[data-part="${part}"]`);
+      const prev = old.querySelector(`[data-part="${part}"]`);
+      if (next && prev) {
+        prev.replaceWith(next);
+      } else if (next) {
+        // 核だけでは無かった部分(著者・DOIが無かったカード)が、届いて初めて出る
+        if (part === "meta") (old.querySelector(".paper-title-sub") || old.querySelector("h2")).after(next);
+        else old.appendChild(next);
+      }
+    }
+  }
+
+  function applyDetails(chunk) {
+    for (const [id, detail] of Object.entries(chunk)) {
+      const p = byId.get(id);
+      if (!p) continue;
+      Object.assign(p, detail);
+      p._d = true;
+      refreshCard(p);
+    }
+  }
+
+  function loadDetails(head) {
+    const chunks = Array.from({ length: head.detail_chunks }, (_, n) => n);
+    // 先頭から順に(新しい論文のカードが先に埋まる)。2つずつ並べて読む
+    detailsPromise = (async () => {
+      const queue = [...chunks];
+      const worker = async () => {
+        for (let n = queue.shift(); n !== undefined; n = queue.shift()) {
+          try {
+            applyDetails(await loadJson(`search/details/${n}.json`));
+          } catch (err) {
+            console.error(err);
+          }
+        }
+      };
+      await Promise.all([worker(), worker()]);
+    })();
+    return detailsPromise;
+  }
+
+  function setLoadingFull(flag, shownCount, total) {
+    state.loadingFull = flag;
+    document.body.classList.toggle("loading-full", flag);
+    $("sort-select").disabled = flag;
+    if (flag) {
+      $("result-count").textContent = LANG === "en"
+        ? `Showing the latest ${shownCount}. Loading all ${total.toLocaleString("en-US")} papers…`
+        : `新しい順に${shownCount}件を表示中。全${total.toLocaleString("ja-JP")}件を読み込み中…`;
+    }
+  }
+
   async function init() {
     $("search-box").addEventListener("input", (e) => {
       state.query = e.target.value.trim();
+      if (state.loadingFull) return; // 全件が届いたら、入力済みの検索語で検索する
       if (SEARCH_MODE) scheduleSearch();
       else renderList();
     });
@@ -616,15 +691,45 @@
     });
 
     try {
-      const [site, papers] = await Promise.all([loadJson("data/site.json"), loadPapers()]);
-      applySiteInfo(site);
+      ATTR = await import(pageUrl("assets/attr-labels.js"));
+      readUrlSelection();
+      // 絞り込みのURLを直接開いたときは、先頭の100件では足りないので、全件を待つ
+      const hasSelection = state.kubun !== "all" || selectedCount() > 0;
+      const siteLoad = loadJson("data/site.json");
+      let head = null;
+      let listLoad = null;
+      if (SEARCH_MODE) {
+        listLoad = loadJson("search/list.json");
+        if (!hasSelection) head = await loadJson("search/head.json").catch(() => null);
+      }
+      applySiteInfo(await siteLoad);
       if (SEARCH_MODE) enableSearchUi();
+      if (head) {
+        // 1. 先頭の100件をすぐに出す(全件が届くまで、絞り込み・並び替え・検索は使えない)
+        state.papers = head.papers.map((p) => ({ ...p, _d: true }));
+        setLoadingFull(true, state.papers.length, head.total);
+        renderListOnly();
+        $("result-count").textContent = LANG === "en"
+          ? `Showing the latest ${state.papers.length}. Loading all ${head.total.toLocaleString("en-US")} papers…`
+          : `新しい順に${state.papers.length}件を表示中。全${head.total.toLocaleString("ja-JP")}件を読み込み中…`;
+      }
+      let papers;
+      try {
+        papers = SEARCH_MODE ? await listLoad : await loadLegacyPapers();
+      } catch (err) {
+        if (!SEARCH_MODE) throw err;
+        console.error(err);
+        SEARCH_MODE = false; // 検索データが無い・読めない: 従来の方式で表示する
+        $("search-hint").hidden = true;
+        papers = await loadLegacyPapers();
+      }
       // relevance_status: "excluded" の文献のみ一覧から除外する。未設定/"kept"/"needs_review"は
       // すべて表示する(人間が明示的に除外と判断するまでは隠さない方針)
       const all = Array.isArray(papers) ? papers : [];
-      state.papers = all.filter((p) => p.relevance_status !== "excluded");
-      ATTR = await import(pageUrl("assets/attr-labels.js"));
-      readUrlSelection();
+      const headById = new Map((head ? head.papers : []).map((p) => [p.id, p]));
+      state.papers = all.filter(visible).map((p) => (headById.has(p.id) ? { ...p, ...headById.get(p.id), _d: true } : p));
+      for (const p of state.papers) byId.set(p.id, p);
+      setLoadingFull(false, 0, 0);
       $("attr-reset").addEventListener("click", () => {
         state.attr = {};
         syncUrl();
@@ -639,7 +744,12 @@
         renderList();
       });
       renderJifFilters();
-      renderList();
+      if (SEARCH_MODE && state.query) scheduleSearch();
+      else renderList();
+      if (SEARCH_MODE) {
+        const meta = head || (await loadJson("search/head.json").catch(() => null));
+        if (meta) loadDetails(meta);
+      }
     } catch (err) {
       console.error(err);
       $("error-message").hidden = false;

@@ -43,6 +43,7 @@ async function open(url) {
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(url);
   await page.waitForSelector(".paper-card");
+  await page.waitForFunction(() => !document.body.classList.contains("loading-full"), null, { timeout: 120000 }); // 全件の一覧が届くまで待つ
   return { page, errors };
 }
 const shown = async (page) => num(await page.locator("#result-count").innerText());
