@@ -15,6 +15,11 @@ import { normalise, parseQuery, evaluateQuery, subterms } from "../assets/search
 
 const root = path.resolve(process.argv[2] || ".");
 const list = JSON.parse(fs.readFileSync(path.join(root, "search/list.json"), "utf8"));
+// 要約・著者・DOI は list.json に無く、details/<n>.json にある(最初に読むデータを軽くするため)。検索の基準にはそれらも含める
+for (const name of fs.readdirSync(path.join(root, "search/details"))) {
+  const chunk = JSON.parse(fs.readFileSync(path.join(root, "search/details", name), "utf8"));
+  for (const p of list) if (chunk[p.id]) Object.assign(p, chunk[p.id]);
+}
 const abstracts = {};
 for (const p of list) {
   const file = path.join(root, "search/abstract", `${p.id}.json`);
@@ -66,6 +71,7 @@ const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 await page.goto(`${base}/index.html`);
 await page.waitForSelector(".paper-card");
+await page.waitForFunction(() => !document.body.classList.contains("loading-full"), null, { timeout: 120000 }); // 全件の一覧が届くまで待つ
 
 // 画面と同じ手順(語ごとに Pagefind を引き、論文IDの集合で組み合わせる)をページ内で実行する
 const engineResult = (query) => page.evaluate(async ({ q, allIds: all }) => {

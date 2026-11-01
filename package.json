@@ -8,7 +8,8 @@
     "test:search": "node --test tests/search/*.test.mjs",
     "check:search": "node scripts/check_search_parity.mjs",
     "check:filter": "node scripts/check_design_filter.mjs",
-    "check:attr": "node scripts/check_attr_filter.mjs"
+    "check:attr": "node scripts/check_attr_filter.mjs",
+    "check:split": "node scripts/check_split_load.mjs"
   },
   "dependencies": {
     "pagefind": "1.5.2"
