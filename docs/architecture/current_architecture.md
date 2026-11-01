@@ -30,7 +30,7 @@ PubMed の MEDLINE テキスト(年別。data/raw/historical_bulk/)
 
 ## サイトの仕組み
 
-- 画面: `index.html`(日本語)、`en/index.html`(英語)、`assets/app.js`・`assets/attr-labels.js`・`assets/search-lib.js`・`assets/style.css`。ブラウザは、先頭100件(`search/head.json`)をすぐに出し、続けて全件の核(`search/list.json`)を読み込み、絞り込み・並び替えをブラウザ内で行います。要約・著者(`search/details/`)は裏で読みます(`docs/decisions/2026-11-01_split_list_data.md`)。
+- 画面: `index.html`(日本語)、`en/index.html`(英語)、`assets/app.js`・`assets/attr-labels.js`・`assets/search-lib.js`・`assets/style.css`。ブラウザは、先頭20件(`search/head.json`)をすぐに出し、続けて全件の核(`search/list.json`)を読み込み、絞り込み・並び替えをブラウザ内で行います。要約・著者(`search/details/`)は裏で読みます(`docs/decisions/2026-11-01_split_list_data.md`)。
 - 検索: Pagefind は「語 → 論文ID」の引き当てだけに使い、抄録は、カードを開いたときに `search/abstract/<id>.json` から読みます(`docs/decisions/2026-09-30_pagefind_search.md`、`docs/operations/site_search.md`)。
 - 公開データ: `data/papers/papers_<年代>.json`(年代別、`index.json` が一覧。`docs/decisions/2026-10-11_split_papers_json.md`)。フィールドは `docs/data_dictionary/site_papers_v1.md`。
 - 絞り込み: 区分(臨床/基礎)→ 研究デザイン(9分類)→ 属性(臨床のみ)。URLに選択が入ります(`docs/decisions/2026-10-12_study_design_taxonomy.md`、`2026-10-26_attribute_filters.md`)。

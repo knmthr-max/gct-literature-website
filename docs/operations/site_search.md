@@ -15,7 +15,7 @@
 | 生成物 | 内容 |
 |---|---|
 | `search/list.json` | 軽い一覧の核(題名・年・タグ・属性・雑誌など。要約・著者・抄録を除く) |
-| `search/head.json` | 先頭100件(要約・著者つき)。最初の表示に使う |
+| `search/head.json` | 先頭20件(要約・著者つき)。最初の表示に使う |
 | `search/details/<n>.json` | 要約・著者・DOI・URL(2,000件ずつ)。裏で読む(`docs/decisions/2026-11-01_split_list_data.md`) |
 | `search/abstract/<id>.json` | 抄録(英/日)。カードを開いたときに読む |
 | `search/idmap.json` | 検索結果ID → 論文ID |

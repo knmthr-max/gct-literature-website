@@ -612,7 +612,7 @@
   }
 
   // 最初の表示を速くするため、新方式では次の順に読む(設計: docs/decisions/2026-11-01_split_list_data.md)
-  //  1. search/head.json … 先頭の100件(要約・著者つき)。すぐにカードを出す
+  //  1. search/head.json … 先頭の20件(要約・著者つき)。すぐにカードを出す
   //  2. search/list.json … 全件の核(題名・年・タグ・属性など)。届くと絞り込み・検索・並び替えが使える
   //  3. search/details/<n>.json … 要約・著者・DOI。裏で順に読み、届いたカードから埋める
   const visible = (p) => p.relevance_status !== "excluded";
@@ -693,7 +693,7 @@
     try {
       ATTR = await import(pageUrl("assets/attr-labels.js"));
       readUrlSelection();
-      // 絞り込みのURLを直接開いたときは、先頭の100件では足りないので、全件を待つ
+      // 絞り込みのURLを直接開いたときは、先頭の20件では足りないので、全件を待つ
       const hasSelection = state.kubun !== "all" || selectedCount() > 0;
       const siteLoad = loadJson("data/site.json");
       let head = null;
@@ -705,7 +705,7 @@
       applySiteInfo(await siteLoad);
       if (SEARCH_MODE) enableSearchUi();
       if (head) {
-        // 1. 先頭の100件をすぐに出す(全件が届くまで、絞り込み・並び替え・検索は使えない)
+        // 1. 先頭の20件をすぐに出す(全件が届くまで、絞り込み・並び替え・検索は使えない)
         state.papers = head.papers.map((p) => ({ ...p, _d: true }));
         setLoadingFull(true, state.papers.length, head.total);
         renderListOnly();
