@@ -1,8 +1,8 @@
-// 最初の表示を速くするための分割読み込み(先頭100件 → 全件の核 → 要約などの詳細)が、期待どおり動くかを、実際のブラウザで確かめる。
+// 最初の表示を速くするための分割読み込み(先頭20件 → 全件の核 → 要約などの詳細)が、期待どおり動くかを、実際のブラウザで確かめる。
 //
 //   npm run build:search && npm run check:split
 //
-// 確認すること: list.json に要約・著者が入っていない / 先頭の100件はすぐ出る / 全件が届くまで絞り込みは隠れる /
+// 確認すること: list.json に要約・著者が入っていない / 先頭の20件はすぐ出る / 全件が届くまで絞り込みは隠れる /
 // 全件が届くと件数が出る / 詳細が届くと「読み込み中」が消えて要約と著者が出る / 絞り込みのURLを直接開いても動く /
 // 詳細が全部読めなくても、一覧は使える。
 import http from "node:http";
@@ -37,11 +37,12 @@ const check = (name, actual, expected) => {
 const fullyLoaded = (page) => page.waitForFunction(() => !document.body.classList.contains("loading-full"), null, { timeout: 120000 });
 
 check("list.json に要約・著者・DOI を含まない", list.some((p) => "summary_ja" in p || "summary_en" in p || "authors" in p || "doi" in p), false);
-check("head.json: 先頭は100件で、要約つき", [head.papers.length, head.papers.every((p) => "title" in p)], [100, true]);
-check("head.json の先頭 = list.json の先頭(同じ並び)", head.papers.map((p) => p.id), list.slice(0, 100).map((p) => p.id));
+const HEAD = 20;
+check("head.json: 先頭は20件で、要約つき", [head.papers.length, head.papers.every((p) => "title" in p)], [HEAD, true]);
+check("head.json の先頭 = list.json の先頭(同じ並び)", head.papers.map((p) => p.id), list.slice(0, HEAD).map((p) => p.id));
 check("詳細の分割数が、全件を覆う", head.detail_chunks * head.chunk_size >= head.total, true);
 
-// 全件の一覧を遅らせて、先頭の100件だけの状態を見る
+// 全件の一覧を遅らせて、先頭の20件だけの状態を見る
 delayList = 4000;
 {
   const page = await browser.newPage();
@@ -49,7 +50,7 @@ delayList = 4000;
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(`${base}/index.html`);
   await page.waitForSelector(".paper-card");
-  check("全件が届く前: 先頭の100件のうち50件を描く", await page.locator(".paper-card").count(), 50);
+  check("全件が届く前: 先頭の20件を描く", await page.locator(".paper-card").count(), HEAD);
   check("全件が届く前: 先頭のカードに要約がある", (await page.locator(".paper-card .paper-summary").first().innerText()).includes("読み込み中"), false);
   check("全件が届く前: 絞り込みの欄は見えない", await page.locator(".design-panel").isHidden(), true);
   check("全件が届く前: 件数の表示は「読み込み中」", (await page.locator("#result-count").innerText()).includes("読み込み中"), true);
