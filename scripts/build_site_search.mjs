@@ -4,7 +4,7 @@
 //
 // 出力:
 //   search/list.json          軽い一覧の「核」(題名・年・タグ・属性・雑誌など。要約・著者・DOI・抄録を除く)。発行年の新しい順
-//   search/head.json          一覧の先頭(既定の並びの先頭 HEAD_SIZE 件)。要約・著者つきで、最初の表示に使う
+//   search/head.json          一覧の先頭(既定の並びの先頭 HEAD_SIZE 件(20件))。要約・著者つきで、最初の表示に使う
 //   search/details/<n>.json   要約・著者・DOI・URL(一覧と同じ順に DETAIL_CHUNK 件ずつ。画面が裏で読み込む)
 //   search/abstract/<id>.json 抄録(英/日)。カードを開いたときだけ読む
 //   search/idmap.json         Pagefind の結果ID → 論文ID
@@ -22,7 +22,7 @@ const outDir = process.argv[3] || ".";
 // 一覧の核(絞り込み・並び替え・カードの見出しに要る項目)。それ以外の表示項目は details に分ける(最初に読むデータを軽くするため)
 const LIST_FIELDS = ["id", "pmid", "title", "title_ja", "journal", "year", "tags", "jif_tier", "added_at", "attrs"];
 const DETAIL_FIELDS = ["authors", "doi", "url", "summary_ja", "summary_en"];
-const HEAD_SIZE = 100;
+const HEAD_SIZE = 20;
 const DETAIL_CHUNK = 2000;
 const SAFE_ID = /^[A-Za-z0-9._-]+$/;
 // 検索に使わない Pagefind の部品(UI・ハイライト)と、読まない結果詳細は公開しない
