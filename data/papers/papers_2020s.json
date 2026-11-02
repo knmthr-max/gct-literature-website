@@ -26,7 +26,24 @@
     "jif_tier": "low",
     "relevance_status": "kept",
     "relevance_note": "稀な気管支内成熟奇形腫の症例で、転移性胚細胞腫瘍の除外を含めGCT/奇形腫が主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "male",
+      "ag": "adult",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-42699474",
@@ -59,7 +76,23 @@
     "jif_tier": "unknown",
     "relevance_status": "kept",
     "relevance_note": "卵巣奇形腫が原因の抗NMDA受容体脳炎を扱っており、卵巣胚細胞腫瘍が症例の中心である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adolescent",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery"
+      ]
+    }
   },
   {
     "id": "pmid-40409851",
@@ -91,7 +124,23 @@
     "jif_tier": "unknown",
     "relevance_status": "kept",
     "relevance_note": "心臓・肺動脈に浸潤した血管内混合性非セミノーマ性胚細胞腫瘍の症例であり明確にGCTが主題。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "ag": "adolescent",
+      "hi": [
+        "mixed_gct",
+        "nonseminomatous_gct"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "chemotherapy"
+      ]
+    }
   },
   {
     "id": "pmid-40408609",
@@ -128,7 +177,20 @@
     "jif_tier": "very-high",
     "relevance_status": "kept",
     "relevance_note": "精巣癌(セミノーマ・非セミノーマ)の管理に関する総説であり、GCTがテーマそのもの。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "th": [
+        "epidemiology",
+        "surgery",
+        "chemotherapy",
+        "surveillance",
+        "late_effects",
+        "fertility",
+        "qol",
+        "prognosis",
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-40406278",
@@ -155,7 +217,22 @@
     "jif_tier": "unknown",
     "relevance_status": "kept",
     "relevance_note": "仙尾部奇形腫(性腺外胚細胞腫瘍)が原因の胎児尿路閉塞に関する症例報告で、腫瘍が病態の中心である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "sacrococcygeal",
+      "sx": "male",
+      "ag": "infant",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery"
+      ]
+    }
   },
   {
     "id": "pmid-40142802",
@@ -218,7 +295,20 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "縦隔非セミノーマ性胚細胞腫瘍(奇形腫・胎児性癌成分)の遺伝子解析を扱う症例報告であり明確にGCT関連。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "mediastinum",
+      "sx": "male",
+      "ag": "adult",
+      "hi": [
+        "nonseminomatous_gct",
+        "embryonal_carcinoma"
+      ],
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-40136384",
@@ -380,7 +470,22 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣胚細胞腫瘍(TGCT)生存者における長期合併症としての脂肪肝発症を扱っており、GCTの主題として明確に関連する。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 106,
+      "th": [
+        "late_effects"
+      ],
+      "st": "retrospective_cohort"
+    }
   },
   {
     "id": "pmid-39907271",
@@ -411,7 +516,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "小児における肝原発卵黄嚢腫瘍(悪性胚細胞腫瘍)とAFP高値を主題とする症例シリーズであり、明確にGCTに該当する。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "mixed",
+      "ag": "mixed",
+      "hi": [
+        "yolk_sac_tumor"
+      ],
+      "n": 3,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-39701870",
@@ -449,7 +566,24 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣胚細胞腫瘍生存者の認知機能を縦断的に評価した研究であり、TGCTのマネジメント・晩期合併症に関する内容で関連する。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "observation",
+        "chemotherapy",
+        "radiotherapy"
+      ],
+      "n": 151,
+      "th": [
+        "late_effects"
+      ],
+      "st": "prospective_cohort"
+    }
   },
   {
     "id": "pmid-39377884",
@@ -479,7 +613,24 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "未分化胚細胞腫(dysgerminoma)に伴う傍腫瘍性SLEの症例報告であり、GCTの一種である未分化胚細胞腫が主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "seminoma_germinoma"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "chemotherapy"
+      ]
+    }
   },
   {
     "id": "pmid-40131616",
@@ -536,7 +687,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "卵巣成熟奇形腫の自然破裂による化学性腹膜炎の症例報告であり奇形腫がテーマである。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
   },
   {
     "id": "pmid-40129537",
@@ -599,7 +762,22 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "ユーザー方針: GTN/絨毛癌はGCTとしての絨毛癌との鑑別・関連疾患として掲載を継続",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "chemotherapy",
+        "prognosis"
+      ]
+    }
   },
   {
     "id": "pmid-40127887",
@@ -688,7 +866,14 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "子宮穿孔を呈した妊娠性絨毛癌の症例報告であり、GCTの一種である絨毛癌が主題。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "female",
+      "hi": [
+        "gestational_choriocarcinoma"
+      ]
+    }
   },
   {
     "id": "pmid-40090235",
@@ -837,7 +1022,27 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣胚細胞腫瘍患者のRPLND病理予測における血清マイクロRNA(miR-371a-3p)の診断能を評価したメタ解析であり、GCTが主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 603,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "chemotherapy",
+        "pathology_molecular"
+      ],
+      "sc": "diagnosis",
+      "mt": "yes"
+    }
   },
   {
     "id": "pmid-40145449",
@@ -897,7 +1102,17 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "アスペルギローマに類似した肺奇形腫(成熟奇形腫)の症例報告であり、性腺外GCTとしてサイトの対象範囲に含まれる。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
   },
   {
     "id": "pmid-40143987",
@@ -925,7 +1140,25 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "卵巣卵黄嚢腫瘍に対する妊孕性温存手術・化学療法とその後の妊娠成功を報告しており、GCTの管理が主要な内容の一つである。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "yolk_sac_tumor"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "fertility"
+      ]
+    }
   },
   {
     "id": "pmid-40143878",
@@ -954,7 +1187,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "性腺芽腫、未分化胚細胞腫、卵巣甲状腺腫など稀な胚細胞腫瘍の症例集積であり、GCTそのものが主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "ag": "mixed",
+      "hi": [
+        "gonadoblastoma",
+        "seminoma_germinoma"
+      ],
+      "n": 4,
+      "th": [
+        "diagnosis_imaging",
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-39370035",
@@ -1033,7 +1278,26 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "小児男児の原発性性腺外絨毛癌(胚細胞腫瘍)の症例集積研究であり、対象に明確に合致する。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "multiple",
+      "sx": "male",
+      "ag": "mixed",
+      "hi": [
+        "choriocarcinoma"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 6,
+      "th": [
+        "chemotherapy",
+        "prognosis",
+        "pathology_molecular",
+        "epidemiology"
+      ]
+    }
   },
   {
     "id": "pmid-38409507",
@@ -1058,7 +1322,24 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "卵巣絨毛癌という胚細胞腫瘍の稀な症例の超音波所見を扱っており、対象に合致する。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "hi": [
+        "choriocarcinoma"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "chemotherapy"
+      ]
+    }
   },
   {
     "id": "pmid-40156421",
@@ -1247,7 +1528,23 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "胎児頸部腫瘤の3次元モデリングに関する症例で、病理学的に未熟奇形腫と診断されており奇形腫が主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "ag": "infant",
+      "hi": [
+        "immature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-39039777",
@@ -1278,7 +1575,12 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "頭蓋外悪性胚細胞腫瘍に対する外科的切除アプローチを扱う総説でGCTそのものが主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "th": [
+        "surgery"
+      ]
+    }
   },
   {
     "id": "pmid-40199595",
@@ -1332,7 +1634,20 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "乳児の縦隔胚細胞腫瘍(奇形腫)の症例報告であり、診断・治療について述べている。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "mediastinum",
+      "ag": "infant",
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "chemotherapy"
+      ]
+    }
   },
   {
     "id": "pmid-40196163",
@@ -1362,7 +1677,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "仙尾部奇形腫の手術予後を検討した研究であり、GCTの一種である奇形腫が主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "sacrococcygeal",
+      "tr": [
+        "surgery"
+      ],
+      "n": 97,
+      "th": [
+        "surgery",
+        "prognosis"
+      ],
+      "st": "retrospective_cohort"
+    }
   },
   {
     "id": "pmid-40196058",
@@ -1420,7 +1747,21 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "仙尾部奇形腫(Altman II/III型)切除の腹腔鏡併用術式に関する症例集積研究である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "sacrococcygeal",
+      "ag": "infant",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 7,
+      "th": [
+        "surgery"
+      ]
+    }
   },
   {
     "id": "pmid-40189027",
@@ -1448,7 +1789,15 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "ユーザー方針: 奇形腫由来の単胚葉性腫瘍として関連文献の掲載を継続",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "multiple",
+      "sx": "female",
+      "n": 8,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-40028669",
@@ -1510,7 +1859,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "卵巣成熟嚢胞性奇形腫(胚細胞腫瘍)の悪性転化例についての症例報告である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "hi": [
+        "mature_teratoma",
+        "teratoma_with_malignant_transformation"
+      ],
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-39680568",
@@ -1549,7 +1910,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣胚細胞腫瘍発症リスクを精漿マイクロRNAで識別する研究である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "hi": [
+        "gct_nos"
+      ],
+      "th": [
+        "diagnosis_imaging",
+        "pathology_molecular"
+      ],
+      "st": "case_control"
+    }
   },
   {
     "id": "pmid-39522951",
@@ -1614,7 +1987,22 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "ユーザー方針: 奇形腫由来の単胚葉性腫瘍として関連文献の掲載を継続",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "teratoma_with_malignant_transformation"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-40211726",
@@ -1679,7 +2067,17 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "タイトルに胚細胞腫瘍(germ cell tumor)が明記され、KIT阻害薬治療の症例報告である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 1,
+      "th": [
+        "chemotherapy",
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-40206751",
@@ -1767,7 +2165,12 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣胚細胞腫瘍(セミノーマ・非セミノーマ)の診療ガイドラインに関するNCCN発表。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "th": [
+        "surveillance"
+      ]
+    }
   },
   {
     "id": "pmid-40221634",
@@ -1797,7 +2200,24 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "思春期の巨大嚢胞性卵巣腫瘍(成熟嚢胞性奇形腫を含む)に対する卵巣温存手術手技を扱っており、GCTである奇形腫が主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adolescent",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 4,
+      "th": [
+        "surgery",
+        "prognosis",
+        "qol"
+      ]
+    }
   },
   {
     "id": "pmid-40220034",
@@ -1889,7 +2309,22 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "両側成熟嚢胞性奇形腫破裂による化学性腹膜炎の治療戦略を報告する症例報告で、GCT(奇形腫)の管理が主題である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery"
+      ]
+    }
   },
   {
     "id": "pmid-40215271",
@@ -1961,7 +2396,21 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣癌(胚細胞腫瘍)生存者における骨粗鬆症リスクを長期追跡した研究であり、GCTの治療後管理に関するテーマである。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "tr": [
+        "radiotherapy",
+        "chemotherapy"
+      ],
+      "n": 1686,
+      "th": [
+        "late_effects",
+        "epidemiology"
+      ],
+      "st": "retrospective_cohort"
+    }
   },
   {
     "id": "pmid-40203124",
@@ -2007,7 +2456,22 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣セミノーマ患者を対象としたFDG PETの診断精度を検討したGCT関連の臨床試験報告である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "hi": [
+        "seminoma_germinoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 26,
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "prospective_cohort"
+    }
   },
   {
     "id": "pmid-40202333",
@@ -2044,7 +2508,19 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "卵黄嚢腫瘍(胚細胞腫瘍の一種)の分化を示す悪性腫瘍の臨床病理学的・分子的特徴を解析した論文である。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "sx": "female",
+      "ag": "mixed",
+      "hi": [
+        "yolk_sac_tumor",
+        "mixed_gct"
+      ],
+      "n": 32,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
   },
   {
     "id": "pmid-40200493",
@@ -2072,7 +2548,20 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "精巣癌(セミノーマ・非セミノーマ性胚細胞腫瘍を含む)手術後の入院期間に関する統計学的解析であり、GCTを主題としている。",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "th": [
+        "surgery"
+      ]
+    }
   },
   {
     "id": "pmid-40199596",
@@ -2100,7 +2589,23 @@
     "added_at": "2026-09-22",
     "relevance_status": "kept",
     "relevance_note": "ユーザー方針: 奇形腫由来の単胚葉性腫瘍として関連文献の掲載を継続",
-    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00"
+    "relevance_reviewed_at": "2026-09-24T06:02:31+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "sg": "I",
+      "hi": [
+        "teratoma_with_malignant_transformation"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "radiotherapy"
+      ]
+    }
   },
   {
     "id": "pmid-40480741",

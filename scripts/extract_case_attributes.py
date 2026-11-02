@@ -69,7 +69,7 @@ SCHEMA = {
 }
 
 
-def rows_for(db_dir):
+def rows_for(db_dir, site_papers=None):
     """(pmid, title, abstract) of kept / needs_review papers tagged 症例報告・集積 that have an abstract, in a fixed pseudo-random order."""
     out = []
     for path in existing_shard_paths(db_dir):
@@ -80,6 +80,14 @@ def rows_for(db_dir):
             if "症例報告・集積" in json.loads(tags or "[]"):
                 out.append({"pmid": str(pmid), "title": title or "", "abstract": abstract})
         conn.close()
+    if site_papers:   # 作業用DBに無い公開済みの論文は、サイトのエントリから補う
+        import papers_store
+        have = {r["pmid"] for r in out}
+        for entry in papers_store.load(site_papers):
+            pmid = str(entry.get("pmid") or "")
+            if pmid and pmid not in have and (entry.get("tags") or [""])[0] == "症例報告・集積" and entry.get("abstract") \
+                    and entry.get("relevance_status") != "excluded":
+                out.append({"pmid": pmid, "title": entry.get("title") or "", "abstract": entry["abstract"]})
     out.sort(key=lambda r: hashlib.sha256(r["pmid"].encode()).hexdigest())
     return out
 
@@ -126,7 +134,7 @@ def read_done(path):
 def extract(args):
     done = read_done(args.out)
     only = set(args.only_pmids.read_text(encoding="utf-8").split()) if args.only_pmids else None   # 一部だけやり直すとき
-    todo = [r for r in rows_for(args.db_dir) if r["pmid"] not in done and (only is None or r["pmid"] in only)]
+    todo = [r for r in rows_for(args.db_dir, args.site_papers) if r["pmid"] not in done and (only is None or r["pmid"] in only)]
     if args.limit:
         todo = todo[:max(0, args.limit - len(done))]
     jobs = queue.Queue()
@@ -194,6 +202,7 @@ def main():
     parser.add_argument("--db-dir", type=pathlib.Path)
     parser.add_argument("--out", type=pathlib.Path, required=True)
     parser.add_argument("--limit", type=int, default=0, help="Total papers to have in --out (for a pilot)")
+    parser.add_argument("--site-papers", type=pathlib.Path, help="サイトの文献データ。作業用DBに無い公開済みの論文も、ここから対象にする")
     parser.add_argument("--only-pmids", type=pathlib.Path, help="PMIDを1行ずつ書いたファイル。その論文だけを対象にする(やり直し用)")
     parser.add_argument("--batch-size", type=int, default=10)
     parser.add_argument("--workers", type=int, default=3)
