@@ -91,6 +91,23 @@ def candidates(db_dir, scope="live"):
     return rows
 
 
+def site_only_candidates(db_dir, site_papers):
+    """公開データにあって、作業用DBに無い論文(最初に公開した65件など)のうち、脳・脊髄の語を含み、掲載中のもの。
+    DBの論文だけを見る candidates() では、これらは判定されない。"""
+    in_db = set()
+    for path in existing_shard_paths(db_dir):
+        conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+        in_db.update(str(pmid) for (pmid,) in conn.execute("SELECT pmid FROM papers"))
+        conn.close()
+    rows = []
+    for entry in papers_store.load(site_papers):
+        pmid = str(entry.get("pmid") or "")
+        if pmid and pmid not in in_db and entry.get("relevance_status") != "excluded" \
+                and KEYWORDS.search(f"{entry.get('title') or ''} {entry.get('abstract') or ''}"):
+            rows.append({"pmid": pmid, "title": entry.get("title"), "abstract": entry.get("abstract")})
+    return rows
+
+
 def read_verdicts(path):
     verdicts = {}
     if path.is_file():
@@ -104,7 +121,10 @@ def read_verdicts(path):
 def screen(args):
     done = read_verdicts(args.out)
     only = set(args.only_pmids.read_text(encoding="utf-8").split()) if args.only_pmids else None   # 一部だけ判定するとき
-    todo = [r for r in candidates(args.db_dir, args.scope) if r["pmid"] not in done and (only is None or r["pmid"] in only)]
+    rows = candidates(args.db_dir, args.scope)
+    if args.site_papers:   # DBに無い公開済みの論文も対象にする
+        rows += site_only_candidates(args.db_dir, args.site_papers)
+    todo = [r for r in rows if r["pmid"] not in done and (only is None or r["pmid"] in only)]
     jobs = queue.Queue()
     for i in range(0, len(todo), args.batch_size):
         jobs.put(todo[i:i + args.batch_size])
@@ -206,7 +226,7 @@ def main():
     parser.add_argument("--model", default=process_batch.DEFAULT_MODEL)
     parser.add_argument("--effort", default=process_batch.DEFAULT_EFFORT, choices=["low", "medium", "high", "xhigh", "max"])
     parser.add_argument("--backup", type=pathlib.Path)
-    parser.add_argument("--site-papers", type=pathlib.Path)
+    parser.add_argument("--site-papers", type=pathlib.Path, help="サイトの文献データ。screen では、DBに無い公開済みの論文も判定する。apply では、該当のエントリを隠す")
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
     {"screen": screen, "apply": apply}[args.command](args)
