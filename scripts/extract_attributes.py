@@ -28,6 +28,7 @@ import threading
 SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 from gct_db import existing_shard_paths  # noqa: E402
+import papers_store  # noqa: E402
 import study_design as sd  # noqa: E402
 
 
@@ -164,7 +165,7 @@ def prompt_for(design, rows):
         + "\n\nINPUT PAPERS:\n" + json.dumps(payload, ensure_ascii=False))
 
 
-def rows_by_design(db_dir, designs):
+def rows_by_design(db_dir, designs, site_papers=None, only=None):
     out = {d: [] for d in designs}
     for path in existing_shard_paths(db_dir):
         conn = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
@@ -175,6 +176,14 @@ def rows_by_design(db_dir, designs):
             if tag in out:
                 out[tag].append({"pmid": str(pmid), "title": title or "", "abstract": abstract})
         conn.close()
+    if site_papers:   # 作業用DBに無い公開済みの論文(最初に公開した65件など)は、サイトのエントリから補う
+        have = {r["pmid"] for rows in out.values() for r in rows}
+        for entry in papers_store.load(site_papers):
+            pmid, tag = str(entry.get("pmid") or ""), (entry.get("tags") or [""])[0]
+            if pmid and pmid not in have and tag in out and entry.get("abstract") and entry.get("relevance_status") != "excluded":
+                out[tag].append({"pmid": pmid, "title": entry.get("title") or "", "abstract": entry["abstract"]})
+    if only is not None:
+        out = {d: [r for r in rows if r["pmid"] in only] for d, rows in out.items()}
     for rows in out.values():
         rows.sort(key=lambda r: hashlib.sha256(r["pmid"].encode()).hexdigest())  # 決まった順(偏りのない試験用)
     return out
@@ -191,7 +200,8 @@ def extract(args):
     unknown = [d for d in designs if d not in DESIGNS]
     if unknown:
         raise SystemExit(f"unknown design(s): {unknown}; choose from {list(DESIGNS)}")
-    rows = rows_by_design(args.db_dir, designs)
+    only = set(args.only_pmids.read_text(encoding="utf-8").split()) if args.only_pmids else None
+    rows = rows_by_design(args.db_dir, designs, args.site_papers, only)
     jobs, plan = queue.Queue(), []
     for design in designs:
         out = args.out_dir / f"{DESIGNS[design][0]}.jsonl"
@@ -269,6 +279,8 @@ def main():
     parser.add_argument("--db-dir", type=pathlib.Path)
     parser.add_argument("--out-dir", type=pathlib.Path, required=True)
     parser.add_argument("--designs", help="comma-separated study designs (default: all)")
+    parser.add_argument("--only-pmids", type=pathlib.Path, help="PMIDを1行ずつ書いたファイル。その論文だけを対象にする")
+    parser.add_argument("--site-papers", type=pathlib.Path, help="サイトの文献データ。作業用DBに無い公開済みの論文も、ここから対象にする")
     parser.add_argument("--limit-per-design", type=int, default=0, help="for a pilot: total papers per design in the output")
     parser.add_argument("--batch-size", type=int, default=10)
     parser.add_argument("--workers", type=int, default=8)
