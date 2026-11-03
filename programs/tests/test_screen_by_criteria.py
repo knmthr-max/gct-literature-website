@@ -28,8 +28,8 @@ class ScreenByCriteriaTests(unittest.TestCase):
 
         def fake_call(prompt, model="", **_):
             calls.append(prompt)
-            return {"1": {"pmid": "1", "decision": "exclude", "rule": "case_animal", "confidence": "high", "origin_cell": "", "reason": "dog"},
-                    "2": {"pmid": "2", "decision": "keep", "rule": "bogus", "confidence": "low", "origin_cell": "", "reason": "x"}}, 0.01
+            return {"1": {"pmid": "1", "decision": "exclude", "rule": "case_animal", "confidence": "high", "reason": "dog"},
+                    "2": {"pmid": "2", "decision": "keep", "rule": "bogus", "confidence": "low", "reason": "x"}}, 0.01
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             db_dir, out = root / "master", root / "s.jsonl"

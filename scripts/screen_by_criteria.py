@@ -40,9 +40,8 @@ Each paper comes with `design` (its study-design tag). Apply the block for that 
 
 BASIC / TRANSLATIONAL research (design = 基礎・トランスレーショナル)
 - KEEP research that leads to models of germ cell tumors, including studies in NON-HUMAN animals (rule basic_in).
-- If the research relates to GCT, the cell of origin should be stated explicitly: report it in `origin_cell` (a few English words, e.g.
-  "primordial germ cell", "embryonal carcinoma stem cell line from a testicular teratocarcinoma"; "" if not stated). This is
-  informational; it does not change the decision.
+- KEEP research that is related to GCT whatever the cell of origin is (embryonic stem cells, iPS cells, embryonal carcinoma cell lines,
+  primordial germ cells, ...): the type of origin never causes an exclusion (rule basic_in).
 - EXCLUDE basic research with no real connection to GCT or to GCT models (rule basic_out).
 
 CASE REPORT / CASE SERIES (design = 症例報告・集積)
@@ -75,8 +74,8 @@ SCHEMA = {
         "type": "object",
         "properties": {"pmid": {"type": "string"}, "decision": {"type": "string", "enum": list(DECISIONS)},
                        "rule": {"type": "string", "enum": list(RULES)}, "confidence": {"type": "string", "enum": list(CONFIDENCE)},
-                       "origin_cell": {"type": "string"}, "reason": {"type": "string"}},
-        "required": ["pmid", "decision", "rule", "confidence", "origin_cell", "reason"], "additionalProperties": False}}},
+                       "reason": {"type": "string"}},
+        "required": ["pmid", "decision", "rule", "confidence", "reason"], "additionalProperties": False}}},
     "required": ["papers"], "additionalProperties": False,
 }
 
