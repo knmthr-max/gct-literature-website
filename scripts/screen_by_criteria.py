@@ -29,8 +29,9 @@ spec = importlib.util.spec_from_file_location("process_batch", SCRIPTS_DIR / "pr
 process_batch = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(process_batch)
 
-RULES = ("basic_in", "basic_out", "case_animal", "case_not_main_gct", "case_teratocarcinosarcoma", "case_dermoid_nongonadal",
-         "case_in", "review_not_gct_topic", "review_in", "clinical_intracranial_no_gct", "clinical_in")
+RULES = ("basic_in", "basic_out", "basic_animal_descriptive", "case_animal", "case_unspecified", "case_not_main_gct",
+         "case_teratocarcinosarcoma", "case_dermoid_nongonadal", "case_in", "review_not_gct_topic", "review_in",
+         "clinical_animal", "clinical_no_gct_analyzed", "clinical_intracranial_no_gct", "clinical_in")
 DECISIONS = ("keep", "exclude")
 CONFIDENCE = ("high", "medium", "low")
 
@@ -39,13 +40,16 @@ Decide for each paper whether the website on germ cell tumors (GCT) should KEEP 
 Each paper comes with `design` (its study-design tag). Apply the block for that design.
 
 BASIC / TRANSLATIONAL research (design = 基礎・トランスレーショナル)
-- KEEP research that leads to models of germ cell tumors, including studies in NON-HUMAN animals (rule basic_in).
-- KEEP research that is related to GCT whatever the cell of origin is (embryonic stem cells, iPS cells, embryonal carcinoma cell lines,
-  primordial germ cells, ...): the type of origin never causes an exclusion (rule basic_in).
-- EXCLUDE basic research with no real connection to GCT or to GCT models (rule basic_out).
+- KEEP research that leads to models of germ cell tumors, including studies in NON-HUMAN animals, and research related to GCT whatever
+  the cell of origin is (embryonic stem cells, iPS cells, embryonal carcinoma cell lines, primordial germ cells, ...) (rule basic_in).
+- A study of a germ cell tumor of a NON-HUMAN animal (e.g. a dog) is KEPT only when it is positioned as a model of HUMAN germ cell tumors
+  (basic_in). A merely descriptive pathology or epidemiology report on an animal tumor is EXCLUDED (basic_animal_descriptive).
+- KEEP basic research that merely uses a choriocarcinoma cell line when its topic is trophoblast biology (basic_in).
+- EXCLUDE basic research with no real connection to GCT or to GCT models (basic_out).
 
 CASE REPORT / CASE SERIES (design = 症例報告・集積)
 - EXCLUDE reports on germ cell tumors of NON-HUMAN animals (case_animal).
+- EXCLUDE a report whose tumor type cannot be identified from the title/abstract (case_unspecified).
 - EXCLUDE a human report whose main tumor is NOT a germ cell tumor (e.g. a spermatic cord stromal tumor), even if a germ cell
   tumor is mentioned in the differential diagnosis (case_not_main_gct).
 - EXCLUDE teratocarcinosarcoma (case_teratocarcinosarcoma).
@@ -61,6 +65,9 @@ REVIEW (design = 総説)
   germ cell tumors are part of the subject (review_in).
 
 OTHER CLINICAL papers (every other design except basic)
+- Do NOT exclude a paper merely because its main tumor is not a germ cell tumor: if germ cell tumors are among the tumors analyzed, KEEP
+  (clinical_in). EXCLUDE only if germ cell tumors are not part of the analysis at all (clinical_no_gct_analyzed).
+- EXCLUDE studies of tumors of NON-HUMAN animals (e.g. a survey of canine testicular tumors) (clinical_animal).
 - EXCLUDE a paper on an intracranial disease when neither the title nor the abstract mentions germ cell tumors (clinical_intracranial_no_gct).
 - Otherwise KEEP (clinical_in).
 
