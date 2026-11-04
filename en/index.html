@@ -57,6 +57,7 @@
         <button id="export-csv" class="export-btn" type="button">CSV</button>
         <button id="export-ris" class="export-btn" type="button">RIS</button>
         <span id="export-status" class="export-status" role="status"></span>
+        <button id="select-shown" class="clear-link" type="button">Select the papers shown</button>
       </div>
     </section>
 
@@ -85,6 +86,15 @@
       <p><span id="footer-title">GCT Literature Database</span> — Last updated: <span id="last-updated">–</span></p>
     </div>
   </footer>
+
+  <div id="selection-bar" class="selection-bar" hidden>
+    <span id="selection-count" class="selection-count" role="status"></span>
+    <span class="selection-label">Download the selected papers</span>
+    <button id="select-csv" class="export-btn" type="button">CSV</button>
+    <button id="select-ris" class="export-btn" type="button">RIS</button>
+    <button id="select-clear" class="clear-link" type="button">Clear selection</button>
+    <span id="select-status" class="export-status" role="status"></span>
+  </div>
 
   <script src="../assets/app.js"></script>
 </body>
