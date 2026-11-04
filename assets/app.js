@@ -85,6 +85,11 @@
       $("site-notice").textContent = notice;
       $("site-notice").hidden = false;
     }
+    const usage = LANG === "en" ? (site.usage || site.usage_ja) : (site.usage_ja || site.usage);
+    if (Array.isArray(usage) && usage.length) {
+      $("site-usage").innerHTML = `<ul>${usage.map((t) => `<li>${escapeHtml(t)}</li>`).join("")}</ul>`;
+      $("site-usage").hidden = false;
+    }
     if (site.last_updated) $("last-updated").textContent = site.last_updated;
   }
 
@@ -572,6 +577,138 @@
       ? `${shown.length} of ${state.papers.length} results`
       : `${shown.length}件 / 全${state.papers.length}件`;
     renderMoreButton();
+    renderExportRow();
+  }
+
+
+  // ---- 検索結果のダウンロード(CSV / RIS。現在の並び順の上位 EXPORT_MAX 件) ----
+  // 設計: docs/decisions/2026-11-04_export_results.md。抄録(原文)は、カードを開くときと同じ search/abstract/<id>.json から読む
+  const EXPORT_MAX = 100;
+  const X = {
+    ja: { loading: "読み込み中", abstracts: "抄録を読み込み中", done: "ダウンロードしました", failed: "ダウンロードできませんでした",
+      query: "検索式", keyword: "キーワード", kubun: "区分", design: "研究デザイン", sort: "並び順", jif: "IF", out: "出力", hits: "ヒット件数",
+      site: "サイト", cols: ["PMID", "DOI", "収載誌", "発行年", "タイトル", "抄録(原文)"], none: "指定なし",
+      cap: (n) => `該当${n.toLocaleString("ja-JP")}件のうち、現在の並び順の上位${EXPORT_MAX}件のみを出力します。` },
+    en: { loading: "Loading", abstracts: "Loading abstracts", done: "Downloaded", failed: "Download failed",
+      query: "Search", keyword: "Keyword", kubun: "Category", design: "Study design", sort: "Sort", jif: "IF", out: "Exported", hits: "Hits",
+      site: "Site", cols: ["PMID", "DOI", "Journal", "Year", "Title", "Abstract (original)"], none: "none",
+      cap: (n) => `Of ${n.toLocaleString("en-US")} matches, only the top ${EXPORT_MAX} in the current sort order are exported.` },
+  }[LANG];
+
+  // 検索式: キーワードと絞り込みの条件、並び順を、1行の文字列にする(出力の1行目)
+  function searchExpression(total, exported) {
+    const parts = [];
+    parts.push(`${X.keyword}: ${state.query || X.none}`);
+    if (state.kubun !== "all") parts.push(`${X.kubun}: ${KUBUN_LABELS[LANG][state.kubun]}`);
+    if (state.designs.size) parts.push(`${X.design}: ${[...state.designs].map(tagLabel).join(" | ")}`);
+    for (const f of activeFacets()) {
+      const sel = [...(state.attr[f.key] || [])];
+      if (sel.length) parts.push(`${facetLabel(f)}: ${sel.map((v) => valueLabel(f, v)).join(" | ")}`);
+    }
+    if (state.activeJifTiers.size) parts.push(`${X.jif}: ${[...state.activeJifTiers].map((t) => (JIF_LABELS[LANG] || {})[t] || t).join(" | ")}`);
+    parts.push(`${X.sort}: ${$("sort-select").selectedOptions[0]?.textContent || ""}`);
+    parts.push(`${X.hits}: ${total}`);
+    parts.push(`${X.out}: ${exported}`);
+    parts.push(`${new Date().toISOString().slice(0, 10)}`);
+    parts.push(`${X.site}: ${location.origin}${location.pathname.replace(/(en\/)?index\.html$/, "")}`);
+    return `${X.query}: ${parts.join(" / ")}`;
+  }
+
+  const csvCell = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const oneLine = (t) => String(t ?? "").replace(/\s+/g, " ").trim();
+
+  async function ensureDetailsFor(papers) {
+    if (!detailMeta) return;
+    const chunks = new Set(papers.filter((p) => p._d !== true).map((p) => Math.floor(p._i / detailMeta.chunk_size)));
+    await Promise.all([...chunks].map(async (n) => {
+      try {
+        applyDetails(await loadJson(`search/details/${n}.json`));
+      } catch (err) {
+        console.error(err);
+      }
+    }));
+  }
+
+  async function fetchAbstracts(papers, onProgress) {
+    const out = new Map();
+    let done = 0;
+    const queue = [...papers];
+    const worker = async () => {
+      for (let p = queue.shift(); p; p = queue.shift()) {
+        try {
+          out.set(p.id, SEARCH_MODE ? (await loadJson(`search/abstract/${encodeURIComponent(p.id)}.json`)).abstract || "" : p.abstract || "");
+        } catch (err) {
+          out.set(p.id, ""); // 抄録の無い論文は、ファイルが無い
+        }
+        onProgress(++done, papers.length);
+      }
+    };
+    await Promise.all(Array.from({ length: 8 }, worker));
+    return out;
+  }
+
+  function buildCsv(papers, abstracts, expression) {
+    const lines = [csvCell(expression), X.cols.map(csvCell).join(",")];
+    for (const p of papers) {
+      lines.push([p.pmid, p.doi, p.journal, p.year, p.title, abstracts.get(p.id)].map((v) => csvCell(oneLine(v))).join(","));
+    }
+    return "\uFEFF" + lines.join("\r\n") + "\r\n"; // BOM つき(Excel で日本語が文字化けしない)
+  }
+
+  function buildRis(papers, abstracts, expression) {
+    const out = [];
+    for (const p of papers) {
+      const add = (tag, value) => { if (value !== undefined && value !== null && String(value).trim() !== "") out.push(`${tag}  - ${oneLine(value)}`); };
+      add("TY", "JOUR");
+      add("TI", p.title);
+      for (const a of p.authors || []) add("AU", a);
+      add("T2", p.journal);
+      add("PY", p.year);
+      add("DO", p.doi);
+      add("AN", p.pmid);
+      if (p.pmid) add("UR", `https://pubmed.ncbi.nlm.nih.gov/${p.pmid}/`);
+      add("AB", abstracts.get(p.id));
+      add("N1", expression);
+      out.push("ER  - ", "");
+    }
+    return out.join("\r\n");
+  }
+
+  async function exportResults(format) {
+    const status = $("export-status");
+    const buttons = [$("export-csv"), $("export-ris")];
+    const papers = shown.slice(0, EXPORT_MAX);
+    if (!papers.length) return;
+    buttons.forEach((b) => { b.disabled = true; });
+    try {
+      status.textContent = `${X.loading}…`;
+      await ensureDetailsFor(papers);
+      const abstracts = await fetchAbstracts(papers, (n, total) => { status.textContent = `${X.abstracts} ${n}/${total}`; });
+      const expression = searchExpression(shown.length, papers.length);
+      const body = format === "ris" ? buildRis(papers, abstracts, expression) : buildCsv(papers, abstracts, expression);
+      const blob = new Blob([body], { type: format === "ris" ? "application/x-research-info-systems" : "text/csv;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `gct-literature_${new Date().toISOString().slice(0, 10)}_${papers.length}.${format}`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(link.href), 10000);
+      status.textContent = X.done;
+    } catch (err) {
+      console.error(err);
+      status.textContent = X.failed;
+    } finally {
+      buttons.forEach((b) => { b.disabled = false; });
+    }
+  }
+
+  function renderExportRow() {
+    const row = $("export-row");
+    if (!row) return;
+    const show = !state.loadingFull && shown.length > 0;
+    row.hidden = !show;
+    if (show) $("export-status").textContent = shown.length > EXPORT_MAX ? X.cap(shown.length) : "";
   }
 
   // 全件が届く前の最初の表示: 先頭のカードだけを描く(絞り込み・件数の欄は触らない)
@@ -582,6 +719,7 @@
     $("empty-message").hidden = true;
     renderMoreButton();
     $("load-more").hidden = true;
+    renderExportRow();
   }
 
   function renderMore() {
@@ -618,6 +756,7 @@
   const visible = (p) => p.relevance_status !== "excluded";
   const byId = new Map();
   let detailsPromise = Promise.resolve();
+  let detailMeta = null; // head.json の detail_chunks / chunk_size(ダウンロードで、要る分の詳細を先に読むため)
 
   function refreshCard(p) {
     const old = document.querySelector(`[data-card-id="${CSS.escape(p.id)}"]`);
@@ -727,9 +866,11 @@
       // すべて表示する(人間が明示的に除外と判断するまでは隠さない方針)
       const all = Array.isArray(papers) ? papers : [];
       const headById = new Map((head ? head.papers : []).map((p) => [p.id, p]));
-      state.papers = all.filter(visible).map((p) => (headById.has(p.id) ? { ...p, ...headById.get(p.id), _d: true } : p));
+      state.papers = all.map((p, i) => (headById.has(p.id) ? { ...p, ...headById.get(p.id), _d: true, _i: i } : { ...p, _i: i })).filter(visible);
       for (const p of state.papers) byId.set(p.id, p);
       setLoadingFull(false, 0, 0);
+      $("export-csv").addEventListener("click", () => exportResults("csv"));
+      $("export-ris").addEventListener("click", () => exportResults("ris"));
       $("attr-reset").addEventListener("click", () => {
         state.attr = {};
         syncUrl();
@@ -748,7 +889,10 @@
       else renderList();
       if (SEARCH_MODE) {
         const meta = head || (await loadJson("search/head.json").catch(() => null));
-        if (meta) loadDetails(meta);
+        if (meta) {
+          detailMeta = meta;
+          loadDetails(meta);
+        }
       }
     } catch (err) {
       console.error(err);
