@@ -14,6 +14,7 @@
       <nav class="lang-switch"><a href="en/">English</a></nav>
       <h1 id="site-title">GCT文献データベース</h1>
       <p id="site-description" class="site-description"></p>
+      <div id="site-usage" class="site-usage" hidden></div>
       <p id="site-notice" class="site-notice" hidden></p>
     </div>
   </header>
@@ -51,6 +52,12 @@
       <p class="jif-note">※ 最新年の文献は、その年のIF(インパクトファクター)が未公開のため、前年のIFで代用して評価しています。公開後に確定値へ更新します。</p>
       <div id="attr-open-row" class="attr-open-row" hidden><button id="attr-open" class="attr-open" type="button">絞り込み<span id="attr-badge"></span></button></div>
       <p id="result-count" class="result-count" role="status"></p>
+      <div id="export-row" class="export-row" hidden>
+        <span class="export-label">検索結果をダウンロード(上位100件まで)</span>
+        <button id="export-csv" class="export-btn" type="button">CSV</button>
+        <button id="export-ris" class="export-btn" type="button">RIS</button>
+        <span id="export-status" class="export-status" role="status"></span>
+      </div>
     </section>
 
     <div class="results-layout">

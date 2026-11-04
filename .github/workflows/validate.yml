@@ -51,3 +51,5 @@ jobs:
         run: npm run check:attr
       - name: Split loading (head / list / details) of the list data
         run: npm run check:split
+      - name: Export of the results (CSV / RIS)
+        run: npm run check:export
