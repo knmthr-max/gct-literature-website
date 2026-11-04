@@ -394,3 +394,14 @@ body {
 /* 全件の一覧を読み込み中(先頭の100件だけを表示している間)は、絞り込み・並び替え・IFの欄を使えなくする(場所は確保して、届いたときに表示が動かないようにする) */
 .loading-full .design-panel, .loading-full #jif-filters, .loading-full .attr-open-row { visibility: hidden; }
 .loading-full #sort-select { opacity: 0.5; }
+
+/* ご利用にあたって(サイト紹介の冒頭) */
+.site-usage { background: rgba(255, 255, 255, 0.12); border-radius: var(--radius); padding: 10px 14px; margin: 10px 0 0; font-size: 0.85rem; }
+.site-usage ul { margin: 0; padding-left: 1.2em; }
+.site-usage li + li { margin-top: 4px; }
+/* 検索結果のダウンロード(CSV / RIS) */
+.export-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 6px 0 12px; font-size: 0.85rem; }
+.export-row[hidden] { display: none; }
+.export-btn { border: 1px solid var(--color-accent); background: var(--color-surface); color: var(--color-accent); border-radius: 999px; padding: 3px 14px; font: inherit; cursor: pointer; }
+.export-btn:disabled { opacity: 0.5; cursor: progress; }
+.export-status { color: var(--color-text-muted); }

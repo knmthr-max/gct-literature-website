@@ -78,6 +78,7 @@ programs/
 - **全文検索**: Pagefind(題名・要約・抄録・著者・雑誌)。AND は空白、OR は「OR」、除外は「-語」(`2026-09-30_pagefind_search.md`、`docs/operations/site_search.md`)。
 - **データの分割**: 公開データは年代別の `data/papers/papers_<年代>.json`。読み書きは `scripts/papers_store.py`(`2026-10-11_split_papers_json.md`)。
 - **属性の絞り込み**(臨床のみ): AIが抄録から抽出した属性(臨床テーマ・原発部位・組織型・性別・年齢区分・治療。研究デザインを選ぶと、そのデザイン固有の項目)で絞り込む。病期・IGCCCG・例数はカード表示のみ。結果の数値は扱わない。「不明」は選択肢に出さない。妊娠性絨毛癌は組織型の独立した選択肢(`2026-10-26_attribute_filters.md`)。
+- **検索結果のダウンロード**: 現在の並び順の上位100件まで、CSV(1行目に検索式)または RIS(`docs/decisions/2026-11-04_export_results.md`)。サイト紹介の冒頭に、ご利用にあたっての注意(文献紹介が目的・データの保証なし・原著の確認)を表示する(`data/site.json` の `usage_ja` / `usage`)。
 - **和訳の用語**: 用語集(`gct-literature-data/data/reference/terminology/terminology_ja.md`)が正本。誤った表記は `scripts/replace_terms.py` で機械的に置換し、「避ける訳」に登録する。
 
 ## AI処理の運用ルール
