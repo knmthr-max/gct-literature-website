@@ -405,3 +405,15 @@ body {
 .export-btn { border: 1px solid var(--color-accent); background: var(--color-surface); color: var(--color-accent); border-radius: 999px; padding: 3px 14px; font: inherit; cursor: pointer; }
 .export-btn:disabled { opacity: 0.5; cursor: progress; }
 .export-status { color: var(--color-text-muted); }
+
+/* 文献の選択(チェックボックス)と、選択した文献のダウンロード */
+.paper-select { display: inline-flex; gap: 6px; align-items: center; font-size: 0.78rem; color: var(--color-text-muted); cursor: pointer; float: right; margin: 0 0 4px 8px; }
+.paper-select input { width: 18px; height: 18px; accent-color: var(--color-accent); cursor: pointer; }
+.paper-select input:disabled { cursor: not-allowed; }
+.paper-card.selected { border-color: var(--color-accent); box-shadow: 0 0 0 1px var(--color-accent); }
+.selection-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 15; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center;
+  background: var(--color-surface); border-top: 2px solid var(--color-accent); box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15); font-size: 0.85rem;
+  padding: 8px max(16px, env(safe-area-inset-right, 0px)) calc(8px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.selection-bar[hidden] { display: none; }
+.selection-count { font-weight: 600; color: var(--color-accent); }
+.has-selection .site-footer { padding-bottom: 80px; }
