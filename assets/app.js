@@ -50,6 +50,7 @@
   const state = {
     papers: [],
     query: "",
+    selected: new Set(), // チェックした文献のID(最大 EXPORT_MAX 件。絞り込みを変えても残る)
     loadingFull: false, // 全件の一覧(list.json)を読み込み中か
     kubun: "all", // all | clinical | basic
     designs: new Set(), // 臨床の中で選んだ研究デザイン(選ばなければ臨床すべて)
@@ -391,6 +392,14 @@
       + (themes.length ? `<p class="paper-themes">${escapeHtml(T.themes)}: ${escapeHtml(themes.join(" · "))}</p>` : "");
   }
 
+  // 文献の選択(チェックボックス)。全件の一覧が届くまでは出さない
+  function selectBox(p) {
+    if (state.loadingFull) return "";
+    const on = state.selected.has(p.id);
+    const full = !on && state.selected.size >= EXPORT_MAX;
+    return `<label class="paper-select"><input type="checkbox" data-select-id="${escapeHtml(p.id)}"${on ? " checked" : ""}${full ? " disabled" : ""}> ${LANG === "en" ? "Select" : "選択"}</label>`;
+  }
+
   function paperCard(p) {
     const links = [];
     if (p.pmid) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${encodeURIComponent(p.pmid)}/" target="_blank" rel="noopener">PubMed</a>`);
@@ -450,7 +459,8 @@
     }
 
     return `
-      <article class="paper-card" data-card-id="${escapeHtml(p.id)}">
+      <article class="paper-card${state.selected.has(p.id) ? " selected" : ""}" data-card-id="${escapeHtml(p.id)}">
+        ${selectBox(p)}
         <h2>${escapeHtml(mainTitle)}</h2>
         ${subTitle}
         ${metaParts.length ? `<p class="paper-meta" data-part="meta">${escapeHtml(metaParts.join(" · "))}</p>` : ""}
@@ -578,6 +588,7 @@
       : `${shown.length}件 / 全${state.papers.length}件`;
     renderMoreButton();
     renderExportRow();
+    updateSelection();
   }
 
 
@@ -586,11 +597,11 @@
   const EXPORT_MAX = 100;
   const X = {
     ja: { loading: "読み込み中", abstracts: "抄録を読み込み中", done: "ダウンロードしました", failed: "ダウンロードできませんでした",
-      query: "検索式", keyword: "キーワード", kubun: "区分", design: "研究デザイン", sort: "並び順", jif: "IF", out: "出力", hits: "ヒット件数",
+      query: "検索式", selected: "選択した文献", keyword: "キーワード", kubun: "区分", design: "研究デザイン", sort: "並び順", jif: "IF", out: "出力", hits: "ヒット件数",
       site: "サイト", cols: ["PMID", "DOI", "収載誌", "発行年", "タイトル", "抄録(原文)"], none: "指定なし",
       cap: (n) => `該当${n.toLocaleString("ja-JP")}件のうち、現在の並び順の上位${EXPORT_MAX}件のみを出力します。` },
     en: { loading: "Loading", abstracts: "Loading abstracts", done: "Downloaded", failed: "Download failed",
-      query: "Search", keyword: "Keyword", kubun: "Category", design: "Study design", sort: "Sort", jif: "IF", out: "Exported", hits: "Hits",
+      query: "Search", selected: "Selected papers", keyword: "Keyword", kubun: "Category", design: "Study design", sort: "Sort", jif: "IF", out: "Exported", hits: "Hits",
       site: "Site", cols: ["PMID", "DOI", "Journal", "Year", "Title", "Abstract (original)"], none: "none",
       cap: (n) => `Of ${n.toLocaleString("en-US")} matches, only the top ${EXPORT_MAX} in the current sort order are exported.` },
   }[LANG];
@@ -674,17 +685,14 @@
     return out.join("\r\n");
   }
 
-  async function exportResults(format) {
-    const status = $("export-status");
-    const buttons = [$("export-csv"), $("export-ris")];
-    const papers = shown.slice(0, EXPORT_MAX);
+  async function exportPapers(format, papers, makeExpression, statusEl, buttons) {
     if (!papers.length) return;
     buttons.forEach((b) => { b.disabled = true; });
     try {
-      status.textContent = `${X.loading}…`;
+      statusEl.textContent = `${X.loading}…`;
       await ensureDetailsFor(papers);
-      const abstracts = await fetchAbstracts(papers, (n, total) => { status.textContent = `${X.abstracts} ${n}/${total}`; });
-      const expression = searchExpression(shown.length, papers.length);
+      const abstracts = await fetchAbstracts(papers, (n, total) => { statusEl.textContent = `${X.abstracts} ${n}/${total}`; });
+      const expression = makeExpression();
       const body = format === "ris" ? buildRis(papers, abstracts, expression) : buildCsv(papers, abstracts, expression);
       const blob = new Blob([body], { type: format === "ris" ? "application/x-research-info-systems" : "text/csv;charset=utf-8" });
       const link = document.createElement("a");
@@ -694,13 +702,59 @@
       link.click();
       link.remove();
       setTimeout(() => URL.revokeObjectURL(link.href), 10000);
-      status.textContent = X.done;
+      statusEl.textContent = X.done;
     } catch (err) {
       console.error(err);
-      status.textContent = X.failed;
+      statusEl.textContent = X.failed;
     } finally {
       buttons.forEach((b) => { b.disabled = false; });
     }
+  }
+
+  const exportResults = (format) => {
+    const papers = shown.slice(0, EXPORT_MAX);
+    return exportPapers(format, papers, () => searchExpression(shown.length, papers.length), $("export-status"), [$("export-csv"), $("export-ris")]);
+  };
+
+  // チェックした文献だけを出力する(現在の並び順)
+  const exportSelected = (format) => {
+    const papers = sortPapers(state.papers.filter((p) => state.selected.has(p.id)));
+    const expression = () => `${X.query}: ${X.selected}: ${papers.length} / ${new Date().toISOString().slice(0, 10)} / ${X.site}: ${location.origin}${location.pathname.replace(/(en\/)?index\.html$/, "")}`;
+    return exportPapers(format, papers, expression, $("select-status"), [$("select-csv"), $("select-ris")]);
+  };
+
+  // 選択の表示(バー・カードの枠・チェックボックスの有効/無効)を、いまの選択に合わせる
+  function updateSelection() {
+    const n = state.selected.size;
+    const bar = $("selection-bar");
+    bar.hidden = n === 0;
+    $("selection-count").textContent = LANG === "en" ? `Selected: ${n} (max ${EXPORT_MAX})` : `選択中: ${n}件(最大${EXPORT_MAX}件)`;
+    if (n === 0) $("select-status").textContent = "";
+    const full = n >= EXPORT_MAX;
+    for (const box of document.querySelectorAll("input[data-select-id]")) {
+      box.checked = state.selected.has(box.dataset.selectId);
+      box.disabled = full && !box.checked;
+      box.closest(".paper-card")?.classList.toggle("selected", box.checked);
+    }
+    document.body.classList.toggle("has-selection", n > 0);
+  }
+
+  function toggleSelect(id, on) {
+    if (on) {
+      if (state.selected.size >= EXPORT_MAX) return;
+      state.selected.add(id);
+    } else {
+      state.selected.delete(id);
+    }
+    updateSelection();
+  }
+
+  function selectShown() {
+    for (const p of shown.slice(0, shownCount)) {
+      if (state.selected.size >= EXPORT_MAX) break;
+      state.selected.add(p.id);
+    }
+    updateSelection();
   }
 
   function renderExportRow() {
@@ -727,6 +781,7 @@
     $("paper-list").insertAdjacentHTML("beforeend", shown.slice(shownCount, next).map(paperCard).join(""));
     shownCount = next;
     renderMoreButton();
+    updateSelection();
   }
 
   // 新方式の画面部品(検索の説明・抄録の遅延読み込み)。検索データを読み込めてから有効にする
@@ -869,6 +924,13 @@
       state.papers = all.map((p, i) => (headById.has(p.id) ? { ...p, ...headById.get(p.id), _d: true, _i: i } : { ...p, _i: i })).filter(visible);
       for (const p of state.papers) byId.set(p.id, p);
       setLoadingFull(false, 0, 0);
+      $("paper-list").addEventListener("change", (e) => {
+        if (e.target.matches("input[data-select-id]")) toggleSelect(e.target.dataset.selectId, e.target.checked);
+      });
+      $("select-shown").addEventListener("click", selectShown);
+      $("select-clear").addEventListener("click", () => { state.selected.clear(); updateSelection(); });
+      $("select-csv").addEventListener("click", () => exportSelected("csv"));
+      $("select-ris").addEventListener("click", () => exportSelected("ris"));
       $("export-csv").addEventListener("click", () => exportResults("csv"));
       $("export-ris").addEventListener("click", () => exportResults("ris"));
       $("attr-reset").addEventListener("click", () => {
