@@ -31,6 +31,7 @@ jobs:
         run: |
           npm ci --omit=dev
           node scripts/build_site_search.mjs
+          node scripts/stamp_build.mjs
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
