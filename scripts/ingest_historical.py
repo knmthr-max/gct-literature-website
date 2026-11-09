@@ -21,6 +21,7 @@ Safe to re-run: PMIDs already in any shard, or already published to the
 public site, are skipped rather than duplicated.
 """
 import argparse
+import collections
 import json
 import pathlib
 import sys
@@ -97,6 +98,7 @@ def main():
     seen_this_run: set[str] = set()
     total_records = 0
     inserted = 0
+    inserted_by_year = collections.Counter()
     skipped_already_in_db = 0
     skipped_already_published = 0
     skipped_duplicate_in_run = 0
@@ -138,6 +140,7 @@ def main():
                 {**row, "ingested_at": ingested_at},
             )
             inserted += 1
+            inserted_by_year[row["publication_year"]] += 1
 
     for conn in shard_conns.values():
         conn.commit()
@@ -150,6 +153,7 @@ def main():
         "raw_files": len(raw_files),
         "records_seen": total_records,
         "inserted": inserted,
+        "inserted_by_year": {str(y): n for y, n in sorted(inserted_by_year.items(), key=lambda x: str(x[0]))},
         "skipped_already_in_db": skipped_already_in_db,
         "skipped_already_published_in_papers_json": skipped_already_published,
         "skipped_duplicate_within_this_run": skipped_duplicate_in_run,
