@@ -158084,5 +158084,221 @@
     "relevance_status": "kept",
     "relevance_note": "人の判断(2026-10-31): 掲載。",
     "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-9541702",
+    "title": "Ovarian masses in the pediatric patient.",
+    "title_ja": "小児の卵巣腫瘤",
+    "authors": [
+      "Lovvorn HN 3rd",
+      "Tucci LA",
+      "Stafford PW"
+    ],
+    "journal": "AORN J",
+    "year": 1998,
+    "pmid": "9541702",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review summarizes the diagnosis and management of ovarian masses in children, which are uncommon but challenging because they can mimic more common intra-abdominal disorders and vary widely in histology. Advances in surgical technique and more effective chemotherapy over the past 25 years have raised overall survival from about 20% to 70% for girls with malignant tumors. The article also reviews pertinent pathology. The abstract does not specify tumor types, so germ cell tumors, which are common among pediatric ovarian malignancies, are not explicitly addressed.",
+    "summary_ja": "小児の卵巣腫瘤の評価と治療を概説した総説である。症状が一般的な腹腔内疾患と紛らわしく、組織型も多様であるため診断が難しい。手術技術と化学療法の進歩により、悪性腫瘍をもつ女児の全生存期間（全生存率）は約20%から70%に向上した。要約には腫瘍型の記載がないため、胚細胞腫瘍への言及の有無は不明である。",
+    "abstract": "Ovarian masses in the pediatric patient are uncommon. Children with ovarian tumors, however, pose diagnostic and therapeutic challenges because their presentation can mimic other more common intraabdominal disorders and their tumor histology varies widely. The refinement of surgical techniques and the advent of more effective chemotherapy in the past 25 years has increased overall survival rates from approximately 20% to 70%, thus improving the outcome for girls with malignant tumors. This article summarizes the current evaluation and management of ovarian masses in childhood and reviews pertinent pathology.",
+    "abstract_ja": "小児の卵巣腫瘤はまれである。しかし、小児の卵巣腫瘍は診断・治療上の課題を伴う。その症状は他のより一般的な腹腔内疾患に類似しうる上、組織型も多岐にわたるためである。過去25年間の外科技術の洗練と、より有効な化学療法の登場により、全生存期間（全生存率）は約20%から70%へ向上し、悪性腫瘍をもつ女児の予後が改善した。本稿では、小児の卵巣腫瘤の現在の評価と治療を概説し、関連する病理学を検討する。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-9728811",
+    "title": "Development of tumors from bovine primordial germ cells transplanted to athymic mice.",
+    "title_ja": "ヌードマウスに移植したウシ原始生殖細胞由来の腫瘍の発生",
+    "authors": [
+      "Choi SJ",
+      "Anderson GB"
+    ],
+    "journal": "Anim Reprod Sci",
+    "year": 1998,
+    "pmid": "9728811",
+    "doi": "10.1016/s0378-4320(98)00081-5",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Intact genital ridges and isolated primordial germ cells from mouse and bovine embryos were transplanted under the kidney capsule of athymic mice to assess in vivo growth and differentiation. Mouse samples and some bovine genital ridges formed tumors, while isolated bovine PGCs did not. The tumors, confirmed bovine by DNA analysis, were composed of mesodermal tissues without undifferentiated stem cells, suggesting benign teratomas. The study demonstrates bovine PGC pluripotency through teratoma induction and suggests the approach could aid isolation of embryo-derived pluripotent stem cells.",
+    "summary_ja": "マウスおよびウシ胚の生殖隆起や単離原始生殖細胞を、無胸腺マウスの腎被膜下に移植した動物実験です。ウシの生殖隆起からは腫瘍が形成され、DNA解析でウシ由来と確認されました。腫瘍は中胚葉系組織から成り、未分化幹細胞は認められず良性奇形腫と考えられました。奇形腫形成によりウシPGCの多能性を示し、多能性幹細胞の単離への応用可能性を提示しています。",
+    "abstract": "Intact genital ridges containing primordial germ cells (PGC) and isolated PGC from murine and bovine embryos were examined for in vivo growth and differentiation after transplantation under the kidney capsule of athymic mice. Genital ridges were collected from day 11.5 and 12.5 murine and day 34 and 37 bovine embryos. Murine genital ridges and isolated PGC collected at 11.5 days post-coitus (dpc) and isolated murine PGC collected at 12.5 dpc developed into tumors. Day 34 and 37 bovine genital ridges, but not isolated PGC developed into tumors. The bovine origin of the tumors was confirmed by an analysis of the bovine DNA sequences. Tumors from both species consisted primarily of mesoderm-derived cell types, including connective tissue, cartilage, smooth muscle, fibroblasts, osteoblasts and bone matrix. No detectable ectodermal derivatives were observed in tumors of either species. Undifferentiated stem cells were not detected in the tumors, suggesting that the tumors were benign teratomas. Results of this study demonstrate the pluripotency of bovine PGC by experimental induction of teratomas after xenotransplantation under the kidney capsule of athymic mice. Stimulation of PGC survival and proliferation in an ectopic graft could be useful toward the isolation of pluripotent embryo-derived stem cells.",
+    "abstract_ja": "胚の生殖隆起および単離した原始生殖細胞(PGC)を、マウスとウシの胚から、無胸腺マウスの腎被膜下に移植し、インビボでの増殖と分化を検討しました。マウスの生殖隆起と11.5日齢の単離PGC、および12.5日齢の単離マウスPGCは腫瘍を形成しました。ウシ胚の34日齢と37日齢の生殖隆起は腫瘍を形成しましたが、単離PGCは形成しませんでした。ウシ由来であることはウシDNA配列の解析により確認されました。両種の腫瘍は主に、結合組織、軟骨、平滑筋、線維芽細胞、骨芽細胞、骨基質といった中胚葉由来の細胞型から構成されていました。いずれの種の腫瘍にも外胚葉由来の成分は検出されませんでした。未分化幹細胞は腫瘍中に検出されず、腫瘍は良性奇形腫であったと考えられます。本研究は、無胸腺マウスの腎被膜下への異種移植後に奇形腫を誘導することにより、ウシPGCの多能性を実証しました。異所性移植片におけるPGCの生存と増殖の促進は、胚由来の多能性幹細胞の単離に役立つ可能性があります。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 03:53:35"
+  },
+  {
+    "id": "pmid-9349774",
+    "title": "Fetus-in-fetu with malignant recurrence.",
+    "title_ja": "悪性再発を伴う胎児内胎児",
+    "authors": [
+      "Hopkins KL",
+      "Dickson PK",
+      "Ball TI",
+      "Ricketts RR",
+      "O'Shea PA",
+      "Abramowsky CR"
+    ],
+    "journal": "J Pediatr Surg",
+    "year": 1997,
+    "pmid": "9349774",
+    "doi": "10.1016/s0022-3468(97)90567-4",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "A case of fetus-in-fetu, a rare condition in which one fetus is enclosed within another, is described. Such occurrences are usually benign. This report describes a malignant recurrence after resection of the enclosed fetus. The abstract does not specify the histologic type of the malignancy. Fetus-in-fetu is generally regarded as a teratoma-related entity, so its relevance to germ cell tumors depends on histology that is not reported in the abstract.",
+    "summary_ja": "胎児内胎児は、ある胎児が別の胎児に包含される稀な病態で、通常は良性である。本報告では、包含された胎児の切除後に悪性再発を認めた症例を記載している。悪性腫瘍の組織型は抄録に記載されていない。胎児内胎児は奇形腫関連の病態とされ、胚細胞腫瘍との関連は組織型に依存する。",
+    "abstract": "Fetus-in-fetu is an unusual condition in which a vertebrate fetus is enclosed within the abdomen of another fetus. These occurrences are usually benign. This report describes an instance of malignant recurrence after resection of a fetus-in-fetu.",
+    "abstract_ja": "胎児内胎児は、ある胎児が別の胎児の腹腔内に包含される稀な病態である。通常は良性である。本報告では、包含された胎児の切除後に悪性再発を認めた症例を記述する。",
+    "added_at": "2026-11-09",
+    "jif_tier": "low",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-7834436",
+    "title": "Mediastinal tumors in children: experience with 196 cases.",
+    "title_ja": "小児縦隔腫瘍196例の検討",
+    "authors": [
+      "Grosfeld JL",
+      "Skinner MA",
+      "Rescorla FJ",
+      "West KW",
+      "Scherer LR 3rd"
+    ],
+    "journal": "Ann Surg Oncol",
+    "year": 1994,
+    "pmid": "7834436",
+    "doi": "10.1007/BF02303555",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This report reviews 196 infants and children with mediastinal tumors, of whom 72% were malignant. Hodgkin's disease, neuroblastoma and non-Hodgkin's lymphoma were the most common diagnoses, while teratoma (18 cases) and germ-cell tumors (3 cases) formed a smaller subset. Diagnosis relied on age, radiologic findings, calcification and tumor markers including AFP and hCG, and was confirmed histologically. Survival rates were 96.3% for benign and 74.4% for malignant tumors, supporting early diagnosis and risk-adapted therapy.",
+    "summary_ja": "小児・乳児の縦隔腫瘍196例の検討で、72%が悪性であった。最も多いのはホジキン病、神経芽腫、非ホジキンリンパ腫で、奇形腫は18例、胚細胞腫瘍は3例と一部を占めるにすぎない。診断は年齢、画像所見、腫瘍マーカー（αフェトプロテイン(AFP)、ヒト絨毛性ゴナドトロピン(hCG)）などを組み合わせて行われ、病理学的に確認された。早期診断と治療の重要性が強調されている。",
+    "abstract": "BACKGROUND: Mediastinal masses are relatively common in infants and children. These lesions are often neoplastic in origin and have a high risk of malignancy. METHODS: This report concerns 196 infants and children with mediastinal tumors. Fifty-five cases (28%) were benign, and 141 (72%) were malignant. Diagnosis included Hodgkin's disease (47), neuroblastoma (46), non-Hodgkin's lymphoma (37), teratoma (18), ganglioneuroma (14), cystic hygroma (11), Schwannoma (five), germ-cell tumors (three), lipoma (three), thymic tumor (three), malignant histiocytosis (two), neurofibroma (two), mesenchymal sarcoma (one), rhabdomyosarcoma (one), peripheral neuroectodermal tumor (one), hamartoma (one), and hemangioma (one). Diagnoses were usually made by assessing the patient's age, radiologic evidence of tumor location, the presence of calcium in the tumor, and the presence of tumor markers (alpha-fetoprotein, vanillmandelic acid, human chorionic gonadotropin). Diagnoses were verified by histologic evaluation. Resection was the only treatment for benign tumors. Biopsy and chemotherapy (and/or radiation) were employed for lymphoid tumors, and resection and adjuvant therapy were used for other solid malignancies. RESULTS: Survival was achieved in 53 of 55 (96.3%) patients with benign tumors and 105 of 141 (74.4%) patients with malignant tumors. CONCLUSIONS: Seventy-two percent of mediastinal tumors in this study were malignant. Early diagnosis followed by biopsy and chemotherapy for lymphoid tumors or resection of nonlymphoid tumors along with aggressive adjuvant therapy result in high survival rates (74.4%). Children with benign tumors almost always survive (96.3%) after resection.",
+    "abstract_ja": "背景：縦隔腫瘤は乳幼児や小児では比較的よくみられる。これらの病変は腫瘍性であることが多く、悪性の危険性が高い。方法：縦隔腫瘍を有する乳幼児および小児196例を対象とした。55例（28%）が良性、141例（72%）が悪性であった。診断名は、ホジキン病（47）、神経芽腫（46）、非ホジキンリンパ腫（37）、奇形腫（18）、神経節神経腫（14）、嚢胞性リンパ管腫（11）、神経鞘腫（5）、胚細胞腫瘍（3）、脂肪腫（3）、胸腺腫瘍（3）、悪性組織球症（2）、神経線維腫（2）、間葉系肉腫（1）、横紋筋肉腫（1）、末梢性神経外胚葉性腫瘍（1）、過誤腫（1）、血管腫（1）であった。診断は、患者の年齢、腫瘍の部位の画像所見、腫瘍内石灰化の有無、腫瘍マーカー（αフェトプロテイン(AFP)、バニリルマンデル酸、ヒト絨毛性ゴナドトロピン(hCG)）を評価して行われた。診断は組織学的評価により確認された。良性腫瘍は切除のみで治療された。リンパ系腫瘍には生検と化学療法（および／または放射線療法）が用いられ、その他の充実性悪性腫瘍には切除と補助療法が用いられた。結果：生存は良性腫瘍の55例中53例（96.3%）、悪性腫瘍の141例中105例（74.4%）で得られた。結論：本研究で縦隔腫瘍の72%が悪性であった。早期診断に続き、リンパ系腫瘍には生検と化学療法、非リンパ系腫瘍には切除と積極的な補助療法を行うことで、高い生存率（74.4%）が得られる。良性腫瘍の小児はほぼ全例が切除後に生存する（96.3%）。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "si": "mediastinum",
+      "ag": "mixed",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy"
+      ],
+      "n": 196,
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy",
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-7966688",
+    "title": "Paratesticular epidermoid cyst and ipsilateral spermatic cord dermoid cyst: case report and discussion of pathogenesis, diagnosis and treatment.",
+    "title_ja": "精巣傍類表皮嚢胞と同側精索類皮嚢腫の併発例：症例報告ならびに発生機序・診断・治療の考察",
+    "authors": [
+      "Wegner HE",
+      "Herbst H",
+      "Dieckmann KP"
+    ],
+    "journal": "J Urol",
+    "year": 1994,
+    "pmid": "7966688",
+    "doi": "10.1016/s0022-5347(17)32322-4",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "A man presented with a presumed testicular neoplasm and was found to have a paratesticular epidermoid cyst together with a dermoid cyst of the ipsilateral spermatic cord at the internal inguinal ring. Both lesions were confirmed histologically after local excision. The authors report that this concomitant occurrence had not been described previously and discuss the pathogenesis, diagnosis, and treatment of these lesions. The report is relevant mainly as a differential diagnosis for scrotal masses that mimic testicular tumors.",
+    "summary_ja": "精巣腫瘍が疑われた男性で、精巣傍の類表皮嚢胞と同側精索の類皮嚢腫が併存していた。局所切除後の病理組織学的検査で両者を確認した。両病変の併存はこれまで報告がなく、発生機序や診断、治療を考察している。精巣腫瘍との鑑別が必要となる陰嚢内腫瘤の症例である。",
+    "abstract": "We report a case of a paratesticular epidermoid cyst with a concurrent dermoid cyst of the ipsilateral spermatic cord at the internal inguinal ring. The patient presented for evaluation of a presumed testicular neoplasm. Epidermoid and dermoid cysts were confirmed histologically after local excision. To our knowledge concomitant occurrence of these lesions has not been reported previously. We discuss the pathogenesis, diagnosis and treatment.",
+    "abstract_ja": "精巣腫瘍が疑われた症例を報告する。精巣傍の類表皮嚢胞と同側の精索の類皮嚢腫が、内鼠径輪の部位に認められた。局所切除後に類表皮嚢胞と類皮嚢腫がともに組織学的に確認された。これらの病変の併存はこれまで報告されていない。発生機序、診断、治療について考察した。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "si": "other_extragonadal",
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-1646512",
+    "title": "Karyotype studies of patients with gonadal tumors.",
+    "title_ja": "性腺腫瘍患者の核型解析",
+    "authors": [
+      "De M",
+      "Talukder G",
+      "Sharma A",
+      "Roy S",
+      "De S"
+    ],
+    "journal": "Tumori",
+    "year": 1991,
+    "pmid": "1646512",
+    "doi": "10.1177/030089169107700217",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examined peripheral blood karyotypes of 10 patients with gonadal tumors to detect inherent chromosomal defects. Aneuploidy, chromosomal breakage, and loss of chromosome X were observed. In all cases the karyotype was consistent with the patient's phenotype. The abstract does not specify tumor histology, so whether germ cell tumors were included cannot be confirmed from the text.",
+    "summary_ja": "性腺腫瘍の患者10例について、末梢血の核型を調べ、先天的な染色体異常の有無を検討しています。異数性、染色体の切断、X染色体の欠失が認められ、全例で核型は表現型と一致していました。抄録には腫瘍の組織型が明記されていないため、胚細胞腫瘍を含むかどうかは確認できません。",
+    "abstract": "Chromosomes from the peripheral blood of 10 patients with gonadal tumors were studied to detect any inherent chromosomal defect. Aneuploidy, breakages and loss of chromosome X were observed. In all cases the karyotype was compatible with the phenotype.",
+    "abstract_ja": "性腺腫瘍の患者10例について、末梢血の染色体を検討し、先天的な染色体欠陥の有無を調べた。異数性、染色体切断、X染色体の欠失が認められた。全例で核型は表現型と適合していた。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39"
   }
 ]

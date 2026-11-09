@@ -166961,5 +166961,71 @@
     "relevance_status": "kept",
     "relevance_note": "人の判断(2026-10-31): 掲載。",
     "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-18336561",
+    "title": "Ten testicular trapdoors.",
+    "title_ja": "精巣病理における10の診断の落とし穴",
+    "authors": [
+      "Rajab R",
+      "Berney DM"
+    ],
+    "journal": "Histopathology",
+    "year": 2008,
+    "pmid": "18336561",
+    "doi": "10.1111/j.1365-2559.2008.03001.x",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review describes ten areas of testicular pathology that may cause diagnostic confusion for pathologists, potentially leading to inappropriate treatment. The abstract is brief and does not specify the entities discussed, so it is unclear whether germ cell tumours are a central focus. The full text would be needed to determine whether the ten pitfalls concern testicular germ cell tumours and their mimics. Given the emphasis on diagnostic errors that influence treatment, the article is likely relevant to testicular tumour pathology in general.",
+    "summary_ja": "精巣病理で診断混乱を招きうる10の領域を解説した総説。誤診が不適切な治療につながりうる点を強調している。抄録は簡潔で具体的な疾患名が示されておらず、胚細胞腫瘍が中心的テーマかどうかは判断できない。本文での確認が必要である。",
+    "abstract": "Testicular pathology is difficult and there are a number of areas where diagnostic errors may lead to inappropriate treatment. We therefore describe ten areas of testicular pathology which may cause diagnostic confusion for pathologists: ten testicular trapdoors.",
+    "abstract_ja": "精巣病理は難解であり、診断の誤りが不適切な治療につながりうる領域がいくつか存在する。そこで我々は、病理医にとって診断の混乱を招きうる精巣病理の10の領域（「精巣の10の落とし穴」）を記述する。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-17076951",
+    "title": "Fetus in fetu.",
+    "title_ja": "胎児内胎児：腎腫瘍様の所見を呈した乳児例",
+    "authors": [
+      "Kajbafzadeh AM",
+      "Baharnoori M"
+    ],
+    "journal": "Can J Urol",
+    "year": 2006,
+    "pmid": "17076951",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "Fetus in fetu is a very rare condition thought to arise from a monozygotic twin that grows inside its sibling. The authors report a 6-month-old boy with a retroperitoneal fetiform mass that mimicked a solid and cystic renal tumor. The lesion is a developmental anomaly rather than a neoplasm. The report is a case description and does not address germ cell tumor management or outcomes.",
+    "summary_ja": "胎児内胎児は一卵性双生児の片方が、もう一方の体内で発育する極めてまれな病態です。本報告は6か月男児の後腹膜にできた胎児様の腫瘤が、固形嚢胞性の腎腫瘍に類似していた症例です。奇形腫様の発生異常であり、胚細胞腫瘍の治療や転帰は扱っていません。",
+    "abstract": "Fetus in fetu (FIF) is a very rare condition, with a reported incidence of one in 500,000 live births. It most likely represents a monozygotic diamniotic twin that implants itself and grows within the body of its normal karyotypically identical sibling, which typically manifests as a fetiform abdominal mass in a newborn or infant. The mass is located in the retroperitoneum in most cases, including our example, and is commonly surrounded by encapsulated fluid. However, FIF has been reported to occur in other locations, such as within the cranium, the scrotum, and the oral cavity. Usually only one fetus is present but very rarely multiple fetuses may also be present. Five fetuses in the cranium of a 1-day-old female infant with hydrocephalus (although three of these fetuses were composed of extremities only) had been reported. The fetus itself is incomplete, containing a variable number of identifiable organs. The lung, the liver, the adrenal gland, the pancreas, and the genital organs may be seen in the more complex specimens. The presence of a head with eyes, hair, and teeth has been reported, but most of these fetuses are anencephalic. We are presenting a FIF mimicking a solid and cystic renal mass in a 6-month-old boy.",
+    "abstract_ja": "胎児内胎児（FIF）は極めてまれな疾患で、報告発生率は出生50万人に1人とされる。一卵性の二卵膜性双胎の一方が、同じ核型を持つもう一方の体内に着床して発育すると考えられている。通常は腹部の胎児様腫瘤として新生児や乳児に認められる。腫瘤は多くの場合、今回の症例を含めて後腹膜に存在し、被包化された液体に通常囲まれている。ただし、頭蓋内、陰嚢、口腔など他の部位での報告もある。胎児は通常1体のみだが、きわめてまれに複数存在することもある。胎児は不完全で、同定可能な臓器の数はさまざまである。より複雑な標本では、肺、肝臓、副腎、膵臓、生殖器が認められることがある。眼、毛髪、歯を伴う頭部を有する例も報告されているが、多くは無脳症である。今回我々は、生後6か月の男児で、固形および嚢胞性の腎腫瘤に類似したFIFを提示する。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "si": "retroperitoneum",
+      "sx": "male",
+      "ag": "infant",
+      "n": 1,
+      "th": [
+        "epidemiology"
+      ]
+    }
   }
 ]
