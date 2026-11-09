@@ -29510,5 +29510,41 @@
     "relevance_status": "kept",
     "relevance_note": "人の判断(2026-10-31): 掲載。",
     "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-916057",
+    "title": "Diagnostic ultrasound in the evaluation of scrotal masses.",
+    "title_ja": "陰嚢内腫瘤の診断における超音波検査",
+    "authors": [
+      "Gottesman JE",
+      "Sample WF",
+      "Skinner DG",
+      "Ehrlich RM"
+    ],
+    "journal": "J Urol",
+    "year": 1977,
+    "pmid": "916057",
+    "doi": "10.1016/s0022-5347(17)58117-3",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "Gray-scale ultrasound was used to evaluate 27 patients presenting with scrotal masses. Given the clinical diagnosis, ultrasound proved reliable in almost all cases. The brief report does not specifically describe germ cell tumors, so its relevance to this site rests on the general evaluation of scrotal masses, which often include testicular neoplasms.",
+    "summary_ja": "陰嚢内腫瘤を有する27例を対象に、グレースケール超音波検査で評価を行った。臨床診断と照合すると、ほぼ全例で超音波検査は信頼できる結果を示した。精巣腫瘍・胚細胞腫瘍に特化した記述はなく、陰嚢内腫瘤全般の評価に関する短報であり、精巣腫瘍の画像診断として読める内容である。",
+    "abstract": "Evaluation of 27 patients with scrotal masses was done with gray scale ultrasound. Given the clinical diagnosis ultrasound proved reliable in almost all cases.",
+    "abstract_ja": "陰嚢内腫瘤を有する27例をグレースケール超音波検査で評価した。臨床診断を基準とすると、ほぼすべての症例で超音波検査は信頼性が高いことが示された。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "sx": "male",
+      "n": 27,
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "diagnostic_accuracy"
+    }
   }
 ]

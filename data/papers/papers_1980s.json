@@ -120373,5 +120373,222 @@
     "relevance_status": "kept",
     "relevance_note": "人の判断(2026-10-31): 掲載。",
     "relevance_reviewed_at": "2026-10-31 13:49:46"
+  },
+  {
+    "id": "pmid-2848605",
+    "title": "Don't ignore a positive pregnancy test.",
+    "title_ja": "陽性の妊娠検査結果を無視してはならない",
+    "authors": [
+      "Smith DB",
+      "Rustin GJ",
+      "Bagshawe KD"
+    ],
+    "journal": "BMJ",
+    "year": 1988,
+    "pmid": "2848605",
+    "doi": "10.1136/bmj.297.6656.1119",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "No abstract available.",
+    "summary_ja": "Abstractなし",
+    "abstract": "",
+    "abstract_ja": "Abstractなし",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39"
+  },
+  {
+    "id": "pmid-3282427",
+    "title": "Isoenzymes of alkaline phosphatase in germinoma cells.",
+    "title_ja": "ジャーミノーマ細胞におけるアルカリホスファターゼアイソザイム",
+    "authors": [
+      "Koide O",
+      "Iwai S",
+      "Kanno T",
+      "Kanda S"
+    ],
+    "journal": "Am J Clin Pathol",
+    "year": 1988,
+    "pmid": "3282427",
+    "doi": "10.1093/ajcp/89.5.611",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study examined isoenzymes of alkaline phosphatase (ALP) in 18 germinomas using enzymohistochemical, immunohistochemical, and biochemical methods. ALP was mainly on the cell surface and consisted mostly of the liver/bone type with a small amount of the placental D-variant. The authors suggest the prominent ALP expression may reflect enhanced expression of gonadal genes in the germinoma genome. The abstract does not specify the tumor site.",
+    "summary_ja": "本研究では、18例のジャーミノーマ（胚細胞腫）を用い、アルカリホスファターゼ（ALP）のアイソザイムを組織化学的、免疫組織化学的、生化学的に検討した。ALPは主に細胞表面に存在し、大部分は肝・骨型で、胎盤型D変異体が少量含まれていた。ALPの高発現は性腺遺伝子の発現亢進によると考察されている。摘出部位は要旨に記載されていない。",
+    "abstract": "Utilizing 18 germinomas, the characteristics of isoenzymes of alkaline phosphatase (ALP) in germinoma cells were examined by light and electron microscopic enzymohistochemical and immunohistochemical techniques and biochemical methods including inhibition tests, electrophoresis and electrosyneresis. ALP in germinoma cells was generally located on the cell surface. In a few germinoma cells, however, ALP was seen not only on the cell membrane but also in the endoplasmic reticulum. Enzymohistochemically as well as biochemically, ALP in germinoma cells was little sensitive to L-phenylalanine, moderately sensitive to L-homoarginine and somewhat resistant to heat in its inhibition tests. Immunohistochemical examinations and electrosyneresis showed the presence of the placental type of ALP in germinoma cells and biochemical analyses revealed that the heat-stable component of ALP in germinoma cells was consistent with the D-variant of the placental type of ALP. Therefore, germinoma cells possessed mixed isoenzymes of ALP, consisting mainly of the liver/bone type and a small amount of D-variant of the placental type on the cell surface. The prominent expression of ALP in germinoma cells may be due to the enhanced expression of gonadal genes active in the germinoma genome.",
+    "abstract_ja": "18例のジャーミノーマを用いて、アルカリホスファターゼ（ALP）のアイソザイムの特性を、酵素組織化学的、免疫組織化学的な手法および生化学的手法（阻害試験、電気泳動、電気シネレーシス）により検討した。ジャーミノーマ細胞のALPは一般に細胞表面に局在していた。しかし、一部のジャーミノーマ細胞では、ALPは細胞膜だけでなく小胞体にも認められた。酵素組織化学的にも生化学的にも、ジャーミノーマ細胞のALPは、L-フェニルアラニンによる阻害に対する感受性が低く、L-ホモアルギニンに対しては中程度の感受性を示し、阻害試験では加熱に対してやや抵抗性であった。免疫組織化学と電気シネレーシスにより、ジャーミノーマ細胞には胎盤型ALPが存在することが示され、生化学的解析では、加熱安定性成分は胎盤型ALPのD変異体と一致した。したがって、ジャーミノーマ細胞は主に肝・骨型と少量の胎盤型D変異体からなる混合アイソザイムを細胞表面に有していた。ジャーミノーマ細胞におけるALPの顕著な発現は、ジャーミノーマゲノムにおける性腺遺伝子の発現亢進によるものかもしれない。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39"
+  },
+  {
+    "id": "pmid-3323503",
+    "title": "Tumors originating in supernumerary ovaries. A report of two cases.",
+    "title_ja": "過剰卵巣に生じた腫瘍：2症例の報告",
+    "authors": [
+      "Mercer LJ",
+      "Toub DB",
+      "Cibils LA"
+    ],
+    "journal": "J Reprod Med",
+    "year": 1987,
+    "pmid": "3323503",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "Supernumerary ovary is a rare gynecologic anomaly, with 13 cases reported since 1890. Three previous cases were associated with tumors arising in ectopic ovarian tissue. This report describes two cases of benign neoplasms that originated in supernumerary ovaries. The abstract does not specify the histologic types of these tumors, so whether they are germ cell tumors such as teratomas cannot be determined from the abstract alone.",
+    "summary_ja": "過剰卵巣は稀な婦人科奇形で、1890年以降13例が報告されている。そのうち3例では異所性卵巣組織に腫瘍が生じていた。本報告は過剰卵巣に由来した良性腫瘍の2症例を扱う。抄録には腫瘍の組織型の記載がなく、胚細胞腫瘍(奇形腫など)に該当するかは本文の確認が必要である。",
+    "abstract": "The supernumerary ovary is a rare gynecologic anomaly; 13 cases have been reported on since 1890. Three were associated with tumors arising in the ectopic ovarian tissue. We encountered two cases of benign neoplasms discovered to have originated in supernumerary ovaries.",
+    "abstract_ja": "過剰卵巣は稀な婦人科の奇形であり、1890年以降13例が報告されている。そのうち3例では、異所性卵巣組織に生じた腫瘍を伴っていた。我々は過剰卵巣に由来した良性腫瘍の2症例を報告する。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "si": "ovary",
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 2,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-3325192",
+    "title": "Clinical and biological significance of an isozyme tumor marker--PLAP.",
+    "title_ja": "腫瘍マーカーとしてのアイソザイムPLAP：臨床的および生物学的意義",
+    "authors": [
+      "Fishman WH"
+    ],
+    "journal": "Clin Biochem",
+    "year": 1987,
+    "pmid": "3325192",
+    "doi": "10.1016/0009-9120(87)90003-8",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review traces the clinical and biological significance of placental alkaline phosphatase (PLAP) as an isozyme tumor marker. It notes that the isozyme was first linked to lung cancer and that PLAP currently has its greatest utility in seminoma and ovarian cancer. Monoclonal antibody studies and cloning of the PLAP gene suggest that PLAP and PLAP-like isozymes are coded by different genes. The abstract is truncated.",
+    "summary_ja": "胎盤型アルカリホスファターゼ(PLAP)のアイソザイム腫瘍マーカーとしての臨床的・生物学的意義を概説した総説である。現在の最大の有用性はセミノーマと卵巣癌にあると述べている。モノクローナル抗体による解析やPLAP遺伝子のクローニングにより、PLAPとPLAP様アイソザイムは異なる遺伝子にコードされると示唆される。",
+    "abstract": "In 1930 the determination of serum alkaline phosphatase in patients with bone or liver disease ushered in the era of clinical enzymology. The association of elevated (bone) alkaline phosphatase in serum of patients with osteogenic sarcoma was the first evidence that tumor cells themselves produced the enzyme. It became clear, however, in the 1960s that the serum alkaline phosphatase was not a single enzyme but consisted of a family of isozymes originating from liver, bone, intestine, and placenta. This was a consequence of the introduction of a combination of electrophoretic separations, heat inactivation, and organ-specific amino acid inhibitors. This combination of measurements made possible the demonstration of a serum alkaline phosphatase of lung cancer origin, as confirmed by the histochemical visualization in lung cancer of the Regan Isozyme (placental alkaline phosphatase-PLAP). At present, the measurement of PLAP has its greatest utility as a tumor marker in seminoma and ovarian cancer. A PLAP-like isozyme in normal testis and ovary is expressed in these and other neoplasias and appears to be related to rare alleles of placental alkaline phosphatase. Current studies have utilized a panel of monoclonal antibodies to detect useful epitopes that suggest that PLAP and PLAP-like isozymes are coded by different genes. The PLAP gene has now been cloned and sequenced by Millan and others. This fundamental new information is providing a base line that will make it possible to explain the overlapping specificities of intestinal and placental isozymes, the degree of uniqueness of the PLAP-like isozyme, the precise mechanism of uncompetitive inhibition by L-phenylalanine and the evolutionary history of the alkaline phosphatases.(ABSTRACT TRUNCATED AT 250 WORDS)",
+    "abstract_ja": "1930年、骨疾患や肝疾患患者の血清アルカリホスファターゼ測定により臨床酵素学の時代が始まった。骨肉腫患者で骨型アルカリホスファターゼが上昇していたことは、腫瘍細胞自身がこの酵素を産生することを示す最初の証拠であった。1960年代には、血清アルカリホスファターゼが肝、骨、腸、胎盤由来のアイソザイムの集合体であることが明らかになった。これは電気泳動、熱失活、臓器特異的なアミノ酸阻害剤を組み合わせた測定によるものであった。この手法により、肺癌由来の血清アルカリホスファターゼが示され、組織化学的にレガン型アイソザイム（胎盤型アルカリホスファターゼ：PLAP）が肺癌で確認された。現在、PLAPの測定は、セミノーマと卵巣癌における腫瘍マーカーとして最も有用である。正常な精巣と卵巣に存在するPLAP様アイソザイムは、これらおよびその他の腫瘍で発現しており、胎盤型アルカリホスファターゼの希少アレルに関連すると考えられる。モノクローナル抗体のパネルを用いた研究により、PLAPとPLAP様アイソザイムは異なる遺伝子にコードされることが示唆されている。PLAP遺伝子はMillanらによりクローニングされ、塩基配列が決定された。（抄録は250語で打ち切り）",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "th": [
+        "diagnosis_imaging",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-3840316",
+    "title": "Microglia in teratomas.",
+    "title_ja": "奇形腫におけるミクログリア",
+    "authors": [
+      "Pesce C",
+      "Tobia F",
+      "Scott T"
+    ],
+    "journal": "Acta Neuropathol",
+    "year": 1985,
+    "pmid": "3840316",
+    "doi": "10.1007/BF00687822",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1985 study used an ammoniacal silver nitrate stain to identify typical microglia in three teratomas. The microglia resembled those of mature human brain, with resting and mildly hypertrophic forms present within differentiated neural tissue containing astrocytes, neurons, and ependyma. The authors discuss the significance of microglia within ectodermal derivatives in teratomas. The primary site of the teratomas is not stated in the abstract, so their relation to CNS germ cell tumors cannot be determined from it.",
+    "summary_ja": "3例の奇形腫を対象に、アンモニア性硝酸銀染色で典型的なミクログリアを確認した研究です。分化した神経組織内で、静止型と軽度肥大型のミクログリアが成熟脳と同様に存在していました。外胚葉由来成分を含む奇形腫におけるミクログリアの意義が考察されています。原発部位は抄録に記載がありません。",
+    "abstract": "Using an ammoniacal silver nitrate stain, we have demonstrated typical microglial cells in three teratomas. Microglia appeared identical to their counterparts in the mature human brain, both resting and slightly hypertrophic types being present in differentiated nervous tissue, which also comprised astrocytes, neurones and ependyma. The implications of the presence of microglia with ectodermal derivatives in teratomas are discussed.",
+    "abstract_ja": "アンモニア性硝酸銀染色を用いて、3例の奇形腫に典型的なミクログリアが存在することを示した。これらのミクログリアは成熟したヒト脳のものと同一の形態を示し、静止型と軽度肥大型の両方が、アストロサイト、神経細胞、上衣細胞を含む分化した神経組織内に存在していた。奇形腫において外胚葉由来成分とともにミクログリアが存在することの意義について考察した。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39"
+  },
+  {
+    "id": "pmid-3972399",
+    "title": "Teratoma of the umbilical cord.",
+    "title_ja": "臍帯の奇形腫",
+    "authors": [
+      "Smith D",
+      "Majmudar B"
+    ],
+    "journal": "Hum Pathol",
+    "year": 1985,
+    "pmid": "3972399",
+    "doi": "10.1016/s0046-8177(85)80070-8",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "A rare case of teratoma arising in the umbilical cord is described, with a review of four previously reported cases. The authors discuss the histogenesis of teratomas at this unusual extragonadal site and list features that distinguish umbilical cord and placental teratomas from acardius fetus. Because this entity is not a classical gonadal germ cell tumor, its relevance to germ cell tumor practice is limited, although it informs teratoma pathology.",
+    "summary_ja": "臍帯に発生した奇形腫の稀な症例を報告し、既報4例を概説している。性腺外というまれな部位での奇形腫の組織発生を考察するとともに、臍帯・胎盤の奇形腫と無心体胎児(acardius)を区別する特徴を挙げている。典型的な性腺の胚細胞腫瘍とは異なるため、臨床的な関連は限定的である。",
+    "abstract": "A case of teratoma of the umbilical cord is described. Four previous reports of this entity are briefly reviewed, and a detailed description of the current case is presented. The histogenesis of teratomas at this unusual site is discussed. The features that distinguish teratomas of the umbilical cord and placenta from acardius fetus are enumerated.",
+    "abstract_ja": "臍帯の奇形腫の1症例を報告する。この疾患単位について既報4例を簡単に概説し、現症例を詳細に記述する。このまれな部位における奇形腫の組織発生について考察する。臍帯および胎盤の奇形腫を無心体胎児(acardius fetus)と区別する特徴を列挙する。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "si": "other_extragonadal",
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-6292143",
+    "title": "Ovarian cancers in childhood.",
+    "title_ja": "小児期の卵巣癌",
+    "authors": [
+      "Barber HR"
+    ],
+    "journal": "Int J Radiat Oncol Biol Phys",
+    "year": 1982,
+    "pmid": "6292143",
+    "doi": "10.1016/0360-3016(82)90594-6",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This article discusses the management of ovarian tumors in children, arguing that surgical decisions should follow the same operability principles used in adults. It emphasizes that childhood ovarian malignancies differ from adult ones due to limited abdominal space, aggressive behavior, weaker immune response, and the potential impact of therapy on future physical and emotional development. The abstract does not specify histology, although pediatric ovarian malignancies are largely germ cell tumors. It is a general perspective piece.",
+    "summary_ja": "小児の卵巣腫瘍の治療方針を論じた総説。成人と同様に手術可能性に基づいて判断すべきとし、小児では腫瘍進展の空間が限られ、悪性度が高く、免疫応答も弱いことを指摘する。治療が将来の身体的・精神的発達に与える影響にも言及している。ただし組織型の記載は抄録にはない。",
+    "abstract": "In dealing with ovarian tumors in children, the gynecologist must use the same principle of assessing operability as those used for adults. This approach offers the maximum opportunity for successful treatment. The ancient medical philosophy of not inflicting harm if one cannot achieve good is especially applicable to children with ovarian cancer. It is better for a child to die at home in the loving care of her parents than alone in a cold, forbidding hospital room. There are certain characteristics that distinguish ovarian tumors in childhood from that in adults: (1) Limited space for tumor expansion. (2) A high degree of virulence in cancer. (3) A less effective immunologic response. (4) The possibility that therapy may affect future physical and emotional development.",
+    "abstract_ja": "小児の卵巣腫瘍の治療にあたっては、婦人科医は成人と同様に手術可能性を評価する原則を用いる必要がある。このアプローチは成功する治療の機会を最大化する。治療の成果が見込めない場合には害を与えないという古代の医療理念は、卵巣癌の小児にとって特に当てはまる。小児の卵巣腫瘍を成人のものと区別する特徴として次の点がある:(1)腫瘍が拡大する空間が限られている。(2)癌の悪性度が高い。(3)免疫応答が弱い。(4)治療が将来の身体的・情緒的発達に影響を及ぼしうる。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "th": [
+        "surgery",
+        "late_effects"
+      ]
+    }
   }
 ]

@@ -100,8 +100,8 @@ function parseCsv(text) {
   await page.close();
 }
 { // 100件以下: そのまま全件
-  const some = list.filter((p) => p.attrs?.sc === "treatment" && p.tags?.[0] === "SR・MA");
-  const { page } = await open(`${base}/index.html?kubun=clinical&design=${encodeURIComponent("SR・MA")}&f_sc=treatment`);
+  const some = list.filter((p) => p.attrs?.sc === "treatment" && p.attrs?.mt === "yes" && p.tags?.[0] === "SR・MA"); // データが増えても100件以下に収まるよう、定量的統合ありに絞る
+  const { page } = await open(`${base}/index.html?kubun=clinical&design=${encodeURIComponent("SR・MA")}&f_sc=treatment&f_mt=yes`);
   check("100件以下: 案内は出ない", await page.locator("#export-status").innerText(), "");
   const csv = await download(page, "#export-csv");
   const rows = parseCsv(csv.text.slice(1)).filter((r) => r.length > 1 || r[0]);
