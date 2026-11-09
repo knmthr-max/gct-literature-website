@@ -8,6 +8,8 @@
 import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
+import os from "node:os";
 import { chromium } from "playwright";
 
 const root = path.resolve(process.argv[2] || ".");
@@ -107,6 +109,46 @@ failDetails = false;
   check("英語ページ: 件数", await page.locator("#result-count").innerText().then((t) => t.startsWith(`${list.length} of`)), true);
   check("英語ページ: ページのエラーなし", errors, []);
   await page.close();
+}
+
+// ビルドの識別子: スタンプ(HTMLに ?v= と meta を入れる)と、画面とデータの版がずれたときの案内
+{
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "stamp-"));
+  fs.mkdirSync(path.join(tmp, "en")); fs.mkdirSync(path.join(tmp, "search"));
+  fs.copyFileSync(path.join(root, "index.html"), path.join(tmp, "index.html"));
+  fs.copyFileSync(path.join(root, "en/index.html"), path.join(tmp, "en/index.html"));
+  fs.writeFileSync(path.join(tmp, "search/build.json"), JSON.stringify({ id: "abc123" }));
+  execFileSync("node", [path.join(root, "scripts/stamp_build.mjs"), tmp]);
+  execFileSync("node", [path.join(root, "scripts/stamp_build.mjs"), tmp]); // 2回実行しても、重ならない
+  const html = fs.readFileSync(path.join(tmp, "index.html"), "utf8");
+  const en = fs.readFileSync(path.join(tmp, "en/index.html"), "utf8");
+  check("スタンプ: app.js と style.css に ?v= が付く(1つだけ)", [html.match(/app\.js\?v=abc123"/g)?.length, html.match(/style\.css\?v=abc123"/g)?.length], [1, 1]);
+  check("スタンプ: meta build-id が1つだけ入る", [html.match(/name="build-id"/g)?.length, en.match(/name="build-id" content="abc123"/g)?.length], [1, 1]);
+  check("スタンプ: 英語ページの相対パスも保たれる", en.includes('src="../assets/app.js?v=abc123"'), true);
+  fs.rmSync(tmp, { recursive: true, force: true });
+
+  const run = async (htmlBuild, dataBuild) => {
+    const page = await browser.newPage();
+    await page.route("**/index.html", async (route) => {
+      const res = await route.fetch();
+      const body = (await res.text()).replace("</head>", `<meta name="build-id" content="${htmlBuild}"></head>`);
+      await route.fulfill({ response: res, body });
+    });
+    await page.route("**/search/head.json", async (route) => {
+      const res = await route.fetch();
+      const data = JSON.parse(await res.text());
+      data.build = dataBuild;
+      await route.fulfill({ response: res, body: JSON.stringify(data) });
+    });
+    await page.goto(`${base}/index.html`);
+    await page.waitForSelector(".paper-card");
+    await fullyLoaded(page);
+    const shown = await page.locator(".update-notice").count();
+    await page.close();
+    return shown;
+  };
+  check("版が同じ: 案内は出ない", await run("v1", "v1"), 0);
+  check("版が違う(HTMLが古い): 再読み込みの案内が出る", await run("v0", "v1"), 1);
 }
 await browser.close();
 server.close();

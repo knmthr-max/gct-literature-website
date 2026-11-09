@@ -45,7 +45,23 @@
   // ブラウザ内で部分一致)になる。新方式の検索データ(search/list.json)を読めなかったときも、従来の方式に戻る。
   // 設計: docs/decisions/2026-09-30_pagefind_search.md
   let SEARCH_MODE = new URLSearchParams(location.search).get("search") !== "legacy";
+  // ビルドの識別子(デプロイ時に HTML へ入る。scripts/stamp_build.mjs)。無ければ(手元での確認など)空
+  const BUILD = document.querySelector('meta[name="build-id"]')?.content || "";
   const pageUrl = (path) => new URL(DATA_ROOT + path, document.baseURI).href;
+  // 読み込む JS にも識別子を付ける(古い JS が残って、新しいデータと食い違うのを防ぐ)
+  const moduleUrl = (path) => pageUrl(path) + (BUILD ? `?v=${BUILD}` : "");
+
+  // 画面(HTML・JS)とデータのビルドが違うとき(HTML が古いまま残っているなど)は、再読み込みを案内する
+  function checkBuild(dataBuild) {
+    if (!BUILD || !dataBuild || dataBuild === BUILD) return;
+    const note = document.createElement("div");
+    note.className = "update-notice";
+    note.setAttribute("role", "alert");
+    note.textContent = LANG === "en"
+      ? "This site has been updated. Please reload the page (Ctrl/Cmd+Shift+R)."
+      : "サイトが更新されました。ページを再読み込みしてください(Ctrl/Cmd+Shift+R)。";
+    document.body.prepend(note);
+  }
 
   const state = {
     papers: [],
@@ -483,7 +499,7 @@
   function loadEngine() {
     if (!enginePromise) {
       enginePromise = Promise.all([
-        import(pageUrl("assets/search-lib.js")).then(async (lib) => ({ lib, pagefind: await lib.loadPagefind(pageUrl("pagefind/pagefind.js")) })),
+        import(moduleUrl("assets/search-lib.js")).then(async (lib) => ({ lib, pagefind: await lib.loadPagefind(pageUrl("pagefind/pagefind.js")) })),
         loadJson("search/idmap.json"),
       ]).then(([{ lib, pagefind }, idmap]) => ({ lib, pagefind, idmap }));
       enginePromise.catch(() => { enginePromise = null; });
@@ -507,7 +523,7 @@
       engine = await loadEngine();
     } catch (err) {
       console.error(err);
-      const lib = await import(pageUrl("assets/search-lib.js"));
+      const lib = await import(moduleUrl("assets/search-lib.js"));
       $("search-notice").hidden = false;
       return lib.evaluateQuery(query, async (sub) => substringIds(sub.text), allIds);
     }
@@ -885,7 +901,7 @@
     });
 
     try {
-      ATTR = await import(pageUrl("assets/attr-labels.js"));
+      ATTR = await import(moduleUrl("assets/attr-labels.js"));
       readUrlSelection();
       // 絞り込みのURLを直接開いたときは、先頭の20件では足りないので、全件を待つ
       const hasSelection = state.kubun !== "all" || selectedCount() > 0;
@@ -895,6 +911,7 @@
       if (SEARCH_MODE) {
         listLoad = loadJson("search/list.json");
         if (!hasSelection) head = await loadJson("search/head.json").catch(() => null);
+        if (head) checkBuild(head.build);
       }
       applySiteInfo(await siteLoad);
       if (SEARCH_MODE) enableSearchUi();
@@ -951,6 +968,7 @@
       else renderList();
       if (SEARCH_MODE) {
         const meta = head || (await loadJson("search/head.json").catch(() => null));
+        if (!head && meta) checkBuild(meta.build);
         if (meta) {
           detailMeta = meta;
           loadDetails(meta);

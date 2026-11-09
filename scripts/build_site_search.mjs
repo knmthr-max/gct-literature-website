@@ -23,6 +23,8 @@ const outDir = process.argv[3] || ".";
 const LIST_FIELDS = ["id", "pmid", "title", "title_ja", "journal", "year", "tags", "jif_tier", "added_at", "attrs"];
 const DETAIL_FIELDS = ["authors", "doi", "url", "summary_ja", "summary_en"];
 const HEAD_SIZE = 20;
+// このビルドの識別子。画面(HTML)にも同じ値を入れ(scripts/stamp_build.mjs)、画面とデータの版がずれたことを検出する
+const BUILD_ID = (process.env.GITHUB_SHA || String(Date.now())).slice(0, 12);
 const DETAIL_CHUNK = 2000;
 const SAFE_ID = /^[A-Za-z0-9._-]+$/;
 // 検索に使わない Pagefind の部品(UI・ハイライト)と、読まない結果詳細は公開しない
@@ -64,8 +66,9 @@ for (let n = 0; n < chunkCount; n += 1) {
   const chunk = Object.fromEntries(ordered.slice(n * DETAIL_CHUNK, (n + 1) * DETAIL_CHUNK).map((p) => [p.id, pick(p, DETAIL_FIELDS)]));
   fs.writeFileSync(path.join(searchDir, "details", `${n}.json`), JSON.stringify(chunk));
 }
+fs.writeFileSync(path.join(searchDir, "build.json"), JSON.stringify({ id: BUILD_ID }));
 fs.writeFileSync(path.join(searchDir, "head.json"), JSON.stringify({
-  total: ordered.length, detail_chunks: chunkCount, chunk_size: DETAIL_CHUNK,
+  build: BUILD_ID, total: ordered.length, detail_chunks: chunkCount, chunk_size: DETAIL_CHUNK,
   papers: ordered.slice(0, HEAD_SIZE).map((p) => withAbstractFlags(p, pick(p, [...LIST_FIELDS, ...DETAIL_FIELDS]))),
 }));
 for (const p of papers) {
