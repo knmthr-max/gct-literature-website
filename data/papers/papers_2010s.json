@@ -171135,5 +171135,70 @@
         "surgery"
       ]
     }
+  },
+  {
+    "id": "pmid-21567140",
+    "title": "Imaging of pediatric ovarian neoplasms.",
+    "title_ja": "小児卵巣腫瘍の画像診断",
+    "authors": [
+      "Epelman M",
+      "Chikwava KR",
+      "Chauvin N",
+      "Servaes S"
+    ],
+    "journal": "Pediatr Radiol",
+    "year": 2011,
+    "pmid": "21567140",
+    "doi": "10.1007/s00247-011-2128-x",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review covers clinical and imaging features of the most common ovarian neoplasms in children and adolescents. It notes that incidental adnexal masses are increasingly found during evaluation of abdominal pain or trauma, and that management depends on lesion size, appearance and patient age. Ultrasound is the first-line modality, MRI is used for indeterminate or complex pelvic masses to distinguish benign from malignant lesions, and CT is reserved mainly for staging, follow-up and emergencies.",
+    "summary_ja": "小児・思春期に多い卵巣腫瘍の臨床像と画像所見をまとめた総説である。超音波を第一選択とし、判定困難な骨盤内腫瘤にはMRIを、病期分類やフォローアップ、救急時にはCTを用いると述べる。腹痛や外傷の評価で偶発的に見つかる卵巣腫瘍では、大きさや所見、年齢に応じた対応が必要とされる。",
+    "abstract": "We review the clinical and imaging characteristics of the most common ovarian neoplasms in children and adolescents. Because of the widespread use of diagnostic imaging, incidental ovarian neoplasms might be encountered during the evaluation of abdominal pain, trauma or other indications and might pose a diagnostic dilemma. Conducting adequate imaging studies under these conditions is important, as management strategies differ according to the size and appearance of the lesion as well as the age of the patient. US dominates in gynecological imaging because of its excellent visualization, absence of ionizing radiation and sedation risks and comparatively low cost. For further examination of indeterminate lesions found using US, MRI is being used more progressively in this field, particularly for the evaluation of complex pelvic masses with the aim of distinguishing benign and malignant conditions and conditions requiring surgical intervention. CT is reserved primarily for tumor staging and follow-up and for emergency situations.",
+    "abstract_ja": "本稿では、小児および思春期に最も多くみられる卵巣腫瘍の臨床像および画像的特徴についてレビューする。画像診断の広範な使用により、腹痛や外傷、その他の適応で評価される際に偶発的に卵巣腫瘍が発見されることがあり、診断上のジレンマを生じうる。このような状況で適切な画像検査を実施することは重要であり、病変の大きさや性状、患者の年齢によって治療方針が異なるためである。婦人科画像診断では、描出能に優れ、電離放射線や鎮静のリスクがなく、比較的低コストであることから、超音波が中心的役割を果たす。超音波で判定困難な病変の精査には、MRIが次第に用いられるようになっており、特に良性と悪性、あるいは手術適応のある病態を鑑別するための複雑な骨盤内腫瘤の評価に有用である。CTは主に病期分類とフォローアップ、および救急の場面に限って用いられる。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "th": [
+        "diagnosis_imaging"
+      ]
+    }
+  },
+  {
+    "id": "pmid-21124297",
+    "title": "HDAC1, a novel marker for benign teratomas.",
+    "title_ja": "良性奇形腫のマーカーとしてのHDAC1",
+    "authors": [
+      "Simboeck E",
+      "Di Croce L"
+    ],
+    "journal": "EMBO J",
+    "year": 2010,
+    "pmid": "21124297",
+    "doi": "10.1038/emboj.2010.281",
+    "url": "",
+    "tags": [
+      "その他"
+    ],
+    "summary_en": "This short EMBO J report identifies HDAC1 as a marker distinguishing benign teratomas. The abstract states that loss of HDAC1 promotes teratoma malignancy. Because histone deacetylases are pursued as cancer chemotherapy targets for their pro-proliferative roles, the findings caution that HDAC inhibitors could inadvertently enhance malignant teratoma behavior. The work links HDAC1 function to teratoma biology and suggests that its status may help separate benign from malignant lesions. The abstract is brief and does not specify the teratoma model used.",
+    "summary_ja": "HDAC1は良性奇形腫を特徴づける新規マーカーとして提案された。増殖促進作用を持つヒストン脱アセチル化酵素(HDAC)は化学療法の標的として期待されているが、HDAC1の喪失が奇形腫の悪性化を促進することが判明した。そのため、HDAC阻害薬を抗がん剤として用いる際には慎重さが求められると論じている。",
+    "abstract": "Histone deacetylases (HDACs) are attractive chemotherapy targets, owing to their pro-proliferative activities. However, the finding that loss of HDAC1 promotes teratoma malignancy calls for caution in the use of HDAC inhibitors as cancer therapeutics.",
+    "abstract_ja": "ヒストン脱アセチル化酵素(HDAC)は増殖促進作用を持つため、化学療法の魅力的な標的である。しかし、HDAC1の喪失が奇形腫の悪性度を高めることが判明したため、がん治療薬としてHDAC阻害薬を用いる際には注意が必要である。",
+    "added_at": "2026-11-09",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-03): 掲載。",
+    "relevance_reviewed_at": "2026-11-03 04:11:39",
+    "attrs": {
+      "th": [
+        "pathology_molecular",
+        "chemotherapy"
+      ]
+    }
   }
 ]
