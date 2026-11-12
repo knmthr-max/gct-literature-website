@@ -94572,8 +94572,8 @@
     "abstract_ja": "モザイク型r(21)を伴い出生前に検出された仙尾部奇形腫の周産期所見と分子細胞遺伝学的特徴を報告する。モザイク型r(21)が胎児の仙尾部奇形腫を呈した初めての報告である。胎児の仙尾部奇形腫に関連する染色体異常について考察する。",
     "added_at": "2026-10-11",
     "jif_tier": "unknown",
-    "relevance_status": "kept",
-    "relevance_note": "仙尾部奇形腫の出生前診断と染色体異常の解析を扱っているため。",
+    "relevance_status": "excluded",
+    "relevance_note": "人の判断(2026-11-12): 撤回された訂正通知(24412089)の対象論文のため除外。",
     "relevance_reviewed_at": "2026-10-10T06:23:47+00:00",
     "attrs": {
       "si": "sacrococcygeal",
