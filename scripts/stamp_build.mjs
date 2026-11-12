@@ -7,6 +7,8 @@
 // 2. <meta name="build-id" content="<識別子>"> を入れる。画面は、search/head.json の build と比べ、
 //    食い違えば「サイトが更新されました。再読み込みしてください」と出す(assets/app.js)
 // 識別子は、scripts/build_site_search.mjs が search/build.json に書いたもの。
+// 3. data/site.json の last_updated(画面の「最終更新」)を、掲載中の文献の added_at の最新日にそろえる
+//    (手で書き換えると更新が漏れるため)。掲載中 = relevance_status が excluded でない文献。
 import fs from "node:fs";
 import path from "node:path";
 
@@ -21,4 +23,22 @@ for (const page of ["index.html", "en/index.html"]) {
   html = html.replace("</head>", `  <meta name="build-id" content="${id}">\n</head>`);
   fs.writeFileSync(file, html);
 }
-console.log(`stamped build ${id}`);
+
+// 文献データ(data/papers)や data/site.json が無い作業用コピー(テストなど)では、何もしない
+let latest = "";
+const papersDir = path.join(root, "data/papers");
+const siteFile = path.join(root, "data/site.json");
+if (fs.existsSync(papersDir) && fs.existsSync(siteFile)) {
+  for (const name of fs.readdirSync(papersDir)) {
+    if (!name.endsWith(".json") || name === "index.json") continue;
+    for (const e of JSON.parse(fs.readFileSync(path.join(papersDir, name), "utf8"))) {
+      if (e.relevance_status !== "excluded" && /^\d{4}-\d{2}-\d{2}$/.test(e.added_at || "") && e.added_at > latest) latest = e.added_at;
+    }
+  }
+}
+if (latest) {
+  const site = JSON.parse(fs.readFileSync(siteFile, "utf8"));
+  site.last_updated = latest;
+  fs.writeFileSync(siteFile, JSON.stringify(site, null, 2) + "\n");
+}
+console.log(`stamped build ${id}, last_updated ${latest || "(unchanged)"}`);
