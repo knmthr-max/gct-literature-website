@@ -29546,5 +29546,1261 @@
       ],
       "st": "diagnostic_accuracy"
     }
+  },
+  {
+    "id": "pmid-376090",
+    "title": "Immunocytochemical localization of calcitonin-producing cells in a strumal carcinoid with amyloid stroma.",
+    "title_ja": "アミロイド間質を伴う甲状腺腫様カルチノイドにおけるカルシトニン産生細胞の免疫細胞化学的局在",
+    "authors": [
+      "Dayal Y",
+      "Tashjian AH Jr",
+      "Wolfe HJ"
+    ],
+    "journal": "Cancer",
+    "year": 1979,
+    "pmid": "376090",
+    "doi": "10.1002/1097-0142(197904)43:4<1331::aid-cncr2820430423>3.0.co;2-4",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This report describes a nonfunctioning strumal carcinoid in a 49-year-old woman, examined by histochemical and immunocytochemical methods. All tumor cells showed neuroendocrine features without thyroid follicular differentiation. Calcitonin-producing C-cells were localized near amyloid stroma. The authors discuss whether such lesions arise from C-cells or represent an ovarian carcinoid with C-cell differentiation, and they consider this evidence support for an APUD cell origin of strumal carcinoids.",
+    "summary_ja": "49歳女性に生じた無機能性の甲状腺腫様カルチノイドを、組織化学および免疫細胞化学的に検討した症例。腫瘍細胞は神経内分泌系への分化を示し、甲状腺濾胞細胞への分化は認めなかった。アミロイド間質の近傍にカルシトニン産生C細胞が局在しており、その由来について考察している。",
+    "abstract": "A nonfunctioning strumal carcinoid arising in a 49-year-old woman was studied by histochemical and immunocytochemical techniques. All tumor cells, irrespective of their architectural arrangement, showed properties of neuroendocrine-programmed cells, without any evidence of thyroid follicular cell differentiation. Foci of calcitonin-producing C-cells were demonstrable by immunocytochemical technique and were closely associated with areas of amyloid stroma of the tumor. Efforts at localization of insulin and gastrin within the tumor cells gave negative results. While the results in the present case offer additional support for an APUD cell origin of strumal carcinoids, the presence of the calcitonin-producing C-cells within the tumor raises interesting histogenetic possibilities as to whether these lesions are derived from C-cells or represent an ovarian carcinoid with foci of C-cell differentiation.",
+    "abstract_ja": "49歳女性に生じた無機能性の甲状腺腫様カルチノイドを、組織化学的および免疫細胞化学的手法により検討した。腫瘍細胞はすべて、その構築様式にかかわらず神経内分泌系細胞の性質を示し、甲状腺濾胞細胞への分化の証拠は認められなかった。免疫細胞化学的手法により、カルシトニン産生C細胞の巣が証明され、それらはアミロイド間質の領域と密接に関連していた。インスリンおよびガストリンの局在検索は陰性であった。本症例の結果は、甲状腺腫様カルチノイドがAPUD細胞由来であるという説を支持するが、腫瘍内にカルシトニン産生C細胞が存在することは、これらの病変がC細胞に由来するのか、あるいはC細胞分化を伴う卵巣カルチノイドであるのかという、興味深い組織発生学的可能性を提起している。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-376091",
+    "title": "Strumal carcinoid of the ovary: an analysis of its components.",
+    "title_ja": "卵巣甲状腺腫様カルチノイドの構成成分の解析",
+    "authors": [
+      "Greco MA",
+      "LiVolsi VA",
+      "Pertschuk LP",
+      "Bigelow B"
+    ],
+    "journal": "Cancer",
+    "year": 1979,
+    "pmid": "376091",
+    "doi": "10.1002/1097-0142(197904)43:4<1380::aid-cncr2820430428>3.0.co;2-o",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This study examined an ovarian strumal carcinoid by light and electron microscopy and immunofluorescence. Thyroglobulin staining confirmed thyroid tissue within the tumor. The lesion showed mixed insular and trabecular patterns, with intermediate zones sharing features of both. Amyloid was absent, while immunoreactive calcitonin was detected, suggesting the presence of C-cells or medullary thyroid carcinoma-like differentiation.",
+    "summary_ja": "卵巣に生じた甲状腺腫様カルチノイドを光顕・電顕および免疫蛍光法で解析した症例。サイログロブリン陽性により甲状腺組織の存在を確認した。島状・索状の混在パターンを示し、アミロイドは認めず、カルシトニン陽性所見からC細胞の存在が示唆された。",
+    "abstract": "A strumal carcinoid of the ovary was studied by light and electron microscopy. Thyroglobulin was demonstrated within the strumal element by immunofluorescence, thus establishing the identity of the thyroid tissue. The carcinoid fulfilled the light and electron microscopic criteria for a mixed insular and trabecular example of this tumor. Intermediate zones between the two tissue elements showed mixed characteristics. No amyloid was found. Immunoreactive calcitonin was demonstrated in the tumor, suggesting the presence of C-cells or medullary carcinoma of the thyroid.",
+    "abstract_ja": "卵巣の甲状腺腫様カルチノイドを光顕および電顕で検討し、免疫蛍光法を施行した。サイログロブリンの免疫蛍光により、腫瘍内の甲状腺組織の同定が確認された。本病変は島状および索状の混合型カルチノイドの典型的な基準を満たしていた。両組織成分の間に存在する移行部は、両者の特徴を併せ持っていた。アミロイドは認められなかった。腫瘍内に免疫反応性のカルシトニンが証明され、C細胞の存在または髄様甲状腺癌に類似した分化が示唆された。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "n": 1,
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-468973",
+    "title": "Male pseudohermaphroditism secondary to 17 beta-hydroxysteroid dehydrogenase deficiency: gender role change with puberty.",
+    "title_ja": "17β-ヒドロキシステロイド脱水素酵素欠損症による男性仮性半陰陽：思春期に伴う性役割の変化",
+    "authors": [
+      "Imperato-McGinley J",
+      "Peterson RE",
+      "Stoller R",
+      "Goodwin WE"
+    ],
+    "journal": "J Clin Endocrinol Metab",
+    "year": 1979,
+    "pmid": "468973",
+    "doi": "10.1210/jcem-49-3-391",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1979 case report describes a 31-year-old male pseudohermaphrodite with 17β-hydroxysteroid dehydrogenase deficiency, raised as a girl and changed to a male gender role at age 14. At age 30 he developed a right testicular teratocarcinoma-seminoma with retroperitoneal node metastases. Treatment comprised orchiectomy, retroperitoneal node dissection and chemotherapy, after which he remained free of metastases. The germ cell tumour is one component of an endocrine and gender-role case.",
+    "summary_ja": "17β-ヒドロキシステロイド脱水素酵素欠損による31歳の男性仮性半陰陽例の症例報告である。17歳まで女児として育てられ、14歳時に男性の性役割へ移行した。30歳時に右精巣の奇形癌－セミノーマを発症し、後腹膜リンパ節転移を伴った。精巣摘除術、後腹膜リンパ節郭清、化学療法により転移は認められなくなった。胚細胞腫瘍は、内分泌および性役割に関する症例の一部である。",
+    "abstract": "A 31-yr-old male pseudohermaphrodite is reported with 17 beta-hydroxysteroid dehydrogenase deficiency. Laboratory data revealed a plasma testosterone of 228 ng/100 ml, a plasma androstenedione of 620 ng/100 ml, and an abnormal androstenedione to testosterone ratio. Plasma estradiol was 4.6 ng/100 ml and plasma estrone was 22 ng/100 ml. This subject was born in a hospital, incontrovertibly declared to be a female, and unambiguously raised as a girl by his parents for the first 17 yr of his life. At age 14 yr, he was able to change to a male gender role with ease. As an adult, he is a well adjusted, happily married man with a successful professional career. Surgical correction of bilateral cryptorchidism and hypospadias was carried out at age 14 yr. At age 30 yr, he developed a teratocarcinoma-seminoma of the right testis with retroperitoneal node metastases. After orchiectomy and retroperitoneal node dissection, he was placed on chemotherapy and is presently free of metastases.",
+    "abstract_ja": "31歳の男性仮性半陰陽例を報告する。17β-ヒドロキシステロイド脱水素酵素欠損症による。検査所見として、血漿テストステロン228 ng/100 ml、血漿アンドロステンジオン620 ng/100 ml、アンドロステンジオン/テストステロン比の異常、血漿エストラジオール4.6 ng/100 ml、血漿エストロン22 ng/100 ml が認められた。出生時に女性と宣告され、両親により最初の17年間、明確に女児として育てられた。14歳時には男性の性役割へ容易に移行した。成人後は適応が良好で、幸せに結婚し、職業的にも成功している。14歳時に両側停留精巣と尿道下裂の外科的矯正を受けた。30歳時に右精巣の奇形癌－セミノーマを発症し、後腹膜リンパ節転移を伴った。精巣摘除術および後腹膜リンパ節郭清の後、化学療法を施行した。現在、転移はない。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "ag": "adult",
+      "hi": [
+        "mixed_gct",
+        "seminoma_germinoma"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "chemotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-520496",
+    "title": "Intraperitoneal growth pattern of murine teratocarcinomas.",
+    "title_ja": "マウス奇形癌の腹腔内増殖様式",
+    "authors": [
+      "Ishikawa T",
+      "Kyoizumi S"
+    ],
+    "journal": "Experientia",
+    "year": 1979,
+    "pmid": "520496",
+    "doi": "10.1007/BF01953259",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This brief 1979 report examines the growth behaviour of ascitic teratocarcinomas in syngeneic 129/Sv mice. The tumours displayed a distinctive intraperitoneal growth pattern, which the authors interpret as evidence of size regulation within the peritoneal cavity. Teratocarcinomas are the murine counterparts of human germ cell tumours, so the study offers experimental insight into how these malignancies behave in vivo. The abstract is short, and detailed methods and quantitative findings are not available.",
+    "summary_ja": "1979年の短報で、同系129/Svマウスにおける腹水型奇形癌の増殖様式を検討した。腫瘍は腹腔内で特徴的な増殖パターンを示し、腹腔内でサイズが調節されている可能性が示唆された。奇形癌はヒト胚細胞腫瘍のマウスモデルに当たり、in vivoでの挙動の理解に資する。ただし抄録は短く、詳細な方法や定量データは不明である。",
+    "abstract": "Ascitic teratocarcinomas showed a unique growth pattern, suggesting size regulation in the peritoneal cavity of syngeneic 129/Sv mice.",
+    "abstract_ja": "腹水型の奇形癌（teratocarcinoma）は、同系129/Svマウスの腹腔内で独特の増殖様式を示し、腹腔内でサイズが調節されていることが示唆された。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-93569",
+    "title": "Serum and cellular biologic tumor markers in patients with urologic cancer.",
+    "title_ja": "泌尿器系がんにおける血清および細胞の生物学的腫瘍マーカー",
+    "authors": [
+      "Javadpour N"
+    ],
+    "journal": "Hum Pathol",
+    "year": 1979,
+    "pmid": "93569",
+    "doi": "10.1016/s0046-8177(79)80099-4",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review covers serum and cellular biologic tumor markers in urologic cancers. Alpha-fetoprotein, human chorionic gonadotropin, and pregnancy-specific beta-1 glycoprotein are highlighted as useful for staging, detecting recurrence, assessing prognosis, and managing testicular cancer. Recent developments and future perspectives on newer markers are discussed. The scope spans several urologic malignancies rather than germ cell tumors alone.",
+    "summary_ja": "泌尿器系がんにおける血清および細胞内の生物学的腫瘍マーカーを扱った総説である。精巣がんの病期分類、再発の検出、予後評価および管理にαフェトプロテイン(AFP)、ヒト絨毛性ゴナドトロピン(hCG)、妊娠特異的β1グリコプロテインが有用とされる。新たなマーカーの動向と展望も論じられるが、対象は泌尿器系がん全般にわたる。",
+    "abstract": "During the past several years the development of radioimmunoassay and immunocytochemical techniques to detect small amounts of marker in the sera and cancer cells of cancer patients has made a significant impact on the diagnosis and management of certain cancers. Among these markers alpha-fetoprotein, human chorionic gonadotropin, and pregnancy specific beta-1 glycoprotein have been useful in the staging, detection of recurrence, prognosis, and management of testicular cancer. In this article the recent developments and future perspectives concerning these and other newer markers are discussed.",
+    "abstract_ja": "放射免疫測定法と免疫細胞化学的手法の発達により、癌患者の血清および癌細胞中の微量マーカーを検出できるようになり、癌の診断と管理に大きな影響を与えている。中でもαフェトプロテイン、ヒト絨毛性ゴナドトロピン、妊娠特異的β1グリコプロテインは、精巣がんの病期分類、再発の検出、予後および管理に有用であった。本稿では、これらおよびその他の新しいマーカーについて最近の進歩と将来の展望を述べる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "th": [
+        "diagnosis_imaging",
+        "surveillance",
+        "prognosis",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-209164",
+    "title": "Experience with \"second-look\" operations in pediatric solid tumors.",
+    "title_ja": "小児固形腫瘍における「第二度手術（セカンドルック手術）」の経験",
+    "authors": [
+      "Grosfeld JL",
+      "Ballantine TV",
+      "Baehner RL"
+    ],
+    "journal": "J Pediatr Surg",
+    "year": 1978,
+    "pmid": "209164",
+    "doi": "10.1016/s0022-3468(78)80400-x",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1978 pediatric surgery study reports 32 second-look operations in infants and children with unresectable or recurrent solid tumors after chemotherapy or radiation. Tumors were resected in 81%, and 56% achieved disease-free survival. Second-look surgery was most useful for Wilms tumor, bilateral tumors, and localized or metastatic neuroblastoma. It was also occasionally helpful for teratoma, rhabdomyosarcoma and Ewing sarcoma. Germ cell tumors form only one minor part of this mixed pediatric solid tumor group.",
+    "summary_ja": "1978年の小児外科研究で、化学療法や放射線後に切除不能または再発した小児固形腫瘍32例に行った第二度手術を報告した。切除は81%で可能で、56%が無病生存を得た。奇形腫は複数の腫瘍種の一つとして言及されるに過ぎない。手術の有用性は主にWilms腫瘍や神経芽腫で示されている。",
+    "abstract": "\"Second-look\" operations were performed in 32 infants and children with initially unresectable or recurrent solid tumors treated with combination chemotherapy and/or irradiation. Tumors were resectable in 26 of 32 cases (81%). These procedures often yielded information affecting staging and treatment. Disease-free survival was achieved in 18 of 32 patients (56%). Mortality was related to progressive disease in seven cases and opportunistic infections due to immunosuppression in three. Four additional patients are alive with evidence of persistent tumor. Second-look procedures were beneficial in patients with Wilms' tumor previously operated upon by a flank approach and in children with bilateral tumors. These procedures were particularly useful in children with stage III localized neuroblastoma and cases of metastatic neuroblastoma that respond to chemotherapy. Second-look operations were also useful in selected cases of rhabdomyosarcoma, teratoma, and Ewing's sarcoma. These observations suggest that combination chemotherapy has increased the use of second-look operations in a variety of less favorable (e.g. initially unresectable or recurrent) pediatric solid tumors.",
+    "abstract_ja": "「第二度手術」を、化学療法および/または放射線療法で治療した、切除不能または再発の小児固形腫瘍を有する乳児・小児32例に実施した。32例中26例（81%）で腫瘍切除が可能であった。これらの手術により、病期分類や治療方針に影響する情報が得られることが多かった。32例中18例（56%）で無病生存が得られた。死亡は、進行性疾患7例、免疫抑制による日和見感染3例であった。さらに4例は残存腫瘍を伴って生存している。Wilms腫瘍で以前に側腹部アプローチで手術を受けた症例、および両側性腫瘍の小児で、第二度手術は有益であった。病期III限局性神経芽腫および化学療法に反応する転移性神経芽腫の小児で特に有用であった。横紋筋肉腫、奇形腫、Ewing肉腫の選択例でも有用であった。これらの所見は、化学療法の併用により、初回切除不能または再発などの予後不良な小児固形腫瘍の多様な症例で第二度手術の適応が広がったことを示唆する。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "ag": "mixed",
+      "tr": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy"
+      ],
+      "n": 32,
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy",
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-275532",
+    "title": "Cis-diamminedichloroplatinum (NSC-119875) in childhood malignancies: a Southwest Oncology Group study.",
+    "title_ja": "小児悪性腫瘍におけるシスプラチン(NSC-119875)：南西腫瘍学グループの研究",
+    "authors": [
+      "Nitschke R",
+      "Starling KA",
+      "Vats T",
+      "Bryan H"
+    ],
+    "journal": "Med Pediatr Oncol",
+    "year": 1978,
+    "pmid": "275532",
+    "doi": "10.1002/mpo.2950040208",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This Southwest Oncology Group study evaluated cis-diamminedichloroplatinum (PDD, cisplatin) in 78 children with resistant malignancies, including 54 with solid tumors. Two patients had testicular embryonal carcinoma, and one of them improved. The authors concluded that PDD is promising in neuroblastoma, osteogenic sarcoma and testicular embryonal carcinoma, but ineffective in acute lymphocytic leukemia. Main toxicities were vomiting and transient rises in serum creatinine and BUN, with myelosuppression in many patients receiving multiple courses.",
+    "summary_ja": "難治性小児悪性腫瘍78例(白血病24例、固形腫瘍54例)にシスプラチン(PDD)を投与したSWOGの1978年の研究。精巣胎児性癌は2例で、1例に改善が認められた。神経芽腫、骨肉腫、精巣胎児性癌で有望であり、急性リンパ性白血病には無効と結論している。主な副作用は嘔吐と一過性の腎機能指標の上昇であった。",
+    "abstract": "Children with malignancies resistant to conventional therapy were treated with cis-diamminedichloroplatinum (PDD), 15 to 20 mg/m2, given daily by rapid intravenous infusion for 5 days at 3-wk intervals. Eleven of 24 children with acute lymphocytic leukemia (ALL) received two or more courses; among these no remissions occurred. Fifty-four children with solid tumors were treated: 25 neuroblastoma, 9 rhabdomyosarcoma, 4 Ewing sarcoma, 2 testicular embryonal carcinoma, 2 retinoblastoma, and 12 miscellaneous tumors. One complete remission, 3 partial remissions, and 2 improvements were observed in children with neuroblastoma. One girl with metastatic osteogenic sarcoma achieved a partial remission. One child with metastatic testicular embryonal carcinoma showed improvement. The side effects were vomiting controlled by antiemetics in 26 children and transient elevations of serum creatinine and BUN in 14 children. Nineteen of 39 children with solid tumors, who received more than one course of PDD, had moderately severe myelosuppression caused by PDD. In summary, PDD is a promising agent in neuroblastoma, osteogenic sarcoma, and testicular embryonal carcinoma, and an ineffective agent in ALL. The effect of PDD on other types of solid tumors should be evaluated in the future.",
+    "abstract_ja": "難治性の従来治療抵抗性小児悪性腫瘍患者に、cis-ジアンミンジクロロ白金(NSC-119875、PDD)を15〜20 mg/m²で5日間連日、3週間ごとに急速静注した。急性リンパ性白血病(ALL)の24例のうち11例が2コース以上の治療を受けたが、寛解は得られなかった。固形腫瘍54例を治療した:神経芽腫25例、横紋筋肉腫9例、ユーイング肉腫4例、精巣胎児性癌2例、網膜芽腫2例、その他の腫瘍12例。神経芽腫では完全寛解1例、部分寛解3例、改善2例が認められた。転移性骨肉腫の女児1例が部分寛解に達した。転移性精巣胎児性癌の小児1例で改善が認められた。副作用として、26例で嘔吐がみられ制吐薬でコントロールされ、14例で血清クレアチニンおよびBUNの一過性上昇がみられた。固形腫瘍患者39例のうち複数コースを受けた19例で、PDDによる中等度から重度の骨髄抑制がみられた。まとめると、PDDは神経芽腫、骨肉腫、精巣胎児性癌に有望な薬剤であり、ALLには無効である。他の固形腫瘍に対する効果は今後評価されるべきである。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "ag": "child",
+      "hi": [
+        "embryonal_carcinoma"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 78,
+      "th": [
+        "chemotherapy"
+      ],
+      "ln": "salvage",
+      "ep": "response_rate"
+    }
+  },
+  {
+    "id": "pmid-357749",
+    "title": "Development of teratomas from embryos transplanted into outbred and inbred adult hamsters.",
+    "title_ja": "近交系および非近交系の成体ハムスターに移植した胚からの奇形腫の発生",
+    "authors": [
+      "Damjanov I"
+    ],
+    "journal": "J Natl Cancer Inst",
+    "year": 1978,
+    "pmid": "357749",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The authors transplanted six- to eight-and-a-half-day inbred and outbred hamster embryos, and fetal lung, testis and intestine, into adult cheek pouches or under kidney capsules. Embryonic grafts consistently formed benign teratomas regardless of embryo age, transplant site, or recipient strain. Fetal lung and testis grew little, while fetal intestine formed large mucus-filled cysts with functionally active epithelium. The study is an experimental transplantation model in animals rather than clinical research on human germ cell tumors. Its relevance to human germ cell tumor biology is indirect and therefore limited.",
+    "summary_ja": "ハムスターの胚と胎児組織を成体に移植した動物実験である。胚移植では、胚齢や移植部位、系統にかかわらず良性奇形腫が生じた。胎児の肺と精巣はほとんど増殖せず、腸では粘液で満たされた嚢胞が形成された。ヒトの胚細胞腫瘍を対象とした臨床研究ではなく、関連性は間接的である。",
+    "abstract": "Six- to 8 1/2-day inbred MHA/SsLak and outbred Syrian golden hamster embryos and 14-day fetal lungs, testes, and portions of small intestine were transplanted into cheek pouches or under kidney capsules of adult recipients. Embryonic grafts gave rise to benign teratomas, irrespective of the age of the embryo, transplantation site, and the strain or stock of recipient. Fetal lung and testis grew little in extrauterine sites, whereas fetal intestine formed large mucus-filled cysts lined with proliferating and apparently functionally active epithelium.",
+    "abstract_ja": "6日から8.5日齢の近交系MHA/SsLakおよび非近交系シリアンゴールデンハムスターの胚と、14日齢の胎児の肺、精巣、小腸の一部を、成体の頬袋または腎被膜下に移植した。胚移植片からは胚齢、移植部位、受容動物の系統にかかわらず良性奇形腫が発生した。胎児の肺と精巣は子宮外部位ではわずかしか増殖しなかったが、胎児の腸は粘液で満たされた大きな嚢胞を形成し、その内側は活発に増殖し、機能的にも活性のある上皮で覆われていた。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-361541",
+    "title": "Thymic hyperplasia and neoplasia: a review of current concepts.",
+    "title_ja": "胸腺の過形成と腫瘍：現在の概念の総説",
+    "authors": [
+      "Levine GD",
+      "Rosai J"
+    ],
+    "journal": "Hum Pathol",
+    "year": 1978,
+    "pmid": "361541",
+    "doi": "10.1016/s0046-8177(78)80131-2",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review examines hyperplasia and neoplasia of the thymus, proposing a concept of thymic compartmentalization in which germinal centers arise from the perivascular space. It distinguishes thymoma, thymic carcinoma, thymic carcinoid, lymphomas, and germ cell tumors arising in the thymus, which differ in pathology and clinical behavior. Thymic seminoma is discussed as radiosensitive, like its testicular counterpart, and identified by epithelioid granulomas and germinal centers. Germ cell tumors are one of several mediastinal entities covered. The review emphasizes that accurate separation of thymic neoplasms is essential for proper investigation and treatment.",
+    "summary_ja": "胸腺の過形成と腫瘍について総説した。胸腺の区画化の概念を提唱し、胸腺腫、胸腺癌、カルチノイド、リンパ腫とともに、胸腺に生じる胚細胞腫瘍を鑑別すべきとする。胸腺セミノーマは精巣のものと同様に放射線感受性であり、類上皮肉芽腫と胚中心が診断の手がかりになる。縦隔の腫瘍の一つとして胚細胞腫瘍を扱うが、主題は胸腺腫瘍全般である。",
+    "abstract": "Although the term thymic hyperplasia is used most commonly to indicate the occurrence of germinal centers in the thymus, cognizance must be taken of the fact that such centers may occur in apparently normal thymuses in both children and adults. A concept of thymic compartmentalization is proposed with origin of germinal centers in the perivascular space (extraparenchymal compartment) of the thymus. These germinal centers contain a high percentage of B lymphocytes in contrast to the true thymic parenchyma. Although the significance of germinal centers in the thymus parenchyma. Although the significance of germinal centers in the thymus in myasthenia gravis remains controversial, removal of nonneoplastic thymus in this condition is of proven therapeutic value. A variety of neoplasms originating in the thymus have previously been lumped together under the single term \"thymoma.\" It is apparent, however, that thymoma, thymic carcinoid, various lymphomas, and germ cell tumors that arise in the thymus differ not only pathologically but also in their clinical behavior. Thymoma is regarded as an epithelial neoplasm and ultrastucturally is characterized by many desmosomes and tonofilaments. The lymphocytes do not behave in a malignant manner, and lymphomas of the thymus should be sharply separated from true thymoma. Poorly differentiated thymic carcinoma and histiocytic lymphoma may be distinguishable only by the electron microscopic demonstration of desmosomes and filaments in the thymic carcinoma. The evidence that Hodgkin's disease of the thymus (\"granulomatous thymoma\") is not a variant of thymoma appears overwhelming. Lymphoblastic lymphoma of the thymus is a distinctive neoplasm that is especially prevalent in teenage males. High levels of terminal transferase characterize the lymphoblasts and there is a striking tendency for leukemia to occur. Thymic carcinoid is usually nonfunctional, although one-third of the reported cases are associated with Cushing's syndrome. On light microscopy a ribbon pattern and punctate necroses are characteristic of thymic carcinoids. Electron microscopic demonstration of many dense core granules is invaluable in establishing this diagnosis. An important clue to the diagnosis of thymic seminoma (a neoplasm that shows the same radiosensitivity as its testicular counterpart) is the frequent presence of epithelioid and giant cell granulomas and germinal centers. Separation of the various thymic neoplasms described not only is justifiable on pathologic grounds but is often essential for appropriate patient investigation and treatment.",
+    "abstract_ja": "胸腺過形成とは一般に胸腺内に胚中心が存在することを指す用語として最もよく使われるが、胸腺の胚中心は、正常な胸腺を持つ小児および成人にも存在しうることを認識すべきである。胸腺の区画化の概念が提案されており、胚中心は胸腺の血管周囲腔(実質外区画)に生じる。これらの胚中心はBリンパ球の割合が高く、胸腺実質とは対照的である。胸腺の胚中心が重症筋無力症にどのような意義をもつかは議論があるが、非腫瘍性の胸腺の切除は、この病態で治療効果が確立している。胸腺に生じる多様な腫瘍は、以前は「胸腺腫」という単一の用語にまとめられていた。しかし、胸腺腫、胸腺カルチノイド、各種リンパ腫、および胸腺に生じる胚細胞腫瘍は、病理学的にも臨床経過にも異なることが明らかである。胸腺腫は上皮性腫瘍とみなされ、超微形態では多数のデスモソームとトノフィラメントが特徴である。リンパ球は悪性様に振る舞わず、胸腺のリンパ腫は真の胸腺腫と明確に区別すべきである。低分化胸腺癌と組織球性リンパ腫は、胸腺癌におけるデスモソームとフィラメントの電子顕微鏡的証明によってのみ区別しうる場合がある。胸腺のホジキン病(「肉芽腫性胸腺腫」)が胸腺腫の変異型ではないという証拠は圧倒的である。胸腺のリンパ芽球性リンパ腫は、特に十代の男性に多く見られる特徴的な腫瘍である。リンパ芽球は高レベルのターミナルトランスフェラーゼを特徴とし、白血病への顕著な移行傾向がある。胸腺カルチノイドは通常非機能性であるが、報告例の3分の1はクッシング症候群を伴う。光顕では、リボン状の配列と点状壊死が胸腺カルチノイドの特徴である。電子顕微鏡で多数の濃い芯をもつ顆粒を証明することは、この診断に極めて有用である。胸腺セミノーマ(精巣の対応腫瘍と同じ放射線感受性を示す腫瘍)の診断の重要な手がかりは、類上皮性および巨細胞性肉芽腫と胚中心の頻繁な存在である。記載した各種の胸腺腫瘍を分類することは、病理学的根拠からだけでなく、適切な患者評価と治療のために不可欠であることが多い。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "th": [
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-571042",
+    "title": "Plenary lecture: lymphocytic infiltration in relationship to urologic tumors.",
+    "title_ja": "泌尿器腫瘍におけるリンパ球浸潤：特別講演",
+    "authors": [
+      "Mostofi FK",
+      "Sesterhenn I"
+    ],
+    "journal": "Natl Cancer Inst Monogr",
+    "year": 1978,
+    "pmid": "571042",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "その他"
+    ],
+    "summary_en": "This plenary lecture reviews lymphocytic and plasmacytic infiltration in urologic tumors, including bladder, kidney, and prostate tumors. Seminoma is identified as the only urologic tumor in which such infiltration is known to improve prognosis. Data for other tumors do not yet support prognostic conclusions. The author stresses that infiltrates closely associated with tumor cells must be distinguished from distant inflammation or preexisting inflammatory conditions, and that claims require adequate controls.",
+    "summary_ja": "泌尿器腫瘍におけるリンパ球・形質細胞浸潤と予後の関係をまとめた特別講演です。セミノーマは、この浸潤が予後を改善することが知られている唯一の泌尿器腫瘍とされています。膀胱、腎、前立腺腫瘍については、予後に関する結論を導くには情報が不十分です。腫瘍細胞に密接に接する浸潤と、離れた部位の炎症や既存の炎症性疾患を区別する必要性を強調しています。",
+    "abstract": "In summary, it may be said that, to date, among urologic tumors, seminoma is the only one in which lymphocytic and/or plasmacytic infiltration is known to improve the prognosis, and the available information on tumors of bladder, kidney, and prostate do not yet permit any statement relative to prognostic significance of inflammatory cell infiltration. When studying the relationship of lymphocytic and/or plasmacytic infiltration to tumors, it is essential for one to distinguish between cases in which the infiltration is in intimate relationship to the tumor cells and/or where the tumor cells show definite degenerative changes, e.g., seminoma, from those cases in which the inflammation is present at some distance from the tumor, e.g., chronic prostatis, and from those in which the inflammation is preexisting, e.g., schistosomiasis. Claims made about the prognostic significance of such infiltration should have adequate controls.",
+    "abstract_ja": "要約すると、泌尿器腫瘍のうち、リンパ球及び/または形質細胞の浸潤が予後を改善することが知られているのは、現時点ではセミノーマのみである。膀胱、腎、前立腺の腫瘍については、炎症細胞浸潤の予後的意義に関する記述は、現時点では可能ではない。リンパ球及び/または形質細胞の浸潤と腫瘍との関係を検討する際には、浸潤が腫瘍細胞と密接に関係している場合（セミノーマなど）や、腫瘍細胞に明確な変性変化がみられる場合を、腫瘍から離れた部位の炎症（慢性前立腺炎など）や既存の炎症（住血吸虫症など）と区別することが不可欠である。炎症性細胞浸潤の予後的意義に関する主張は、十分な対照群を伴うべきである。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "th": [
+        "prognosis",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-633938",
+    "title": "75Se-selenomethionine scintigraphy in mediastinal diseases.",
+    "title_ja": "縦隔疾患における75Se-セレノメチオニンシンチグラフィー",
+    "authors": [
+      "Masaoka A",
+      "Kyo S"
+    ],
+    "journal": "J Thorac Cardiovasc Surg",
+    "year": 1978,
+    "pmid": "633938",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This study evaluated 75Se-selenomethionine chest scintigraphy in 59 patients with mediastinal diseases. Vascular lesions, cystic tumours and benign neurogenic tumours were all negative. Parenchymatous teratoma, thymoma, malignant lymphoma, Castleman disease, epithelial tumours, tuberculous lymphadenitis and sarcoidosis showed high positive rates. Scans of resected specimens agreed with preoperative chest scans. Teratoma is one of several entities studied rather than a central focus.",
+    "summary_ja": "縦隔疾患59例に対し75Se-セレノメチオニンによる胸部シンチグラフィーを行った研究である。血管性疾患、嚢胞性腫瘍、良性神経原性腫瘍は陰性で、実質性奇形腫、胸腺腫、悪性リンパ腫などでは陽性率が高かった。切除標本と術前スキャンの所見は一致した。奇形腫は多数の対象疾患の一つである。",
+    "abstract": "Chest scanning with 75Se-selenomethionine was performed in 59 cases of mediastinal diseases. All cases of vascular diseases, cystic tumors, and benign neurogenic tumor were negatively scanned. Parenchymatous teratoma, thymoma, malignant lymphoma, Castleman's tumor, epithelial tumors, tuberculous lymphadenitis, and sarcoidosis showed high positive rates. In myasthenic thymus without thymoma two out of 15 cases were positive. The scan images of the resected specimens and preoperative chest scannings coincided.",
+    "abstract_ja": "縦隔疾患59例に対し75Se-セレノメチオニンによる胸部スキャンを施行した。血管性疾患、嚢胞性腫瘍、良性神経原性腫瘍の全例は陰性であった。実質性奇形腫、胸腺腫、悪性リンパ腫、キャッスルマン病、上皮性腫瘍、結核性リンパ節炎、サルコイドーシスでは陽性率が高かった。胸腺腫を伴わない重症筋無力症の胸腺では15例中2例が陽性であった。切除標本のスキャン画像と術前の胸部スキャンの所見は一致した。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "mediastinum",
+      "hi": [
+        "gct_nos"
+      ],
+      "n": 59,
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "diagnostic_accuracy"
+    }
+  },
+  {
+    "id": "pmid-647900",
+    "title": "The production of creatine kinase isozyme BB in sera of a patient with prostatic carcinoma and in tumor homogenates.",
+    "title_ja": "前立腺がん患者およびその腫瘍組織におけるクレアチンキナーゼBBアイソザイムの産生",
+    "authors": [
+      "Hoag G",
+      "Amies DR",
+      "Colquhoun BD"
+    ],
+    "journal": "Clin Biochem",
+    "year": 1978,
+    "pmid": "647900",
+    "doi": "10.1016/s0009-9120(78)90641-0",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1978 biochemistry study examined creatine kinase BB isozyme in a prostate carcinoma patient's serum and tumor tissue. It also compared an embryonal testicular carcinoma with adjacent normal testis in a third patient, finding more BB isozyme in the tumor, which the authors interpreted as a shift toward an embryonic pattern. Germ cell tumor is only a secondary part of the paper, so relevance is uncertain.",
+    "summary_ja": "1978年の生化学研究で、前立腺がん患者の血清と腫瘍組織のCK-BBアイソザイムを解析した。別の患者の胎児性癌を含む精巣腫瘍では、隣接する正常精巣組織より腫瘍部のBB分画が高かった。胚細胞腫瘍は論文の一部にとどまるため、関連性は不確かである。",
+    "abstract": "1. A CK(BB) fraction was observed in sera of a patient with prostatic carcinoma. The fraction accounted for 59% of the total enzyme activity. A metastatic tumor of a prostatic carcinoma was observed to contain solely the CK(BB) isozyme. An embryonal testicular carcinoma was observed to have a higher percentage of the CK(BB) fraction when compared to the adjacent tumor free testicular tissue in a third patient. These studies suggested that in certain carcinomas there are tissue isozyme modifications at the molecular level. The isozymic modification was suggested as a reversion towards an embroyonic pattern as the adult molecular form tended to disappear while the fetal form increased. This too suggests that the isozymes of CK may be a useful model in elucidating the mechanism through which this transition occurs. 2. The high percentage of CK(BB) in the sera of the patient with metastasis was discussed. The origin could not be determined, but either a primary tumor or a metastatic tumor by their enzyme modifications could account for this increased fraction in sera.",
+    "abstract_ja": "1. 前立腺がん患者の血清にCK（BB）分画が認められた。この分画は全酵素活性の59%を占めた。転移性前立腺がんの腫瘍組織はCK（BB）アイソザイムのみを含んでいた。別の患者では、胎児性精巣がんの腫瘍部が隣接する腫瘍のない精巣組織よりもCK（BB）分画の割合が高かった。これらの研究は、ある種の癌では組織アイソザイムが分子レベルで修飾されることを示唆する。成人型の分子形は減少し、胎児型が増加することから、この修飾は胎児型パターンへの復帰と解釈された。2. 転移を有する患者の血清中CK（BB）分画の高値について考察した。その起源は特定できなかったが、原発腫瘍または転移腫瘍のいずれかの酵素修飾が、血清中の分画増加を説明しうる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-650759",
+    "title": "Dysgenetic male pseudohermaphroditism.",
+    "title_ja": "発生異常性男性仮性半陰陽",
+    "authors": [
+      "Rajfer J",
+      "Mendelsohn G",
+      "Arnheim J",
+      "Jeffs RD",
+      "Walsh PC"
+    ],
+    "journal": "J Urol",
+    "year": 1978,
+    "pmid": "650759",
+    "doi": "10.1016/s0022-5347(17)57536-9",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1978 Journal of Urology report describes ten patients with dysgenetic male pseudohermaphroditism treated at one hospital between 1956 and 1976. Features included dysgenetic testes, persistent müllerian structures, cryptorchidism and inadequate virilization. Testicular tumors occurred in 30% of the series, highlighting the high germ cell tumor risk in this disorder. The authors argue that the syndrome should be distinguished from other forms of male pseudohermaphroditism, as it represents a variant of mixed gonadal dysgenesis.",
+    "summary_ja": "1956～1976年に当院で診療した発生異常性男性仮性半陰陽の10例を報告した1978年の論文。精巣腫瘍が30%にみられ、本症候群における高い腫瘍リスクを示した。混合性性腺異形成症の一型として、他の男性仮性半陰陽と区別すべきだと著者らは主張している。",
+    "abstract": "Dysgenetic male pseudohermaphroditism is a disorder of sexual differentiation in which patients present with bilateral dysgenetic testes, persistent müllerian structures, cryptorchidism and inadequate virilization. There were 10 patients with this syndrome seen at our hospital between 1956 and 1976. In this series, there was a 30 per cent incidence of testicular tumors. Because patients with dysgenetic male pseudohermaphroditism have a high incidence of testicular tumors this disorder, which is actually a variant of mixed gonadal dysgenesis, must be distinguished from the other forms of male pseudohermaphroditism.",
+    "abstract_ja": "発生異常性男性仮性半陰陽は、両側の発生異常精巣、遺残するミュラー管構造、停留精巣および不十分な男性化を特徴とする性分化の障害である。1956年から1976年の間に当院で診療した本症候群の患者は10例であった。本シリーズでは精巣腫瘍の発生率が30%であった。発生異常性男性仮性半陰陽の患者は精巣腫瘍の発生率が高いため、本疾患は実際には混合性性腺異形成症の一変異型であり、他の型の男性仮性半陰陽と区別されなければならない。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "n": 10,
+      "th": [
+        "epidemiology"
+      ]
+    }
+  },
+  {
+    "id": "pmid-666155",
+    "title": "Growth rate patterns of solid tumors and their relation to responsiveness to therapy: an analytical review.",
+    "title_ja": "固形腫瘍の増殖速度パターンと治療反応性との関係：解析的総説",
+    "authors": [
+      "Shackney SE",
+      "McCormack GW",
+      "Cuchural GJ Jr"
+    ],
+    "journal": "Ann Intern Med",
+    "year": 1978,
+    "pmid": "666155",
+    "doi": "10.7326/0003-4819-89-1-107",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This analytical review examines clinical doubling times of human solid tumors and methods for estimating subclinical doubling times. These methods are applied to Wilms' tumor, choriocarcinoma, Burkitt's tumor, and breast cancer. The authors propose a strategy based on cell kinetics and tumor doubling times to guide therapy, distinguishing early from late recurrences. Rapidly growing tumors often respond well to treatment, whereas slowly growing ones respond less favorably and less durably.",
+    "summary_ja": "ヒト固形腫瘍の臨床的な倍加時間と、サブクリニカルな倍加時間の推定法を総説している。Wilms腫瘍、絨毛癌、Burkitt腫瘍、乳癌に応用し、細胞動態に基づく治療戦略を提案する。増殖の速い腫瘍は治療反応が良好である一方、増殖の遅い腫瘍は反応が不良で持続しにくいとしている。",
+    "abstract": "The clinical doubling times of human solid tumors are reviewed. Methods are also described for estimating subclinical tumor doubling times, and these methods are applied to Wilms' tumor, choriocarcinoma, Burkitt's tumor, and breast cancer. Rapidly growing tumors are often responsive to therapy, and such complete responses are often quite durable. Slowly growing tumors respond less favorably to therapy, and responses are generally not durable. Rapidly growing tumors in advanced stages are similar in their response behavior to the slowly growing tumors. A strategy based on cell kinetics principles and tumor doubling time data is proposed for improving therapeutic results in responsive tumors. Data on clinical and subclinical tumor doubling times are used to distinguish early recurrences from late recurrences in a given tumor type. Early recurrences call for intensification of induction therapy, whereas late recurrences call for prolongation of consolidative therapy. This strategy may also apply in adjuvant therapy of slowly growing tumors.",
+    "abstract_ja": "ヒト固形腫瘍の臨床的な倍加時間をレビューした。また、サブクリニカルな腫瘍倍加時間を推定する方法も記述し、これらの方法をWilms腫瘍、絨毛癌、Burkitt腫瘍、乳癌に適用した。増殖の速い腫瘍は治療に反応することが多く、そのような完全奏効はしばしば持続する。増殖の遅い腫瘍は治療反応が乏しく、一般に奏効は持続しない。進行期の増殖の速い腫瘍は、治療反応の挙動において増殖の遅い腫瘍と類似している。細胞動態学の原理と腫瘍倍加時間のデータに基づく戦略を、治療反応性のある腫瘍の治療成績向上のために提案する。臨床的およびサブクリニカルな腫瘍倍加時間のデータは、ある腫瘍型における早期再発と晩期再発の鑑別に用いられる。早期再発には導入療法の強化が、晩期再発には地固め療法の延長が必要とされる。この戦略は、増殖の遅い腫瘍の補助療法にも応用できる可能性がある。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "th": [
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-705873",
+    "title": "Immunological enhancement of hybrid teratomas derived from yolk sac.",
+    "title_ja": "卵黄嚢由来のハイブリッド奇形腫の免疫学的増強",
+    "authors": [
+      "Sobis H",
+      "Park B",
+      "Vandeputte M"
+    ],
+    "journal": "Transplantation",
+    "year": 1978,
+    "pmid": "705873",
+    "doi": "10.1097/00007890-197809000-00010",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1978 experimental study examined teratoma formation from visceral yolk sac tissue displaced outside the uterus after fetectomy. Benign teratomas containing derivatives of all three germ layers developed in syngeneic pregnancy but not in hybrid pregnancy. Hybrid teratomas were obtained only after inducing active or passive immunological enhancement; they were smaller than syngeneic tumors but still contained tissues from all three germ layers. The findings show how immune factors influence teratoma development in an experimental model.",
+    "summary_ja": "1978年の動物実験で、胎仔摘出後に子宮外へ移植された卵黄嚢組織からの奇形腫形成を検討した。同系妊娠では良性奇形腫が生じ、異系妊娠では生じなかった。免疫増強を誘導すると雑種奇形腫が得られ、三胚葉由来の組織を含んでいた。免疫因子が実験的奇形腫の発生に影響することを示した研究である。",
+    "abstract": "Visceral yolk sac displaced outside the uterus after fetectomy differentiates into benign teratomas. This differentiation only occurs in a syngeneic pregnancy but never in hybrid pregnancy. Hybrid teratomas, however, were obtained after the induction of active or passive immunological enhancement. These hybrid teratomas, although smaller than the syngeneic, contained tissues derived from the three germ layers.",
+    "abstract_ja": "卵黄嚢は胎仔摘出後に子宮外へ移行すると、良性奇形腫へ分化する。この分化は同系妊娠でのみ生じ、異系妊娠では決して生じない。しかし、能動的または受動的な免疫増強を誘導した後には雑種奇形腫が得られた。これらの雑種奇形腫は同系のものより小さいが、三胚葉由来の組織を含んでいた。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-714591",
+    "title": "Congenital rectal stenosis: a sign of a presacral pathologic condition.",
+    "title_ja": "先天性直腸狭窄：仙骨前病変の徴候",
+    "authors": [
+      "Malangoni MA",
+      "Grosfeld JL",
+      "Ballantine TV",
+      "Kleiman M"
+    ],
+    "journal": "Pediatrics",
+    "year": 1978,
+    "pmid": "714591",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This paper argues that congenital rectal stenosis can signal a presacral pathologic condition. When dilatation fails, clinicians should consider presacral teratoma, anterior sacral meningocele, or bony anomalies. Prompt recognition and operative treatment of the presacral lesion relieve obstruction and reduce morbidity. Presacral teratoma is one of several possible causes discussed, so germ cell tumor content is limited to this differential.",
+    "summary_ja": "先天性直腸狭窄が仙骨前の病的状態のサインになりうることを論じている。拡張術が無効な場合は、仙骨前奇形腫、前仙骨髄膜瘤、骨奇形を考慮すべきとする。仙骨前病変の速やかな診断と手術により閉塞症状を解消できる。奇形腫は複数の原因の一つとして扱われる。",
+    "abstract": "Congenital rectal stenosis may be detected in the newborn during the initial physical examination. Failure of conservative therapy (dilatation) should alert the physician to the presence of an associated pathologic condition in the presacral space. Presacral teratoma, anterior sacral meningocele, or bony anomalies may be the underlying extrinsic causes of congenital rectal stenosis. Prompt recognition and appropriate operative management directed at the presacral lesion will relieve obstructive symptoms and minimize morbidity.",
+    "abstract_ja": "先天性直腸狭窄は新生児の初回身体診察で検出されることがある。保存的治療（拡張術）が無効の場合には、仙骨前腔の関連する病理学的状態の存在を疑うべきである。仙骨前奇形腫、前仙骨髄膜瘤、または骨奇形は、先天性直腸狭窄の外的原因として基礎にあることがある。病変に対して適切な手術的治療を速やかに認識・実施すれば、閉塞症状は解消し、罹患率を最小化できる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "retroperitoneum",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "th": [
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-82538",
+    "title": "Developmental changes in carbohydrate moiety of human alpha-fetoprotein.",
+    "title_ja": "ヒトαフェトプロテインの糖鎖成分の発生に伴う変化",
+    "authors": [
+      "Ruoslahti E",
+      "Engvall E",
+      "Pekkala A",
+      "Seppälä M"
+    ],
+    "journal": "Int J Cancer",
+    "year": 1978,
+    "pmid": "82538",
+    "doi": "10.1002/ijc.2910220502",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1978 Int J Cancer study characterized developmental variants of human alpha-fetoprotein (AFP) using concanavalin A chromatography. Three variants were separated that could not be distinguished by immunodiffusion or radioimmunoassay. Yolk sac tumor sera and early-pregnancy amniotic fluid contained a high proportion (15-45%) of Con A-nonbinding AFP, versus 2-6% in fetal, newborn, and late-pregnancy samples. The authors suggest yolk sac and liver AFP are glycosylated differently and that this variant may be diagnostically useful.",
+    "summary_ja": "ヒトAFPの糖鎖の発生に伴う変化を、コンカナバリンAを用いたクロマトグラフィーで検討した基礎研究である。卵黄嚢腫瘍患者の血清では、Con Aに結合しないAFPが15～45%を占めた。卵黄嚢と肝臓で産生されるAFPの糖鎖付加は異なると示唆され、この変異体は診断に有用な可能性があるとしている。",
+    "abstract": "Human AFP purified from fetal serum and amniotic fluid was separated into three different variants by chromatography on concanavalin A insolubilized on Sepharose (Con A--Sepharose). The three variants were indistinguishable in immunodiffusion and radioimmunoassay. Sera from patients with yolk-sac tumor and amniotic fluid from early pregnancy were found to contain a high proportion (15-45%) of AFP which does not bind to Con A, while AFP in fetal and newborn sera, and in amniotic fluid from late pregnancy, contained less (2-6%) of this variant. The use of a large excess of Con A--Sepharose and the fact that the non-bound AFP consistently eluted as non-bound in rechromatography showed that this AFP is non-reactive with Con A. Fractionation of radiolabelled AFP from cord serum in a mixture with amniotic fluid verified the difference in the amount of the Con-A nonreactive variant in AFP from these two sources. These results suggest that AFP synthesized by the yolk-sac tissue and by the liver are glycosylated differently. The variant may prove to be diagnostically useful.",
+    "abstract_ja": "ヒト胎児血清および羊水から精製したヒトAFPを、コンカナバリンA固定化セファロース(Con A-セファロース)によるクロマトグラフィーで3つの異なる変異体に分離した。3つの変異体は免疫拡散法および放射免疫測定法では区別できなかった。卵黄嚢腫瘍患者の血清および妊娠初期の羊水は、Con Aに結合しないAFPを高い割合(15～45%)で含んでいたが、胎児および新生児血清、ならびに妊娠後期の羊水中のAFPは、この変異体をわずか(2～6%)しか含んでいなかった。大過剰のCon A-セファロースを用いたこと、および非結合AFPが再クロマトグラフィーでも一貫して非結合として溶出されたことから、このAFPはCon Aと反応しないことが示された。臍帯血清由来の放射標識AFPを羊水と混合して分画することで、これら2つの供給源のAFPにおけるCon A非反応性変異体量の差が確認された。これらの結果は、卵黄嚢組織と肝臓で合成されるAFPの糖鎖付加が異なることを示唆する。この変異体は診断に有用である可能性がある。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-401875",
+    "title": "Brain-tumor chemotherapy. Pharmacological principles derived from a monkey brain-tumor model.",
+    "title_ja": "脳腫瘍化学療法 薬理学的原則:サル脳腫瘍モデルに基づく知見",
+    "authors": [
+      "Ausman JI",
+      "Levin VA",
+      "Brown WE",
+      "Rall DP",
+      "Fenstermacher JD"
+    ],
+    "journal": "J Neurosurg",
+    "year": 1977,
+    "pmid": "401875",
+    "doi": "10.3171/jns.1977.46.2.0155",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This 1977 study used a choriocarcinoma implanted in monkey brains as a model to examine the cerebral distribution of inulin and albumin. Tissue samples from the tumor, adjacent brain, and distant brain showed an extravascular inulin space of 24% in the tumor versus 0.6% in distant brain. The authors attribute this to increased capillary permeability and extracellular space, with inulin concentration declining gradually from the tumor edge outward. They discuss why drugs fail to inhibit this tumor in light of these distribution findings.",
+    "summary_ja": "サルの脳に移植した絨毛癌をモデルとし、イヌリンとアルブミンの脳内分布を検討した研究です。腫瘍内の血管外イヌリン腔は24%で、遠位脳の0.6%より有意に大きい結果でした。毛細血管透過性と細胞外腔の増加が原因と考えられ、薬剤が腫瘍に効きにくい理由を論じています。脳腫瘍化学療法の薬理学的原則を示す報告です。",
+    "abstract": "An implnated choriocarcinoma growing inthe brains of monkeys was used as a brain-tumor model for the study of the cerebral distribution of two commonly used physiological markers, inulin and albumin; tissue samples were obtained from the tumor, adjacent brain, and distant brain. An extravascular inulin space was calculated by subtracting the albumin (plasma) space from the total inulin spaces. The extravascular inulin space in the tumor was found to be 24%, a value significantly larger than that in distant brain (0.6%). The large inulin space of the tumor was probably the result of increases on both capillary permeability and the extracellular space within this area. Determination of the inulin space in 1 to 2-mm thick samples of tissue taken serially from the tumor center to the distant brain indicated a gradual decline in inulin concentration from the tumor's edge to distant brain. This distribution pattern could be the result of either a continuous decrease, running from the tumor to distant brain, in capillary permeability to inulin, or a diffusional flow of inulin from the tumor into the adjacent tissue. The failure of drugs to inhibit such a tumor in view of these observations is discussed.",
+    "abstract_ja": "本研究では、サルの脳に移植して増殖させた絨毛癌を脳腫瘍モデルとして用い、生理学的マーカーであるイヌリンとアルブミンの脳内分布を検討した。腫瘍、隣接脳、遠位脳から組織標本を採取した。血管外イヌリン腔は、イヌリンの総腔からアルブミン(血漿)腔を差し引いて算出した。腫瘍内の血管外イヌリン腔は24%であり、遠位脳の0.6%と比べて有意に大きかった。この大きなイヌリン腔は、毛細血管透過性の増加と細胞外腔の拡大の両方によると考えられた。腫瘍の中心から遠位脳まで1～2mm厚の組織を連続して採取しイヌリン腔を測定したところ、腫瘍辺縁から遠位脳に向かってイヌリン濃度が徐々に低下した。この分布パターンは、腫瘍から遠位脳にかけてのイヌリンに対する毛細血管透過性の連続的な低下、あるいは腫瘍から隣接組織への拡散流によると考えられる。これらの所見に照らして、この腫瘍が薬剤で抑制されない理由について考察した。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-406985",
+    "title": "Ovarian cancer: use of multiple modality programs involving surgery, radiation therapy and chemotherapy.",
+    "title_ja": "手術、放射線療法および化学療法を組み合わせた卵巣癌の多様式治療",
+    "authors": [
+      "Lewis GC Jr",
+      "Blessing J"
+    ],
+    "journal": "Cancer",
+    "year": 1977,
+    "pmid": "406985",
+    "doi": "10.1002/1097-0142(197707)40:1+<588::aid-cncr2820400725>3.0.co;2-8",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This Gynecologic Oncology Group report reviews multimodality trials for ovarian cancer involving surgery, radiation, and chemotherapy. Adjuvant therapy showed no advantage for early disease, and single-agent melphalan was as effective as combined regimens and less toxic. Among rare tumors, preliminary results suggested a triple-drug program may benefit malignant teratoma. The authors note that inconsistent pathology and limitations in early group development hindered firm conclusions.",
+    "summary_ja": "婦人科腫瘍学研究グループによる卵巣癌の多様式治療の報告です。早期例では補助療法の利点はみられず、メルファランの単剤療法は併用療法と同等の効果で毒性が低いとされました。稀少腫瘍では悪性奇形腫に対する三剤併用療法の有益性が示唆されています。",
+    "abstract": "Appreciating the past reports of effectiveness for various therapeutic modalities in ovarian cancer, the Gynecologic Oncology Group activated eight protocols. Three involved epithelial lesions with randomized multimodality trials alone or in combination. The other protocols were devoted to registration of rare tumor case reports. Conclusions are still difficult to reach due to inconsistencies in pathologic diagnoses and deficiencies in radiation therapy, chemotherapy and surgery inherent in the initial phases of group development by diverse specialist in oncology. Adjuvant therapy for early cancer seems to have no advantage. Single drug, melphalan therapy may be as effective as multi-drug, irradiation or combined drug-irradiation therapy and less toxic. For the rare tumors, preliminary results suggest therapeutic advantage for at least one triple drug program in malignant teratoma. With the lessons of the past, it is anticipated that new studies briefly described herewith may be more effectively applied.",
+    "abstract_ja": "卵巣癌に対する様々な治療法の有効性については、過去の報告を踏まえ、婦人科腫瘍学研究グループは8つのプロトコルを開始した。そのうち3つは上皮性病変を対象とし、単独または併用による多様式ランダム化試験を行った。他のプロトコルは稀少腫瘍の症例報告の登録に充てられた。病理診断の不一致や、多様な専門分野の腫瘍学者からなるグループの初期段階における放射線療法、化学療法および手術の不備により、結論に至ることは依然として困難である。早期癌に対する補助療法には利点がないように思われる。単剤のメルファラン療法は、多剤併用療法、照射療法または薬剤と放射線の併用療法と同等に有効で、毒性も低い可能性がある。稀少腫瘍については、少なくとも一つの三剤併用療法が悪性奇形腫に治療上の利点をもたらすことを、予備的な結果が示唆している。過去の教訓を踏まえ、ここに簡潔に記載した新たな研究がより効果的に応用されることが期待される。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "tr": [
+        "surgery",
+        "radiotherapy",
+        "chemotherapy"
+      ],
+      "th": [
+        "surgery",
+        "radiotherapy",
+        "chemotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-576768",
+    "title": "Human testosterone-oestradiol binding globulin in health and disease.",
+    "title_ja": "健常者および疾患におけるヒト・テストステロン・エストラジオール結合グロブリン",
+    "authors": [
+      "Wenn RV",
+      "Kamberi IA",
+      "Vossough P",
+      "Kariminejad MH",
+      "Torabee E",
+      "Ayoughi",
+      "Keyvanjah M",
+      "Sarberi N"
+    ],
+    "journal": "Acta Endocrinol (Copenh)",
+    "year": 1977,
+    "pmid": "576768",
+    "doi": "10.1530/acta.0.0840850",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1977 study measured testosterone-oestradiol binding globulin (TeBG) by a precipitation assay in children, adults, pregnant women, hirsute women, and women with trophoblastic disorders. TeBG was elevated in pregnancy, in hydatidiform mole, and in choriocarcinoma (but not metastatic choriocarcinoma), and depressed in hirsutism. The authors suggest TeBG may complement hCG measurement in following the prognosis of trophoblastic disorders.",
+    "summary_ja": "1977年の研究で、小児、成人、妊婦、多毛症の女性、絨毛性疾患の女性においてTeBGを測定した。妊娠、胞状奇胎、絨毛癌（転移性絨毛癌を除く）でTeBGは上昇し、多毛症では低下した。著者らは、絨毛性疾患のフォローアップにおいて、hCG測定を補う指標となり得ると述べている。",
+    "abstract": "Levels of testosterone-oestradiol binding globulin (TeBG) were measured by a precipitation technique in terms of dihydrotestosterone-5alpha (DHT) binding capacity in children, adult males and females, pregnant and hirsute women and women with various trophoblastic disorders. It was found that TeBG levels in children of either sex (1.92 +/- 0.16 mug DHT bound/100 ml serum) approached the normal female range (2.31 +/- 0.11) and were distinctly higher than those of the adult male (1.04 +/- 0.09). In both pregnancy and trophoblastic disease (hydatidiform mole and choriocarcinoma but not metastatic choriocarcinoma) TeBG levels were elevated (17.5 +/- 0.70 and 14.9 +/- 1.49, respectively). In hirsutism TeBG was depressed (1.17 +/- 0.09) and comparable with the levels in normal male subjects. A number of other parameters, HCG, oestradiol-17 beta, testosterone and progesterone were measured and found to be similar to those previously reported in the literature. It appears that TeBG titre might provide an additional index in following the prognosis of trophoblastic disorders, besides HCG measurement.",
+    "abstract_ja": "小児、成人男性・女性、妊娠女性、多毛症女性、および各種の絨毛性疾患を有する女性において、ジヒドロテストステロン-5α（DHT）結合能の観点から、沈殿法によりテストステロン-エストラジオール結合グロブリン（TeBG）のレベルを測定した。小児の男女のTeBGレベル（1.92 ± 0.16 μg DHT結合/100 ml血清）は正常女性の範囲（2.31 ± 0.11）に近く、成人男性（1.04 ± 0.09）よりも明らかに高かった。妊娠および絨毛性疾患（胞状奇胎および絨毛癌。ただし転移性絨毛癌を除く）では、TeBGレベルはそれぞれ17.5 ± 0.70および14.9 ± 1.49と上昇していた。多毛症ではTeBGが低下しており（1.17 ± 0.09）、正常男性の水準と同程度であった。HCG、エストラジオール-17β、テストステロン、プロゲステロンも測定したが、文献で報告されているものと類似していた。TeBG値は、HCG測定に加えて、絨毛性疾患のフォローアップにおける予後指標となり得ると考えられる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "sx": "mixed",
+      "ag": "mixed",
+      "hi": [
+        "gestational_choriocarcinoma"
+      ],
+      "th": [
+        "prognosis"
+      ],
+      "st": "cross_sectional"
+    }
+  },
+  {
+    "id": "pmid-830321",
+    "title": "Scrotal thermography.",
+    "title_ja": "陰嚢サーモグラフィー",
+    "authors": [
+      "Gold RH",
+      "Ehrlich RM",
+      "Samuels B",
+      "Dowdy A",
+      "Young RT"
+    ],
+    "journal": "Radiology",
+    "year": 1977,
+    "pmid": "830321",
+    "doi": "10.1148/122.1.129",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This study evaluated scrotal infrared thermography in patients with intrascrotal tumor, inflammation, or varicocele. An ipsilateral temperature difference of at least 2.8 degrees C was seen in 15 of 18 patients with disease, but thermography could not distinguish these conditions from one another. Among four patients with heat asymmetry but no physical findings, one had metastasizing seminoma, along with two with feminizing interstitial cell tumors and one with varicocele. The findings suggest thermography may detect occult intrascrotal disease.",
+    "summary_ja": "陰嚢内の腫瘍、炎症、精索静脈瘤を持つ患者で陰嚢の赤外線サーモグラフィーを評価した。18例中15例で患側と健側に2.8℃以上の温度差がみられたが、3疾患は画像上区別できなかった。身体所見がないのに熱の上昇を示した4例のうち1例は転移性セミノーマであった。触知されない陰嚢病変の検出に有用かもしれないと示唆している。",
+    "abstract": "An easily detectable, ipsilateral increase in scrotal infrared emission leading to a difference of at least 2.8 degrees C (5 degrees F) between abnormal and normal sides was recorded in 15 of 18 patients subsequently found to have an intrascrotal tumor, inflammation, or varicocele. It was impossible to distinguish between these disorders on the basis of thermographic findings. In four patients a significant increase in heat was found in the absence of positive physical findings. One had metastasizing seminoma, two had feminizing interstitial cell tumors, and one had varicocele that resulted in depressed spermatogenesis. Hycroceles tended to produce infrared emission equivalent to or less than that of the contralateral normal side.",
+    "abstract_ja": "陰嚢内腫瘍、炎症、または精索静脈瘤と後に判明した18例のうち15例で、同側の赤外線放射の増加が認められ、患側と健側の差は少なくとも2.8℃(5°F)となった。これらの疾患をサーモグラフィーの所見から区別することはできなかった。身体所見が陽性でないのに有意な熱の上昇を認めた4例のうち、1例は転移性セミノーマ、2例は女性化を伴う間質細胞腫瘍、1例は精子形成低下をきたした精索静脈瘤であった。水瘤の場合、赤外線放射の増加は健側と同等かそれ以下であった。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "sx": "male",
+      "n": 18,
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "diagnostic_accuracy"
+    }
+  },
+  {
+    "id": "pmid-851160",
+    "title": "The incidence and significance of polynuclear follicles.",
+    "title_ja": "多核濾胞の発生頻度とその意義",
+    "authors": [
+      "Sherrer C",
+      "Gerson B",
+      "Woodruff JD"
+    ],
+    "journal": "Am J Obstet Gynecol",
+    "year": 1977,
+    "pmid": "851160",
+    "doi": "10.1016/0002-9378(77)90289-7",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1977 study examined ovarian tissue surgically removed from 165 patients across four age groups, quantifying the incidence of polynuclear follicles under the microscope. The authors discuss whether these structures may have significance in the histogenesis of ovarian teratoma. Germ cell tumor is addressed only as a point of interpretation rather than the main focus, so the paper's direct relevance is limited, though it offers early histologic observations bearing on teratoma origin.",
+    "summary_ja": "1977年の研究で、165例の卵巣組織を年齢群別に検討し、多核濾胞の頻度を顕微鏡的に評価しています。著者らは、この構造が卵巣奇形腫の組織発生に関係する可能性を論じています。主題は多核濾胞の頻度であり、胚細胞腫瘍は考察の一部にとどまります。",
+    "abstract": "In the treatment of pelvic disorders, ovarian tissue was surgically removed from 165 patients (divided into four age groups) and examined microscopically. This article presents the incidence of polynuclear follicles and discusses potential signficance of these structures in the histogenesis of the ovarian teratoma.",
+    "abstract_ja": "婦人科疾患の治療において、165例の患者から卵巣組織を外科的に摘出し、4つの年齢群に分けて顕微鏡的に検討した。本論文では多核濾胞の発生頻度を示し、卵巣奇形腫の組織発生におけるこれらの構造の意義の可能性について論じる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "mixed",
+      "tr": [
+        "surgery"
+      ],
+      "n": 165,
+      "th": [
+        "pathology_molecular",
+        "epidemiology"
+      ],
+      "st": "cross_sectional"
+    }
+  },
+  {
+    "id": "pmid-856314",
+    "title": "Cutaneous response to dinitrochlorobenzene in patients with genito-urinary cancers.",
+    "title_ja": "尿路生殖器がん患者におけるジニトロクロロベンゼン皮膚反応",
+    "authors": [
+      "Duclos H",
+      "Schwarzenberg L",
+      "Duclos SH",
+      "Hugues H",
+      "Kuss R"
+    ],
+    "journal": "Biomedicine",
+    "year": 1977,
+    "pmid": "856314",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This 1977 study measured delayed skin responses to dinitrochlorobenzene (DNCB) in 69 patients with genitourinary cancers and 13 controls. Testicular cancer patients showed a positive reaction in 60% overall, and the authors report that all seminomas responded while no dysembryomas did, with reactivity falling as disease extent increased. The main focus is cross-cancer immune reactivity, with testicular tumors forming one subgroup. The paper therefore offers germ cell tumor-specific findings within a broader urogenital cancer study.",
+    "summary_ja": "1977年の研究で、尿路生殖器がん69例と対照13例にDNCBへの皮膚反応を検査しました。精巣がん患者の60%が陽性で、セミノーマでは全例陽性、非セミノーマ性胚細胞腫瘍では陰性でした。進行度が高いほど反応は低下しています。主題は多種のがんに共通する免疫反応で、精巣腫瘍は一部の対象です。",
+    "abstract": "The aim of the present study is to analyse the response in patients with cancer of the urogenital region to a primary antigen 2-4 dinitrochlorobenzene (DNCB). A total of 69 patients with neoplastic disease were studied (13 cases with kidney cancer, 34 cases with bladder cancer, 13 cases with prostatic cancer, 5 cases with testicular cancer, one case with penis cancer, and 3 cases with cancer of the cervix, comparatively with 13 patients with non-malignant urological diseases. Whereas in the control group, 78% of the patients gave a positive skin reaction to DNCB, 15% of the patients with kidney cancer, 56% of the patients with bladder cancer, 69% of the patients with prostatic cancer and 60% of the patients with testicular cancer gave a positive reaction. If we consider the stages of the disease, the reaction was positive, in 91% of bladder cancer at stage I and in 47% at stages II and III in 100% of prostatic cancer at stage I and in 62% at stages II and III, in 60% of testicular cancer at stage IV (but 100% of seminomas and 0% of dysembryomas have a positive reaction). It would therefore seem that a correlation exists between the degree of the extension of the disease and the skin reaction to DNCB.",
+    "abstract_ja": "尿路生殖器がんの患者における一次抗原である2,4-ジニトロクロロベンゼン（DNCB）への反応を解析することを目的とした。腎がん13例、膀胱がん34例、前立腺がん13例、精巣がん5例、陰茎がん1例、子宮頸がん3例の計69例の悪性疾患患者を、非悪性泌尿器疾患の13例と比較した。対照群では78%が皮膚反応陽性であったのに対し、腎がん患者では15%、膀胱がん患者では56%、前立腺がん患者では69%、精巣がん患者では60%が陽性反応を示した。病期別にみると、病期Iの膀胱がんでは91%、病期IIおよびIIIでは47%が陽性であった。前立腺がんでは病期Iで100%、病期IIおよびIIIで62%が陽性であった。精巣がんの病期IVでは60%が陽性であったが、セミノーマでは100%、ジスエンブリオーマ（非セミノーマ性胚細胞腫瘍）では0%が陽性反応を示した。疾患の進展度と皮膚反応との間には相関があると考えられる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "sx": "mixed",
+      "n": 82
+    }
+  },
+  {
+    "id": "pmid-856437",
+    "title": "High dose cis-platinum diammine dichloride: amelioration of renal toxicity by mannitol diuresis.",
+    "title_ja": "マンニトール利尿による腎毒性軽減を目的とした高用量シスプラチン（CPDD）投与",
+    "authors": [
+      "Hayes DM",
+      "Cvitkovic E",
+      "Golbey RB",
+      "Scheiner E",
+      "Helson L",
+      "Krakoff IH"
+    ],
+    "journal": "Cancer",
+    "year": 1977,
+    "pmid": "856437",
+    "doi": "10.1002/1097-0142(197704)39:4<1372::aid-cncr2820390404>3.0.co;2-j",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This 1977 trial tested high-dose cisplatin with mannitol diuresis in 60 heavily pretreated patients to reduce renal toxicity. Dose-limiting toxicity appeared at 5 mg/kg, and serial high-dose treatment caused only mild renal dysfunction. The overall response rate was 42%. Germ cell tumors of the testis were among the responding histologies, and all six responders had previously been resistant to low-dose cisplatin. Because testicular germ cell tumors are one of several responsive types rather than the main subject, relevance is partial but clinically meaningful.",
+    "summary_ja": "1977年の臨床試験で、マンニトール利尿を併用した高用量シスプラチンを前治療歴の多い60例に投与し、腎毒性の軽減を検討しました。奏効率は42%でした。精巣の胚細胞腫瘍の6例が奏効し、いずれも低用量シスプラチンに抵抗性でした。主題は薬剤の毒性と奏効性であり、胚細胞腫瘍は対象の一つです。",
+    "abstract": "A clinical trial was undertaken to improve the therapeutic index of cis-platinum diammine dichloride with a concomitantly administered mannitol induced diuresis. Sixty patients, heavily pretreated, were entered; fifty-one are evaluable. The technique of concomitant osmotic diuresis and CPDD administration is described in detail. Doses ranged from 3 mg/kg to 5 mg/kg. At 5 mg/kg, dose-limiting renal, marrow and ototoxicity were seen, and resulted in one drug death. Marrow toxicity was moderate. Renal toxicity was limited to transient elevations in serum creatinine levels, except in some patients who had renal impairment prior to CPDD treatment. These patients had moderate renal toxicity. Serial treatments as frequently as once every 3 weeks were used to maintain responses. Serial high dose CPDD produced only mild renal dysfunction. Ototoxicity, usually subclinical, was quantitated audiometrically, and found to be dose related, but not clinically prohibitive at 4 mg/kg or less. The overall response rate (PR/MR) was 42%. Clinically significant responses in epidermoid carcinoma of the head and neck, adenocarcinoma of the ovary, and germ cell tumors of the testis were seen. All six responding patients with germ cell tumor of the testis, had been resistant to low dose (1mg/kg) CPDD. Two responding patients with ovarian adenocarcinoma had been resistant to alkylating agents.",
+    "abstract_ja": "シス-ジアンミンジクロロ白金（CPDD）の治療指数を改善するため、同時投与したマンニトール誘発利尿を併用する臨床試験を行った。前治療歴の多い60例を登録し、51例が評価可能であった。浸透圧利尿とCPDD投与を併用する方法を詳細に記載する。投与量は3～5 mg/kgであった。5 mg/kgでは用量制限となる腎毒性、骨髄毒性、耳毒性がみられ、薬物死が1例発生した。骨髄毒性は中等度であった。腎毒性は一過性の血清クレアチニン上昇に限られたが、治療前から腎機能障害のあった一部の患者では中等度の腎毒性がみられた。奏効を維持するため、3週ごとまでの反復投与を行った。反復高用量CPDD投与では軽度の腎機能障害のみがみられた。耳毒性は通常は臨床的に明らかでなく、聴力検査で定量され、用量依存性であったが、4 mg/kg以下では臨床的に許容できる範囲であった。全体の奏効率（PR/MR）は42%であった。頭頸部の扁平上皮がん、卵巣腺がん、精巣の胚細胞腫瘍で臨床的に意義のある奏効がみられた。精巣の胚細胞腫瘍で奏効した6例はいずれも、低用量（1 mg/kg）のCPDDに抵抗性であった。卵巣腺がんで奏効した2例は、アルキル化薬に抵抗性であった。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "sx": "mixed",
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 51,
+      "th": [
+        "chemotherapy"
+      ],
+      "ln": "salvage",
+      "ep": "safety"
+    }
+  },
+  {
+    "id": "pmid-931545",
+    "title": "The value of fine needle biopsy in the diagnosis of ovarian tumours in women.",
+    "title_ja": "卵巣腫瘍の診断における細針生検の有用性",
+    "authors": [
+      "Dudkiewicz J",
+      "Biniszkiewicz W",
+      "Blecharz A"
+    ],
+    "journal": "Arch Geschwulstforsch",
+    "year": 1977,
+    "pmid": "931545",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "Evaluates fine needle aspiration cytology for diagnosing ovarian tumors across benign cysts, teratomas, myomas and various malignancies. Teratomas were correctly diagnosed cytologically in all cases, and benign lesions were excluded accurately. Cytology could not determine the microscopic pattern of ovarian cancers. The authors conclude the technique is valuable for early diagnosis and for patients who are poor candidates for laparotomy.",
+    "summary_ja": "卵巣腫瘍の診断における細針生検の有用性を、嚢胞・奇形腫・筋腫・悪性腫瘍を対象に検討した。奇形腫は全例で細胞診により正しく診断された一方、卵巣癌の組織型は細胞診では決定できなかった。開腹の禁忌例や早期診断に有用であると結論している。",
+    "abstract": "The diagnostic value of fine needle biopsy was assayed in the diagnosis of ovarian tumours in women. Our material comprised malignant tumours with different histological structures, benign tumours such as different kinds of cysts, teratomata and myomas. In the investigated cases of ovarian cancer the cytologic examination was in accord with the following histopathologic results. The cytologic findings failed to determine the microscopic pattern of the cancer. Teratomata were diagnosed cytologically in all cases under consideration. In the remaining tumours the results of cytologic evaluation were in accordance with the histologic examinations in the view of dismissing of tumour under study. The method seems to be very helpful in early diagnosis of malignant ovarian tumours as well as in the evaluation of the character of some tumours. The latter might be particularly important in cases presenting counterindication to laparotomy.",
+    "abstract_ja": "卵巣腫瘍の診断における細針生検の診断的価値を検討した。対象は、さまざまな組織学的構造を有する悪性腫瘍、各種嚢胞などの良性腫瘍、奇形腫および筋腫であった。卵巣癌症例では細胞診所見は組織学的所見と一致した。細胞診では腫瘍の顕微鏡的パターンを決定できなかった。奇形腫はすべての症例で細胞診により診断された。その他の腫瘍では、細胞診の結果は組織学的検査と一致し、検討対象腫瘍の除外診断となった。本法は悪性卵巣腫瘍の早期診断や一部腫瘍の性状評価に非常に有用と思われる。特に開腹術の禁忌がある症例では重要と考えられる。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "diagnostic_accuracy"
+    }
+  },
+  {
+    "id": "pmid-183504",
+    "title": "The significance of measurement of human placental lactogen, human chorionic gonadotropin, and carcinoembryonic antigen in patients with ovarian carcinoma.",
+    "title_ja": "卵巣癌患者におけるヒト胎盤性ラクトゲン、ヒト絨毛性ゴナドトロピン、CEAの測定の意義",
+    "authors": [
+      "Samaan NA",
+      "Smith JP",
+      "Rutledge FN",
+      "Schultz PN"
+    ],
+    "journal": "Am J Obstet Gynecol",
+    "year": 1976,
+    "pmid": "183504",
+    "doi": "10.1016/0002-9378(76)90273-8",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "Measured placental lactogen, beta-hCG, and CEA in plasma of 65 ovarian cancer patients, including 51 with epithelial tumors and 14 with germ cell tumors. Elevated levels were common but did not correlate with each other. Serial measurements in 20 patients during surgery, chemotherapy, and radiotherapy did not track the disease course. The authors conclude these markers have limited value for assessing status or therapy response.",
+    "summary_ja": "卵巣癌65例（上皮性51例、胚細胞腫瘍14例）の血漿中HPL、β-hCG、CEAを測定しました。高値の例は多いものの、マーカー同士は相関しませんでした。手術や化学療法、放射線療法の前後で測定した20例でも、経過とは一致しませんでした。これらのマーカーは病態や治療効果の評価には有用性が限られると結論しています。",
+    "abstract": "Human placental lactogen (HPL or HCS), the beta subunit of human chorionic gonadotropin (beta-HCG), and carcinoembryonic antigen (CEA) were measured by a specific radioimmunoassay in plasma of 65 patients with ovarian cancer. Fifty-one patients had epithelial tumors, while 14 had germ cell tumors. It was found that 47 patients (72 per cent) had high levels of plasma HPL, 29 patients (45 per cent) had high levels of plasma beta-HCG, and 34 patients (52 per cent) had high levels of plasma CEA, but there was no correlation between these protein marker levels in different patients. Twenty of these patients were studied before and after operation and during chemotherapy and/or radiotherpy. There was no consistent correlation between these marker levels and the course of the disease. These data suggest that measurement of HPL, beta-HCG, and CEA in sera of patients with ovarian cancer is not of value in assessing the clinical status of the patients or in determining the effect of therapy.",
+    "abstract_ja": "卵巣癌患者65例の血漿中で、ヒト胎盤性ラクトゲン（HPLまたはHCS）、ヒト絨毛性ゴナドトロピン(hCG)のβサブユニット（β-hCG）、およびCEA（癌胎児性抗原）を特異的放射免疫測定法で測定した。上皮性腫瘍が51例、胚細胞腫瘍が14例であった。47例（72％）で血漿HPLが高値、29例（45％）で血漿β-hCGが高値、34例（52％）でCEAが高値であったが、異なる患者間でこれらのタンパク質マーカー値に相関は認められなかった。このうち20例は、手術前後および化学療法や放射線療法の期間中に検討された。これらのマーカー値と疾患経過との間に一貫した相関は認められなかった。これらのデータは、卵巣癌患者の血清中のHPL、β-hCG、CEAの測定は、患者の臨床状態の評価や治療効果の判定には価値がないことを示唆している。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy",
+        "radiotherapy"
+      ],
+      "n": 65,
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "prognostic_biomarker"
+    }
+  },
+  {
+    "id": "pmid-193179",
+    "title": "Studies on the mechanisms of abortion induction by Trichosanthin.",
+    "title_ja": "トリコサンチンによる流産誘発機序の研究",
+    "authors": [],
+    "journal": "Sci Sin",
+    "year": 1976,
+    "pmid": "193179",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This study investigates how trichosanthin, a plant protein from a Chinese medicinal herb, induces abortion. The results show that it acts directly on placental trophoblast cells, causing necrosis of syncytiotrophoblasts and circulatory disruption. It also reduces hCG and steroid hormone levels and is proposed to increase prostaglandin synthesis, triggering uterine contraction. The drug is also reported to be effective against hydatidiform mole, invasive mole and, to some extent, choriocarcinoma.",
+    "summary_ja": "中国の生薬由来の植物タンパク質トリコサンチンによる流産誘発機序を検討した研究です。胎盤絨毛の合胞体栄養膜細胞を直接壊死させ、hCGとステロイドホルモンを低下させると報告しています。胞状奇胎、侵入奇胎、絨毛癌に対する効果にも言及しており、治療応用への基礎的知見を示しています。",
+    "abstract": "Radix trichosanthis, an abortifacient drug of mid-gestation, is extracted from the root tuber of Trichosanthes kirilowii Maxim, Cucurbitaceae. Its purified effective principle is a basic protein of molecular weight of approximately 18,000 and is named trichosanthin. By authorization it has been proved to be very effective in abortion induction of mid-gestation, particularly effective in curing ectopic pregnancy, hydatidiform mole, and invasive mole, and it has also some therapeutic action on choriocarcinoma. From the analysis of the experimental results on its initial site of action, the morphological and functional injury of trophoblast cells of placenta and of cultures in vitro and the effect on prostaglandin synthesis, the following conclusions are drawn concerning the mechanisms of abortion induction by trichosanthin: (1) Trichosanthin exerts its action directly on the placental trophoblasts and possesses a certain degree of specificity; (2) It selectively causes the necrotic denaturation of the syncytiotrophoblasts of placental villi, which makes fragments of the disintegrated cells clumped in the blood sinus, hence the coagulation of blood and the circulation hindrance, and tissue necrosis over large areas follows. The necrosis of placental villi is the primary response, and circulation hindrance secondary; (3) Structural injuries have been reflected on the impairment of functional activities; the concentrations of HCG and steroid hormones fall rapidly below the threshold values of threatened abortion. Serious structural and functional injuries bring about destructive disturbances on the normal endocrine relationship between the mother and the fetus and on metabolic exchanges. It is further postulated that through certain unknown mechanism the synthesis of prostaglandins increases, uterine contraction is initiated and abortion ensues. In summary, trichosanthin, a plant protein discovered from Chinese medicinal herbs, is a drug effective in abortion induction and against trophoblastic neoplasms. Preliminary elucidation of the mechanisms of abortion induction by trichosanthin has afforded a basis for the clinical application with better efficacy and its possible abortifacient use in early pregnancy and for the discovery of newer cancer chemotherapeutic agents.",
+    "abstract_ja": "生薬の根塊由来のトリコサンチンは、妊娠中期の流産誘発薬であり、精製された有効成分は分子量約18,000の塩基性タンパク質である。臨床的に、この薬剤は妊娠中期の流産誘発に非常に有効であることが証明されており、特に子宮外妊娠、胞状奇胎、侵入奇胎の治療に有効で、絨毛癌にもある程度の治療効果がある。トリコサンチンの初期作用部位、培養系での絨毛細胞の形態学的・機能的障害、プロスタグランジン合成への影響に関する実験結果の解析から、流産誘発機序について次の結論が得られた。(1) トリコサンチンは胎盤の絨毛細胞に直接作用し、ある程度の特異性を有する。(2) 胎盤絨毛の合胞体栄養膜細胞の壊死性変性を選択的に引き起こし、崩壊した細胞の断片が血洞内に凝集するため、血液凝固と循環障害が生じ、続いて広範囲の組織壊死が起こる。胎盤絨毛の壊死が一次反応であり、循環障害は二次的である。(3) 構造的障害は機能障害として現れ、hCGとステロイドホルモンの濃度は切迫流産の閾値を急速に下回る。重度の構造・機能障害は、母体と胎児の間の正常な内分泌関係と代謝交換に破壊的な乱れをもたらす。さらに、未知の機序により、プロスタグランジンの合成が増加し、子宮収縮が開始されて流産に至ると推測される。要約すると、トリコサンチンは中国の生薬から発見された植物タンパク質であり、流産誘発と栄養膜腫瘍に対して有効な薬剤である。流産誘発機序の予備的解明は、より高い効果を持つ臨床応用と、早期妊娠における流産薬としての可能性、さらに新規抗癌化学療法薬の発見の基盤を提供するものである。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 06:32:11"
+  },
+  {
+    "id": "pmid-59626",
+    "title": "Radioimmunoassay of serum alpha-fetoprotein in patients with different maliganant tumors.",
+    "title_ja": "種々の悪性腫瘍患者における血清αフェトプロテインの放射免疫測定",
+    "authors": [
+      "Lie-Injo LE",
+      "Caldwell J",
+      "Ganesan S",
+      "Ganesan J"
+    ],
+    "journal": "Cancer",
+    "year": 1976,
+    "pmid": "59626",
+    "doi": "10.1002/1097-0142(197607)38:1<341::aid-cncr2820380150>3.0.co;2-g",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This radioimmunoassay study measured serum alpha-fetoprotein (AFP) in healthy Malaysians and in 330 patients with various malignancies. Elevated AFP was found in a minority of cancers, with high levels in three of four ovarian dysgerminomas and in both testicular carcinoma patients, as well as in one hepatoma. Lower increases occurred in some breast, lung, and nasopharyngeal cancers. The study highlights AFP as a marker of germ cell origin but also notes its presence in several non-germ cell cancers.",
+    "summary_ja": "健康なマレーシア人と各種悪性腫瘍330例の血清αフェトプロテイン(AFP)を放射免疫測定法で測定した研究です。卵巣ディスジャーミノーマの4例中3例、精巣癌の2例全例で高値を示しました。肝癌や一部の乳癌、肺癌、上咽頭癌でも上昇が見られました。AFPは胚細胞由来の腫瘍で有用な一方、他の癌でも上昇しうることを示しています。",
+    "abstract": "The level of serum alpha-fetoprotein (AFP) was estimated by radioimmunoassay in 153 normal healthy Malysians of different ethnic groups. The mean level was 7.5 In1/ml (SD 2.28InU/ml). Among 330 patients with malignant tumors, 11 had increased levels of AFP. The only patient who had hepatoma had a very high level of serum AFP. High levels were also found in three of four patients with dysgerminoma of the ovary, in the only two patients with carcinoma of the testis, and in one patient with secondary carcinoma of the humerus of unknown origin. Lower, but significantly increased levels were observed in one patient (of 48) with breast carcinoma, one patient (of 8) with basal cell carcinoma of the nose, one patient (0f 27) with carcinoma of the lung, and one patient (of 59) with nasopharynegeal carcinoma.",
+    "abstract_ja": "健康なマレーシア人153名（さまざまな民族）において、血清αフェトプロテイン(AFP)を放射免疫測定法で測定した。平均値は7.5 InU/ml（SD 2.28 InU/ml）であった。悪性腫瘍の330例中11例でAFP値の上昇が認められた。肝細胞癌の1例では血清AFPが非常に高値であった。卵巣ディスジャーミノーマの4例中3例、および精巣癌の2例でも高値が認められた。さらに、原発不明の上腕骨転移癌の1例でも高値が見られた。乳癌（48例中1例）、基底細胞癌（鼻、8例中1例）、肺癌（27例中1例）、上咽頭癌（59例中1例）では、より低いものの有意に上昇していた。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "n": 330,
+      "th": [
+        "diagnosis_imaging"
+      ],
+      "st": "cross_sectional"
+    }
+  },
+  {
+    "id": "pmid-59628",
+    "title": "Phase II evaluation of bleomycin. A Southwest oncology Group study.",
+    "title_ja": "ブレオマイシンの第II相評価：Southwest Oncology Groupの研究",
+    "authors": [
+      "Haas CD",
+      "Coltman CA Jr",
+      "Gottlieb JA",
+      "Haut A",
+      "Luce JK",
+      "Talley RW",
+      "Samal B",
+      "Wilson HE",
+      "Hoogstraten B"
+    ],
+    "journal": "Cancer",
+    "year": 1976,
+    "pmid": "59628",
+    "doi": "10.1002/1097-0142(197607)38:1<8::aid-cncr2820380103>3.0.co;2-4",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This Southwest Oncology Group phase II trial evaluated intravenous or intramuscular bleomycin in 382 patients with various cancers. Among the tumor types, germinal cancers responded in 12 of 26 patients, a notable activity. Pulmonary toxicity was more frequent with older age and total doses above 200 mg. Intramuscular administration carried lower risks of lung toxicity and hypotension. Higher cumulative doses were recommended only for patients already showing response.",
+    "summary_ja": "Southwest Oncology Groupによる第II相試験で、382例にブレオマイシンを静脈内または筋肉内投与し効果と毒性を評価しました。胚細胞癌では26例中12例で奏効が見られました。肺毒性は高齢や総投与量200mg超で多く、筋注は肺毒性と低血圧のリスクが低いとされています。さらに高用量は奏効例にのみ用いるべきだと結論づけています。",
+    "abstract": "Bleomycin given intravenously (i.v.) or intramuscularly (i.m.) in twice-weekly doses of 10 mg/m2 was evaluated for efficacy and toxicity in 382 patients. Responses were observed in 11/27 Hodgkin's diseases, 10/30 lymphomas, 9/22 squamous cell cancers of ectodermal origin, 12/26 germinal cancers, and 3/8 renal adenocarcinomas. The i.m. route is less likely to casue pulmonary toxicity or hypotension than the i.v. route. Advanced age and total doses exceeding 200 mg were associated with a higher risk of lung toxicity. All responders had shown at least improvement upon receiving 200 mg; higher total doses should be used only in responding patients.",
+    "abstract_ja": "ブレオマイシンを週2回、10 mg/m2の用量で静脈内（i.v.）または筋肉内（i.m.）投与し、382例で有効性と毒性を評価した。奏効は、ホジキン病（27例中11例）、リンパ腫（30例中10例）、外胚葉由来の扁平上皮癌（22例中9例）、胚細胞癌（26例中12例）、腎細胞腺癌（8例中3例）で認められた。筋肉内投与は静脈内投与に比べ、肺毒性や低血圧を起こしにくい。高齢と総投与量200 mgを超えることは、肺毒性のリスク上昇と関連した。すべての奏効例は、少なくとも200 mg投与の時点で改善を示していた。より高い総投与量は、奏効している患者にのみ用いるべきである。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 382,
+      "th": [
+        "chemotherapy"
+      ],
+      "ep": "response_rate",
+      "ph": "II"
+    }
+  },
+  {
+    "id": "pmid-789266",
+    "title": "Results obtained with fractionated ifosfamide massive-dose treatment in generalized malignant tumours.",
+    "title_ja": "全身性悪性腫瘍におけるイホスファミド分割大量投与療法の成績",
+    "authors": [
+      "Brühl P",
+      "Günther U",
+      "Hoefer-Janker H",
+      "Hüls W",
+      "Scheef W",
+      "Vahlensieck W"
+    ],
+    "journal": "Int J Clin Pharmacol Biopharm",
+    "year": 1976,
+    "pmid": "789266",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This 1976 report describes fractionated massive-dose ifosfamide treatment in 409 patients with various malignant tumours, most receiving concurrent irradiation. Among 360 assessable patients, 101 achieved full and 150 partial remission. Responses were notable in ovarian, breast and small-cell lung carcinomas, and especially striking in testicular tumours including teratomas. Side effects, mainly alopecia, leukopenia and haemorrhagic cystitis, were largely reversible and manageable with preventive measures.",
+    "summary_ja": "1976年の報告で、各種の悪性腫瘍を有する409例にイホスファミドを分割大量投与した結果を示す。評価可能な360例のうち、完全寛解101例、部分寛解150例であった。精巣腫瘍（奇形腫を含む）で特に顕著な効果が認められた。主な副作用は脱毛、白血球減少、出血性膀胱炎で、予防策により多くは可逆的かつ管理可能であった。",
+    "abstract": "In 409 sufferers from various malignant tumours, we used the cytostatic Ifosfamide (ASTAZ4942) in fractionated doses. The total i.v. dose averaging 300 mg/kg bodyweight, was either spread over 5 consecutive days (5 X 60 mg/kg i.v.) or over 10 consecutive days (10 X 30 mg/kg). At the same time, most patients were irradiated, the radiation dose usually being only one tenth the antitumour dose. Infections and electrolyte imbalance were first treated before Ifosfamide therapy was instituted. Cases of advanced cerebral sclerosis, thrombopenia below 75,000/cmm, cerebral metastases, impaired renal function and inadequate cooperation of the patient were excluded from the studies. To prevent and control side effects, various premedications and adjuvants are required: Antiemetics, prevention of cystitis and infections, cardiovascular agents etc. Corticosteroids are contraindicated. Out of 360 assessable patients 101 had a full remission, 150 a partial remission, 79 were failures; 30 cases were not evaluated. Good results were seen especially in ovarian carcinoma, mammary carcinoma and microcellular bronchial carcinoma. Particularly striking is the drug's effectiveness in testicular tumours including teratomas, osteosarcomas, chondrosarcomas and myosarcomas as well as in some adenocarcinomas of the gastro-intestinal tract, particularly pancreatic carcinoma. In lymphoreticular tumours and haemoblastoses, its potency is less pronounced. The side effects of Ifosfamide are the same as those of other alkylating agents. They are reversible and can usually be controlled or even avoided by adequate preventive measures. In the order of incidence we observed: Alopecia, leukopenia, fall in haemoglobin, cystitis, intercurrent infections, nausea and vomiting as well as cerebral disorders. Since haemorrhagic cystitis considerably interferes with Ifosfamide treatment, its prevention is of essential importance. Because of possible complications and specific premedication and adjuvant measures for their control, this type of treatment should for the present only be carried out by oncologists or special cancer centres.",
+    "abstract_ja": "409例の各種悪性腫瘍患者に、細胞増殖抑制薬であるイホスファミド（ASTAZ4942）を分割投与した。総静注量は平均して体重1kgあたり300mgで、5日間連続（1回60mg/kg静注）または10日間連続（1回30mg/kg）に分けて投与した。同時にほとんどの患者に放射線照射を行い、照射線量は通常抗腫瘍量の10分の1であった。イホスファミド療法の開始前に、感染症と電解質異常を治療した。進行した脳硬化症、血小板数が75,000/mm³未満の血小板減少症、脳転移、腎機能障害、患者の協力が不十分な場合は研究から除外した。副作用を防止・管理するため、制吐薬、膀胱炎および感染症の予防、循環器用薬など、さまざまな前投薬と補助療法が必要であった。副腎皮質ステロイドは禁忌とした。評価可能な360例のうち、101例が完全寛解、150例が部分寛解、79例が無効であった。30例は評価対象外であった。卵巣癌、乳癌、微小細胞性気管支癌で特に良好な結果が得られた。精巣腫瘍（奇形腫を含む）、骨肉腫、軟骨肉腫、筋肉腫、および膵癌をはじめとする消化管腺癌の一部にも、本剤の有効性が際立って認められた。リンパ網内系腫瘍や血液腫瘍では効果がやや弱かった。イホスファミドの副作用はほかのアルキル化薬と同様である。これらは可逆性であり、適切な予防策により通常は管理またはほぼ回避できた。発生頻度の高い順に、脱毛、白血球減少、ヘモグロビン低下、膀胱炎、併発感染症、悪心・嘔吐、および中枢神経系障害が見られた。出血性膀胱炎はイホスファミド治療を著しく妨げるため、その予防が極めて重要である。合併症およびその対策のための特定の前投薬・補助療法を要するため、この種の治療は当面、腫瘍専門医または専門のがんセンターでのみ行うべきである。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "sx": "mixed",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "chemotherapy",
+        "radiotherapy"
+      ],
+      "n": 409,
+      "th": [
+        "chemotherapy"
+      ],
+      "ep": "response_rate"
+    }
+  },
+  {
+    "id": "pmid-798586",
+    "title": "Evaluation of a cooperative clinical study of the cytostatic agent ifosfamide.",
+    "title_ja": "イホスファミドの共同臨床試験の評価",
+    "authors": [
+      "Schnitker J",
+      "Brock N",
+      "Burkert H",
+      "Fichtner E"
+    ],
+    "journal": "Arzneimittelforschung",
+    "year": 1976,
+    "pmid": "798586",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "非ランダム化試験"
+    ],
+    "summary_en": "This 1976 multicentre German study evaluated massive-dose ifosfamide in 390 patients with advanced malignancies, most of whom had prior treatment without response. Of these patients, 25.5% achieved initial full remission and 42.3% partial remission. Fractionated dosing was clearly superior to single administration, with best results at 50 to 60 mg/kg daily for five days. Ifosfamide was superior to conventional chemotherapy for testicular tumours, particularly teratomas, and produced effects comparable to conventional therapy in ovarian, bronchial and breast cancer.",
+    "summary_ja": "1976年の多施設共同研究で、進行した悪性腫瘍390例にイホスファミドを大量投与した。初回完全寛解は25.5%、部分寛解は42.3%であった。分割投与は単回投与より明らかに優れ、1日50〜60mg/kgを5日間投与した場合に最良の成績が得られた。精巣腫瘍、特に奇形腫では従来の化学療法より優れていた。",
+    "abstract": "In cooperative studies performed in 21 German clinics, the new cytostatic agent 3-(2-chloroethyl)-2-[(2-chloroethyl)-amino]-tetrahydro-2H-1,3,2-oxazaphosphorine-2-oxide (ifosfamide; trade name: Holoxan) was administered as massive-dose treatment. The studies aimed at confirming the results obtained in pharmacological and Phase I clinical trials with a fractionated administration of ifosfamide on a large scale. The study was carried out in 390 patients suffering from various malignant conditions. The majority of patients had had pretreatment without response or were admitted at an advanced stage of disease. Despite this negative selection, 25.5% of the patients showed an initial full remission and 42.3% partial remission; in 32.2% of the patients, reduction of the tumour signs by at least 50% was not attained. After an average observation period of 6 1/2 months, 53.8% of the patients were still alive. The study clearly shows the superiority of fractionated administration of ifosfamide when compared to its use as a single administration. In addition, the rates of remission and survival, and of survival times, were clearly dependent on dosage, independent of the tumour type. A daily dosage of 50 to 60 mg/kg ifosfamide on 5 consecutive days produced the best results. In spite of the fact that ifosfamide was not always given at optimum dosage, it proved to be definitely superior to conventional chemotherapy in testicular tumours, particularly teratomas and also in hypernephromas. Retrospective comparison with results of conventional chemotherapy for ovarian, bronchial and mammary cancer has shown ifosfamide to produce the same therapeutic effect in these tumour types. In this study group, leukopenia was not regarded as a limiting factor to the administration of ifosfamide. Side effects in the efferent urinary tract, particularly cystitis, were controlled with adequate preventive measures.",
+    "abstract_ja": "ドイツの21施設で行われた共同研究において、新しい細胞増殖抑制薬である3-(2-クロロエチル)-2-[(2-クロロエチル)アミノ]-テトラヒドロ-2H-1,3,2-オキサザホスホリン-2-オキシド（イホスファミド、商品名ホロキサン）を大量投与療法として用いた。本研究は、薬理学的研究および第I相臨床試験で得られた、イホスファミドの分割投与の結果を大規模に確認することを目的とした。対象は各種の悪性疾患390例であった。大半の患者は前治療に無効であったか、進行した段階で入院していた。このような不利な選択にもかかわらず、患者の25.5%が初回完全寛解、42.3%が部分寛解を示した。32.2%の患者では、腫瘍徴候の少なくとも50%の縮小が得られなかった。平均観察期間6.5か月の後、患者の53.8%が生存していた。本研究は、単回投与と比較して分割投与の明らかな優位性を示した。さらに、奏効率、生存率および生存期間は、腫瘍の種類にかかわらず投与量に明確に依存していた。1日50〜60mg/kgを5日連続で投与した場合に最良の結果が得られた。イホスファミドは必ずしも最適量で投与されていなかったが、従来の化学療法と比べて精巣腫瘍、特に奇形腫、および腎細胞癌（ハイパーネフローマ）で明らかに優れていた。卵巣癌、気管支癌、乳癌では、従来の化学療法との後方視的比較により、イホスファミドが同等の治療効果を示すことが分かった。本研究群では、白血球減少は投与の制限因子とはみなされなかった。尿路の副作用、特に膀胱炎は、適切な予防策により管理された。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "sx": "mixed",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 390,
+      "th": [
+        "chemotherapy"
+      ],
+      "ln": "mixed"
+    }
+  },
+  {
+    "id": "pmid-827921",
+    "title": "Electron microscopic studies of placental and uterine tumors induced in rats.",
+    "title_ja": "ラットに誘発された胎盤および子宮腫瘍の電子顕微鏡的研究",
+    "authors": [
+      "Kakudo K",
+      "Sugaya T",
+      "Onishi S",
+      "Miyaji T"
+    ],
+    "journal": "Acta Pathol Jpn",
+    "year": 1976,
+    "pmid": "827921",
+    "doi": "10.1111/j.1440-1827.1976.tb00525.x",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "Electron microscopy was used to examine eight malignant placental and uterine tumors induced in rats by DMBA or 4-NQO. Three of the eight tumors showed ultrastructural features of choriocarcinoma, while the others were classified as squamous cell carcinoma, leiomyosarcoma, or undifferentiated sarcoma. The study is a 1976 experimental animal investigation that characterizes chemically induced tumors of trophoblastic and uterine origin, offering a model-based ultrastructural comparison with choriocarcinoma.",
+    "summary_ja": "DMBAまたは4-NQOで誘発したラットの胎盤および子宮由来の悪性腫瘍8例を電子顕微鏡で解析した研究です。8例中3例は絨毛癌の超微細構造を示し、他は扁平上皮癌、平滑筋肉腫、未分化肉腫でした。化学発がん動物モデルにおける絨毛癌様腫瘍の特徴づけとして位置づけられます。",
+    "abstract": "The ultrastructure of eight 7,12-dimethylbenz (a) anthracene (DMBA) or 4-nitroquinoline-N-oxide (4-NQO) induced malignant tumors of placental and uterine origin in the rat were studied. Three of eight tumors had the ultrastructural characteristics of choriocarcinoma. The other five tumors had different fine structures. Two were classified as squamous cell carcinoma, one was as a leiomyosarcoma and the other two were undifferentiated sarcoma.",
+    "abstract_ja": "DMBAまたは4-NQOにより誘発されたラットの胎盤および子宮起源の悪性腫瘍8例の超微細構造を検討した。8例中3例は絨毛癌の超微細構造的特徴を示した。その他の5例は異なる微細構造を示し、うち2例は扁平上皮癌、1例は平滑筋肉腫、残りの2例は未分化肉腫に分類された。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-987856",
+    "title": "Characterization of two different alkaline phosphatases in mouse teratoma: partial purification, electrophoretic, and histochemical studies.",
+    "title_ja": "マウス奇形腫における2種類のアルカリホスファターゼの解析：部分精製、電気泳動および組織化学的研究",
+    "authors": [
+      "Wada HG",
+      "VandenBerg SR",
+      "Sussman HH",
+      "Grove WE",
+      "Herman MM"
+    ],
+    "journal": "Cell",
+    "year": 1976,
+    "pmid": "987856",
+    "doi": "10.1016/0092-8674(76)90050-7",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "The authors partially purified two alkaline phosphatases from the ascitic and solid forms of the OTT-6050 mouse teratoma and compared them with kidney and placental isozymes. Electrophoretic and subunit analyses showed the teratoma enzyme differs from kidney and placental forms. Histochemistry localized the stem-cell form to embryonal carcinoma cells in the teratoma. The work is basic research using a murine model, with indirect relevance to human germ cell tumors.",
+    "summary_ja": "マウス奇形腫OTT-6050の腹水型と固形型からアルカリホスファターゼを部分精製し、腎臓型および胎盤型と比較した。電気泳動とサブユニット解析により、奇形腫の酵素は腎臓型や胎盤型とは異なることが示された。組織化学的に幹細胞型は胎児性癌細胞に局在した。マウスモデルを用いた基礎研究であり、ヒト胚細胞腫瘍への関連は間接的である。",
+    "abstract": "Alkaline phosphatase (E.C.3.1.3.1.) has been used as a marker for embryonal carcinoma cells which constitute the multipotential stem cells of the mouse teratoma. Studies by other investigators based on kinetics of thermal inactivation and L-phenylalanine inhibition have shown that the alkaline phosphatase of the teratoma differs from the mouse intestinal and liver isozymes, but resembles the isozymes of kidney and placenta. Since functional characterization of nonpurified enzymes is not the most accurate means for distinguishing different molecular forms of an enzyme, we have partially purified the enzymes from the ascitic (embryoid body) and solid tumor forms of the OTT-6050 teratoma line, and utilized the technique of electrophoresis in polyacrylamide gels to compare the teratoma enzyme with isozymes from kidney and placenta. Covalent 32PO4-labeling of the alkaline phosphatases and polyacrylamide gel electrophoresis in sodium dodecylsulfate was also used to compare the subunit molecular weights of the enzymes. The results indicate that the mouse teratoma enzyme is distinct from the kidney and placental isozymes. Since histochemical studies have localized the enzyme to the stem cell population of the teratoma, the results imply that stem cell alkaline phosphatase is a distinct isozyme. The embryoid bodies contain a second alkaline phosphatase which may correspond to the placental isozyme. This enzyme may be attributed to the outer cell layer of embryoid bodies of the ascitic tumor, since this cell type histochemically demonstrates alkaline phosphatase activity.",
+    "abstract_ja": "アルカリホスファターゼ（E.C.3.1.3.1.）は、マウス奇形腫の多分化能幹細胞である胎児性癌細胞のマーカーとして用いられてきた。他の研究者の熱不活化速度およびL-フェニルアラニン阻害の検討から、奇形腫の酵素はマウスの腸および肝臓のアイソザイムとは異なり、腎臓および胎盤のアイソザイムに類似することが示されていた。非精製酵素の機能的特性解析は、分子型を区別する最も正確な方法ではないため、OTT-6050奇形腫株の腹水型（胚様体）および固形型から酵素を部分精製し、ポリアクリルアミドゲル電気泳動法を用いて腎臓および胎盤のアイソザイムと比較した。ドデシル硫酸ナトリウム存在下のポリアクリルアミドゲル電気泳動と、32PO4による共有結合標識を用いて、各酵素のサブユニット分子量も比較した。その結果、マウス奇形腫の酵素は腎臓および胎盤のアイソザイムとは異なることが示された。組織化学的検討により、本酵素は奇形腫の幹細胞集団に局在することが判明したため、幹細胞型アルカリホスファターゼは独立したアイソザイムであることが示唆された。胚様体には第2のアルカリホスファターゼが含まれ、これは胎盤型アイソザイムに相当する可能性がある。この酵素は、腹水型腫瘍の胚様体の外側細胞層に由来すると考えられる。この細胞層は組織化学的にアルカリホスファターゼ活性を示すためである。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59"
+  },
+  {
+    "id": "pmid-991113",
+    "title": "Mixed ovarian tumor composed of Brenner and thyroid elements.",
+    "title_ja": "Brenner腫瘍と甲状腺成分からなる混合卵巣腫瘍",
+    "authors": [
+      "Moon S",
+      "Waxman M"
+    ],
+    "journal": "Cancer",
+    "year": 1976,
+    "pmid": "991113",
+    "doi": "10.1002/1097-0142(197611)38:5<1997::aid-cncr2820380522>3.0.co;2-#",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This 1976 case report describes an exceptionally rare ovarian neoplasm containing both Brenner tumor and thyroid tissue. The authors review the literature and find only one comparable documented case. They note that a collision of two separate tumors cannot be fully excluded. They also propose that the lesion may be an endodermal teratoma with thyroid and urothelial differentiation, which would place it within the germ cell tumor spectrum.",
+    "summary_ja": "1976年の症例報告で、Brenner腫瘍と甲状腺組織を併せ持つ極めてまれな卵巣腫瘍を記載した。文献上の報告は1例のみであった。2種類の腫瘍の衝突の可能性は完全には否定できない。一方、甲状腺と尿路上皮への分化を示す内胚葉性奇形腫である可能性も提唱しており、その場合は胚細胞腫瘍に含まれる。",
+    "abstract": "An exceedingly rare ovarian neoplasm composed of mixed thyroid and Brenner tumor is reported. Review of the literature yielded only one well-documented case previously described. Although the possibility of a \"collision\" of two different tumors cannot be completely discarded, a possibility of an endodermal teratoma (thyroid-urothelium) is also proposed.",
+    "abstract_ja": "Brenner腫瘍と甲状腺成分からなる極めてまれな卵巣腫瘍を報告する。文献的検索では、詳細に記載された症例は1例のみであった。2つの異なる腫瘍が「衝突」した可能性は完全には否定できないが、内胚葉性奇形腫(甲状腺-尿路上皮)の可能性も提唱される。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "n": 1,
+      "th": [
+        "pathology_molecular",
+        "epidemiology"
+      ]
+    }
+  },
+  {
+    "id": "pmid-13182628",
+    "title": "Unusual abdominal cysts in infants and children.",
+    "title_ja": "乳幼児および小児における非典型的な腹部嚢胞",
+    "authors": [
+      "HASTINGS N",
+      "NORRIS WJ"
+    ],
+    "journal": "Calif Med",
+    "year": 1954,
+    "pmid": "13182628",
+    "doi": "",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This report reviews 46 pediatric abdominal cyst cases over 20 years, categorizing them into ovarian cysts (including dermoid cysts, i.e., mature teratomas), mesenteric cysts, enteric cysts, and pancreatic cysts. Ovarian/dermoid cysts comprised about half the cases and often presented with torsion mimicking appendicitis. Surgical outcomes were favorable overall, but the paper's focus is broad abdominal cyst pathology rather than germ cell tumors specifically.",
+    "summary_ja": "本論文はロサンゼルス小児病院での20年間の小児腹部嚢胞46例をまとめ、卵巣嚢胞（皮様嚢腫＝成熟奇形腫を含む）、腸間膜嚢胞、腸管性嚢胞、膵嚢胞に分類している。卵巣・皮様嚢腫は約半数を占め、茎捻転により虫垂炎様症状を呈することが多かった。主題は腹部嚢胞全般であり、胚細胞腫瘍に特化した論文ではない。",
+    "abstract": "In a 20-year period at the Los Angeles Children's Hospital, 46 infants and children have had operation for cysts within the abdomen. The age range of patients was from newborn to 13 years. Most of them were under four years old. There were four general groups of these cysts. (1) About one-half were cysts of the ovary, some of them serous and some dermoid. These cysts are attached by a stalk that often twists, causing gangrene or rupture with acute symptoms simulating appendicitis. (2) Next in frequency were cysts arising in the mesentery of the intestine. They usually caused little trouble until by their size (up to a 2-quart capacity) they created pressure and obstruction in the intestine. (3) Enteric cysts were found in four patients. (4) Cysts of the pancreas were present in three of the children.X-ray examination was helpful in diagnosis. Usually the type of cyst was not determined until operation was done. Transection of the intestinal tract sometimes was necessary for removal of the cyst. Surgical correction was satisfactory in 44 of the 46 cases.",
+    "abstract_ja": "ロサンゼルス小児病院において20年間に、腹腔内嚢胞に対して手術を受けた乳幼児および小児は46名であった。患者の年齢は新生児から13歳までで、大半は4歳未満であった。これらの嚢胞は大きく4つのグループに分類された。（1）約半数は卵巣嚢胞で、漿液性のものと類皮嚢腫のものがあった。これらの嚢胞は茎で付着していることが多く、茎捻転を起こして壊疽や破裂を生じ、虫垂炎に似た急性症状を呈することがあった。（2）次に多かったのは腸間膜に生じる嚢胞であった。通常は小さいうちは問題を起こさないが、（最大2クォート容量に達するほどの）大きさになると圧迫や腸閉塞を引き起こした。（3）腸管嚢胞は4例に認められた。（4）膵嚢胞は3名の小児に認められた。X線検査は診断に有用であった。多くの場合、嚢胞の種類は手術まで確定しなかった。嚢胞の摘出のために腸管の切離を要することがあった。外科的矯正は46例中44例で満足すべきものであった。",
+    "added_at": "2026-11-12",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-12): 掲載。",
+    "relevance_reviewed_at": "2026-11-12 13:28:59",
+    "attrs": {
+      "si": "multiple",
+      "ag": "mixed",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 46,
+      "th": [
+        "surgery",
+        "diagnosis_imaging",
+        "epidemiology"
+      ]
+    }
   }
 ]
