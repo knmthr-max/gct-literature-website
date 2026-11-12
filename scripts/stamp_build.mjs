@@ -24,15 +24,19 @@ for (const page of ["index.html", "en/index.html"]) {
   fs.writeFileSync(file, html);
 }
 
+// 文献データ(data/papers)や data/site.json が無い作業用コピー(テストなど)では、何もしない
 let latest = "";
-for (const name of fs.readdirSync(path.join(root, "data/papers"))) {
-  if (!name.endsWith(".json") || name === "index.json") continue;
-  for (const e of JSON.parse(fs.readFileSync(path.join(root, "data/papers", name), "utf8"))) {
-    if (e.relevance_status !== "excluded" && /^\d{4}-\d{2}-\d{2}$/.test(e.added_at || "") && e.added_at > latest) latest = e.added_at;
+const papersDir = path.join(root, "data/papers");
+const siteFile = path.join(root, "data/site.json");
+if (fs.existsSync(papersDir) && fs.existsSync(siteFile)) {
+  for (const name of fs.readdirSync(papersDir)) {
+    if (!name.endsWith(".json") || name === "index.json") continue;
+    for (const e of JSON.parse(fs.readFileSync(path.join(papersDir, name), "utf8"))) {
+      if (e.relevance_status !== "excluded" && /^\d{4}-\d{2}-\d{2}$/.test(e.added_at || "") && e.added_at > latest) latest = e.added_at;
+    }
   }
 }
 if (latest) {
-  const siteFile = path.join(root, "data/site.json");
   const site = JSON.parse(fs.readFileSync(siteFile, "utf8"));
   site.last_updated = latest;
   fs.writeFileSync(siteFile, JSON.stringify(site, null, 2) + "\n");
