@@ -29,6 +29,12 @@ python3 scripts/screen_cns_gct.py screen --db-dir <data>/data/master --out <data
 - どれも、使用量の上限に達すると止まり、同じコマンドで再開できる。
 - 結果は、まず別ファイルに出して目視確認してから、DB・サイトに反映する。
 
+## サイトにだけある文献を DB に取り込む(1回きりの整理)
+データリポジトリを作る前に、サイトへ直接載せた文献(PMID で DB に見つからないもの)は、`scripts/import_site_only.py` で DB に行を足せる。サイトのデータは変えない。取り込んだ行は `source_file = 'site_only_import'`、`published_to_site = 1` で、出所が分かる(2026-11: 65件=掲載44・除外21)。
+```bash
+python3 scripts/import_site_only.py --db-dir <data>/data/master --papers data/papers [--apply]   # --apply なしはドライラン
+```
+
 ## 自動化の範囲を広げるには
 - AI の処理をボタン(Actions)にする場合は、Anthropic の API キーを GitHub の Secrets に登録し、API の従量課金で動かす(Claude の契約(Pro)では、Actions では動かせない)。件数・モデル・effort・費用の上限を、入力欄にして、許可の代わりにする形を提案している。
 - 公開前レビュー・公開反映・PR のマージは、人の確認を残す。
