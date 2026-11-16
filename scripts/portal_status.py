@@ -65,6 +65,8 @@ def shard_stats(path):
             f"SELECT COUNT(*) FROM papers WHERE relevance_status = 'kept' AND {TRANSLATED} "
             "AND (published_to_site IS NULL OR published_to_site = 0) AND human_review_status IS NULL"),
         "published": scalar(conn, "SELECT COUNT(*) FROM papers WHERE published_to_site = 1"),
+        "published_excluded": scalar(
+            conn, "SELECT COUNT(*) FROM papers WHERE published_to_site = 1 AND relevance_status = 'excluded'"),
         "rejected": scalar(conn, "SELECT COUNT(*) FROM papers WHERE human_review_status = 'rejected'"),
         "needs_edit": scalar(conn, "SELECT COUNT(*) FROM papers WHERE human_review_status = 'needs_edit'"),
         "jif_status": Counter(), "jif_tier": Counter(),
@@ -139,7 +141,7 @@ def render(data_dir):
     jif_tier = Counter()
     for s in shards:
         for key in ("total", "pending", "kept", "needs_review", "excluded", "kept_untranslated",
-                    "review_ready", "published", "rejected", "needs_edit"):
+                    "review_ready", "published", "published_excluded", "rejected", "needs_edit"):
             total[key] += s[key]
         jif_status.update(s["jif_status"])
         jif_tier.update(s["jif_tier"])
@@ -160,7 +162,8 @@ def render(data_dir):
         f"| excluded(対象外) | {total['excluded']:,} |",
         f"| kept のうち和訳(タイトル・抄録)未完了 | {total['kept_untranslated']:,} |",
         f"| 公開前レビュー待ち(和訳完了・未公開) | {total['review_ready']:,} |",
-        f"| 公開済み | {total['published']:,} |",
+        f"| 公開済み(うち、公開後に除外したもの {total['published_excluded']:,}) | {total['published']:,} |",
+        f"| サイトに掲載中(公開済み − 除外) | {total['published'] - total['published_excluded']:,} |",
         f"| レビューで却下 / 要修正 | {total['rejected']:,} / {total['needs_edit']:,} |",
         "",
         "## シャード(年代)別",
