@@ -61,6 +61,20 @@ class PortalScriptTests(unittest.TestCase):
         self.assertIn("| AI判定待ち | 1 |", text)
         self.assertIn("| kept のうち和訳(タイトル・抄録)未完了 | 1 |", text)
         self.assertIn("| 公開前レビュー待ち(和訳完了・未公開) | 2 |", text)
+        self.assertIn("| 公開済み(うち、公開後に除外したもの 0) | 0 |", text)
+        self.assertIn("| サイトに掲載中(公開済み − 除外) | 0 |", text)
+
+    def test_status_splits_published_into_listed_and_excluded_after_publishing(self):
+        with tempfile.TemporaryDirectory() as temp:
+            data_dir, _ = self.make_data(Path(temp))
+            conn = self.gct_db.connect(self.gct_db.shard_path(data_dir / "master", "2020s"))
+            conn.execute("UPDATE papers SET published_to_site = 1 WHERE pmid IN ('1', '2')")
+            conn.execute("UPDATE papers SET relevance_status = 'excluded' WHERE pmid = '2'")
+            conn.commit()
+            conn.close()
+            text = load_module("portal_status_test3", SCRIPTS / "portal_status.py").render(data_dir)
+        self.assertIn("| 公開済み(うち、公開後に除外したもの 1) | 2 |", text)
+        self.assertIn("| サイトに掲載中(公開済み − 除外) | 1 |", text)
 
     def test_status_lists_raw_jcr_csvs_not_yet_converted(self):
         with tempfile.TemporaryDirectory() as temp:
