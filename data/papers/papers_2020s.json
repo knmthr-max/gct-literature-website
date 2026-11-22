@@ -2498,7 +2498,7 @@
     "doi": "10.1097/PAS.0000000000002389",
     "url": "",
     "tags": [
-      "症例報告・集積"
+      "観察研究"
     ],
     "summary_en": "Clinicopathologic and molecular analysis of yolk sac tumors in older women.",
     "summary_ja": "40歳以上女性における卵黄嚢腫瘍分化を伴う悪性腫瘍の臨床病理学的・分子的解析。",
@@ -218789,6 +218789,596 @@
       "th": [
         "chemotherapy",
         "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-42999017",
+    "title": "Surgical Outcomes in Patients with Ovarian Growing Teratoma Syndrome: Experience from a Tertiary Center.",
+    "title_ja": "卵巣成長奇形腫症候群患者の手術成績:三次医療機関での経験",
+    "authors": [
+      "Wang D",
+      "Tang P",
+      "Jia C",
+      "Wang R",
+      "Yang J",
+      "Yang J",
+      "Peng P",
+      "Cao D",
+      "Yang J",
+      "Xiang Y"
+    ],
+    "journal": "Ann Surg Oncol",
+    "year": 2026,
+    "pmid": "42999017",
+    "doi": "10.1245/s10434-026-20779-x",
+    "url": "",
+    "tags": [
+      "観察研究"
+    ],
+    "summary_en": "This retrospective single-center study analyzed 63 patients with ovarian growing teratoma syndrome treated from 2000 to 2025. Complete resection was achieved in 38, and fertility-sparing surgery was performed in 50. Seventeen patients recurred, and residual disease after initial GTS surgery was the only factor significantly associated with recurrence. FSS and radical surgery showed no significant difference in relapse rates, and most patients who desired pregnancy conceived spontaneously.",
+    "summary_ja": "2000年から2025年に治療された卵巣成長奇形腫症候群の63例を後方視的に解析した単施設研究である。38例で完全切除、50例で妊孕性温存手術が行われた。17例が再発し、初回GTS手術後の残存病変のみが再発と有意に関連した。妊孕性温存手術と根治手術で再発率に有意差はなく、妊娠を希望した多くの患者は自然妊娠に至った。",
+    "abstract": "OBJECTIVE: To evaluate the surgical outcomes in a large series of patients with growing teratoma syndrome (GTS). METHODS: We conducted a retrospective study of patients with GTS treated at a tertiary center between 2000 and 2025. RESULTS: A total of 63 patients were included in the current study. The median age at diagnosis of GTS was 25.5 years (range 7-55 years). The median interval between the initial diagnosis of ovarian immature teratoma and the occurrence of GTS was 12.3 months (range 4-367 months). Growing teratoma syndrome developed during adjuvant chemotherapy in 30/63 (47.6%), after chemotherapy in 27/63 (42.9%), and after initial surgery without chemotherapy in 6/63 (9.5%). Complete resection was achieved in 38 patients, and fertility-sparing surgery (FSS) was performed in 50 patients. Seventeen patients experienced at least one recurrence during a median follow-up period of 44 months (range 4-196 months) after initial treatment of GTS. The presence of residual disease after the initial surgery for GTS was the only factor associated with GTS recurrence (P < 0.001). Analysis of risk factors for GTS recurrence revealed no significant difference in relapse rates between FSS and radical surgery patients (30% vs 15.4%, P = 0.290). Seven of nine patients who desired pregnancy subsequently had nine spontaneous pregnancies. CONCLUSIONS: The overall prognosis of ovarian GTS is favorable. Optimal debulking surgery should be performed to reduce the possibility of recurrence. Fertility-sparing surgery appears feasible in carefully selected patients who wish to preserve their fertility, after comprehensive counseling on the risk of recurrence.",
+    "abstract_ja": "目的:大規模な成長奇形腫症候群(GTS)症例シリーズにおける手術成績を評価すること。方法:2000年から2025年に三次医療機関で治療されたGTS患者を対象に後方視的研究を実施した。結果:現在の研究には63例が含まれた。GTS診断時の年齢中央値は25.5歳(範囲7~55歳)であった。卵巣未熟奇形腫の初回診断からGTS発症までの期間中央値は12.3か月(範囲4~367か月)であった。GTSは術後補助化学療法中に30/63例(47.6%)、化学療法後に27/63例(42.9%)、化学療法を行わず初回手術後に6/63例(9.5%)で発症した。38例で完全切除が達成され、50例で妊孕性温存手術(FSS)が施行された。初回治療後の中央値44か月(範囲4~196か月)の追跡期間中に、17例が少なくとも1回再発を経験した。GTSに対する初回手術後の残存病変の存在は、GTS再発と関連する唯一の因子であった(P < 0.001)。再発リスク因子の解析では、FSSと根治手術の患者間で再発率に有意差はなかった(30% vs 15.4%、P = 0.290)。妊娠を希望していた9例中7例が、計9回の自然妊娠に至った。結論:卵巣GTSの全体的な予後は良好である。再発の可能性を減らすため、最適な減量手術を行うべきである。妊孕性温存手術は、再発リスクについて十分な説明を行ったうえで、妊孕性を保持したい慎重に選択された患者において実施可能と思われる。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣成長奇形腫症候群の63例の後方視的解析で、卵巣胚細胞腫瘍の治療成績と妊孕性温存が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "mixed",
+      "hi": [
+        "immature_teratoma"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 63,
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "fertility",
+        "prognosis"
+      ],
+      "st": "retrospective_cohort"
+    }
+  },
+  {
+    "id": "pmid-43020947",
+    "title": "PIWIL2 suppresses pluripotency in the male mouse germline.",
+    "title_ja": "PIWIL2はマウス雄性生殖系列における多能性を抑制する",
+    "authors": [
+      "Shiromoto Y",
+      "Mori Y",
+      "Hirose M",
+      "Kanatsu-Shinohara M",
+      "Morimoto H",
+      "Kuramochi-Miyagawa S",
+      "Yamamoto T",
+      "Ogura A",
+      "Shinohara T"
+    ],
+    "journal": "EMBO Rep",
+    "year": 2026,
+    "pmid": "43020947",
+    "doi": "10.1038/s44319-026-00965-4",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This mouse study identifies PIWIL2 as a suppressor of pluripotency in the male germline. Piwil2-deficient spermatogonial stem cells aberrantly express SOX2 and acquire pluripotency when Dmrt1 and Trp53 are also lost. Piwil2 deficiency reduces DNA methylation at the Sox2 promoter and increases DMRT1 and DAZL, which jointly restrict Sox2 expression. The findings reveal a role for PIWIL2 in maintaining germ cell identity by coordinating transcriptional and translational regulation.",
+    "summary_ja": "マウス精子幹細胞において、PIWIL2が雄性生殖系列の多能性を抑制することを示した基礎研究である。Piwil2欠損の精原幹細胞はSOX2を異常発現し、Dmrt1とTrp53も欠失すると多能性を獲得した。Piwil2欠損はSox2プロモーターのDNAメチル化を減少させ、DMRT1とDAZLを増加させてSox2発現を制限していた。胚細胞の同一性維持におけるPIWIL2の役割が明らかになった。",
+    "abstract": "Germ cells can give rise to teratomas and express pluripotency-associated genes, yet they remain intrinsically resistant to reprogramming by Yamanaka factors. The mechanisms governing this resistance are poorly understood. Here we identify PIWIL2 as a key suppressor of pluripotency in the male germline. While spermatogonial stem cells (SSCs) normally lack SOX2 expression, Piwil2- but not Piwil4-deficient SSCs aberrantly express SOX2 and readily acquire pluripotency upon concurrent loss of Dmrt1 and Trp53. piRNAs associated with the Sox2 locus are detected in embryonic gonocytes but not in SSCs. Piwil2 deficiency reduces DNA methylation at the Sox2 promoter and increases DMRT1 and the RNA-binding protein DAZL, which jointly restrict Sox2 expression. These findings reveal a previously unrecognized role of PIWIL2 in repressing germline pluripotency and underscore the importance of coordinated transcriptional and translational regulation in maintaining germ cell identity.",
+    "abstract_ja": "胚細胞は奇形腫を生じうるとともに多能性関連遺伝子を発現するが、山中因子による初期化に対しては本質的に抵抗性を示す。この抵抗性を制御する機構はよくわかっていない。本研究では、雄性生殖系列における多能性の主要な抑制因子としてPIWIL2を同定した。精原幹細胞(SSC)は通常SOX2を発現しないが、Piwil2欠損SSCはSOX2を異常発現し、Dmrt1およびTrp53の同時欠失により容易に多能性を獲得した。一方、Piwil4欠損では同様の現象は認めなかった。Soxローカス関連piRNAは胚性生殖細胞(ゴノサイト)では検出されたが、SSCでは検出されなかった。Piwil2欠損はSox2プロモーターのDNAメチル化を減少させ、DMRT1とRNA結合蛋白質DAZLを増加させ、これらが共同でSox2発現を制限していた。これらの知見は、生殖系列の多能性抑制におけるPIWIL2の未知の役割を明らかにし、胚細胞の同一性維持における転写および翻訳の協調的制御の重要性を示している。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "精原幹細胞における多能性抑制の機構を扱う研究であり、胚細胞の生物学が主題で、奇形腫は背景として言及されるにとどまるが、胚細胞の多能性は本サイトの範囲に含まれる基礎研究である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00"
+  },
+  {
+    "id": "pmid-43021910",
+    "title": "Clinical characteristics and treatment strategies of ovarian teratomas associated with anti-N-methyl-D-aspartate receptor encephalitis based on a case series.",
+    "title_ja": "卵巣奇形腫に伴う抗NMDA受容体脳炎の臨床的特徴と治療戦略:症例集積に基づく検討",
+    "authors": [
+      "Yang H",
+      "Fang C",
+      "Wang S"
+    ],
+    "journal": "Front Neurol",
+    "year": 2026,
+    "pmid": "43021910",
+    "doi": "10.3389/fneur.2026.1817027",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This retrospective case series analyzed 17 patients with anti-NMDAR encephalitis associated with ovarian teratoma at a single center over ten years. All received immunotherapy and tumor resection and improved clinically, but functional recovery at 3 months was limited, with only 24% achieving mRS ≤2. Two patients had prior teratoma and methotrexate treatment, a possible risk association based on very small numbers. The authors emphasize early multidisciplinary care with prompt immunotherapy and resection.",
+    "summary_ja": "単施設で10年間に卵巣奇形腫関連抗NMDAR脳炎を発症した17例を後方視的に解析した症例集積である。全例が免疫療法と腫瘍切除を受け臨床的改善を得たが、3か月時点でmRS≦2は24%にとどまった。既往に奇形腫とメトトレキサート治療を有する2例があり、リスクの可能性が示唆された。早期の多職種連携と迅速な免疫療法・切除が重要とされた。",
+    "abstract": "INTRODUCTION: Anti-N-methyl-D-aspartate receptor (anti-NMDAR) encephalitis is a potentially life-threatening yet reversible complication associated with ovarian teratoma. This study aims to systematically analyze the clinical features of anti-NMDAR encephalitis related to ovarian teratoma, with the goal of enhancing our understanding of the disease. METHODS: A retrospective analysis was performed on 17 patients with anti-NMDAR encephalitis associated with ovarian teratomas, who were admitted to Xuanwu Hospital, Capital Medical University, from August 2015 to August 2025. A systematic analysis was performed on their complete clinical data, including demographic characteristics, prodromal symptoms, typical neurological and psychiatric manifestations, cerebrospinal fluid and neuroimaging findings, anti-NMDAR antibody in cerebrospinal fluid, pathological features of the ovarian teratomas, comprehensive treatment strategies and follow-up outcomes. RESULTS: In this study, the age of the included patients was 25 years (21, 29). The time from symptom onset to diagnosis was 16 days (10.5, 27). The time from hospital admission to diagnosis was 4 days (2.5, 7). Two patients had a history of teratomas and methotrexate treatment. 15 patients (15/17, 88%) were directly admitted to the intensive care unit, while only 2 (2/17, 12%) were treated in general wards. The patients predominantly presented with multiple neurological abnormalities without clinical signs of teratoma compression. All patients received immunotherapy and tumor resection, and all patients achieved clinical improvement. At 3 months after surgery, mRS ≤ 2 was achieved in patients (4/17, 24%), mRS 3-4 in 5 paitents (5/17, 29%), and mRS 5 in 8 patients (8/17, 47%). Although all patients met the pre-defined criterion of clinical improvement in at least one neurological symptom, functional recovery remained limited. CONCLUSION: A history of teratoma and methotrexate treatment may be associated with a higher risk of teratoma-associated anti-NMDAR encephalitis; however, this observation was based on only two patients and warrants further investigation. The disease is characterized by acute onset and rapid progression, and clinical improvement can be achieved through multidisciplinary collaboration combined with prompt immunotherapy and tumor resection.",
+    "abstract_ja": "序論:抗N-メチル-D-アスパラギン酸受容体(抗NMDAR)脳炎は、卵巣奇形腫に伴う生命を脅かしうるが可逆的な合併症である。本研究は、卵巣奇形腫に関連する抗NMDAR脳炎の臨床的特徴を系統的に解析し、本疾患の理解を深めることを目的とする。方法:2015年8月から2025年8月まで首都医科大学宣武病院に入院した、卵巣奇形腫に関連する抗NMDAR脳炎の17例について後方視的解析を実施した。人口統計学的特徴、前駆症状、典型的な神経症状および精神症状、脳脊髄液および神経画像所見、脳脊髄液中の抗NMDAR抗体、卵巣奇形腫の病理学的特徴、包括的治療戦略、および経過観察の結果を含む、完全な臨床データを系統的に解析した。結果:対象患者の年齢は25歳(21、29)であった。症状発現から診断までの期間は16日(10.5、27)、入院から診断までの期間は4日(2.5、7)であった。2例は奇形腫およびメトトレキサート治療の既往があった。15例(15/17、88%)は直接集中治療室に入院し、2例(2/17、12%)のみが一般病棟で治療された。患者は主に奇形腫による圧迫の臨床所見を伴わず、複数の神経学的異常を呈した。全例が免疫療法と腫瘍切除を受け、全例で臨床的改善が得られた。術後3か月の時点で、mRS≦2は4/17例(24%)、mRS 3-4は5/17例(29%)、mRS 5は8/17例(47%)であった。全例が少なくとも1つの神経症状の改善という事前設定の基準を満たしたが、機能的回復は限定的であった。結論:奇形腫およびメトトレキサート治療の既往は、奇形腫関連抗NMDAR脳炎のリスク上昇と関連している可能性があるが、この所見は2例のみに基づくものであり、さらなる検討が必要である。本疾患は急性発症と急速な進行を特徴とし、多職種連携による迅速な免疫療法と腫瘍切除により臨床的改善が得られうる。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣奇形腫に伴う抗NMDAR脳炎の症例集積であり、非CNSの胚細胞腫瘍の神経合併症が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "ovary",
+      "ag": "adult",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 17,
+      "th": [
+        "surgery",
+        "prognosis"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43031745",
+    "title": "Case Report: Sodium glucose cotransporter 2 inhibitor use in a pediatric patient with cancer receiving cisplatin.",
+    "title_ja": "シスプラチン投与中の小児がん患者におけるSGLT2阻害薬の使用:症例報告",
+    "authors": [
+      "Elsamny E",
+      "Elgehiny A",
+      "Swinford R"
+    ],
+    "journal": "Front Pediatr",
+    "year": 2026,
+    "pmid": "43031745",
+    "doi": "10.3389/fped.2026.1906970",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes an adolescent male with metastatic germ cell tumor treated extensively with cisplatin, whose course was complicated by hypertension, hypomagnesemia, and declining GFR. An SGLT2 inhibitor was added three months into treatment, after which GFR stabilized and proteinuria resolved despite continued cisplatin. Magnesium supplementation could be stopped while levels remained adequate on oral magnesium, and antihypertensives were discontinued. The authors suggest a potential role for SGLT2 inhibitors in pediatric oncology, though the use is off-label.",
+    "summary_ja": "転移性胚細胞腫瘍の男児に対し、シスプラチンを大量投与した経過で、高血圧・低マグネシウム血症・GFR低下が生じた症例報告である。治療3か月後にSGLT2阻害薬を開始したところ、シスプラチン継続下でGFRが安定し蛋白尿も消失した。静脈内マグネシウムを中止し、降圧薬も中止できた。小児腫瘍学におけるSGLT2阻害薬の役割の可能性が示唆された。",
+    "abstract": "Cisplatin is a foundation chemotherapeutic for pediatric germ cell tumors; however, its dose-dependent nephrotoxicity can limit use. Hypomagnesemia is a challenging side effect, and patients often remain hypomagnesemic despite IV and oral magnesium (Mg) supplementation. Sodium Glucose Cotransporter 2 inhibitors (SGLT2is) have been shown to mitigate cisplatin-induced nephrotoxicity (CIN) and reduce urinary Mg wasting in adults, but their use remains off-label and limited in pediatrics. We report a case of an adolescent male with metastatic germ cell tumor treated extensively with cisplatin, whose course was complicated by hypertension, hypomagnesemia, and a declining glomerular filtration rate (GFR). An SGLT2i was started three months into treatment. His GFR stabilized and his proteinuria resolved despite continued treatment with cisplatin. Additionally, he discontinued IV Mg supplementation while maintaining adequate levels on oral Mg, and his blood pressure improved with discontinuation of antihypertensives. This case highlights a potential role of SGLT2is in pediatric oncology.",
+    "abstract_ja": "シスプラチンは小児胚細胞腫瘍の基幹となる化学療法薬であるが、用量依存性の腎毒性によりその使用が制限されることがある。低マグネシウム血症は困難な副作用であり、患者は静脈内および経口のマグネシウム補充を行っても低マグネシウム血症が持続することが多い。SGLT2阻害薬(SGLT2i)は成人においてシスプラチン誘発性腎毒性(CIN)を軽減し、尿中マグネシウム喪失を減少させることが示されているが、小児における使用は適応外であり限られている。本報告では、転移性胚細胞腫瘍を有し、シスプラチンを広範に投与された思春期男性の症例を提示する。経過中に高血圧、低マグネシウム血症、糸球体濾過量(GFR)の低下を合併した。治療開始から3か月後にSGLT2iを開始したところ、シスプラチンを継続したにもかかわらずGFRは安定し、蛋白尿は消失した。さらに、経口マグネシウムで十分な血中濃度を維持しながら静脈内マグネシウム補充を中止でき、降圧薬の中止により血圧も改善した。本症例は、小児腫瘍学におけるSGLT2阻害薬の潜在的な役割を示している。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "小児の転移性胚細胞腫瘍患者におけるシスプラチン腎毒性への対策を扱う症例報告で、胚細胞腫瘍の化学療法が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "sx": "male",
+      "ag": "adolescent",
+      "hi": [
+        "gct_nos"
+      ],
+      "tr": [
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "chemotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43032165",
+    "title": "Phantom-Based Study on Testicular Dose Protection Using Different Thicknesses of Low-Melting-Point Lead Shields in Postoperative Radiotherapy for Seminoma.",
+    "title_ja": "セミノーマ術後放射線療法における異なる厚さの低融点鉛シールドによる精巣線量防護に関するファントム研究",
+    "authors": [
+      "Zou L",
+      "Fei H",
+      "Zhu W",
+      "Wang H",
+      "Zhou G",
+      "Tian Y"
+    ],
+    "journal": "Dose Response",
+    "year": 2026,
+    "pmid": "43032165",
+    "doi": "10.1177/15593258261491425",
+    "url": "",
+    "tags": [
+      "その他"
+    ],
+    "summary_en": "This phantom-based dosimetry study evaluated how low-melting-point lead shields of varying thickness and field-edge distance reduce contralateral testicular dose during postoperative radiotherapy for seminoma. Using a 3D-CRT plan on an anthropomorphic phantom and ionization chamber measurements, the authors found that testicular dose fell exponentially with greater shield thickness and distance. For the nominal 26 Gy scenario, 3 mm shielding at 10 cm yielded 0.315 Gy, and 7 mm at 4 cm yielded 0.481 Gy. The study concludes that customized shields can effectively reduce scattered dose.",
+    "summary_ja": "セミノーマの術後放射線療法で、反対側精巣への散乱線量を低融点鉛シールドの厚みと照射野辺縁からの距離で評価したファントム研究である。電離箱による計測から、精巣線量はシールド厚と距離に応じて指数関数的に低下した。26 Gyの想定では、10 cmでの3 mmシールドで0.315 Gyとなった。個別化したシールドが散乱線量を効果的に減らしうると結論づけている。",
+    "abstract": "BACKGROUND: This phantom-based study evaluated the effects of low-melting-point lead shield thickness and field-edge distance on contralateral testicular dose. METHODS: A 3D-CRT plan was generated de novo on CT images of the SZMC-IV anthropomorphic phantom; no patient-derived imaging or treatment-plan data were used. A 0.6 cm(3) thimble ionization chamber measured dose per fraction at different field-edge distances without shielding and with 3, 5, 7, 10, and 15 mm lead shields. Measurement-derived normalized doses were fitted using an exponential model. The 36 Gy scenario was evaluated only by linear scaling. RESULTS: Normalized testicular dose decreased exponentially with increasing field-edge distance and shield thickness. For the nominal 26 Gy scenario, measurement-derived cumulative doses were 0.315 Gy with 3 mm shielding at 10 cm and 0.481 Gy with 7 mm shielding at 4 cm. For the hypothetical 36 Gy scenario, the measurement-based linearly scaled estimate was 0.432 Gy with 15 mm shielding at 4 cm. Excluding non-independent 36 Gy estimates, the RMSE was 0.074 Gy. CONCLUSIONS: Customized low-melting-point lead shields can effectively reduce contralateral testicular scattered dose in a phantom-based seminoma radiotherapy setup. The dose reduction depends on both shield thickness and distance from the radiation field edge.",
+    "abstract_ja": "背景:本ファントム研究は、低融点鉛シールドの厚さと照射野辺縁からの距離が反対側精巣線量に与える影響を評価した。方法:解剖学的ファントムSZMC-IVのCT画像上で3D-CRT計画を新たに作成し、0.6 cm³のシンブル形電離箱により、シールドなし、および3、5、7、10、15 mmの鉛シールドを用いて、異なる照射野辺縁距離での1回分割線量を計測した。計測による正規化線量は指数関数モデルで近似した。36 Gyの想定は線形スケーリングのみで評価した。結果:正規化された精巣線量は、照射野辺縁距離とシールド厚の増加に伴い指数関数的に減少した。名目上の26 Gyの想定では、計測由来の累積線量は、10 cmでの3 mmシールドで0.315 Gy、4 cmでの7 mmシールドで0.481 Gyであった。仮定の36 Gyの想定では、4 cmでの15 mmシールドに対する計測ベースの線形換算推定値は0.432 Gyであった。非独立の36 Gy推定値を除外すると、RMSEは0.074 Gyであった。結論:個別化した低融点鉛シールドは、ファントムによるセミノーマ放射線療法の設定において、反対側精巣の散乱線量を効果的に低減しうる。線量低減はシールド厚と照射野辺縁からの距離の両方に依存する。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "セミノーマの術後放射線療法における精巣被曝低減を扱う研究で、セミノーマの治療が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "th": [
+        "radiotherapy"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43033371",
+    "title": "Distinct cellular source and bulk immune correlates of HAVCR2 expression in seminoma.",
+    "title_ja": "セミノーマにおけるHAVCR2発現の細胞起源とバルクの免疫学的相関",
+    "authors": [
+      "Kim SH",
+      "Lee DY",
+      "Kim MG",
+      "Jung MJ",
+      "Han TW",
+      "Yang HJ",
+      "Kim DS",
+      "Kim HJ",
+      "Lee CH",
+      "Jeon YS",
+      "Lee JH",
+      "Kim KH"
+    ],
+    "journal": "Med Oncol",
+    "year": 2026,
+    "pmid": "43033371",
+    "doi": "10.1007/s12032-026-03507-z",
+    "url": "",
+    "tags": [
+      "基礎・トランスレーショナル"
+    ],
+    "summary_en": "This transcriptomic study of seminoma used TCGA bulk data and an independent GSE3218 cohort to examine how HAVCR2 (TIM-3) expression relates to immune signatures after adjusting for overall immune infiltration. Macrophage-related signatures remained associated with HAVCR2 after adjustment, while single-cell RNA-seq showed HAVCR2 expression across macrophages, exhausted CD8 T cells, and proliferating T cells, with tumor cells showing background levels. The authors conclude that bulk HAVCR2 reflects a macrophage-associated immune context, without implying a causal role for macrophages in prognosis.",
+    "summary_ja": "セミノーマを対象に、TCGAおよびGSE3218のバルク転写産物データと単一細胞RNA-seqを用いてHAVCR2(TIM-3)発現と免疫関連シグネチャーの関係を解析した研究である。全体的な免疫浸潤で補正後も、マクロファージ関連シグネチャーがHAVCR2と関連した。単一細胞解析では腫瘍細胞での発現は低く、HAVCR2陽性細胞はマクロファージや疲弊型CD8 T細胞などに認められた。バイオマーカーとしての解釈への示唆が示された。",
+    "abstract": "HAVCR2 (T-cell immunoglobulin and mucin domain-containing protein 3; TIM-3) expression is associated with favorable prognosis in seminoma, but its underlying immune context remains unclear. We sought to distinguish the cellular source of HAVCR2 from the immune correlates of its interpatient bulk expression using bulk and single-cell transcriptomic datasets. In The Cancer Genome Atlas (TCGA) seminoma discovery cohort (n = 64), we evaluated associations between HAVCR2 expression and eight predefined immune-compartment signatures, adjusting for overall immune infiltration using PTPRC (CD45) and the ESTIMATE algorithm. After adjustment, associations with T-cell-, cytotoxicity-, and checkpoint-related signatures were attenuated or lost, whereas macrophage-related signatures remained correlated with HAVCR2 expression; on mutual adjustment, the general macrophage rather than the M2-associated signature retained this association. In an independent bulk cohort (GSE3218, n = 13), the M2-associated signature remained associated with HAVCR2 after PTPRC adjustment, whereas the general macrophage association was directionally concordant but attenuated after adjustment. Single-cell RNA sequencing of a four-donor seminoma cohort (GSE228501) showed background-level HAVCR2 expression in tumor cells, while HAVCR2-positive cells were detected in macrophage, exhaustion-like CD8 T-cell, and proliferating T-cell compartments, with donor-level mean expression numerically higher in exhaustion-like CD8 T cells than in macrophages. Although HAVCR2 was expressed across multiple immune compartments at the single-cell level, interpatient bulk HAVCR2 expression was associated with a macrophage-related immune context beyond overall immune infiltration, whereas the specific macrophage phenotype remained unresolved. These findings inform the interpretation of bulk HAVCR2 as a biomarker, including its previously reported prognostic association, without implying a causal role for macrophages in clinical outcome.",
+    "abstract_ja": "背景:HAVCR2(T細胞免疫グロブリンおよびムチンドメイン含有蛋白質3;TIM-3)の発現は、セミノーマにおける良好な予後と関連しているが、その基盤となる免疫学的背景は不明である。目的:バルクおよび単一細胞トランスクリプトーム解析データを用いて、HAVCR2の細胞起源と、患者間でのバルク発現に伴う免疫学的相関を区別すること。方法:The Cancer Genome Atlas(TCGA)のセミノーマ発見コホート(n = 64)において、PTPRC(CD45)およびESTIMATEアルゴリズムを用いて全体的な免疫浸潤を補正したうえで、HAVCR2発現と8種類の既定の免疫コンパートメントシグネチャーとの関連を評価した。補正後、T細胞、細胞傷害性、およびチェックポイント関連シグネチャーとの関連は減弱または消失したが、マクロファージ関連シグネチャーはHAVCR2発現と関連したままであった。相互補正では、M2関連シグネチャーではなく一般的なマクロファージシグネチャーがこの関連を保持していた。独立したバルクコホート(GSE3218、n = 13)では、PTPRC補正後もM2関連シグネチャーがHAVCR2と関連していたが、一般的なマクロファージの関連は方向性は一致したものの補正後に減弱した。4名の提供者からなるセミノーマコホート(GSE228501)の単一細胞RNA-seqでは、腫瘍細胞におけるHAVCR2発現はバックグラウンドレベルであったが、HAVCR2陽性細胞はマクロファージ、疲弊様CD8 T細胞、増殖性T細胞のコンパートメントで検出された。提供者レベルの平均発現は、マクロファージよりも疲弊様CD8 T細胞で数値的に高かった。結果と結論:HAVCR2は単一細胞レベルで複数の免疫コンパートメントに発現していたが、患者間のバルクHAVCR2発現は全体的な免疫浸潤を超えてマクロファージ関連の免疫学的背景と関連していた。特定のマクロファージ表現型は未解明のままである。これらの知見は、バルクHAVCR2のバイオマーカーとしての解釈、報告されている予後との関連を含めた解釈に影響を与えるが、臨床転帰におけるマクロファージの因果的役割を示唆するものではない。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "セミノーマにおけるHAVCR2発現と免疫微小環境の関連を調べた解析研究で、セミノーマが主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00"
+  },
+  {
+    "id": "pmid-40323580",
+    "title": "Delayed Multiple Cerebral Infarction Following Rupture of a Dermoid Cyst in the Right Lateral Wall of the Cavernous Sinus-Meckel Cave Area.",
+    "title_ja": "海綿静脈洞-Meckel洞領域の右外側壁における類皮嚢腫の破裂後に生じた遅発性多発性脳梗塞",
+    "authors": [
+      "Li G",
+      "Hu H",
+      "Chen J",
+      "Xie B",
+      "Qiu W",
+      "Li B"
+    ],
+    "journal": "J Craniofac Surg",
+    "year": 2026,
+    "pmid": "40323580",
+    "doi": "10.1097/SCS.0000000000011432",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a 50-year-old man with a ruptured intracranial dermoid cyst in the cavernous sinus–Meckel cave region, complicated by delayed multiple cerebral infarctions after surgery. Lipid release was thought to cause inflammatory vascular injury, with diplopia, limb weakness and vascular stenosis. Treatment with nimodipine and steroids led to significant recovery. The authors emphasize careful surgical handling and multidisciplinary postoperative monitoring for complex-site dermoid cysts.",
+    "summary_ja": "海綿静脈洞・Meckel洞領域の頭蓋内類皮嚢腫が破裂し、術後に遅発性脳梗塞を来した50歳男性の症例報告である。脂質の流出が炎症性血管反応を引き起こしたと考えられ、複視、四肢脱力、血管狭窄を認めた。ニモジピンとステロイドにより大きく改善した。複雑な部位の類皮嚢腫では慎重な手術操作と多職種による術後管理が重要とされている。",
+    "abstract": "This case report details a 50-year-old male with a ruptured intracranial dermoid cyst in the right lateral wall of the cavernous sinus-Meckel cave area, leading to delayed cerebral ischemia postsurgery. The rupture released lipid components, potentially causing inflammatory vascular reactions and ischemic events. Initial symptoms included binocular diplopia and later progressed to limb weakness and facial twitching. Imaging revealed cerebral infarction and vascular stenosis, which were managed with nimodipine, steroids, and other therapies, resulting in significant recovery. This case highlights the need for careful surgical handling and postoperative monitoring to prevent complications, emphasizing a multidisciplinary approach for managing dermoid cysts in complex anatomic regions.",
+    "abstract_ja": "本症例報告は、右海綿静脈洞-Meckel洞領域の外側壁に生じた頭蓋内類皮嚢腫が破裂し、術後に遅発性脳虚血を来した50歳男性について述べる。破裂により脂質成分が放出され、炎症性血管反応と虚血性イベントを引き起こした可能性がある。初発症状は複視で、その後、四肢脱力と顔面のけいれんへと進行した。画像検査で脳梗塞と血管狭窄が認められ、ニモジピン、ステロイドなどの治療により、著明な回復が得られた。本症例は、術中の慎重な操作と術後モニタリングの必要性を強調し、複雑な解剖学的部位の類皮嚢腫の管理には多職種によるアプローチが重要であることを示している。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "頭蓋内に生じた類皮嚢腫の破裂後に遅発性脳梗塞を来した症例報告であるが、類皮嚢腫は中枢神経系原発の胚細胞系病変として扱われ、CNS原発の奇形腫様病変が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "cns",
+      "sx": "male",
+      "ag": "adult",
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43003127",
+    "title": "Placental Site Trophoblastic Tumor Presenting as Cervical Pregnancy: A Rare Case Report.",
+    "title_ja": "子宮頸部妊娠として発症した胎盤部トロホブラスト腫瘍：まれな症例報告",
+    "authors": [
+      "Aldur Manjappa A",
+      "Chadha J",
+      "Guru V",
+      "Prakash U",
+      "Meenakshisundaram K"
+    ],
+    "journal": "J Obstet Gynaecol Res",
+    "year": 2026,
+    "pmid": "43003127",
+    "doi": "10.1111/jog.70557",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a 36-year-old multiparous woman with a hypervascular cervical mass initially suspected to be cervical pregnancy and beta-hCG 3493 mIU/mL. Suction evacuation caused massive hemorrhage requiring hysterectomy, and histopathology and immunohistochemistry confirmed placental site trophoblastic tumor. Persistent disease responded incompletely to multiple chemotherapy regimens and pembrolizumab, and was ultimately treated with surgical excision of vaginal vault disease. The authors stress considering PSTT in atypical hypervascular cervical lesions.",
+    "summary_ja": "子宮頸部の高血管性腫瘤を子宮頸部妊娠と疑われた36歳経産婦で、β-hCGは3493 mIU/mLであった症例報告である。吸引除去で大量出血を来し子宮摘出が必要となった。病理組織学的および免疫組織化学的に胎盤部トロホブラスト腫瘍と確定した。残存病変は複数の化学療法レジメンとペムブロリズマブに不完全反応を示し、最終的に膣断端病変を外科的切除した。非典型的な高血管性頸部病変では胎盤部トロホブラスト腫瘍を考慮すべきとされた。",
+    "abstract": "Placental site trophoblastic tumor is a rare gestational trophoblastic neoplasm that may present diagnostic and therapeutic challenges, particularly, when arising in the cervix. A 36-year-old multiparous woman presented with amenorrhea and postcoital bleeding. Imaging revealed an 8 × 8.5 × 7.8 cm hypervascular cervical mass, initially interpreted as cervical pregnancy. Serum beta-human chorionic gonadotropin was 3493 mIU/mL. Massive hemorrhage following suction evacuation necessitated hysterectomy. Histopathology and immunohistochemistry confirmed the diagnosis of placental site trophoblastic tumor. Persistent disease was subsequently treated with multiple chemotherapy regimens and pembrolizumab, with incomplete response. Ultimately, surgical excision of persistent vaginal vault disease was achieved. This case highlights the need to consider placental site trophoblastic tumor in atypical hypervascular cervical lesions with modest beta-human chorionic gonadotropin elevation.",
+    "abstract_ja": "胎盤部トロホブラスト腫瘍は、まれな妊娠絨毛性腫瘍であり、特に子宮頸部に発生した場合に、診断と治療の両面で課題を生じうる。36歳の経産婦が無月経と性交後出血を主訴に受診した。画像検査で8×8.5×7.8cmの高血流性子宮頸部腫瘤が認められ、当初は子宮頸部妊娠と判断された。血清β-hCGは3493 mIU/mLであった。吸引分娩による搔爬後に大量出血が生じ、子宮摘出術が必要となった。病理組織学的検査および免疫組織化学により胎盤部トロホブラスト腫瘍と確定診断された。残存病変に対して複数の化学療法レジメンとペムブロリズマブで治療したが、奏効は不完全であった。最終的に、残存した膣断端病変の外科的切除に成功した。本症例は、β-hCGの上昇が軽度で、非典型的な高血流性子宮頸部病変を呈する場合には、胎盤部トロホブラスト腫瘍を考慮する必要があることを強調している。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "子宮頸部に生じた胎盤部トロホブラスト腫瘍の症例報告で、妊娠性絨毛性疾患が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "sx": "female",
+      "ag": "adult",
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "chemotherapy",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43004562",
+    "title": "Smith-Magenis Syndrome Associated With Oropharyngeal Teratoma Detected in the Prenatal Period: A Case Report.",
+    "title_ja": "出生前に診断された口咽頭奇形腫を伴うスミス・マゲニス症候群：症例報告",
+    "authors": [
+      "Serin S",
+      "Ünver G",
+      "Ekici H",
+      "Koçak İ",
+      "Abur Ü",
+      "Altundağ E"
+    ],
+    "journal": "J Clin Ultrasound",
+    "year": 2026,
+    "pmid": "43004562",
+    "doi": "10.1002/jcu.70468",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes the first prenatal diagnosis of an oropharyngeal teratoma associated with Smith-Magenis syndrome. At 21 weeks, imaging showed an oropharyngeal mass with polyhydramnios and cardiac anomalies, and a 17p11.2 microdeletion was identified. Preterm delivery at 27 weeks was followed by histopathology confirming an immature teratoma. The authors highlight advanced prenatal imaging and molecular cytogenetics for detecting rare microdeletion syndromes.",
+    "summary_ja": "Smith-Magenis症候群に伴う口咽頭奇形腫を出生前に初めて診断した症例報告である。妊娠21週で多羊水、心奇形、口咽頭腫瘤を認め、17p11.2微小欠失により同症候群と確定された。27週で早産となり、病理組織学的に未熟奇形腫と確認された。希少な微小欠失症候群の検出における高度な出生前画像診断と分子細胞遺伝学的検査の重要性が示された。",
+    "abstract": "This report presents the first prenatal diagnosis of an oropharyngeal teratoma associated with Smith-Magenis syndrome (SMS). At 21 weeks of gestation, polyhydramnios, fetal cardiac anomalies, ventriculomegaly, and an oropharyngeal mass were identified. Advanced prenatal imaging and genetic methods identified the del(17)(p11.2) microdeletion confirming the SMS diagnosis. The results obtained were further verified through postmortem fluorescence in situ hybridization (FISH) analysis. Preterm delivery occurred at 27 weeks of gestation, and histopathological examination confirmed an immature teratoma. This case highlights the importance of advanced prenatal imaging and molecular cytogenetic techniques in detecting rare microdeletion syndromes and unusual phenotypic associations, thereby expanding our understanding of the phenotypic variability of SMS.",
+    "abstract_ja": "本報告は、スミス・マゲニス症候群(SMS)に伴う口咽頭奇形腫の初の出生前診断を提示するものである。妊娠21週において、羊水過多、胎児心奇形、脳室拡大、口咽頭腫瘤が認められた。高度な出生前画像検査と遺伝学的検査により、del(17)(p11.2)微小欠失が同定され、SMSの診断が確定した。得られた結果は、死後のFISH解析により再確認された。妊娠27週で早産となり、病理組織学的検査で未熟奇形腫と確認された。本症例は、まれな微小欠失症候群および非典型的な表現型の組み合わせを検出する上で、高度な出生前画像検査と分子細胞遺伝学的手法の重要性を強調し、SMSの表現型の多様性についての理解を広げるものである。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "出生前に診断された口咽頭未熟奇形腫を伴うSmith-Magenis症候群の症例報告で、奇形腫が主要な病変として扱われている。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "other_extragonadal",
+      "hi": [
+        "immature_teratoma"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43005039",
+    "title": "Prepubertal-type testicular teratoma with a neuroblastoma component in an infant: a case report.",
+    "title_ja": "乳児の神経芽腫成分を伴う思春期前型精巣奇形腫：症例報告",
+    "authors": [
+      "Zhang L",
+      "Mei J",
+      "Zhang L",
+      "Liu L",
+      "Yang Y",
+      "Wang L"
+    ],
+    "journal": "Front Oncol",
+    "year": 2026,
+    "pmid": "43005039",
+    "doi": "10.3389/fonc.2026.2000023",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a 4-month-old boy with a right prepubertal-type testicular teratoma containing minute multifocal neuroblastoma components. The tumor was treated with testis-sparing excision, and PHOX2B was diffusely expressed, while FISH showed no MYCN amplification, TERT rearrangement, 1p36 or 11q23 deletion. Imaging showed no extratesticular primary or metastasis, and there was no recurrence over about 14 months of follow-up. The report expands the clinicopathologic spectrum of this rare presentation in infancy.",
+    "summary_ja": "右精巣に前思春期型奇形腫を有する生後4か月男児で、微小な多巣性神経芽腫成分を含んでいた症例報告である。精巣温存切除が行われ、PHOX2Bがびまん性に陽性であった。FISHでMYCN増幅やTERT再構成、1p36・11q23欠失は認めなかった。画像上、精巣外原発や転移は認めず、約14か月の経過観察で再発はなかった。乳児期のこの稀な病態の臨床病理学的特徴を拡げる報告である。",
+    "abstract": "Prepubertal-type testicular teratomas generally show benign biological behavior and may contain mature or immature neural tissue. A peripheral neuroblastoma component, however, is exceptionally rare and can be difficult to distinguish from conventional immature neuroepithelium. We report a boy aged 4 months and 25 days with a right testicular teratoma treated by testis-sparing excision. Histopathologic examination identified minute, multifocal neuroblastoma components within a prepubertal-type testicular teratoma. The lesional cells showed diffuse strong nuclear expression of paired-like homeobox 2B (PHOX2B). Fluorescence in situ hybridization (FISH) showed no MYCN amplification, telomerase reverse transcriptase (TERT) rearrangement, 1p36 deletion, or 11q23 deletion. Imaging revealed no extratesticular primary tumor or metastatic disease, and no recurrence or metastasis was observed during approximately 14 months of follow-up. This case expands the clinicopathologic spectrum of prepubertal-type testicular teratoma and provides additional morphologic, immunophenotypic, and molecular characterization of this rare presentation in infancy.",
+    "abstract_ja": "思春期前型精巣奇形腫は一般に良性の生物学的挙動を示し、成熟または未熟な神経組織を含みうる。しかし、末梢の神経芽腫成分はきわめてまれであり、従来の未熟神経上皮と区別することが困難な場合がある。生後4か月25日の男児に生じた右精巣奇形腫を、精巣温存切除術で治療した症例を報告する。病理組織学的検査では、思春期前型精巣奇形腫内に微小で多巣性の神経芽腫成分が認められた。病変細胞はPHOX2B(paired-like homeobox 2B)のびまん性かつ強い核発現を示した。蛍光in situハイブリダイゼーション(FISH)では、MYCN増幅、テロメラーゼ逆転写酵素(TERT)転座、1p36欠失、11q23欠失は認められなかった。画像検査では精巣外原発腫瘍や転移性疾患はみられず、約14か月の経過観察中に再発や転移は認められなかった。本症例は思春期前型精巣奇形腫の臨床病理学的スペクトラムを拡げ、乳児期におけるこのまれな病態の形態学的、免疫表現型的、および分子学的特徴づけを追加するものである。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "乳児の精巣奇形腫に神経芽腫成分を伴った症例報告で、精巣胚細胞腫瘍が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "testis",
+      "sx": "male",
+      "ag": "infant",
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43005711",
+    "title": "Pregnancy-Associated Torsion of an Ovarian Dermoid Cyst: A Case Report.",
+    "title_ja": "妊娠に伴った卵巣類皮嚢腫の捻転：症例報告",
+    "authors": [
+      "Sharma J",
+      "Raj N",
+      "K B",
+      "Sarawagi R",
+      "Yadav SK"
+    ],
+    "journal": "Cureus",
+    "year": 2026,
+    "pmid": "43005711",
+    "doi": "10.7759/cureus.117720",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a 27-year-old pregnant woman at 20 weeks with a large left adnexal mass that was initially suspected to be malignant on ultrasound. Non-contrast MRI showed a hemorrhagic cystic lesion without macroscopic fat and a twisted pedicle, indicating torsion. Laparoscopic salpingo-oophorectomy confirmed a mature cystic teratoma with gangrenous change, and the pregnancy continued to a healthy term delivery. The authors note that torsion-related hemorrhage can obscure typical teratoma imaging features.",
+    "summary_ja": "妊娠20週の27歳女性で、左付属器に大きな複合性腫瘤を認め、超音波では悪性を疑われた症例報告である。非造影MRIで脂肪成分の乏しい出血性嚢胞性病変と捻転した茎が確認され、捻転と判断された。腹腔鏡下左卵管卵巣摘出術で壊疽性変化を伴う成熟嚢胞性奇形腫と確定した。妊娠は合併症なく継続し、健常児が出産された。捻転による出血や壊死は典型的な画像所見を隠しうると述べられている。",
+    "abstract": "We report the case of a 27-year-old woman, gravida 2, para 1, with one living child (G2P1L1), who presented at 20 weeks of gestation with a 15-day history of left-sided abdominal pain that had become severe and refractory to analgesics. Transabdominal ultrasonography showed a large (13 × 12 × 10 cm) complex left adnexal mass with solid-appearing papillary projections without internal vascularity on color Doppler interrogation, corresponding to Ovarian-Adnexal Reporting and Data System (O-RADS) category 4. Subsequent non-contrast pelvic magnetic resonance imaging (MRI) revealed a hemorrhagic cystic lesion with no detectable macroscopic fat and a twisted left fallopian tube and vascular pedicle, findings suggestive of adnexal torsion. The patient underwent emergency laparoscopic left salpingo-oophorectomy for a gangrenous adnexal mass, and histopathological examination confirmed a mature cystic teratoma with gangrenous changes. The pregnancy continued without complication, and a healthy male neonate was delivered at term. In this case, no macroscopic fat was detected on imaging, possibly because of torsion-related hemorrhage and necrosis, and the lesion mimicked a malignant adnexal mass on ultrasonography. Recognition of the twisted vascular pedicle on non-contrast MRI redirected the working diagnosis from suspected malignancy to torsion. Torsion with hemorrhagic or necrotic change may obscure the typical imaging appearance of a mature cystic teratoma, and a twisted vascular pedicle on non-contrast MRI may provide an important diagnostic clue when sonographic findings are inconclusive.",
+    "abstract_ja": "27歳の女性(妊娠2回、経産1回、生存児1人、G2P1L1)が、妊娠20週で、15日間続いた左側腹痛が強くなり鎮痛薬に反応しない状態で受診した。経腹超音波検査では、13×12×10cmの複雑な左付属器腫瘤が認められ、カラードプラでは内部血流のない充実性に見える乳頭状突起を伴っていた。これはOvarian-Adnexal Reporting and Data System(O-RADS)カテゴリー4に相当した。その後の非造影骨盤磁気共鳴画像法(MRI)では、巨視的な脂肪を検出できない出血性嚢胞性病変と、捻転した左卵管および血管茎が認められ、付属器捻転を示唆する所見であった。壊疽性の付属器腫瘤に対して緊急腹腔鏡下左卵管卵巣摘出術を施行し、病理組織学的検査により壊疽性変化を伴う成熟嚢胞性奇形腫と確認された。妊娠は合併症なく継続し、健康な男児新生児が満期で出産した。本症例では、捻転に伴う出血および壊死のため画像上巨視的脂肪が検出されず、超音波検査では悪性付属器腫瘤に類似していた。非造影MRIで捻転した血管茎を認識したことにより、作業診断を悪性腫瘍の疑いから捻転へと修正することができた。出血性または壊死性変化を伴う捻転は成熟嚢胞性奇形腫の典型的な画像所見を不明瞭にすることがあり、超音波所見が決定的でない場合には、非造影MRIでの捻転血管茎が重要な診断の手掛かりとなりうる。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "妊娠中に生じた卵巣成熟嚢胞性奇形腫の捻転を扱う症例報告で、卵巣奇形腫が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "mature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43005935",
+    "title": "Neonatal Immature Retroperitoneal Teratoma With Pancreatic Involvement and Intraoperative Findings Mimicking Fetus in Fetu.",
+    "title_ja": "胎児内胎児様所見を呈した、膵臓浸潤を伴う新生児後腹膜未熟奇形腫",
+    "authors": [
+      "Sánchez Román PE",
+      "Andrade Montesdeoca JI",
+      "Salinas Salinas VA",
+      "Oliveros-Rivero J"
+    ],
+    "journal": "Cureus",
+    "year": 2026,
+    "pmid": "43005935",
+    "doi": "10.7759/cureus.117703",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a two-day-old male neonate with a 9 cm retroperitoneal lesion containing solid, cystic and calcified components, which compressed major vessels and appeared to involve the pancreatic tail. Intraoperative findings resembled fetus in fetu, and histopathology confirmed a grade 3 extragonadal immature teratoma. The tumor was resected with partial pancreatic tail resection, and the postoperative course was favorable. The authors stress preoperative imaging, careful dissection, and histopathological confirmation.",
+    "summary_ja": "生後2日の男児に発生した9 cmの後腹膜病変で、固形・嚢胞性・石灰化成分を含み、主要血管を圧迫し膵尾部への関与が疑われた症例報告である。術中所見は胎児内胎児に類似していた。病理組織学的に性腺外の未熟奇形腫(grade 3)と確定した。膵尾部の部分切除を伴う腫瘍切除後、経過は良好であった。術前画像診断と病理学的確認の重要性が強調された。",
+    "abstract": "Retroperitoneal teratomas are uncommon pediatric germ cell tumors and are exceptional during the neonatal period. Their diagnosis and treatment are challenging because they may compress major abdominal vessels and involve adjacent organs. We report the case of a two-day-old male neonate who presented with progressive abdominal distension and a palpable abdominal mass. Ultrasonography and computed tomography demonstrated a 9 × 9 cm heterogeneous retroperitoneal lesion with solid, cystic, and calcified components, associated with displacement of bowel loops, compression of major vessels, and apparent pancreatic involvement. Exploratory laparotomy with tumor resection was performed. Intraoperatively, the lesion showed macroscopic structures resembling a hand and a foot, raising the differential diagnosis of fetus in fetu. The pancreatic tail was considered involved intraoperatively and was resected, while the pancreatic head and body were preserved. Histopathological examination confirmed a grade 3 extragonadal immature teratoma with no vertebral axis. The pathology report also described partial pancreatic tail involvement; however, the available pathology documentation did not further characterize the pancreatic-tumor interface or the pancreatic resection margin. The postoperative hospital course was favorable, although prolonged neonatal intensive care was required. This case highlights the importance of preoperative imaging, careful retroperitoneal dissection, vascular control, patient-specific clarification of distorted anatomy, and histopathological confirmation when evaluating complex neonatal abdominal masses.",
+    "abstract_ja": "後腹膜奇形腫は小児における胚細胞腫瘍としてはまれであり、新生児期にはきわめて例外的である。主要な腹部血管を圧迫し、隣接臓器を巻き込むことがあるため、診断と治療は困難である。生後2日の男児新生児が、進行性の腹部膨満と触知可能な腹部腫瘤を呈して受診した。超音波検査およびコンピュータ断層撮影により、9×9cmの不均一な後腹膜病変が認められ、充実性、嚢胞性、石灰化成分を伴い、腸管の偏位、主要血管の圧迫、膵臓への明らかな浸潤を伴っていた。開腹下腫瘍切除術を施行した。術中所見では、病変は手および足に似た肉眼的構造を示し、胎児内胎児の鑑別診断が問題となった。膵尾部は術中に浸潤があると判断され切除されたが、膵頭部と膵体部は温存された。病理組織学的検査により、脊椎軸を伴わないグレード3の性腺外未熟奇形腫と確認された。病理報告では膵尾部の部分的な浸潤も記載されていたが、利用可能な病理資料では膵腫瘍境界および膵切離断端についての詳細な評価はなされていなかった。術後経過は良好であったが、長期の新生児集中治療を要した。本症例は、複雑な新生児腹部腫瘤の評価において、術前画像診断、慎重な後腹膜剥離、血管コントロール、歪んだ解剖の患者個別の確認、および病理組織学的確認の重要性を強調している。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "性腺外の後腹膜未熟奇形腫の新生児例を扱う症例報告で、胚細胞腫瘍が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "retroperitoneum",
+      "sx": "male",
+      "ag": "infant",
+      "hi": [
+        "immature_teratoma"
+      ],
+      "tr": [
+        "surgery"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surgery",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43005952",
+    "title": "Squamous Cell Carcinoma Arising in a Mature Cystic Teratoma of the Ovary: A Case Report.",
+    "title_ja": "卵巣成熟嚢胞性奇形腫に生じた扁平上皮癌：症例報告",
+    "authors": [
+      "Sharma S",
+      "Gupta M",
+      "Verma T",
+      "Gupta N",
+      "Ravel V"
+    ],
+    "journal": "Cureus",
+    "year": 2026,
+    "pmid": "43005952",
+    "doi": "10.7759/cureus.117733",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a 46-year-old perimenopausal woman with bilateral mature cystic teratomas of the ovary, in which malignant transformation to moderately differentiated squamous cell carcinoma occurred in the left ovary. Markedly elevated CA-125 and a large tumor prompted total hysterectomy with bilateral salpingo-oophorectomy. After adjuvant carboplatin and paclitaxel, she remained disease-free at 6 months. The case highlights the importance of considering malignant transformation in perimenopausal women with large bilateral teratomas and high tumor markers.",
+    "summary_ja": "両側卵巣成熟嚢胞性奇形腫を有する46歳の周閉経期女性で、左卵巣に中等度分化型扁平上皮癌への悪性転化が生じた症例報告である。CA-125の著明な上昇と大きな腫瘍からTAH-BSOが行われた。術後にカルボプラチンとパクリタキセルによる補助化学療法を受け、6か月時点で無病であった。大きな両側奇形腫と高度の腫瘍マーカー上昇を伴う周閉経期女性では悪性転化を考慮することが重要である。",
+    "abstract": "Mature cystic teratoma (MCT) is a common benign ovarian germ cell tumor, although malignant transformation occurs rarely in 1-2% of cases, most frequently into squamous cell carcinoma (SCC). Bilateral MCTs with malignant transformation occurring in only one ovary are uncommon. A 46-year-old perimenopausal woman presented with incomplete bladder emptying and lower abdominal pain. Clinical evaluation revealed several features associated with malignant transformation, including age >40 years, a large mass (12.2 cm), bilateral MCTs, and markedly elevated cancer antigen 125 (CA-125) at 185.9 U/mL. The patient underwent total abdominal hysterectomy with bilateral salpingo-oophorectomy (TAH-BSO), with histopathology confirming malignant transformation into moderately differentiated SCC within the left ovarian MCT capsule, with intact tumor protein 63 (p63) and p40 nuclear positivity supporting the squamous phenotype, alongside a benign right ovarian MCT. Postoperative positron emission tomography-computed tomography (PET-CT) showed no evidence of metastatic disease, and serum CA-125 decreased to 35.0 U/mL. She subsequently received adjuvant carboplatin and paclitaxel chemotherapy and remained without evidence of disease at 6-month follow-up. This case highlights the importance of considering malignant transformation in perimenopausal women with large, bilateral MCTs and elevated tumor markers.",
+    "abstract_ja": "成熟嚢胞性奇形腫(MCT)は一般的な良性の卵巣胚細胞腫瘍であるが、悪性転化は症例の1～2%でまれに起こり、最も多いのは扁平上皮癌(SCC)への転化である。片側の卵巣のみで悪性転化を伴う両側MCTはまれである。46歳の閉経周辺期の女性が、膀胱の不完全排尿と下腹部痛を訴えて受診した。臨床評価では、40歳超の年齢、12.2cmの大きな腫瘤、両側MCT、CA-125の著明な上昇(185.9 U/mL)など、悪性転化に関連するいくつかの特徴が認められた。全腹式子宮摘出術および両側卵管卵巣摘出術(TAH-BSO)を施行したところ、病理組織学的に左卵巣MCT被膜内に中等度分化型SCCへの悪性転化が確認された。腫瘍蛋白p63およびp40の核陽性が扁平上皮表現型を裏付けた。右卵巣のMCTは良性であった。術後の陽電子放射断層撮影-コンピュータ断層撮影(PET-CT)では転移性疾患の所見はなく、血清CA-125は35.0 U/mLに低下した。その後、補助療法としてカルボプラチンとパクリタキセルによる化学療法を受け、6か月のフォローアップ時点で病変の残存を認めなかった。本症例は、閉経周辺期の女性で大きな両側MCTおよび腫瘍マーカーの上昇がみられた場合に、悪性転化を考慮することの重要性を示している。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "卵巣成熟嚢胞性奇形腫からの扁平上皮癌への悪性転化を扱う症例報告で、卵巣胚細胞腫瘍が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "ovary",
+      "sx": "female",
+      "ag": "adult",
+      "hi": [
+        "mature_teratoma",
+        "teratoma_with_malignant_transformation"
+      ],
+      "tr": [
+        "surgery",
+        "chemotherapy"
+      ],
+      "n": 1,
+      "th": [
+        "surgery",
+        "chemotherapy",
+        "pathology_molecular"
+      ]
+    }
+  },
+  {
+    "id": "pmid-43011507",
+    "title": "False-Positive Elevation of Serum Levels of Human Chorionic Gonadotropin (hCG) Evoked by Dietary Supplements in a Patient With Testicular Seminoma-A Case Report.",
+    "title_ja": "テスティキュラーセミノーマ患者において食事補助食品により誘発された血清ヒト絨毛性ゴナドトロピン(hCG)の偽陽性上昇：症例報告",
+    "authors": [
+      "Dieckmann KP",
+      "Angerer M",
+      "Schnabel C",
+      "Wülfing C"
+    ],
+    "journal": "Clin Case Rep",
+    "year": 2026,
+    "pmid": "43011507",
+    "doi": "10.1002/ccr3.73904",
+    "url": "",
+    "tags": [
+      "症例報告・集積"
+    ],
+    "summary_en": "This case report describes a 26-year-old man who developed false-positive hCG elevation two years after being cured of testicular seminoma. The levels normalized without intervention after he stopped oral dietary supplements containing creatine, multivitamins, and amino acid powder. The case highlights the need to consider supplement use when interpreting tumor marker elevations during surveillance.",
+    "summary_ja": "精巣セミノーマの治癒後2年の26歳男性で、hCGの偽陽性上昇が認められた症例報告である。クレアチン、マルチビタミン、アミノ酸パウダーを含む経口サプリメントを中止すると、介入なしに値は正常化した。監視中に腫瘍マーカーの上昇を解釈する際は、サプリメント摂取を考慮する必要があることが示された。",
+    "abstract": "A 26-year-old patient developed false-positive elevation of human chorionic gonadotropin (hCG) serum levels 2 years after cure from testicular seminoma. The increased levels normalized without any intervention after cessation of oral intake of dietary supplements consisting of creatine, multivitamin pills, and amino acid powder.",
+    "abstract_ja": "26歳の患者が、精巣セミノーマの治癒後2年で血清ヒト絨毛性ゴナドトロピン(hCG)値の偽陽性上昇を呈した。クレアチン、総合ビタミン錠、アミノ酸パウダーからなる食事補助食品の経口摂取を中止すると、上昇した値は何の介入もなく正常化した。",
+    "added_at": "2026-11-17",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "精巣セミノーマ治癒後に見られた偽陽性のhCG上昇を扱う症例報告で、腫瘍マーカーの解釈が主題である。",
+    "relevance_reviewed_at": "2026-11-17T00:38:56+00:00",
+    "attrs": {
+      "si": "testis",
+      "ag": "adult",
+      "hi": [
+        "seminoma_germinoma"
+      ],
+      "n": 1,
+      "th": [
+        "diagnosis_imaging",
+        "surveillance"
       ]
     }
   }
