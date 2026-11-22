@@ -220025,5 +220025,37 @@
       "sc": "treatment",
       "mt": "no"
     }
+  },
+  {
+    "id": "pmid-43053518",
+    "title": "Precision medicine in genitourinary malignancies: integrating molecular profiling into clinical practice.",
+    "title_ja": "泌尿生殖器悪性腫瘍における精密医療：分子プロファイリングの臨床実践への統合",
+    "authors": [
+      "Collins K",
+      "Cheng L"
+    ],
+    "journal": "Expert Rev Anticancer Ther",
+    "year": 2026,
+    "pmid": "43053518",
+    "doi": "10.1080/14737140.2026.2767432",
+    "url": "",
+    "tags": [
+      "総説"
+    ],
+    "summary_en": "This review examines molecular profiling across genitourinary cancers, covering HRR and germline testing and PARP inhibition in prostate cancer, FGFR3-targeted therapy and ctDNA-guided adjuvant immunotherapy in urothelial carcinoma, and biomarker limits and HIF-2α therapy in renal cell carcinoma. A final section addresses investigational serum miR-371a-3p in testicular cancer, which outperforms conventional markers diagnostically but cannot detect teratoma and remains unvalidated. Germline testing has no established role in testicular cancer. The expert opinion concludes that molecular profiling currently guides management mainly in prostate and urothelial cancers.",
+    "summary_ja": "前立腺・尿路上皮・腎細胞・精巣がんにおける分子プロファイリングの臨床的意義をまとめた総説である。精巣がんの項では、研究段階のmiR-371a-3pが従来の血清マーカーより診断能に優れるが奇形腫は検出できず、臨床的有用性は未検証とされる。精巣がんにおける生殖細胞系列検査の確立した役割はない。",
+    "abstract": "INTRODUCTION: Molecular profiling increasingly guides genitourinary cancer management, but biomarker maturity and clinical utility vary across prostate, urothelial, renal, and testicular cancers. AREAS COVERED: This review examines homologous recombination repair (HRR) and germline testing, PARP inhibition, and PSMA theranostics in prostate cancer; FGFR3-targeted therapy and circulating tumor DNA (ctDNA)-guided adjuvant immunotherapy in urothelial carcinoma; predictive biomarker limitations and HIF-2α-directed therapy in renal cell carcinoma; and investigational serum miR-371a-3p in testicular cancer. PubMed/MEDLINE was searched from January 2016 through October 2026, supplemented by conference proceedings and clinical guidelines. EXPERT OPINION: Germline testing informs treatment selection and hereditary-risk assessment in prostate cancer, but remains selective in urothelial and renal cancers, primarily for hereditary-risk assessment, with syndrome-directed therapy in von Hippel-Lindau disease. It has no established role in testicular cancer. Molecular profiling currently guides management in prostate and urothelial cancers. In renal cancer, PD-L1 and tumor mutational burden remain non-predictive, while transcriptomic signatures are investigational. In testicular cancer, miR-371a-3p outperforms conventional serum markers diagnostically but cannot detect teratoma, and its clinical utility remains unvalidated.",
+    "abstract_ja": "INTRODUCTION: 分子プロファイリングは泌尿生殖器がんの管理においてますます重要になっているが、バイオマーカーの成熟度と臨床的有用性は前立腺がん、尿路上皮がん、腎がん、精巣がんで異なる。\nAREAS COVERED: 本総説では、前立腺がんにおける相同組換え修復(HRR)と生殖細胞系列検査、PARP阻害薬、PSMAを用いたセラノスティクスを検討する。また、尿路上皮がんにおけるFGFR3標的治療と循環腫瘍DNA(ctDNA)を指標とした補助免疫療法、腎細胞がんにおける予測バイオマーカーの限界とHIF-2α標的治療、そして精巣がんにおける研究段階の血清miR-371a-3pを取り上げる。PubMed/MEDLINEを2016年1月から2026年10月まで検索し、学会抄録や臨床ガイドラインで補足した。\nEXPERT OPINION: 生殖細胞系列検査は、前立腺がんにおける治療選択と遺伝性リスク評価に有用であるが、尿路上皮がんと腎がんでは主に遺伝性リスク評価に限られ、フォン・ヒッペル・リンドウ病では症候群に応じた治療が行われる。精巣がんでは確立した役割はない。現時点で分子プロファイリングが治療方針を導くのは前立腺がんと尿路上皮がんである。腎がんではPD-L1と腫瘍遺伝子変異量は予測因子とならず、トランスクリプトーム・シグネチャーは研究段階である。精巣がんでは、miR-371a-3pは従来の血清マーカーより診断能に優れるが、奇形腫は検出できず、臨床的有用性は未検証である。",
+    "added_at": "2026-11-22",
+    "jif_tier": "unknown",
+    "relevance_status": "kept",
+    "relevance_note": "人の判断(2026-11-22): 掲載。",
+    "relevance_reviewed_at": "2026-11-22 22:50:01",
+    "attrs": {
+      "th": [
+        "pathology_molecular",
+        "diagnosis_imaging"
+      ]
+    }
   }
 ]
